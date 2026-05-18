@@ -1,17 +1,8 @@
 name: Stock Price Alert
 
 "on":
-  schedule:
-    # Every 5 minutes during US market hours (Mon-Fri 13:30-21:00 UTC = 8:30am-4pm EST)
-    - cron: "*/5 13-20 * * 1-5"
-    # Every 5 minutes during extended / pre-market (Mon-Fri 12:00-13:30 UTC)
-    - cron: "*/5 12 * * 1-5"
-    # Every 15 minutes for Crypto — overnight UTC hours
-    - cron: "*/15 0-11 * * *"
-    # Daily summary trigger — 01:00 UTC every day
-    - cron: "0 1 * * *"
-
-  # Allow manual run from GitHub UI
+  # Triggered by Google Apps Script on schedule
+  # (GAS handles market-hours logic and calls workflow_dispatch)
   workflow_dispatch:
 
 permissions:
