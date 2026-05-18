@@ -1,6 +1,6 @@
 name: Stock Price Alert
 
-on:
+"on":
   schedule:
     # Every 5 minutes during US market hours (Mon-Fri 13:30-21:00 UTC = 8:30am-4pm EST)
     - cron: "*/5 13-20 * * 1-5"
@@ -16,9 +16,6 @@ on:
 
 permissions:
   contents: write
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   check-prices:
@@ -38,13 +35,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install yfinance --quiet
+          pip install yfinance --quiet --break-system-packages || pip install yfinance --quiet
 
       - name: Run alert engine
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python alert_engine.py
+        run: python3 alert_engine.py
 
       - name: Commit updated state and log
         run: |
