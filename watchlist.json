@@ -162,6 +162,25 @@
           "emoji": "📥"
         }
       ]
+    },
+    {
+      "symbol": "DHX",
+      "name": "DHX",
+      "market": "US",
+      "timeframe": "1H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "DHX_PRICE_TARGET_0",
+          "type": "price_target",
+          "note": "Exit + Ema",
+          "cooldown_minutes": 60,
+          "target_price": 3.75,
+          "direction": "below_or_equal",
+          "action": "BUY",
+          "emoji": "📥"
+        }
+      ]
     }
   ]
 }
