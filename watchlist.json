@@ -35,7 +35,7 @@
           "id": "ATER_DROP_5PCT",
           "type": "percent_change",
           "direction": "down",
-          "threshold_pct": 5.0,
+          "threshold_pct": 5,
           "note": "Drop 5%+ intraday",
           "emoji": "📉",
           "cooldown_minutes": 180
@@ -71,7 +71,7 @@
           "id": "GPRO_DROP_5PCT",
           "type": "percent_change",
           "direction": "down",
-          "threshold_pct": 5.0,
+          "threshold_pct": 5,
           "note": "Drop 5%+ intraday",
           "emoji": "📉",
           "cooldown_minutes": 180
@@ -84,6 +84,53 @@
           "note": "Break below support 1.05",
           "emoji": "⚠️",
           "cooldown_minutes": 180
+        }
+      ]
+    },
+    {
+      "symbol": "AEHR",
+      "name": "รอราคาลงมาที่ Fibo 0.786",
+      "market": "US",
+      "timeframe": "4H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "AEHR_PRICE_TARGET_0",
+          "type": "price_target",
+          "note": "",
+          "cooldown_minutes": 60,
+          "target_price": 77.5,
+          "direction": "below_or_equal",
+          "action": "BUY",
+          "emoji": "📥"
+        },
+        {
+          "id": "AEHR_SUPPORT_RESISTANCE_1",
+          "type": "support_resistance",
+          "note": "Exit Line",
+          "cooldown_minutes": 60,
+          "level": 80,
+          "direction": "break_below",
+          "emoji": "⚠️"
+        }
+      ]
+    },
+    {
+      "symbol": "BTCTHB",
+      "name": "ราคาทุน",
+      "market": "US",
+      "timeframe": "1H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "BTCTHB_PRICE_TARGET_0",
+          "type": "price_target",
+          "note": "ราคทุน",
+          "cooldown_minutes": 60,
+          "target_price": 2600000,
+          "direction": "above_or_equal",
+          "action": "SELL",
+          "emoji": "📤"
         }
       ]
     }
