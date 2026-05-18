@@ -219,6 +219,25 @@
           "emoji": "📥"
         }
       ]
+    },
+    {
+      "symbol": "FIVN",
+      "name": "FIVN",
+      "market": "US",
+      "timeframe": "1D",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "FIVN_PRICE_TARGET_0",
+          "type": "price_target",
+          "note": "Exit Line",
+          "cooldown_minutes": 60,
+          "target_price": 20,
+          "direction": "below_or_equal",
+          "action": "BUY",
+          "emoji": "📥"
+        }
+      ]
     }
   ]
 }
