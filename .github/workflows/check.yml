@@ -1,0 +1,52 @@
+name: Stock Price Alert
+
+on:
+  schedule:
+    # Every 5 minutes during US market hours (Mon-Fri 13:30-21:00 UTC = 8:30am-4pm EST)
+    - cron: "*/5 13-20 * * 1-5"
+    # Every 5 minutes during extended / pre-market (Mon-Fri 12:00-13:30 UTC)
+    - cron: "*/5 12 * * 1-5"
+    # Every 15 minutes for Crypto — overnight UTC hours
+    - cron: "*/15 0-11 * * *"
+    # Daily summary trigger — 01:00 UTC every day
+    - cron: "0 1 * * *"
+
+  # Allow manual run from GitHub UI
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install yfinance --quiet
+
+      - name: Run alert engine
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python alert_engine.py
+
+      - name: Commit updated state and log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state.json alert_log.json
+          git diff --staged --quiet || git commit -m "chore: update alert state [skip ci]"
+          git push
