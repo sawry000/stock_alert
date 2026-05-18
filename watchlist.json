@@ -181,6 +181,25 @@
           "emoji": "📥"
         }
       ]
+    },
+    {
+      "symbol": "OCC",
+      "name": "OCC",
+      "market": "US",
+      "timeframe": "4H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "OCC_PRICE_TARGET_0",
+          "type": "price_target",
+          "note": "FIBO 0.786",
+          "cooldown_minutes": 60,
+          "target_price": 10,
+          "direction": "below_or_equal",
+          "action": "BUY",
+          "emoji": "📥"
+        }
+      ]
     }
   ]
 }
