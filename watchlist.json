@@ -238,6 +238,43 @@
           "emoji": "📥"
         }
       ]
+    },
+    {
+      "symbol": "ASPN",
+      "name": "ASPN",
+      "market": "US",
+      "timeframe": "4H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "ASPN_PRICE_TARGET_0",
+          "type": "price_target",
+          "note": "Ema",
+          "cooldown_minutes": 60,
+          "target_price": 5,
+          "direction": "below_or_equal",
+          "action": "BUY",
+          "emoji": "📥"
+        }
+      ]
+    },
+    {
+      "symbol": "TYGO",
+      "name": "TYGO",
+      "market": "US",
+      "timeframe": "4H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "TYGO_SUPPORT_RESISTANCE_0",
+          "type": "support_resistance",
+          "note": "Exit Line",
+          "cooldown_minutes": 60,
+          "level": 4,
+          "direction": "break_above",
+          "emoji": "⚠️"
+        }
+      ]
     }
   ]
 }
