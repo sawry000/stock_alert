@@ -133,6 +133,35 @@
           "emoji": "📤"
         }
       ]
+    },
+    {
+      "symbol": "AIXI",
+      "name": "แนวรับ",
+      "market": "US",
+      "timeframe": "4H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "AIXI_PRICE_TARGET_0",
+          "type": "price_target",
+          "note": "S1",
+          "cooldown_minutes": 60,
+          "target_price": 7.5,
+          "direction": "below_or_equal",
+          "action": "BUY",
+          "emoji": "📥"
+        },
+        {
+          "id": "AIXI_PRICE_TARGET_1",
+          "type": "price_target",
+          "note": "Exit Line",
+          "cooldown_minutes": 60,
+          "target_price": 6,
+          "direction": "below_or_equal",
+          "action": "BUY",
+          "emoji": "📥"
+        }
+      ]
     }
   ]
 }
