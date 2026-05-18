@@ -1,0 +1,91 @@
+{
+  "settings": {
+    "telegram_bot_token_env": "TELEGRAM_BOT_TOKEN",
+    "telegram_chat_id_env": "TELEGRAM_CHAT_ID",
+    "cooldown_minutes": 60,
+    "daily_summary_hour_utc": 1
+  },
+  "watchlist": [
+    {
+      "symbol": "ATER",
+      "name": "Aterian Inc.",
+      "market": "US",
+      "timeframe": "4H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "ATER_BUY_EMA50",
+          "type": "price_target",
+          "direction": "below_or_equal",
+          "target_price": 0.98,
+          "note": "EMA50 (4H) — Buy zone",
+          "action": "BUY",
+          "emoji": "📥",
+          "cooldown_minutes": 240
+        },
+        {
+          "id": "ATER_VOLUME_SPIKE",
+          "type": "volume_spike",
+          "multiplier": 2.5,
+          "note": "Volume spike 250% of average",
+          "emoji": "🔊",
+          "cooldown_minutes": 120
+        },
+        {
+          "id": "ATER_DROP_5PCT",
+          "type": "percent_change",
+          "direction": "down",
+          "threshold_pct": 5.0,
+          "note": "Drop 5%+ intraday",
+          "emoji": "📉",
+          "cooldown_minutes": 180
+        }
+      ]
+    },
+    {
+      "symbol": "GPRO",
+      "name": "GoPro Inc.",
+      "market": "US",
+      "timeframe": "1H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "GPRO_BUY_TARGET",
+          "type": "price_target",
+          "direction": "below_or_equal",
+          "target_price": 1.096,
+          "note": "Buy zone target (1H)",
+          "action": "BUY",
+          "emoji": "📥",
+          "cooldown_minutes": 120
+        },
+        {
+          "id": "GPRO_VOLUME_SPIKE",
+          "type": "volume_spike",
+          "multiplier": 2.5,
+          "note": "Volume spike 250% of average",
+          "emoji": "🔊",
+          "cooldown_minutes": 120
+        },
+        {
+          "id": "GPRO_DROP_5PCT",
+          "type": "percent_change",
+          "direction": "down",
+          "threshold_pct": 5.0,
+          "note": "Drop 5%+ intraday",
+          "emoji": "📉",
+          "cooldown_minutes": 180
+        },
+        {
+          "id": "GPRO_SUPPORT_BREAK",
+          "type": "support_resistance",
+          "direction": "break_below",
+          "level": 1.05,
+          "note": "Break below support 1.05",
+          "emoji": "⚠️",
+          "cooldown_minutes": 180
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Alert Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #080c10;
+  --bg2:     #0e1419;
+  --bg3:     #161d26;
+  --bg4:     #1c2530;
+  --border:  #1f2d3d;
+  --border2: #263545;
+  --text:    #cdd9e5;
+  --text2:   #768390;
+  --text3:   #4d5f70;
+  --green:   #3fb950;
+  --green2:  #26a641;
+  --red:     #f85149;
+  --blue:    #4dabf7;
+  --blue2:   #1c7ed6;
+  --amber:   #e8a114;
+  --purple:  #b392f0;
+  --teal:    #2dd4bf;
+  --mono:    'JetBrains Mono', monospace;
+  --sans:    'Syne', sans-serif;
+  --r:       8px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px);
+  pointer-events: none; z-index: 9999;
+}
+
+header {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 28px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 200;
+}
+.logo {
+  font-family: var(--sans); font-weight: 800; font-size: 15px;
+  display: flex; align-items: center; gap: 10px;
+}
+.logo-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--green); box-shadow: 0 0 8px var(--green);
+  animation: livepulse 2s ease-in-out infinite;
+}
+@keyframes livepulse {
+  0%,100% { opacity:1; box-shadow:0 0 8px var(--green); }
+  50%      { opacity:.4; box-shadow:0 0 3px var(--green); }
+}
+.header-right { display:flex; align-items:center; gap:10px; }
+.hdr-clock { color:var(--text2); font-size:11px; }
+
+.layout { display:flex; min-height:calc(100vh - 49px); }
+
+aside {
+  width: 210px; flex-shrink:0;
+  background: var(--bg2); border-right: 1px solid var(--border);
+  padding: 16px 0; display:flex; flex-direction:column; gap:2px;
+}
+.nav-item {
+  display:flex; align-items:center; gap:10px;
+  padding: 9px 18px; cursor:pointer;
+  color: var(--text2); font-size:12px; font-weight:500;
+  border-left: 2px solid transparent; transition:all .15s;
+}
+.nav-item:hover { color:var(--text); background:var(--bg3); }
+.nav-item.active { color:var(--blue); border-left-color:var(--blue); background:rgba(77,171,247,.06); }
+.nav-icon { font-size:15px; width:18px; text-align:center; }
+.nav-sep { height:1px; background:var(--border); margin:10px 14px; }
+
+main { flex:1; padding:24px 28px; overflow-y:auto; }
+.page { display:none; }
+.page.active { display:block; }
+
+.sec-title {
+  font-family:var(--sans); font-weight:800; font-size:18px;
+  margin-bottom:20px; display:flex; align-items:center; gap:10px;
+}
+.sec-badge {
+  font-family:var(--mono); font-size:10px; font-weight:500;
+  background:var(--bg3); border:1px solid var(--border2);
+  color:var(--text2); padding:2px 8px; border-radius:20px;
+}
+
+.stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+.stat-card {
+  background:var(--bg2); border:1px solid var(--border);
+  border-radius:var(--r); padding:16px; transition:border-color .2s;
+}
+.stat-card:hover { border-color:var(--border2); }
+.stat-val { font-family:var(--sans); font-size:26px; font-weight:800; line-height:1; margin-bottom:5px; }
+.stat-lbl { color:var(--text2); font-size:10px; text-transform:uppercase; letter-spacing:.08em; }
+
+.config-banner {
+  border-radius:var(--r); padding:14px 18px;
+  margin-bottom:18px; display:flex; align-items:center; gap:14px;
+  border: 1px solid rgba(77,171,247,.25);
+  background: linear-gradient(135deg, rgba(77,171,247,.07), rgba(77,171,247,.02));
+}
+.config-banner.ok { border-color:rgba(63,185,80,.25); background:linear-gradient(135deg,rgba(63,185,80,.07),rgba(63,185,80,.02)); }
+.config-banner.warn { border-color:rgba(232,161,20,.3); background:linear-gradient(135deg,rgba(232,161,20,.07),rgba(232,161,20,.02)); }
+.config-icon { font-size:20px; flex-shrink:0; }
+.config-text { flex:1; }
+.config-title { font-weight:700; font-size:12px; margin-bottom:3px; }
+.config-desc { color:var(--text2); font-size:11px; }
+
+.btn {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:7px 14px; border-radius:var(--r);
+  font-family:var(--mono); font-size:12px; font-weight:500;
+  cursor:pointer; border:1px solid; transition:all .15s;
+  white-space:nowrap; text-decoration:none;
+}
+.btn-primary { background:var(--blue2); border-color:var(--blue); color:#fff; }
+.btn-primary:hover { background:#1971c2; }
+.btn-ghost { background:transparent; border-color:var(--border2); color:var(--text); }
+.btn-ghost:hover { border-color:var(--blue); color:var(--blue); }
+.btn-danger { background:transparent; border-color:rgba(248,81,73,.4); color:var(--red); }
+.btn-danger:hover { background:rgba(248,81,73,.1); border-color:var(--red); }
+.btn-success { background:var(--green2); border-color:var(--green); color:#fff; }
+.btn-success:hover { background:#1e7e34; }
+.btn-sm { padding:4px 10px; font-size:11px; }
+.btn:disabled { opacity:.4; cursor:not-allowed; pointer-events:none; }
+
+.wl-toolbar { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.search-box {
+  flex:1; background:var(--bg3); border:1px solid var(--border2);
+  border-radius:var(--r); padding:7px 12px;
+  color:var(--text); font-family:var(--mono); font-size:12px;
+  outline:none; transition:border-color .15s;
+}
+.search-box:focus { border-color:var(--blue); }
+.search-box::placeholder { color:var(--text3); }
+
+.stock-list { display:flex; flex-direction:column; gap:10px; }
+
+.stock-row {
+  background:var(--bg2); border:1px solid var(--border);
+  border-radius:var(--r); overflow:hidden; transition:border-color .2s;
+}
+.stock-row:hover { border-color:var(--border2); }
+.stock-row.disabled-row { opacity:.5; }
+
+.stock-row-header {
+  display:flex; align-items:center; gap:12px;
+  padding:12px 16px; cursor:pointer; user-select:none;
+}
+.stock-toggle { color:var(--text3); font-size:10px; transition:transform .2s; flex-shrink:0; }
+.stock-toggle.open { transform:rotate(90deg); }
+.stock-sym { font-family:var(--sans); font-weight:800; font-size:16px; min-width:70px; }
+.stock-meta { color:var(--text2); font-size:11px; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.stock-tf {
+  font-size:10px; font-weight:700; padding:2px 7px;
+  border-radius:4px; background:var(--bg4);
+  border:1px solid var(--border2); color:var(--blue); flex-shrink:0;
+}
+
+.toggle-switch {
+  width:34px; height:18px; border-radius:9px;
+  background:var(--bg4); border:1px solid var(--border2);
+  cursor:pointer; position:relative; transition:all .2s; flex-shrink:0;
+}
+.toggle-switch.on { background:var(--green2); border-color:var(--green); }
+.toggle-switch::after {
+  content:''; position:absolute; top:2px; left:2px;
+  width:12px; height:12px; border-radius:50%;
+  background:#fff; transition:left .2s;
+}
+.toggle-switch.on::after { left:18px; }
+
+.stock-actions { display:flex; gap:6px; flex-shrink:0; }
+
+.stock-alerts-body {
+  padding:0 16px 14px;
+  display:none; flex-direction:column; gap:7px;
+}
+.stock-alerts-body.open { display:flex; }
+
+.alert-item {
+  display:flex; align-items:center; gap:10px;
+  background:var(--bg3); border:1px solid var(--border);
+  border-radius:6px; padding:9px 12px;
+}
+.alert-item-icon { font-size:15px; flex-shrink:0; }
+.alert-item-info { flex:1; min-width:0; }
+.alert-item-title { font-size:12px; font-weight:600; }
+.alert-item-sub { font-size:10px; color:var(--text2); margin-top:2px; }
+.alert-item-actions { display:flex; gap:6px; }
+
+.overlay {
+  position:fixed; inset:0; background:rgba(0,0,0,.78);
+  backdrop-filter:blur(5px); z-index:500;
+  display:none; align-items:center; justify-content:center; padding:20px;
+}
+.overlay.open { display:flex; animation:fadeIn .15s; }
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+.modal {
+  background:var(--bg2); border:1px solid var(--border2);
+  border-radius:12px; width:100%; max-width:540px;
+  max-height:90vh; overflow-y:auto;
+  animation:slideUp .2s ease-out;
+}
+.modal-sm { max-width:360px; }
+@keyframes slideUp { from{transform:translateY(20px);opacity:0} to{transform:translateY(0);opacity:1} }
+
+.modal-header {
+  padding:20px 24px 0;
+  display:flex; align-items:center; justify-content:space-between;
+  position:sticky; top:0; background:var(--bg2); z-index:10; padding-bottom:12px;
+  border-bottom:1px solid var(--border);
+}
+.modal-title { font-family:var(--sans); font-weight:800; font-size:16px; }
+.modal-close {
+  background:none; border:none; color:var(--text2);
+  font-size:22px; cursor:pointer; padding:0 6px; border-radius:4px; line-height:1;
+  transition:color .15s;
+}
+.modal-close:hover { color:var(--text); }
+.modal-body { padding:20px 24px; display:flex; flex-direction:column; gap:14px; }
+.modal-footer {
+  padding:16px 24px; border-top:1px solid var(--border);
+  display:flex; gap:10px; justify-content:flex-end;
+  position:sticky; bottom:0; background:var(--bg2);
+}
+
+.field { display:flex; flex-direction:column; gap:5px; }
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.field label {
+  font-size:10px; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--text2); font-weight:600;
+}
+input, select {
+  background:var(--bg3); border:1px solid var(--border2);
+  border-radius:var(--r); padding:8px 12px;
+  color:var(--text); font-family:var(--mono); font-size:12px;
+  outline:none; transition:border-color .15s; width:100%;
+}
+input:focus, select:focus { border-color:var(--blue); }
+select option { background:var(--bg3); }
+.field-hint { font-size:10px; color:var(--text3); }
+
+.alert-blocks-container { display:flex; flex-direction:column; gap:10px; }
+
+.alert-block {
+  background:var(--bg3); border:1px solid var(--border2);
+  border-radius:var(--r); padding:14px;
+}
+.alert-block-hdr {
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:12px;
+}
+.alert-block-title { font-size:12px; font-weight:700; }
+.btn-rm {
+  background:none; border:none; color:var(--text3);
+  cursor:pointer; font-size:18px; padding:0 4px; line-height:1;
+  transition:color .15s;
+}
+.btn-rm:hover { color:var(--red); }
+
+.add-alert-row {
+  display:flex; gap:7px; flex-wrap:wrap; margin-top:4px;
+}
+
+.setup-card {
+  background:var(--bg2); border:1px solid var(--border);
+  border-radius:var(--r); padding:20px 24px; margin-bottom:14px;
+}
+.setup-step { display:flex; gap:16px; align-items:flex-start; }
+.step-num {
+  width:28px; height:28px; border-radius:50%; flex-shrink:0;
+  background:var(--blue2); color:#fff; font-weight:700; font-size:12px;
+  display:flex; align-items:center; justify-content:center;
+}
+.step-content { flex:1; }
+.step-title { font-weight:700; font-size:13px; margin-bottom:6px; }
+.step-desc { color:var(--text2); font-size:11px; line-height:1.7; }
+code {
+  background:var(--bg4); border:1px solid var(--border2);
+  border-radius:4px; padding:1px 6px; font-family:var(--mono);
+  font-size:11px; color:var(--amber);
+}
+
+.log-table { width:100%; border-collapse:collapse; }
+.log-table th {
+  text-align:left; padding:8px 12px;
+  font-size:10px; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--text3); border-bottom:1px solid var(--border); font-weight:600;
+}
+.log-table td {
+  padding:10px 12px; border-bottom:1px solid rgba(31,45,61,.6);
+  font-size:12px; vertical-align:middle;
+}
+.log-table tr:last-child td { border-bottom:none; }
+.log-table tr:hover td { background:rgba(255,255,255,.015); }
+
+.badge {
+  display:inline-flex; align-items:center;
+  padding:2px 8px; border-radius:20px; font-size:10px; font-weight:700;
+}
+.badge-price  { background:rgba(179,146,240,.15); color:var(--purple); }
+.badge-pct    { background:rgba(248,81,73,.15);   color:var(--red); }
+.badge-vol    { background:rgba(45,212,191,.15);   color:var(--teal); }
+.badge-sr     { background:rgba(232,161,20,.15);   color:var(--amber); }
+
+.toast-wrap { position:fixed; bottom:24px; right:24px; z-index:9000; display:flex; flex-direction:column; gap:8px; pointer-events:none; }
+.toast {
+  background:var(--bg3); border:1px solid var(--border2);
+  border-radius:var(--r); padding:11px 15px;
+  display:flex; align-items:center; gap:9px;
+  font-size:12px; min-width:220px; max-width:320px;
+  animation:toastIn .2s ease-out;
+  box-shadow:0 8px 30px rgba(0,0,0,.5);
+  pointer-events:auto;
+}
+.toast.ok  { border-left:3px solid var(--green); }
+.toast.err { border-left:3px solid var(--red); }
+.toast.inf { border-left:3px solid var(--blue); }
+@keyframes toastIn { from{transform:translateX(16px);opacity:0} to{transform:translateX(0);opacity:1} }
+
+.empty { text-align:center; padding:40px; color:var(--text3); font-size:12px; }
+
+.divider { height:1px; background:var(--border); margin:4px 0 12px; }
+
+@media(max-width:700px){
+  aside{display:none;}
+  .stats-row{grid-template-columns:1fr 1fr;}
+  main{padding:16px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="logo-dot"></span>STOCK ALERT</div>
+  <div class="header-right">
+    <span class="hdr-clock" id="hdr-clock">--:--:--</span>
+    <button class="btn btn-ghost btn-sm" onclick="refreshAll()">↻ Refresh</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside>
+    <div class="nav-item active" id="nav-watchlist" onclick="showPage('watchlist',this)">
+      <span class="nav-icon">📋</span>Watchlist
+    </div>
+    <div class="nav-item" id="nav-log" onclick="showPage('log',this)">
+      <span class="nav-icon">📜</span>Alert Log
+    </div>
+    <div class="nav-sep"></div>
+    <div class="nav-item" id="nav-setup" onclick="showPage('setup',this)">
+      <span class="nav-icon">⚙️</span>GitHub Setup
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- ══ WATCHLIST ══ -->
+    <div class="page active" id="page-watchlist">
+      <div id="gh-banner"></div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-val" id="s-symbols">—</div>
+          <div class="stat-lbl">Symbols</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" style="color:var(--amber)" id="s-alerts">—</div>
+          <div class="stat-lbl">Alert Rules</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" style="color:var(--green)" id="s-fired">—</div>
+          <div class="stat-lbl">Fired Today</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" style="color:var(--blue);font-size:17px" id="s-next">—</div>
+          <div class="stat-lbl">Next Check</div>
+        </div>
+      </div>
+
+      <div class="wl-toolbar">
+        <input class="search-box" id="search-box" placeholder="🔍  ค้นหา symbol หรือชื่อหุ้น..." oninput="renderWatchlist()">
+        <button class="btn btn-primary" onclick="openAddStock()">＋ Add Stock</button>
+        <button class="btn btn-success" id="save-btn" onclick="saveToGitHub()" disabled>💾 Save</button>
+      </div>
+
+      <div class="stock-list" id="stock-list">
+        <div class="empty">กำลังโหลด…</div>
+      </div>
+    </div>
+
+    <!-- ══ LOG ══ -->
+    <div class="page" id="page-log">
+      <div class="sec-title">📜 Alert History <span class="sec-badge" id="log-badge">0</span></div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:auto">
+        <table class="log-table">
+          <thead><tr><th>When</th><th>Symbol</th><th>Price</th><th>Change</th><th>Type</th><th>Alert ID</th></tr></thead>
+          <tbody id="log-tbody"><tr><td colspan="6" class="empty">กำลังโหลด…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ══ SETUP ══ -->
+    <div class="page" id="page-setup">
+      <div class="sec-title">⚙️ GitHub API Setup</div>
+
+      <div class="setup-card">
+        <div class="setup-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">สร้าง Personal Access Token (PAT)</div>
+            <div class="step-desc">
+              GitHub → Settings → Developer settings → <b>Personal access tokens → Tokens (classic)</b><br>
+              กด <b>Generate new token (classic)</b> → ตั้งชื่อ เช่น <code>stock-alert</code><br>
+              เลือก scope: ✅ <code>repo</code> → Generate → Copy token ไว้
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="setup-card">
+        <div class="setup-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">กรอกข้อมูล Repository</div>
+            <div class="step-desc" style="margin-bottom:14px">ข้อมูลถูกเก็บใน <code>localStorage</code> ในเครื่องคุณเท่านั้น</div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div class="field-row">
+                <div class="field">
+                  <label>GitHub Username</label>
+                  <input id="cfg-owner" placeholder="your-username">
+                </div>
+                <div class="field">
+                  <label>Repository Name</label>
+                  <input id="cfg-repo" placeholder="stock-alerts">
+                </div>
+              </div>
+              <div class="field">
+                <label>Personal Access Token</label>
+                <input id="cfg-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+                <div class="field-hint">เก็บใน localStorage เท่านั้น ไม่ส่งไปไหนนอกจาก api.github.com</div>
+              </div>
+              <div class="field">
+                <label>Branch</label>
+                <input id="cfg-branch" placeholder="main" value="main">
+              </div>
+              <div style="display:flex;gap:10px;align-items:center">
+                <button class="btn btn-primary" onclick="saveConfig()">💾 Save Config</button>
+                <button class="btn btn-ghost" id="test-btn" onclick="testConn()">🔌 Test Connection</button>
+                <span id="test-result" style="font-size:11px;color:var(--text2)"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="setup-card">
+        <div class="setup-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">วิธีใช้งาน</div>
+            <div class="step-desc">
+              หลัง save config แล้ว → ไปหน้า <b>Watchlist</b><br>
+              เพิ่ม / แก้ไข / ลบหุ้นได้เลย → กดปุ่ม <b>💾 Save</b> (สีเขียว)<br>
+              ระบบจะ push <code>watchlist.json</code> ขึ้น GitHub อัตโนมัติ<br>
+              GitHub Actions จะ pick up ไฟล์ใหม่ใน run ถัดไป ✅
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ══════════ MODAL: Add/Edit Stock ══════════ -->
+<div class="overlay" id="modal-stock">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">＋ Add Stock</div>
+      <button class="modal-close" onclick="closeModal('modal-stock')">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="field-row">
+        <div class="field">
+          <label>Symbol *</label>
+          <input id="f-symbol" placeholder="AAPL / PTT.BK / BTC-USD" oninput="this.value=this.value.toUpperCase()">
+          <div class="field-hint">US: AAPL | SET: PTT.BK | Crypto: BTC-USD | Forex: EURUSD=X</div>
+        </div>
+        <div class="field">
+          <label>Timeframe</label>
+          <select id="f-tf">
+            <option>1m</option><option>5m</option><option>15m</option><option>30m</option>
+            <option>1H</option><option value="4H">4H</option><option>1D</option><option>1W</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Name / Description</label>
+          <input id="f-name" placeholder="e.g. Apple Inc.">
+        </div>
+        <div class="field">
+          <label>Market</label>
+          <select id="f-market">
+            <option value="US">US (NYSE/NASDAQ)</option>
+            <option value="SET">SET Thailand</option>
+            <option value="CRYPTO">Crypto</option>
+            <option value="FOREX">Forex</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <div style="font-size:12px;font-weight:700">🔔 Alert Rules</div>
+          <div class="add-alert-row">
+            <button class="btn btn-ghost btn-sm" onclick="addBlock('price_target')">＋ Price</button>
+            <button class="btn btn-ghost btn-sm" onclick="addBlock('percent_change')">＋ %Change</button>
+            <button class="btn btn-ghost btn-sm" onclick="addBlock('volume_spike')">＋ Volume</button>
+            <button class="btn btn-ghost btn-sm" onclick="addBlock('support_resistance')">＋ S/R</button>
+          </div>
+        </div>
+        <div id="alert-blocks" class="alert-blocks-container"></div>
+        <div id="no-alerts-hint" style="color:var(--text3);font-size:11px;padding:8px 0">
+          ยังไม่มี alert rule — กดปุ่ม ＋ ด้านบนเพื่อเพิ่ม
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('modal-stock')">Cancel</button>
+      <button class="btn btn-primary" onclick="submitStock()">✅ Save Stock</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ MODAL: Confirm Delete ══════════ -->
+<div class="overlay" id="modal-confirm">
+  <div class="modal modal-sm">
+    <div class="modal-header">
+      <div class="modal-title">⚠️ ยืนยันการลบ</div>
+      <button class="modal-close" onclick="closeModal('modal-confirm')">×</button>
+    </div>
+    <div class="modal-body">
+      <div style="color:var(--text2);font-size:13px;line-height:1.7" id="confirm-msg"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal('modal-confirm')">Cancel</button>
+      <button class="btn btn-danger" id="confirm-ok">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toasts"></div>
+
+<script>
+// ─── State ────────────────────────────────────────────────────────────────────
+let WL = null;        // full watchlist config object (includes __sha)
+let ST = {};          // state.json
+let LG = [];          // alert_log.json
+let dirty = false;
+let editIdx = null;   // null=add, number=edit
+let blockId = 0;
+
+// ─── Config ───────────────────────────────────────────────────────────────────
+function getCfg() {
+  try { return JSON.parse(localStorage.getItem('sas_cfg') || '{}'); } catch { return {}; }
+}
+function setCfg(c) { localStorage.setItem('sas_cfg', JSON.stringify(c)); }
+
+function saveConfig() {
+  const c = {
+    owner:  document.getElementById('cfg-owner').value.trim(),
+    repo:   document.getElementById('cfg-repo').value.trim(),
+    token:  document.getElementById('cfg-token').value.trim(),
+    branch: document.getElementById('cfg-branch').value.trim() || 'main',
+  };
+  if (!c.owner || !c.repo || !c.token) { toast('กรอกข้อมูลให้ครบทุกช่อง', 'err'); return; }
+  setCfg(c);
+  toast('บันทึก config แล้ว ✅', 'ok');
+  updateBanner();
+}
+
+function loadCfgForm() {
+  const c = getCfg();
+  ['owner','repo','token','branch'].forEach(k => {
+    const el = document.getElementById('cfg-' + k);
+    if (el && c[k]) el.value = c[k];
+  });
+}
+
+// ─── GitHub API ───────────────────────────────────────────────────────────────
+function ghHdr() {
+  const { token } = getCfg();
+  return {
+    'Authorization': 'token ' + token,
+    'Accept': 'application/vnd.github.v3+json',
+    'Content-Type': 'application/json',
+  };
+}
+
+async function ghGet(path) {
+  const { owner, repo, branch } = getCfg();
+  if (!owner || !repo) return null;
+  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}&_=${Date.now()}`;
+  const r = await fetch(url, { headers: ghHdr() });
+  if (!r.ok) throw new Error('GitHub ' + r.status + ': ' + r.statusText);
+  return r.json();
+}
+
+async function ghPut(path, content, msg, sha) {
+  const { owner, repo, branch } = getCfg();
+  const body = {
+    message: msg,
+    content: btoa(unescape(encodeURIComponent(content))),
+    branch: branch,
+  };
+  if (sha) body.sha = sha;
+  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+  const r = await fetch(url, { method: 'PUT', headers: ghHdr(), body: JSON.stringify(body) });
+  if (!r.ok) {
+    const e = await r.json().catch(() => ({}));
+    throw new Error(e.message || 'GitHub ' + r.status);
+  }
+  return r.json();
+}
+
+async function fetchFile(filename) {
+  try {
+    const d = await ghGet(filename);
+    if (!d) return null;
+    const text = decodeURIComponent(escape(atob(d.content.replace(/\n/g, ''))));
+    return { data: JSON.parse(text), sha: d.sha };
+  } catch { return null; }
+}
+
+async function testConn() {
+  const btn = document.getElementById('test-btn');
+  const res = document.getElementById('test-result');
+  const c = getCfg();
+  if (!c.owner || !c.repo || !c.token) { res.textContent = '❌ กรอกแล้ว Save Config ก่อน'; return; }
+  btn.disabled = true; res.textContent = 'Testing…';
+  try {
+    const r = await fetch(`https://api.github.com/repos/${c.owner}/${c.repo}`, { headers: ghHdr() });
+    if (r.ok) {
+      const d = await r.json();
+      res.innerHTML = `✅ OK — <b>${d.full_name}</b>`;
+      res.style.color = 'var(--green)';
+    } else {
+      res.textContent = `❌ Error ${r.status} — ตรวจสอบ token/repo`;
+      res.style.color = 'var(--red)';
+    }
+  } catch(e) {
+    res.textContent = '❌ ' + e.message;
+    res.style.color = 'var(--red)';
+  }
+  btn.disabled = false;
+}
+
+// ─── Load all data ────────────────────────────────────────────────────────────
+async function refreshAll() {
+  updateBanner();
+  const c = getCfg();
+  if (!c.token) { renderWatchlist(); renderLog(); return; }
+  toast('Syncing จาก GitHub…', 'inf');
+  try {
+    const [wl, st, lg] = await Promise.all([
+      fetchFile('watchlist.json'),
+      fetchFile('state.json'),
+      fetchFile('alert_log.json'),
+    ]);
+    if (wl) { WL = wl.data; WL.__sha = wl.sha; }
+    if (st) ST = st.data || {};
+    if (lg) LG = lg.data || [];
+    dirty = false;
+    document.getElementById('save-btn').disabled = true;
+    document.getElementById('save-btn').textContent = '💾 Save';
+    renderWatchlist();
+    renderLog();
+    updateStats();
+    toast('Sync สำเร็จ ✅', 'ok');
+  } catch(e) {
+    toast('Sync error: ' + e.message, 'err');
+  }
+}
+
+// ─── Save to GitHub ───────────────────────────────────────────────────────────
+async function saveToGitHub() {
+  const c = getCfg();
+  if (!c.token) { toast('ตั้งค่า GitHub ก่อนใน Setup ⚙️', 'err'); return; }
+  if (!WL) { toast('ไม่มีข้อมูล watchlist', 'err'); return; }
+  const btn = document.getElementById('save-btn');
+  btn.disabled = true; btn.textContent = '⏳ Saving…';
+  try {
+    const sha = WL.__sha;
+    const clean = Object.fromEntries(Object.entries(WL).filter(([k]) => k !== '__sha'));
+    const content = JSON.stringify(clean, null, 2);
+    const res = await ghPut('watchlist.json', content, 'feat: update watchlist via dashboard', sha);
+    WL.__sha = res.content.sha;
+    dirty = false;
+    btn.textContent = '💾 Save';
+    toast('Push ขึ้น GitHub สำเร็จ 🚀', 'ok');
+  } catch(e) {
+    btn.disabled = false; btn.textContent = '💾 Save *';
+    toast('Save error: ' + e.message, 'err');
+  }
+}
+
+// ─── Render Watchlist ─────────────────────────────────────────────────────────
+function renderWatchlist() {
+  const container = document.getElementById('stock-list');
+  if (!WL || !WL.watchlist) {
+    container.innerHTML = '<div class="empty">ยังไม่มีข้อมูล — กด Refresh หรือตั้งค่า GitHub ก่อน</div>';
+    return;
+  }
+  const q = (document.getElementById('search-box').value || '').toLowerCase();
+  const list = WL.watchlist.filter(s =>
+    !q || s.symbol.toLowerCase().includes(q) || (s.name || '').toLowerCase().includes(q)
+  );
+  if (!list.length) { container.innerHTML = '<div class="empty">ไม่พบ symbol ที่ค้นหา</div>'; return; }
+
+  container.innerHTML = list.map(stock => {
+    const ri = WL.watchlist.indexOf(stock);
+    const alerts = stock.alerts || [];
+    const isOn = stock.enabled !== false;
+    const tvUrl = 'https://www.tradingview.com/chart/?symbol=' + stock.symbol;
+
+    const alertsHtml = alerts.map((a, ai) => {
+      const typeLabel = {price_target:'Price Target',percent_change:'% Change',volume_spike:'Volume Spike',support_resistance:'S/R Break'}[a.type] || a.type;
+      let detail = '';
+      if (a.type === 'price_target') detail = (a.direction === 'below_or_equal' ? '≤' : '≥') + ' $' + a.target_price;
+      else if (a.type === 'percent_change') detail = (a.direction === 'down' ? '↓' : '↑') + ' ' + a.threshold_pct + '%';
+      else if (a.type === 'volume_spike') detail = a.multiplier + '× avg vol';
+      else if (a.type === 'support_resistance') detail = (a.direction === 'break_below' ? 'Break↓' : 'Break↑') + ' $' + a.level;
+      return `<div class="alert-item">
+        <span class="alert-item-icon">${a.emoji || '🔔'}</span>
+        <div class="alert-item-info">
+          <div class="alert-item-title">${typeLabel}</div>
+          <div class="alert-item-sub">${detail}${a.note ? ' — ' + a.note : ''} · cooldown ${a.cooldown_minutes || 60}m</div>
+        </div>
+        <div class="alert-item-actions">
+          <button class="btn btn-danger btn-sm" onclick="event.stopPropagation();deleteAlert(${ri},${ai})">🗑</button>
+        </div>
+      </div>`;
+    }).join('');
+
+    return `<div class="stock-row${isOn ? '' : ' disabled-row'}" id="sr-${ri}">
+      <div class="stock-row-header" onclick="toggleExpand(${ri})">
+        <span class="stock-toggle" id="tog-${ri}">▶</span>
+        <div class="stock-sym">${stock.symbol}</div>
+        <div class="stock-meta">${stock.name || ''}&nbsp;·&nbsp;${alerts.length} rule${alerts.length !== 1 ? 's' : ''}</div>
+        <span class="stock-tf">${stock.timeframe || '—'}</span>
+        <div class="toggle-switch${isOn ? ' on' : ''}"
+          onclick="event.stopPropagation();toggleEnabled(${ri})"
+          title="${isOn ? 'คลิกเพื่อปิด' : 'คลิกเพื่อเปิด'}"></div>
+        <div class="stock-actions">
+          <a class="btn btn-ghost btn-sm" href="${tvUrl}" target="_blank" rel="noopener"
+            onclick="event.stopPropagation()">📊</a>
+          <button class="btn btn-ghost btn-sm"
+            onclick="event.stopPropagation();openEditStock(${ri})">✏️ Edit</button>
+          <button class="btn btn-danger btn-sm"
+            onclick="event.stopPropagation();confirmDelete(${ri})">🗑</button>
+        </div>
+      </div>
+      <div class="stock-alerts-body" id="body-${ri}">
+        ${alertsHtml}
+        <button class="btn btn-ghost btn-sm" style="align-self:flex-start;margin-top:4px"
+          onclick="openEditStock(${ri})">＋ Add Alert Rule</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleExpand(i) {
+  document.getElementById('body-' + i).classList.toggle('open');
+  document.getElementById('tog-' + i).classList.toggle('open');
+}
+
+function toggleEnabled(i) {
+  const s = WL.watchlist[i];
+  s.enabled = s.enabled === false;
+  markDirty(); renderWatchlist();
+}
+
+// ─── Render Log ───────────────────────────────────────────────────────────────
+function renderLog() {
+  const tbody = document.getElementById('log-tbody');
+  document.getElementById('log-badge').textContent = LG.length;
+  const rows = [...LG].reverse().slice(0, 100);
+  if (!rows.length) { tbody.innerHTML = '<tr><td colspan="6" class="empty">ยังไม่มี alert log</td></tr>'; return; }
+  const bm = {price_target:'badge-price',percent_change:'badge-pct',volume_spike:'badge-vol',support_resistance:'badge-sr'};
+  const lm = {price_target:'Price Target',percent_change:'% Change',volume_spike:'Volume Spike',support_resistance:'S/R Break'};
+  tbody.innerHTML = rows.map(e => {
+    const pct = e.change_pct || 0;
+    const pctStr = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+    const col = pct >= 0 ? 'var(--green)' : 'var(--red)';
+    return `<tr>
+      <td style="color:var(--text2)">${timeAgo(e.timestamp)}</td>
+      <td><b>${e.symbol}</b></td>
+      <td>$${(+(e.price || 0)).toFixed(4)}</td>
+      <td style="color:${col}">${pctStr}</td>
+      <td><span class="badge ${bm[e.type] || 'badge-price'}">${lm[e.type] || e.type}</span></td>
+      <td style="color:var(--text3);font-size:10px">${e.alert_id}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ─── Stats ────────────────────────────────────────────────────────────────────
+function updateStats() {
+  if (!WL) return;
+  const wl = WL.watchlist || [];
+  const total = wl.reduce((s, st) => s + (st.alerts || []).length, 0);
+  const today = new Date().toISOString().slice(0, 10);
+  const fired = LG.filter(e => (e.timestamp || '').startsWith(today)).length;
+  document.getElementById('s-symbols').textContent = wl.length;
+  document.getElementById('s-alerts').textContent = total;
+  document.getElementById('s-fired').textContent = fired;
+}
+
+// ─── Add / Edit Modal ─────────────────────────────────────────────────────────
+function openAddStock() {
+  editIdx = null; blockId = 0;
+  document.getElementById('modal-title').textContent = '＋ Add Stock';
+  document.getElementById('f-symbol').value = '';
+  document.getElementById('f-symbol').readOnly = false;
+  document.getElementById('f-name').value = '';
+  document.getElementById('f-tf').value = '4H';
+  document.getElementById('f-market').value = 'US';
+  document.getElementById('alert-blocks').innerHTML = '';
+  syncNoAlertsHint();
+  openModal('modal-stock');
+}
+
+function openEditStock(i) {
+  editIdx = i; blockId = 0;
+  const s = WL.watchlist[i];
+  document.getElementById('modal-title').textContent = '✏️ Edit ' + s.symbol;
+  document.getElementById('f-symbol').value = s.symbol;
+  document.getElementById('f-symbol').readOnly = true;
+  document.getElementById('f-name').value = s.name || '';
+  document.getElementById('f-tf').value = s.timeframe || '4H';
+  document.getElementById('f-market').value = s.market || 'US';
+  document.getElementById('alert-blocks').innerHTML = '';
+  (s.alerts || []).forEach(a => addBlock(a.type, a));
+  syncNoAlertsHint();
+  openModal('modal-stock');
+}
+
+function submitStock() {
+  const sym = document.getElementById('f-symbol').value.trim().toUpperCase();
+  if (!sym) { toast('กรอก Symbol ก่อน', 'err'); return; }
+  const alerts = collectAlerts();
+  const stock = {
+    symbol: sym,
+    name: document.getElementById('f-name').value.trim() || sym,
+    market: document.getElementById('f-market').value,
+    timeframe: document.getElementById('f-tf').value,
+    enabled: true,
+    alerts: alerts,
+  };
+  if (!WL) WL = { settings: defaultSettings(), watchlist: [] };
+  if (editIdx === null) {
+    if (WL.watchlist.find(s => s.symbol === sym)) { toast(sym + ' มีอยู่แล้ว', 'err'); return; }
+    WL.watchlist.push(stock);
+  } else {
+    stock.enabled = WL.watchlist[editIdx].enabled;
+    WL.watchlist[editIdx] = stock;
+  }
+  markDirty(); renderWatchlist(); updateStats();
+  closeModal('modal-stock');
+  toast((editIdx === null ? 'เพิ่ม ' : 'อัปเดต ') + sym + ' แล้ว — กด 💾 Save', 'inf');
+}
+
+// ─── Alert Blocks ─────────────────────────────────────────────────────────────
+function addBlock(type, data) {
+  const id = blockId++;
+  const titles = {
+    price_target: '📥 Price Target',
+    percent_change: '📉 % Change',
+    volume_spike: '🔊 Volume Spike',
+    support_resistance: '⚠️ S/R Break',
+  };
+  let inner = '';
+  if (type === 'price_target') {
+    const dir = data ? data.direction : 'below_or_equal';
+    inner = `<div class="field-row">
+      <div class="field"><label>Target Price</label>
+        <input class="ab-target" type="number" step="any" placeholder="0.98" value="${data ? data.target_price : ''}">
+      </div>
+      <div class="field"><label>Direction</label>
+        <select class="ab-dir">
+          <option value="below_or_equal"${dir === 'below_or_equal' ? ' selected' : ''}>≤ Below or Equal (BUY)</option>
+          <option value="above_or_equal"${dir === 'above_or_equal' ? ' selected' : ''}>≥ Above or Equal (SELL)</option>
+        </select>
+      </div>
+    </div>`;
+  } else if (type === 'percent_change') {
+    const dir = data ? data.direction : 'down';
+    inner = `<div class="field-row">
+      <div class="field"><label>Threshold %</label>
+        <input class="ab-pct" type="number" step="any" placeholder="5" value="${data ? data.threshold_pct : '5'}">
+      </div>
+      <div class="field"><label>Direction</label>
+        <select class="ab-pctdir">
+          <option value="down"${dir === 'down' ? ' selected' : ''}>↓ Drop</option>
+          <option value="up"${dir === 'up' ? ' selected' : ''}>↑ Rise</option>
+        </select>
+      </div>
+    </div>`;
+  } else if (type === 'volume_spike') {
+    inner = `<div class="field"><label>Multiplier (× avg volume)</label>
+      <input class="ab-mult" type="number" step="any" placeholder="2.5" value="${data ? data.multiplier : '2.5'}">
+      <div class="field-hint">เช่น 2.5 = ปริมาณ 250% ของค่าเฉลี่ย</div>
+    </div>`;
+  } else if (type === 'support_resistance') {
+    const dir = data ? data.direction : 'break_below';
+    inner = `<div class="field-row">
+      <div class="field"><label>Level Price</label>
+        <input class="ab-level" type="number" step="any" placeholder="1.05" value="${data ? data.level : ''}">
+      </div>
+      <div class="field"><label>Direction</label>
+        <select class="ab-srdir">
+          <option value="break_below"${dir === 'break_below' ? ' selected' : ''}>↓ Break Below</option>
+          <option value="break_above"${dir === 'break_above' ? ' selected' : ''}>↑ Break Above</option>
+        </select>
+      </div>
+    </div>`;
+  }
+
+  const cd = data ? (data.cooldown_minutes || 60) : 60;
+  const note = data ? (data.note || '') : '';
+
+  const div = document.createElement('div');
+  div.className = 'alert-block';
+  div.dataset.type = type;
+  div.dataset.bid = id;
+  div.innerHTML = `<div class="alert-block-hdr">
+    <div class="alert-block-title">${titles[type] || type}</div>
+    <button class="btn-rm" onclick="this.closest('.alert-block').remove();syncNoAlertsHint()">×</button>
+  </div>
+  ${inner}
+  <div class="field-row" style="margin-top:10px">
+    <div class="field"><label>Cooldown (นาที)</label>
+      <input class="ab-cd" type="number" min="5" value="${cd}">
+    </div>
+    <div class="field"><label>Note (optional)</label>
+      <input class="ab-note" placeholder="e.g. EMA50 zone" value="${note}">
+    </div>
+  </div>`;
+  document.getElementById('alert-blocks').appendChild(div);
+  syncNoAlertsHint();
+}
+
+function syncNoAlertsHint() {
+  const hint = document.getElementById('no-alerts-hint');
+  const blocks = document.querySelectorAll('#alert-blocks .alert-block');
+  if (hint) hint.style.display = blocks.length ? 'none' : 'block';
+}
+
+function collectAlerts() {
+  const sym = document.getElementById('f-symbol').value.trim().toUpperCase() || 'SYM';
+  const blocks = document.querySelectorAll('#alert-blocks .alert-block');
+  return Array.from(blocks).map((b, i) => {
+    const type = b.dataset.type;
+    const cd = parseInt(b.querySelector('.ab-cd')?.value || '60');
+    const note = b.querySelector('.ab-note')?.value || '';
+    const id = sym + '_' + type.toUpperCase() + '_' + i;
+    const obj = { id, type, note, cooldown_minutes: cd };
+    if (type === 'price_target') {
+      obj.target_price = parseFloat(b.querySelector('.ab-target')?.value || '0');
+      obj.direction = b.querySelector('.ab-dir')?.value || 'below_or_equal';
+      obj.action = obj.direction === 'below_or_equal' ? 'BUY' : 'SELL';
+      obj.emoji = obj.action === 'BUY' ? '📥' : '📤';
+    } else if (type === 'percent_change') {
+      obj.threshold_pct = parseFloat(b.querySelector('.ab-pct')?.value || '5');
+      obj.direction = b.querySelector('.ab-pctdir')?.value || 'down';
+      obj.emoji = obj.direction === 'down' ? '📉' : '📈';
+    } else if (type === 'volume_spike') {
+      obj.multiplier = parseFloat(b.querySelector('.ab-mult')?.value || '2.5');
+      obj.emoji = '🔊';
+    } else if (type === 'support_resistance') {
+      obj.level = parseFloat(b.querySelector('.ab-level')?.value || '0');
+      obj.direction = b.querySelector('.ab-srdir')?.value || 'break_below';
+      obj.emoji = '⚠️';
+    }
+    return obj;
+  });
+}
+
+// ─── Delete ───────────────────────────────────────────────────────────────────
+function confirmDelete(i) {
+  const sym = WL.watchlist[i].symbol;
+  document.getElementById('confirm-msg').innerHTML =
+    'ลบ <b>' + sym + '</b> ออกจาก watchlist?<br>' +
+    '<span style="color:var(--text3);font-size:11px">จะมีผลหลังกด 💾 Save</span>';
+  document.getElementById('confirm-ok').onclick = () => {
+    WL.watchlist.splice(i, 1);
+    markDirty(); renderWatchlist(); updateStats();
+    closeModal('modal-confirm');
+    toast('ลบ ' + sym + ' แล้ว — กด 💾 Save', 'inf');
+  };
+  openModal('modal-confirm');
+}
+
+function deleteAlert(si, ai) {
+  WL.watchlist[si].alerts.splice(ai, 1);
+  markDirty(); renderWatchlist();
+  toast('ลบ alert rule แล้ว — กด 💾 Save', 'inf');
+}
+
+// ─── Dirty flag ───────────────────────────────────────────────────────────────
+function markDirty() {
+  dirty = true;
+  const btn = document.getElementById('save-btn');
+  btn.disabled = false;
+  btn.textContent = '💾 Save *';
+}
+
+// ─── Banner ───────────────────────────────────────────────────────────────────
+function updateBanner() {
+  const c = getCfg();
+  const el = document.getElementById('gh-banner');
+  if (!el) return;
+  if (c.token && c.owner && c.repo) {
+    el.innerHTML = `<div class="config-banner ok">
+      <span class="config-icon">✅</span>
+      <div class="config-text">
+        <div class="config-title">GitHub Connected</div>
+        <div class="config-desc">${c.owner}/${c.repo} · branch: ${c.branch || 'main'}</div>
+      </div>
+    </div>`;
+  } else {
+    el.innerHTML = `<div class="config-banner warn">
+      <span class="config-icon">⚠️</span>
+      <div class="config-text">
+        <div class="config-title">ยังไม่ได้ตั้งค่า GitHub</div>
+        <div class="config-desc">กรอก token ใน Setup เพื่อ sync และ save อัตโนมัติ</div>
+      </div>
+      <button class="btn btn-ghost btn-sm" onclick="showPage('setup',document.getElementById('nav-setup'))">ไป Setup →</button>
+    </div>`;
+  }
+}
+
+// ─── Navigation ───────────────────────────────────────────────────────────────
+function showPage(name, el) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  const pg = document.getElementById('page-' + name);
+  if (pg) pg.classList.add('active');
+  if (el) el.classList.add('active');
+}
+
+// ─── Modal ────────────────────────────────────────────────────────────────────
+function openModal(id)  { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+document.querySelectorAll('.overlay').forEach(o => {
+  o.addEventListener('click', e => { if (e.target === o) closeModal(o.id); });
+});
+
+// ─── Toast ────────────────────────────────────────────────────────────────────
+function toast(msg, type) {
+  const icons = { ok:'✅', err:'❌', inf:'ℹ️' };
+  const el = document.createElement('div');
+  el.className = 'toast ' + (type || 'inf');
+  el.innerHTML = '<span>' + (icons[type] || 'ℹ️') + '</span><span>' + msg + '</span>';
+  document.getElementById('toasts').appendChild(el);
+  setTimeout(() => { el.style.opacity = '0'; el.style.transition = 'opacity .3s'; setTimeout(() => el.remove(), 300); }, 3800);
+}
+
+// ─── Utils ────────────────────────────────────────────────────────────────────
+function timeAgo(iso) {
+  if (!iso) return '—';
+  const d = (Date.now() - new Date(iso)) / 1000;
+  if (d < 60) return Math.round(d) + 's ago';
+  if (d < 3600) return Math.round(d / 60) + 'm ago';
+  if (d < 86400) return Math.round(d / 3600) + 'h ago';
+  return Math.round(d / 86400) + 'd ago';
+}
+
+function defaultSettings() {
+  return {
+    telegram_bot_token_env: 'TELEGRAM_BOT_TOKEN',
+    telegram_chat_id_env: 'TELEGRAM_CHAT_ID',
+    cooldown_minutes: 60,
+    daily_summary_hour_utc: 1,
+  };
+}
+
+// ─── Clock & countdown ────────────────────────────────────────────────────────
+function tick() {
+  const now = new Date();
+  document.getElementById('hdr-clock').textContent = now.toLocaleTimeString('th-TH', { hour12: false });
+  const sec = 300 - (Math.floor(Date.now() / 1000) % 300);
+  document.getElementById('s-next').textContent = Math.floor(sec / 60) + 'm ' + (sec % 60) + 's';
+}
+setInterval(tick, 1000); tick();
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+loadCfgForm();
+updateBanner();
+refreshAll();
+</script>
+</body>
+</html>
