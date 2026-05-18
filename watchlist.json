@@ -200,6 +200,25 @@
           "emoji": "📥"
         }
       ]
+    },
+    {
+      "symbol": "SYRA",
+      "name": "SYRA",
+      "market": "US",
+      "timeframe": "4H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "SYRA_PRICE_TARGET_0",
+          "type": "price_target",
+          "note": "Fibo 0.786",
+          "cooldown_minutes": 60,
+          "target_price": 0.375,
+          "direction": "below_or_equal",
+          "action": "BUY",
+          "emoji": "📥"
+        }
+      ]
     }
   ]
 }
