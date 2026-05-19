@@ -214,5 +214,29 @@
     "type": "price_target",
     "price": 9.864999771118164,
     "change_pct": -9.162064722668834
+  },
+  {
+    "timestamp": "2026-05-19T16:12:21Z",
+    "symbol": "GPRO",
+    "alert_id": "GPRO_BUY_TARGET",
+    "type": "price_target",
+    "price": 1.000100016593933,
+    "change_pct": -7.8248832632319685
+  },
+  {
+    "timestamp": "2026-05-19T16:12:23Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_SUPPORT_RESISTANCE_1",
+    "type": "support_resistance",
+    "price": 79.27999877929688,
+    "change_pct": -5.393796206089645
+  },
+  {
+    "timestamp": "2026-05-19T16:12:36Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PRICE_TARGET_0",
+    "type": "price_target",
+    "price": 4.960000038146973,
+    "change_pct": -8.31792905458461
   }
 ]
