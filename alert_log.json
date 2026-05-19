@@ -142,5 +142,21 @@
     "type": "price_target",
     "price": 77.01000213623047,
     "change_pct": -8.102622749128315
+  },
+  {
+    "timestamp": "2026-05-19T14:27:25Z",
+    "symbol": "GPRO",
+    "alert_id": "GPRO_DROP_5PCT",
+    "type": "percent_change",
+    "price": 1.0299999713897705,
+    "change_pct": -5.069127060850642
+  },
+  {
+    "timestamp": "2026-05-19T14:27:35Z",
+    "symbol": "SYRA",
+    "alert_id": "SYRA_PRICE_TARGET_0",
+    "type": "price_target",
+    "price": 0.3619999885559082,
+    "change_pct": -9.500004209577975
   }
 ]
