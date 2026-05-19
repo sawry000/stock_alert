@@ -174,5 +174,21 @@
     "type": "price_target",
     "price": 9.800000190734863,
     "change_pct": -9.760587562294072
+  },
+  {
+    "timestamp": "2026-05-19T15:07:45Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_SUPPORT_RESISTANCE_1",
+    "type": "support_resistance",
+    "price": 79.5999984741211,
+    "change_pct": -5.011934995082224
+  },
+  {
+    "timestamp": "2026-05-19T15:07:54Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PRICE_TARGET_0",
+    "type": "price_target",
+    "price": 4.994999885559082,
+    "change_pct": -7.670981782641739
   }
 ]
