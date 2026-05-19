@@ -254,5 +254,13 @@
     "type": "price_target",
     "price": 3.640000104904175,
     "change_pct": -7.848098610020895
+  },
+  {
+    "timestamp": "2026-05-19T17:47:25Z",
+    "symbol": "GPRO",
+    "alert_id": "GPRO_DROP_5PCT",
+    "type": "percent_change",
+    "price": 1.024999976158142,
+    "change_pct": -5.529956114456947
   }
 ]
