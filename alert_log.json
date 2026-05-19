@@ -118,5 +118,21 @@
     "type": "price_target",
     "price": 10.0,
     "change_pct": -7.918968692449351
+  },
+  {
+    "timestamp": "2026-05-19T14:07:27Z",
+    "symbol": "GPRO",
+    "alert_id": "GPRO_BUY_TARGET",
+    "type": "price_target",
+    "price": 1.0500999689102173,
+    "change_pct": -3.2165927271689108
+  },
+  {
+    "timestamp": "2026-05-19T14:07:41Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PRICE_TARGET_0",
+    "type": "price_target",
+    "price": 4.989999771118164,
+    "change_pct": -7.763405339775159
   }
 ]
