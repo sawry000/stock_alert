@@ -102,5 +102,21 @@
     "type": "price_target",
     "price": 3.7049999237060547,
     "change_pct": -6.202533577061911
+  },
+  {
+    "timestamp": "2026-05-19T14:02:25Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_SUPPORT_RESISTANCE_1",
+    "type": "support_resistance",
+    "price": 79.49500274658203,
+    "change_pct": -5.1372282260357585
+  },
+  {
+    "timestamp": "2026-05-19T14:02:30Z",
+    "symbol": "OCC",
+    "alert_id": "OCC_PRICE_TARGET_0",
+    "type": "price_target",
+    "price": 10.0,
+    "change_pct": -7.918968692449351
   }
 ]
