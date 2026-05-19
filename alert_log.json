@@ -86,5 +86,21 @@
     "type": "price_target",
     "price": 1.0700000524520874,
     "change_pct": -1.3824836449688997
+  },
+  {
+    "timestamp": "2026-05-19T13:37:26Z",
+    "symbol": "GPRO",
+    "alert_id": "GPRO_SUPPORT_BREAK",
+    "type": "support_resistance",
+    "price": 1.0499000549316406,
+    "change_pct": -3.2350179786506303
+  },
+  {
+    "timestamp": "2026-05-19T13:37:33Z",
+    "symbol": "DHX",
+    "alert_id": "DHX_PRICE_TARGET_0",
+    "type": "price_target",
+    "price": 3.7049999237060547,
+    "change_pct": -6.202533577061911
   }
 ]
