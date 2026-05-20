@@ -526,5 +526,13 @@
     "type": "price_target",
     "price": 1.0,
     "change_pct": -7.834101382488476
+  },
+  {
+    "timestamp": "2026-05-20T07:17:23Z",
+    "symbol": "ATER",
+    "alert_id": "ATER_DROP_5PCT",
+    "type": "percent_change",
+    "price": 1.2200000286102295,
+    "change_pct": -8.955221745505266
   }
 ]
