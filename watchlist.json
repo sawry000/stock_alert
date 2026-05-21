@@ -275,6 +275,25 @@
           "emoji": "⚠️"
         }
       ]
+    },
+    {
+      "symbol": "ENPH",
+      "name": "ENPH",
+      "market": "US",
+      "timeframe": "1D",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "ENPH_PRICE_TARGET_0",
+          "type": "price_target",
+          "note": "",
+          "cooldown_minutes": 60,
+          "target_price": 52.9,
+          "direction": "below_or_equal",
+          "action": "BUY",
+          "emoji": "📥"
+        }
+      ]
     }
   ]
 }
