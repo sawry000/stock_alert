@@ -35,7 +35,7 @@
           "id": "ATER_DROP_5PCT",
           "type": "percent_change",
           "direction": "down",
-          "threshold_pct": 5.0,
+          "threshold_pct": 5,
           "note": "Drop 5%+ intraday",
           "emoji": "📉",
           "cooldown_minutes": 180
@@ -56,7 +56,11 @@
         {
           "id": "ATER_CANDLE_REVERSAL",
           "type": "candle_pattern",
-          "patterns": ["hammer", "bullish_engulfing", "morning_star"],
+          "patterns": [
+            "hammer",
+            "bullish_engulfing",
+            "morning_star"
+          ],
           "match_any": true,
           "interval": "1d",
           "note": "Bullish reversal pattern 1D",
@@ -95,7 +99,7 @@
           "id": "GPRO_DROP_5PCT",
           "type": "percent_change",
           "direction": "down",
-          "threshold_pct": 5.0,
+          "threshold_pct": 5,
           "note": "Drop 5%+ intraday",
           "emoji": "📉",
           "cooldown_minutes": 180
@@ -167,7 +171,7 @@
         {
           "id": "BTC_VOLUME_SPIKE",
           "type": "volume_spike",
-          "multiplier": 3.0,
+          "multiplier": 3,
           "note": "Volume Spike 3x — อาจเกิด big move",
           "emoji": "🔊",
           "cooldown_minutes": 120
@@ -187,7 +191,11 @@
         {
           "id": "BTC_MTF_BULLISH",
           "type": "mtf_alignment",
-          "timeframes": ["1h", "4h", "1d"],
+          "timeframes": [
+            "1h",
+            "4h",
+            "1d"
+          ],
           "required_alignment": "mostly_bullish",
           "min_bullish": 2,
           "note": "MTF Alignment Bullish — ยืนยันก่อนซื้อ",
@@ -218,7 +226,11 @@
         {
           "id": "ETH_CANDLE_BULL",
           "type": "candle_pattern",
-          "patterns": ["bullish_engulfing", "three_white_soldiers", "morning_star"],
+          "patterns": [
+            "bullish_engulfing",
+            "three_white_soldiers",
+            "morning_star"
+          ],
           "match_any": true,
           "interval": "4h",
           "note": "Bullish pattern 4H Ethereum",
@@ -242,7 +254,7 @@
           "type": "position_size",
           "condition": "triggered_always",
           "account_size": 5000,
-          "risk_pct": 2.0,
+          "risk_pct": 2,
           "method": "fixed_risk",
           "note": "Position Size สำหรับ ETH — Risk 2%",
           "emoji": "💼",
@@ -299,11 +311,30 @@
           "days": 180,
           "hold_days": 5,
           "min_win_rate": 55,
-          "min_avg_return": 1.0,
+          "min_avg_return": 1,
           "interval": "1d",
           "note": "Backtest RSI Oversold 180D — trigger ถ้า win rate >= 55%",
           "emoji": "🔬",
           "cooldown_minutes": 10080
+        }
+      ]
+    },
+    {
+      "symbol": "UAMY",
+      "name": "UAMY",
+      "market": "US",
+      "timeframe": "1W",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "UAMY_PRICE_TARGET_0",
+          "type": "price_target",
+          "note": "",
+          "cooldown_minutes": 60,
+          "target_price": 7.25,
+          "direction": "below_or_equal",
+          "action": "BUY",
+          "emoji": "📥"
         }
       ]
     }
