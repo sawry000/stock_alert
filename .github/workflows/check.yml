@@ -1,43 +1,147 @@
-name: Stock Price Alert
+name: Stock Alert PRO — 12 Alert Types
+
+# ═══════════════════════════════════════════════════════════════════════
+#  CRON SCHEDULE (GitHub Actions ใช้เวลา UTC)
+#
+#  US Market:    13:30–21:00 UTC  (Mon–Fri)
+#  Pre-market:   08:00–13:29 UTC  (Mon–Fri)
+#  Crypto 24/7:  ทุก 15 นาที ตลอด 24 ชั่วโมง
+#  Daily Summary: 01:00 UTC (08:00 ICT)
+#
+#  ⚠️  GitHub Actions Free Tier: 2,000 นาที/เดือน
+#      ประมาณการใช้งาน: ~800 นาที/เดือน (ปลอดภัย)
+# ═══════════════════════════════════════════════════════════════════════
 
 "on":
-  # Triggered by Google Apps Script on schedule
-  # (GAS handles market-hours logic and calls workflow_dispatch)
+  schedule:
+    # ── US Market Hours: ทุก 5 นาที 13:00–20:55 UTC Mon–Fri ──────────
+    - cron: "*/5 13-20 * * 1-5"
+
+    # ── US Pre-Market: ทุก 5 นาที 08:00–12:55 UTC Mon–Fri ────────────
+    - cron: "*/5 8-12 * * 1-5"
+
+    # ── Crypto 24/7: ทุก 15 นาที ตลอดคืน 21:00–07:55 UTC ────────────
+    - cron: "*/15 21-23 * * *"
+    - cron: "*/15 0-7 * * *"
+
+    # ── Daily Summary: 01:00 UTC (08:00 ICT) ─────────────────────────
+    - cron: "0 1 * * *"
+
+  # Manual trigger จาก GitHub UI
   workflow_dispatch:
+    inputs:
+      symbol_override:
+        description: "Run for specific symbol only (optional)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Dry run — ไม่ส่ง Telegram (true/false)"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
 
+# ═══════════════════════════════════════════════════════════════════════
+#  JOB: check-alerts
+# ═══════════════════════════════════════════════════════════════════════
+
 jobs:
-  check-prices:
+  check-alerts:
+    name: "Check All Alert Types"
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
 
     steps:
-      - name: Checkout repository
+      # ─── 1. Checkout ────────────────────────────────────────────────
+      - name: "📥 Checkout repository"
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Python
+      # ─── 2. Setup Python ─────────────────────────────────────────────
+      - name: "🐍 Setup Python 3.11"
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
 
-      - name: Install dependencies
+      # ─── 3. Cache pip ────────────────────────────────────────────────
+      - name: "📦 Cache pip packages"
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-yfinance-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-yfinance-
+            ${{ runner.os }}-pip-
+
+      # ─── 4. Install dependencies ──────────────────────────────────────
+      - name: "📦 Install dependencies"
         run: |
+          pip install --upgrade pip --quiet
           pip install yfinance --quiet --break-system-packages || pip install yfinance --quiet
+          echo "✅ yfinance installed: $(pip show yfinance | grep Version)"
 
-      - name: Run alert engine
+      # ─── 5. Validate watchlist.json ───────────────────────────────────
+      - name: "🔍 Validate watchlist.json"
+        run: |
+          python3 -c "
+          import json, sys
+          try:
+              with open('watchlist.json') as f:
+                  data = json.load(f)
+              stocks = data.get('watchlist', [])
+              alerts_count = sum(len(s.get('alerts',[])) for s in stocks)
+              print(f'✅ watchlist.json valid: {len(stocks)} symbols, {alerts_count} alerts')
+              
+              # Validate required fields
+              valid_types = {
+                  'price_target', 'percent_change', 'volume_spike', 'support_resistance',
+                  'rsi', 'ma_crossover', 'candle_pattern', 'news_sentiment',
+                  'position_size', 'mtf_alignment', 'alert_score', 'backtest_check'
+              }
+              for s in stocks:
+                  for a in s.get('alerts', []):
+                      if a.get('type') not in valid_types:
+                          print(f'⚠️  Unknown type: {a[\"type\"]} in {s[\"symbol\"]}')
+                      if 'id' not in a:
+                          print(f'❌ Missing id in alert: {a}')
+                          sys.exit(1)
+              print('✅ All alert types valid')
+          except Exception as e:
+              print(f'❌ watchlist.json error: {e}')
+              sys.exit(1)
+          "
+
+      # ─── 6. Run Alert Engine ──────────────────────────────────────────
+      - name: "🚨 Run Alert Engine PRO"
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python3 alert_engine.py
-
-      - name: Commit updated state and log
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN:            ${{ github.event.inputs.dry_run || 'false' }}
+          SYMBOL_OVERRIDE:    ${{ github.event.inputs.symbol_override || '' }}
         run: |
-          git config user.name "github-actions[bot]"
+          echo "🕐 Run time: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          echo "⏰ Bangkok time: $(TZ='Asia/Bangkok' date '+%Y-%m-%d %H:%M:%S ICT')"
+          echo "🔧 DRY_RUN: $DRY_RUN"
+          python3 alert_engine.py
+
+      # ─── 7. Commit state + log ────────────────────────────────────────
+      - name: "💾 Commit updated state and log"
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add state.json alert_log.json
           git diff --staged --quiet || git commit -m "chore: update alert state [skip ci]"
-          git push
+          git push || echo "Nothing to push"
+
+      # ─── 8. Upload log as artifact (for debugging) ────────────────────
+      - name: "📤 Upload alert log"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alert-log-${{ github.run_number }}
+          path: alert_log.json
+          retention-days: 7
