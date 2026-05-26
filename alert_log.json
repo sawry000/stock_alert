@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "timestamp": "2026-05-26T22:52:24Z",
+    "symbol": "BTC-USD",
+    "alert_id": "BTC_NEWS_ALERT",
+    "type": "news_sentiment",
+    "price": 75585.703125,
+    "change_pct": -2.1532520466215157,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-26T22:52:30Z",
+    "symbol": "ETH-USD",
+    "alert_id": "ETH_NEWS_NEGATIVE",
+    "type": "news_sentiment",
+    "price": 2064.56005859375,
+    "change_pct": -2.196656191749392,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-26T22:52:31Z",
+    "symbol": "ETH-USD",
+    "alert_id": "ETH_POSITION_SIZE",
+    "type": "position_size",
+    "price": 2064.56005859375,
+    "change_pct": -2.196656191749392,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-05-26T22:52:36Z",
+    "symbol": "NVDA",
+    "alert_id": "NVDA_NEWS_CATALYST",
+    "type": "news_sentiment",
+    "price": 214.86000061035156,
+    "change_pct": 0.26253263471771104,
+    "value": 3
+  }
+]
