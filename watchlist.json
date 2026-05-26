@@ -11,7 +11,7 @@
       "name": "Aterian Inc.",
       "market": "US",
       "timeframe": "4H",
-      "enabled": false,
+      "enabled": true,
       "alerts": [
         {
           "id": "ATER_BUY_EMA50",
@@ -35,10 +35,34 @@
           "id": "ATER_DROP_5PCT",
           "type": "percent_change",
           "direction": "down",
-          "threshold_pct": 5,
+          "threshold_pct": 5.0,
           "note": "Drop 5%+ intraday",
           "emoji": "📉",
           "cooldown_minutes": 180
+        },
+        {
+          "id": "ATER_RSI_OVERSOLD",
+          "type": "rsi",
+          "condition": "oversold",
+          "oversold_level": 30,
+          "overbought_level": 70,
+          "period": 14,
+          "interval": "1d",
+          "note": "RSI Oversold 1D — โอกาสกลับตัวขึ้น",
+          "action": "BUY",
+          "emoji": "📊",
+          "cooldown_minutes": 360
+        },
+        {
+          "id": "ATER_CANDLE_REVERSAL",
+          "type": "candle_pattern",
+          "patterns": ["hammer", "bullish_engulfing", "morning_star"],
+          "match_any": true,
+          "interval": "1d",
+          "note": "Bullish reversal pattern 1D",
+          "action": "BUY",
+          "emoji": "🕯️",
+          "cooldown_minutes": 480
         }
       ]
     },
@@ -47,7 +71,7 @@
       "name": "GoPro Inc.",
       "market": "US",
       "timeframe": "1H",
-      "enabled": false,
+      "enabled": true,
       "alerts": [
         {
           "id": "GPRO_BUY_TARGET",
@@ -71,7 +95,7 @@
           "id": "GPRO_DROP_5PCT",
           "type": "percent_change",
           "direction": "down",
-          "threshold_pct": 5,
+          "threshold_pct": 5.0,
           "note": "Drop 5%+ intraday",
           "emoji": "📉",
           "cooldown_minutes": 180
@@ -84,214 +108,202 @@
           "note": "Break below support 1.05",
           "emoji": "⚠️",
           "cooldown_minutes": 180
-        }
-      ]
-    },
-    {
-      "symbol": "AEHR",
-      "name": "รอราคาลงมาที่ Fibo 0.786",
-      "market": "US",
-      "timeframe": "4H",
-      "enabled": false,
-      "alerts": [
-        {
-          "id": "AEHR_PRICE_TARGET_0",
-          "type": "price_target",
-          "note": "",
-          "cooldown_minutes": 60,
-          "target_price": 77.5,
-          "direction": "below_or_equal",
-          "action": "BUY",
-          "emoji": "📥"
         },
         {
-          "id": "AEHR_SUPPORT_RESISTANCE_1",
-          "type": "support_resistance",
-          "note": "Exit Line",
-          "cooldown_minutes": 60,
-          "level": 80,
-          "direction": "break_below",
-          "emoji": "⚠️"
-        }
-      ]
-    },
-    {
-      "symbol": "BTCTHB",
-      "name": "ราคาทุน",
-      "market": "US",
-      "timeframe": "1H",
-      "enabled": false,
-      "alerts": [
+          "id": "GPRO_GOLDEN_CROSS",
+          "type": "ma_crossover",
+          "condition": "golden_cross",
+          "fast_period": 9,
+          "slow_period": 21,
+          "ma_type": "EMA",
+          "interval": "1d",
+          "note": "EMA9/21 Golden Cross 1D",
+          "action": "BUY",
+          "emoji": "🌟",
+          "cooldown_minutes": 720
+        },
         {
-          "id": "BTCTHB_PRICE_TARGET_0",
-          "type": "price_target",
-          "note": "ราคทุน",
-          "cooldown_minutes": 60,
-          "target_price": 2600000,
-          "direction": "above_or_equal",
-          "action": "SELL",
-          "emoji": "📤"
+          "id": "GPRO_SCORE_BUY",
+          "type": "alert_score",
+          "direction": "bullish",
+          "min_score": 65,
+          "interval": "1d",
+          "note": "Confidence Score >= 65 Bullish",
+          "emoji": "🎯",
+          "cooldown_minutes": 480
         }
       ]
     },
     {
-      "symbol": "AIXI",
-      "name": "แนวรับ",
-      "market": "US",
+      "symbol": "BTC-USD",
+      "name": "Bitcoin",
+      "market": "CRYPTO",
       "timeframe": "4H",
       "enabled": true,
       "alerts": [
         {
-          "id": "AIXI_PRICE_TARGET_0",
-          "type": "price_target",
-          "note": "S1",
-          "cooldown_minutes": 60,
-          "target_price": 7.5,
-          "direction": "below_or_equal",
-          "action": "BUY",
-          "emoji": "📥"
+          "id": "BTC_RSI_EXTREME_OVERSOLD",
+          "type": "rsi",
+          "condition": "extreme_oversold",
+          "extreme_level": 25,
+          "period": 14,
+          "interval": "4h",
+          "note": "RSI Extreme Oversold 4H — โอกาสซื้อหายาก",
+          "action": "STRONG BUY",
+          "emoji": "🔥",
+          "cooldown_minutes": 480
         },
         {
-          "id": "AIXI_PRICE_TARGET_1",
-          "type": "price_target",
-          "note": "Exit Line",
-          "cooldown_minutes": 60,
-          "target_price": 6,
-          "direction": "below_or_equal",
-          "action": "BUY",
-          "emoji": "📥"
+          "id": "BTC_RSI_OVERBOUGHT",
+          "type": "rsi",
+          "condition": "overbought",
+          "overbought_level": 75,
+          "period": 14,
+          "interval": "4h",
+          "note": "RSI Overbought 4H — พิจารณา Take Profit",
+          "emoji": "🌡️",
+          "cooldown_minutes": 480
+        },
+        {
+          "id": "BTC_VOLUME_SPIKE",
+          "type": "volume_spike",
+          "multiplier": 3.0,
+          "note": "Volume Spike 3x — อาจเกิด big move",
+          "emoji": "🔊",
+          "cooldown_minutes": 120
+        },
+        {
+          "id": "BTC_NEWS_ALERT",
+          "type": "news_sentiment",
+          "condition": "strong_positive",
+          "hours_back": 12,
+          "max_news": 5,
+          "min_news": 1,
+          "translate": true,
+          "note": "ข่าวบวกแรง Bitcoin — แปลไทยอัตโนมัติ",
+          "emoji": "📰",
+          "cooldown_minutes": 180
+        },
+        {
+          "id": "BTC_MTF_BULLISH",
+          "type": "mtf_alignment",
+          "timeframes": ["1h", "4h", "1d"],
+          "required_alignment": "mostly_bullish",
+          "min_bullish": 2,
+          "note": "MTF Alignment Bullish — ยืนยันก่อนซื้อ",
+          "emoji": "📡",
+          "cooldown_minutes": 480
         }
       ]
     },
     {
-      "symbol": "DHX",
-      "name": "DHX",
-      "market": "US",
+      "symbol": "ETH-USD",
+      "name": "Ethereum",
+      "market": "CRYPTO",
       "timeframe": "1H",
-      "enabled": false,
+      "enabled": true,
       "alerts": [
         {
-          "id": "DHX_PRICE_TARGET_0",
-          "type": "price_target",
-          "note": "Exit + Ema",
-          "cooldown_minutes": 60,
-          "target_price": 3.75,
-          "direction": "below_or_equal",
+          "id": "ETH_RSI_OVERSOLD",
+          "type": "rsi",
+          "condition": "oversold",
+          "oversold_level": 30,
+          "period": 14,
+          "interval": "1h",
+          "note": "RSI Oversold 1H",
           "action": "BUY",
-          "emoji": "📥"
-        }
-      ]
-    },
-    {
-      "symbol": "OCC",
-      "name": "OCC",
-      "market": "US",
-      "timeframe": "4H",
-      "enabled": false,
-      "alerts": [
+          "emoji": "📊",
+          "cooldown_minutes": 240
+        },
         {
-          "id": "OCC_PRICE_TARGET_0",
-          "type": "price_target",
-          "note": "FIBO 0.786",
-          "cooldown_minutes": 60,
-          "target_price": 10,
-          "direction": "below_or_equal",
-          "action": "BUY",
-          "emoji": "📥"
-        }
-      ]
-    },
-    {
-      "symbol": "SYRA",
-      "name": "SYRA",
-      "market": "US",
-      "timeframe": "4H",
-      "enabled": false,
-      "alerts": [
+          "id": "ETH_CANDLE_BULL",
+          "type": "candle_pattern",
+          "patterns": ["bullish_engulfing", "three_white_soldiers", "morning_star"],
+          "match_any": true,
+          "interval": "4h",
+          "note": "Bullish pattern 4H Ethereum",
+          "emoji": "🕯️",
+          "cooldown_minutes": 360
+        },
         {
-          "id": "SYRA_PRICE_TARGET_0",
-          "type": "price_target",
-          "note": "Fibo 0.786",
-          "cooldown_minutes": 60,
-          "target_price": 0.375,
-          "direction": "below_or_equal",
-          "action": "BUY",
-          "emoji": "📥"
-        }
-      ]
-    },
-    {
-      "symbol": "FIVN",
-      "name": "FIVN",
-      "market": "US",
-      "timeframe": "1D",
-      "enabled": false,
-      "alerts": [
+          "id": "ETH_NEWS_NEGATIVE",
+          "type": "news_sentiment",
+          "condition": "negative",
+          "hours_back": 6,
+          "max_news": 5,
+          "min_news": 2,
+          "translate": true,
+          "note": "ข่าวลบ ETH — ระวัง downside",
+          "emoji": "⚠️",
+          "cooldown_minutes": 180
+        },
         {
-          "id": "FIVN_PRICE_TARGET_0",
-          "type": "price_target",
-          "note": "Exit Line",
-          "cooldown_minutes": 60,
-          "target_price": 20,
-          "direction": "below_or_equal",
-          "action": "BUY",
-          "emoji": "📥"
+          "id": "ETH_POSITION_SIZE",
+          "type": "position_size",
+          "condition": "triggered_always",
+          "account_size": 5000,
+          "risk_pct": 2.0,
+          "method": "fixed_risk",
+          "note": "Position Size สำหรับ ETH — Risk 2%",
+          "emoji": "💼",
+          "cooldown_minutes": 1440
         }
       ]
     },
     {
-      "symbol": "ASPN",
-      "name": "ASPN",
-      "market": "US",
-      "timeframe": "4H",
-      "enabled": false,
-      "alerts": [
-        {
-          "id": "ASPN_PRICE_TARGET_0",
-          "type": "price_target",
-          "note": "Ema",
-          "cooldown_minutes": 60,
-          "target_price": 5,
-          "direction": "below_or_equal",
-          "action": "BUY",
-          "emoji": "📥"
-        }
-      ]
-    },
-    {
-      "symbol": "TYGO",
-      "name": "TYGO",
-      "market": "US",
-      "timeframe": "4H",
-      "enabled": false,
-      "alerts": [
-        {
-          "id": "TYGO_SUPPORT_RESISTANCE_0",
-          "type": "support_resistance",
-          "note": "Exit Line",
-          "cooldown_minutes": 60,
-          "level": 4,
-          "direction": "break_above",
-          "emoji": "⚠️"
-        }
-      ]
-    },
-    {
-      "symbol": "ENPH",
-      "name": "ENPH",
+      "symbol": "NVDA",
+      "name": "NVIDIA Corp.",
       "market": "US",
       "timeframe": "1D",
       "enabled": true,
       "alerts": [
         {
-          "id": "ENPH_PRICE_TARGET_0",
-          "type": "price_target",
-          "note": "",
-          "cooldown_minutes": 60,
-          "target_price": 52.9,
-          "direction": "below_or_equal",
+          "id": "NVDA_SCORE_HIGH",
+          "type": "alert_score",
+          "direction": "bullish",
+          "min_score": 75,
+          "interval": "1d",
+          "note": "High Confidence Score NVDA Bullish >= 75",
+          "emoji": "🎯",
+          "cooldown_minutes": 1440
+        },
+        {
+          "id": "NVDA_MA_GOLDEN",
+          "type": "ma_crossover",
+          "condition": "golden_cross",
+          "fast_period": 20,
+          "slow_period": 50,
+          "ma_type": "EMA",
+          "interval": "1d",
+          "note": "EMA20/50 Golden Cross NVDA",
           "action": "BUY",
-          "emoji": "📥"
+          "emoji": "🌟",
+          "cooldown_minutes": 1440
+        },
+        {
+          "id": "NVDA_NEWS_CATALYST",
+          "type": "news_sentiment",
+          "condition": "strong_positive",
+          "hours_back": 24,
+          "max_news": 5,
+          "min_news": 1,
+          "translate": true,
+          "note": "ข่าวบวกแรง NVDA — อาจเป็น catalyst",
+          "emoji": "📰",
+          "cooldown_minutes": 360
+        },
+        {
+          "id": "NVDA_BACKTEST_CHECK",
+          "type": "backtest_check",
+          "rule": "rsi_oversold",
+          "days": 180,
+          "hold_days": 5,
+          "min_win_rate": 55,
+          "min_avg_return": 1.0,
+          "interval": "1d",
+          "note": "Backtest RSI Oversold 180D — trigger ถ้า win rate >= 55%",
+          "emoji": "🔬",
+          "cooldown_minutes": 10080
         }
       ]
     }

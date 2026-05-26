@@ -1,157 +1,147 @@
-# 📊 Stock Price Alert System
+# Stock Alert PRO — GitHub Actions Edition v2.0
 
-ระบบ alert ราคาหุ้นอัตโนมัติ รันบน GitHub Actions → ส่งแจ้งเตือนเข้า Telegram
-
----
-
-## 🗂️ โครงสร้างไฟล์
-
-```
-stock-alert-system/
-├── .github/
-│   └── workflows/
-│       └── check.yml        ← GitHub Actions cron job
-├── alert_engine.py          ← Python engine หลัก
-├── watchlist.json           ← Config หุ้น + เงื่อนไข (แก้ไขได้เอง)
-├── state.json               ← State tracking (auto-updated)
-├── alert_log.json           ← Alert history log (auto-updated)
-├── dashboard.html           ← Web UI ดู watchlist + log
-└── README.md
-```
+ระบบแจ้งเตือนหุ้น/crypto อัตโนมัติบน GitHub Actions ส่งแจ้งเตือนผ่าน Telegram  
+รองรับ **12 alert types** ในไฟล์เดียว ไม่มีค่าใช้จ่าย
 
 ---
 
-## 🚀 วิธีติดตั้ง (ทำครั้งเดียว ~5 นาที)
+## 📁 โครงสร้างไฟล์
 
-### Step 1 — สร้าง GitHub Repository
+```
+repo/
+├── alert_engine.py              ← Engine หลัก (12 alert types)
+├── watchlist.json               ← รายการหุ้นและเงื่อนไข alert
+├── state.json                   ← Cooldown state (auto-updated)
+├── alert_log.json               ← ประวัติ alert (auto-updated)
+├── dashboard_pro.html           ← จัดการ watchlist.json แบบ visual
+├── .github/workflows/check.yml  ← GitHub Actions workflow
+│
+├── module_rsi.py                ← Module 1: RSI (standalone)
+├── module_ma_cross.py           ← Module 2: MA Crossover (standalone)
+├── module_candle.py             ← Module 3: Candle Pattern (standalone)
+├── module_news.py               ← Module 4: News + แปลไทย (standalone)
+├── module_position.py           ← Module 5: Position Sizing (standalone)
+├── module_mtf.py                ← Module 6: Multi-Timeframe (standalone)
+├── module_score.py              ← Module 7: Confidence Score (standalone)
+└── module_backtest.py           ← Module 8: Backtest (standalone)
+```
 
-1. ไปที่ https://github.com/new
-2. ตั้งชื่อ repo เช่น `stock-alerts`
-3. เลือก **Private** (ปลอดภัยกว่า)
-4. กด **Create repository**
-5. Upload ไฟล์ทั้งหมดขึ้นไป (drag & drop หรือใช้ git)
+---
 
-### Step 2 — ตั้ง Telegram Secrets
+## 🚀 วิธี Deploy
 
-1. ไปที่ repo → **Settings** → **Secrets and variables** → **Actions**
-2. กด **New repository secret** แล้วใส่:
+### 1. สร้าง GitHub Repository
+
+```bash
+git init
+git add .
+git commit -m "feat: Stock Alert PRO v2.0"
+git remote add origin https://github.com/USERNAME/REPO.git
+git push -u origin main
+```
+
+### 2. ตั้งค่า GitHub Secrets
+
+ไปที่ **repo → Settings → Secrets and variables → Actions → New repository secret**
 
 | Secret Name | ค่า |
 |---|---|
-| `TELEGRAM_BOT_TOKEN` | Token จาก @BotFather เช่น `7123456789:AAHxxxxxxx` |
-| `TELEGRAM_CHAT_ID` | Chat ID ของคุณ เช่น `123456789` |
+| `TELEGRAM_BOT_TOKEN` | Token จาก @BotFather |
+| `TELEGRAM_CHAT_ID` | Chat ID ของคุณ |
 
-> วิธีหา Chat ID: ส่งข้อความหา bot ของคุณก่อน แล้วเปิด
-> `https://api.telegram.org/bot{TOKEN}/getUpdates`
-> ดูค่า `message.chat.id`
+> หา Chat ID ได้จาก @userinfobot หรือ @getidsbot ใน Telegram
 
-### Step 3 — เปิดใช้ GitHub Actions
+### 3. ตรวจสอบ GitHub Actions
 
-1. ไปที่ repo → **Actions** tab
-2. ถ้ามี popup ถามให้ enable → กด **I understand my workflows, go ahead and enable them**
-3. ระบบจะรันอัตโนมัติตาม cron schedule ที่ตั้งไว้
-
-### Step 4 — ทดสอบ manual run
-
-1. ไปที่ **Actions** → **Stock Price Alert**
-2. กด **Run workflow** → **Run workflow**
-3. รอ 1-2 นาที ดู logs
-4. เช็ค Telegram ว่าได้รับ message หรือไม่
+ไปที่ **repo → Actions** — จะเห็น workflow `Stock Alert PRO` รันอัตโนมัติ
 
 ---
 
-## ⚙️ การตั้งค่า watchlist.json
+## 📋 Alert Types ที่รองรับ (12 types)
 
-### เพิ่มหุ้นใหม่
-
-```json
-{
-  "symbol": "TSLA",
-  "name": "Tesla Inc.",
-  "market": "US",
-  "timeframe": "1D",
-  "enabled": true,
-  "alerts": [
-    {
-      "id": "TSLA_BUY_200",
-      "type": "price_target",
-      "direction": "below_or_equal",
-      "target_price": 200.00,
-      "note": "Buy zone รับแนวต้านเก่า",
-      "action": "BUY",
-      "emoji": "📥",
-      "cooldown_minutes": 240
-    }
-  ]
-}
-```
-
-### ประเภท Alert ที่รองรับ
-
-| type | คำอธิบาย | ฟิลด์ที่ต้องมี |
-|---|---|---|
-| `price_target` | ราคาถึงจุดที่กำหนด | `target_price`, `direction` |
-| `percent_change` | ราคาขึ้น/ลง X% ใน 1 วัน | `threshold_pct`, `direction` |
-| `volume_spike` | ปริมาณซื้อขายพุ่ง X เท่า | `multiplier` |
-| `support_resistance` | ราคาทะลุแนวรับ/แนวต้าน | `level`, `direction` |
-
-### direction options
-
-- `price_target`: `"below_or_equal"` หรือ `"above_or_equal"`
-- `percent_change`: `"down"` หรือ `"up"`
-- `support_resistance`: `"break_below"` หรือ `"break_above"`
+| Type | คำอธิบาย |
+|---|---|
+| `price_target` | แจ้งเตือนเมื่อราคาถึงเป้า |
+| `percent_change` | แจ้งเตือนเมื่อราคาขึ้น/ลง X% |
+| `volume_spike` | Volume พุ่งผิดปกติ X เท่า |
+| `support_resistance` | ทะลุแนวรับ/ต้าน |
+| `rsi` | RSI Oversold/Overbought |
+| `ma_crossover` | EMA/SMA Golden Cross / Death Cross |
+| `candle_pattern` | 14 Candle Patterns เช่น Hammer, Engulfing |
+| `news_sentiment` | ข่าวล่าสุด + แปลไทย + Sentiment |
+| `position_size` | คำนวณ position size (Fixed Risk/Kelly/ATR) |
+| `mtf_alignment` | Multi-Timeframe trend alignment |
+| `alert_score` | Confidence Score 0–100 จาก 7 indicators |
+| `backtest_check` | Backtest rule ย้อนหลัง trigger ถ้าผ่าน win rate |
 
 ---
 
-## 📱 ตัวอย่าง Telegram Message
+## ⏰ Cron Schedule
 
-```
-📥 ALERT: ATER (Aterian Inc.)
-
-💰 Price: $0.9750  📉 -2.50%
-🎯 Target hit: $0.9800
-⚡ Signal: BUY
-⏱ Timeframe: 4H
-📋 Note: EMA50 (4H) — Buy zone
-
-📊 View on TradingView
-🕐 2024-01-15T14:30:00Z
-```
+| เวลา UTC | เวลา ICT | ความถี่ | ครอบคลุม |
+|---|---|---|---|
+| `*/5 8-12 * * 1-5` | 15:00–19:55 | ทุก 5 นาที | US Pre-market |
+| `*/5 13-20 * * 1-5` | 20:00–03:55+1 | ทุก 5 นาที | US Market Hours |
+| `*/15 21-23,0-7 * * *` | 04:00–14:55 | ทุก 15 นาที | Crypto 24/7 |
+| `0 1 * * *` | 08:00 | วันละครั้ง | Daily Summary |
 
 ---
 
-## 📊 Web Dashboard
-
-เปิดไฟล์ `dashboard.html` ในเครื่องที่มี repo อยู่:
+## 💻 Standalone Modules (ใช้งานอิสระได้)
 
 ```bash
-# Python simple server
-python3 -m http.server 8080
-# แล้วเปิด http://localhost:8080/dashboard.html
+# ติดตั้ง dependency
+pip install yfinance
+
+# RSI
+python3 module_rsi.py --symbol AAPL --condition oversold
+
+# MA Crossover
+python3 module_ma_cross.py --symbol BTC-USD --fast 9 --slow 21
+
+# Candle Pattern
+python3 module_candle.py --symbol TSLA --pattern all
+
+# News + แปลไทย
+python3 module_news.py --symbol NVDA --hours 24
+
+# Position Sizing
+python3 module_position.py --symbol AAPL --account 10000 --risk 2
+
+# Multi-Timeframe
+python3 module_mtf.py --symbol BTC-USD --timeframes 1h 4h 1d
+
+# Confidence Score
+python3 module_score.py --symbol AAPL --direction bullish
+
+# Backtest
+python3 module_backtest.py --symbol AAPL --rule rsi_oversold --days 180
 ```
 
-หรือ enable GitHub Pages:
-- Settings → Pages → Source: main branch / root
-- เข้าได้ที่ `https://yourusername.github.io/stock-alerts/dashboard.html`
+---
+
+## 🔧 จัดการ watchlist.json
+
+ใช้ `dashboard_pro.html` — เปิดในเบราว์เซอร์โดยตรง (ไม่ต้อง server):
+
+1. เปิด `dashboard_pro.html` ในเบราว์เซอร์
+2. กด **📂 Load watchlist.json**
+3. เพิ่ม/แก้ไข/ลบ alerts ตามต้องการ
+4. กด **💾 Download JSON**
+5. Push ไฟล์ใหม่ขึ้น GitHub
 
 ---
 
-## ⏱️ GitHub Actions Quota
+## ⚠️ Security Notes
 
-| Plan | นาที/เดือน |
-|---|---|
-| Free | 2,000 |
-| Pro | 3,000 |
-
-ระบบนี้ใช้ประมาณ **~1,200 นาที/เดือน** (รันเฉพาะช่วง market hours)
+- ห้าม hardcode Telegram token ในไฟล์ใดๆ
+- ใช้ GitHub Secrets เท่านั้น
+- `state.json` และ `alert_log.json` จะถูก commit อัตโนมัติโดย GitHub Actions
 
 ---
 
-## 🔧 Symbols ที่รองรับ
+## 📊 GitHub Actions Free Tier
 
-| ตลาด | ตัวอย่าง Symbol |
-|---|---|
-| US Stocks | `AAPL`, `TSLA`, `ATER`, `GPRO` |
-| SET ไทย | `PTT.BK`, `ADVANC.BK`, `AOT.BK` |
-| Crypto | `BTC-USD`, `ETH-USD`, `SOL-USD` |
-| Forex | `EURUSD=X`, `USDJPY=X`, `USDTHB=X` |
+- **2,000 นาที/เดือน** สำหรับ public repo (ฟรีไม่จำกัด)
+- **2,000 นาที/เดือน** สำหรับ private repo
+- ประมาณการใช้งาน: ~800 นาที/เดือน (ปลอดภัย)

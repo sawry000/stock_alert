@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Alert PRO — Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#05080f;--bg1:#090d17;--bg2:#0e1420;--bg3:#141c2e;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
+  --cyan:#00e5ff;--green:#00ff9d;--gold:#ffd54f;--orange:#ff6d00;
+  --pink:#ff4081;--purple:#e040fb;--red:#ff1744;
+  --text:#e8edf5;--text2:#8899bb;--text3:#3d5080;
+  --mono:'Fira Code',monospace;--ui:'Kanit',sans-serif;--display:'Space Grotesk',sans-serif;
+  --c-price:#00e5ff;--c-pct:#ffd54f;--c-vol:#ff6d00;--c-sr:#ff4081;
+  --c-rsi:#00ff9d;--c-ma:#40c4ff;--c-candle:#ffab40;--c-news:#ea80fc;
+  --c-pos:#a5d6a7;--c-mtf:#80deea;--c-score:#f48fb1;--c-bt:#ffcc02;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ui);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(0,229,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,0.025) 1px,transparent 1px);
+  background-size:40px 40px}
+
+/* TOPBAR */
+.topbar{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;
+  padding:0 24px;height:52px;background:rgba(9,13,23,0.96);border-bottom:1px solid var(--border2);backdrop-filter:blur(12px)}
+.logo{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:2px;color:var(--cyan);display:flex;align-items:center;gap:9px}
+.logo::before{content:'⚡';filter:drop-shadow(0 0 8px var(--cyan))}
+.topbar-r{display:flex;align-items:center;gap:12px}
+.pill{display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:20px;font-size:0.7rem;font-family:var(--mono);
+  background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);color:var(--cyan)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+
+/* LAYOUT */
+.layout{display:flex;height:calc(100vh - 52px);position:relative;z-index:1}
+
+/* SIDEBAR */
+.sidebar{width:196px;min-width:196px;background:var(--bg1);border-right:1px solid var(--border);
+  display:flex;flex-direction:column;padding:10px 0;overflow-y:auto}
+.slabel{padding:8px 14px 4px;font-size:0.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);font-family:var(--mono)}
+.nbtn{display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;cursor:pointer;
+  font-family:var(--ui);font-size:0.81rem;color:var(--text2);text-align:left;transition:all 0.15s;border-left:2px solid transparent}
+.nbtn:hover{background:rgba(255,255,255,0.04);color:var(--text)}
+.nbtn.active{color:var(--cyan);background:rgba(0,229,255,0.06);border-left-color:var(--cyan)}
+.nbtn .cnt{margin-left:auto;background:var(--orange);color:#000;font-size:0.6rem;font-family:var(--mono);font-weight:700;padding:1px 6px;border-radius:10px}
+.sdiv{height:1px;background:var(--border);margin:7px 12px}
+
+/* MAIN */
+.main{flex:1;overflow-y:auto;padding:20px 24px}
+
+/* PANELS */
+.panel{display:none;animation:fadeUp 0.2s ease}
+.panel.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* PAGE HEADER */
+.phd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
+.ptitle{font-family:var(--display);font-size:1.1rem;font-weight:700;letter-spacing:1px}
+.psub{font-size:0.77rem;color:var(--text2);margin-top:3px}
+
+/* CARD */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px 18px;margin-bottom:14px;transition:border-color 0.2s}
+.card:hover{border-color:var(--border2)}
+.chd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.ctitle{font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);font-family:var(--mono)}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+
+/* STAT */
+.stat{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px;text-align:center;position:relative;overflow:hidden}
+.stat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--sc,var(--cyan));box-shadow:0 0 10px var(--sc,var(--cyan))}
+.sv{font-family:var(--mono);font-size:1.55rem;font-weight:600;color:var(--sc,var(--cyan))}
+.sl{font-size:0.67rem;color:var(--text2);margin-top:3px}
+
+/* FORMS */
+.fg{margin-bottom:11px}
+.fg label{display:flex;align-items:center;gap:5px;font-size:0.7rem;font-weight:600;letter-spacing:0.5px;color:var(--text2);margin-bottom:5px}
+.tip{display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;border-radius:50%;
+  background:var(--bg3);border:1px solid var(--border2);font-size:0.55rem;color:var(--text3);cursor:help;position:relative}
+.tip::after{content:attr(data-tip);display:none;position:absolute;bottom:120%;left:50%;transform:translateX(-50%);
+  white-space:nowrap;min-width:200px;background:var(--bg3);border:1px solid var(--cyan);color:var(--text);
+  padding:7px 10px;border-radius:5px;font-size:0.68rem;font-family:var(--ui);font-weight:400;letter-spacing:0;
+  z-index:999;box-shadow:0 0 14px rgba(0,229,255,0.2);line-height:1.5}
+.tip:hover::after{display:block}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--border2);border-radius:5px;color:var(--text);
+  font-family:var(--mono);font-size:0.78rem;padding:7px 10px;transition:border-color 0.2s,box-shadow 0.2s;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 2px rgba(0,229,255,0.1)}
+select option{background:var(--bg2)}
+textarea{resize:vertical;min-height:70px;font-size:0.72rem}
+input[type=checkbox]{width:auto;accent-color:var(--cyan);transform:scale(1.15);cursor:pointer}
+input[type=number]{-moz-appearance:textfield}
+.fr{display:flex;gap:10px;flex-wrap:wrap}
+.fr .fg{flex:1;min-width:110px;margin-bottom:0}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:7px 15px;border-radius:5px;border:none;
+  font-family:var(--ui);font-size:0.79rem;font-weight:600;cursor:pointer;transition:all 0.15s;white-space:nowrap}
+.btn-cyan{background:var(--cyan);color:#000}
+.btn-cyan:hover{background:#40eeff;transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,229,255,0.35)}
+.btn-green{background:var(--green);color:#000}
+.btn-green:hover{background:#40ffb5;transform:translateY(-1px)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:#ff4060}
+.btn-ghost{background:transparent;color:var(--text2);border:1px solid var(--border2)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,229,255,0.05)}
+.btn-gold{background:var(--gold);color:#000}
+.btn-gold:hover{background:#ffe082}
+.btn-sm{padding:4px 10px;font-size:0.72rem}
+.btn-xs{padding:3px 8px;font-size:0.65rem}
+.bgrp{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
+/* TYPE BADGE */
+.tbadge{padding:2px 7px;border-radius:3px;font-size:0.61rem;font-family:var(--mono);font-weight:700}
+.t-price_target{background:rgba(0,229,255,0.12);color:var(--c-price)}
+.t-percent_change{background:rgba(255,213,79,0.12);color:var(--c-pct)}
+.t-volume_spike{background:rgba(255,109,0,0.12);color:var(--c-vol)}
+.t-support_resistance{background:rgba(255,64,129,0.12);color:var(--c-sr)}
+.t-rsi{background:rgba(0,255,157,0.12);color:var(--c-rsi)}
+.t-ma_crossover{background:rgba(64,196,255,0.12);color:var(--c-ma)}
+.t-candle_pattern{background:rgba(255,171,64,0.12);color:var(--c-candle)}
+.t-news_sentiment{background:rgba(234,128,252,0.12);color:var(--c-news)}
+.t-position_size{background:rgba(165,214,167,0.12);color:var(--c-pos)}
+.t-mtf_alignment{background:rgba(128,222,234,0.12);color:var(--c-mtf)}
+.t-alert_score{background:rgba(244,143,177,0.12);color:var(--c-score)}
+.t-backtest_check{background:rgba(255,204,2,0.12);color:var(--c-bt)}
+
+/* SYMBOL CARD */
+.symcard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;transition:border-color 0.2s}
+.symcard:hover{border-color:var(--border2)}
+.symhdr{display:flex;align-items:center;gap:10px;padding:11px 15px;background:var(--bg3);cursor:pointer;user-select:none;flex-wrap:wrap}
+.stoggle{font-size:0.68rem;color:var(--text3);transition:transform 0.2s;min-width:10px}
+.stoggle.open{transform:rotate(90deg)}
+.sname{font-family:var(--mono);font-size:0.92rem;font-weight:600;color:var(--cyan)}
+.sfull{font-size:0.73rem;color:var(--text2)}
+.smkt{font-size:0.6rem;padding:2px 7px;border-radius:3px;background:rgba(255,255,255,0.06);color:var(--text2);font-family:var(--mono)}
+.symbody{display:none;padding:12px 14px;border-top:1px solid var(--border)}
+.symbody.open{display:block}
+
+/* ALERT ROW */
+.arow{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:5px;
+  background:var(--bg);border:1px solid var(--border);margin-bottom:6px;transition:border-color 0.15s}
+.arow:hover{border-color:var(--border2)}
+.aemoji{font-size:0.95rem;min-width:20px;text-align:center}
+.ainfo{flex:1;min-width:0}
+.aid{font-family:var(--mono);font-size:0.7rem;color:var(--text2)}
+.adetail{font-size:0.73rem;color:var(--text);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.aacts{display:flex;gap:4px;flex-shrink:0}
+.addbtn{display:flex;align-items:center;justify-content:center;gap:7px;padding:7px;border-radius:5px;
+  border:1px dashed var(--border2);background:transparent;color:var(--text3);font-family:var(--ui);
+  font-size:0.77rem;cursor:pointer;transition:all 0.15s;width:100%;margin-top:7px}
+.addbtn:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,229,255,0.04)}
+
+/* MODAL */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.82);backdrop-filter:blur(6px);z-index:500;align-items:center;justify-content:center}
+.overlay.open{display:flex}
+.modal{background:var(--bg2);border:1px solid rgba(0,229,255,0.3);border-radius:10px;padding:22px 26px;
+  width:92%;max-width:640px;max-height:87vh;overflow-y:auto;
+  box-shadow:0 0 40px rgba(0,229,255,0.1),0 24px 60px rgba(0,0,0,0.6);animation:mIn 0.2s ease}
+@keyframes mIn{from{opacity:0;transform:scale(0.93) translateY(-12px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.mhd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.mtitle{font-family:var(--display);font-size:0.93rem;font-weight:700;color:var(--cyan);letter-spacing:1px}
+.mclose{cursor:pointer;color:var(--text2);font-size:1.1rem;background:none;border:none;transition:color 0.15s}
+.mclose:hover{color:var(--red)}
+.mfooter{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
+
+/* LOG TABLE */
+.ltable{width:100%;border-collapse:collapse;font-size:0.73rem;font-family:var(--mono)}
+.ltable th{padding:6px 10px;text-align:left;color:var(--text3);font-size:0.6rem;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border)}
+.ltable td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
+.ltable tr:hover td{background:rgba(255,255,255,0.02)}
+
+/* JSON EDITOR */
+.jed{background:#010408;border:1px solid var(--border2);border-radius:6px;padding:14px;font-family:var(--mono);
+  font-size:0.72rem;color:var(--green);line-height:1.7;white-space:pre;overflow:auto;max-height:500px;outline:none}
+
+/* TOAST */
+.toast{position:fixed;top:62px;right:18px;padding:10px 16px;border-radius:6px;font-size:0.79rem;
+  background:var(--bg2);border:1px solid var(--cyan);color:var(--text);box-shadow:0 0 18px rgba(0,229,255,0.2);
+  z-index:900;transform:translateX(120%);transition:transform 0.3s ease;max-width:300px}
+.toast.show{transform:translateX(0)}
+.toast.err{border-color:var(--red);box-shadow:0 0 18px rgba(255,23,68,0.2)}
+.toast.ok{border-color:var(--green);box-shadow:0 0 18px rgba(0,255,157,0.2)}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--cyan)}
+
+@media(max-width:860px){.g2,.g3,.g4{grid-template-columns:1fr}.sidebar{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">STOCK ALERT PRO</div>
+  <div class="topbar-r">
+    <div class="pill"><div class="dot"></div><span id="clock">--:--:--</span> ICT</div>
+    <div class="pill" id="apill">-- alerts</div>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="slabel">Overview</div>
+    <button class="nbtn active" onclick="show('overview')"><span>📊</span> ภาพรวม</button>
+    <div class="sdiv"></div>
+    <div class="slabel">Watchlist</div>
+    <button class="nbtn" onclick="show('watchlist')"><span>👁</span> จัดการหุ้น <span class="cnt" id="sym-cnt">0</span></button>
+    <button class="nbtn" onclick="show('add-symbol')"><span>➕</span> เพิ่มหุ้น</button>
+    <div class="sdiv"></div>
+    <div class="slabel">Logs</div>
+    <button class="nbtn" onclick="show('log')"><span>📋</span> Alert Log</button>
+    <button class="nbtn" onclick="show('state')"><span>🗂</span> State/Cooldown</button>
+    <div class="sdiv"></div>
+    <div class="slabel">Config</div>
+    <button class="nbtn" onclick="show('settings')"><span>⚙️</span> Settings</button>
+    <button class="nbtn" onclick="show('json')"><span>{ }</span> Raw JSON</button>
+    <div class="sdiv"></div>
+    <button class="nbtn" onclick="show('guide')"><span>📖</span> วิธีใช้งาน</button>
+  </nav>
+
+  <main class="main">
+
+    <!-- OVERVIEW -->
+    <div class="panel active" id="panel-overview">
+      <div class="phd">
+        <div><div class="ptitle" style="color:var(--cyan)">COMMAND CENTER</div><div class="psub">Stock Alert PRO บน GitHub Actions</div></div>
+        <div class="bgrp">
+          <button class="btn btn-ghost btn-sm" onclick="loadFromFile()">📂 Load watchlist.json</button>
+          <button class="btn btn-cyan btn-sm" onclick="saveWatchlist()">💾 Download JSON</button>
+        </div>
+      </div>
+      <div class="g4" style="margin-bottom:14px">
+        <div class="stat" style="--sc:var(--cyan)"><div class="sv" id="ov-sym">0</div><div class="sl">Symbols</div></div>
+        <div class="stat" style="--sc:var(--green)"><div class="sv" id="ov-al">0</div><div class="sl">Active Alerts</div></div>
+        <div class="stat" style="--sc:var(--gold)"><div class="sv" id="ov-ty">0</div><div class="sl">Alert Types</div></div>
+        <div class="stat" style="--sc:var(--orange)"><div class="sv" id="ov-lg">0</div><div class="sl">Log Entries</div></div>
+      </div>
+      <div class="card">
+        <div class="chd"><div class="ctitle">TYPE DISTRIBUTION</div></div>
+        <div id="type-bd" class="g3" style="gap:8px"></div>
+      </div>
+      <div class="card">
+        <div class="chd"><div class="ctitle">WATCHLIST</div><button class="btn btn-ghost btn-sm" onclick="show('watchlist')">จัดการ →</button></div>
+        <div id="quick-wl"></div>
+      </div>
+    </div>
+
+    <!-- WATCHLIST -->
+    <div class="panel" id="panel-watchlist">
+      <div class="phd">
+        <div><div class="ptitle" style="color:var(--green)">WATCHLIST MANAGER</div><div class="psub">คลิก symbol เพื่อดู/แก้ไข alerts</div></div>
+        <div class="bgrp">
+          <button class="btn btn-ghost btn-sm" onclick="show('add-symbol')">➕ เพิ่ม Symbol</button>
+          <button class="btn btn-cyan btn-sm" onclick="saveWatchlist()">💾 บันทึก</button>
+        </div>
+      </div>
+      <div id="wl-cards"></div>
+    </div>
+
+    <!-- ADD SYMBOL -->
+    <div class="panel" id="panel-add-symbol">
+      <div class="phd"><div><div class="ptitle" style="color:var(--gold)">➕ เพิ่ม Symbol</div><div class="psub">กรอกข้อมูลหุ้น/crypto</div></div></div>
+      <div class="card">
+        <div class="fr">
+          <div class="fg"><label>Symbol <span class="tip" data-tip="Ticker เช่น AAPL, BTC-USD, PTT.BK">?</span></label><input id="ns-sym" placeholder="AAPL" style="text-transform:uppercase"></div>
+          <div class="fg"><label>ชื่อบริษัท/เหรียญ</label><input id="ns-name" placeholder="Apple Inc."></div>
+          <div class="fg"><label>Market</label><select id="ns-mkt"><option value="US">🇺🇸 US Stock</option><option value="CRYPTO">₿ Crypto</option><option value="TH">🇹🇭 Thai</option></select></div>
+          <div class="fg"><label>Timeframe หลัก</label><select id="ns-tf"><option>1D</option><option>4H</option><option>1H</option><option>15M</option></select></div>
+        </div>
+        <div class="bgrp" style="margin-top:4px">
+          <button class="btn btn-green" onclick="addSymbol()">✅ เพิ่ม Symbol</button>
+          <button class="btn btn-ghost" onclick="show('watchlist')">ยกเลิก</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOG -->
+    <div class="panel" id="panel-log">
+      <div class="phd">
+        <div><div class="ptitle" style="color:var(--purple)">ALERT LOG</div><div class="psub">ประวัติ alert ที่ fire แล้ว</div></div>
+        <div class="bgrp">
+          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('log-fi').click()">📂 Load alert_log.json</button>
+          <button class="btn btn-ghost btn-sm" onclick="logData=[];renderLog();document.getElementById('ov-lg').textContent=0">🗑 Clear</button>
+        </div>
+      </div>
+      <div class="card">
+        <div id="log-empty" style="text-align:center;padding:40px;color:var(--text3);font-size:0.82rem">โหลด alert_log.json เพื่อดูประวัติ</div>
+        <div id="log-wrap" style="display:none;overflow-x:auto">
+          <table class="ltable"><thead><tr><th>เวลา ICT</th><th>Symbol</th><th>Alert ID</th><th>Type</th><th>ราคา</th><th>Δ%</th></tr></thead>
+          <tbody id="log-tb"></tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATE -->
+    <div class="panel" id="panel-state">
+      <div class="phd">
+        <div><div class="ptitle" style="color:var(--pink)">STATE / COOLDOWN</div><div class="psub">ดู cooldown ของแต่ละ alert</div></div>
+        <button class="btn btn-ghost btn-sm" onclick="document.getElementById('state-fi').click()">📂 Load state.json</button>
+      </div>
+      <div class="card">
+        <div id="state-empty" style="text-align:center;padding:40px;color:var(--text3);font-size:0.82rem">โหลด state.json</div>
+        <div id="state-content" style="display:none"></div>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="panel" id="panel-settings">
+      <div class="phd">
+        <div><div class="ptitle" style="color:var(--gold)">⚙️ SETTINGS</div><div class="psub">ตั้งค่า watchlist.json settings block</div></div>
+        <button class="btn btn-cyan btn-sm" onclick="saveSettings()">💾 บันทึก</button>
+      </div>
+      <div class="card">
+        <div class="g2">
+          <div class="fg"><label>Bot Token ENV <span class="tip" data-tip="ชื่อ GitHub Secret ที่เก็บ Telegram Bot Token">?</span></label><input id="s-tok" value="TELEGRAM_BOT_TOKEN"></div>
+          <div class="fg"><label>Chat ID ENV <span class="tip" data-tip="ชื่อ GitHub Secret ที่เก็บ Chat ID">?</span></label><input id="s-cid" value="TELEGRAM_CHAT_ID"></div>
+          <div class="fg"><label>Default Cooldown (นาที) <span class="tip" data-tip="ระยะเวลาขั้นต่ำระหว่าง alert เดิมที่ fire ซ้ำ">?</span></label><input type="number" id="s-cd" value="60" min="5"></div>
+          <div class="fg"><label>Daily Summary Hour UTC <span class="tip" data-tip="ชั่วโมง UTC ที่จะส่ง summary (1 = 08:00 ICT)">?</span></label><input type="number" id="s-sh" value="1" min="0" max="23"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ctitle" style="margin-bottom:10px">🔐 GitHub Secrets ที่ต้องตั้งค่า</div>
+        <div style="font-size:0.79rem;line-height:2.2;color:var(--text2)">
+          <div>• <code style="color:var(--cyan)">TELEGRAM_BOT_TOKEN</code> — Token จาก @BotFather</div>
+          <div>• <code style="color:var(--cyan)">TELEGRAM_CHAT_ID</code> — Chat ID ที่รับ alert</div>
+          <div style="margin-top:8px;color:var(--text3);font-size:0.72rem">⚠️ ห้าม hardcode token ในไฟล์ใดๆ — ใส่ใน GitHub → Settings → Secrets and variables → Actions</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JSON EDITOR -->
+    <div class="panel" id="panel-json">
+      <div class="phd">
+        <div><div class="ptitle" style="color:var(--green)">{ } RAW JSON EDITOR</div><div class="psub">แก้ไข watchlist.json โดยตรง</div></div>
+        <div class="bgrp">
+          <button class="btn btn-ghost btn-sm" onclick="fmtJson()">🔧 Format</button>
+          <button class="btn btn-green btn-sm" onclick="applyJson()">✅ Apply</button>
+          <button class="btn btn-cyan btn-sm" onclick="saveWatchlist()">💾 Download</button>
+        </div>
+      </div>
+      <div class="card" style="padding:0"><div id="jed" class="jed" contenteditable="true" spellcheck="false"></div></div>
+    </div>
+
+    <!-- GUIDE -->
+    <div class="panel" id="panel-guide">
+      <div class="phd"><div><div class="ptitle" style="color:var(--gold)">📖 วิธีใช้งาน</div><div class="psub">Deploy บน GitHub Actions</div></div></div>
+      <div class="card">
+        <div class="ctitle" style="margin-bottom:12px">🚀 ขั้นตอน</div>
+        <div style="font-size:0.79rem;line-height:2.3;color:var(--text2)">
+          <div><span style="color:var(--cyan)">1.</span> Push ไฟล์เหล่านี้เข้า GitHub repo:</div>
+          <div style="padding-left:18px;font-family:var(--mono);font-size:0.72rem;color:var(--text3)">alert_engine.py &nbsp;|&nbsp; watchlist.json &nbsp;|&nbsp; state.json &nbsp;|&nbsp; alert_log.json &nbsp;|&nbsp; .github/workflows/check.yml</div>
+          <div><span style="color:var(--cyan)">2.</span> ตั้งค่า GitHub Secrets (repo → Settings → Secrets → Actions):</div>
+          <div style="padding-left:18px;font-family:var(--mono);font-size:0.72rem;color:var(--green)">TELEGRAM_BOT_TOKEN = &lt;จาก @BotFather&gt;<br>TELEGRAM_CHAT_ID = &lt;chat id&gt;</div>
+          <div><span style="color:var(--cyan)">3.</span> แก้ไข watchlist.json ผ่าน dashboard → Download → Push ขึ้น GitHub</div>
+          <div><span style="color:var(--cyan)">4.</span> GitHub Actions จะ run อัตโนมัติตาม cron schedule</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ctitle" style="margin-bottom:12px">📋 Alert Types ทั้ง 12 Types</div>
+        <div id="type-guide" class="g2" style="gap:8px"></div>
+      </div>
+      <div class="card">
+        <div class="ctitle" style="margin-bottom:10px">🕐 Cron Schedule</div>
+        <div style="font-size:0.77rem;line-height:2.1;font-family:var(--mono);color:var(--text2)">
+          <div><span style="color:var(--gold)">*/5 13-20 * * 1-5</span> &nbsp;→ US Market (20:00–04:00 ICT Mon–Fri)</div>
+          <div><span style="color:var(--gold)">*/5 8-12 * * 1-5</span> &nbsp;&nbsp;→ US Pre-market (15:00–19:55 ICT)</div>
+          <div><span style="color:var(--gold)">*/15 21-23,0-7 * * *</span> → Crypto 24/7</div>
+          <div><span style="color:var(--gold)">0 1 * * *</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Daily Summary (08:00 ICT)</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- MODAL: Add/Edit Alert -->
+<div class="overlay" id="alert-modal">
+  <div class="modal">
+    <div class="mhd">
+      <div class="mtitle" id="modal-title">➕ เพิ่ม Alert</div>
+      <button class="mclose" onclick="closeModal()">✕</button>
+    </div>
+    <div class="fr">
+      <div class="fg" style="flex:2"><label>Alert ID <span class="tip" data-tip="ไม่ซ้ำกัน ใช้ A-Z 0-9 _ เท่านั้น">?</span></label><input id="a-id" placeholder="AAPL_RSI_BUY" style="text-transform:uppercase"></div>
+      <div class="fg"><label>Emoji</label><input id="a-emoji" value="🔔" maxlength="4" style="text-align:center;font-size:1.1rem"></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Alert Type <span class="tip" data-tip="เลือก type แล้วกรอกค่าด้านล่าง">?</span></label>
+        <select id="a-type" onchange="renderFields()">
+          <option value="price_target">💰 price_target</option>
+          <option value="percent_change">📊 percent_change</option>
+          <option value="volume_spike">🔊 volume_spike</option>
+          <option value="support_resistance">⚠️ support_resistance</option>
+          <option value="rsi">📈 rsi</option>
+          <option value="ma_crossover">✨ ma_crossover</option>
+          <option value="candle_pattern">🕯️ candle_pattern</option>
+          <option value="news_sentiment">📰 news_sentiment</option>
+          <option value="position_size">💼 position_size</option>
+          <option value="mtf_alignment">📡 mtf_alignment</option>
+          <option value="alert_score">🎯 alert_score</option>
+          <option value="backtest_check">🔬 backtest_check</option>
+        </select>
+      </div>
+      <div class="fg"><label>Cooldown (นาที) <span class="tip" data-tip="เวลาขั้นต่ำก่อน alert เดิม fire ซ้ำ">?</span></label><input type="number" id="a-cd" value="60" min="5"></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Note <span class="tip" data-tip="ข้อความแนบใน Telegram">?</span></label><input id="a-note" placeholder="Buy zone EMA50 1D"></div>
+      <div class="fg"><label>Action <span class="tip" data-tip="เช่น BUY, SELL, WATCH">?</span></label><input id="a-action" placeholder="BUY / SELL"></div>
+    </div>
+    <div id="dyn-fields"></div>
+    <div class="mfooter">
+      <button class="btn btn-ghost" onclick="closeModal()">ยกเลิก</button>
+      <button class="btn btn-cyan" onclick="saveAlert()">💾 บันทึก Alert</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<input type="file" id="wl-fi" accept=".json" style="display:none" onchange="handleWl(this)">
+<input type="file" id="log-fi" accept=".json" style="display:none" onchange="handleLog(this)">
+<input type="file" id="state-fi" accept=".json" style="display:none" onchange="handleState(this)">
+
+<script>
+// ── STATE ──────────────────────────────────────────────
+let WL = {
+  settings:{telegram_bot_token_env:"TELEGRAM_BOT_TOKEN",telegram_chat_id_env:"TELEGRAM_CHAT_ID",cooldown_minutes:60,daily_summary_hour_utc:1},
+  watchlist:[]
+};
+let editSymIdx=null, editAlIdx=null, logData=[], stateData={};
+
+const TI = {
+  price_target:{icon:'💰',color:'var(--c-price)',desc:'แจ้งเตือนเมื่อราคาถึงเป้า'},
+  percent_change:{icon:'📊',color:'var(--c-pct)',desc:'แจ้งเตือนเมื่อราคาขึ้น/ลง X%'},
+  volume_spike:{icon:'🔊',color:'var(--c-vol)',desc:'Volume พุ่งผิดปกติ X เท่า'},
+  support_resistance:{icon:'⚠️',color:'var(--c-sr)',desc:'ทะลุแนวรับ/ต้าน'},
+  rsi:{icon:'📈',color:'var(--c-rsi)',desc:'RSI Oversold / Overbought'},
+  ma_crossover:{icon:'✨',color:'var(--c-ma)',desc:'EMA/SMA Golden Cross / Death Cross'},
+  candle_pattern:{icon:'🕯️',color:'var(--c-candle)',desc:'14 Candle Patterns เช่น Hammer, Engulfing'},
+  news_sentiment:{icon:'📰',color:'var(--c-news)',desc:'ข่าวล่าสุด + แปลไทย + Sentiment'},
+  position_size:{icon:'💼',color:'var(--c-pos)',desc:'คำนวณ position size (Fixed Risk/Kelly/ATR)'},
+  mtf_alignment:{icon:'📡',color:'var(--c-mtf)',desc:'Multi-Timeframe trend alignment'},
+  alert_score:{icon:'🎯',color:'var(--c-score)',desc:'Confidence Score 0–100 จาก 7 indicators'},
+  backtest_check:{icon:'🔬',color:'var(--c-bt)',desc:'Backtest rule ย้อนหลัง trigger ถ้าผ่าน win rate'},
+};
+
+const PATS=['doji','hammer','inverted_hammer','shooting_star','hanging_man',
+  'bullish_engulfing','bearish_engulfing','three_white_soldiers','three_black_crows',
+  'marubozu_bullish','marubozu_bearish','spinning_top','morning_star','evening_star'];
+
+const PDESC={doji:'ตลาดลังเล',hammer:'กลับตัวขึ้น🔨',inverted_hammer:'กลับตัวขึ้นที่ก้น',
+  shooting_star:'กลับตัวลง⭐',hanging_man:'ระวังกลับตัวลง',bullish_engulfing:'เขียวกลืนแดง🟢',
+  bearish_engulfing:'แดงกลืนเขียว🔴',three_white_soldiers:'3 เขียวติดกัน',three_black_crows:'3 แดงติดกัน',
+  marubozu_bullish:'ซื้อแรง💚',marubozu_bearish:'ขายแรง💔',spinning_top:'ลังเลสองทาง',
+  morning_star:'กลับตัวขึ้น🌅',evening_star:'กลับตัวลง🌆'};
+
+// ── INIT ────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded',()=>{
+  setInterval(()=>{
+    const b=new Date(Date.now()+7*3600000);
+    document.getElementById('clock').textContent=b.toISOString().slice(11,19);
+  },1000);
+  const s=localStorage.getItem('sap_wl_v3');
+  if(s){try{WL=JSON.parse(s)}catch(e){}}
+  renderAll(); renderTypeGuide(); renderFields();
+});
+
+// ── NAV ─────────────────────────────────────────────────
+function show(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nbtn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-'+id)?.classList.add('active');
+  document.querySelectorAll('.nbtn').forEach(b=>{if(b.getAttribute('onclick')?.includes("'"+id+"'"))b.classList.add('active')});
+  if(id==='json')syncJson();
+  if(id==='settings')syncSettings();
+  if(id==='watchlist')renderWL();
+  if(id==='overview')renderOV();
+}
+
+// ── SAVE / LOAD ─────────────────────────────────────────
+function save(){localStorage.setItem('sap_wl_v3',JSON.stringify(WL))}
+function renderAll(){renderOV();renderWL();syncJson();syncSettings();updatePills()}
+function updatePills(){
+  const total=WL.watchlist.reduce((s,x)=>s+x.alerts.length,0);
+  document.getElementById('sym-cnt').textContent=WL.watchlist.length;
+  document.getElementById('apill').textContent=total+' alerts';
+}
+
+// ── OVERVIEW ────────────────────────────────────────────
+function renderOV(){
+  const syms=WL.watchlist.length;
+  const alts=WL.watchlist.reduce((s,x)=>s+x.alerts.filter(a=>a.enabled!==false).length,0);
+  const types=new Set(WL.watchlist.flatMap(x=>x.alerts.map(a=>a.type))).size;
+  document.getElementById('ov-sym').textContent=syms;
+  document.getElementById('ov-al').textContent=alts;
+  document.getElementById('ov-ty').textContent=types;
+  document.getElementById('ov-lg').textContent=logData.length;
+
+  const tc={};
+  WL.watchlist.forEach(s=>s.alerts.forEach(a=>{tc[a.type]=(tc[a.type]||0)+1}));
+  document.getElementById('type-bd').innerHTML=Object.entries(tc).map(([t,c])=>{
+    const i=TI[t]||{icon:'⚙️',color:'var(--text2)'};
+    return `<div style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:9px 12px;display:flex;align-items:center;gap:8px">
+      <span>${i.icon}</span><div style="flex:1;font-size:0.68rem;color:var(--text2);font-family:var(--mono)">${t}</div>
+      <span style="font-family:var(--mono);font-weight:700;color:${i.color}">${c}</span></div>`;
+  }).join('')||'<div style="color:var(--text3);font-size:0.8rem;grid-column:1/-1">ยังไม่มี alerts</div>';
+
+  document.getElementById('quick-wl').innerHTML=WL.watchlist.map(s=>{
+    const types=[...new Set(s.alerts.map(a=>a.type))];
+    return `<div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)">
+      <span style="font-family:var(--mono);font-weight:700;color:var(--cyan);min-width:80px">${s.symbol}</span>
+      <span style="color:var(--text2);font-size:0.77rem;flex:1">${s.name}</span>
+      <span style="font-size:0.6rem;padding:2px 7px;background:rgba(255,255,255,0.05);border-radius:3px;color:var(--text2);font-family:var(--mono)">${s.market}</span>
+      <span style="font-size:0.68rem;color:var(--text3);font-family:var(--mono)">${s.alerts.length}a</span>
+      <div style="display:flex;gap:3px">${types.slice(0,5).map(t=>`<span class="tbadge t-${t}" title="${t}">${(TI[t]||{icon:'⚙️'}).icon}</span>`).join('')}</div>
+    </div>`;
+  }).join('')||'<div style="color:var(--text3);padding:20px;text-align:center;font-size:0.82rem">ยังไม่มีหุ้น — กด "เพิ่ม Symbol"</div>';
+}
+
+// ── WATCHLIST RENDER ────────────────────────────────────
+function renderWL(){
+  const c=document.getElementById('wl-cards');
+  if(!WL.watchlist.length){c.innerHTML='<div style="text-align:center;padding:60px;color:var(--text3);font-size:0.85rem">ยังไม่มีหุ้น — กด <strong style="color:var(--cyan)">➕ เพิ่ม Symbol</strong></div>';return}
+  c.innerHTML=WL.watchlist.map((s,si)=>`
+    <div class="symcard">
+      <div class="symhdr" onclick="toggleSym(${si})">
+        <span class="stoggle" id="st-${si}">▶</span>
+        <span class="sname">${s.symbol}</span>
+        <span class="sfull">${s.name}</span>
+        <span class="smkt">${s.market}</span>
+        <span style="font-size:0.68rem;color:var(--text3);font-family:var(--mono)">${s.alerts.length} alerts</span>
+        <label onclick="event.stopPropagation()" title="เปิด/ปิด" style="display:flex;align-items:center;gap:5px;font-size:0.72rem;color:var(--text2);margin-left:auto;cursor:pointer">
+          <input type="checkbox" ${s.enabled!==false?'checked':''} onchange="WL.watchlist[${si}].enabled=this.checked;save();updatePills()"> Active
+        </label>
+        <div style="display:flex;gap:5px;margin-left:4px" onclick="event.stopPropagation()">
+          <button class="btn btn-xs btn-ghost" onclick="openAdd(${si})" title="เพิ่ม alert">➕</button>
+          <button class="btn btn-xs btn-red" onclick="delSym(${si})" title="ลบ">🗑</button>
+        </div>
+      </div>
+      <div class="symbody" id="sb-${si}">
+        ${s.alerts.map((a,ai)=>alertRow(a,si,ai)).join('')}
+        <button class="addbtn" onclick="openAdd(${si})">➕ เพิ่ม Alert ให้ ${s.symbol}</button>
+      </div>
+    </div>`).join('');
+  updatePills();
+}
+
+function alertRow(a,si,ai){
+  const i=TI[a.type]||{icon:'⚙️'};
+  return `<div class="arow">
+    <span class="aemoji">${a.emoji||i.icon}</span>
+    <div class="ainfo">
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+        <span class="aid">${a.id}</span>
+        <span class="tbadge t-${a.type}">${i.icon} ${a.type}</span>
+        <span style="font-size:0.62rem;color:var(--text3);font-family:var(--mono)">cd:${a.cooldown_minutes||60}m</span>
+      </div>
+      <div class="adetail">${alertSummary(a)}</div>
+    </div>
+    <div class="aacts">
+      <label title="เปิด/ปิด"><input type="checkbox" ${a.enabled!==false?'checked':''} onchange="WL.watchlist[${si}].alerts[${ai}].enabled=this.checked;save()" style="width:auto;margin:0"></label>
+      <button class="btn btn-xs btn-ghost" onclick="openEdit(${si},${ai})">✏️</button>
+      <button class="btn btn-xs btn-red" onclick="delAlert(${si},${ai})">🗑</button>
+    </div>
+  </div>`;
+}
+
+function alertSummary(a){
+  const t=a.type;
+  if(t==='price_target')return`${a.direction==='below_or_equal'?'≤':'≥'} $${a.target_price} ${a.action?'→ '+a.action:''}`;
+  if(t==='percent_change')return`${a.direction==='down'?'↓':'↑'} ${a.threshold_pct}% ${a.note||''}`;
+  if(t==='volume_spike')return`Vol ≥ ${a.multiplier}x avg`;
+  if(t==='support_resistance')return`${a.direction==='break_below'?'Break Below':'Break Above'} $${a.level}`;
+  if(t==='rsi')return`${a.condition} (${a.oversold_level||30}/${a.overbought_level||70}) ${a.interval||'1d'}`;
+  if(t==='ma_crossover')return`${a.ma_type||'EMA'}${a.fast_period||9}/${a.slow_period||21} ${a.condition} ${a.interval||'1d'}`;
+  if(t==='candle_pattern')return`${(a.patterns||[]).join(', ')} ${a.interval||'1d'}`;
+  if(t==='news_sentiment')return`${a.condition} ย้อน${a.hours_back||24}h แปลไทย:${a.translate!==false?'✅':'❌'}`;
+  if(t==='position_size')return`Risk ${a.risk_pct||2}% | ${a.method||'fixed_risk'} | $${a.account_size||10000}`;
+  if(t==='mtf_alignment')return`${(a.timeframes||[]).join('+')} → ${a.required_alignment}`;
+  if(t==='alert_score')return`${a.direction} score≥${a.min_score||65} ${a.interval||'1d'}`;
+  if(t==='backtest_check')return`${a.rule} ${a.days||180}d wr≥${a.min_win_rate||50}%`;
+  return a.note||'';
+}
+
+function toggleSym(si){
+  const b=document.getElementById('sb-'+si),t=document.getElementById('st-'+si);
+  const o=b.classList.toggle('open');t.classList.toggle('open',o);
+}
+function delSym(si){if(!confirm(`ลบ ${WL.watchlist[si].symbol}?`))return;WL.watchlist.splice(si,1);save();renderAll();showToast('🗑 ลบแล้ว','err')}
+function delAlert(si,ai){if(!confirm('ลบ alert นี้?'))return;WL.watchlist[si].alerts.splice(ai,1);save();renderWL();showToast('🗑 ลบ alert แล้ว','err')}
+
+// ── ADD SYMBOL ──────────────────────────────────────────
+function addSymbol(){
+  const sym=document.getElementById('ns-sym').value.trim().toUpperCase();
+  const name=document.getElementById('ns-name').value.trim();
+  const mkt=document.getElementById('ns-mkt').value;
+  const tf=document.getElementById('ns-tf').value;
+  if(!sym){showToast('ใส่ Symbol ก่อน','err');return}
+  if(WL.watchlist.find(s=>s.symbol===sym)){showToast(`${sym} มีอยู่แล้ว`,'err');return}
+  WL.watchlist.push({symbol:sym,name:name||sym,market:mkt,timeframe:tf,enabled:true,alerts:[]});
+  save();renderAll();show('watchlist');showToast(`✅ เพิ่ม ${sym} แล้ว`,'ok');
+}
+
+// ── MODAL ───────────────────────────────────────────────
+function openAdd(si){editSymIdx=si;editAlIdx=null;document.getElementById('modal-title').textContent='➕ เพิ่ม Alert — '+WL.watchlist[si].symbol;resetForm();document.getElementById('alert-modal').classList.add('open')}
+function openEdit(si,ai){
+  editSymIdx=si;editAlIdx=ai;
+  const a=WL.watchlist[si].alerts[ai];
+  document.getElementById('modal-title').textContent='✏️ แก้ไข — '+a.id;
+  document.getElementById('a-id').value=a.id||'';
+  document.getElementById('a-emoji').value=a.emoji||'🔔';
+  document.getElementById('a-type').value=a.type||'rsi';
+  document.getElementById('a-cd').value=a.cooldown_minutes||60;
+  document.getElementById('a-note').value=a.note||'';
+  document.getElementById('a-action').value=a.action||'';
+  renderFields();setTimeout(()=>fillFields(a),60);
+  document.getElementById('alert-modal').classList.add('open');
+}
+function closeModal(){document.getElementById('alert-modal').classList.remove('open');editSymIdx=null;editAlIdx=null}
+function resetForm(){document.getElementById('a-id').value='';document.getElementById('a-emoji').value='🔔';document.getElementById('a-type').value='rsi';document.getElementById('a-cd').value=60;document.getElementById('a-note').value='';document.getElementById('a-action').value='';renderFields()}
+
+function renderFields(){
+  const type=document.getElementById('a-type').value,c=document.getElementById('dyn-fields');
+  const hr='<hr style="border:none;border-top:1px solid var(--border);margin:13px 0">';
+  const fg=(lbl,inp,tip='')=>`<div class="fg"><label>${lbl}${tip?` <span class="tip" data-tip="${tip}">?</span>`:''}</label>${inp}</div>`;
+  const n=(id,val,min,max,step=1)=>`<input type="number" id="${id}" value="${val}" min="${min}"${max?` max="${max}"`:''} step="${step}">`;
+  const s=(id,opts)=>`<select id="${id}">${opts.map(([v,l])=>`<option value="${v}">${l}</option>`).join('')}</select>`;
+  const tf=(id,def='1d')=>`<select id="${id}"><option value="1d"${def==='1d'?' selected':''}>1d</option><option value="4h"${def==='4h'?' selected':''}>4h</option><option value="1h"${def==='1h'?' selected':''}>1h</option><option value="30m">30m</option><option value="15m">15m</option><option value="1wk">1wk</option></select>`;
+  const row=(...items)=>`<div class="fr">${items.join('')}</div>`;
+
+  const H={
+    price_target:()=>hr+row(fg('Target Price',n('f-tgt',0.5,0,null,0.001),'ราคาเป้า'),fg('Direction',s('f-dir',[['below_or_equal','≤ Below or Equal'],['above_or_equal','≥ Above or Equal']]))),
+    percent_change:()=>hr+row(fg('Threshold %',n('f-pct',5,0.1,null,0.1),'% ที่ต้องการ'),fg('Direction',s('f-dir',[['down','📉 ลง'],['up','📈 ขึ้น']]))),
+    volume_spike:()=>hr+fg('Multiplier (x avg)',n('f-mult',2.5,1.1,null,0.1),'เช่น 2.5 = volume 250% ของ avg'),
+    support_resistance:()=>hr+row(fg('Level (ราคา)',n('f-lvl',1,0,null,0.001),'แนวรับ/ต้าน'),fg('Direction',s('f-dir',[['break_below','ทะลุลง'],['break_above','ทะลุขึ้น']]))),
+    rsi:()=>hr+row(fg('Condition',s('f-cond',[['oversold','Oversold (<30)'],['overbought','Overbought (>70)'],['extreme_oversold','Extreme Oversold (<20)'],['extreme_overbought','Extreme Overbought (>80)'],['turning_up','RSI Turning Up'],['turning_down','RSI Turning Down']]),''),fg('Timeframe',tf('f-iv'),''),fg('Period',n('f-per',14,3,50),'ปกติ=14'))+
+    row(fg('Oversold Level',n('f-os',30,5,49),'ปกติ=30'),fg('Overbought Level',n('f-ob',70,51,95),'ปกติ=70')),
+    ma_crossover:()=>hr+row(fg('Condition',s('f-cond',[['golden_cross','🌟 Golden Cross'],['death_cross','💀 Death Cross'],['above_both','ราคาเหนือ MA ทั้งคู่'],['below_both','ราคาต่ำกว่า MA ทั้งคู่'],['trend_bullish','Trend Bullish'],['trend_bearish','Trend Bearish']]),''),fg('MA Type',s('f-mat',[['EMA','EMA (ไว)'],['SMA','SMA (ช้า)']])),fg('Timeframe',tf('f-iv')))+
+    row(fg('Fast Period',n('f-fast',9,3,100),'แนะนำ 9,12,20'),fg('Slow Period',n('f-slow',21,5,200),'แนะนำ 21,50,200')),
+    candle_pattern:()=>hr+'<div class="fg"><label>เลือก Pattern <span class="tip" data-tip="เลือกได้หลาย pattern">?</span></label><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:5px">'+
+    PATS.map(p=>`<label title="${PDESC[p]||p}" style="display:flex;align-items:center;gap:5px;padding:5px 8px;background:var(--bg);border:1px solid var(--border);border-radius:4px;cursor:pointer;font-size:0.71rem"><input type="checkbox" id="cp-${p}" style="width:auto;margin:0"> ${p} <span style="color:var(--text3);font-size:0.62rem">— ${PDESC[p]||''}</span></label>`).join('')+
+    '</div></div>'+row(fg('Timeframe',tf('f-iv')),fg('Match',s('f-match',[['true','ANY — พบใดๆ trigger'],['false','ALL — ต้องพบทุก pattern']]))),
+    news_sentiment:()=>hr+row(fg('Condition',s('f-cond',[['any','ทุกข่าว'],['positive','ข่าวบวก'],['negative','ข่าวลบ'],['strong_positive','ข่าวบวกแรง'],['strong_negative','ข่าวลบแรง'],['high_volume','ข่าวเยอะ']])),fg('ย้อนหลัง (ชม.)',n('f-hrs',24,0,168),'0=ทุกข่าว'),fg('Max ข่าว',n('f-max',5,1,20)))+
+    row(fg('Min ข่าว trigger',n('f-mn',1,1,20)),fg('แปลไทย','<div style="padding:8px 0;display:flex;align-items:center;gap:7px"><input type="checkbox" id="f-tr" checked style="width:auto"><span style="font-size:0.77rem">เปิดแปลภาษาไทย</span></div>','ใช้ MyMemory API ฟรี')),
+    position_size:()=>hr+row(fg('Account Size $',n('f-acc',10000,100),'เงินทุน'),fg('Risk %',n('f-rsk',2,0.5,10,0.5),'แนะนำ 1-2%'),fg('วิธีคำนวณ',s('f-mth',[['fixed_risk','Fixed Risk %'],['half_kelly','Half-Kelly'],['kelly','Full Kelly']])))+
+    row(fg('Win Rate (Kelly)',n('f-wr',0.55,0.1,0.99,0.05),'สำหรับ Kelly เท่านั้น'),fg('Target % (opt)',n('f-tp',0,0,null,0.5),'0=ไม่ระบุ'),fg('Stop % (0=ATR)',n('f-sp',0,0,50,0.1),'0=ATR 2x auto')),
+    mtf_alignment:()=>hr+'<div class="fg"><label>Timeframes <span class="tip" data-tip="เลือกอย่างน้อย 2 TF">?</span></label><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:5px">'+
+    ['1m','5m','15m','30m','1h','4h','1d','1wk'].map(t=>`<label style="display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--bg);border:1px solid var(--border);border-radius:4px;cursor:pointer;font-size:0.75rem"><input type="checkbox" id="mtf-${t}" ${['1h','4h','1d'].includes(t)?'checked':''} style="width:auto;margin:0"> ${t}</label>`).join('')+
+    '</div></div>'+row(fg('Required Alignment',s('f-al',[['mostly_bullish','mostly_bullish — ส่วนใหญ่ขึ้น'],['strong_bullish_all','strong_bullish_all — ทุก TF'],['leaning_bullish','leaning_bullish'],['mostly_bearish','mostly_bearish — ส่วนใหญ่ลง'],['strong_bearish_all','strong_bearish_all']])),fg('Min Bullish TF',n('f-mb',2,1,8))),
+    alert_score:()=>hr+row(fg('Direction',s('f-dir',[['bullish','🟢 Bullish'],['bearish','🔴 Bearish']])),fg('Min Score (0-100)',n('f-ms',65,30,95),'65=ดี, 75=ดีมาก, 80=แข็ง'),fg('Timeframe',tf('f-iv'))),
+    backtest_check:()=>hr+row(fg('Rule',s('f-rule',[['rsi_oversold','RSI Oversold <30'],['rsi_overbought','RSI Overbought >70'],['golden_cross','Golden Cross EMA9/21'],['death_cross','Death Cross EMA9/21'],['volume_spike','Volume Spike 2x'],['price_breakout','Price Breakout 20D'],['price_breakdown','Price Breakdown 20D'],['hammer','Hammer Pattern'],['three_soldiers','Three White Soldiers']])),fg('Timeframe',tf('f-iv')))+
+    row(fg('ย้อนหลัง (วัน)',n('f-days',180,60,730,30),'ยิ่งมากยิ่งแม่น'),fg('ถือครอง (วัน)',n('f-hold',5,1,30),'จำลองถือกี่วัน'),fg('Min Win Rate %',n('f-mwr',50,30,90),'trigger ถ้า wr>=X%'),fg('Min Avg Return %',n('f-mret',0,-10,20,0.5)))
+  };
+  c.innerHTML=(H[type]?H[type]():'');
+}
+
+function fillFields(a){
+  const sv=(id,v)=>{const e=document.getElementById(id);if(e&&v!==undefined)e.value=v};
+  const sc=(id,v)=>{const e=document.getElementById(id);if(e)e.checked=!!v};
+  if(a.type==='price_target'){sv('f-tgt',a.target_price);sv('f-dir',a.direction)}
+  if(a.type==='percent_change'){sv('f-pct',a.threshold_pct);sv('f-dir',a.direction)}
+  if(a.type==='volume_spike')sv('f-mult',a.multiplier);
+  if(a.type==='support_resistance'){sv('f-lvl',a.level);sv('f-dir',a.direction)}
+  if(a.type==='rsi'){sv('f-cond',a.condition);sv('f-iv',a.interval);sv('f-per',a.period);sv('f-os',a.oversold_level);sv('f-ob',a.overbought_level)}
+  if(a.type==='ma_crossover'){sv('f-cond',a.condition);sv('f-mat',a.ma_type);sv('f-iv',a.interval);sv('f-fast',a.fast_period);sv('f-slow',a.slow_period)}
+  if(a.type==='candle_pattern'){(a.patterns||[]).forEach(p=>sc('cp-'+p,true));sv('f-iv',a.interval);sv('f-match',String(a.match_any!==false))}
+  if(a.type==='news_sentiment'){sv('f-cond',a.condition);sv('f-hrs',a.hours_back);sv('f-max',a.max_news);sv('f-mn',a.min_news);sc('f-tr',a.translate!==false)}
+  if(a.type==='position_size'){sv('f-acc',a.account_size);sv('f-rsk',a.risk_pct);sv('f-mth',a.method);sv('f-wr',a.win_rate);sv('f-tp',a.target_pct||0);sv('f-sp',a.stop_pct||0)}
+  if(a.type==='mtf_alignment'){(a.timeframes||[]).forEach(t=>sc('mtf-'+t,true));sv('f-al',a.required_alignment);sv('f-mb',a.min_bullish)}
+  if(a.type==='alert_score'){sv('f-dir',a.direction);sv('f-ms',a.min_score);sv('f-iv',a.interval)}
+  if(a.type==='backtest_check'){sv('f-rule',a.rule);sv('f-iv',a.interval);sv('f-days',a.days);sv('f-hold',a.hold_days);sv('f-mwr',a.min_win_rate);sv('f-mret',a.min_avg_return)}
+}
+
+function saveAlert(){
+  const id=document.getElementById('a-id').value.trim().toUpperCase().replace(/\s+/g,'_');
+  const type=document.getElementById('a-type').value;
+  const emoji=document.getElementById('a-emoji').value;
+  const cd=parseInt(document.getElementById('a-cd').value);
+  const note=document.getElementById('a-note').value.trim();
+  const action=document.getElementById('a-action').value.trim();
+  if(!id){showToast('ใส่ Alert ID ก่อน','err');return}
+
+  let obj={id,type,emoji,cooldown_minutes:cd};
+  if(note)obj.note=note;if(action)obj.action=action;
+
+  const g=id=>{const e=document.getElementById(id);return e?e.value:null};
+  const gc=id=>{const e=document.getElementById(id);return e?e.checked:false};
+  const gn=id=>{const v=g(id);return v!==null?parseFloat(v):null};
+  const gi=id=>{const v=g(id);return v!==null?parseInt(v):null};
+
+  if(type==='price_target'){obj.target_price=gn('f-tgt');obj.direction=g('f-dir')}
+  else if(type==='percent_change'){obj.threshold_pct=gn('f-pct');obj.direction=g('f-dir')}
+  else if(type==='volume_spike')obj.multiplier=gn('f-mult');
+  else if(type==='support_resistance'){obj.level=gn('f-lvl');obj.direction=g('f-dir')}
+  else if(type==='rsi'){obj.condition=g('f-cond');obj.interval=g('f-iv');obj.period=gi('f-per');obj.oversold_level=gi('f-os');obj.overbought_level=gi('f-ob')}
+  else if(type==='ma_crossover'){obj.condition=g('f-cond');obj.ma_type=g('f-mat');obj.interval=g('f-iv');obj.fast_period=gi('f-fast');obj.slow_period=gi('f-slow')}
+  else if(type==='candle_pattern'){obj.patterns=PATS.filter(p=>gc('cp-'+p));obj.interval=g('f-iv');obj.match_any=g('f-match')!=='false';if(!obj.patterns.length){showToast('เลือก pattern อย่างน้อย 1','err');return}}
+  else if(type==='news_sentiment'){obj.condition=g('f-cond');obj.hours_back=gi('f-hrs');obj.max_news=gi('f-max');obj.min_news=gi('f-mn');obj.translate=gc('f-tr')}
+  else if(type==='position_size'){obj.condition='triggered_always';obj.account_size=gn('f-acc');obj.risk_pct=gn('f-rsk');obj.method=g('f-mth');obj.win_rate=gn('f-wr');const tp=gn('f-tp');if(tp)obj.target_pct=tp;const sp=gn('f-sp');if(sp)obj.stop_pct=sp}
+  else if(type==='mtf_alignment'){obj.timeframes=['1m','5m','15m','30m','1h','4h','1d','1wk'].filter(t=>gc('mtf-'+t));obj.required_alignment=g('f-al');obj.min_bullish=gi('f-mb');if(!obj.timeframes.length){showToast('เลือก TF อย่างน้อย 1','err');return}}
+  else if(type==='alert_score'){obj.direction=g('f-dir');obj.min_score=gi('f-ms');obj.interval=g('f-iv')}
+  else if(type==='backtest_check'){obj.rule=g('f-rule');obj.interval=g('f-iv');obj.days=gi('f-days');obj.hold_days=gi('f-hold');obj.min_win_rate=gn('f-mwr');obj.min_avg_return=gn('f-mret')}
+
+  const sym=WL.watchlist[editSymIdx];
+  if(editAlIdx!==null){sym.alerts[editAlIdx]=obj}
+  else{
+    const allIds=WL.watchlist.flatMap(s=>s.alerts.map(a=>a.id));
+    if(allIds.includes(id)){showToast(`ID "${id}" ซ้ำกัน`,'err');return}
+    sym.alerts.push(obj);
+  }
+  save();renderAll();closeModal();showToast(`✅ บันทึก ${id} แล้ว`,'ok');
+}
+
+// ── SETTINGS ────────────────────────────────────────────
+function syncSettings(){
+  const s=WL.settings;
+  document.getElementById('s-tok').value=s.telegram_bot_token_env||'TELEGRAM_BOT_TOKEN';
+  document.getElementById('s-cid').value=s.telegram_chat_id_env||'TELEGRAM_CHAT_ID';
+  document.getElementById('s-cd').value=s.cooldown_minutes||60;
+  document.getElementById('s-sh').value=s.daily_summary_hour_utc||1;
+}
+function saveSettings(){
+  WL.settings.telegram_bot_token_env=document.getElementById('s-tok').value.trim();
+  WL.settings.telegram_chat_id_env=document.getElementById('s-cid').value.trim();
+  WL.settings.cooldown_minutes=parseInt(document.getElementById('s-cd').value);
+  WL.settings.daily_summary_hour_utc=parseInt(document.getElementById('s-sh').value);
+  save();showToast('✅ บันทึก settings','ok');
+}
+
+// ── JSON EDITOR ─────────────────────────────────────────
+function syncJson(){document.getElementById('jed').textContent=JSON.stringify(WL,null,2)}
+function fmtJson(){try{document.getElementById('jed').textContent=JSON.stringify(JSON.parse(document.getElementById('jed').textContent),null,2);showToast('✅ Format OK','ok')}catch(e){showToast('❌ JSON error: '+e.message,'err')}}
+function applyJson(){try{WL=JSON.parse(document.getElementById('jed').textContent);save();renderAll();showToast('✅ Apply JSON OK','ok')}catch(e){showToast('❌ JSON error: '+e.message,'err')}}
+
+// ── FILE I/O ─────────────────────────────────────────────
+function loadFromFile(){document.getElementById('wl-fi').click()}
+function saveWatchlist(){
+  const b=new Blob([JSON.stringify(WL,null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='watchlist.json';a.click();URL.revokeObjectURL(a.href);
+  showToast('💾 Download watchlist.json','ok');
+}
+function handleWl(inp){
+  const r=new FileReader();r.onload=e=>{try{WL=JSON.parse(e.target.result);save();renderAll();showToast(`✅ โหลด ${WL.watchlist.length} symbols OK`,'ok')}catch(err){showToast('❌ JSON ไม่ถูกต้อง','err')};inp.value=''};
+  if(inp.files[0])r.readAsText(inp.files[0]);
+}
+function handleLog(inp){
+  const r=new FileReader();r.onload=e=>{try{logData=JSON.parse(e.target.result);renderLog();document.getElementById('ov-lg').textContent=logData.length;showToast(`✅ โหลด ${logData.length} logs`,'ok')}catch(err){showToast('❌ ไฟล์ไม่ถูกต้อง','err')};inp.value=''};
+  if(inp.files[0])r.readAsText(inp.files[0]);
+}
+function handleState(inp){
+  const r=new FileReader();r.onload=e=>{try{stateData=JSON.parse(e.target.result);renderState();showToast('✅ โหลด state.json OK','ok')}catch(err){showToast('❌ ไฟล์ไม่ถูกต้อง','err')};inp.value=''};
+  if(inp.files[0])r.readAsText(inp.files[0]);
+}
+
+// ── LOG & STATE RENDER ───────────────────────────────────
+function renderLog(){
+  const empty=document.getElementById('log-empty'),wrap=document.getElementById('log-wrap'),tb=document.getElementById('log-tb');
+  if(!logData.length){empty.style.display='';wrap.style.display='none';return}
+  empty.style.display='none';wrap.style.display='';
+  tb.innerHTML=[...logData].reverse().slice(0,200).map(e=>{
+    const ts=e.timestamp?new Date(new Date(e.timestamp).getTime()+7*3600000).toISOString().replace('T',' ').slice(0,19):'-';
+    const pct=e.change_pct!==undefined?(e.change_pct>=0?`<span style="color:var(--green)">+${e.change_pct.toFixed(2)}%</span>`:`<span style="color:var(--red)">${e.change_pct.toFixed(2)}%</span>`):'-';
+    const ico=(TI[e.type]||{icon:'⚙️'}).icon;
+    return `<tr><td style="color:var(--text2);white-space:nowrap">${ts}</td><td style="font-family:var(--mono);color:var(--cyan);font-weight:700">${e.symbol}</td><td style="font-family:var(--mono);font-size:0.67rem">${e.alert_id}</td><td><span class="tbadge t-${e.type}">${ico} ${e.type}</span></td><td style="font-family:var(--mono)">$${e.price?.toFixed(4)||'-'}</td><td>${pct}</td></tr>`;
+  }).join('');
+}
+
+function renderState(){
+  const empty=document.getElementById('state-empty'),content=document.getElementById('state-content');
+  if(!Object.keys(stateData).length){empty.style.display='';content.style.display='none';return}
+  empty.style.display='none';content.style.display='';
+  const now=Date.now();
+  content.innerHTML=Object.entries(stateData).map(([sym,alerts])=>{
+    if(sym==='__daily_summary__')return`<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.77rem"><span style="color:var(--text2);font-family:var(--mono)">📊 Daily Summary:</span> <span style="color:var(--text3)">${alerts.last_sent||'-'}</span></div>`;
+    return`<div style="margin-bottom:14px"><div style="font-family:var(--mono);font-weight:700;color:var(--cyan);margin-bottom:7px">${sym}</div>`+
+    Object.entries(alerts).map(([aid,info])=>{
+      const fired=info.last_fired;
+      const minsAgo=fired?Math.floor((now-new Date(fired).getTime())/60000):null;
+      const cd=WL.watchlist.flatMap(s=>s.alerts).find(a=>a.id===aid)?.cooldown_minutes||60;
+      const rem=minsAgo!==null?Math.max(0,cd-minsAgo):0;
+      const status=rem>0?`<span style="color:var(--orange)">⏳ Cooldown ${rem}m เหลือ</span>`:`<span style="color:var(--green)">✅ พร้อม fire</span>`;
+      return`<div style="display:flex;align-items:center;gap:10px;padding:6px 10px;background:var(--bg);border-radius:4px;margin-bottom:4px;font-size:0.73rem"><span style="font-family:var(--mono);color:var(--text2);flex:1">${aid}</span><span style="color:var(--text3)">${fired?fired.slice(0,19).replace('T',' '):'-'}</span>${status}</div>`;
+    }).join('')+'</div>';
+  }).join('');
+}
+
+// ── TYPE GUIDE ───────────────────────────────────────────
+function renderTypeGuide(){
+  document.getElementById('type-guide').innerHTML=Object.entries(TI).map(([t,i])=>
+    `<div style="background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:10px 12px">
+      <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px"><span>${i.icon}</span><span class="tbadge t-${t}" style="font-size:0.6rem">${t}</span></div>
+      <div style="font-size:0.72rem;color:var(--text2);line-height:1.5">${i.desc}</div>
+    </div>`).join('');
+}
+
+// ── TOAST ────────────────────────────────────────────────
+let _tt;
+function showToast(msg,type=''){
+  const e=document.getElementById('toast');
+  e.textContent=msg;e.className='toast show'+(type?' '+type:'');
+  clearTimeout(_tt);_tt=setTimeout(()=>e.classList.remove('show'),3500);
+}
+
+document.getElementById('alert-modal').addEventListener('click',function(e){if(e.target===this)closeModal()});
+</script>
+</body>
+</html>
