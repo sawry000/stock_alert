@@ -88,5 +88,41 @@
     "price": 75879.71875,
     "change_pct": 0.07711393573701304,
     "value": 1
+  },
+  {
+    "timestamp": "2026-05-27T09:22:25Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 22.040000915527344,
+    "change_pct": -9.523805765487092,
+    "value": 3.530548400261351
+  },
+  {
+    "timestamp": "2026-05-27T09:22:25Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_POS_SIZE",
+    "type": "position_size",
+    "price": 22.040000915527344,
+    "change_pct": -9.523805765487092,
+    "value": 55
+  },
+  {
+    "timestamp": "2026-05-27T09:22:26Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_DROP",
+    "type": "percent_change",
+    "price": 22.040000915527344,
+    "change_pct": -9.523805765487092,
+    "value": -9.523805765487092
+  },
+  {
+    "timestamp": "2026-05-27T09:22:26Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.040000915527344,
+    "change_pct": -9.523805765487092,
+    "value": 3.530548400261351
   }
 ]
