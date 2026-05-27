@@ -689,6 +689,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch(e) {}
   }
 
+  // v2: ล้าง cache เก่าที่ emoji เสีย (atob bug) — ตรวจด้วย cache version
+  const CACHE_VER = 'v2_utf8';
+  if (localStorage.getItem('sap_wl_cache_ver') !== CACHE_VER) {
+    localStorage.removeItem('sap_wl_cache');
+    localStorage.setItem('sap_wl_cache_ver', CACHE_VER);
+  }
   const savedWl = localStorage.getItem('sap_wl_cache');
   if (savedWl) {
     try { WL = JSON.parse(savedWl); } catch(e) {}
