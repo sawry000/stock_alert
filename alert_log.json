@@ -52,5 +52,23 @@
     "price": 2072.239990234375,
     "change_pct": 0.2864958805583456,
     "value": 2
+  },
+  {
+    "timestamp": "2026-05-27T04:57:32Z",
+    "symbol": "BTC-USD",
+    "alert_id": "BTC_NEWS_ALERT",
+    "type": "news_sentiment",
+    "price": 75461.2890625,
+    "change_pct": -0.4747596655415218,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-27T04:57:42Z",
+    "symbol": "NVDA",
+    "alert_id": "NVDA_NEWS_CATALYST",
+    "type": "news_sentiment",
+    "price": 214.86000061035156,
+    "change_pct": 0.26253263471771104,
+    "value": 3
   }
 ]
