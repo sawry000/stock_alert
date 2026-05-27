@@ -251,6 +251,49 @@ input[type=password]{letter-spacing:2px}
 .tpl-manage{border-top:1px solid var(--border);margin-top:10px;padding-top:10px}
 .tpl-manage-title{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
   color:var(--text3);font-family:var(--mono);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+
+/* PRESET SYSTEM */
+.preset-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);backdrop-filter:blur(8px);z-index:600;align-items:center;justify-content:center}
+.preset-overlay.open{display:flex}
+.preset-modal{background:var(--bg2);border:1px solid rgba(255,213,79,0.3);border-radius:12px;
+  width:94%;max-width:860px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 0 60px rgba(255,213,79,0.1),0 30px 80px rgba(0,0,0,0.7);animation:mIn 0.22s ease}
+.preset-header{display:flex;align-items:center;justify-content:space-between;padding:18px 22px 14px;
+  border-bottom:1px solid var(--border);flex-shrink:0}
+.preset-title{font-family:var(--display);font-size:15px;font-weight:700;color:var(--gold);letter-spacing:1px;display:flex;align-items:center;gap:9px}
+.preset-body{display:flex;flex:1;overflow:hidden;min-height:0}
+.preset-list{width:240px;min-width:240px;border-right:1px solid var(--border);overflow-y:auto;padding:10px 0;flex-shrink:0}
+.preset-item{padding:10px 14px;cursor:pointer;transition:all 0.13s;border-left:2px solid transparent;border-bottom:1px solid var(--border)}
+.preset-item:hover{background:rgba(255,255,255,0.03);border-left-color:var(--border2)}
+.preset-item.active{background:rgba(255,213,79,0.06);border-left-color:var(--gold)}
+.preset-item-name{font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:7px}
+.preset-item-meta{font-size:10px;color:var(--text3);font-family:var(--mono);margin-top:3px}
+.preset-item-tags{display:flex;flex-wrap:wrap;gap:3px;margin-top:5px}
+.preset-tag{padding:1px 6px;border-radius:3px;font-size:9px;font-family:var(--mono);background:rgba(255,255,255,0.06);color:var(--text2)}
+.preset-detail{flex:1;overflow-y:auto;padding:16px 18px}
+.preset-detail-empty{display:flex;align-items:center;justify-content:center;height:100%;color:var(--text3);font-size:13px;text-align:center}
+.preset-name{font-family:var(--display);font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px;display:flex;align-items:center;gap:9px}
+.preset-desc{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.preset-strategy{background:rgba(255,213,79,0.05);border:1px solid rgba(255,213,79,0.15);border-radius:6px;padding:10px 13px;margin-bottom:14px;font-size:11px;line-height:1.7;color:var(--text2)}
+.preset-strategy strong{color:var(--gold)}
+.preset-alerts-title{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);font-family:var(--mono);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.preset-alert-row{display:flex;align-items:flex-start;gap:9px;padding:8px 10px;background:var(--bg);border:1px solid var(--border);border-radius:5px;margin-bottom:5px}
+.preset-alert-num{font-family:var(--mono);font-size:10px;color:var(--text3);min-width:18px;margin-top:1px}
+.preset-alert-info{flex:1;min-width:0}
+.preset-alert-name{font-size:12px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.preset-alert-detail{font-size:11px;color:var(--text2);margin-top:2px}
+.preset-risk{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px}
+.preset-risk-item{background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:8px;text-align:center}
+.preset-risk-val{font-family:var(--mono);font-size:15px;font-weight:700}
+.preset-risk-lbl{font-size:9px;color:var(--text3);margin-top:2px;font-family:var(--mono)}
+.preset-footer{display:flex;justify-content:flex-end;gap:8px;padding:13px 18px;border-top:1px solid var(--border);flex-shrink:0;flex-wrap:wrap;align-items:center}
+.preset-sym-select{display:flex;align-items:center;gap:8px;flex:1;flex-wrap:wrap}
+.preset-badge{padding:2px 8px;border-radius:3px;font-size:10px;font-family:var(--mono);font-weight:700}
+.preset-badge-bull{background:rgba(0,255,157,0.12);color:var(--green)}
+.preset-badge-bear{background:rgba(255,23,68,0.12);color:var(--red)}
+.preset-badge-swing{background:rgba(0,229,255,0.12);color:var(--cyan)}
+.preset-badge-risk{background:rgba(255,213,79,0.12);color:var(--gold)}
+.preset-badge-auto{background:rgba(224,64,251,0.12);color:var(--purple)}
 </style>
 </head>
 <body>
@@ -272,6 +315,7 @@ input[type=password]{letter-spacing:2px}
     <div class="slabel">Watchlist</div>
     <button class="nbtn active" onclick="show('watchlist')" id="nav-watchlist"><span class="msi">visibility</span> จัดการหุ้น <span class="cnt" id="sym-cnt">0</span></button>
     <button class="nbtn" onclick="show('add-symbol')" id="nav-add"><span class="msi">add_circle</span> เพิ่มหุ้น</button>
+    <button class="nbtn" onclick="openPresetModal()" id="nav-preset"><span class="msi">auto_awesome</span> Preset Packs <span style="margin-left:auto;background:var(--gold);color:#000;font-size:9px;font-family:var(--mono);font-weight:700;padding:1px 5px;border-radius:8px">NEW</span></button>
     <div class="sdiv"></div>
     <div class="slabel">Logs (GitHub)</div>
     <button class="nbtn" onclick="show('log')" id="nav-log"><span class="msi">assignment</span> Alert Log</button>
@@ -519,6 +563,39 @@ input[type=password]{letter-spacing:2px}
     <div class="mfooter">
       <button class="btn btn-ghost" onclick="closeModal()">ยกเลิก</button>
       <button class="btn btn-cyan" onclick="saveAlert()"><span class="msi">save</span> บันทึก Alert</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Preset Packs -->
+<div class="preset-overlay" id="preset-modal">
+  <div class="preset-modal">
+    <div class="preset-header">
+      <div class="preset-title">
+        <span class="msi filled" style="font-size:18px;color:var(--gold)">auto_awesome</span>
+        PRESET PACKS — ชุด Alert สำเร็จรูป
+        <span style="font-size:11px;color:var(--text2);font-family:var(--mono);font-weight:400">เพิ่มหลาย alerts เข้า symbol เดียวพร้อมกัน</span>
+      </div>
+      <button class="mclose" onclick="closePresetModal()"><span class="msi" style="font-size:17px">close</span></button>
+    </div>
+    <div class="preset-body">
+      <div class="preset-list" id="preset-list"></div>
+      <div class="preset-detail" id="preset-detail">
+        <div class="preset-detail-empty">
+          <div><span class="msi" style="font-size:36px;display:block;text-align:center;margin-bottom:10px;color:var(--text3)">auto_awesome</span>เลือก Preset Pack จากรายการทางซ้าย</div>
+        </div>
+      </div>
+    </div>
+    <div class="preset-footer">
+      <div class="preset-sym-select">
+        <span style="font-size:12px;color:var(--text2)">ใส่ใน Symbol:</span>
+        <select id="preset-sym-sel" style="width:auto;min-width:140px;font-size:12px;padding:5px 8px"></select>
+        <span style="font-size:11px;color:var(--text3)" id="preset-count-label"></span>
+      </div>
+      <button class="btn btn-ghost" onclick="closePresetModal()">ยกเลิก</button>
+      <button class="btn btn-gold" id="preset-apply-btn" onclick="applyPreset()" disabled>
+        <span class="msi">rocket_launch</span> ใช้ Preset นี้
+      </button>
     </div>
   </div>
 </div>
@@ -1637,6 +1714,373 @@ function importTemplates(input) {
   };
   r.readAsText(f);
 }
+
+// ══════════════════════════════════════════════════════════
+//  PRESET PACKS SYSTEM
+// ══════════════════════════════════════════════════════════
+
+const PRESET_PACKS = [
+  // ─────────────────────────────────────────────────────────
+  {
+    id: 'ps_swing_master',
+    emoji: '⚡',
+    name: 'Swing Trading Master',
+    badge: 'swing',
+    style: 'SWING',
+    timeframe: '1D / 4H',
+    alertCount: 7,
+    desc: 'ชุด alert ครบสำหรับ Swing Trade — จับทุกมุม ตั้งแต่ RSI เข้า, MA Cross ยืนยัน, Volume spike, จนถึง Pattern กลับตัว',
+    strategy: '<strong>กลยุทธ์:</strong> รอ RSI oversold บน 1D → ยืนยันด้วย Volume spike → MA กลับตัว → ดู Pattern เสริม บน 4H → เข้าซื้อพร้อม Position sizing และ Score filter ป้องกัน false signal',
+    risk: { winrate: '58–68%', rr: '1:2.5', hold: '3–10 วัน', type: 'Medium' },
+    alerts: [
+      { id_suffix: 'RSI_OS_1D',   emoji: '💚', type: 'rsi',            action: 'BUY',  cooldown_minutes: 360,  note: 'RSI Oversold 1D entry',      data: { condition: 'oversold',       interval: '1d', period: 14, oversold_level: 30, overbought_level: 70 } },
+      { id_suffix: 'RSI_OS_4H',   emoji: '💛', type: 'rsi',            action: 'BUY',  cooldown_minutes: 120,  note: 'RSI Oversold 4H confirm',     data: { condition: 'oversold',       interval: '4h', period: 14, oversold_level: 32, overbought_level: 70 } },
+      { id_suffix: 'VOL_SPIKE',   emoji: '🔊', type: 'volume_spike',   action: 'BUY',  cooldown_minutes: 60,   note: 'Volume spike 2.5x',           data: { multiplier: 2.5 } },
+      { id_suffix: 'MA_GOLDEN',   emoji: '✨', type: 'ma_crossover',   action: 'BUY',  cooldown_minutes: 1440, note: 'EMA9/21 Golden Cross 1D',      data: { condition: 'golden_cross',   ma_type: 'EMA', interval: '1d', fast_period: 9,  slow_period: 21 } },
+      { id_suffix: 'CP_BULL',     emoji: '🕯️', type: 'candle_pattern', action: 'BUY',  cooldown_minutes: 480,  note: 'Bullish reversal candle',      data: { patterns: ['hammer','bullish_engulfing','morning_star'], interval: '1d', match_any: true } },
+      { id_suffix: 'SCORE_70',    emoji: '🎯', type: 'alert_score',    action: 'BUY',  cooldown_minutes: 240,  note: 'Score ≥70 bullish confirm',   data: { direction: 'bullish', min_score: 70, interval: '1d' } },
+      { id_suffix: 'POS_SIZE',    emoji: '💰', type: 'position_size',  action: '',     cooldown_minutes: 1440, note: 'Position size 2% risk',        data: { condition: 'triggered_always', account_size: 10000, risk_pct: 2, method: 'fixed_risk', win_rate: 0.60 } }
+    ]
+  },
+  // ─────────────────────────────────────────────────────────
+  {
+    id: 'ps_breakout_hunter',
+    emoji: '🚀',
+    name: 'Breakout Hunter',
+    badge: 'bull',
+    style: 'MOMENTUM',
+    timeframe: '1D',
+    alertCount: 6,
+    desc: 'จับ Breakout สุดแรง — ราคาทะลุแนวต้าน + Volume พุ่ง + % Change บ่งบอก Momentum + News บวก + Score สูง',
+    strategy: '<strong>กลยุทธ์:</strong> รอราคา Break Above แนวต้านสำคัญ → Volume ≥ 3x ยืนยัน → % Change เช็ก Momentum → News Sentiment บวก → Score ≥ 75 คัดกรอง — เข้าเร็ว ตัดขาดทุนไว Exit ตาม Target Price',
+    risk: { winrate: '50–60%', rr: '1:3+', hold: '1–5 วัน', type: 'High' },
+    alerts: [
+      { id_suffix: 'BREAK_ABOVE',  emoji: '⬆️', type: 'support_resistance', action: 'BUY',  cooldown_minutes: 60,   note: 'Break above key resistance',   data: { level: 200,  direction: 'break_above' } },
+      { id_suffix: 'VOL_3X',       emoji: '🔥', type: 'volume_spike',        action: 'BUY',  cooldown_minutes: 30,   note: 'Volume 3x breakout confirm',   data: { multiplier: 3 } },
+      { id_suffix: 'PCT_UP_5',     emoji: '📈', type: 'percent_change',      action: 'BUY',  cooldown_minutes: 120,  note: 'Price surge ≥5% momentum',     data: { threshold_pct: 5, direction: 'up' } },
+      { id_suffix: 'NEWS_POS',     emoji: '📰', type: 'news_sentiment',      action: '',     cooldown_minutes: 120,  note: 'Positive news catalyst',       data: { condition: 'positive', hours_back: 12, max_news: 5, min_news: 1, translate: true } },
+      { id_suffix: 'SCORE_75',     emoji: '🎯', type: 'alert_score',         action: 'BUY',  cooldown_minutes: 180,  note: 'Score ≥75 high confidence',   data: { direction: 'bullish', min_score: 75, interval: '1d' } },
+      { id_suffix: 'MTF_BULL',     emoji: '🔭', type: 'mtf_alignment',       action: 'BUY',  cooldown_minutes: 240,  note: '1H+4H+1D aligned bullish',    data: { timeframes: ['1h','4h','1d'], required_alignment: 'mostly_bullish', min_bullish: 2 } }
+    ]
+  },
+  // ─────────────────────────────────────────────────────────
+  {
+    id: 'ps_short_sniper',
+    emoji: '🐻',
+    name: 'Short Sniper',
+    badge: 'bear',
+    style: 'BEARISH',
+    timeframe: '1D / 4H',
+    alertCount: 6,
+    desc: 'ชุด alert สำหรับ Short / หลีกเลี่ยง — จับสัญญาณกลับตัวลง ทะลุแนวรับ RSI Overbought MA Death Cross',
+    strategy: '<strong>กลยุทธ์:</strong> รอ RSI overbought บน 1D → ยืนยัน Bearish candle → Break Below แนวรับ → Volume spike ยืนยันการ Break → Score bearish สูง → News ลบเสริม — ใช้เป็น Exit signal หรือ Short entry',
+    risk: { winrate: '52–62%', rr: '1:2', hold: '2–7 วัน', type: 'High' },
+    alerts: [
+      { id_suffix: 'RSI_OB_1D',   emoji: '🔴', type: 'rsi',            action: 'SELL', cooldown_minutes: 360,  note: 'RSI Overbought 1D exit',     data: { condition: 'overbought',     interval: '1d', period: 14, oversold_level: 30, overbought_level: 70 } },
+      { id_suffix: 'BREAK_DOWN',  emoji: '⬇️', type: 'support_resistance', action: 'SELL', cooldown_minutes: 60, note: 'Break below support',        data: { level: 180, direction: 'break_below' } },
+      { id_suffix: 'MA_DEATH',    emoji: '💀', type: 'ma_crossover',   action: 'SELL', cooldown_minutes: 1440, note: 'EMA9/21 Death Cross 1D',      data: { condition: 'death_cross',    ma_type: 'EMA', interval: '1d', fast_period: 9,  slow_period: 21 } },
+      { id_suffix: 'CP_BEAR',     emoji: '🐻', type: 'candle_pattern', action: 'SELL', cooldown_minutes: 480,  note: 'Bearish reversal candle',     data: { patterns: ['shooting_star','bearish_engulfing','evening_star'], interval: '1d', match_any: true } },
+      { id_suffix: 'SCORE_BEAR',  emoji: '📡', type: 'alert_score',    action: 'SELL', cooldown_minutes: 240,  note: 'Score ≥70 bearish',           data: { direction: 'bearish', min_score: 70, interval: '1d' } },
+      { id_suffix: 'NEWS_NEG',    emoji: '⚠️', type: 'news_sentiment', action: 'SELL', cooldown_minutes: 120,  note: 'Negative news warning',       data: { condition: 'negative', hours_back: 24, max_news: 5, min_news: 1, translate: true } }
+    ]
+  },
+  // ─────────────────────────────────────────────────────────
+  {
+    id: 'ps_full_spectrum',
+    emoji: '🌐',
+    name: 'Full Spectrum Monitor',
+    badge: 'auto',
+    style: 'ALL-IN-ONE',
+    timeframe: 'All TF',
+    alertCount: 10,
+    desc: 'ชุด monitoring ครบทุกมิติ — ไม่พลาดทุกสัญญาณ ทั้ง Buy, Sell, Volume, News, MTF, Score, Backtest filter และ Position sizing พร้อม',
+    strategy: '<strong>กลยุทธ์:</strong> ติดตาม symbol ที่สำคัญอย่างละเอียด — alerts ครอบคลุมทุก dimension ช่วยให้ตัดสินใจได้จาก Context เต็มรูปแบบ เหมาะกับ Core Portfolio ที่ต้องการ precision สูงสุด',
+    risk: { winrate: '60–70%', rr: '1:2.5', hold: 'ยืดหยุ่น', type: 'Managed' },
+    alerts: [
+      { id_suffix: 'RSI_OS',      emoji: '💚', type: 'rsi',            action: 'BUY',  cooldown_minutes: 240,  note: 'RSI Oversold 1D',             data: { condition: 'oversold',       interval: '1d', period: 14, oversold_level: 30, overbought_level: 70 } },
+      { id_suffix: 'RSI_OB',      emoji: '🔴', type: 'rsi',            action: 'SELL', cooldown_minutes: 240,  note: 'RSI Overbought 1D',           data: { condition: 'overbought',     interval: '1d', period: 14, oversold_level: 30, overbought_level: 70 } },
+      { id_suffix: 'VOL_2X',      emoji: '📢', type: 'volume_spike',   action: '',     cooldown_minutes: 60,   note: 'Volume 2x watch',             data: { multiplier: 2 } },
+      { id_suffix: 'MA_GOLD',     emoji: '✨', type: 'ma_crossover',   action: 'BUY',  cooldown_minutes: 1440, note: 'Golden Cross 1D',             data: { condition: 'golden_cross',   ma_type: 'EMA', interval: '1d', fast_period: 9,  slow_period: 21 } },
+      { id_suffix: 'MA_DEATH',    emoji: '💀', type: 'ma_crossover',   action: 'SELL', cooldown_minutes: 1440, note: 'Death Cross 1D',              data: { condition: 'death_cross',    ma_type: 'EMA', interval: '1d', fast_period: 9,  slow_period: 21 } },
+      { id_suffix: 'MTF_ALIGN',   emoji: '🔭', type: 'mtf_alignment',  action: 'BUY',  cooldown_minutes: 360,  note: '1H+4H+1D alignment',          data: { timeframes: ['1h','4h','1d'], required_alignment: 'mostly_bullish', min_bullish: 2 } },
+      { id_suffix: 'NEWS_ANY',    emoji: '📰', type: 'news_sentiment', action: '',     cooldown_minutes: 60,   note: 'Any significant news',         data: { condition: 'high_volume',   hours_back: 12, max_news: 10, min_news: 2, translate: true } },
+      { id_suffix: 'SCORE_65',    emoji: '🎯', type: 'alert_score',    action: 'BUY',  cooldown_minutes: 180,  note: 'Score ≥65 bullish',           data: { direction: 'bullish', min_score: 65, interval: '1d' } },
+      { id_suffix: 'BT_RSI',      emoji: '🧪', type: 'backtest_check', action: '',     cooldown_minutes: 1440, note: 'RSI backtest filter',          data: { rule: 'rsi_oversold', interval: '1d', days: 180, hold_days: 5, min_win_rate: 55, min_avg_return: 1.5 } },
+      { id_suffix: 'POS_SIZE',    emoji: '💰', type: 'position_size',  action: '',     cooldown_minutes: 1440, note: 'Position 2% risk',            data: { condition: 'triggered_always', account_size: 10000, risk_pct: 2, method: 'fixed_risk', win_rate: 0.60 } }
+    ]
+  },
+  // ─────────────────────────────────────────────────────────
+  {
+    id: 'ps_scalp_ultra',
+    emoji: '⚡',
+    name: 'Scalp Ultra (1H)',
+    badge: 'swing',
+    style: 'SCALP',
+    timeframe: '1H / 15M',
+    alertCount: 5,
+    desc: 'ชุด Scalp สำหรับ 1H — RSI 4H + Candle 1H + Volume เข้าเร็ว ออกเร็ว Cooldown สั้น',
+    strategy: '<strong>กลยุทธ์:</strong> RSI 4H oversold เป็น anchor → รอ Hammer / Bullish Engulfing บน 1H → Volume spike ยืนยัน → Score ≥65 กรอง → MTF 15m+1h+4h aligned — Cooldown สั้น 30-120 นาที ตอบสนองเร็ว',
+    risk: { winrate: '55–65%', rr: '1:1.5', hold: '1–8 ชม.', type: 'High' },
+    alerts: [
+      { id_suffix: 'RSI_4H',      emoji: '⏱️', type: 'rsi',            action: 'BUY',  cooldown_minutes: 120,  note: 'RSI Oversold 4H scalp',       data: { condition: 'oversold', interval: '4h', period: 14, oversold_level: 32, overbought_level: 70 } },
+      { id_suffix: 'CP_1H',       emoji: '🕯️', type: 'candle_pattern', action: 'BUY',  cooldown_minutes: 60,   note: 'Bullish candle 1H',           data: { patterns: ['hammer','bullish_engulfing','marubozu_bullish'], interval: '1h', match_any: true } },
+      { id_suffix: 'VOL_15M',     emoji: '🔊', type: 'volume_spike',   action: '',     cooldown_minutes: 30,   note: 'Volume spike 2x scalp',       data: { multiplier: 2 } },
+      { id_suffix: 'MTF_FAST',    emoji: '🔭', type: 'mtf_alignment',  action: 'BUY',  cooldown_minutes: 60,   note: '15m+1h+4h bullish',           data: { timeframes: ['15m','1h','4h'], required_alignment: 'mostly_bullish', min_bullish: 2 } },
+      { id_suffix: 'SCORE_1H',    emoji: '📡', type: 'alert_score',    action: 'BUY',  cooldown_minutes: 60,   note: 'Score ≥65 1H confirm',        data: { direction: 'bullish', min_score: 65, interval: '1h' } }
+    ]
+  },
+  // ─────────────────────────────────────────────────────────
+  {
+    id: 'ps_risk_guard',
+    emoji: '🛡️',
+    name: 'Risk Guard — ป้องกันพอร์ต',
+    badge: 'risk',
+    style: 'DEFENSIVE',
+    timeframe: '1D',
+    alertCount: 6,
+    desc: 'ชุด alert ป้องกัน Portfolio — แจ้งเตือนภัยก่อนเกิด: ราคาหลุด Stop, Volume แปลก, ข่าวลบ, Death Cross, Bearish Score',
+    strategy: '<strong>กลยุทธ์:</strong> ตั้งไว้สำหรับ position ที่ถือยาว — ถ้า alert ใดยิงให้ทบทวน exit ทันที ใช้คู่กับ Swing/Breakout Pack เพื่อคุมความเสี่ยงแบบ 360°',
+    risk: { winrate: 'N/A', rr: 'Protect', hold: 'Long-term', type: 'Low' },
+    alerts: [
+      { id_suffix: 'SL_BREAK',    emoji: '🚨', type: 'support_resistance', action: 'SELL', cooldown_minutes: 30,  note: 'Stop loss level break',        data: { level: 170, direction: 'break_below' } },
+      { id_suffix: 'PCT_DROP',    emoji: '📉', type: 'percent_change',      action: 'SELL', cooldown_minutes: 60,  note: 'Drop ≥5% single day SL',      data: { threshold_pct: 5, direction: 'down' } },
+      { id_suffix: 'VOL_ALARM',   emoji: '🚨', type: 'volume_spike',        action: '',     cooldown_minutes: 30,  note: 'Unusual volume alarm 3x',      data: { multiplier: 3 } },
+      { id_suffix: 'MA_DEATH',    emoji: '💀', type: 'ma_crossover',        action: 'SELL', cooldown_minutes: 1440, note: 'Death Cross warning 1D',      data: { condition: 'death_cross',   ma_type: 'EMA', interval: '1d', fast_period: 9, slow_period: 21 } },
+      { id_suffix: 'NEWS_BAD',    emoji: '🔴', type: 'news_sentiment',      action: 'SELL', cooldown_minutes: 60,  note: 'Negative news emergency',      data: { condition: 'strong_negative', hours_back: 6, max_news: 3, min_news: 1, translate: true } },
+      { id_suffix: 'SCORE_BEAR',  emoji: '🐻', type: 'alert_score',         action: 'SELL', cooldown_minutes: 180, note: 'Bearish score ≥72 danger',    data: { direction: 'bearish', min_score: 72, interval: '1d' } }
+    ]
+  },
+  // ─────────────────────────────────────────────────────────
+  {
+    id: 'ps_crypto_degen',
+    emoji: '🌙',
+    name: 'Crypto Degen Mode',
+    badge: 'bull',
+    style: 'CRYPTO',
+    timeframe: '4H / 1H',
+    alertCount: 7,
+    desc: 'ชุด alert ออกแบบสำหรับ Crypto — Volume สูง, Momentum เร็ว, MTF 4H แม่น, News real-time แปลไทย, Score filter',
+    strategy: '<strong>กลยุทธ์:</strong> Crypto เคลื่อนไหวเร็วกว่า Equity — RSI extreme (<25) บน 4H + Volume 3x + MTF aligned + News positive + Score ≥70 → เข้าด้วย Half-Kelly sizing รับความผันผวนสูง',
+    risk: { winrate: '52–65%', rr: '1:3', hold: '4–48 ชม.', type: 'Very High' },
+    alerts: [
+      { id_suffix: 'RSI_XOS',     emoji: '🟢', type: 'rsi',            action: 'BUY',  cooldown_minutes: 180,  note: 'Extreme Oversold <25 4H',     data: { condition: 'extreme_oversold', interval: '4h', period: 14, oversold_level: 25, overbought_level: 75 } },
+      { id_suffix: 'VOL_3X_C',    emoji: '🔥', type: 'volume_spike',   action: '',     cooldown_minutes: 30,   note: 'Crypto volume 3x spike',      data: { multiplier: 3 } },
+      { id_suffix: 'PCT_5_UP',    emoji: '🚀', type: 'percent_change', action: 'BUY',  cooldown_minutes: 60,   note: 'Pump ≥5% momentum',           data: { threshold_pct: 5, direction: 'up' } },
+      { id_suffix: 'MTF_C',       emoji: '🔭', type: 'mtf_alignment',  action: 'BUY',  cooldown_minutes: 120,  note: '1H+4H aligned bullish',       data: { timeframes: ['1h','4h','1d'], required_alignment: 'mostly_bullish', min_bullish: 2 } },
+      { id_suffix: 'NEWS_C',      emoji: '📡', type: 'news_sentiment', action: '',     cooldown_minutes: 30,   note: 'Crypto news realtime',        data: { condition: 'positive', hours_back: 6, max_news: 10, min_news: 1, translate: true } },
+      { id_suffix: 'SCORE_C',     emoji: '🎯', type: 'alert_score',    action: 'BUY',  cooldown_minutes: 120,  note: 'Score ≥70 crypto entry',      data: { direction: 'bullish', min_score: 70, interval: '4h' } },
+      { id_suffix: 'POS_KELLY',   emoji: '💰', type: 'position_size',  action: '',     cooldown_minutes: 1440, note: 'Half-Kelly crypto sizing',     data: { condition: 'triggered_always', account_size: 10000, risk_pct: 1.5, method: 'half_kelly', win_rate: 0.55 } }
+    ]
+  },
+  // ─────────────────────────────────────────────────────────
+  {
+    id: 'ps_backtest_validated',
+    emoji: '🧬',
+    name: 'Backtest Validated Suite',
+    badge: 'auto',
+    style: 'QUANT',
+    timeframe: '1D',
+    alertCount: 6,
+    desc: 'ชุด alert ที่ผ่านการ Backtest กรอง — ทุก signal ต้อง pass historical filter ก่อน ลด false alarm สูงสุด เหมาะกับผู้ที่ต้องการ precision',
+    strategy: '<strong>กลยุทธ์:</strong> แต่ละ signal มี Backtest Check เป็น gate — RSI backtest + Golden Cross backtest + Volume backtest ย้อนหลัง 180+ วัน Win rate ≥55% → ยิง Alert จริงผ่าน Score ≥75',
+    risk: { winrate: '62–72%', rr: '1:2', hold: '5–15 วัน', type: 'Low-Med' },
+    alerts: [
+      { id_suffix: 'BT_RSI_BUY',  emoji: '🧪', type: 'backtest_check', action: 'BUY',  cooldown_minutes: 1440, note: 'RSI oversold backtest filter',   data: { rule: 'rsi_oversold',   interval: '1d', days: 180, hold_days: 5,  min_win_rate: 55, min_avg_return: 1.5 } },
+      { id_suffix: 'BT_GC',       emoji: '⚗️', type: 'backtest_check', action: 'BUY',  cooldown_minutes: 2880, note: 'Golden Cross backtest filter',   data: { rule: 'golden_cross',   interval: '1d', days: 365, hold_days: 10, min_win_rate: 60, min_avg_return: 2.0 } },
+      { id_suffix: 'BT_VOL',      emoji: '🔬', type: 'backtest_check', action: '',     cooldown_minutes: 720,  note: 'Volume breakout backtest',       data: { rule: 'volume_spike',   interval: '1d', days: 180, hold_days: 3,  min_win_rate: 52, min_avg_return: 1.0 } },
+      { id_suffix: 'RSI_OS_BT',   emoji: '💚', type: 'rsi',            action: 'BUY',  cooldown_minutes: 360,  note: 'RSI Oversold signal',            data: { condition: 'oversold', interval: '1d', period: 14, oversold_level: 30, overbought_level: 70 } },
+      { id_suffix: 'MA_GC_BT',    emoji: '✨', type: 'ma_crossover',   action: 'BUY',  cooldown_minutes: 1440, note: 'Golden Cross validated',         data: { condition: 'golden_cross', ma_type: 'EMA', interval: '1d', fast_period: 9, slow_period: 21 } },
+      { id_suffix: 'SCORE_75_BT', emoji: '🎯', type: 'alert_score',    action: 'BUY',  cooldown_minutes: 240,  note: 'Score ≥75 quant confirm',       data: { direction: 'bullish', min_score: 75, interval: '1d' } }
+    ]
+  }
+];
+
+// State
+let _selectedPresetId = null;
+
+// Badge color helper
+function _presetBadgeClass(badge) {
+  const m = { bull:'preset-badge-bull', bear:'preset-badge-bear', swing:'preset-badge-swing', risk:'preset-badge-risk', auto:'preset-badge-auto' };
+  return 'preset-badge ' + (m[badge] || 'preset-badge-swing');
+}
+
+function openPresetModal() {
+  _selectedPresetId = null;
+  document.getElementById('preset-apply-btn').disabled = true;
+  document.getElementById('preset-count-label').textContent = '';
+  renderPresetList();
+  renderPresetDetail(null);
+  populatePresetSymSelect();
+  document.getElementById('preset-modal').classList.add('open');
+}
+
+function closePresetModal() {
+  document.getElementById('preset-modal').classList.remove('open');
+}
+
+function populatePresetSymSelect() {
+  const sel = document.getElementById('preset-sym-sel');
+  sel.innerHTML = WL.watchlist.length
+    ? WL.watchlist.map(s => `<option value="${s.symbol}">${s.symbol} — ${s.name}</option>`).join('')
+    : '<option value="">— ยังไม่มี Symbol —</option>';
+}
+
+function renderPresetList() {
+  const el = document.getElementById('preset-list');
+  el.innerHTML = PRESET_PACKS.map(p => `
+    <div class="preset-item${_selectedPresetId === p.id ? ' active' : ''}" onclick="selectPreset('${p.id}')">
+      <div class="preset-item-name">
+        <span style="font-family:var(--emoji)">${p.emoji}</span>${p.name}
+      </div>
+      <div class="preset-item-meta">${p.alertCount} alerts · ${p.timeframe}</div>
+      <div class="preset-item-tags">
+        <span class="${_presetBadgeClass(p.badge)}">${p.style}</span>
+        <span class="preset-tag">${p.alertCount} alerts</span>
+      </div>
+    </div>`).join('');
+}
+
+function selectPreset(id) {
+  _selectedPresetId = id;
+  renderPresetList();
+  renderPresetDetail(id);
+  document.getElementById('preset-apply-btn').disabled = !WL.watchlist.length;
+}
+
+function renderPresetDetail(id) {
+  const el = document.getElementById('preset-detail');
+  if (!id) {
+    el.innerHTML = '<div class="preset-detail-empty"><div><span class="msi" style="font-size:36px;display:block;text-align:center;margin-bottom:10px;color:var(--text3)">auto_awesome</span>เลือก Preset Pack จากรายการทางซ้าย</div></div>';
+    document.getElementById('preset-count-label').textContent = '';
+    return;
+  }
+  const p = PRESET_PACKS.find(x => x.id === id);
+  if (!p) return;
+
+  // Risk indicators
+  const riskColor = { 'Low':'var(--green)', 'Low-Med':'var(--cyan)', 'Medium':'var(--gold)', 'High':'var(--orange)', 'Very High':'var(--red)', 'Managed':'var(--purple)', 'Protect':'var(--cyan)', 'N/A':'var(--text3)' };
+  const rc = riskColor[p.risk.type] || 'var(--cyan)';
+
+  el.innerHTML = `
+    <div class="preset-name">
+      <span style="font-family:var(--emoji);font-size:20px">${p.emoji}</span>
+      ${p.name}
+      <span class="${_presetBadgeClass(p.badge)}">${p.style}</span>
+    </div>
+    <div class="preset-desc">${p.desc}</div>
+    <div class="preset-strategy">${p.strategy}</div>
+    <div class="preset-risk">
+      <div class="preset-risk-item"><div class="preset-risk-val" style="color:var(--green)">${p.risk.winrate}</div><div class="preset-risk-lbl">Win Rate</div></div>
+      <div class="preset-risk-item"><div class="preset-risk-val" style="color:var(--cyan)">${p.risk.rr}</div><div class="preset-risk-lbl">R:R Ratio</div></div>
+      <div class="preset-risk-item"><div class="preset-risk-val" style="color:var(--gold)">${p.risk.hold}</div><div class="preset-risk-lbl">Hold Period</div></div>
+      <div class="preset-risk-item"><div class="preset-risk-val" style="color:${rc}">${p.risk.type}</div><div class="preset-risk-lbl">Risk Level</div></div>
+    </div>
+    <div class="preset-alerts-title"><span class="msi" style="font-size:13px">notifications</span> ${p.alerts.length} Alerts ในชุดนี้</div>
+    ${p.alerts.map((a, i) => {
+      const ti = TI[a.type] || {};
+      const color = ti.color || 'var(--cyan)';
+      const desc = buildPresetAlertDesc(a);
+      return `<div class="preset-alert-row">
+        <div class="preset-alert-num">${i+1}</div>
+        <div class="preset-alert-info">
+          <div class="preset-alert-name">
+            <span style="font-family:var(--emoji)">${a.emoji}</span>
+            <span style="font-family:var(--mono);font-size:11px;color:var(--text3)">[SYM]_${a.id_suffix}</span>
+            <span class="tbadge t-${a.type}" style="font-size:9px">${a.type}</span>
+            ${a.action ? `<span style="font-size:9px;padding:1px 5px;border-radius:2px;font-family:var(--mono);background:${a.action==='BUY'?'rgba(0,255,157,0.12)':'rgba(255,23,68,0.12)'};color:${a.action==='BUY'?'var(--green)':'var(--red)'}">${a.action}</span>` : ''}
+          </div>
+          <div class="preset-alert-detail">${a.note} — cd:${a.cooldown_minutes}m · ${desc}</div>
+        </div>
+      </div>`;
+    }).join('')}`;
+
+  document.getElementById('preset-count-label').textContent = `จะเพิ่ม ${p.alerts.length} alerts`;
+}
+
+function buildPresetAlertDesc(a) {
+  const d = a.data || {};
+  const t = a.type;
+  if (t === 'rsi')            return `${d.condition} | ${d.interval} | period:${d.period} | os:${d.oversold_level} ob:${d.overbought_level}`;
+  if (t === 'volume_spike')   return `multiplier: ${d.multiplier}x avg`;
+  if (t === 'percent_change') return `${d.direction === 'up' ? '↑' : '↓'} ${d.threshold_pct}%`;
+  if (t === 'support_resistance') return `${d.direction} @ level: ${d.level}`;
+  if (t === 'ma_crossover')   return `${d.condition} | ${d.ma_type}${d.fast_period}/${d.slow_period} | ${d.interval}`;
+  if (t === 'candle_pattern') return `${(d.patterns || []).slice(0,2).join(', ')}${d.patterns && d.patterns.length > 2 ? '…' : ''} | ${d.interval}`;
+  if (t === 'news_sentiment') return `${d.condition} | ${d.hours_back}h | แปลไทย:${d.translate ? 'yes' : 'no'}`;
+  if (t === 'position_size')  return `${d.method} | risk:${d.risk_pct}% | $${d.account_size}`;
+  if (t === 'mtf_alignment')  return `${(d.timeframes || []).join('+')} → ${d.required_alignment}`;
+  if (t === 'alert_score')    return `${d.direction} score≥${d.min_score} | ${d.interval}`;
+  if (t === 'backtest_check') return `${d.rule} | ${d.days}d | wr≥${d.min_win_rate}%`;
+  return '';
+}
+
+function applyPreset() {
+  if (!_selectedPresetId) return;
+  const p = PRESET_PACKS.find(x => x.id === _selectedPresetId);
+  if (!p) return;
+
+  const symName = document.getElementById('preset-sym-sel').value;
+  if (!symName) { showToast('เลือก Symbol ก่อน', 'err'); return; }
+
+  const symIdx = WL.watchlist.findIndex(s => s.symbol === symName);
+  if (symIdx === -1) { showToast('ไม่พบ Symbol นี้', 'err'); return; }
+
+  const sym = WL.watchlist[symIdx];
+  const existingIds = new Set(WL.watchlist.flatMap(s => s.alerts.map(a => a.id)));
+
+  let added = 0;
+  let skipped = 0;
+  const addedNames = [];
+
+  p.alerts.forEach(a => {
+    const newId = (symName + '_' + a.id_suffix).slice(0, 40);
+    if (existingIds.has(newId)) { skipped++; return; }
+
+    const obj = {
+      id:               newId,
+      type:             a.type,
+      emoji:            a.emoji || '',
+      cooldown_minutes: a.cooldown_minutes || 60,
+      note:             a.note || '',
+      enabled:          true,
+      ...a.data
+    };
+    if (a.action) obj.action = a.action;
+
+    sym.alerts.push(obj);
+    existingIds.add(newId);
+    added++;
+    addedNames.push(newId);
+  });
+
+  if (added === 0) {
+    showToast(`ทุก alert ใน preset นี้มีอยู่แล้ว (${skipped} ซ้ำ)`, 'warn');
+    return;
+  }
+
+  markUnsaved();
+  renderWL();
+  updatePills();
+  closePresetModal();
+
+  // Open the symbol accordion
+  setTimeout(() => {
+    const body = document.getElementById('sb-' + symIdx);
+    const tog  = document.getElementById('st-' + symIdx);
+    if (body && !body.classList.contains('open')) {
+      body.classList.add('open');
+      if (tog) tog.classList.add('open');
+    }
+  }, 200);
+
+  const skipMsg = skipped > 0 ? ` (ข้าม ${skipped} ซ้ำ)` : '';
+  showToast(`เพิ่ม ${added} alerts จาก "${p.name}" ใน ${symName}${skipMsg} — กด Save → GitHub`, 'ok');
+}
+
+// Close preset modal when clicking overlay
+document.getElementById('preset-modal').addEventListener('click', function(e) {
+  if (e.target === this) closePresetModal();
+});
 </script>
 
 <input type="file" id="local-wl-input" accept=".json" style="display:none" onchange="handleLocalWlFile(this)">
