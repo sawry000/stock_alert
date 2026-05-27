@@ -727,9 +727,10 @@ function show(id) {
   });
   if (id === 'watchlist') renderWL();
   if (id === 'settings') syncSettings();
-  // Auto-load on panel open if auto-sync enabled
-  if (id === 'log'   && _autoSync['log']   && GH.token) loadFileFromGH('alert_log.json', 'log');
-  if (id === 'state' && _autoSync['state'] && GH.token) loadFileFromGH('state.json', 'state');
+  // Auto-load ทันทีเมื่อเปิดหน้า ถ้ามี GitHub token
+  if (id === 'log'   && GH.token) loadFileFromGH('alert_log.json', 'log');
+  if (id === 'state' && GH.token) loadFileFromGH('state.json', 'state');
+  // Auto-sync: reload watchlist ถ้าเปิด auto-sync ไว้
   if (id === 'watchlist' && _autoSync['wl'] && GH.token) loadWatchlist();
 }
 
