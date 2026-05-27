@@ -574,5 +574,23 @@
     "price": 16.899999618530273,
     "change_pct": -1.7441882643588713,
     "value": 9.36869637070574
+  },
+  {
+    "timestamp": "2026-05-27T13:17:36Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 16.899999618530273,
+    "change_pct": -1.7441882643588713,
+    "value": 9.36869637070574
+  },
+  {
+    "timestamp": "2026-05-27T13:17:56Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.050000190734863,
+    "change_pct": -6.162266518777425,
+    "value": -6.162266518777425
   }
 ]
