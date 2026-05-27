@@ -34,5 +34,23 @@
     "price": 214.86000061035156,
     "change_pct": 0.26253263471771104,
     "value": 3
+  },
+  {
+    "timestamp": "2026-05-27T01:57:26Z",
+    "symbol": "BTC-USD",
+    "alert_id": "BTC_NEWS_ALERT",
+    "type": "news_sentiment",
+    "price": 75804.0625,
+    "change_pct": 0.17488161498561683,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-27T01:57:32Z",
+    "symbol": "ETH-USD",
+    "alert_id": "ETH_NEWS_NEGATIVE",
+    "type": "news_sentiment",
+    "price": 2072.239990234375,
+    "change_pct": 0.2864958805583456,
+    "value": 2
   }
 ]
