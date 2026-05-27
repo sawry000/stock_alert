@@ -799,5 +799,23 @@
     "price": 6.824999809265137,
     "change_pct": 5.858263292620732,
     "value": 5.858263292620732
+  },
+  {
+    "timestamp": "2026-05-27T14:17:39Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.3399999141693115,
+    "change_pct": 9.345790381743523,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-27T14:18:08Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_CP_BULL",
+    "type": "candle_pattern",
+    "price": 17.415000915527344,
+    "change_pct": -2.436969660911247,
+    "value": 1
   }
 ]
