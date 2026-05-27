@@ -952,5 +952,23 @@
     "price": 4.335000038146973,
     "change_pct": 5.096005579591085,
     "value": 5.096005579591085
+  },
+  {
+    "timestamp": "2026-05-27T17:47:45Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.5,
+    "change_pct": 7.142857142857138,
+    "value": 7.142857142857138
+  },
+  {
+    "timestamp": "2026-05-27T17:47:48Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.5,
+    "change_pct": 7.142857142857138,
+    "value": 3
   }
 ]
