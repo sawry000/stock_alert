@@ -18,7 +18,7 @@
           "type": "rsi",
           "emoji": "",
           "cooldown_minutes": 480,
-          "note": "RSI Extreme Oversold 4H â à¹à¸­à¸à¸²à¸ªà¸à¸·à¹à¸­à¸«à¸²à¸¢à¸²à¸",
+          "note": "RSI Extreme Oversold 4H Ã¢ÂÂ Ã Â¹ÂÃ Â¸Â­Ã Â¸ÂÃ Â¸Â²Ã Â¸ÂªÃ Â¸ÂÃ Â¸Â·Ã Â¹ÂÃ Â¸Â­Ã Â¸Â«Ã Â¸Â²Ã Â¸Â¢Ã Â¸Â²Ã Â¸Â",
           "action": "STRONG BUY",
           "condition": "extreme_oversold",
           "interval": "4h",
@@ -31,7 +31,7 @@
           "type": "rsi",
           "emoji": "",
           "cooldown_minutes": 480,
-          "note": "RSI Overbought 4H â à¸à¸´à¸à¸²à¸£à¸à¸² Take Profit",
+          "note": "RSI Overbought 4H Ã¢ÂÂ Ã Â¸ÂÃ Â¸Â´Ã Â¸ÂÃ Â¸Â²Ã Â¸Â£Ã Â¸ÂÃ Â¸Â² Take Profit",
           "condition": "overbought",
           "interval": "4h",
           "period": 14,
@@ -43,7 +43,7 @@
           "type": "volume_spike",
           "emoji": "",
           "cooldown_minutes": 120,
-          "note": "Volume Spike 3x â à¸­à¸²à¸à¹à¸à¸´à¸ big move",
+          "note": "Volume Spike 3x Ã¢ÂÂ Ã Â¸Â­Ã Â¸Â²Ã Â¸ÂÃ Â¹ÂÃ Â¸ÂÃ Â¸Â´Ã Â¸Â big move",
           "multiplier": 3
         },
         {
@@ -51,7 +51,7 @@
           "type": "news_sentiment",
           "emoji": "",
           "cooldown_minutes": 180,
-          "note": "à¸à¹à¸²à¸§à¸à¸§à¸à¹à¸£à¸ Bitcoin â à¹à¸à¸¥à¹à¸à¸¢à¸­à¸±à¸à¹à¸à¸¡à¸±à¸à¸´",
+          "note": "Ã Â¸ÂÃ Â¹ÂÃ Â¸Â²Ã Â¸Â§Ã Â¸ÂÃ Â¸Â§Ã Â¸ÂÃ Â¹ÂÃ Â¸Â£Ã Â¸Â Bitcoin Ã¢ÂÂ Ã Â¹ÂÃ Â¸ÂÃ Â¸Â¥Ã Â¹ÂÃ Â¸ÂÃ Â¸Â¢Ã Â¸Â­Ã Â¸Â±Ã Â¸ÂÃ Â¹ÂÃ Â¸ÂÃ Â¸Â¡Ã Â¸Â±Ã Â¸ÂÃ Â¸Â´",
           "condition": "strong_positive",
           "hours_back": 12,
           "max_news": 5,
@@ -63,7 +63,7 @@
           "type": "mtf_alignment",
           "emoji": "",
           "cooldown_minutes": 480,
-          "note": "MTF Alignment Bullish â à¸¢à¸·à¸à¸¢à¸±à¸à¸à¹à¸­à¸à¸à¸·à¹à¸­",
+          "note": "MTF Alignment Bullish Ã¢ÂÂ Ã Â¸Â¢Ã Â¸Â·Ã Â¸ÂÃ Â¸Â¢Ã Â¸Â±Ã Â¸ÂÃ Â¸ÂÃ Â¹ÂÃ Â¸Â­Ã Â¸ÂÃ Â¸ÂÃ Â¸Â·Ã Â¹ÂÃ Â¸Â­",
           "timeframes": [
             "1h",
             "4h",
@@ -108,6 +108,178 @@
           "action": "BUY",
           "target_price": 16.9,
           "direction": "below_or_equal"
+        }
+      ]
+    },
+    {
+      "symbol": "RDW",
+      "name": "RDW",
+      "market": "US",
+      "timeframe": "1D",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "RDW_RSI_OS_1D",
+          "type": "rsi",
+          "emoji": "💚",
+          "cooldown_minutes": 360,
+          "note": "RSI Oversold 1D entry",
+          "enabled": true,
+          "condition": "oversold",
+          "interval": "1d",
+          "period": 14,
+          "oversold_level": 30,
+          "overbought_level": 70,
+          "action": "BUY"
+        },
+        {
+          "id": "RDW_RSI_OS_4H",
+          "type": "rsi",
+          "emoji": "💛",
+          "cooldown_minutes": 120,
+          "note": "RSI Oversold 4H confirm",
+          "enabled": true,
+          "condition": "oversold",
+          "interval": "4h",
+          "period": 14,
+          "oversold_level": 32,
+          "overbought_level": 70,
+          "action": "BUY"
+        },
+        {
+          "id": "RDW_VOL_SPIKE",
+          "type": "volume_spike",
+          "emoji": "🔊",
+          "cooldown_minutes": 60,
+          "note": "Volume spike 2.5x",
+          "enabled": true,
+          "multiplier": 2.5,
+          "action": "BUY"
+        },
+        {
+          "id": "RDW_MA_GOLDEN",
+          "type": "ma_crossover",
+          "emoji": "✨",
+          "cooldown_minutes": 1440,
+          "note": "EMA9/21 Golden Cross 1D",
+          "enabled": true,
+          "condition": "golden_cross",
+          "ma_type": "EMA",
+          "interval": "1d",
+          "fast_period": 9,
+          "slow_period": 21,
+          "action": "BUY"
+        },
+        {
+          "id": "RDW_CP_BULL",
+          "type": "candle_pattern",
+          "emoji": "🕯️",
+          "cooldown_minutes": 480,
+          "note": "Bullish reversal candle",
+          "enabled": true,
+          "patterns": [
+            "hammer",
+            "bullish_engulfing",
+            "morning_star"
+          ],
+          "interval": "1d",
+          "match_any": true,
+          "action": "BUY"
+        },
+        {
+          "id": "RDW_SCORE_70",
+          "type": "alert_score",
+          "emoji": "🎯",
+          "cooldown_minutes": 240,
+          "note": "Score ≥70 bullish confirm",
+          "enabled": true,
+          "direction": "bullish",
+          "min_score": 70,
+          "interval": "1d",
+          "action": "BUY"
+        },
+        {
+          "id": "RDW_POS_SIZE",
+          "type": "position_size",
+          "emoji": "💰",
+          "cooldown_minutes": 1440,
+          "note": "Position size 2% risk",
+          "enabled": true,
+          "condition": "triggered_always",
+          "account_size": 10000,
+          "risk_pct": 2,
+          "method": "fixed_risk",
+          "win_rate": 0.6
+        },
+        {
+          "id": "RDW_SL_BREAK",
+          "type": "support_resistance",
+          "emoji": "🚨",
+          "cooldown_minutes": 30,
+          "note": "Stop loss level break",
+          "action": "SELL",
+          "level": 15,
+          "direction": "break_below"
+        },
+        {
+          "id": "RDW_PCT_DROP",
+          "type": "percent_change",
+          "emoji": "📉",
+          "cooldown_minutes": 60,
+          "note": "Drop ≥5% single day SL",
+          "enabled": true,
+          "threshold_pct": 5,
+          "direction": "down",
+          "action": "SELL"
+        },
+        {
+          "id": "RDW_VOL_ALARM",
+          "type": "volume_spike",
+          "emoji": "🚨",
+          "cooldown_minutes": 30,
+          "note": "Unusual volume alarm 3x",
+          "enabled": true,
+          "multiplier": 3
+        },
+        {
+          "id": "RDW_MA_DEATH",
+          "type": "ma_crossover",
+          "emoji": "💀",
+          "cooldown_minutes": 1440,
+          "note": "Death Cross warning 1D",
+          "enabled": true,
+          "condition": "death_cross",
+          "ma_type": "EMA",
+          "interval": "1d",
+          "fast_period": 9,
+          "slow_period": 21,
+          "action": "SELL"
+        },
+        {
+          "id": "RDW_NEWS_BAD",
+          "type": "news_sentiment",
+          "emoji": "🔴",
+          "cooldown_minutes": 60,
+          "note": "Negative news emergency",
+          "enabled": true,
+          "condition": "strong_negative",
+          "hours_back": 6,
+          "max_news": 3,
+          "min_news": 1,
+          "translate": true,
+          "action": "SELL"
+        },
+        {
+          "id": "RDW_SCORE_BEAR",
+          "type": "alert_score",
+          "emoji": "🐻",
+          "cooldown_minutes": 180,
+          "note": "Bearish score ≥72 danger",
+          "enabled": true,
+          "direction": "bearish",
+          "min_score": 72,
+          "interval": "1d",
+          "action": "SELL"
         }
       ]
     }
