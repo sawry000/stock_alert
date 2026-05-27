@@ -754,5 +754,32 @@
     "price": 48.25,
     "change_pct": -3.2678428227746643,
     "value": 2
+  },
+  {
+    "timestamp": "2026-05-27T14:02:48Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_UP_5",
+    "type": "percent_change",
+    "price": 25.530000686645508,
+    "change_pct": 5.061731220763403,
+    "value": 5.061731220763403
+  },
+  {
+    "timestamp": "2026-05-27T14:02:55Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 11.8149995803833,
+    "change_pct": 5.022218492296007,
+    "value": 5.022218492296007
+  },
+  {
+    "timestamp": "2026-05-27T14:03:09Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_CP_BULL",
+    "type": "candle_pattern",
+    "price": 17.309999465942383,
+    "change_pct": -3.187922449986668,
+    "value": 1
   }
 ]
