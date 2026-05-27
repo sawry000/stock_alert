@@ -642,19 +642,21 @@ let hasUnsaved = false;
 
 // helper: inline Material Symbol span
 const _mi = (n) => `<span class="msi" style="font-size:13px;vertical-align:middle">${n}</span>`;
+// ใช้ emoji แทน msi ใน tbadge เพื่อป้องกัน Material Symbols render เป็น ð□□□
+const _ei = (e) => `<span style="font-family:'Noto Color Emoji',sans-serif;font-size:11px">${e}</span>`;
 const TI = {
-  price_target:       {icon:_mi('attach_money'),   color:'var(--c-price)', desc:'แจ้งเตือนเมื่อราคาถึงเป้า'},
-  percent_change:     {icon:_mi('bar_chart'),       color:'var(--c-pct)',   desc:'แจ้งเตือนเมื่อราคาขึ้น/ลง X%'},
-  volume_spike:       {icon:_mi('graphic_eq'),      color:'var(--c-vol)',   desc:'Volume พุ่งผิดปกติ X เท่า'},
-  support_resistance: {icon:_mi('warning'),         color:'var(--c-sr)',    desc:'ทะลุแนวรับ/ต้าน'},
-  rsi:                {icon:_mi('show_chart'),       color:'var(--c-rsi)',   desc:'RSI Oversold / Overbought'},
-  ma_crossover:       {icon:_mi('auto_awesome'),    color:'var(--c-ma)',    desc:'EMA/SMA Golden Cross / Death Cross'},
-  candle_pattern:     {icon:_mi('candlestick_chart'),color:'var(--c-candle)',desc:'14 Candle Patterns'},
-  news_sentiment:     {icon:_mi('newspaper'),       color:'var(--c-news)',  desc:'ข่าว + แปลไทย + Sentiment'},
-  position_size:      {icon:_mi('work'),            color:'var(--c-pos)',   desc:'คำนวณ Position Size'},
-  mtf_alignment:      {icon:_mi('cell_tower'),      color:'var(--c-mtf)',   desc:'Multi-Timeframe Alignment'},
-  alert_score:        {icon:_mi('gps_fixed'),       color:'var(--c-score)', desc:'Confidence Score 0-100'},
-  backtest_check:     {icon:_mi('science'),         color:'var(--c-bt)',    desc:'Backtest ย้อนหลัง'},
+  price_target:       {icon:_ei('🎯'), color:'var(--c-price)', desc:'แจ้งเตือนเมื่อราคาถึงเป้า'},
+  percent_change:     {icon:_ei('📊'), color:'var(--c-pct)',   desc:'แจ้งเตือนเมื่อราคาขึ้น/ลง X%'},
+  volume_spike:       {icon:_ei('🔊'), color:'var(--c-vol)',   desc:'Volume พุ่งผิดปกติ X เท่า'},
+  support_resistance: {icon:_ei('⚡'), color:'var(--c-sr)',    desc:'ทะลุแนวรับ/ต้าน'},
+  rsi:                {icon:_ei('📈'), color:'var(--c-rsi)',   desc:'RSI Oversold / Overbought'},
+  ma_crossover:       {icon:_ei('✨'), color:'var(--c-ma)',    desc:'EMA/SMA Golden Cross / Death Cross'},
+  candle_pattern:     {icon:_ei('🕯️'), color:'var(--c-candle)',desc:'14 Candle Patterns'},
+  news_sentiment:     {icon:_ei('📡'), color:'var(--c-news)',  desc:'ข่าว + แปลไทย + Sentiment'},
+  position_size:      {icon:_ei('💰'), color:'var(--c-pos)',   desc:'คำนวณ Position Size'},
+  mtf_alignment:      {icon:_ei('🔭'), color:'var(--c-mtf)',   desc:'Multi-Timeframe Alignment'},
+  alert_score:        {icon:_ei('🎖️'), color:'var(--c-score)', desc:'Confidence Score 0-100'},
+  backtest_check:     {icon:_ei('🧪'), color:'var(--c-bt)',    desc:'Backtest ย้อนหลัง'},
 };
 
 const PATS = ['doji','hammer','inverted_hammer','shooting_star','hanging_man',
@@ -775,99 +777,147 @@ setInterval(() => {
 }, 1000);
 
 // ══════════════════════════════════════════════════════════
-//  AUTO-CALCULATE SL (Support/Resistance)
-//  ใช้ yfinance data ผ่าน Anthropic API เพื่อหา S/R จริง
+//  AUTO-CALCULATE SL via Gemini API (Direct)
 // ══════════════════════════════════════════════════════════
+const GEMINI_API_KEY = 'AIzaSyBEfY4OV-sU55ft2W9JUE-fXxkYQVN3CAU';
+const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + GEMINI_API_KEY;
 
 let _slCalcSymbol = '';
 let _slCalcDir    = 'break_below';
+let _slAutoCalcTimer = null;
 
-async function calcAutoSL() {
+async function calcAutoSL(autoTriggered = false) {
   const sym = _slCalcSymbol;
-  const dir = _slCalcDir;
-  if (!sym) { showToast('กรุณาระบุ Symbol ก่อน', 'err'); return; }
+  const dirEl = document.getElementById('f-dir');
+  const dir = dirEl ? dirEl.value : _slCalcDir;
+  if (!sym) {
+    if (!autoTriggered) showToast('ไม่พบ Symbol', 'err');
+    return;
+  }
 
   const btn     = document.getElementById('sl-auto-btn');
   const spinner = document.getElementById('sl-auto-spin');
   const box     = document.getElementById('sl-auto-result');
-  btn.disabled = true;
-  spinner.style.display = 'inline-block';
-  box.innerHTML = '<div style="color:var(--text3);font-size:12px">⏳ กำลังคำนวณ...</div>';
+  if (!box) return;
+
+  if (btn) btn.disabled = true;
+  if (spinner) spinner.style.display = 'inline-block';
+  box.style.display = 'block';
+  box.innerHTML = `<div style="color:var(--text3);font-size:12px;display:flex;align-items:center;gap:7px">
+    <span class="spinner" style="width:11px;height:11px;border-width:1.5px"></span>
+    AI กำลังวิเคราะห์แนวรับ/ต้าน <strong style="color:var(--pink)">${sym}</strong>...
+  </div>`;
+
+  const dirTH = dir === 'break_below' ? 'แนวรับ (Support) สำหรับ Stop Loss' : 'แนวต้าน (Resistance) สำหรับ Breakout';
+  const prompt = `You are a professional technical analysis assistant specializing in stock/crypto support and resistance levels.
+
+Symbol: ${sym}
+Direction: ${dir === 'break_below' ? 'break_below — need SUPPORT levels (for stop loss)' : 'break_above — need RESISTANCE levels (for breakout trigger)'}
+
+Task: Analyze and provide realistic technical ${dir === 'break_below' ? 'support' : 'resistance'} levels for ${sym} based on common technical analysis methods (swing highs/lows, round numbers, pivot points, moving average areas, Fibonacci levels).
+
+Return ONLY a valid JSON object, no markdown, no extra text:
+{
+  "symbol": "${sym}",
+  "direction": "${dir}",
+  "levels": [
+    {"price": 0.0, "type": "${dir === 'break_below' ? 'support' : 'resistance'}", "strength": "strong", "method": "swing_low", "desc": "คำอธิบายภาษาไทย"},
+    {"price": 0.0, "type": "${dir === 'break_below' ? 'support' : 'resistance'}", "strength": "medium", "method": "round_number", "desc": "คำอธิบายภาษาไทย"},
+    {"price": 0.0, "type": "${dir === 'break_below' ? 'support' : 'resistance'}", "strength": "weak", "method": "pivot", "desc": "คำอธิบายภาษาไทย"}
+  ],
+  "recommended": 0.0,
+  "rationale": "คำอธิบายการเลือกระดับแนะนำ ภาษาไทย 1-2 ประโยค"
+}
+
+Important: Use realistic price levels typical for ${sym}. For US stocks provide dollar prices, for crypto provide appropriate decimal prices. Strength: strong/medium/weak. Method: swing_low/swing_high/round_number/pivot/fibonacci/ema_zone.`;
 
   try {
-    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    const res = await fetch(GEMINI_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        system: `You are a technical analysis engine. Given a stock symbol and direction, analyze support/resistance levels using typical swing high/low methodology. Return ONLY a JSON object with no extra text, no markdown fences. Format:
-{
-  "symbol": "...",
-  "direction": "break_below or break_above",
-  "levels": [
-    {"price": 123.45, "type": "support", "strength": "strong|medium|weak", "method": "swing_low|pivot|round_number|recent_low"},
-    ...
-  ],
-  "recommended": 123.45,
-  "recommended_type": "support or resistance",
-  "rationale": "brief Thai explanation"
-}
-Provide 3-5 realistic levels based on common technical analysis principles for the symbol. For break_below direction, focus on support levels below current typical price. For break_above, focus on resistance levels above. Use round numbers and realistic estimates.`,
-        messages: [{
-          role: 'user',
-          content: `Symbol: ${sym}\nDirection: ${dir}\nAnalyze technical support/resistance levels for this stock/asset to set as a stop-loss or breakout trigger level. Provide realistic price levels based on typical price action analysis.`
-        }]
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: { maxOutputTokens: 1024, temperature: 0.3, thinkingConfig: { thinkingBudget: 0 } }
       })
     });
 
-    const data = await resp.json();
-    const raw  = (data.content || []).map(b => b.text || '').join('').trim();
-    let parsed;
-    try {
-      const clean = raw.replace(/```json|```/g, '').trim();
-      parsed = JSON.parse(clean);
-    } catch(e) {
-      throw new Error('ไม่สามารถ parse ผลลัพธ์ได้');
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error((errData.error && errData.error.message) ? errData.error.message : `HTTP ${res.status}`);
     }
 
-    // Render results
-    const levels = parsed.levels || [];
-    const rec    = parsed.recommended;
-    const recType = parsed.recommended_type || 'support';
+    const data = await res.json();
+    const raw = (
+      data.candidates && data.candidates[0] &&
+      data.candidates[0].content && data.candidates[0].content.parts &&
+      data.candidates[0].content.parts[0]
+    ) ? data.candidates[0].content.parts[0].text : '';
+
+    if (!raw) throw new Error('Gemini ไม่ส่งข้อมูลกลับมา');
+
+    let parsed;
+    try {
+      const clean = raw.replace(/```json\s*/gi,'').replace(/```\s*/g,'').trim();
+      parsed = JSON.parse(clean);
+    } catch(e) {
+      // Try to extract JSON from text
+      const m = raw.match(/\{[\s\S]*\}/);
+      if (m) parsed = JSON.parse(m[0]);
+      else throw new Error('ไม่สามารถ parse JSON จาก Gemini');
+    }
+
+    const levels  = parsed.levels || [];
+    const rec     = parsed.recommended;
     const rationale = parsed.rationale || '';
 
-    let html = `<div class="sl-auto-title"><span class="msi" style="font-size:14px">analytics</span> ผลการวิเคราะห์ S/R สำหรับ <strong>${sym}</strong></div>`;
-    html += `<div style="font-size:11px;color:var(--text2);margin-bottom:8px;line-height:1.5">${rationale}</div>`;
-    html += `<div style="font-size:11px;color:var(--text3);margin-bottom:6px">👇 คลิกราคาเพื่อเลือกใส่ Level:</div>`;
+    const strengthIcon = { strong: '★★★', medium: '★★', weak: '★' };
+    const methodTH = {
+      swing_low:'Swing Low', swing_high:'Swing High', round_number:'Round Number',
+      pivot:'Pivot Point', fibonacci:'Fibonacci', ema_zone:'EMA Zone'
+    };
+
+    let html = `<div class="sl-auto-title">
+      <span style="font-family:'Noto Color Emoji',sans-serif">🤖</span>
+      Gemini วิเคราะห์ ${dirTH} ของ <strong>${sym}</strong>
+    </div>`;
+    if (rationale) html += `<div style="font-size:11px;color:var(--text2);margin-bottom:8px;line-height:1.5;padding:6px 8px;background:rgba(255,255,255,0.03);border-radius:4px">${rationale}</div>`;
+    html += `<div style="font-size:11px;color:var(--text3);margin-bottom:6px">👇 คลิกราคาเพื่อใส่ใน Level field:</div>`;
     html += '<div class="sl-result-row">';
 
     levels.forEach(lv => {
-      const cls = lv.type === 'support' ? 'support' : 'resistance';
-      const icon = lv.type === 'support' ? '🟢' : '🔴';
-      const str  = lv.strength === 'strong' ? '★★★' : lv.strength === 'medium' ? '★★' : '★';
-      const isRec = Math.abs(lv.price - rec) < 0.001;
-      html += `<div class="sl-chip ${cls}" onclick="selectSLLevel(${lv.price})" title="${lv.method} | ${lv.strength}${isRec ? ' | ✅ Recommended' : ''}">
-        ${icon} $${parseFloat(lv.price).toFixed(4)} <span style="font-size:9px;opacity:0.7">${str}${isRec ? ' ✅' : ''}</span>
+      const isRec = rec && Math.abs(parseFloat(lv.price) - parseFloat(rec)) < 0.0001;
+      const cls   = lv.type === 'support' ? 'support' : 'resistance';
+      const icon  = lv.type === 'support' ? '🟢' : '🔴';
+      const str   = strengthIcon[lv.strength] || '★';
+      const mth   = methodTH[lv.method] || lv.method || '';
+      html += `<div class="sl-chip ${cls}" onclick="selectSLLevel(${parseFloat(lv.price)})"
+        title="${mth} | ${lv.strength}${isRec ? ' | ✅ แนะนำ' : ''}\n${lv.desc||''}">
+        <span style="font-family:'Noto Color Emoji',sans-serif">${icon}</span>
+        $${parseFloat(lv.price).toFixed(4)}
+        <span style="font-size:9px;opacity:0.7">${str}${isRec ? ' ✅' : ''}</span>
       </div>`;
     });
     html += '</div>';
+
     if (rec) {
-      html += `<div style="margin-top:8px;font-size:11px;color:var(--text2)">
-        ✅ <strong style="color:var(--cyan)">แนะนำ: $${parseFloat(rec).toFixed(4)}</strong>
-        (${recType === 'support' ? 'แนวรับ' : 'แนวต้าน'}) — คลิกเพื่อใช้
-        <button class="btn btn-xs btn-ghost" style="margin-left:6px" onclick="selectSLLevel(${rec})">ใช้ค่านี้</button>
+      html += `<div style="margin-top:8px;font-size:11px;color:var(--text2);display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <span style="font-family:'Noto Color Emoji',sans-serif">✅</span>
+        <strong>แนะนำ: <span style="color:var(--cyan)">$${parseFloat(rec).toFixed(4)}</span></strong>
+        <button class="btn btn-xs" style="background:rgba(0,229,255,0.15);color:var(--cyan);border:1px solid rgba(0,229,255,0.3)"
+          onclick="selectSLLevel(${parseFloat(rec)})">ใช้ค่านี้</button>
       </div>`;
     }
 
     box.innerHTML = html;
-    box.style.display = 'block';
   } catch(err) {
-    box.innerHTML = `<div style="color:var(--red);font-size:12px">❌ ${err.message}</div>`;
+    box.innerHTML = `<div style="color:var(--red);font-size:12px;display:flex;align-items:center;gap:6px">
+      <span style="font-family:'Noto Color Emoji',sans-serif">❌</span> ${err.message}
+      <button class="btn btn-xs btn-ghost" style="margin-left:6px" onclick="calcAutoSL()">ลองใหม่</button>
+    </div>`;
   }
 
-  btn.disabled  = false;
-  spinner.style.display = 'none';
+  if (btn) btn.disabled = false;
+  if (spinner) spinner.style.display = 'none';
 }
 
 function selectSLLevel(price) {
@@ -875,8 +925,13 @@ function selectSLLevel(price) {
   if (lvlInput) {
     lvlInput.value = price;
     showToast(`ตั้ง Level = $${parseFloat(price).toFixed(4)} แล้ว`, 'ok');
+    // Flash effect
+    lvlInput.style.borderColor = 'var(--green)';
+    lvlInput.style.boxShadow   = '0 0 0 2px rgba(0,255,157,0.2)';
+    setTimeout(() => { lvlInput.style.borderColor=''; lvlInput.style.boxShadow=''; }, 1500);
   }
 }
+
 
 
 
@@ -1186,17 +1241,17 @@ function renderWL() {
 }
 
 function alertRow(a,si,ai) {
-  const i = TI[a.type] || {icon:'<span class="msi" style="font-size:13px">notifications</span>'};
-  // aemoji: show user-set emoji if exists, else show type icon (msi)
+  const i = TI[a.type] || {icon:'<span style="font-family:\'Noto Color Emoji\',sans-serif;font-size:11px">🔔</span>', color:'var(--text2)'};
+  // aemoji: show user-set emoji if exists, else show type icon
   const emojiCell = a.emoji && a.emoji.trim() !== ''
-    ? `<span class="aemoji" style="font-family:var(--emoji)">${a.emoji}</span>`
-    : `<span class="aemoji">${i.icon}</span>`;
+    ? `<span class="aemoji" style="font-family:'Noto Color Emoji',sans-serif">${a.emoji}</span>`
+    : `<span class="aemoji" style="font-family:'Noto Color Emoji',sans-serif">${i.icon}</span>`;
   return `<div class="arow">
     ${emojiCell}
     <div class="ainfo">
       <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
         <span class="aid">${a.id}</span>
-        <span class="tbadge t-${a.type}">${i.icon} ${a.type}</span>
+        <span class="tbadge t-${a.type}" style="font-family:var(--mono)">${i.icon} ${a.type}</span>
         <span style="font-size:10px;color:var(--text3);font-family:var(--mono)">cd:${a.cooldown_minutes||60}m</span>
       </div>
       <div class="adetail">${alertSummary(a)}</div>
@@ -1307,22 +1362,28 @@ function renderFields() {
     percent_change:()=>hr+row(fg('Threshold %',n('f-pct',5,0.1,null,0.1)),fg('Direction',s('f-dir',[['down','▼ ลง'],['up','▲ ขึ้น']]))),
     volume_spike:()=>hr+fg('Multiplier (x avg)',n('f-mult',2.5,1.1,null,0.1),'เช่น 2.5 = 250% ของ avg'),
     support_resistance:()=>{
-      const symIdx = editSymIdx;
-      const sym = (symIdx !== null && WL.watchlist[symIdx]) ? WL.watchlist[symIdx].symbol : '';
+      const sym = (editSymIdx !== null && WL.watchlist[editSymIdx]) ? WL.watchlist[editSymIdx].symbol : '';
       _slCalcSymbol = sym;
+      // Auto-trigger after render (delay for DOM ready)
+      if (sym) {
+        clearTimeout(_slAutoCalcTimer);
+        _slAutoCalcTimer = setTimeout(() => calcAutoSL(true), 400);
+      }
       return hr+row(
-        fg('Level',n('f-lvl',1,0,null,0.001),'ราคาแนวรับ/ต้านสำหรับ trigger — หรือคลิก "คำนวณอัตโนมัติ" ด้านล่าง'),
-        fg('Direction',s('f-dir',[['break_below','ทะลุลง (Stop Loss)'],['break_above','ทะลุขึ้น (Breakout)']]))
+        fg('Level',n('f-lvl',1,0,null,0.001),'ราคาแนวรับ/ต้าน — Gemini AI คำนวณให้อัตโนมัติด้านล่าง'),
+        fg('Direction',`<select id="f-dir" onchange="clearTimeout(_slAutoCalcTimer);_slAutoCalcTimer=setTimeout(()=>calcAutoSL(true),400)"><option value="break_below">ทะลุลง (Stop Loss)</option><option value="break_above">ทะลุขึ้น (Breakout)</option></select>`)
       )+`
-      <div style="margin-top:2px">
-        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-          <button type="button" class="btn btn-ghost btn-sm" onclick="_slCalcDir=document.getElementById('f-dir').value;_slCalcSymbol=document.getElementById('f-lvl')?.closest?.('.modal')?.dataset?.sym||'${sym}';calcAutoSL()" id="sl-auto-btn"
-            style="border-color:rgba(255,64,129,0.4);color:var(--pink)" title="คำนวณแนวรับ/ต้านจากการวิเคราะห์ Technical">
-            <span class="spinner" style="display:none;width:10px;height:10px;border-width:1.5px" id="sl-auto-spin"></span>
-            <span class="msi" style="font-size:14px;color:var(--pink)">auto_fix_high</span>
-            คำนวณ SL อัตโนมัติ
+      <div style="margin-top:8px">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+          <span style="font-size:11px;color:var(--text3);font-family:var(--mono)">
+            <span style="font-family:'Noto Color Emoji',sans-serif">🤖</span>
+            Gemini AI วิเคราะห์แนวรับ/ต้านสำหรับ <strong style="color:var(--pink)">${sym||'Symbol'}</strong>
+          </span>
+          <button type="button" class="btn btn-xs btn-ghost" onclick="calcAutoSL()" id="sl-auto-btn"
+            style="border-color:rgba(255,64,129,0.35);color:var(--pink)">
+            <span class="spinner" style="display:none;width:9px;height:9px;border-width:1.5px" id="sl-auto-spin"></span>
+            คำนวณใหม่
           </button>
-          <span style="font-size:11px;color:var(--text3)">AI วิเคราะห์แนวรับ/ต้านจริงสำหรับ ${sym||'Symbol'}</span>
         </div>
         <div class="sl-auto-box" id="sl-auto-result" style="display:none"></div>
       </div>`
