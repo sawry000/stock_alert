@@ -252,6 +252,25 @@ input[type=password]{letter-spacing:2px}
 .tpl-manage-title{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
   color:var(--text3);font-family:var(--mono);margin-bottom:8px;display:flex;align-items:center;gap:6px}
 
+/* AUTO-SYNC INDICATOR */
+.sync-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:var(--mono);
+  padding:3px 9px;border-radius:12px;border:1px solid rgba(0,229,255,0.2);color:var(--cyan);
+  background:rgba(0,229,255,0.07);cursor:pointer;transition:all 0.15s;user-select:none}
+.sync-badge:hover{background:rgba(0,229,255,0.14);border-color:rgba(0,229,255,0.4)}
+.sync-badge.active{background:rgba(0,255,157,0.08);border-color:rgba(0,255,157,0.3);color:var(--green)}
+.sync-badge.active .dot{background:var(--green);box-shadow:0 0 6px var(--green);animation:blink 2s infinite}
+.sync-badge .dot{width:5px;height:5px;border-radius:50%;background:var(--text3);flex-shrink:0}
+.sync-countdown{font-size:10px;opacity:0.75}
+/* AUTO-SL PANEL */
+.sl-auto-box{margin-top:10px;padding:11px 13px;background:rgba(255,64,129,0.06);border:1px solid rgba(255,64,129,0.2);
+  border-radius:6px;animation:fadeUp 0.2s ease}
+.sl-auto-title{font-size:11px;font-weight:700;color:var(--pink);letter-spacing:0.8px;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.sl-result-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:7px}
+.sl-chip{padding:3px 10px;border-radius:4px;font-size:12px;font-family:var(--mono);font-weight:600;
+  cursor:pointer;border:1px solid transparent;transition:all 0.13s}
+.sl-chip.support{background:rgba(0,255,157,0.1);color:var(--green);border-color:rgba(0,255,157,0.25)}
+.sl-chip.resistance{background:rgba(255,23,68,0.1);color:var(--red);border-color:rgba(255,23,68,0.25)}
+.sl-chip:hover{transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,0.3)}
 /* PRESET SYSTEM */
 .preset-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);backdrop-filter:blur(8px);z-index:600;align-items:center;justify-content:center}
 .preset-overlay.open{display:flex}
@@ -403,6 +422,9 @@ input[type=password]{letter-spacing:2px}
         <div><div class="ptitle" style="color:var(--green)">WATCHLIST MANAGER</div>
         <div class="psub" id="wl-last-sync">ซิงค์กับ GitHub โดยตรง</div></div>
         <div class="bgrp">
+          <div class="sync-badge" id="wl-auto-sync-badge" onclick="toggleAutoSync('wl')" title="Auto-sync ทุก 3 นาที">
+            <span class="dot" id="wl-sync-dot"></span> Auto-sync <span class="sync-countdown" id="wl-sync-cd"></span>
+          </div>
           <button class="btn btn-ghost btn-sm" onclick="loadWatchlist()" id="btn-load-wl" title="โหลดจาก GitHub repo โดยตรง">
             <span class="spinner" style="display:none" id="load-spinner"></span> <span class="msi">sync</span> Load จาก GitHub
           </button>
@@ -450,6 +472,9 @@ input[type=password]{letter-spacing:2px}
       <div class="phd">
         <div><div class="ptitle" style="color:var(--purple)">ALERT LOG</div><div class="psub">โหลดจาก alert_log.json ใน GitHub repo</div></div>
         <div class="bgrp">
+          <div class="sync-badge" id="log-auto-sync-badge" onclick="toggleAutoSync('log')" title="Auto-sync ทุก 3 นาที">
+            <span class="dot" id="log-sync-dot"></span> Auto-sync <span class="sync-countdown" id="log-sync-cd"></span>
+          </div>
           <button class="btn btn-ghost btn-sm" onclick="loadFileFromGH('alert_log.json','log')" id="btn-load-log">
             <span class="spinner" style="display:none" id="log-spinner"></span> <span class="msi">sync</span> Load จาก GitHub
           </button>
@@ -471,6 +496,9 @@ input[type=password]{letter-spacing:2px}
       <div class="phd">
         <div><div class="ptitle" style="color:var(--pink)">STATE / COOLDOWN</div><div class="psub">โหลดจาก state.json ใน GitHub repo</div></div>
         <div class="bgrp">
+          <div class="sync-badge" id="state-auto-sync-badge" onclick="toggleAutoSync('state')" title="Auto-sync ทุก 3 นาที">
+            <span class="dot" id="state-sync-dot"></span> Auto-sync <span class="sync-countdown" id="state-sync-cd"></span>
+          </div>
           <button class="btn btn-ghost btn-sm" onclick="loadFileFromGH('state.json','state')" id="btn-load-state">
             <span class="spinner" style="display:none" id="state-spinner"></span> <span class="msi">sync</span> Load จาก GitHub
           </button>
@@ -691,7 +719,166 @@ function show(id) {
   });
   if (id === 'watchlist') renderWL();
   if (id === 'settings') syncSettings();
+  // Auto-load on panel open if auto-sync enabled
+  if (id === 'log'   && _autoSync['log']   && GH.token) loadFileFromGH('alert_log.json', 'log');
+  if (id === 'state' && _autoSync['state'] && GH.token) loadFileFromGH('state.json', 'state');
+  if (id === 'watchlist' && _autoSync['wl'] && GH.token) loadWatchlist();
 }
+
+// ══════════════════════════════════════════════════════════
+//  AUTO-SYNC ENGINE
+// ══════════════════════════════════════════════════════════
+const AUTO_SYNC_INTERVAL = 180; // วินาที (3 นาที)
+const _autoSync = { wl: false, log: false, state: false };
+const _syncTimers = { wl: null, log: null, state: null };
+const _syncCountdowns = { wl: AUTO_SYNC_INTERVAL, log: AUTO_SYNC_INTERVAL, state: AUTO_SYNC_INTERVAL };
+
+function toggleAutoSync(key) {
+  if (!GH.token) { showToast('เชื่อมต่อ GitHub ก่อน', 'err'); show('connect'); return; }
+  _autoSync[key] = !_autoSync[key];
+  const badge = document.getElementById(key + '-auto-sync-badge');
+  const dot   = document.getElementById(key + '-sync-dot');
+  const cd    = document.getElementById(key + '-sync-cd');
+  if (_autoSync[key]) {
+    badge.classList.add('active');
+    _syncCountdowns[key] = AUTO_SYNC_INTERVAL;
+    _triggerAutoSync(key);
+    showToast(`Auto-sync ${key} เปิดแล้ว (ทุก ${AUTO_SYNC_INTERVAL/60} นาที)`, 'ok');
+  } else {
+    badge.classList.remove('active');
+    if (cd) cd.textContent = '';
+    showToast(`Auto-sync ${key} ปิดแล้ว`, 'warn');
+  }
+}
+
+function _triggerAutoSync(key) {
+  if (!_autoSync[key]) return;
+  if (key === 'wl') loadWatchlist();
+  else if (key === 'log') loadFileFromGH('alert_log.json', 'log');
+  else if (key === 'state') loadFileFromGH('state.json', 'state');
+  _syncCountdowns[key] = AUTO_SYNC_INTERVAL;
+}
+
+// Master countdown tick — runs every second
+setInterval(() => {
+  ['wl','log','state'].forEach(key => {
+    if (!_autoSync[key]) return;
+    _syncCountdowns[key]--;
+    const cd = document.getElementById(key + '-sync-cd');
+    if (cd) {
+      const m = Math.floor(_syncCountdowns[key] / 60);
+      const s = _syncCountdowns[key] % 60;
+      cd.textContent = `${m}:${s.toString().padStart(2,'0')}`;
+    }
+    if (_syncCountdowns[key] <= 0) _triggerAutoSync(key);
+  });
+}, 1000);
+
+// ══════════════════════════════════════════════════════════
+//  AUTO-CALCULATE SL (Support/Resistance)
+//  ใช้ yfinance data ผ่าน Anthropic API เพื่อหา S/R จริง
+// ══════════════════════════════════════════════════════════
+
+let _slCalcSymbol = '';
+let _slCalcDir    = 'break_below';
+
+async function calcAutoSL() {
+  const sym = _slCalcSymbol;
+  const dir = _slCalcDir;
+  if (!sym) { showToast('กรุณาระบุ Symbol ก่อน', 'err'); return; }
+
+  const btn     = document.getElementById('sl-auto-btn');
+  const spinner = document.getElementById('sl-auto-spin');
+  const box     = document.getElementById('sl-auto-result');
+  btn.disabled = true;
+  spinner.style.display = 'inline-block';
+  box.innerHTML = '<div style="color:var(--text3);font-size:12px">⏳ กำลังคำนวณ...</div>';
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: `You are a technical analysis engine. Given a stock symbol and direction, analyze support/resistance levels using typical swing high/low methodology. Return ONLY a JSON object with no extra text, no markdown fences. Format:
+{
+  "symbol": "...",
+  "direction": "break_below or break_above",
+  "levels": [
+    {"price": 123.45, "type": "support", "strength": "strong|medium|weak", "method": "swing_low|pivot|round_number|recent_low"},
+    ...
+  ],
+  "recommended": 123.45,
+  "recommended_type": "support or resistance",
+  "rationale": "brief Thai explanation"
+}
+Provide 3-5 realistic levels based on common technical analysis principles for the symbol. For break_below direction, focus on support levels below current typical price. For break_above, focus on resistance levels above. Use round numbers and realistic estimates.`,
+        messages: [{
+          role: 'user',
+          content: `Symbol: ${sym}\nDirection: ${dir}\nAnalyze technical support/resistance levels for this stock/asset to set as a stop-loss or breakout trigger level. Provide realistic price levels based on typical price action analysis.`
+        }]
+      })
+    });
+
+    const data = await resp.json();
+    const raw  = (data.content || []).map(b => b.text || '').join('').trim();
+    let parsed;
+    try {
+      const clean = raw.replace(/```json|```/g, '').trim();
+      parsed = JSON.parse(clean);
+    } catch(e) {
+      throw new Error('ไม่สามารถ parse ผลลัพธ์ได้');
+    }
+
+    // Render results
+    const levels = parsed.levels || [];
+    const rec    = parsed.recommended;
+    const recType = parsed.recommended_type || 'support';
+    const rationale = parsed.rationale || '';
+
+    let html = `<div class="sl-auto-title"><span class="msi" style="font-size:14px">analytics</span> ผลการวิเคราะห์ S/R สำหรับ <strong>${sym}</strong></div>`;
+    html += `<div style="font-size:11px;color:var(--text2);margin-bottom:8px;line-height:1.5">${rationale}</div>`;
+    html += `<div style="font-size:11px;color:var(--text3);margin-bottom:6px">👇 คลิกราคาเพื่อเลือกใส่ Level:</div>`;
+    html += '<div class="sl-result-row">';
+
+    levels.forEach(lv => {
+      const cls = lv.type === 'support' ? 'support' : 'resistance';
+      const icon = lv.type === 'support' ? '🟢' : '🔴';
+      const str  = lv.strength === 'strong' ? '★★★' : lv.strength === 'medium' ? '★★' : '★';
+      const isRec = Math.abs(lv.price - rec) < 0.001;
+      html += `<div class="sl-chip ${cls}" onclick="selectSLLevel(${lv.price})" title="${lv.method} | ${lv.strength}${isRec ? ' | ✅ Recommended' : ''}">
+        ${icon} $${parseFloat(lv.price).toFixed(4)} <span style="font-size:9px;opacity:0.7">${str}${isRec ? ' ✅' : ''}</span>
+      </div>`;
+    });
+    html += '</div>';
+    if (rec) {
+      html += `<div style="margin-top:8px;font-size:11px;color:var(--text2)">
+        ✅ <strong style="color:var(--cyan)">แนะนำ: $${parseFloat(rec).toFixed(4)}</strong>
+        (${recType === 'support' ? 'แนวรับ' : 'แนวต้าน'}) — คลิกเพื่อใช้
+        <button class="btn btn-xs btn-ghost" style="margin-left:6px" onclick="selectSLLevel(${rec})">ใช้ค่านี้</button>
+      </div>`;
+    }
+
+    box.innerHTML = html;
+    box.style.display = 'block';
+  } catch(err) {
+    box.innerHTML = `<div style="color:var(--red);font-size:12px">❌ ${err.message}</div>`;
+  }
+
+  btn.disabled  = false;
+  spinner.style.display = 'none';
+}
+
+function selectSLLevel(price) {
+  const lvlInput = document.getElementById('f-lvl');
+  if (lvlInput) {
+    lvlInput.value = price;
+    showToast(`ตั้ง Level = $${parseFloat(price).toFixed(4)} แล้ว`, 'ok');
+  }
+}
+
+
 
 function updatePills() {
   const total = WL.watchlist.reduce((s,x) => s + x.alerts.length, 0);
@@ -1078,12 +1265,14 @@ function addSymbol() {
 // ══════════════════════════════════════════════════════════
 function openAdd(si) {
   editSymIdx=si; editAlIdx=null;
+  _slCalcSymbol = WL.watchlist[si]?.symbol || '';
   document.getElementById('modal-title').innerHTML = '<span class="msi" style="font-size:15px">add_circle</span> เพิ่ม Alert — '+WL.watchlist[si].symbol;
   resetForm();
   document.getElementById('alert-modal').classList.add('open');
 }
 function openEdit(si, ai) {
   editSymIdx=si; editAlIdx=ai;
+  _slCalcSymbol = WL.watchlist[si]?.symbol || '';
   const a = WL.watchlist[si].alerts[ai];
   document.getElementById('modal-title').innerHTML = '<span class="msi" style="font-size:15px">edit</span> แก้ไข — '+a.id;
   document.getElementById('a-id').value = a.id||'';
@@ -1117,7 +1306,27 @@ function renderFields() {
     price_target:()=>hr+row(fg('Target Price',n('f-tgt',0.5,0,null,0.001),'ราคาเป้า'),fg('Direction',s('f-dir',[['below_or_equal','≤ Below or Equal'],['above_or_equal','≥ Above or Equal']]))),
     percent_change:()=>hr+row(fg('Threshold %',n('f-pct',5,0.1,null,0.1)),fg('Direction',s('f-dir',[['down','▼ ลง'],['up','▲ ขึ้น']]))),
     volume_spike:()=>hr+fg('Multiplier (x avg)',n('f-mult',2.5,1.1,null,0.1),'เช่น 2.5 = 250% ของ avg'),
-    support_resistance:()=>hr+row(fg('Level',n('f-lvl',1,0,null,0.001)),fg('Direction',s('f-dir',[['break_below','ทะลุลง'],['break_above','ทะลุขึ้น']]))),
+    support_resistance:()=>{
+      const symIdx = editSymIdx;
+      const sym = (symIdx !== null && WL.watchlist[symIdx]) ? WL.watchlist[symIdx].symbol : '';
+      _slCalcSymbol = sym;
+      return hr+row(
+        fg('Level',n('f-lvl',1,0,null,0.001),'ราคาแนวรับ/ต้านสำหรับ trigger — หรือคลิก "คำนวณอัตโนมัติ" ด้านล่าง'),
+        fg('Direction',s('f-dir',[['break_below','ทะลุลง (Stop Loss)'],['break_above','ทะลุขึ้น (Breakout)']]))
+      )+`
+      <div style="margin-top:2px">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <button type="button" class="btn btn-ghost btn-sm" onclick="_slCalcDir=document.getElementById('f-dir').value;_slCalcSymbol=document.getElementById('f-lvl')?.closest?.('.modal')?.dataset?.sym||'${sym}';calcAutoSL()" id="sl-auto-btn"
+            style="border-color:rgba(255,64,129,0.4);color:var(--pink)" title="คำนวณแนวรับ/ต้านจากการวิเคราะห์ Technical">
+            <span class="spinner" style="display:none;width:10px;height:10px;border-width:1.5px" id="sl-auto-spin"></span>
+            <span class="msi" style="font-size:14px;color:var(--pink)">auto_fix_high</span>
+            คำนวณ SL อัตโนมัติ
+          </button>
+          <span style="font-size:11px;color:var(--text3)">AI วิเคราะห์แนวรับ/ต้านจริงสำหรับ ${sym||'Symbol'}</span>
+        </div>
+        <div class="sl-auto-box" id="sl-auto-result" style="display:none"></div>
+      </div>`
+    },
     rsi:()=>hr+row(fg('Condition',s('f-cond',[['oversold','Oversold (<30)'],['overbought','Overbought (>70)'],['extreme_oversold','Extreme Oversold (<20)'],['extreme_overbought','Extreme Overbought (>80)'],['turning_up','Turning Up'],['turning_down','Turning Down']])),fg('Timeframe',tf('f-iv')),fg('Period',n('f-per',14,3,50),'ปกติ=14'))+row(fg('Oversold Lvl',n('f-os',30,5,49)),fg('Overbought Lvl',n('f-ob',70,51,95))),
     ma_crossover:()=>hr+row(fg('Condition',s('f-cond',[['golden_cross','Golden Cross'],['death_cross','Death Cross'],['above_both','เหนือ MA ทั้งคู่'],['below_both','ต่ำกว่า MA ทั้งคู่'],['trend_bullish','Trend Bullish'],['trend_bearish','Trend Bearish']])),fg('MA Type',s('f-mat',[['EMA','EMA'],['SMA','SMA']])),fg('Timeframe',tf('f-iv')))+row(fg('Fast Period',n('f-fast',9,3,100)),fg('Slow Period',n('f-slow',21,5,200))),
     candle_pattern:()=>hr+'<div class="fg"><label>เลือก Pattern</label><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:5px">'+PATS.map(p=>`<label title="${PDESC[p]||p}" style="display:flex;align-items:center;gap:5px;padding:5px 8px;background:var(--bg);border:1px solid var(--border);border-radius:4px;cursor:pointer;font-size:11px"><input type="checkbox" id="cp-${p}" style="width:auto;margin:0"> ${p} <span style="color:var(--text3);font-size:10px">— ${PDESC[p]||''}</span></label>`).join('')+'</div></div>'+row(fg('Timeframe',tf('f-iv')),fg('Match',s('f-match',[['true','ANY — พบใดก็ trigger'],['false','ALL — ต้องพบทั้งหมด']]))),
