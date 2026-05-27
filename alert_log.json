@@ -1096,5 +1096,23 @@
     "price": 2.523900032043457,
     "change_pct": 17.939253833806397,
     "value": 3
+  },
+  {
+    "timestamp": "2026-05-27T18:37:44Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_CP_BULL",
+    "type": "candle_pattern",
+    "price": 187.63999938964844,
+    "change_pct": 5.303327565883855,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-27T18:37:44Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 187.63999938964844,
+    "change_pct": 5.303327565883855,
+    "value": 5.303327565883855
   }
 ]
