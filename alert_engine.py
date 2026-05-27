@@ -270,8 +270,12 @@ def check_volume_spike(alert, quote):
 
 def check_support_resistance(alert, quote):
     price     = quote["price"]
-    level     = alert["level"]
+    level     = alert.get("level", 0)
     direction = alert.get("direction", "break_below")
+    # ❌ ถ้า level == 0 แสดงว่ายังไม่ได้ตั้งค่า — ข้ามทันที
+    if level <= 0:
+        print(f"  [support_resistance] ข้าม: level={level} ยังไม่ได้ตั้งค่า (ตั้งใน dashboard ก่อน)")
+        return False, price
     if direction == "break_below" and price < level:
         return True, price
     if direction == "break_above" and price > level:
@@ -1151,21 +1155,103 @@ def build_message(stock, alert, quote, triggered_value):
 
     if atype == "price_target":
         target = alert["target_price"]
-        lines += [f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
-                  f"🎯 Target hit: <b>${target:.4f}</b>"]
+        dir_th = {"below_or_equal": "ราคาถึงโซน Buy ✅", "above_or_equal": "ราคาถึง Target ✅"}.get(alert.get("direction",""), "")
+        lines += [
+            f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
+            f"🎯 Target: <b>${target:.4f}</b>  {dir_th}",
+        ]
         if action: lines.append(f"⚡ Signal: <b>{action}</b>")
-    elif atype == "percent_change":
-        lines += [f"💰 Price: <b>${price:.4f}</b>",
-                  f"{arrow} Change: <b>{sign}{pct:.2f}%</b>"]
-    elif atype == "volume_spike":
-        lines += [f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
-                  f"🔊 Volume: <b>{triggered_value:.1f}x</b> above average"]
-    elif atype == "support_resistance":
-        level = alert["level"]
-        lines += [f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
-                  f"⚠️ Broke level: <b>${level:.4f}</b>"]
+        lines += [
+            "",
+            "📌 <b>สิ่งที่ควรทำ:</b>",
+            f"  1️⃣ เปิดชาร์ท TradingView ยืนยัน S/R + Volume",
+            f"  2️⃣ รอ candle ปิดยืนยัน ไม่เข้า market order ทันที",
+            f"  3️⃣ ตั้ง Stop Loss ต่ำกว่า low ของ trigger candle",
+        ]
 
-    if tf:   lines.append(f"⏱ Timeframe: {tf}")
+    elif atype == "percent_change":
+        direction = alert.get("direction", "down")
+        thr = alert.get("threshold_pct", 5.0)
+        if direction == "down":
+            interp = f"⚠️ ราคาลง {abs(pct):.1f}% — ตรวจสอบ Stop Loss"
+            steps = [
+                "  1️⃣ ถ้าถือ position อยู่ → ตรวจ Stop Loss ยัง valid มั้ย",
+                "  2️⃣ ดู Volume ว่าเป็น sell-off จริงหรือแค่ pullback",
+                "  3️⃣ ดู RSI & Support ก่อนตัดสินใจ cut หรือ hold",
+            ]
+        else:
+            interp = f"🚀 ราคาขึ้น {pct:.1f}% — Momentum surge"
+            steps = [
+                "  1️⃣ ตรวจ Volume ยืนยัน breakout จริง",
+                "  2️⃣ ถ้ายังไม่ได้เข้า → รอ pullback หรือเข้า breakout",
+                "  3️⃣ ตั้ง Trailing Stop ถ้าถืออยู่แล้ว",
+            ]
+        lines += [
+            f"💰 Price: <b>${price:.4f}</b>",
+            f"{arrow} Change: <b>{sign}{pct:.2f}%</b>  (trigger ที่ {thr}%)",
+            f"💡 {interp}",
+            "",
+            "📌 <b>สิ่งที่ควรทำ:</b>",
+        ] + steps
+
+    elif atype == "volume_spike":
+        vol_x = triggered_value
+        # Interpretation: price direction + volume = buy or sell pressure
+        if pct >= 1.0:
+            vol_type = "🟢 Buy Volume — Breakout Confirm"
+            vol_action = [
+                "  1️⃣ Momentum สูง — อาจเข้า หรือ add position ได้",
+                "  2️⃣ ตั้ง Stop ใต้ breakout candle low",
+                "  3️⃣ Target = แนวต้านถัดไป บน chart",
+            ]
+        elif pct <= -1.0:
+            vol_type = "🔴 Sell Volume — Distribution Warning"
+            vol_action = [
+                "  1️⃣ ถ้าถือ position → พิจารณา tighten stop",
+                "  2️⃣ อย่าเข้าซื้อตอน volume ขาย — รอ stabilize ก่อน",
+                "  3️⃣ ดู support ถัดไปว่าอยู่ที่ราคาเท่าไหร่",
+            ]
+        else:
+            vol_type = "🟡 Volume Spike — Neutral (ราคาไม่ชัด)"
+            vol_action = [
+                "  1️⃣ รอดูทิศทางราคาให้ชัดขึ้น",
+                "  2️⃣ ดู candle ต่อไปว่าปิด Bull หรือ Bear",
+                "  3️⃣ ติดตาม momentum ต่อในชั่วโมงถัดไป",
+            ]
+        mult_set = alert.get("multiplier", 2.0)
+        lines += [
+            f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
+            f"🔊 Volume: <b>{vol_x:.1f}x</b> above average  (trigger ที่ {mult_set}x)",
+            f"💡 {vol_type}",
+            "",
+            "📌 <b>สิ่งที่ควรทำ:</b>",
+        ] + vol_action
+
+    elif atype == "support_resistance":
+        level = alert.get("level", 0)
+        direction = alert.get("direction", "break_below")
+        if direction == "break_above":
+            dir_th = "ทะลุแนวต้านขึ้น 🚀"
+            sr_steps = [
+                "  1️⃣ ยืนยัน candle ปิดเหนือแนวต้านจริง",
+                "  2️⃣ ตรวจ Volume ว่า spike หรือเปล่า",
+                "  3️⃣ เข้าซื้อ Breakout หรือรอ retest แนวต้านเดิม",
+            ]
+        else:
+            dir_th = "หลุดแนวรับลง ⚠️"
+            sr_steps = [
+                "  1️⃣ ถ้าถือ position → พิจารณา cut loss ทันที",
+                "  2️⃣ ดู support ถัดไปว่าอยู่ที่เท่าไหร่",
+                "  3️⃣ อย่ารีบ averaging down — รอสัญญาณ reversal ก่อน",
+            ]
+        lines += [
+            f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
+            f"⚠️ Level: <b>${level:.4f}</b>  — {dir_th}",
+            "",
+            "📌 <b>สิ่งที่ควรทำ:</b>",
+        ] + sr_steps
+
+    if tf:   lines.append(f"\n⏱ Timeframe: {tf}")
     if note: lines.append(f"📋 Note: {note}")
     lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
     return "\n".join(lines)
@@ -1177,26 +1263,44 @@ def build_rsi_message(stock, alert, rsi, prev_rsi, rsi_price, quote):
     period  = alert.get("period", 14)
     note    = alert.get("note", "")
     action  = alert.get("action", "")
+    interval = alert.get("interval", "1d")
     rsi_arr = "↑" if rsi > prev_rsi else "↓"
+    rsi_move = rsi - prev_rsi
 
     cond_th = {
-        "oversold":         "📉 Oversold — โอกาสกลับตัวขึ้น",
-        "overbought":       "📈 Overbought — ระวังกลับตัวลง",
-        "extreme_oversold": "🔥 Extreme Oversold — โอกาสทอง!",
-        "extreme_overbought":"🌡️ Extreme Overbought — ระวังมาก!",
-        "turning_up":       "↗️ RSI Turning Up — momentum เริ่มกลับ",
-        "turning_down":     "↘️ RSI Turning Down — momentum อ่อน",
+        "oversold":          ("📉 Oversold", "RSI ต่ำ — ราคาถูก oversold อาจกลับตัวขึ้น"),
+        "overbought":        ("📈 Overbought", "RSI สูง — ราคาถูก overbought ระวังกลับตัวลง"),
+        "extreme_oversold":  ("🔥 Extreme Oversold", "RSI ต่ำมาก — โอกาสทอง แต่ risk สูง ใช้ size เล็ก"),
+        "extreme_overbought":("🌡️ Extreme Overbought", "RSI สูงมาก — ระวังมาก อย่าเพิ่ม position"),
+        "turning_up":        ("↗️ RSI Turning Up", "Momentum เริ่มกลับตัวขึ้น — สัญญาณ entry ต้น"),
+        "turning_down":      ("↘️ RSI Turning Down", "Momentum อ่อนแรง — พิจารณา tighten stop"),
     }
+    cond_label, cond_desc = cond_th.get(cond, (cond, ""))
+
+    # Next action based on condition
+    action_map = {
+        "oversold":          ["1️⃣ รอ candle กลับตัว (Hammer / Engulfing) บน 1D", "2️⃣ ยืนยัน Volume ขึ้น + RSI เริ่ม turn up", "3️⃣ เข้าซื้อ พร้อมตั้ง Stop ใต้ recent low"],
+        "extreme_oversold":  ["1️⃣ โอกาสหายาก — ใช้ position size เล็กลงก่อน", "2️⃣ รอ candle reversal อย่างน้อย 1 แท่ง", "3️⃣ เข้าแบบ scale-in ไม่ all-in ครั้งเดียว"],
+        "overbought":        ["1️⃣ ถ้าถือ position → พิจารณา take profit บางส่วน", "2️⃣ อย่า add position ใหม่ในโซนนี้", "3️⃣ ตั้ง trailing stop ป้องกัน reversal"],
+        "extreme_overbought":["1️⃣ ระวังมาก — หลีกเลี่ยงเข้าซื้อ", "2️⃣ ถ้าถือ → tighten stop หรือ take profit", "3️⃣ รอ RSI กลับมา < 70 ก่อนพิจารณา re-entry"],
+        "turning_up":        ["1️⃣ สัญญาณเร็ว — รอยืนยัน 1-2 แท่งก่อนเข้า", "2️⃣ ดู Volume ว่าเพิ่มขึ้นพร้อม RSI มั้ย", "3️⃣ Entry: breakout เหนือ high ของ trigger candle"],
+        "turning_down":      ["1️⃣ ถ้าถือ → พิจารณา tighten stop", "2️⃣ อย่า add — รอดู momentum ก่อน", "3️⃣ ถ้า RSI ลงต่อ + break support → cut"],
+    }
+    steps = action_map.get(cond, ["1️⃣ ดูชาร์ทยืนยันก่อนตัดสินใจ"])
 
     lines = [
         f"{emoji} <b>RSI ALERT: {symbol}</b> ({name})", "",
-        f"📊 RSI({period}): <b>{rsi:.1f}</b> {rsi_arr}  (ก่อนหน้า: {prev_rsi:.1f})",
+        f"📊 RSI({period}): <b>{rsi:.1f}</b> {rsi_arr} {rsi_move:+.1f}  (ก่อนหน้า: {prev_rsi:.1f})",
+        f"⚡ {cond_label} — {cond_desc}",
         f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
-        f"⚡ {cond_th.get(cond, cond)}",
-        f"⏱ Interval: {alert.get('interval','1d')}",
+        f"⏱ Interval: {interval}",
     ]
-    if action: lines.append(f"🎯 Action: <b>{action}</b>")
-    if note:   lines.append(f"📋 Note: {note}")
+    if action: lines.append(f"🎯 Signal: <b>{action}</b>")
+    lines += [
+        "",
+        "📌 <b>สิ่งที่ควรทำ:</b>",
+    ] + [f"  {s}" for s in steps]
+    if note: lines.append(f"\n📋 Note: {note}")
     lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
     return "\n".join(lines)
 
@@ -1209,31 +1313,42 @@ def build_ma_message(stock, alert, fast_ma, slow_ma, ma_price, gap_pct, quote):
     ma_type = alert.get("ma_type", "EMA")
     note    = alert.get("note", "")
     action  = alert.get("action", "")
+    interval = alert.get("interval", "1d")
 
-    cond_th = {
-        "golden_cross":  "🌟 Golden Cross — สัญญาณขาขึ้น!",
-        "death_cross":   "💀 Death Cross — สัญญาณขาลง!",
-        "above_both":    "🚀 ราคาเหนือ MA ทั้งคู่",
-        "below_both":    "🔻 ราคาต่ำกว่า MA ทั้งคู่",
-        "trend_bullish": "📈 Trend กำลังขาขึ้น",
-        "trend_bearish": "📉 Trend กำลังขาลง",
-        "gap_expanding": "↔️ ช่องว่าง MA กำลังขยาย",
+    cond_info = {
+        "golden_cross":  ("🌟 Golden Cross — สัญญาณขาขึ้น!", "🟢", "BULLISH",
+                          ["1️⃣ ยืนยัน candle ปิดเหนือ MA ทั้งคู่", "2️⃣ ตรวจ Volume เพิ่มขึ้นพร้อม cross", "3️⃣ Entry: เข้าซื้อได้ หรือรอ pullback มา test EMA fast"]),
+        "death_cross":   ("💀 Death Cross — สัญญาณขาลง!", "🔴", "BEARISH",
+                          ["1️⃣ ถ้าถือ position → พิจารณา cut หรือ hedge", "2️⃣ อย่าเข้าซื้อ — รอ Golden Cross กลับมาก่อน", "3️⃣ ดู support ถัดไป เผื่อ short opportunity"]),
+        "above_both":    ("🚀 ราคาเหนือ MA ทั้งคู่", "🟢", "BULLISH",
+                          ["1️⃣ Trend ชัดเจน — ถือ position ต่อได้", "2️⃣ ใช้ EMA fast เป็น dynamic support", "3️⃣ Stop ใต้ EMA slow"]),
+        "below_both":    ("🔻 ราคาต่ำกว่า MA ทั้งคู่", "🔴", "BEARISH",
+                          ["1️⃣ Downtrend ชัด — หลีกเลี่ยงซื้อ", "2️⃣ รอ price กลับมาเหนือ EMA fast ก่อน", "3️⃣ ถ้าถือ → tighten stop"]),
+        "trend_bullish": ("📈 Trend กำลังขาขึ้น", "🟢", "BULLISH",
+                          ["1️⃣ Bias ขาขึ้น — หา buy setup", "2️⃣ รอ RSI pullback ก่อนเข้า", "3️⃣ ดู candle reversal บน 4H"]),
+        "trend_bearish": ("📉 Trend กำลังขาลง", "🔴", "BEARISH",
+                          ["1️⃣ Bias ขาลง — หลีกเลี่ยงซื้อ", "2️⃣ รอ reversal signal ที่ชัดเจนก่อน", "3️⃣ ถ้าถือ → review stop"]),
+        "gap_expanding": ("↔️ ช่องว่าง MA ขยาย — Momentum แรงขึ้น", "🟡", "STRONG TREND",
+                          ["1️⃣ Trend กำลังเร่ง — ติดตาม momentum", "2️⃣ อาจเป็นโอกาส add position ถ้า trend ตรงกับ bias", "3️⃣ ระวัง overextension — ดู RSI ด้วย"]),
     }
-    trend_icon = "🟢" if fast_ma > slow_ma else "🔴"
+    label, trend_icon, trend_word, steps = cond_info.get(cond, (cond, "🟡", "UNKNOWN", []))
 
     lines = [
         f"{emoji} <b>MA CROSS ALERT: {symbol}</b> ({name})", "",
-        f"⚡ {cond_th.get(cond, cond)}",
+        f"⚡ {label}",
         f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
-        f"📊 {ma_type}{fast_p}/{slow_p}:",
+        f"📊 {ma_type}{fast_p}/{slow_p}  ({interval}):",
         f"  • Fast {ma_type}{fast_p}: <b>${fast_ma:.4f}</b>",
         f"  • Slow {ma_type}{slow_p}: <b>${slow_ma:.4f}</b>",
         f"  • Gap: <b>{gap_pct:+.2f}%</b>",
-        f"{trend_icon} Trend: {'BULLISH' if fast_ma > slow_ma else 'BEARISH'}",
-        f"⏱ Interval: {alert.get('interval','1d')}",
+        f"{trend_icon} Trend: <b>{trend_word}</b>",
     ]
-    if action: lines.append(f"🎯 Action: <b>{action}</b>")
-    if note:   lines.append(f"📋 Note: {note}")
+    if action: lines.append(f"🎯 Signal: <b>{action}</b>")
+    lines += [
+        "",
+        "📌 <b>สิ่งที่ควรทำ:</b>",
+    ] + [f"  {s}" for s in steps]
+    if note: lines.append(f"\n📋 Note: {note}")
     lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
     return "\n".join(lines)
 
@@ -1242,19 +1357,53 @@ def build_candle_message(stock, alert, found_patterns, candle_info, quote):
     emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, alert)
     note   = alert.get("note", "")
     action = alert.get("action", "")
+    interval = alert.get("interval", "1d")
 
     pat_lines = "\n".join(
         f"  • {CANDLE_DESC_TH.get(p, p)}" for p in found_patterns
     ) or "  • ไม่พบ pattern ที่ระบุ"
 
+    # Determine if bullish or bearish patterns
+    bullish_pats = {"hammer","inverted_hammer","bullish_engulfing","three_white_soldiers","marubozu_bullish","morning_star"}
+    bearish_pats = {"shooting_star","hanging_man","bearish_engulfing","three_black_crows","marubozu_bearish","evening_star"}
+    is_bull_pat  = any(p in bullish_pats for p in found_patterns)
+    is_bear_pat  = any(p in bearish_pats for p in found_patterns)
+
+    if is_bull_pat:
+        interp = "🟢 Bullish Pattern — โอกาสกลับตัวขึ้น"
+        steps  = [
+            "1️⃣ รอ candle ถัดไปยืนยัน (ควรเป็น green candle)",
+            "2️⃣ ตรวจ Volume เพิ่มขึ้นพร้อม pattern",
+            "3️⃣ Entry เหนือ high ของ pattern candle",
+            "4️⃣ Stop Loss ใต้ low ของ pattern",
+        ]
+    elif is_bear_pat:
+        interp = "🔴 Bearish Pattern — ระวังกลับตัวลง"
+        steps  = [
+            "1️⃣ ถ้าถือ position → tighten stop หรือ take profit",
+            "2️⃣ อย่าเข้าซื้อใหม่ในโซนนี้",
+            "3️⃣ รอ pattern bearish ยืนยันด้วย red candle ถัดไป",
+        ]
+    else:
+        interp = "🟡 Neutral Pattern — ลังเล รอดูทิศทาง"
+        steps  = [
+            "1️⃣ ยังไม่ชัด — รอดู candle ถัดไปก่อน",
+            "2️⃣ ดู RSI + Volume ประกอบ",
+            "3️⃣ ไม่ควรเข้าเทรดจาก neutral pattern เดี่ยวๆ",
+        ]
+
     lines = [
         f"{emoji} <b>CANDLE ALERT: {symbol}</b> ({name})", "",
-        f"🕯️ Pattern ที่พบ:", pat_lines, "",
+        f"🕯️ Pattern ที่พบ ({interval}):", pat_lines,
+        f"💡 {interp}",
         f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
-        f"⏱ Interval: {alert.get('interval','1d')}",
     ]
-    if action: lines.append(f"🎯 Action: <b>{action}</b>")
-    if note:   lines.append(f"📋 Note: {note}")
+    if action: lines.append(f"🎯 Signal: <b>{action}</b>")
+    lines += [
+        "",
+        "📌 <b>สิ่งที่ควรทำ:</b>",
+    ] + [f"  {s}" for s in steps]
+    if note: lines.append(f"\n📋 Note: {note}")
     lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
     return "\n".join(lines)
 
@@ -1289,46 +1438,103 @@ def build_position_message(stock, alert, pos, quote):
     emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, alert)
     note = alert.get("note", "")
 
-    warn = "✅ ขนาด OK" if pos["pos_pct"] <= 20 else "⚠️ Position ใหญ่ — ระวัง"
-    rr   = f"  • R:R Ratio: <b>1:{pos['rr_ratio']:.1f}</b>" if pos.get("rr_ratio") else ""
-    tgt  = f"  • Target: <b>${pos['target']:.4f}</b> (+{pos.get('target_pct',0):.1f}%)" if pos.get("target") else ""
-    hk   = f"  • Half-Kelly: <b>{pos.get('half_kelly_pct',0):.1f}%</b> พอร์ต" if pos.get("half_kelly_pct") else ""
+    size_warn = "✅ ขนาด OK" if pos["pos_pct"] <= 20 else "⚠️ Position ใหญ่ — ระวัง Risk"
+    rr_line  = f"  • R:R Ratio: <b>1:{pos['rr_ratio']:.1f}</b>" if pos.get("rr_ratio") else ""
+    tgt_line = f"  • Target: <b>${pos['target']:.4f}</b> (+{pos.get('target_pct',0):.1f}%)" if pos.get("target") else ""
+    hk_line  = f"  • Half-Kelly: <b>{pos.get('half_kelly_pct',0):.1f}%</b> พอร์ต" if pos.get("half_kelly_pct") else ""
+
+    # Risk color assessment
+    if pos["pos_pct"] > 20:
+        risk_note = "⚠️ ขนาด position เกิน 20% — พิจารณาลด shares"
+    elif pos["pos_pct"] > 15:
+        risk_note = "🟡 ขนาด position ปานกลาง — ติดตามใกล้ชิด"
+    else:
+        risk_note = "🟢 ขนาด position เหมาะสม — ความเสี่ยงอยู่ในกรอบ"
 
     lines = [
         f"{emoji} <b>POSITION SIZE: {symbol}</b> ({name})", "",
-        f"💰 Entry: <b>${pos['entry']:.4f}</b>  {arrow} {sign}{pct:.2f}%",
-        f"🛑 Stop Loss: <b>${pos['stop']:.4f}</b> (-{pos['stop_pct']:.1f}%)",
+        f"💰 Entry Reference: <b>${pos['entry']:.4f}</b>  {arrow} {sign}{pct:.2f}%",
+        f"🛑 Stop Loss: <b>${pos['stop']:.4f}</b>  (-{pos['stop_pct']:.1f}% จาก entry)",
     ]
-    if tgt: lines.append(tgt)
+    if tgt_line: lines.append(tgt_line)
     lines += [
         "",
-        f"📊 ผลการคำนวณ ({pos['method']}):",
+        f"📊 ผลคำนวณ ({pos['method']}):",
         f"  • จำนวน: <b>{pos['shares']:,} หุ้น</b>",
-        f"  • มูลค่า: <b>${pos['pos_value']:,.2f}</b> ({pos['pos_pct']:.1f}% พอร์ต)",
-        f"  • Risk: <b>${pos['risk_amount']:,.2f}</b> ({pos['risk_pct']}% พอร์ต)",
+        f"  • มูลค่า: <b>${pos['pos_value']:,.2f}</b>  ({pos['pos_pct']:.1f}% พอร์ต)",
+        f"  • Risk: <b>${pos['risk_amount']:,.2f}</b>  ({pos['risk_pct']}% พอร์ต)",
     ]
-    if rr:  lines.append(rr)
-    if hk:  lines.append(hk)
-    lines += ["", warn]
-    if note: lines.append(f"📋 Note: {note}")
+    if rr_line: lines.append(rr_line)
+    if hk_line: lines.append(hk_line)
+    lines += [
+        "",
+        f"{size_warn}",
+        f"💡 {risk_note}",
+        "",
+        "📌 <b>สิ่งที่ควรทำ:</b>",
+        f"  1️⃣ ยืนยัน signal (RSI / MTF / Candle) ก่อนเข้าจริง",
+        f"  2️⃣ เข้าซื้อ {pos['shares']:,} หุ้น ที่ราคาใกล้ ${pos['entry']:.2f}",
+        f"  3️⃣ ตั้ง Stop Loss ที่ ${pos['stop']:.2f} ทันทีหลังเข้า",
+        f"  4️⃣ ไม่ Average Down ถ้า price ลงหา Stop",
+    ]
+    if note: lines.append(f"\n📋 Note: {note}")
     lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
     return "\n".join(lines)
 
 
 def build_mtf_message(stock, alert, mtf_result, quote):
     emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, alert)
-    note   = alert.get("note", "")
+    note    = alert.get("note", "")
     overall = mtf_result["overall"]
-    trend_icon = {"strong_bullish":"🟢🟢","bullish":"🟢","neutral":"⚪","bearish":"🔴","strong_bearish":"🔴🔴","unknown":"❓"}
-    align_th = {
-        "strong_bullish_all":"🟢🟢🟢 ทุก TF Bullish — แข็งแกร่งมาก!",
-        "mostly_bullish":    "🟢🟢 ส่วนใหญ่ Bullish — แนวโน้มขาขึ้น",
-        "leaning_bullish":   "🟡🟢 เอนไปทาง Bullish",
-        "strong_bearish_all":"🔴🔴🔴 ทุก TF Bearish — ระวังขาลง!",
-        "mostly_bearish":    "🔴🔴 ส่วนใหญ่ Bearish — แนวโน้มขาลง",
-        "leaning_bearish":   "🟡🔴 เอนไปทาง Bearish",
-        "mixed":             "⚪ Mixed — ทิศทางไม่ชัด",
+    trend_icon = {
+        "strong_bullish": "🟢🟢", "bullish": "🟢",
+        "neutral": "⚪", "bearish": "🔴",
+        "strong_bearish": "🔴🔴", "unknown": "❓"
     }
+    align_th = {
+        "strong_bullish_all": "🟢🟢🟢 ทุก TF Bullish — แนวโน้มแข็งมาก",
+        "mostly_bullish":     "🟢🟢 ส่วนใหญ่ Bullish — แนวโน้มขาขึ้น",
+        "leaning_bullish":    "🟡🟢 เอนไปทาง Bullish — ยังไม่แข็งแกร่ง",
+        "strong_bearish_all": "🔴🔴🔴 ทุก TF Bearish — ระวังขาลงแรง!",
+        "mostly_bearish":     "🔴🔴 ส่วนใหญ่ Bearish — แนวโน้มขาลง",
+        "leaning_bearish":    "🟡🔴 เอนไปทาง Bearish — ระวัง",
+        "mixed":              "⚪ Mixed — ทิศทางยังไม่ชัด รอสัญญาณ",
+    }
+
+    # Next action by alignment
+    action_map = {
+        "strong_bullish_all": [
+            "1️⃣ Trend แข็งแกร่งทุก TF — ถือ position หรือเข้าใหม่ได้",
+            "2️⃣ ใช้ EMA บน 4H เป็น dynamic support",
+            "3️⃣ Stop Loss ใต้ low ของ swing ล่าสุดบน 1D",
+        ],
+        "mostly_bullish": [
+            "1️⃣ Bias ขาขึ้น — หา Buy setup บน TF เล็ก",
+            "2️⃣ รอ RSI pullback หรือ candle reversal บน 1H/4H",
+            "3️⃣ ตั้ง Stop ใต้ EMA21 บน 4H",
+        ],
+        "leaning_bullish": [
+            "1️⃣ Bias อ่อน — ใช้ position size เล็ก",
+            "2️⃣ ต้องการ signal เพิ่ม เช่น Volume spike หรือ candle pattern",
+            "3️⃣ อย่า all-in — รอยืนยันมากขึ้น",
+        ],
+        "strong_bearish_all": [
+            "1️⃣ ระวัง! ทุก TF ขาลง — ไม่ควรซื้อ",
+            "2️⃣ ถ้าถือ position → พิจารณา cut loss ทันที",
+            "3️⃣ รอ trend กลับตัวก่อนเข้าใหม่",
+        ],
+        "mostly_bearish": [
+            "1️⃣ Bias ขาลง — หลีกเลี่ยงการซื้อ",
+            "2️⃣ ถ้าถือ → tighten stop loss",
+            "3️⃣ รอ MTF กลับมา mostly_bullish ก่อน",
+        ],
+        "mixed": [
+            "1️⃣ สัญญาณยังขัดแย้ง — อย่าเพิ่ง trade",
+            "2️⃣ รอให้ TF ใหญ่ (1D) กลับมา Bullish ก่อน",
+            "3️⃣ ติดตาม alert รอบถัดไป",
+        ],
+    }
+    steps = action_map.get(overall, ["1️⃣ ดูชาร์ทเพิ่มเติมก่อนตัดสินใจ"])
 
     lines = [
         f"{emoji} <b>MTF ALERT: {symbol}</b> ({name})", "",
@@ -1339,9 +1545,22 @@ def build_mtf_message(stock, alert, mtf_result, quote):
     ]
     for tf, d in mtf_result["timeframes"].items():
         ti = trend_icon.get(d["trend"], "⚪")
-        rsi_str = f"RSI={d['rsi']}" if d["rsi"] else ""
-        lines.append(f"  {ti} <b>{tf}</b>: {d['trend'].replace('_',' ').upper()}  {rsi_str}")
+        rsi_val = d["rsi"]
+        rsi_str = f"RSI={rsi_val}" if rsi_val else ""
+        # RSI warning flags
+        rsi_warn = ""
+        if rsi_val and rsi_val >= 75:
+            rsi_warn = " ⚠️ Overbought"
+        elif rsi_val and rsi_val <= 25:
+            rsi_warn = " 🔥 Extreme Oversold"
+        elif rsi_val and rsi_val >= 70:
+            rsi_warn = " ⚡ Near Overbought"
+        lines.append(f"  {ti} <b>{tf}</b>: {d['trend'].replace('_',' ').upper()}  {rsi_str}{rsi_warn}")
 
+    lines += [
+        "",
+        "📌 <b>สิ่งที่ควรทำ:</b>",
+    ] + [f"  {s}" for s in steps]
     if note: lines.append(f"\n📋 Note: {note}")
     lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
     return "\n".join(lines)
@@ -1351,35 +1570,60 @@ def build_score_message(stock, alert, total_score, grade, breakdown, quote):
     emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, alert)
     note      = alert.get("note", "")
     direction = alert.get("direction", "bullish")
+    min_score = alert.get("min_score", 65)
     filled    = int(total_score / 10)
     bar       = "█" * filled + "░" * (10 - filled)
 
     grade_th = {
-        "A": "🔥 สัญญาณแข็งมาก — น่าเชื่อถือสูง",
-        "B": "✅ สัญญาณดี — ควรเทรด",
-        "C": "🟡 ปานกลาง — เพิ่มความระมัดระวัง",
-        "D": "❌ สัญญาณอ่อน — ควรรอ",
+        "A": ("🔥 สัญญาณแข็งมาก", "เชื่อถือได้สูง"),
+        "B": ("✅ สัญญาณดี", "ควรเทรด"),
+        "C": ("🟡 สัญญาณปานกลาง", "เพิ่มความระมัดระวัง"),
+        "D": ("❌ สัญญาณอ่อน", "ควรรอสัญญาณที่ดีกว่า"),
     }
-    rec_th = {
-        "A": "เทรดได้ — ตั้ง Stop เสมอ",
-        "B": "เทรดได้ — ตั้ง Stop เสมอ",
-        "C": "เทรดครึ่ง position — รอ confirmation",
-        "D": "รอสัญญาณที่ดีกว่า",
+    grade_label, grade_desc = grade_th.get(grade, (grade, ""))
+
+    action_map = {
+        "A": [
+            "1️⃣ Score สูงมาก — เทรดได้ ตั้ง Stop เสมอ",
+            "2️⃣ ใช้ Position Size ตาม risk 2% ของพอร์ต",
+            "3️⃣ Target = แนวต้านถัดไป, Stop ใต้ recent low",
+        ],
+        "B": [
+            "1️⃣ Score ดี — เทรดได้ แต่ยืนยันด้วย MTF ก่อน",
+            "2️⃣ ใช้ Position Size ปกติ (risk 2%)",
+            "3️⃣ ตั้ง Stop Loss ก่อน ค่อยดู Target",
+        ],
+        "C": [
+            "1️⃣ Score กลางๆ — เข้าได้แต่ลด position size ลง 50%",
+            "2️⃣ ต้องการ confirmation เพิ่ม (Volume + Candle)",
+            "3️⃣ ระวัง false signal — Stop tight",
+        ],
+        "D": [
+            "1️⃣ Score ต่ำ — ยังไม่ควรเทรด",
+            "2️⃣ รอ signal ที่ดีขึ้น หรือ TF ใหญ่ align",
+            "3️⃣ ติดตาม alert รอบต่อไป",
+        ],
     }
+    steps = action_map.get(grade, [])
 
     lines = [
         f"{emoji} <b>SCORE ALERT: {symbol}</b> ({name})", "",
-        f"🎯 Confidence: <b>{total_score}/100</b>  [{bar}]",
-        f"📊 Grade: <b>{grade}</b>  {grade_th.get(grade,'')}",
-        f"📈 Direction: <b>{direction.upper()}</b>",
-        f"💡 แนะนำ: {rec_th.get(grade,'')}",
+        f"🎯 Confidence Score: <b>{total_score}/100</b>  [{bar}]",
+        f"📊 Grade: <b>{grade}</b>  — {grade_label} ({grade_desc})",
+        f"📈 Direction: <b>{direction.upper()}</b>  (min score: {min_score})",
         f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
-        "", "📋 คะแนนย่อย:",
+        "",
+        "📋 คะแนนย่อย:",
     ]
     for comp, info in breakdown.items():
-        pct_comp = int(info["s"] / info["max"] * 100)
-        lines.append(f"  • {comp}: {info['s']}/{info['max']} ({pct_comp}%) — {info['note']}")
+        pct_comp = int(info["s"] / info["max"] * 100) if info["max"] > 0 else 0
+        bar_mini = "█" * (info["s"] // 3) + "░" * ((info["max"] - info["s"]) // 3)
+        lines.append(f"  • {comp}: <b>{info['s']}/{info['max']}</b> [{bar_mini}] — {info['note']}")
 
+    lines += [
+        "",
+        "📌 <b>สิ่งที่ควรทำ:</b>",
+    ] + [f"  {s}" for s in steps]
     if note: lines.append(f"\n📝 Note: {note}")
     lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
     return "\n".join(lines)
