@@ -502,5 +502,32 @@
     "price": 16.899999618530273,
     "change_pct": -1.7441882643588713,
     "value": 9.36869637070574
+  },
+  {
+    "timestamp": "2026-05-27T10:57:43Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 16.899999618530273,
+    "change_pct": -1.7441882643588713,
+    "value": 9.36869637070574
+  },
+  {
+    "timestamp": "2026-05-27T10:57:44Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 16.899999618530273,
+    "change_pct": -1.7441882643588713,
+    "value": 9.36869637070574
+  },
+  {
+    "timestamp": "2026-05-27T10:58:07Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.050000190734863,
+    "change_pct": -6.162266518777425,
+    "value": -6.162266518777425
   }
 ]
