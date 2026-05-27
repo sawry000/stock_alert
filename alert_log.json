@@ -1078,5 +1078,23 @@
     "price": 48.5099983215332,
     "change_pct": -2.7465951853785073,
     "value": 2
+  },
+  {
+    "timestamp": "2026-05-27T18:17:40Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 16.80500030517578,
+    "change_pct": -2.296509853629175,
+    "value": 2.8462313505337073
+  },
+  {
+    "timestamp": "2026-05-27T18:17:44Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.523900032043457,
+    "change_pct": 17.939253833806397,
+    "value": 3
   }
 ]
