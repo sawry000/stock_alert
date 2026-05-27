@@ -962,7 +962,12 @@ async function ghGetFile(filename) {
   }
   const data = await res.json();
   fileSHAs[filename] = data.sha; // เก็บ SHA สำหรับ update
-  const content = atob(data.content.replace(/\n/g, ''));
+  // ใช้ TextDecoder แทน atob เพื่อรองรับ UTF-8 (emoji และภาษาไทย)
+  const base64 = data.content.replace(/\n/g, '');
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  const content = new TextDecoder('utf-8').decode(bytes);
   return JSON.parse(content);
 }
 
