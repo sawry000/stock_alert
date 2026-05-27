@@ -221,6 +221,112 @@ def _calc_atr(highs, lows, closes, period=14):
     return atr
 
 
+def _calc_entry_sl_tp(symbol, price, direction="bull", atr_sl_mult=1.5, rr1=1.5, rr2=3.0):
+    """
+    คำนวณ Entry / SL / TP1 / TP2 จาก ATR + Swing High/Low
+    direction: "bull" = แนวโน้มขาขึ้น (ซื้อ), "bear" = แนวโน้มขาลง
+    คืน dict หรือ None ถ้าดึงข้อมูลไม่ได้
+    """
+    try:
+        hist = fetch_history(symbol, period="60d", interval="1d")
+        if hist is None or len(hist) < 20:
+            return None
+
+        highs  = list(hist["High"].astype(float))
+        lows   = list(hist["Low"].astype(float))
+        closes = list(hist["Close"].astype(float))
+
+        atr = _calc_atr(highs, lows, closes, 14)
+        if not atr or atr <= 0:
+            return None
+
+        # Swing Low/High จาก 10 แท่งล่าสุด
+        recent_lows  = lows[-10:]
+        recent_highs = highs[-10:]
+        swing_low    = min(recent_lows)
+        swing_high   = max(recent_highs)
+
+        if direction == "bull":
+            entry    = round(price, 4)
+            sl_atr   = round(price - atr * atr_sl_mult, 4)
+            sl_swing = round(swing_low * 0.995, 4)
+            # ถ้า swing_low สูงกว่าราคาปัจจุบัน ให้ใช้ ATR เป็น fallback
+            if sl_swing >= entry:
+                sl = sl_atr
+            else:
+                sl = round(max(sl_atr, sl_swing), 4)
+            risk = entry - sl
+            if risk <= 0:
+                # fallback: ใช้ ATR x 1 เป็น SL อย่างน้อย
+                sl   = round(entry - atr, 4)
+                risk = entry - sl
+            if risk <= 0:
+                return None
+            tp1 = round(entry + risk * rr1, 4)
+            tp2 = round(entry + risk * rr2, 4)
+        else:
+            entry    = round(price, 4)
+            sl_atr   = round(price + atr * atr_sl_mult, 4)
+            sl_swing = round(swing_high * 1.005, 4)
+            # ถ้า swing_high ต่ำกว่าราคาปัจจุบัน ให้ใช้ ATR เป็น fallback
+            if sl_swing <= entry:
+                sl = sl_atr
+            else:
+                sl = round(min(sl_atr, sl_swing), 4)
+            risk = sl - entry
+            if risk <= 0:
+                sl   = round(entry + atr, 4)
+                risk = sl - entry
+            if risk <= 0:
+                return None
+            tp1 = round(entry - risk * rr1, 4)
+            tp2 = round(entry - risk * rr2, 4)
+
+        sl_pct  = round(abs(entry - sl) / entry * 100, 2)
+        tp1_pct = round(abs(tp1 - entry) / entry * 100, 2)
+        tp2_pct = round(abs(tp2 - entry) / entry * 100, 2)
+
+        return {
+            "direction": direction,
+            "entry":     entry,
+            "sl":        sl,
+            "sl_pct":    sl_pct,
+            "tp1":       tp1,
+            "tp1_pct":   tp1_pct,
+            "tp2":       tp2,
+            "tp2_pct":   tp2_pct,
+            "atr":       round(atr, 4),
+            "rr1":       round(rr1, 1),
+            "rr2":       round(rr2, 1),
+        }
+    except Exception as e:
+        print(f"  [_calc_entry_sl_tp] error: {e}")
+        return None
+
+
+def _format_trade_box(trade, direction="bull"):
+    """สร้างบล็อกข้อมูลเทรด สำหรับแนบใน alert message"""
+    if not trade:
+        return []
+    if direction == "bull":
+        action_label = "🟢 <b>สัญญาณ: ควรซื้อ</b>"
+        entry_label  = "📥 จุดเข้าซื้อ"
+    else:
+        action_label = "🔴 <b>สัญญาณ: ระวัง / หลีกเลี่ยงซื้อ</b>"
+        entry_label  = "📍 ราคาอ้างอิง"
+    return [
+        "",
+        "─────────────────────────",
+        action_label,
+        f"{entry_label}:  <b>${trade['entry']:.4f}</b>",
+        f"🛑 จุดตัดขาดทุน (SL):  <b>${trade['sl']:.4f}</b>  (-{trade['sl_pct']:.2f}%)",
+        f"🎯 เป้าหมาย 1 (TP1):  <b>${trade['tp1']:.4f}</b>  (+{trade['tp1_pct']:.2f}%)  อัตราส่วน 1:{trade['rr1']}",
+        f"🏆 เป้าหมาย 2 (TP2):  <b>${trade['tp2']:.4f}</b>  (+{trade['tp2_pct']:.2f}%)  อัตราส่วน 1:{trade['rr2']}",
+        f"📐 ATR(14): ${trade['atr']:.4f}",
+        "─────────────────────────",
+    ]
+
+
 # ══════════════════════════════════════════════════════════════════════════════
 #  MODULE 1 (เดิม) — PRICE TARGET
 # ══════════════════════════════════════════════════════════════════════════════
@@ -1162,6 +1268,11 @@ def build_message(stock, alert, quote, triggered_value):
             f"🎯 เป้าหมาย: <b>${target:.4f}</b>  {dir_th}",
         ]
         if action: lines.append(f"⚡ สัญญาณ: <b>{action}</b>")
+        # Trade box: ซื้อเมื่อราคาถึง below_or_equal (จุดซื้อ), ขายเมื่อ above_or_equal (TP hit)
+        _dir = alert.get("direction", "")
+        if _dir == "below_or_equal":
+            trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bull")
+            lines += _format_trade_box(trade, direction="bull")
         lines += [
             "",
             "📌 <b>แนะนำให้ทำ:</b>",
@@ -1192,6 +1303,11 @@ def build_message(stock, alert, quote, triggered_value):
             f"💰 ราคาปัจจุบัน: <b>${price:.4f}</b>",
             f"{arrow} เปลี่ยนแปลง: <b>{sign}{pct:.2f}%</b>  (เงื่อนไขที่ตั้งไว้: {thr}%)",
             f"💡 {interp}",
+        ]
+        if direction == "up":
+            trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bull")
+            lines += _format_trade_box(trade, direction="bull")
+        lines += [
             "",
             "📌 <b>แนะนำให้ทำ:</b>",
         ] + steps
@@ -1225,6 +1341,14 @@ def build_message(stock, alert, quote, triggered_value):
             f"💰 ราคาปัจจุบัน: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
             f"🔊 ปริมาณซื้อขาย: <b>{vol_x:.1f} เท่า</b>ของค่าเฉลี่ย  (เงื่อนไข: {mult_set} เท่า)",
             f"💡 {vol_type}",
+        ]
+        if pct >= 1.0:
+            trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bull")
+            lines += _format_trade_box(trade, direction="bull")
+        elif pct <= -1.0:
+            trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bear")
+            lines += _format_trade_box(trade, direction="bear")
+        lines += [
             "",
             "📌 <b>แนะนำให้ทำ:</b>",
         ] + vol_action
@@ -1250,6 +1374,11 @@ def build_message(stock, alert, quote, triggered_value):
             f"🏷️ ประเภท: <b>แนวรับ/แนวต้าน</b>",
             f"💰 ราคาปัจจุบัน: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
             f"⚠️ ระดับราคาสำคัญ: <b>${level:.4f}</b>  — {dir_th}",
+        ]
+        if direction == "break_above":
+            trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bull")
+            lines += _format_trade_box(trade, direction="bull")
+        lines += [
             "",
             "📌 <b>แนะนำให้ทำ:</b>",
         ] + sr_steps
@@ -1299,6 +1428,10 @@ def build_rsi_message(stock, alert, rsi, prev_rsi, rsi_price, quote):
         f"⏱ กรอบเวลา: {interval}",
     ]
     if action: lines.append(f"🎯 สัญญาณ: <b>{action}</b>")
+    # Trade box สำหรับ oversold / extreme_oversold / turning_up
+    if cond in ("oversold", "extreme_oversold", "turning_up"):
+        trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bull")
+        lines += _format_trade_box(trade, direction="bull")
     lines += [
         "",
         "📌 <b>แนะนำให้ทำ:</b>",
@@ -1348,6 +1481,15 @@ def build_ma_message(stock, alert, fast_ma, slow_ma, ma_price, gap_pct, quote):
         f"{trend_icon} แนวโน้ม: <b>{trend_word}</b>",
     ]
     if action: lines.append(f"🎯 สัญญาณ: <b>{action}</b>")
+    # Trade box สำหรับ bullish conditions
+    bullish_conds = ("golden_cross", "above_both", "trend_bullish", "gap_expanding")
+    bearish_conds = ("death_cross", "below_both", "trend_bearish")
+    if cond in bullish_conds:
+        trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bull")
+        lines += _format_trade_box(trade, direction="bull")
+    elif cond in bearish_conds:
+        trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bear")
+        lines += _format_trade_box(trade, direction="bear")
     lines += [
         "",
         "📌 <b>แนะนำให้ทำ:</b>",
@@ -1403,6 +1545,13 @@ def build_candle_message(stock, alert, found_patterns, candle_info, quote):
         f"💰 ราคาปัจจุบัน: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
     ]
     if action: lines.append(f"🎯 สัญญาณ: <b>{action}</b>")
+    # Trade box สำหรับ bullish/bearish pattern
+    if is_bull_pat:
+        trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bull")
+        lines += _format_trade_box(trade, direction="bull")
+    elif is_bear_pat:
+        trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bear")
+        lines += _format_trade_box(trade, direction="bear")
     lines += [
         "",
         "📌 <b>แนะนำให้ทำ:</b>",
@@ -1571,6 +1720,15 @@ def build_mtf_message(stock, alert, mtf_result, quote):
         "",
         "📌 <b>แนะนำให้ทำ:</b>",
     ] + [f"  {s}" for s in steps]
+    # Trade box สำหรับ bullish alignment
+    bullish_aligns = ("strong_bullish_all", "mostly_bullish")
+    bearish_aligns = ("strong_bearish_all", "mostly_bearish")
+    if overall in bullish_aligns:
+        trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bull")
+        lines += _format_trade_box(trade, direction="bull")
+    elif overall in bearish_aligns:
+        trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bear")
+        lines += _format_trade_box(trade, direction="bear")
     if note: lines.append(f"\n📋 หมายเหตุ: {note}")
     lines += ["", f"📊 <a href='{tv}'>ดูกราฟ TradingView</a>", f"🕐 {now_bkk_str()}"]
     return "\n".join(lines)
@@ -1637,6 +1795,10 @@ def build_score_message(stock, alert, total_score, grade, breakdown, quote):
         "",
         "📌 <b>แนะนำให้ทำ:</b>",
     ] + [f"  {s}" for s in steps]
+    # Trade box สำหรับ grade A/B bullish เท่านั้น
+    if grade in ("A", "B") and direction == "bullish":
+        trade = _calc_entry_sl_tp(stock["symbol"], price, direction="bull")
+        lines += _format_trade_box(trade, direction="bull")
     if note: lines.append(f"\n📋 หมายเหตุ: {note}")
     lines += ["", f"📊 <a href='{tv}'>ดูกราฟ TradingView</a>", f"🕐 {now_bkk_str()}"]
     return "\n".join(lines)
