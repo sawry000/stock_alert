@@ -637,5 +637,86 @@
     "price": 360.2950134277344,
     "change_pct": -5.5855419334571,
     "value": -5.5855419334571
+  },
+  {
+    "timestamp": "2026-05-27T13:52:37Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 72.5,
+    "change_pct": -0.38472107721901777,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-27T13:52:40Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 176.9499969482422,
+    "change_pct": -0.6958881260215557,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-27T13:52:44Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.505000114440918,
+    "change_pct": -5.559439759154425,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-27T13:52:46Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_CP_BULL",
+    "type": "candle_pattern",
+    "price": 16.3799991607666,
+    "change_pct": -4.767446739729056,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-27T13:52:49Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 16.3799991607666,
+    "change_pct": -4.767446739729056,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-27T13:52:51Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_CP_BULL",
+    "type": "candle_pattern",
+    "price": 2.2920000553131104,
+    "change_pct": 7.102806323042533,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-27T13:52:51Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.2920000553131104,
+    "change_pct": 7.102806323042533,
+    "value": 7.102806323042533
+  },
+  {
+    "timestamp": "2026-05-27T13:52:57Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 92.62000274658203,
+    "change_pct": -1.8855903108241252,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-27T13:53:01Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 21.0049991607666,
+    "change_pct": -1.5195242144928705,
+    "value": 3
   }
 ]
