@@ -225,6 +225,32 @@ input[type=password]{letter-spacing:2px}
 
 
 @media(max-width:860px){.g2,.g3,.g4{grid-template-columns:1fr}.sidebar{display:none}}
+
+/* TEMPLATE SYSTEM */
+.tpl-bar{display:flex;align-items:center;gap:8px;padding:9px 12px;background:rgba(0,229,255,0.04);
+  border:1px solid rgba(0,229,255,0.15);border-radius:6px;margin-bottom:12px;flex-wrap:wrap}
+.tpl-panel{display:none;background:var(--bg);border:1px solid var(--border2);border-radius:7px;
+  padding:13px;margin-bottom:12px;animation:fadeUp 0.18s ease}
+.tpl-panel.open{display:block}
+.tpl-tabs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+.tpl-tab{padding:4px 11px;border-radius:4px;font-size:11px;font-family:var(--mono);font-weight:600;
+  background:var(--bg2);border:1px solid var(--border);color:var(--text2);cursor:pointer;transition:all 0.13s}
+.tpl-tab:hover{border-color:var(--border2);color:var(--text)}
+.tpl-tab.active{background:rgba(0,229,255,0.1);border-color:var(--cyan);color:var(--cyan)}
+.tpl-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.tpl-card{padding:9px 11px;background:var(--bg2);border:1px solid var(--border);border-radius:5px;
+  cursor:pointer;transition:all 0.13s;position:relative}
+.tpl-card:hover{border-color:var(--cyan);background:rgba(0,229,255,0.05)}
+.tpl-card-name{font-size:12px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px}
+.tpl-card-desc{font-size:10px;color:var(--text2);margin-top:3px;line-height:1.4}
+.tpl-card-badge{font-family:var(--mono);font-size:9px;padding:1px 5px;border-radius:2px;margin-left:auto}
+.tpl-card-del{position:absolute;top:6px;right:6px;background:none;border:none;color:var(--text3);
+  font-size:12px;cursor:pointer;padding:2px 4px;border-radius:3px;font-family:'Material Symbols Outlined';
+  font-style:normal;line-height:1;transition:color 0.13s}
+.tpl-card-del:hover{color:var(--red)}
+.tpl-manage{border-top:1px solid var(--border);margin-top:10px;padding-top:10px}
+.tpl-manage-title{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  color:var(--text3);font-family:var(--mono);margin-bottom:8px;display:flex;align-items:center;gap:6px}
 </style>
 </head>
 <body>
@@ -439,6 +465,29 @@ input[type=password]{letter-spacing:2px}
       <div class="mtitle" id="modal-title"><span class="msi" style="font-size:15px">add_circle</span> เพิ่ม Alert</div>
       <button class="mclose" onclick="closeModal()"><span class="msi" style="font-size:16px">close</span></button>
     </div>
+
+    <!-- Template Bar -->
+    <div class="tpl-bar">
+      <span class="msi" style="font-size:15px;color:var(--cyan)">auto_awesome</span>
+      <span style="font-size:12px;color:var(--text2);flex:1">ใช้ Template สำเร็จรูป — ค่าถูก set ไว้แล้ว แก้ไขได้ทันที</span>
+      <button class="btn btn-ghost btn-sm" onclick="toggleTplPanel()"><span class="msi" style="font-size:14px">dashboard</span> <span id="tpl-btn-lbl">เลือก Template</span></button>
+    </div>
+
+    <!-- Template Panel (hidden by default) -->
+    <div class="tpl-panel" id="tpl-panel">
+      <div class="tpl-tabs" id="tpl-tabs"></div>
+      <div class="tpl-grid" id="tpl-grid"></div>
+      <div class="tpl-manage">
+        <div class="tpl-manage-title"><span class="msi" style="font-size:13px">tune</span> จัดการ Templates</div>
+        <div class="bgrp">
+          <button class="btn btn-ghost btn-xs" onclick="saveCurrAsTemplate()"><span class="msi" style="font-size:12px">bookmark_add</span> บันทึก Form ปัจจุบันเป็น Template</button>
+          <button class="btn btn-ghost btn-xs" onclick="exportTemplates()"><span class="msi" style="font-size:12px">download</span> Export</button>
+          <label class="btn btn-ghost btn-xs" style="cursor:pointer"><span class="msi" style="font-size:12px">upload</span> Import<input type="file" accept=".json" style="display:none" onchange="importTemplates(this)"></label>
+          <button class="btn btn-ghost btn-xs" onclick="resetDefaultTemplates()" title="คืน templates เริ่มต้น"><span class="msi" style="font-size:12px">restart_alt</span> Reset Default</button>
+        </div>
+      </div>
+    </div>
+
     <div class="fr">
       <div class="fg" style="flex:2"><label>Alert ID <span class="tip" data-tip="ไม่ซ้ำ ใช้ A-Z 0-9 _ เท่านั้น">?</span></label><input id="a-id" placeholder="AAPL_RSI_BUY" style="text-transform:uppercase"></div>
       <div class="fg"><label>Emoji</label><input id="a-emoji" value="" maxlength="4" style="text-align:center;font-size:17px"></div>
@@ -1238,6 +1287,356 @@ async function hybridSave() {
 }
 
 document.getElementById('alert-modal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+
+// ══════════════════════════════════════════════════════════
+//  ALERT TEMPLATES SYSTEM
+// ══════════════════════════════════════════════════════════
+
+const DEFAULT_TEMPLATES = [
+  // ── PRICE TARGET ──────────────────────────────────────
+  { id:'tpl_pt_buy',    name:'Price Target BUY',   emoji:'🎯', type:'price_target',
+    desc:'แจ้งเมื่อราคา ≥ เป้าหมาย (BUY breakout)',
+    data:{ target_price:150, direction:'above_or_equal', action:'BUY', cooldown_minutes:60, note:'Breakout target' } },
+  { id:'tpl_pt_sell',   name:'Price Target SELL',  emoji:'🎯', type:'price_target',
+    desc:'แจ้งเมื่อราคา ≤ เป้าหมาย (SELL / SL)',
+    data:{ target_price:140, direction:'below_or_equal', action:'SELL', cooldown_minutes:60, note:'Stop loss level' } },
+
+  // ── PERCENT CHANGE ────────────────────────────────────
+  { id:'tpl_pct_up',    name:'% Change UP +5%',    emoji:'📈', type:'percent_change',
+    desc:'แจ้งเมื่อราคาขึ้น ≥ 5% ในวัน',
+    data:{ threshold_pct:5, direction:'up', action:'SELL', cooldown_minutes:120, note:'Daily surge' } },
+  { id:'tpl_pct_dn',    name:'% Change DOWN -5%',  emoji:'📉', type:'percent_change',
+    desc:'แจ้งเมื่อราคาลง ≥ 5% ในวัน',
+    data:{ threshold_pct:5, direction:'down', action:'BUY', cooldown_minutes:120, note:'Daily dip' } },
+
+  // ── VOLUME SPIKE ──────────────────────────────────────
+  { id:'tpl_vol_3x',    name:'Volume Spike 3x',    emoji:'🔊', type:'volume_spike',
+    desc:'Volume พุ่ง ≥ 3 เท่าของ avg (สัญญาณแรง)',
+    data:{ multiplier:3, cooldown_minutes:60, note:'Strong volume signal' } },
+  { id:'tpl_vol_2x',    name:'Volume Spike 2x',    emoji:'📢', type:'volume_spike',
+    desc:'Volume พุ่ง ≥ 2 เท่า (เฝ้าระวัง)',
+    data:{ multiplier:2, cooldown_minutes:30, note:'Volume watch' } },
+
+  // ── SUPPORT / RESISTANCE ──────────────────────────────
+  { id:'tpl_sr_break',  name:'Break Above Resistance', emoji:'⬆️', type:'support_resistance',
+    desc:'ทะลุแนวต้านขึ้น (BUY breakout)',
+    data:{ level:200, direction:'break_above', action:'BUY', cooldown_minutes:60, note:'Key resistance breakout' } },
+  { id:'tpl_sr_below',  name:'Break Below Support',    emoji:'⬇️', type:'support_resistance',
+    desc:'ทะลุแนวรับลง (SELL / SL)',
+    data:{ level:180, direction:'break_below', action:'SELL', cooldown_minutes:60, note:'Support break' } },
+
+  // ── RSI ───────────────────────────────────────────────
+  { id:'tpl_rsi_os',    name:'RSI Oversold BUY',   emoji:'💚', type:'rsi',
+    desc:'RSI < 30 — Oversold สัญญาณซื้อ 1D',
+    data:{ condition:'oversold', interval:'1d', period:14, oversold_level:30, overbought_level:70, action:'BUY', cooldown_minutes:240, note:'RSI oversold daily' } },
+  { id:'tpl_rsi_ob',    name:'RSI Overbought SELL', emoji:'🔴', type:'rsi',
+    desc:'RSI > 70 — Overbought สัญญาณขาย 1D',
+    data:{ condition:'overbought', interval:'1d', period:14, oversold_level:30, overbought_level:70, action:'SELL', cooldown_minutes:240, note:'RSI overbought daily' } },
+  { id:'tpl_rsi_4h',    name:'RSI Oversold 4H',    emoji:'⏱️', type:'rsi',
+    desc:'RSI < 30 บน 4H — Entry สำหรับ swing',
+    data:{ condition:'oversold', interval:'4h', period:14, oversold_level:30, overbought_level:70, action:'BUY', cooldown_minutes:120, note:'4H RSI entry' } },
+  { id:'tpl_rsi_xos',   name:'RSI Extreme Oversold', emoji:'🟢', type:'rsi',
+    desc:'RSI < 20 — สัญญาณซื้อแบบ extreme',
+    data:{ condition:'extreme_oversold', interval:'1d', period:14, oversold_level:20, overbought_level:80, action:'BUY', cooldown_minutes:480, note:'Extreme oversold' } },
+
+  // ── MA CROSSOVER ──────────────────────────────────────
+  { id:'tpl_ma_gold',   name:'Golden Cross EMA',   emoji:'✨', type:'ma_crossover',
+    desc:'EMA9 ตัด EMA21 ขึ้น (Golden Cross) 1D',
+    data:{ condition:'golden_cross', ma_type:'EMA', interval:'1d', fast_period:9, slow_period:21, action:'BUY', cooldown_minutes:1440, note:'Golden cross daily' } },
+  { id:'tpl_ma_death',  name:'Death Cross EMA',    emoji:'💀', type:'ma_crossover',
+    desc:'EMA9 ตัด EMA21 ลง (Death Cross) 1D',
+    data:{ condition:'death_cross', ma_type:'EMA', interval:'1d', fast_period:9, slow_period:21, action:'SELL', cooldown_minutes:1440, note:'Death cross daily' } },
+  { id:'tpl_ma_5021',   name:'Golden Cross SMA 50/200', emoji:'🌟', type:'ma_crossover',
+    desc:'SMA50 ตัด SMA200 ขึ้น (Classic Golden Cross)',
+    data:{ condition:'golden_cross', ma_type:'SMA', interval:'1d', fast_period:50, slow_period:200, action:'BUY', cooldown_minutes:2880, note:'Classic golden cross' } },
+
+  // ── CANDLE PATTERN ────────────────────────────────────
+  { id:'tpl_cp_bull',   name:'Bullish Patterns',   emoji:'🕯️', type:'candle_pattern',
+    desc:'Hammer / Bullish Engulfing / Morning Star 1D',
+    data:{ patterns:['hammer','bullish_engulfing','morning_star'], interval:'1d', match_any:true, action:'BUY', cooldown_minutes:480, note:'Bullish reversal pattern' } },
+  { id:'tpl_cp_bear',   name:'Bearish Patterns',   emoji:'🐻', type:'candle_pattern',
+    desc:'Shooting Star / Bearish Engulfing / Evening Star 1D',
+    data:{ patterns:['shooting_star','bearish_engulfing','evening_star'], interval:'1d', match_any:true, action:'SELL', cooldown_minutes:480, note:'Bearish reversal pattern' } },
+  { id:'tpl_cp_doji',   name:'Doji Indecision',    emoji:'⚖️', type:'candle_pattern',
+    desc:'Doji / Spinning Top — ตลาดลังเล',
+    data:{ patterns:['doji','spinning_top'], interval:'1d', match_any:true, cooldown_minutes:240, note:'Market indecision' } },
+
+  // ── NEWS SENTIMENT ────────────────────────────────────
+  { id:'tpl_news_pos',  name:'Positive News',      emoji:'📰', type:'news_sentiment',
+    desc:'ข่าวบวกย้อนหลัง 24 ชม. — แปลไทย',
+    data:{ condition:'positive', hours_back:24, max_news:5, min_news:1, translate:true, cooldown_minutes:120, note:'Positive news alert' } },
+  { id:'tpl_news_neg',  name:'Negative News',      emoji:'⚠️', type:'news_sentiment',
+    desc:'ข่าวลบย้อนหลัง 24 ชม. — แปลไทย',
+    data:{ condition:'negative', hours_back:24, max_news:5, min_news:1, translate:true, cooldown_minutes:120, note:'Negative news alert' } },
+  { id:'tpl_news_vol',  name:'High Volume News',   emoji:'📣', type:'news_sentiment',
+    desc:'ข่าวเยอะผิดปกติ — เฝ้าระวัง',
+    data:{ condition:'high_volume', hours_back:12, max_news:10, min_news:3, translate:true, cooldown_minutes:60, note:'High news volume watch' } },
+
+  // ── POSITION SIZE ─────────────────────────────────────
+  { id:'tpl_pos_2pct',  name:'Position Size 2% Risk', emoji:'💰', type:'position_size',
+    desc:'Fixed Risk 2% ของ $10,000 — มาตรฐาน',
+    data:{ condition:'triggered_always', account_size:10000, risk_pct:2, method:'fixed_risk', win_rate:0.55, cooldown_minutes:1440, note:'Standard 2% risk sizing' } },
+  { id:'tpl_pos_kelly', name:'Half-Kelly Position', emoji:'📊', type:'position_size',
+    desc:'Half-Kelly ตาม win rate 55%',
+    data:{ condition:'triggered_always', account_size:10000, risk_pct:2, method:'half_kelly', win_rate:0.55, cooldown_minutes:1440, note:'Half-Kelly sizing' } },
+
+  // ── MTF ALIGNMENT ─────────────────────────────────────
+  { id:'tpl_mtf_bull',  name:'MTF Bullish Align',  emoji:'🔭', type:'mtf_alignment',
+    desc:'1H + 4H + 1D Bullish Alignment — entry แม่น',
+    data:{ timeframes:['1h','4h','1d'], required_alignment:'mostly_bullish', min_bullish:2, action:'BUY', cooldown_minutes:240, note:'Multi-TF bullish alignment' } },
+  { id:'tpl_mtf_str',   name:'MTF Strong Bullish', emoji:'💪', type:'mtf_alignment',
+    desc:'4H + 1D + 1W Strong Bullish ALL',
+    data:{ timeframes:['4h','1d','1wk'], required_alignment:'strong_bullish_all', min_bullish:3, action:'BUY', cooldown_minutes:480, note:'Strong multi-TF alignment' } },
+
+  // ── ALERT SCORE ───────────────────────────────────────
+  { id:'tpl_score_75',  name:'Alert Score ≥75 BUY', emoji:'🎯', type:'alert_score',
+    desc:'Score ≥ 75 Bullish 1D — สัญญาณคุณภาพสูง',
+    data:{ direction:'bullish', min_score:75, interval:'1d', action:'BUY', cooldown_minutes:240, note:'High confidence buy' } },
+  { id:'tpl_score_65',  name:'Alert Score ≥65 BUY', emoji:'📡', type:'alert_score',
+    desc:'Score ≥ 65 Bullish — สัญญาณมาตรฐาน',
+    data:{ direction:'bullish', min_score:65, interval:'1d', action:'BUY', cooldown_minutes:120, note:'Standard confidence buy' } },
+  { id:'tpl_score_bear',name:'Alert Score ≥70 SELL',emoji:'🔻', type:'alert_score',
+    desc:'Score ≥ 70 Bearish 1D — Short signal',
+    data:{ direction:'bearish', min_score:70, interval:'1d', action:'SELL', cooldown_minutes:240, note:'High confidence sell' } },
+
+  // ── BACKTEST ──────────────────────────────────────────
+  { id:'tpl_bt_rsi',    name:'Backtest RSI Buy',   emoji:'🧪', type:'backtest_check',
+    desc:'RSI Oversold ย้อนหลัง 180 วัน Win ≥ 55%',
+    data:{ rule:'rsi_oversold', interval:'1d', days:180, hold_days:5, min_win_rate:55, min_avg_return:1.5, cooldown_minutes:1440, note:'RSI backtest filter' } },
+  { id:'tpl_bt_gc',     name:'Backtest Golden Cross', emoji:'⚗️', type:'backtest_check',
+    desc:'Golden Cross ย้อนหลัง 365 วัน Win ≥ 60%',
+    data:{ rule:'golden_cross', interval:'1d', days:365, hold_days:10, min_win_rate:60, min_avg_return:2, cooldown_minutes:2880, note:'GC backtest filter' } }
+];
+
+// Storage key สำหรับ custom templates
+const TPL_KEY = 'sap_alert_templates';
+
+// โหลด templates (merge default + custom)
+function loadTemplates() {
+  try {
+    const saved = localStorage.getItem(TPL_KEY);
+    if (saved) return JSON.parse(saved);
+  } catch(e) {}
+  return JSON.parse(JSON.stringify(DEFAULT_TEMPLATES));
+}
+
+function saveTemplatesLocal(tpls) {
+  localStorage.setItem(TPL_KEY, JSON.stringify(tpls));
+}
+
+// Type categories สำหรับ tab
+const TPL_TYPES = [
+  { key:'all',               label:'ทั้งหมด' },
+  { key:'price_target',      label:'Price Target' },
+  { key:'percent_change',    label:'% Change' },
+  { key:'volume_spike',      label:'Volume' },
+  { key:'support_resistance',label:'S/R' },
+  { key:'rsi',               label:'RSI' },
+  { key:'ma_crossover',      label:'MA Cross' },
+  { key:'candle_pattern',    label:'Candle' },
+  { key:'news_sentiment',    label:'News' },
+  { key:'position_size',     label:'Position' },
+  { key:'mtf_alignment',     label:'MTF' },
+  { key:'alert_score',       label:'Score' },
+  { key:'backtest_check',    label:'Backtest' }
+];
+
+let _tplActiveTab = 'all';
+let _tplPanelOpen = false;
+
+function toggleTplPanel() {
+  _tplPanelOpen = !_tplPanelOpen;
+  const panel = document.getElementById('tpl-panel');
+  const lbl   = document.getElementById('tpl-btn-lbl');
+  if (_tplPanelOpen) {
+    panel.classList.add('open');
+    lbl.textContent = 'ซ่อน Templates';
+    renderTplPanel();
+  } else {
+    panel.classList.remove('open');
+    lbl.textContent = 'เลือก Template';
+  }
+}
+
+function renderTplPanel() {
+  const tpls = loadTemplates();
+  // Tabs
+  const tabsEl = document.getElementById('tpl-tabs');
+  tabsEl.innerHTML = TPL_TYPES.map(t => {
+    const count = t.key === 'all' ? tpls.length : tpls.filter(x => x.type === t.key).length;
+    if (count === 0 && t.key !== 'all') return '';
+    return `<button class="tpl-tab${_tplActiveTab === t.key ? ' active' : ''}" onclick="setTplTab('${t.key}')">${t.label}${count > 0 ? ` <span style="opacity:0.6;font-size:9px">(${count})</span>` : ''}</button>`;
+  }).join('');
+
+  // Grid
+  const filtered = _tplActiveTab === 'all' ? tpls : tpls.filter(t => t.type === _tplActiveTab);
+  const gridEl = document.getElementById('tpl-grid');
+  if (!filtered.length) {
+    gridEl.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:20px;color:var(--text3);font-size:12px">ยังไม่มี template ในหมวดนี้</div>';
+    return;
+  }
+  const ti = TI;
+  gridEl.innerHTML = filtered.map(t => {
+    const typeInfo = ti[t.type] || {};
+    const color = typeInfo.color || 'var(--cyan)';
+    const isDefault = DEFAULT_TEMPLATES.some(d => d.id === t.id);
+    return `<div class="tpl-card" onclick="applyTemplate('${t.id}')">
+      ${!isDefault ? `<button class="tpl-card-del" onclick="event.stopPropagation();deleteTemplate('${t.id}')" title="ลบ template นี้">delete</button>` : ''}
+      <div class="tpl-card-name">
+        <span style="font-family:var(--emoji)">${t.emoji || '🔔'}</span>
+        ${t.name}
+        <span class="tpl-card-badge tbadge t-${t.type}" style="font-size:9px">${t.type.replace('_',' ')}</span>
+      </div>
+      <div class="tpl-card-desc">${t.desc || ''}</div>
+    </div>`;
+  }).join('');
+}
+
+function setTplTab(key) {
+  _tplActiveTab = key;
+  renderTplPanel();
+}
+
+function applyTemplate(tplId) {
+  const tpls = loadTemplates();
+  const tpl  = tpls.find(t => t.id === tplId);
+  if (!tpl) return;
+
+  const d = tpl.data || {};
+
+  // ตั้งค่า basic fields
+  document.getElementById('a-emoji').value  = tpl.emoji || '';
+  document.getElementById('a-type').value   = tpl.type || 'rsi';
+  document.getElementById('a-cd').value     = d.cooldown_minutes || 60;
+  document.getElementById('a-note').value   = d.note || '';
+  document.getElementById('a-action').value = d.action || '';
+
+  // Auto-fill ID ถ้าว่างอยู่
+  const idEl = document.getElementById('a-id');
+  if (!idEl.value.trim()) {
+    const sym = (editSymIdx !== null && WL.watchlist[editSymIdx]) ? WL.watchlist[editSymIdx].symbol : '';
+    const suffix = tpl.name.replace(/[^A-Z0-9]/gi,'_').toUpperCase().slice(0,15);
+    idEl.value = sym ? `${sym}_${suffix}`.slice(0,30) : suffix;
+  }
+
+  // Render dynamic fields และ fill
+  renderFields();
+  setTimeout(() => fillFields({ type: tpl.type, ...d }), 60);
+
+  // ปิด panel และ feedback
+  _tplPanelOpen = false;
+  document.getElementById('tpl-panel').classList.remove('open');
+  document.getElementById('tpl-btn-lbl').textContent = 'เลือก Template';
+  showToast(`ใช้ template "${tpl.name}" แล้ว — แก้ไขได้เลย`, 'ok');
+}
+
+function saveCurrAsTemplate() {
+  const type   = document.getElementById('a-type').value;
+  const emoji  = document.getElementById('a-emoji').value || '🔔';
+  const note   = document.getElementById('a-note').value.trim();
+  const action = document.getElementById('a-action').value.trim();
+  const cd     = parseInt(document.getElementById('a-cd').value) || 60;
+
+  const name = prompt('ชื่อ Template ใหม่:', note || type + ' custom');
+  if (!name) return;
+  const desc = prompt('คำอธิบายสั้นๆ (optional):', '') || '';
+
+  // เก็บค่าจาก dynamic fields
+  const g  = id => { const e = document.getElementById(id); return e ? e.value : null; };
+  const gc = id => { const e = document.getElementById(id); return e ? e.checked : false; };
+  const gn = id => { const v = g(id); return v !== null ? parseFloat(v) : null; };
+  const gi = id => { const v = g(id); return v !== null ? parseInt(v) : null; };
+
+  let data = { cooldown_minutes: cd };
+  if (action) data.action = action;
+  if (note)   data.note   = note;
+
+  if (type==='price_target')      { data.target_price=gn('f-tgt'); data.direction=g('f-dir'); }
+  else if (type==='percent_change'){ data.threshold_pct=gn('f-pct'); data.direction=g('f-dir'); }
+  else if (type==='volume_spike')  { data.multiplier=gn('f-mult'); }
+  else if (type==='support_resistance'){ data.level=gn('f-lvl'); data.direction=g('f-dir'); }
+  else if (type==='rsi')           { data.condition=g('f-cond'); data.interval=g('f-iv'); data.period=gi('f-per'); data.oversold_level=gi('f-os'); data.overbought_level=gi('f-ob'); }
+  else if (type==='ma_crossover')  { data.condition=g('f-cond'); data.ma_type=g('f-mat'); data.interval=g('f-iv'); data.fast_period=gi('f-fast'); data.slow_period=gi('f-slow'); }
+  else if (type==='candle_pattern'){ data.patterns=PATS.filter(p=>gc('cp-'+p)); data.interval=g('f-iv'); data.match_any=g('f-match')!=='false'; }
+  else if (type==='news_sentiment'){ data.condition=g('f-cond'); data.hours_back=gi('f-hrs'); data.max_news=gi('f-max'); data.min_news=gi('f-mn'); data.translate=gc('f-tr'); }
+  else if (type==='position_size') { data.condition='triggered_always'; data.account_size=gn('f-acc'); data.risk_pct=gn('f-rsk'); data.method=g('f-mth'); data.win_rate=gn('f-wr'); }
+  else if (type==='mtf_alignment') { data.timeframes=['1m','5m','15m','30m','1h','4h','1d','1wk'].filter(t=>gc('mtf-'+t)); data.required_alignment=g('f-al'); data.min_bullish=gi('f-mb'); }
+  else if (type==='alert_score')   { data.direction=g('f-dir'); data.min_score=gi('f-ms'); data.interval=g('f-iv'); }
+  else if (type==='backtest_check'){ data.rule=g('f-rule'); data.interval=g('f-iv'); data.days=gi('f-days'); data.hold_days=gi('f-hold'); data.min_win_rate=gn('f-mwr'); data.min_avg_return=gn('f-mret'); }
+
+  const newTpl = {
+    id:   'custom_' + Date.now(),
+    name: name,
+    emoji: emoji,
+    type: type,
+    desc: desc,
+    data: data
+  };
+
+  const tpls = loadTemplates();
+  tpls.push(newTpl);
+  saveTemplatesLocal(tpls);
+  renderTplPanel();
+  showToast(`บันทึก template "${name}" แล้ว`, 'ok');
+}
+
+function deleteTemplate(tplId) {
+  if (!confirm('ลบ template นี้?')) return;
+  const tpls = loadTemplates().filter(t => t.id !== tplId);
+  saveTemplatesLocal(tpls);
+  renderTplPanel();
+  showToast('ลบ template แล้ว', 'warn');
+}
+
+function resetDefaultTemplates() {
+  if (!confirm('รีเซ็ตกลับ templates เริ่มต้นทั้งหมด? (Custom templates จะหายไป)')) return;
+  saveTemplatesLocal(JSON.parse(JSON.stringify(DEFAULT_TEMPLATES)));
+  renderTplPanel();
+  showToast('รีเซ็ต templates แล้ว', 'ok');
+}
+
+function exportTemplates() {
+  const tpls = loadTemplates();
+  const blob = new Blob([JSON.stringify(tpls, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'alert_templates.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  showToast('Export templates แล้ว', 'ok');
+}
+
+function importTemplates(input) {
+  const f = input.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = (e) => {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!Array.isArray(data)) throw new Error('ไฟล์ต้องเป็น JSON Array');
+      // Merge: ไม่ทับ default templates
+      const existing = loadTemplates();
+      const existIds = new Set(existing.map(t => t.id));
+      let added = 0;
+      data.forEach(t => {
+        if (t.id && t.type && t.name) {
+          if (!existIds.has(t.id)) {
+            existing.push(t);
+            existIds.add(t.id);
+            added++;
+          }
+        }
+      });
+      saveTemplatesLocal(existing);
+      renderTplPanel();
+      showToast(`Import ${added} templates แล้ว`, 'ok');
+    } catch(err) {
+      showToast('Import ล้มเหลว: ' + err.message, 'err');
+    }
+    input.value = '';
+  };
+  r.readAsText(f);
+}
 </script>
 
 <input type="file" id="local-wl-input" accept=".json" style="display:none" onchange="handleLocalWlFile(this)">
