@@ -1132,5 +1132,23 @@
     "price": 25.350000381469727,
     "change_pct": 4.32098922415525,
     "value": 3
+  },
+  {
+    "timestamp": "2026-05-27T19:22:38Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 17.049999237060547,
+    "change_pct": -0.8720974589503048,
+    "value": 3.343211291323415
+  },
+  {
+    "timestamp": "2026-05-27T19:22:39Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 17.049999237060547,
+    "change_pct": -0.8720974589503048,
+    "value": 3.343211291323415
   }
 ]
