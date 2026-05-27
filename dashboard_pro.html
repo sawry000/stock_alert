@@ -600,6 +600,19 @@ async function ghGetFile(filename) {
 
 async function ghPutFile(filename, content, commitMessage) {
   const url = `https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${filename}`;
+
+  // ถ้ายังไม่มี SHA → ดึงจาก GitHub ก่อน (ไฟล์อาจมีอยู่แล้ว)
+  if (!fileSHAs[filename]) {
+    try {
+      const getRes = await fetch(`${url}?ref=${GH.branch}`, { headers: ghHeaders() });
+      if (getRes.ok) {
+        const getJson = await getRes.json();
+        fileSHAs[filename] = getJson.sha;
+      }
+      // ถ้า 404 = ไฟล์ยังไม่มี → สร้างใหม่ได้เลย ไม่ต้องใส่ sha
+    } catch(e) { /* ignore */ }
+  }
+
   const body = {
     message: commitMessage,
     content: btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2)))),
