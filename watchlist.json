@@ -91,6 +91,25 @@
           "direction": "below_or_equal"
         }
       ]
+    },
+    {
+      "symbol": "AMPX",
+      "name": "AMPX",
+      "market": "US",
+      "timeframe": "1H",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "BUY",
+          "type": "price_target",
+          "emoji": "",
+          "cooldown_minutes": 60,
+          "note": "EMA21",
+          "action": "BUY",
+          "target_price": 16.9,
+          "direction": "below_or_equal"
+        }
+      ]
     }
   ]
 }
