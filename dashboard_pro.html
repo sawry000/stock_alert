@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stock Alert PRO — GitHub Dashboard</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg:#05080f;--bg1:#090d17;--bg2:#0e1420;--bg3:#141c2e;
@@ -12,13 +12,13 @@
   --cyan:#00e5ff;--green:#00ff9d;--gold:#ffd54f;--orange:#ff6d00;
   --pink:#ff4081;--purple:#e040fb;--red:#ff1744;
   --text:#e8edf5;--text2:#8899bb;--text3:#3d5080;
-  --mono:'Fira Code',monospace;--ui:'Kanit',sans-serif;--display:'Space Grotesk',sans-serif;
+  --mono:'Inter','Segoe UI',sans-serif;--ui:'Inter','Segoe UI',sans-serif;--display:'Space Grotesk','Inter',sans-serif;
   --c-price:#00e5ff;--c-pct:#ffd54f;--c-vol:#ff6d00;--c-sr:#ff4081;
   --c-rsi:#00ff9d;--c-ma:#40c4ff;--c-candle:#ffab40;--c-news:#ea80fc;
   --c-pos:#a5d6a7;--c-mtf:#80deea;--c-score:#f48fb1;--c-bt:#ffcc02;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--ui);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body{font-family:var(--mono);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;font-size:15px;line-height:1.5}
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background-image:linear-gradient(rgba(0,229,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,0.025) 1px,transparent 1px);
   background-size:40px 40px}
@@ -26,10 +26,10 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 /* TOPBAR */
 .topbar{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;
   padding:0 24px;height:52px;background:rgba(9,13,23,0.96);border-bottom:1px solid var(--border2);backdrop-filter:blur(12px)}
-.logo{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:2px;color:var(--cyan);display:flex;align-items:center;gap:9px}
-.logo::before{content:'⚡';filter:drop-shadow(0 0 8px var(--cyan))}
+.logo{font-family:var(--display);font-size:16px;font-weight:700;letter-spacing:2px;color:var(--cyan);display:flex;align-items:center;gap:9px}
+.logo::before{content:'⚡';filter:drop-shadow(0 0 8px var(--cyan));font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif}
 .topbar-r{display:flex;align-items:center;gap:10px}
-.pill{display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:20px;font-size:0.7rem;font-family:var(--mono);
+.pill{display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:20px;font-size:11px;font-family:var(--mono);
   background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);color:var(--cyan)}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);animation:blink 2s infinite}
 .dot.off{background:var(--text3);box-shadow:none;animation:none}
@@ -42,12 +42,12 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 /* SIDEBAR */
 .sidebar{width:196px;min-width:196px;background:var(--bg1);border-right:1px solid var(--border);
   display:flex;flex-direction:column;padding:10px 0;overflow-y:auto}
-.slabel{padding:8px 14px 4px;font-size:0.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);font-family:var(--mono)}
+.slabel{padding:8px 14px 4px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);font-family:var(--mono)}
 .nbtn{display:flex;align-items:center;gap:8px;width:100%;padding:8px 14px;background:none;border:none;cursor:pointer;
-  font-family:var(--ui);font-size:0.81rem;color:var(--text2);text-align:left;transition:all 0.15s;border-left:2px solid transparent}
+  font-family:var(--ui);font-size:13px;color:var(--text2);text-align:left;transition:all 0.15s;border-left:2px solid transparent}
 .nbtn:hover{background:rgba(255,255,255,0.04);color:var(--text)}
 .nbtn.active{color:var(--cyan);background:rgba(0,229,255,0.06);border-left-color:var(--cyan)}
-.nbtn .cnt{margin-left:auto;background:var(--orange);color:#000;font-size:0.6rem;font-family:var(--mono);font-weight:700;padding:1px 6px;border-radius:10px}
+.nbtn .cnt{margin-left:auto;background:var(--orange);color:#000;font-size:10px;font-family:var(--mono);font-weight:700;padding:1px 6px;border-radius:10px}
 .sdiv{height:1px;background:var(--border);margin:7px 12px}
 
 /* MAIN */
@@ -60,14 +60,14 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 
 /* PAGE HEADER */
 .phd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
-.ptitle{font-family:var(--display);font-size:1.1rem;font-weight:700;letter-spacing:1px}
-.psub{font-size:0.77rem;color:var(--text2);margin-top:3px}
+.ptitle{font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:1px}
+.psub{font-size:12px;color:var(--text2);margin-top:3px}
 
 /* CARD */
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:16px 18px;margin-bottom:14px;transition:border-color 0.2s}
 .card:hover{border-color:var(--border2)}
 .chd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.ctitle{font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);font-family:var(--mono)}
+.ctitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);font-family:var(--mono)}
 
 /* GRID */
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -77,33 +77,33 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 /* STAT */
 .stat{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px;text-align:center;position:relative;overflow:hidden}
 .stat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--sc,var(--cyan));box-shadow:0 0 10px var(--sc,var(--cyan))}
-.sv{font-family:var(--mono);font-size:1.55rem;font-weight:600;color:var(--sc,var(--cyan))}
-.sl{font-size:0.67rem;color:var(--text2);margin-top:3px}
+.sv{font-family:var(--mono);font-size:24px;font-weight:600;color:var(--sc,var(--cyan))}
+.sl{font-size:11px;color:var(--text2);margin-top:3px}
 
 /* GitHub connection card */
 .gh-card{background:linear-gradient(135deg,rgba(0,229,255,0.05),rgba(0,255,157,0.03));
   border:1px solid rgba(0,229,255,0.2);border-radius:10px;padding:20px 22px;margin-bottom:16px}
 .gh-status{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.gh-status-text{font-size:0.82rem;color:var(--text2)}
+.gh-status-text{font-size:13px;color:var(--text2)}
 .gh-status-text strong{color:var(--text)}
-.gh-repo-badge{font-family:var(--mono);font-size:0.72rem;padding:3px 10px;background:rgba(0,229,255,0.1);
+.gh-repo-badge{font-family:var(--mono);font-size:11px;padding:3px 10px;background:rgba(0,229,255,0.1);
   border:1px solid rgba(0,229,255,0.2);border-radius:4px;color:var(--cyan)}
 
 /* FORMS */
 .fg{margin-bottom:11px}
-.fg label{display:flex;align-items:center;gap:5px;font-size:0.7rem;font-weight:600;letter-spacing:0.5px;color:var(--text2);margin-bottom:5px}
+.fg label{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:600;letter-spacing:0.5px;color:var(--text2);margin-bottom:5px}
 .tip{display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;border-radius:50%;
   background:var(--bg3);border:1px solid var(--border2);font-size:0.55rem;color:var(--text3);cursor:help;position:relative}
 .tip::after{content:attr(data-tip);display:none;position:absolute;bottom:120%;left:50%;transform:translateX(-50%);
   white-space:nowrap;min-width:220px;background:var(--bg3);border:1px solid var(--cyan);color:var(--text);
-  padding:7px 10px;border-radius:5px;font-size:0.68rem;font-family:var(--ui);font-weight:400;letter-spacing:0;
+  padding:7px 10px;border-radius:5px;font-size:11px;font-family:var(--ui);font-weight:400;letter-spacing:0;
   z-index:999;box-shadow:0 0 14px rgba(0,229,255,0.2);line-height:1.5}
 .tip:hover::after{display:block}
 input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--border2);border-radius:5px;color:var(--text);
-  font-family:var(--mono);font-size:0.78rem;padding:7px 10px;transition:border-color 0.2s,box-shadow 0.2s;outline:none}
+  font-family:var(--mono);font-size:12px;padding:7px 10px;transition:border-color 0.2s,box-shadow 0.2s;outline:none}
 input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 2px rgba(0,229,255,0.1)}
 select option{background:var(--bg2)}
-textarea{resize:vertical;min-height:70px;font-size:0.72rem}
+textarea{resize:vertical;min-height:70px;font-size:11px}
 input[type=checkbox]{width:auto;accent-color:var(--cyan);transform:scale(1.15);cursor:pointer}
 input[type=number]{-moz-appearance:textfield}
 input[type=password]{letter-spacing:2px}
@@ -112,7 +112,7 @@ input[type=password]{letter-spacing:2px}
 
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:6px;padding:7px 15px;border-radius:5px;border:none;
-  font-family:var(--ui);font-size:0.79rem;font-weight:600;cursor:pointer;transition:all 0.15s;white-space:nowrap}
+  font-family:var(--ui);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.15s;white-space:nowrap}
 .btn-cyan{background:var(--cyan);color:#000}
 .btn-cyan:hover{background:#40eeff;transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,229,255,0.35)}
 .btn-green{background:var(--green);color:#000}
@@ -124,13 +124,13 @@ input[type=password]{letter-spacing:2px}
 .btn-gold{background:var(--gold);color:#000}
 .btn-gold:hover{background:#ffe082}
 .btn-purple{background:var(--purple);color:#fff}
-.btn-sm{padding:4px 10px;font-size:0.72rem}
-.btn-xs{padding:3px 8px;font-size:0.65rem}
+.btn-sm{padding:4px 10px;font-size:11px}
+.btn-xs{padding:3px 8px;font-size:10px}
 .bgrp{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .btn:disabled{opacity:0.4;cursor:not-allowed;transform:none !important}
 
 /* TYPE BADGE */
-.tbadge{padding:2px 7px;border-radius:3px;font-size:0.61rem;font-family:var(--mono);font-weight:700}
+.tbadge{padding:2px 7px;border-radius:3px;font-size:10px;font-family:var(--mono);font-weight:700}
 .t-price_target{background:rgba(0,229,255,0.12);color:var(--c-price)}
 .t-percent_change{background:rgba(255,213,79,0.12);color:var(--c-pct)}
 .t-volume_spike{background:rgba(255,109,0,0.12);color:var(--c-vol)}
@@ -148,11 +148,11 @@ input[type=password]{letter-spacing:2px}
 .symcard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;transition:border-color 0.2s}
 .symcard:hover{border-color:var(--border2)}
 .symhdr{display:flex;align-items:center;gap:10px;padding:11px 15px;background:var(--bg3);cursor:pointer;user-select:none;flex-wrap:wrap}
-.stoggle{font-size:0.68rem;color:var(--text3);transition:transform 0.2s;min-width:10px}
+.stoggle{font-size:11px;color:var(--text3);transition:transform 0.2s;min-width:10px}
 .stoggle.open{transform:rotate(90deg)}
-.sname{font-family:var(--mono);font-size:0.92rem;font-weight:600;color:var(--cyan)}
-.sfull{font-size:0.73rem;color:var(--text2)}
-.smkt{font-size:0.6rem;padding:2px 7px;border-radius:3px;background:rgba(255,255,255,0.06);color:var(--text2);font-family:var(--mono)}
+.sname{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--cyan)}
+.sfull{font-size:12px;color:var(--text2)}
+.smkt{font-size:10px;padding:2px 7px;border-radius:3px;background:rgba(255,255,255,0.06);color:var(--text2);font-family:var(--mono)}
 .symbody{display:none;padding:12px 14px;border-top:1px solid var(--border)}
 .symbody.open{display:block}
 
@@ -160,14 +160,14 @@ input[type=password]{letter-spacing:2px}
 .arow{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:5px;
   background:var(--bg);border:1px solid var(--border);margin-bottom:6px;transition:border-color 0.15s}
 .arow:hover{border-color:var(--border2)}
-.aemoji{font-size:0.95rem;min-width:20px;text-align:center}
+.aemoji{font-size:15px;min-width:20px;text-align:center;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
 .ainfo{flex:1;min-width:0}
-.aid{font-family:var(--mono);font-size:0.7rem;color:var(--text2)}
-.adetail{font-size:0.73rem;color:var(--text);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.aid{font-family:var(--mono);font-size:11px;color:var(--text2)}
+.adetail{font-size:12px;color:var(--text);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .aacts{display:flex;gap:4px;flex-shrink:0}
 .addbtn{display:flex;align-items:center;justify-content:center;gap:7px;padding:7px;border-radius:5px;
   border:1px dashed var(--border2);background:transparent;color:var(--text3);font-family:var(--ui);
-  font-size:0.77rem;cursor:pointer;transition:all 0.15s;width:100%;margin-top:7px}
+  font-size:12px;cursor:pointer;transition:all 0.15s;width:100%;margin-top:7px}
 .addbtn:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,229,255,0.04)}
 
 /* MODAL */
@@ -178,14 +178,14 @@ input[type=password]{letter-spacing:2px}
   box-shadow:0 0 40px rgba(0,229,255,0.1),0 24px 60px rgba(0,0,0,0.6);animation:mIn 0.2s ease}
 @keyframes mIn{from{opacity:0;transform:scale(0.93) translateY(-12px)}to{opacity:1;transform:scale(1) translateY(0)}}
 .mhd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-.mtitle{font-family:var(--display);font-size:0.93rem;font-weight:700;color:var(--cyan);letter-spacing:1px}
-.mclose{cursor:pointer;color:var(--text2);font-size:1.1rem;background:none;border:none;transition:color 0.15s}
+.mtitle{font-family:var(--display);font-size:14px;font-weight:700;color:var(--cyan);letter-spacing:1px}
+.mclose{cursor:pointer;color:var(--text2);font-size:17px;background:none;border:none;transition:color 0.15s}
 .mclose:hover{color:var(--red)}
 .mfooter{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
 
 /* LOG TABLE */
-.ltable{width:100%;border-collapse:collapse;font-size:0.73rem;font-family:var(--mono)}
-.ltable th{padding:6px 10px;text-align:left;color:var(--text3);font-size:0.6rem;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border)}
+.ltable{width:100%;border-collapse:collapse;font-size:12px;font-family:var(--mono)}
+.ltable th{padding:6px 10px;text-align:left;color:var(--text3);font-size:10px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border)}
 .ltable td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
 .ltable tr:hover td{background:rgba(255,255,255,0.02)}
 
@@ -200,7 +200,7 @@ input[type=password]{letter-spacing:2px}
   border-radius:2px;transition:width 0.3s;width:0%}
 
 /* TOAST */
-.toast{position:fixed;top:62px;right:18px;padding:10px 16px;border-radius:6px;font-size:0.79rem;
+.toast{position:fixed;top:62px;right:18px;padding:10px 16px;border-radius:6px;font-size:13px;
   background:var(--bg2);border:1px solid var(--cyan);color:var(--text);box-shadow:0 0 18px rgba(0,229,255,0.2);
   z-index:900;transform:translateX(120%);transition:transform 0.3s ease;max-width:320px}
 .toast.show{transform:translateX(0)}
@@ -213,6 +213,10 @@ input[type=password]{letter-spacing:2px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
 ::-webkit-scrollbar-thumb:hover{background:var(--cyan)}
+.icon{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;font-style:normal;display:inline-block}
+/* Emoji font สำหรับ button icons */
+.btn .icon,.addbtn .icon,button .icon{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif}
+
 
 @media(max-width:860px){.g2,.g3,.g4{grid-template-columns:1fr}.sidebar{display:none}}
 </style>
@@ -231,24 +235,24 @@ input[type=password]{letter-spacing:2px}
 <div class="layout">
   <nav class="sidebar">
     <div class="slabel">GitHub</div>
-    <button class="nbtn active" onclick="show('connect')"><span>🔗</span> เชื่อมต่อ GitHub</button>
+    <button class="nbtn" onclick="show('connect')"><span class="icon">🔗</span> เชื่อมต่อ GitHub</button>
     <div class="sdiv"></div>
     <div class="slabel">Watchlist</div>
-    <button class="nbtn" onclick="show('watchlist')" id="nav-watchlist"><span>👁</span> จัดการหุ้น <span class="cnt" id="sym-cnt">0</span></button>
-    <button class="nbtn" onclick="show('add-symbol')" id="nav-add"><span>➕</span> เพิ่มหุ้น</button>
+    <button class="nbtn active" onclick="show('watchlist')" id="nav-watchlist"><span class="icon">👁</span> จัดการหุ้น <span class="cnt" id="sym-cnt">0</span></button>
+    <button class="nbtn" onclick="show('add-symbol')" id="nav-add"><span class="icon">➕</span> เพิ่มหุ้น</button>
     <div class="sdiv"></div>
     <div class="slabel">Logs (GitHub)</div>
-    <button class="nbtn" onclick="show('log')" id="nav-log"><span>📋</span> Alert Log</button>
-    <button class="nbtn" onclick="show('state')" id="nav-state"><span>🗂</span> State/Cooldown</button>
+    <button class="nbtn" onclick="show('log')" id="nav-log"><span class="icon">📋</span> Alert Log</button>
+    <button class="nbtn" onclick="show('state')" id="nav-state"><span class="icon">🗂</span> State/Cooldown</button>
     <div class="sdiv"></div>
     <div class="slabel">Config</div>
-    <button class="nbtn" onclick="show('settings')"><span>⚙️</span> Settings</button>
+    <button class="nbtn" onclick="show('settings')"><span class="icon">⚙️</span> Settings</button>
   </nav>
 
   <main class="main">
 
     <!-- ════ CONNECT ════ -->
-    <div class="panel active" id="panel-connect">
+    <div class="panel" id="panel-connect">
       <div class="phd">
         <div><div class="ptitle" style="color:var(--cyan)">🔗 เชื่อมต่อ GitHub Repository</div>
         <div class="psub">ใส่ข้อมูลครั้งเดียว — Dashboard จะ Load/Save watchlist.json จาก repo โดยตรง</div></div>
@@ -262,7 +266,7 @@ input[type=password]{letter-spacing:2px}
           <span class="gh-repo-badge" id="conn-repo-badge" style="display:none"></span>
         </div>
         <div id="conn-progress" style="display:none">
-          <div style="font-size:0.75rem;color:var(--text2)" id="conn-progress-label">กำลังเชื่อมต่อ...</div>
+          <div style="font-size:12px;color:var(--text2)" id="conn-progress-label">กำลังเชื่อมต่อ...</div>
           <div class="progress-bar"><div class="progress-fill" id="conn-progress-fill"></div></div>
         </div>
       </div>
@@ -293,21 +297,21 @@ input[type=password]{letter-spacing:2px}
           </div>
         </div>
 
-        <div style="margin:4px 0 14px;padding:10px 14px;background:rgba(255,213,79,0.07);border:1px solid rgba(255,213,79,0.2);border-radius:6px;font-size:0.75rem;color:var(--text2);line-height:1.8">
+        <div style="margin:4px 0 14px;padding:10px 14px;background:rgba(255,213,79,0.07);border:1px solid rgba(255,213,79,0.2);border-radius:6px;font-size:12px;color:var(--text2);line-height:1.8">
           🔐 Token จะถูกเก็บใน <strong style="color:var(--text)">localStorage ของเบราว์เซอร์เท่านั้น</strong><br>
           ไม่ถูกส่งไปที่อื่นนอกจาก GitHub API — ใช้ Token ที่มี scope <code style="color:var(--cyan)">repo</code> เท่านั้น
         </div>
 
         <div class="bgrp">
-          <button class="btn btn-cyan" onclick="connectGitHub()" id="btn-connect">🔗 เชื่อมต่อ GitHub</button>
-          <button class="btn btn-ghost btn-sm" onclick="clearGitHubConfig()">🗑 ลบข้อมูล</button>
+          <button class="btn btn-cyan" onclick="connectGitHub()" id="btn-connect"><span class="icon">🔗</span> เชื่อมต่อ GitHub</button>
+          <button class="btn btn-ghost btn-sm" onclick="clearGitHubConfig()"><span class="icon">🗑</span> ลบข้อมูล</button>
         </div>
       </div>
 
       <!-- Quick guide -->
       <div class="card">
         <div class="chd"><div class="ctitle">🔑 วิธีสร้าง Personal Access Token</div></div>
-        <div style="font-size:0.79rem;line-height:2.3;color:var(--text2)">
+        <div style="font-size:13px;line-height:2.3;color:var(--text2)">
           <div><span style="color:var(--cyan)">1.</span> ไปที่ GitHub.com → คลิก profile icon มุมบนขวา → <strong style="color:var(--text)">Settings</strong></div>
           <div><span style="color:var(--cyan)">2.</span> เลื่อนลงไปที่ <strong style="color:var(--text)">Developer settings</strong> (ซ้ายล่างสุด)</div>
           <div><span style="color:var(--cyan)">3.</span> <strong style="color:var(--text)">Personal access tokens → Tokens (classic) → Generate new token</strong></div>
@@ -318,29 +322,29 @@ input[type=password]{letter-spacing:2px}
     </div>
 
     <!-- ════ WATCHLIST ════ -->
-    <div class="panel" id="panel-watchlist">
+    <div class="panel active" id="panel-watchlist">
       <div class="phd">
         <div><div class="ptitle" style="color:var(--green)">WATCHLIST MANAGER</div>
         <div class="psub" id="wl-last-sync">ซิงค์กับ GitHub โดยตรง</div></div>
         <div class="bgrp">
           <button class="btn btn-ghost btn-sm" onclick="loadWatchlist()" id="btn-load-wl" title="โหลดจาก GitHub repo โดยตรง">
-            <span class="spinner" style="display:none" id="load-spinner"></span> 🔄 Load จาก GitHub
+            <span class="spinner" style="display:none" id="load-spinner"></span> <span class="icon">🔄</span> Load จาก GitHub
           </button>
           <button class="btn btn-ghost btn-sm" onclick="document.getElementById('local-wl-input').click()" title="โหลดจากไฟล์ในเครื่อง (fallback เมื่อไม่มี internet)">
-            📂 Local File
+            <span class="icon">📂</span> Local File
           </button>
           <button class="btn btn-ghost btn-sm" onclick="show('add-symbol')">➕ เพิ่ม Symbol</button>
           <button class="btn btn-green" onclick="saveWatchlist()" id="btn-save-wl" title="Commit และ Push watchlist.json ไป GitHub โดยตรง">
-            <span class="spinner" style="display:none" id="save-spinner"></span> 💾 Save → GitHub
+            <span class="spinner" style="display:none" id="save-spinner"></span> <span class="icon">💾</span> Save → GitHub
           </button>
           <button class="btn btn-gold btn-sm" onclick="downloadLocalWl()" title="Download watchlist.json ลงเครื่อง (fallback)">
-            ⬇️ Download
+            <span class="icon">⬇️</span> Download
           </button>
         </div>
       </div>
 
       <!-- Unsaved changes indicator -->
-      <div id="unsaved-bar" style="display:none;padding:8px 14px;background:rgba(255,213,79,0.08);border:1px solid rgba(255,213,79,0.25);border-radius:6px;margin-bottom:12px;font-size:0.78rem;color:var(--gold);display:none;align-items:center;gap:10px">
+      <div id="unsaved-bar" style="display:none;padding:8px 14px;background:rgba(255,213,79,0.08);border:1px solid rgba(255,213,79,0.25);border-radius:6px;margin-bottom:12px;font-size:12px;color:var(--gold);display:none;align-items:center;gap:10px">
         ⚠️ มีการเปลี่ยนแปลงที่ยังไม่ได้บันทึก
         <button class="btn btn-gold btn-sm" onclick="saveWatchlist()" style="margin-left:auto">💾 Save → GitHub</button>
       </div>
@@ -359,7 +363,7 @@ input[type=password]{letter-spacing:2px}
           <div class="fg"><label>Timeframe หลัก</label><select id="ns-tf"><option>1D</option><option>4H</option><option>1H</option><option>15M</option></select></div>
         </div>
         <div class="bgrp" style="margin-top:4px">
-          <button class="btn btn-green" onclick="addSymbol()">✅ เพิ่ม Symbol</button>
+          <button class="btn btn-green" onclick="addSymbol()"><span class="icon">✅</span> เพิ่ม Symbol</button>
           <button class="btn btn-ghost" onclick="show('watchlist')">ยกเลิก</button>
         </div>
       </div>
@@ -371,14 +375,14 @@ input[type=password]{letter-spacing:2px}
         <div><div class="ptitle" style="color:var(--purple)">ALERT LOG</div><div class="psub">โหลดจาก alert_log.json ใน GitHub repo</div></div>
         <div class="bgrp">
           <button class="btn btn-ghost btn-sm" onclick="loadFileFromGH('alert_log.json','log')" id="btn-load-log">
-            <span class="spinner" style="display:none" id="log-spinner"></span> 🔄 Load จาก GitHub
+            <span class="spinner" style="display:none" id="log-spinner"></span> <span class="icon">🔄</span> Load จาก GitHub
           </button>
-          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('local-log-input').click()" title="โหลดจากไฟล์ในเครื่อง">📂 Local</button>
-          <button class="btn btn-ghost btn-sm" onclick="logData=[];renderLog()">🗑 Clear</button>
+          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('local-log-input').click()" title="โหลดจากไฟล์ในเครื่อง"><span class="icon">📂</span> Local</button>
+          <button class="btn btn-ghost btn-sm" onclick="logData=[];renderLog()"><span class="icon">🗑</span> Clear</button>
         </div>
       </div>
       <div class="card">
-        <div id="log-empty" style="text-align:center;padding:40px;color:var(--text3);font-size:0.82rem">กด "Load จาก GitHub" เพื่อดูประวัติ alert</div>
+        <div id="log-empty" style="text-align:center;padding:40px;color:var(--text3);font-size:13px">กด "Load จาก GitHub" เพื่อดูประวัติ alert</div>
         <div id="log-wrap" style="display:none;overflow-x:auto">
           <table class="ltable"><thead><tr><th>เวลา ICT</th><th>Symbol</th><th>Alert ID</th><th>Type</th><th>ราคา</th><th>Δ%</th></tr></thead>
           <tbody id="log-tb"></tbody></table>
@@ -392,13 +396,13 @@ input[type=password]{letter-spacing:2px}
         <div><div class="ptitle" style="color:var(--pink)">STATE / COOLDOWN</div><div class="psub">โหลดจาก state.json ใน GitHub repo</div></div>
         <div class="bgrp">
           <button class="btn btn-ghost btn-sm" onclick="loadFileFromGH('state.json','state')" id="btn-load-state">
-            <span class="spinner" style="display:none" id="state-spinner"></span> 🔄 Load จาก GitHub
+            <span class="spinner" style="display:none" id="state-spinner"></span> <span class="icon">🔄</span> Load จาก GitHub
           </button>
-          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('local-state-input').click()" title="โหลดจากไฟล์ในเครื่อง">📂 Local</button>
+          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('local-state-input').click()" title="โหลดจากไฟล์ในเครื่อง"><span class="icon">📂</span> Local</button>
         </div>
       </div>
       <div class="card">
-        <div id="state-empty" style="text-align:center;padding:40px;color:var(--text3);font-size:0.82rem">กด "Load จาก GitHub" เพื่อดู cooldown status</div>
+        <div id="state-empty" style="text-align:center;padding:40px;color:var(--text3);font-size:13px">กด "Load จาก GitHub" เพื่อดู cooldown status</div>
         <div id="state-content" style="display:none"></div>
       </div>
     </div>
@@ -407,7 +411,7 @@ input[type=password]{letter-spacing:2px}
     <div class="panel" id="panel-settings">
       <div class="phd">
         <div><div class="ptitle" style="color:var(--gold)">⚙️ SETTINGS</div><div class="psub">จะบันทึกลงใน watchlist.json บน GitHub</div></div>
-        <button class="btn btn-cyan btn-sm" onclick="saveSettings()">💾 Save Settings → GitHub</button>
+        <button class="btn btn-cyan btn-sm" onclick="saveSettings()"><span class="icon">💾</span> Save Settings → GitHub</button>
       </div>
       <div class="card">
         <div class="g2">
@@ -431,7 +435,7 @@ input[type=password]{letter-spacing:2px}
     </div>
     <div class="fr">
       <div class="fg" style="flex:2"><label>Alert ID <span class="tip" data-tip="ไม่ซ้ำ ใช้ A-Z 0-9 _ เท่านั้น">?</span></label><input id="a-id" placeholder="AAPL_RSI_BUY" style="text-transform:uppercase"></div>
-      <div class="fg"><label>Emoji</label><input id="a-emoji" value="🔔" maxlength="4" style="text-align:center;font-size:1.1rem"></div>
+      <div class="fg"><label>Emoji</label><input id="a-emoji" value="🔔" maxlength="4" style="text-align:center;font-size:17px"></div>
     </div>
     <div class="fr">
       <div class="fg"><label>Alert Type</label>
@@ -531,6 +535,11 @@ document.addEventListener('DOMContentLoaded', () => {
     renderWL();
     updatePills();
     syncSettings();
+    // Default page: watchlist (ถ้าเชื่อมต่อแล้ว)
+    show('watchlist');
+  } else {
+    // ยังไม่เชื่อมต่อ → ไปหน้า connect
+    show('connect');
   }
 
   renderFields();
@@ -709,7 +718,7 @@ function clearGitHubConfig() {
   document.getElementById('gh-owner').value = '';
   document.getElementById('gh-repo').value = '';
   setConnected(false);
-  showToast('🗑 ลบข้อมูลแล้ว');
+  showToast('<span class="icon">🗑</span> ลบข้อมูลแล้ว');
 }
 
 // ══════════════════════════════════════════════════════════
@@ -815,7 +824,7 @@ async function loadFileFromGH(filename, type) {
 function renderWL() {
   const c = document.getElementById('wl-cards');
   if (!WL.watchlist.length) {
-    c.innerHTML = '<div style="text-align:center;padding:60px;color:var(--text3);font-size:0.85rem">ยังไม่มีหุ้น — กด <strong style="color:var(--cyan)">➕ เพิ่ม Symbol</strong></div>';
+    c.innerHTML = '<div style="text-align:center;padding:60px;color:var(--text3);font-size:13px">ยังไม่มีหุ้น — กด <strong style="color:var(--cyan)">➕ เพิ่ม Symbol</strong></div>';
     return;
   }
   c.innerHTML = WL.watchlist.map((s,si) => `
@@ -825,8 +834,8 @@ function renderWL() {
         <span class="sname">${s.symbol}</span>
         <span class="sfull">${s.name}</span>
         <span class="smkt">${s.market}</span>
-        <span style="font-size:0.68rem;color:var(--text3);font-family:var(--mono)">${s.alerts.length} alerts</span>
-        <label onclick="event.stopPropagation()" style="display:flex;align-items:center;gap:5px;font-size:0.72rem;color:var(--text2);margin-left:auto;cursor:pointer">
+        <span style="font-size:11px;color:var(--text3);font-family:var(--mono)">${s.alerts.length} alerts</span>
+        <label onclick="event.stopPropagation()" style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);margin-left:auto;cursor:pointer">
           <input type="checkbox" ${s.enabled!==false?'checked':''} onchange="WL.watchlist[${si}].enabled=this.checked;markUnsaved()"> Active
         </label>
         <div style="display:flex;gap:5px;margin-left:4px" onclick="event.stopPropagation()">
@@ -845,12 +854,12 @@ function renderWL() {
 function alertRow(a,si,ai) {
   const i = TI[a.type] || {icon:'⚙️'};
   return `<div class="arow">
-    <span class="aemoji">${a.emoji||i.icon}</span>
+    <span class="aemoji" style='font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif'>${a.emoji||i.icon}</span>
     <div class="ainfo">
       <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
         <span class="aid">${a.id}</span>
         <span class="tbadge t-${a.type}">${i.icon} ${a.type}</span>
-        <span style="font-size:0.62rem;color:var(--text3);font-family:var(--mono)">cd:${a.cooldown_minutes||60}m</span>
+        <span style="font-size:10px;color:var(--text3);font-family:var(--mono)">cd:${a.cooldown_minutes||60}m</span>
       </div>
       <div class="adetail">${alertSummary(a)}</div>
     </div>
@@ -960,10 +969,10 @@ function renderFields() {
     support_resistance:()=>hr+row(fg('Level',n('f-lvl',1,0,null,0.001)),fg('Direction',s('f-dir',[['break_below','ทะลุลง'],['break_above','ทะลุขึ้น']]))),
     rsi:()=>hr+row(fg('Condition',s('f-cond',[['oversold','Oversold (<30)'],['overbought','Overbought (>70)'],['extreme_oversold','Extreme Oversold (<20)'],['extreme_overbought','Extreme Overbought (>80)'],['turning_up','Turning Up'],['turning_down','Turning Down']])),fg('Timeframe',tf('f-iv')),fg('Period',n('f-per',14,3,50),'ปกติ=14'))+row(fg('Oversold Lvl',n('f-os',30,5,49)),fg('Overbought Lvl',n('f-ob',70,51,95))),
     ma_crossover:()=>hr+row(fg('Condition',s('f-cond',[['golden_cross','🌟 Golden Cross'],['death_cross','💀 Death Cross'],['above_both','เหนือ MA ทั้งคู่'],['below_both','ต่ำกว่า MA ทั้งคู่'],['trend_bullish','Trend Bullish'],['trend_bearish','Trend Bearish']])),fg('MA Type',s('f-mat',[['EMA','EMA'],['SMA','SMA']])),fg('Timeframe',tf('f-iv')))+row(fg('Fast Period',n('f-fast',9,3,100)),fg('Slow Period',n('f-slow',21,5,200))),
-    candle_pattern:()=>hr+'<div class="fg"><label>เลือก Pattern</label><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:5px">'+PATS.map(p=>`<label title="${PDESC[p]||p}" style="display:flex;align-items:center;gap:5px;padding:5px 8px;background:var(--bg);border:1px solid var(--border);border-radius:4px;cursor:pointer;font-size:0.71rem"><input type="checkbox" id="cp-${p}" style="width:auto;margin:0"> ${p} <span style="color:var(--text3);font-size:0.62rem">— ${PDESC[p]||''}</span></label>`).join('')+'</div></div>'+row(fg('Timeframe',tf('f-iv')),fg('Match',s('f-match',[['true','ANY — พบใดก็ trigger'],['false','ALL — ต้องพบทั้งหมด']]))),
-    news_sentiment:()=>hr+row(fg('Condition',s('f-cond',[['any','ทุกข่าว'],['positive','ข่าวบวก'],['negative','ข่าวลบ'],['strong_positive','ข่าวบวกแรง'],['strong_negative','ข่าวลบแรง'],['high_volume','ข่าวเยอะ']])),fg('ย้อนหลัง (ชม.)',n('f-hrs',24,0,168)),fg('Max ข่าว',n('f-max',5,1,20)))+row(fg('Min ข่าว',n('f-mn',1,1,20)),fg('แปลไทย','<div style="padding:8px 0;display:flex;align-items:center;gap:7px"><input type="checkbox" id="f-tr" checked style="width:auto"><span style="font-size:0.77rem">เปิดแปล</span></div>')),
+    candle_pattern:()=>hr+'<div class="fg"><label>เลือก Pattern</label><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:5px">'+PATS.map(p=>`<label title="${PDESC[p]||p}" style="display:flex;align-items:center;gap:5px;padding:5px 8px;background:var(--bg);border:1px solid var(--border);border-radius:4px;cursor:pointer;font-size:11px"><input type="checkbox" id="cp-${p}" style="width:auto;margin:0"> ${p} <span style="color:var(--text3);font-size:10px">— ${PDESC[p]||''}</span></label>`).join('')+'</div></div>'+row(fg('Timeframe',tf('f-iv')),fg('Match',s('f-match',[['true','ANY — พบใดก็ trigger'],['false','ALL — ต้องพบทั้งหมด']]))),
+    news_sentiment:()=>hr+row(fg('Condition',s('f-cond',[['any','ทุกข่าว'],['positive','ข่าวบวก'],['negative','ข่าวลบ'],['strong_positive','ข่าวบวกแรง'],['strong_negative','ข่าวลบแรง'],['high_volume','ข่าวเยอะ']])),fg('ย้อนหลัง (ชม.)',n('f-hrs',24,0,168)),fg('Max ข่าว',n('f-max',5,1,20)))+row(fg('Min ข่าว',n('f-mn',1,1,20)),fg('แปลไทย','<div style="padding:8px 0;display:flex;align-items:center;gap:7px"><input type="checkbox" id="f-tr" checked style="width:auto"><span style="font-size:12px">เปิดแปล</span></div>')),
     position_size:()=>hr+row(fg('Account $',n('f-acc',10000,100)),fg('Risk %',n('f-rsk',2,0.5,10,0.5)),fg('วิธี',s('f-mth',[['fixed_risk','Fixed Risk'],['half_kelly','Half-Kelly'],['kelly','Full Kelly']])))+row(fg('Win Rate',n('f-wr',0.55,0.1,0.99,0.05)),fg('Target %',n('f-tp',0,0,null,0.5)),fg('Stop % (0=ATR)',n('f-sp',0,0,50,0.1))),
-    mtf_alignment:()=>hr+'<div class="fg"><label>Timeframes</label><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:5px">'+['1m','5m','15m','30m','1h','4h','1d','1wk'].map(t=>`<label style="display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--bg);border:1px solid var(--border);border-radius:4px;cursor:pointer;font-size:0.75rem"><input type="checkbox" id="mtf-${t}" ${['1h','4h','1d'].includes(t)?'checked':''} style="width:auto;margin:0"> ${t}</label>`).join('')+'</div></div>'+row(fg('Alignment',s('f-al',[['mostly_bullish','mostly_bullish'],['strong_bullish_all','strong_bullish_all'],['leaning_bullish','leaning_bullish'],['mostly_bearish','mostly_bearish'],['strong_bearish_all','strong_bearish_all']])),fg('Min Bull TF',n('f-mb',2,1,8))),
+    mtf_alignment:()=>hr+'<div class="fg"><label>Timeframes</label><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:5px">'+['1m','5m','15m','30m','1h','4h','1d','1wk'].map(t=>`<label style="display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--bg);border:1px solid var(--border);border-radius:4px;cursor:pointer;font-size:12px"><input type="checkbox" id="mtf-${t}" ${['1h','4h','1d'].includes(t)?'checked':''} style="width:auto;margin:0"> ${t}</label>`).join('')+'</div></div>'+row(fg('Alignment',s('f-al',[['mostly_bullish','mostly_bullish'],['strong_bullish_all','strong_bullish_all'],['leaning_bullish','leaning_bullish'],['mostly_bearish','mostly_bearish'],['strong_bearish_all','strong_bearish_all']])),fg('Min Bull TF',n('f-mb',2,1,8))),
     alert_score:()=>hr+row(fg('Direction',s('f-dir',[['bullish','🟢 Bullish'],['bearish','🔴 Bearish']])),fg('Min Score',n('f-ms',65,30,95),'65=ดี 75=ดีมาก 80=แข็ง'),fg('Timeframe',tf('f-iv'))),
     backtest_check:()=>hr+row(fg('Rule',s('f-rule',[['rsi_oversold','RSI Oversold'],['rsi_overbought','RSI Overbought'],['golden_cross','Golden Cross'],['death_cross','Death Cross'],['volume_spike','Volume Spike'],['price_breakout','Price Breakout'],['price_breakdown','Price Breakdown'],['hammer','Hammer'],['three_soldiers','Three Soldiers']])),fg('Timeframe',tf('f-iv')))+row(fg('ย้อนหลัง (วัน)',n('f-days',180,60,730,30)),fg('ถือครอง (วัน)',n('f-hold',5,1,30)),fg('Min Win %',n('f-mwr',50,30,90)),fg('Min Avg Ret %',n('f-mret',0,-10,20,0.5)))
   };
@@ -1061,7 +1070,7 @@ function renderLog() {
     const ts  = e.timestamp ? new Date(new Date(e.timestamp).getTime()+7*3600000).toISOString().replace('T',' ').slice(0,19) : '-';
     const pct = e.change_pct !== undefined ? (e.change_pct >= 0 ? `<span style="color:var(--green)">+${e.change_pct.toFixed(2)}%</span>` : `<span style="color:var(--red)">${e.change_pct.toFixed(2)}%</span>`) : '-';
     const ico = (TI[e.type]||{icon:'⚙️'}).icon;
-    return `<tr><td style="color:var(--text2);white-space:nowrap">${ts}</td><td style="font-family:var(--mono);color:var(--cyan);font-weight:700">${e.symbol}</td><td style="font-family:var(--mono);font-size:0.67rem">${e.alert_id}</td><td><span class="tbadge t-${e.type}">${ico} ${e.type}</span></td><td style="font-family:var(--mono)">$${e.price?.toFixed(4)||'-'}</td><td>${pct}</td></tr>`;
+    return `<tr><td style="color:var(--text2);white-space:nowrap">${ts}</td><td style="font-family:var(--mono);color:var(--cyan);font-weight:700">${e.symbol}</td><td style="font-family:var(--mono);font-size:11px">${e.alert_id}</td><td><span class="tbadge t-${e.type}">${ico} ${e.type}</span></td><td style="font-family:var(--mono)">$${e.price?.toFixed(4)||'-'}</td><td>${pct}</td></tr>`;
   }).join('');
 }
 
@@ -1074,7 +1083,7 @@ function renderState() {
   empty.style.display = 'none'; content.style.display = '';
   const now = Date.now();
   content.innerHTML = Object.entries(stateData).map(([sym, alerts]) => {
-    if (sym === '__daily_summary__') return `<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.77rem"><span style="color:var(--text2);font-family:var(--mono)">📊 Daily Summary:</span> <span style="color:var(--text3)">${alerts.last_sent||'-'}</span></div>`;
+    if (sym === '__daily_summary__') return `<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:12px"><span style="color:var(--text2);font-family:var(--mono)">📊 Daily Summary:</span> <span style="color:var(--text3)">${alerts.last_sent||'-'}</span></div>`;
     return `<div style="margin-bottom:14px"><div style="font-family:var(--mono);font-weight:700;color:var(--cyan);margin-bottom:7px">${sym}</div>`+
       Object.entries(alerts).map(([aid, info]) => {
         const fired   = info.last_fired;
@@ -1082,7 +1091,7 @@ function renderState() {
         const cd      = WL.watchlist.flatMap(s => s.alerts).find(a => a.id === aid)?.cooldown_minutes || 60;
         const rem     = minsAgo !== null ? Math.max(0, cd - minsAgo) : 0;
         const status  = rem > 0 ? `<span style="color:var(--orange)">⏳ ${rem}m เหลือ</span>` : `<span style="color:var(--green)">✅ พร้อม</span>`;
-        return `<div style="display:flex;align-items:center;gap:10px;padding:6px 10px;background:var(--bg);border-radius:4px;margin-bottom:4px;font-size:0.73rem"><span style="font-family:var(--mono);color:var(--text2);flex:1">${aid}</span><span style="color:var(--text3)">${fired?fired.slice(0,19).replace('T',' '):'-'}</span>${status}</div>`;
+        return `<div style="display:flex;align-items:center;gap:10px;padding:6px 10px;background:var(--bg);border-radius:4px;margin-bottom:4px;font-size:12px"><span style="font-family:var(--mono);color:var(--text2);flex:1">${aid}</span><span style="color:var(--text3)">${fired?fired.slice(0,19).replace('T',' '):'-'}</span>${status}</div>`;
       }).join('') + '</div>';
   }).join('');
 }
@@ -1176,7 +1185,7 @@ function downloadLocalWl() {
   a.download = 'watchlist.json';
   a.click();
   URL.revokeObjectURL(a.href);
-  showToast('⬇️ Download watchlist.json แล้ว', 'ok');
+  showToast('<span class="icon">⬇️</span> Download watchlist.json แล้ว', 'ok');
 }
 
 // Hybrid save: ลอง GitHub ก่อน ถ้าล้มเหลว offer download
