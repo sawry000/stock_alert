@@ -2401,5 +2401,104 @@
     "price": 4.570000171661377,
     "change_pct": 0.21930201011792425,
     "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T10:17:32Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 73.73999786376953,
+    "change_pct": 0.1629962833055239,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T10:17:36Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 179.8300018310547,
+    "change_pct": 0.9838395708929146,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-28T10:17:40Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.619999885559082,
+    "change_pct": -2.155173235926134,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-28T10:17:42Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 17.110000610351562,
+    "change_pct": -3.8963776610953715,
+    "value": 3.7393933611144208
+  },
+  {
+    "timestamp": "2026-05-28T10:17:44Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 17.110000610351562,
+    "change_pct": -3.8963776610953715,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T10:17:49Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 94.55999755859375,
+    "change_pct": -0.6096304828739232,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T10:17:53Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 21.219999313354492,
+    "change_pct": 0.2361800347401534,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T10:17:59Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.369999885559082,
+    "change_pct": -0.6818207827481436,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T10:18:04Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 11.920000076293945,
+    "change_pct": -0.2510453866615395,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T10:18:08Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 6.570000171661377,
+    "change_pct": 2.61280634199251e-06,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T10:18:12Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 48.209999084472656,
+    "change_pct": -1.1076941856971154,
+    "value": 2
   }
 ]
