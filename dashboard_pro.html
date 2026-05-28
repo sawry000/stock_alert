@@ -346,6 +346,67 @@ input[type=password]{letter-spacing:2px}
 .ph-prog-track{height:5px;background:var(--bg3);border-radius:3px;overflow:hidden;margin-top:5px}
 .ph-prog-fill{height:100%;border-radius:3px;transition:width 1s cubic-bezier(.4,0,.2,1)}
 
+
+/* ════ Portfolio Health — Card CSS (missing classes) ════ */
+.pos-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s;animation:fadeUp .3s ease both}
+.pos-card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.pos-card.status-sl_hit{border-color:var(--red);box-shadow:0 0 14px rgba(255,23,68,.18)}
+.pos-card.status-tp2_hit{border-color:#ffd700;box-shadow:0 0 14px rgba(255,215,0,.15)}
+.pos-card.status-tp1_hit{border-color:var(--green);box-shadow:0 0 14px rgba(0,255,157,.12)}
+.pos-card.status-near_sl{border-color:var(--orange)}
+.pos-card.status-in_profit{border-color:rgba(0,255,157,.2)}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;background:var(--bg3);flex-wrap:wrap;gap:6px}
+.card-symbol{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--cyan)}
+.card-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.dot-green{background:var(--green);box-shadow:0 0 6px var(--green)}
+.dot-yellow{background:var(--gold);box-shadow:0 0 6px var(--gold)}
+.dot-red{background:var(--red);box-shadow:0 0 6px var(--red)}
+.card-body{padding:13px 14px}
+.tv-link{font-size:11px;font-family:var(--mono);color:var(--cyan);text-decoration:none;padding:2px 7px;border:1px solid rgba(0,229,255,.25);border-radius:4px;background:rgba(0,229,255,.07);transition:all .15s}
+.tv-link:hover{background:rgba(0,229,255,.15);border-color:rgba(0,229,255,.5)}
+.status-badge{font-family:var(--mono);font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px}
+.badge-sl_hit{background:rgba(255,23,68,.15);color:var(--red);border:1px solid rgba(255,23,68,.3)}
+.badge-tp1_hit,.badge-tp2_hit{background:rgba(255,215,0,.12);color:#ffd700;border:1px solid rgba(255,215,0,.25)}
+.badge-near_sl{background:rgba(255,109,0,.12);color:var(--orange);border:1px solid rgba(255,109,0,.25)}
+.badge-in_profit{background:rgba(0,255,157,.1);color:var(--green);border:1px solid rgba(0,255,157,.2)}
+.badge-in_drawdown{background:rgba(255,213,79,.1);color:var(--gold);border:1px solid rgba(255,213,79,.2)}
+.price-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.price-current{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--text)}
+.price-chg{font-family:var(--mono);font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px}
+.chg-pos{color:var(--green);background:rgba(0,255,157,.1)}
+.chg-neg{color:var(--red);background:rgba(255,23,68,.1)}
+.chg-neu{color:var(--text2);background:rgba(255,255,255,.05)}
+.card-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.meta-item{background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:7px 10px}
+.meta-label{font-size:10px;color:var(--text3);font-family:var(--mono);letter-spacing:.05em;margin-bottom:2px}
+.meta-val{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--text)}
+.alloc-bar{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.alloc-label{font-family:var(--mono);font-size:10px;color:var(--text3);min-width:30px}
+.alloc-track{flex:1;height:4px;background:var(--bg3);border-radius:2px;overflow:hidden}
+.alloc-fill{height:100%;background:linear-gradient(90deg,var(--cyan),var(--purple));border-radius:2px}
+.ladder{margin-bottom:10px}
+.ladder-title{font-size:10px;font-family:var(--mono);color:var(--text3);letter-spacing:.05em;margin-bottom:5px;text-transform:uppercase}
+.lr-label{font-family:var(--mono);font-size:10px;font-weight:700;min-width:28px;color:var(--text2)}
+.lr-price{font-family:var(--mono);font-size:12px;font-weight:600;flex:1;color:var(--text)}
+.lr-pct{font-family:var(--mono);font-size:11px;color:var(--text3);min-width:50px}
+.lr-rr{font-family:var(--mono);font-size:10px;color:var(--text3)}
+.prog-section{margin-bottom:10px}
+.prog-header{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--text3);margin-bottom:4px}
+.action-box{padding:9px 12px;border-radius:6px;font-size:12px;line-height:1.5;border-left:3px solid;margin-bottom:10px}
+.action-box.action-critical{border-color:var(--red);background:rgba(255,23,68,.07);color:#ff8a80}
+.action-box.action-take_profit{border-color:#ffd700;background:rgba(255,215,0,.07);color:#ffd700}
+.action-box.action-high{border-color:var(--orange);background:rgba(255,109,0,.07);color:#ffab40}
+.action-box.action-medium{border-color:var(--gold);background:rgba(255,213,79,.06);color:var(--gold)}
+.action-box.action-low{border-color:var(--green);background:rgba(0,255,157,.05);color:#69f0ae}
+.action-icon{margin-right:5px;font-family:var(--emoji)}
+.pnl-row{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--bg);border:1px solid var(--border);border-radius:5px}
+.pnl-label{font-family:var(--mono);font-size:11px;color:var(--text3)}
+.pnl-val{font-family:var(--mono);font-size:14px;font-weight:700}
+.sc-green{color:var(--green) !important}
+.sc-red{color:var(--red) !important}
+.sc-yellow{color:#ffd700 !important}
+.sc-white{color:var(--text) !important}
+
 </style>
 </head>
 <body>
@@ -2483,7 +2544,9 @@ function parsePortfolio(text) {
   summary.openCount  = openM ? parseInt(openM[1]) : 0;
 
   // per-position blocks
-  const re = /(🟢|🟡|🔴)\s+\[(\w+)\]\(https?:\/\/[^\)]+\)\s+\(([\d.]+)\)\s+\(([\d.]+)%\)\s+\(([+-][\d.]+)\s*\$\)\n💰\s*([\d.]+)[+-][\d.]+\s*=\s*([\d.]+)\s+\([❤️💚]+\s*([+-][\d.]+)%\)\n📊\s*([\d.]+)\s*➡️\s*([\d.]+)\s+(?:⚠️SL)?♦️\s*SL:\s*([\d.]+)\s+🎯TP1:\s*([\d.]+)\s+🎯TP2:\s*([\d.]+)/gm;
+  // รูปแบบจริง: "  🔴  GLD (url) (1.41) (28.1%) (-21.93 $)"  ← plain text ไม่ใช่ markdown
+  // ไม่ใช่ "[GLD](url)" ← regex เก่าผิด
+  const re = /(🟢|🟡|🔴)\s+(\w+)\s+\(https?:\/\/[^\)]+\)\s+\(([\d.]+)\)\s+\(([\d.]+)%\)\s+\(([+-][\d.]+)\s*\$\)\n\s*💰\s*([\d.]+)[+\-][\d.]+\s*=\s*([\d.]+)\s+\([\u2764\ufe0f\u{1F49A}]+\ufe0f?\s*([+-][\d.]+)%\)\n\s*📊\s*([\d.]+)\s*➡️\s*([\d.]+).*?\n\s*♦️\s*SL:\s*([\d.]+)\s+🎯TP1:\s*([\d.]+)\s+🎯TP2:\s*([\d.]+)/gmsu;
   let m;
   while ((m = re.exec(text)) !== null) {
     positions.push({
@@ -2729,10 +2792,10 @@ async function phRunAnalysis() {
 }
 
 function phRenderDashboard(summary) {
-  const critCnt  = allResults.filter(r => r.status.alertCondition === 'sl_hit').length;
-  const tpCnt    = allResults.filter(r => ['tp1_hit','tp2_hit'].includes(r.status.alertCondition)).length;
-  const warnCnt  = allResults.filter(r => r.status.alertCondition === 'near_sl').length;
-  const profitCnt= allResults.filter(r => r.status.alertCondition === 'in_profit').length;
+  const critCnt  = phAllResults.filter(r => r.status.alertCondition === 'sl_hit').length;
+  const tpCnt    = phAllResults.filter(r => ['tp1_hit','tp2_hit'].includes(r.status.alertCondition)).length;
+  const warnCnt  = phAllResults.filter(r => r.status.alertCondition === 'near_sl').length;
+  const profitCnt= phAllResults.filter(r => r.status.alertCondition === 'in_profit').length;
   const totalPnl = phAllResults.reduce((s,r) => s + r.pnlUsd, 0);
 
   // summary bar
@@ -2740,7 +2803,7 @@ function phRenderDashboard(summary) {
   sb.innerHTML = `
     <div class="ph-stat-card">
       <div class="ph-stat-label">ไม้ที่เปิด</div>
-      <div class="ph-stat-val" style="color:var(--cyan)">${allResults.length}</div>
+      <div class="ph-stat-val" style="color:var(--cyan)">${phAllResults.length}</div>
     </div>
     <div class="ph-stat-card">
       <div class="ph-stat-label">P&L ปัจจุบัน</div>
@@ -2809,7 +2872,7 @@ function phBuildCard(r) {
   const progColor = cond === 'sl_hit' ? 'var(--red)' :
                     cond.includes('tp') ? '#ffd700' :
                     cond === 'near_sl'  ? 'var(--orange)' :
-                    cond === 'in_profit'? 'var(--green)' : 'var(--yellow)';
+                    cond === 'in_profit'? 'var(--green)' : 'var(--gold)';
 
   // dot
   const dotClass = pos.dot === '🟢' ? 'dot-green' : pos.dot === '🟡' ? 'dot-yellow' : 'dot-red';
@@ -2966,12 +3029,12 @@ function phShowError(msg) {
   phSetSpinner(false);
   const el = document.getElementById('ph-errorBox');
   el.textContent = '⚠️ ' + msg;
-  el.classList.add('show');
+  el.style.display = 'block';
 }
 function phClearAll() {
   document.getElementById('ph-portfolioInput').value = '';
   document.getElementById('ph-summarySection').style.display = 'none';
-  document.getElementById('ph-errorBox').classList.remove('show');
+  document.getElementById('ph-errorBox').style.display = 'none';
   document.getElementById('ph-emptyState').style.display = 'none';
   document.getElementById('ph-lastUpdated').textContent = 'ยังไม่มีข้อมูล';
   phAllResults = [];
