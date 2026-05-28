@@ -2977,5 +2977,23 @@
     "price": 2.9000000953674316,
     "change_pct": 10.266163321955581,
     "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T18:47:50Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 11.260000228881836,
+    "change_pct": -5.774056662076681,
+    "value": -5.774056662076681
+  },
+  {
+    "timestamp": "2026-05-28T18:47:54Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_PCT_UP_5",
+    "type": "percent_change",
+    "price": 51.54999923706055,
+    "change_pct": 5.743588178585737,
+    "value": 5.743588178585737
   }
 ]
