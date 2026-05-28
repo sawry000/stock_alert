@@ -313,6 +313,39 @@ input[type=password]{letter-spacing:2px}
 .preset-badge-swing{background:rgba(0,229,255,0.12);color:var(--cyan)}
 .preset-badge-risk{background:rgba(255,213,79,0.12);color:var(--gold)}
 .preset-badge-auto{background:rgba(224,64,251,0.12);color:var(--purple)}
+
+/* ════ Portfolio Health Panel ════ */
+@keyframes spin{to{transform:rotate(360deg)}}
+.ph-ftab{padding:5px 13px;border-radius:20px;font-size:11px;font-family:var(--mono);border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;transition:all .15s}
+.ph-ftab:hover{border-color:var(--cyan);color:var(--cyan)}
+.ph-ftab.active{background:var(--cyan);border-color:var(--cyan);color:#05080f;font-weight:700}
+.ph-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s;animation:fadeUp .3s ease both}
+.ph-card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.ph-card.sl_hit{border-color:var(--red);box-shadow:0 0 14px rgba(255,23,68,.18)}
+.ph-card.tp2_hit{border-color:#ffd700;box-shadow:0 0 14px rgba(255,215,0,.15)}
+.ph-card.tp1_hit{border-color:var(--green);box-shadow:0 0 14px rgba(0,255,157,.12)}
+.ph-card.near_sl{border-color:var(--orange)}
+.ph-card.in_profit{border-color:rgba(0,255,157,.2)}
+.ph-stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+.ph-stat-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--text2);text-transform:uppercase;margin-bottom:6px}
+.ph-stat-val{font-family:var(--mono);font-size:20px;font-weight:700}
+.ph-ladder-row{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;margin-bottom:4px;font-family:var(--mono);font-size:12px}
+.ph-lr-sl{background:rgba(255,23,68,.07);border:1px solid rgba(255,23,68,.18)}
+.ph-lr-tp1{background:rgba(0,255,157,.06);border:1px solid rgba(0,255,157,.15)}
+.ph-lr-tp2{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.18)}
+.ph-hit-tag{font-size:9px;padding:1px 5px;border-radius:3px;background:var(--green);color:#000;font-weight:700}
+.ph-near-tag{font-size:9px;padding:1px 5px;border-radius:3px;background:var(--red);color:#fff;font-weight:700}
+.ph-src-alert{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.06em;padding:2px 6px;border-radius:3px;background:rgba(224,64,251,.2);color:#e040fb;border:1px solid rgba(224,64,251,.35);text-transform:uppercase}
+.ph-src-snap{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.06em;padding:2px 6px;border-radius:3px;background:rgba(0,229,255,.1);color:var(--cyan);border:1px solid rgba(0,229,255,.25);text-transform:uppercase}
+.ph-action{margin-top:10px;padding:9px 12px;border-radius:6px;font-size:12px;line-height:1.5;border-left:3px solid}
+.ph-action.critical{border-color:var(--red);background:rgba(255,23,68,.07);color:#ff8a80}
+.ph-action.take_profit{border-color:#ffd700;background:rgba(255,215,0,.07);color:#ffd700}
+.ph-action.high{border-color:var(--orange);background:rgba(255,109,0,.07);color:#ffab40}
+.ph-action.medium{border-color:var(--gold);background:rgba(255,213,79,.06);color:var(--gold)}
+.ph-action.low{border-color:var(--green);background:rgba(0,255,157,.05);color:#69f0ae}
+.ph-prog-track{height:5px;background:var(--bg3);border-radius:3px;overflow:hidden;margin-top:5px}
+.ph-prog-fill{height:100%;border-radius:3px;transition:width 1s cubic-bezier(.4,0,.2,1)}
+
 </style>
 </head>
 <body>
@@ -339,6 +372,9 @@ input[type=password]{letter-spacing:2px}
     <div class="slabel">Logs (GitHub)</div>
     <button class="nbtn" onclick="show('log')" id="nav-log"><span class="msi">assignment</span> Alert Log</button>
     <button class="nbtn" onclick="show('state')" id="nav-state"><span class="msi">folder_open</span> State/Cooldown</button>
+    <div class="sdiv"></div>
+    <div class="slabel">Tools</div>
+    <button class="nbtn" onclick="show('portfolio-health')" id="nav-portfolio-health"><span class="msi">monitor_heart</span> Portfolio Health</button>
     <div class="sdiv"></div>
     <div class="slabel">Config</div>
     <button class="nbtn" onclick="show('settings')"><span class="msi">settings</span> Settings</button>
@@ -524,6 +560,68 @@ input[type=password]{letter-spacing:2px}
           <div class="fg"><label>Default Cooldown (นาที) <span class="tip" data-tip="ระยะเวลาขั้นต่ำระหว่าง alert เดิมที่ fire ซ้ำ">?</span></label><input type="number" id="s-cd" value="60" min="5"></div>
           <div class="fg"><label>Daily Summary Hour UTC <span class="tip" data-tip="ชั่วโมง UTC ที่ส่ง daily summary (1=08:00 ICT)">?</span></label><input type="number" id="s-sh" value="1" min="0" max="23"></div>
         </div>
+      </div>
+    </div>
+
+
+    <!-- ════ PORTFOLIO HEALTH ════ -->
+    <div class="panel" id="panel-portfolio-health">
+      <div class="phd">
+        <div>
+          <div class="ptitle" style="color:var(--green)">
+            <span class="msi" style="font-size:18px;color:var(--green)">monitor_heart</span> PORTFOLIO HEALTH
+          </div>
+          <div class="psub">วิเคราะห์ไม้ที่เปิดอยู่ — เทียบกับ Alert System (SL/TP คำนวณจาก ATR จริง)</div>
+        </div>
+      </div>
+
+      <!-- Input area -->
+      <div class="card" style="margin-bottom:16px">
+        <div style="font-size:11px;font-family:var(--mono);letter-spacing:.1em;color:var(--cyan);text-transform:uppercase;margin-bottom:10px">
+          📋 วาง Portfolio Snapshot จาก Telegram
+        </div>
+        <textarea id="ph-portfolioInput"
+          style="width:100%;min-height:160px;resize:vertical;background:var(--bg2);border:1px solid var(--border2);border-radius:7px;color:var(--text);font-family:var(--mono);font-size:12px;line-height:1.6;padding:12px 14px;outline:none;transition:border-color .2s"
+          onfocus="this.style.borderColor='var(--cyan)'" onblur="this.style.borderColor='var(--border2)'"
+          placeholder="📈 $(-28.19) (28/05/26 22:31)&#10;🔴 [GLD](https://...) (1.41) (29.5%) (-24.32 $)&#10;💰 603.99-24.32 = 579.67 (❤️ -4.0%)&#10;📊 428.32 ➡️ 411.07 ♦️ SL: 394.05 🎯TP1: 492.57 🎯TP2: 556.81&#10;..."></textarea>
+        <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
+          <button class="btn btn-green btn-sm" onclick="phRunAnalysis()">
+            <span class="msi">bolt</span> วิเคราะห์ Portfolio
+          </button>
+          <button class="btn btn-sm" style="background:var(--bg3);color:var(--text2);border:1px solid var(--border2)" onclick="phClearAll()">
+            <span class="msi">close</span> ล้าง
+          </button>
+          <div id="ph-spinner" style="display:none;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--text2)">
+            <div style="width:16px;height:16px;border-radius:50%;border:2px solid var(--border2);border-top-color:var(--cyan);animation:spin .7s linear infinite"></div>
+            <span id="ph-spinnerText">กำลังวิเคราะห์...</span>
+          </div>
+          <div style="margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--text3)" id="ph-lastUpdated">ยังไม่มีข้อมูล</div>
+        </div>
+        <div id="ph-errorBox" style="display:none;margin-top:10px;background:rgba(255,23,68,.08);border:1px solid rgba(255,23,68,.3);border-radius:7px;padding:12px 16px;font-family:var(--mono);font-size:12px;color:#ff8a80"></div>
+      </div>
+
+      <!-- Summary + Cards -->
+      <div id="ph-summarySection" style="display:none">
+        <!-- Summary bar -->
+        <div id="ph-summaryBar" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:16px"></div>
+
+        <!-- Filter tabs -->
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap" id="ph-filterBar">
+          <button class="ph-ftab active" data-filter="all" onclick="phSetFilter('all',this)">ทั้งหมด</button>
+          <button class="ph-ftab" data-filter="sl_hit"      onclick="phSetFilter('sl_hit',this)">🚨 SL แตะ</button>
+          <button class="ph-ftab" data-filter="take_profit" onclick="phSetFilter('take_profit',this)">🎯 ถึงเป้า</button>
+          <button class="ph-ftab" data-filter="near_sl"     onclick="phSetFilter('near_sl',this)">⚠️ เฝ้าระวัง</button>
+          <button class="ph-ftab" data-filter="in_profit"   onclick="phSetFilter('in_profit',this)">📈 กำไรอยู่</button>
+          <button class="ph-ftab" data-filter="in_drawdown" onclick="phSetFilter('in_drawdown',this)">📉 ย่อตัว</button>
+        </div>
+
+        <!-- Cards grid -->
+        <div id="ph-cardsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px"></div>
+      </div>
+
+      <div id="ph-emptyState" style="display:none;text-align:center;padding:50px 20px;font-family:var(--mono);color:var(--text3);font-size:13px">
+        <div style="font-size:36px;margin-bottom:10px;opacity:.35">📭</div>
+        ไม่พบข้อมูล Position — ตรวจสอบ format ข้อความ
       </div>
     </div>
 
@@ -2363,6 +2461,523 @@ function applyPreset() {
 document.getElementById('preset-modal').addEventListener('click', function(e) {
   if (e.target === this) closePresetModal();
 });
+
+
+// ════ PORTFOLIO HEALTH ════
+
+// ══════════════════════════════════════════════════════════════
+//  PARSER — แปลงข้อความ snapshot → array of positions
+// ══════════════════════════════════════════════════════════════
+function parsePortfolio(text) {
+  const positions = [];
+
+  // timestamp + pnl
+  const tsM = text.match(/📈\s*\$\(([+-]?[\d.]+)\)\s*\(([^)]+)\)/);
+  const summary = {
+    timestamp : tsM ? tsM[2].trim() : '',
+    totalPnl  : tsM ? parseFloat(tsM[1]) : 0,
+  };
+  const fundM  = text.match(/Total Fund.*?:\s*([\d.]+)[+-][\d.]+\s*=\s*([\d.]+)/);
+  summary.totalFund  = fundM ? parseFloat(fundM[2]) : 0;
+  const openM  = text.match(/Open:\s*(\d+)/);
+  summary.openCount  = openM ? parseInt(openM[1]) : 0;
+
+  // per-position blocks
+  const re = /(🟢|🟡|🔴)\s+\[(\w+)\]\(https?:\/\/[^\)]+\)\s+\(([\d.]+)\)\s+\(([\d.]+)%\)\s+\(([+-][\d.]+)\s*\$\)\n💰\s*([\d.]+)[+-][\d.]+\s*=\s*([\d.]+)\s+\([❤️💚]+\s*([+-][\d.]+)%\)\n📊\s*([\d.]+)\s*➡️\s*([\d.]+)\s+(?:⚠️SL)?♦️\s*SL:\s*([\d.]+)\s+🎯TP1:\s*([\d.]+)\s+🎯TP2:\s*([\d.]+)/gm;
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    positions.push({
+      dot        : m[1],
+      symbol     : m[2],
+      shares     : parseFloat(m[3]),
+      allocPct   : parseFloat(m[4]),
+      pnlUsd     : parseFloat(m[5]),
+      fundBefore : parseFloat(m[6]),
+      fundAfter  : parseFloat(m[7]),
+      fundPnlPct : parseFloat(m[8]),
+      entry      : parseFloat(m[9]),
+      priceSnap  : parseFloat(m[10]),
+      slSnap     : parseFloat(m[11]),
+      tp1Snap    : parseFloat(m[12]),
+      tp2Snap    : parseFloat(m[13]),
+    });
+  }
+  return { positions, summary };
+}
+
+// ══════════════════════════════════════════════════════════════
+//  ATR-BASED SL/TP calculator (port from Python alert_engine)
+//  ใช้ Yahoo Finance unofficial API via proxy
+// ══════════════════════════════════════════════════════════════
+async function fetchOHLC(symbol) {
+  try {
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?range=90d&interval=1d&includePrePost=false`;
+    const res  = await fetch(url);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const q    = data?.chart?.result?.[0]?.indicators?.quote?.[0];
+    if (!q) return null;
+    return {
+      highs:  q.high.map(Number),
+      lows:   q.low.map(Number),
+      closes: q.close.map(Number),
+    };
+  } catch { return null; }
+}
+
+function calcATR(highs, lows, closes, period = 14) {
+  if (closes.length < period + 2) return null;
+  const trs = [];
+  for (let i = 1; i < closes.length; i++) {
+    trs.push(Math.max(
+      highs[i]  - lows[i],
+      Math.abs(highs[i]  - closes[i-1]),
+      Math.abs(lows[i]   - closes[i-1])
+    ));
+  }
+  let atr = trs.slice(0, period).reduce((a,b) => a+b, 0) / period;
+  for (let i = period; i < trs.length; i++)
+    atr = (atr * (period-1) + trs[i]) / period;
+  return atr;
+}
+
+function calcAlertLevels(price, highs, lows, closes, direction = 'bull') {
+  const atr = calcATR(highs, lows, closes);
+  if (!atr || atr <= 0) return null;
+
+  const n         = closes.length;
+  const recH      = highs.slice(Math.max(n-10,0));
+  const recL      = lows.slice(Math.max(n-10,0));
+  const swingLow  = Math.min(...recL);
+  const swingHigh = Math.max(...recH);
+
+  let entry, sl, risk, tp1, tp2;
+  const mult = 1.5, rr1 = 1.5, rr2 = 3.0;
+
+  if (direction === 'bull') {
+    entry = price;
+    const slAtr   = price - atr * mult;
+    const slSwing = swingLow * 0.995;
+    sl    = swingLow >= price ? slAtr : Math.max(slAtr, slSwing);
+    risk  = entry - sl;
+    if (risk <= 0) { sl = price - atr; risk = price - sl; }
+    if (risk <= 0) return null;
+    tp1 = entry + risk * rr1;
+    tp2 = entry + risk * rr2;
+  } else {
+    entry = price;
+    const slAtr   = price + atr * mult;
+    const slSwing = swingHigh * 1.005;
+    sl    = swingHigh <= price ? slAtr : Math.min(slAtr, slSwing);
+    risk  = sl - entry;
+    if (risk <= 0) { sl = price + atr; risk = sl - price; }
+    if (risk <= 0) return null;
+    tp1 = entry - risk * rr1;
+    tp2 = entry - risk * rr2;
+  }
+
+  const fmt = v => Math.round(v * 10000) / 10000;
+  const pctFrom = (a, b) => Math.round(Math.abs(a-b)/b*10000)/100;
+
+  return {
+    entry  : fmt(entry),
+    sl     : fmt(sl),
+    tp1    : fmt(tp1),
+    tp2    : fmt(tp2),
+    atr    : Math.round(atr*10000)/10000,
+    slPct  : pctFrom(sl, entry),
+    tp1Pct : pctFrom(tp1, entry),
+    tp2Pct : pctFrom(tp2, entry),
+    rr1, rr2,
+    source : 'alert',
+  };
+}
+
+// ══════════════════════════════════════════════════════════════
+//  STATUS ENGINE — เทียบ position ปัจจุบัน กับ levels
+// ══════════════════════════════════════════════════════════════
+function calcStatus(pos, currentPrice, levels) {
+  const { entry, sl, tp1, tp2 } = levels;
+  const p       = currentPrice;
+  const risk    = entry - sl;
+  const reward  = tp1 - entry;
+  const pnlPct  = ((p - entry) / entry * 100);
+
+  let progress  = 0;
+  if (reward > 0) progress = Math.max(0, Math.min(100, (p - entry) / reward * 100));
+
+  // หา condition ที่ match กับ alert system
+  let alertCondition, holdReason, nextAction;
+
+  if (p <= sl) {
+    alertCondition = 'sl_hit';
+    holdReason     = '🚨 ราคาหลุด Stop Loss';
+    nextAction     = '⛔ ขายตัดขาดทุนทันที — รอไม่ได้';
+  } else if (p >= tp2) {
+    alertCondition = 'tp2_hit';
+    holdReason     = '🏆 ถึงเป้าหมาย 2 แล้ว';
+    nextAction     = '💰 ทำกำไรทั้งหมด หรืออย่างน้อย 75%';
+  } else if (p >= tp1) {
+    alertCondition = 'tp1_hit';
+    holdReason     = '🎯 ถึงเป้าหมาย 1 แล้ว';
+    nextAction     = '💰 ทำกำไรบางส่วน 50% + เลื่อน SL มาที่ Entry';
+  } else {
+    const distToSlRatio = risk > 0 ? (p - sl) / risk : 1;
+    if (distToSlRatio <= 0.20) {
+      alertCondition = 'near_sl';
+      holdReason     = '⚠️ ใกล้ Stop Loss — เหลือ <20% ของ Risk';
+      nextAction     = '👀 เฝ้าระวังใกล้ชิด พิจารณาลดขนาดหรือรอยืนยัน';
+    } else if (p < entry) {
+      alertCondition = 'in_drawdown';
+      const distPct  = Math.round(distToSlRatio * 100);
+      holdReason     = `📉 ราคาต่ำกว่าจุดเข้า — ห่าง SL ${distPct}% ของ Risk`;
+      nextAction     = '⏳ ถือต่อได้ — SL ยังปลอดภัย ติดตามใกล้ชิด';
+    } else {
+      const progressTo50 = progress >= 50;
+      alertCondition = 'in_profit';
+      holdReason     = progressTo50
+        ? `📈 กำไรดี — ${Math.round(progress)}% ของทาง TP1 แล้ว`
+        : `📈 กำลังเดินหน้า — ${Math.round(progress)}% ของทาง TP1`;
+      nextAction     = progressTo50
+        ? '🔝 พิจารณาเลื่อน SL มาที่ Entry เพื่อ Lock กำไร'
+        : '✅ ถือต่อ — ราคากำลังเดินหน้า ไม่ต้องทำอะไร';
+    }
+  }
+
+  // สรุปภาพรวมว่าสอดคล้องกับ alert system แค่ไหน
+  let alertAlignment;
+  if (alertCondition === 'sl_hit') {
+    alertAlignment = { label: 'หลุดเงื่อนไข Alert', color: 'var(--red)', icon: '🚫' };
+  } else if (alertCondition === 'tp1_hit' || alertCondition === 'tp2_hit') {
+    alertAlignment = { label: 'บรรลุเป้าหมาย Alert', color: '#ffd700', icon: '✅' };
+  } else if (alertCondition === 'near_sl') {
+    alertAlignment = { label: 'ใกล้ขีดจำกัด Alert', color: 'var(--orange)', icon: '⚠️' };
+  } else if (alertCondition === 'in_profit') {
+    alertAlignment = { label: 'อยู่ในเงื่อนไข Alert ✓', color: 'var(--green)', icon: '🟢' };
+  } else {
+    alertAlignment = { label: 'ยังอยู่ในเงื่อนไข Alert', color: 'var(--yellow)', icon: '🟡' };
+  }
+
+  return { alertCondition, holdReason, nextAction, alertAlignment, pnlPct, progress };
+}
+
+// ══════════════════════════════════════════════════════════════
+//  MAIN — รัน analysis
+// ══════════════════════════════════════════════════════════════
+let phCurrentFilter = 'all';
+let phAllResults = [];
+
+async function phRunAnalysis() {
+  const text  = document.getElementById('ph-portfolioInput').value.trim();
+  const errEl = document.getElementById('ph-errorBox');
+  errEl.style.display = 'none';
+
+  if (!text) { phShowError('กรุณาวาง Portfolio Snapshot ก่อน'); return; }
+
+  const { positions, summary } = parsePortfolio(text);
+  if (!positions.length) { phShowError('ไม่พบข้อมูล Position — ตรวจสอบ format ข้อความ'); return; }
+
+  phSetSpinner(true, `กำลังดึงข้อมูลราคา ${positions.length} ตัว...`);
+  document.getElementById('ph-summarySection').style.display = 'none';
+  document.getElementById('ph-emptyState').style.display = 'none';
+
+  phAllResults = [];
+  let done   = 0;
+
+  for (const pos of positions) {
+    phSetSpinner(true, `กำลังวิเคราะห์ [${pos.symbol}] (${done+1}/${positions.length})...`);
+
+    // ดึง OHLC
+    const ohlc = await fetchOHLC(pos.symbol);
+    let levels, currentPrice;
+
+    if (ohlc && ohlc.closes.length >= 20) {
+      // ราคาล่าสุดจาก OHLC
+      const last = ohlc.closes.filter(v => v > 0).at(-1);
+      currentPrice = last || pos.priceSnap;
+
+      // คำนวณ levels จาก alert system (ATR)
+      const dir = pos.dot === '🔴' ? 'bear' : 'bull';
+      levels = calcAlertLevels(pos.entry, ohlc.highs, ohlc.lows, ohlc.closes, dir);
+    }
+
+    // fallback: ใช้ levels จาก snapshot
+    if (!levels) {
+      currentPrice = pos.priceSnap;
+      levels = {
+        entry  : pos.entry,
+        sl     : pos.slSnap,
+        tp1    : pos.tp1Snap,
+        tp2    : pos.tp2Snap,
+        atr    : null,
+        slPct  : Math.round(Math.abs(pos.slSnap - pos.entry) / pos.entry * 10000) / 100,
+        tp1Pct : Math.round(Math.abs(pos.tp1Snap - pos.entry) / pos.entry * 10000) / 100,
+        tp2Pct : Math.round(Math.abs(pos.tp2Snap - pos.entry) / pos.entry * 10000) / 100,
+        rr1    : 1.5, rr2: 3.0, source: 'snap',
+      };
+    }
+
+    const st = calcStatus(pos, currentPrice, levels);
+    const pnlUsd = (currentPrice - pos.entry) * pos.shares;
+
+    phAllResults.push({ pos, levels, currentPrice, status: st, pnlUsd });
+    done++;
+  }
+
+  phSetSpinner(false);
+  phRenderDashboard(summary);
+}
+
+function phRenderDashboard(summary) {
+  const critCnt  = allResults.filter(r => r.status.alertCondition === 'sl_hit').length;
+  const tpCnt    = allResults.filter(r => ['tp1_hit','tp2_hit'].includes(r.status.alertCondition)).length;
+  const warnCnt  = allResults.filter(r => r.status.alertCondition === 'near_sl').length;
+  const profitCnt= allResults.filter(r => r.status.alertCondition === 'in_profit').length;
+  const totalPnl = phAllResults.reduce((s,r) => s + r.pnlUsd, 0);
+
+  // summary bar
+  const sb = document.getElementById('ph-summaryBar');
+  sb.innerHTML = `
+    <div class="ph-stat-card">
+      <div class="ph-stat-label">ไม้ที่เปิด</div>
+      <div class="ph-stat-val" style="color:var(--cyan)">${allResults.length}</div>
+    </div>
+    <div class="ph-stat-card">
+      <div class="ph-stat-label">P&L ปัจจุบัน</div>
+      <div class="ph-stat-val ${totalPnl >= 0 ? 'sc-green':'sc-red'}">${totalPnl >= 0 ? '+' : ''}${totalPnl.toFixed(2)} $</div>
+    </div>
+    <div class="ph-stat-card">
+      <div class="ph-stat-label">🚨 แตะ SL</div>
+      <div class="ph-stat-val ${critCnt > 0 ? 'sc-red':'sc-white'}">${critCnt}</div>
+    </div>
+    <div class="ph-stat-card">
+      <div class="ph-stat-label">🎯 ถึงเป้า</div>
+      <div class="ph-stat-val ${tpCnt > 0 ? 'sc-yellow':'sc-white'}">${tpCnt}</div>
+    </div>
+    <div class="ph-stat-card">
+      <div class="ph-stat-label">⚠️ เฝ้าระวัง</div>
+      <div class="ph-stat-val ${warnCnt > 0 ? 'sc-yellow':'sc-white'}">${warnCnt}</div>
+    </div>
+    <div class="ph-stat-card">
+      <div class="ph-stat-label">📈 กำไรอยู่</div>
+      <div class="ph-stat-val" style="color:var(--green)">${profitCnt}</div>
+    </div>`;
+
+  document.getElementById('ph-lastUpdated').textContent = 'อัปเดต: ' + new Date().toLocaleTimeString('th-TH');
+
+  document.getElementById('ph-summarySection').style.display = 'block';
+  phRenderCards(phCurrentFilter);
+}
+
+function phRenderCards(filter) {
+  const grid = document.getElementById('ph-cardsGrid');
+  grid.innerHTML = '';
+
+  // Sort: critical → near_sl → tp → in_drawdown → in_profit
+  const order = ['sl_hit','near_sl','tp2_hit','tp1_hit','in_drawdown','in_profit'];
+  const sorted = [...phAllResults].sort((a,b) =>
+    order.indexOf(a.status.alertCondition) - order.indexOf(b.status.alertCondition)
+  );
+
+  const visible = sorted.filter(r => {
+    if (filter === 'all') return true;
+    if (filter === 'take_profit') return ['tp1_hit','tp2_hit'].includes(r.status.alertCondition);
+    if (filter === 'near_sl')     return r.status.alertCondition === 'near_sl';
+    return r.status.alertCondition === filter;
+  });
+
+  if (!visible.length) {
+    document.getElementById('ph-emptyState').style.display = 'block';
+    return;
+  }
+  document.getElementById('ph-emptyState').style.display = 'none';
+
+  visible.forEach((r, idx) => {
+    const card = phBuildCard(r);
+    card.style.animationDelay = `${idx * 0.045}s`;
+    grid.appendChild(card);
+  });
+}
+
+function phBuildCard(r) {
+  const { pos, levels, currentPrice, status, pnlUsd } = r;
+  const cond   = status.alertCondition;
+  const pnlPos = pnlUsd >= 0;
+  const chg    = ((currentPrice - pos.priceSnap) / pos.priceSnap * 100);
+
+  // Progress bar color
+  const progColor = cond === 'sl_hit' ? 'var(--red)' :
+                    cond.includes('tp') ? '#ffd700' :
+                    cond === 'near_sl'  ? 'var(--orange)' :
+                    cond === 'in_profit'? 'var(--green)' : 'var(--yellow)';
+
+  // dot
+  const dotClass = pos.dot === '🟢' ? 'dot-green' : pos.dot === '🟡' ? 'dot-yellow' : 'dot-red';
+
+  // SL/TP rows
+  const slHit  = currentPrice <= levels.sl;
+  const tp1Hit = currentPrice >= levels.tp1;
+  const tp2Hit = currentPrice >= levels.tp2;
+  const nearSl = !slHit && ((levels.sl !== 0) && ((currentPrice - levels.sl) / (pos.entry - levels.sl)) <= 0.2);
+
+  const slTag  = slHit  ? '<span class="ph-near-tag">BREACHED</span>' : nearSl ? '<span class="ph-near-tag">NEAR</span>' : '';
+  const tp1Tag = tp1Hit ? '<span class="ph-hit-tag">HIT</span>' : '';
+  const tp2Tag = tp2Hit ? '<span class="ph-hit-tag">HIT</span>' : '';
+
+  const srcBadge = levels.source === 'alert'
+    ? '<span class="ph-src-alert">Alert ATR</span>'
+    : '<span class="ph-src-snap">Snapshot</span>';
+
+  const tvLink = `https://www.tradingview.com/chart/?symbol=NASDAQ:${pos.symbol}`;
+
+  const card = document.createElement('div');
+  card.className = `pos-card status-${cond}`;
+  card.innerHTML = `
+    <div class="card-header">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="card-dot ${dotClass}"></div>
+        <div class="card-symbol">${pos.symbol}</div>
+        ${srcBadge}
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <a href="${tvLink}" target="_blank" class="tv-link">📈 TV</a>
+        <span class="status-badge badge-${cond}">${condLabel(cond)}</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <!-- Price row -->
+      <div class="price-row">
+        <div class="price-current">$${currentPrice.toFixed(4)}</div>
+        <span class="price-chg ${chg > 0 ? 'chg-pos' : chg < 0 ? 'chg-neg' : 'chg-neu'}">${chg >= 0 ? '+' : ''}${chg.toFixed(2)}%</span>
+      </div>
+
+      <!-- Meta grid -->
+      <div class="card-meta">
+        <div class="meta-item">
+          <div class="meta-label">จุดเข้า (Entry)</div>
+          <div class="meta-val">$${pos.entry.toFixed(4)}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">จำนวนหุ้น</div>
+          <div class="meta-val">${pos.shares % 1 !== 0 ? pos.shares.toFixed(4) : pos.shares}</div>
+        </div>
+      </div>
+
+      <!-- Alloc bar -->
+      <div class="alloc-bar">
+        <div class="alloc-label">${pos.allocPct}%</div>
+        <div class="alloc-track" data-tip="สัดส่วนใน Portfolio">
+          <div class="alloc-fill" style="width:${Math.min(pos.allocPct, 100)}%"></div>
+        </div>
+        <div class="alloc-label" style="text-align:right">สัดส่วน</div>
+      </div>
+
+      <!-- SL/TP Ladder -->
+      <div class="ladder">
+        <div class="ladder-title">ระดับราคา (Alert System ${levels.atr ? '• ATR: $'+levels.atr : ''})</div>
+        <div class="ph-ladder-row ph-lr-sl">
+          <span class="lr-label">SL</span>
+          <span class="lr-price">$${levels.sl.toFixed(4)}</span>
+          <span class="lr-pct">-${levels.slPct}%</span>
+          ${slTag}
+        </div>
+        <div class="ph-ladder-row ph-lr-tp1">
+          <span class="lr-label">TP1</span>
+          <span class="lr-price">$${levels.tp1.toFixed(4)}</span>
+          <span class="lr-pct">+${levels.tp1Pct}%</span>
+          <span class="lr-rr">R:R 1:${levels.rr1}</span>
+          ${tp1Tag}
+        </div>
+        <div class="ph-ladder-row ph-lr-tp2">
+          <span class="lr-label">TP2</span>
+          <span class="lr-price">$${levels.tp2.toFixed(4)}</span>
+          <span class="lr-pct">+${levels.tp2Pct}%</span>
+          <span class="lr-rr">R:R 1:${levels.rr2}</span>
+          ${tp2Tag}
+        </div>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="prog-section">
+        <div class="prog-header">
+          <span>ความคืบหน้าสู่ TP1</span>
+          <span>${Math.round(status.progress)}%</span>
+        </div>
+        <div class="ph-prog-track">
+          <div class="ph-prog-fill"
+               style="width:${Math.min(status.progress,100)}%;background:${progColor};color:${progColor}"></div>
+        </div>
+      </div>
+
+      <!-- Alert alignment -->
+      <div style="margin:10px 0 6px;font-family:var(--mono);font-size:11px;color:var(--text2)">
+        <span style="margin-right:6px">สถานะ Alert:</span>
+        <span style="color:${status.alertAlignment.color};font-weight:700">
+          ${status.alertAlignment.icon} ${status.alertAlignment.label}
+        </span>
+      </div>
+
+      <!-- Reason & Action -->
+      <div class="action-box action-${riskLevel(cond)}">
+        <div style="font-weight:700;margin-bottom:4px">${status.holdReason}</div>
+        <div><span class="action-icon">👉</span>${status.nextAction}</div>
+      </div>
+
+      <!-- P&L -->
+      <div class="pnl-row">
+        <div class="pnl-label">P&L ปัจจุบัน</div>
+        <div class="pnl-val" style="color:${pnlPos ? 'var(--green)' : 'var(--red)'}">
+          ${pnlPos ? '+' : ''}${pnlUsd.toFixed(2)} $
+          <span style="font-size:11px;opacity:.65">(${status.pnlPct >= 0 ? '+' : ''}${status.pnlPct.toFixed(2)}%)</span>
+        </div>
+      </div>
+
+    </div>`;
+  return card;
+}
+
+// ── helpers ──
+function condLabel(c) {
+  const m = {
+    sl_hit:'SL แตะ', tp1_hit:'TP1 ✓', tp2_hit:'TP2 ✓',
+    near_sl:'ใกล้ SL', in_profit:'กำไรอยู่', in_drawdown:'ย่อตัว',
+  };
+  return m[c] || c;
+}
+function riskLevel(c) {
+  if (c === 'sl_hit')                   return 'critical';
+  if (c === 'tp1_hit' || c === 'tp2_hit') return 'take_profit';
+  if (c === 'near_sl')                  return 'high';
+  if (c === 'in_drawdown')              return 'medium';
+  return 'low';
+}
+function phSetFilter(f, el) {
+  phCurrentFilter = f;
+  document.querySelectorAll('.ph-ftab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  phRenderCards(f);
+}
+function phSetSpinner(show, txt='') {
+  const el = document.getElementById('ph-spinner');
+  el.style.display = show ? 'flex' : 'none';
+  if (txt) document.getElementById('ph-spinnerText').textContent = txt;
+}
+function phShowError(msg) {
+  phSetSpinner(false);
+  const el = document.getElementById('ph-errorBox');
+  el.textContent = '⚠️ ' + msg;
+  el.classList.add('show');
+}
+function phClearAll() {
+  document.getElementById('ph-portfolioInput').value = '';
+  document.getElementById('ph-summarySection').style.display = 'none';
+  document.getElementById('ph-errorBox').classList.remove('show');
+  document.getElementById('ph-emptyState').style.display = 'none';
+  document.getElementById('ph-lastUpdated').textContent = 'ยังไม่มีข้อมูล';
+  phAllResults = [];
+}
+
+
 </script>
 
 <input type="file" id="local-wl-input" accept=".json" style="display:none" onchange="handleLocalWlFile(this)">
