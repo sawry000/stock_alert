@@ -1609,5 +1609,32 @@
     "price": 11.920000076293945,
     "change_pct": 5.955556233723958,
     "value": 5.955556233723958
+  },
+  {
+    "timestamp": "2026-05-28T01:57:33Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 17.110000610351562,
+    "change_pct": -0.5232522653978883,
+    "value": 3.949151117615517
+  },
+  {
+    "timestamp": "2026-05-28T01:57:42Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.570000171661377,
+    "change_pct": 8.809527896699446,
+    "value": 8.809527896699446
+  },
+  {
+    "timestamp": "2026-05-28T01:57:44Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.570000171661377,
+    "change_pct": 8.809527896699446,
+    "value": 3
   }
 ]
