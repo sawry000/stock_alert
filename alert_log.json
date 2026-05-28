@@ -2662,5 +2662,86 @@
     "price": 4.539999961853027,
     "change_pct": -0.4385973277844795,
     "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T14:17:48Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.015000343322754,
+    "change_pct": -6.501434315210101,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-28T14:17:52Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 16.860000610351562,
+    "change_pct": -5.300580158329093,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T14:17:57Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 95.98999786376953,
+    "change_pct": 0.8934179774748063,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T14:18:01Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 20.6299991607666,
+    "change_pct": -2.5507833690760515,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-28T14:18:07Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.380000114440918,
+    "change_pct": -0.4545428536155087,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T14:18:12Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 11.270000457763672,
+    "change_pct": -5.69037273837931,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T14:18:16Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 6.610000133514404,
+    "change_pct": 0.6088300382709896,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T14:18:20Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 49.44499969482422,
+    "change_pct": 1.425640399639423,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-28T14:18:26Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 342.739990234375,
+    "change_pct": -0.6334738756613789,
+    "value": 1
   }
 ]
