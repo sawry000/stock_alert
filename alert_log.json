@@ -1582,5 +1582,23 @@
     "price": 17.110000610351562,
     "change_pct": -0.5232522653978883,
     "value": 3.949151117615517
+  },
+  {
+    "timestamp": "2026-05-28T01:47:55Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 25.200000762939453,
+    "change_pct": 3.703706843372232,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-28T01:47:57Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.369999885559082,
+    "change_pct": 5.944527869450216,
+    "value": 5.944527869450216
   }
 ]
