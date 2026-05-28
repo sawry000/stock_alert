@@ -329,7 +329,7 @@ input[type=password]{letter-spacing:2px}
 .ph-stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
 .ph-stat-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--text2);text-transform:uppercase;margin-bottom:6px}
 .ph-stat-val{font-family:var(--mono);font-size:20px;font-weight:700}
-.ph-ladder-row{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;margin-bottom:4px;font-family:var(--mono);font-size:12px}
+.ph-ladder-row{display:flex;flex-direction:row;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;margin-bottom:4px;font-family:var(--mono);font-size:12px}
 .ph-lr-sl{background:rgba(255,23,68,.07);border:1px solid rgba(255,23,68,.18)}
 .ph-lr-tp1{background:rgba(0,255,157,.06);border:1px solid rgba(0,255,157,.15)}
 .ph-lr-tp2{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.18)}
@@ -406,6 +406,34 @@ input[type=password]{letter-spacing:2px}
 .sc-red{color:var(--red) !important}
 .sc-yellow{color:#ffd700 !important}
 .sc-white{color:var(--text) !important}
+
+
+/* ════ Portfolio Health — Brighter Text ════ */
+.meta-val { color: #f0f4ff !important; }
+.meta-label { color: #9ab0d0 !important; }
+.lr-price { color: #e8edf5 !important; font-weight: 700; }
+.lr-pct { color: #b0c4de !important; }
+.lr-label { color: #c8d8f0 !important; }
+.lr-rr { color: #8899bb !important; }
+.price-current { color: #ffffff !important; text-shadow: 0 0 20px rgba(0,229,255,0.3); }
+.card-symbol { color: #40eeff !important; text-shadow: 0 0 10px rgba(0,229,255,0.4); }
+.ladder-title { color: #8899bb !important; }
+.prog-header { color: #9ab0d0 !important; }
+.pnl-label { color: #9ab0d0 !important; }
+.alloc-label { color: #8899bb !important; }
+.ph-stat-label { color: #9ab0d0 !important; }
+.ph-stat-val { color: #f0f4ff !important; }
+.action-box { color: #f0f4ff !important; font-weight: 500; }
+.action-box.action-critical { color: #ffb3b3 !important; }
+.action-box.action-take_profit { color: #ffe566 !important; }
+.action-box.action-high { color: #ffd0a0 !important; }
+.action-box.action-medium { color: #ffe082 !important; }
+.action-box.action-low { color: #b9f6ca !important; }
+
+
+/* ════ Ladder row column layout ════ */
+.ph-ladder-row[style*="flex-direction:column"] { align-items: stretch !important; }
+.snap-compare-row { font-family: var(--mono); font-size: 10px; display:flex; align-items:center; gap:6px; padding: 3px 6px; background:rgba(255,255,255,0.03); border-radius:4px; margin-top:3px; flex-wrap:wrap; }
 
 </style>
 </head>
@@ -2573,19 +2601,27 @@ function parsePortfolio(text) {
 //  ใช้ Yahoo Finance unofficial API via proxy
 // ══════════════════════════════════════════════════════════════
 async function fetchOHLC(symbol) {
-  try {
-    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?range=90d&interval=1d&includePrePost=false`;
-    const res  = await fetch(url);
-    if (!res.ok) return null;
-    const data = await res.json();
-    const q    = data?.chart?.result?.[0]?.indicators?.quote?.[0];
-    if (!q) return null;
-    return {
-      highs:  q.high.map(Number),
-      lows:   q.low.map(Number),
-      closes: q.close.map(Number),
-    };
-  } catch { return null; }
+  // Yahoo Finance v8 ถูก block CORS ในบางกรณี
+  // ลอง v8 ก่อน ถ้าไม่ได้ลอง v8 endpoint อื่น
+  const urls = [
+    `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?range=90d&interval=1d&includePrePost=false`,
+    `https://query2.finance.yahoo.com/v8/finance/chart/${symbol}?range=90d&interval=1d&includePrePost=false`,
+  ];
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { mode: 'cors' });
+      if (!res.ok) continue;
+      const data = await res.json();
+      const q = data?.chart?.result?.[0]?.indicators?.quote?.[0];
+      if (!q || !q.close || q.close.filter(Boolean).length < 10) continue;
+      return {
+        highs:  q.high.filter(Boolean).map(Number),
+        lows:   q.low.filter(Boolean).map(Number),
+        closes: q.close.filter(Boolean).map(Number),
+      };
+    } catch { continue; }
+  }
+  return null; // CORS blocked → fallback to snapshot
 }
 
 function calcATR(highs, lows, closes, period = 14) {
@@ -2911,7 +2947,10 @@ function phBuildCard(r) {
       <!-- Price row -->
       <div class="price-row">
         <div class="price-current">$${currentPrice.toFixed(4)}</div>
-        <span class="price-chg ${chg > 0 ? 'chg-pos' : chg < 0 ? 'chg-neg' : 'chg-neu'}">${chg >= 0 ? '+' : ''}${chg.toFixed(2)}%</span>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px">
+          <span class="price-chg ${status.pnlPct > 0 ? 'chg-pos' : status.pnlPct < 0 ? 'chg-neg' : 'chg-neu'}">${status.pnlPct >= 0 ? '+' : ''}${status.pnlPct.toFixed(2)}%</span>
+          <span style="font-family:var(--mono);font-size:9px;color:var(--text3)">vs Entry</span>
+        </div>
       </div>
 
       <!-- Meta grid -->
@@ -2935,29 +2974,69 @@ function phBuildCard(r) {
         <div class="alloc-label" style="text-align:right">สัดส่วน</div>
       </div>
 
-      <!-- SL/TP Ladder -->
+      <!-- SL/TP Ladder with Snapshot comparison -->
       <div class="ladder">
-        <div class="ladder-title">ระดับราคา (Alert System ${levels.atr ? '• ATR: $'+levels.atr : ''})</div>
-        <div class="ph-ladder-row ph-lr-sl">
-          <span class="lr-label">SL</span>
-          <span class="lr-price">$${levels.sl.toFixed(4)}</span>
-          <span class="lr-pct">-${levels.slPct}%</span>
-          ${slTag}
+        <div class="ladder-title" style="display:flex;justify-content:space-between;align-items:center">
+          <span>ระดับราคา ${levels.atr ? '<span style="color:var(--cyan);font-size:9px">• ATR: $'+levels.atr+'</span>' : ''}</span>
+          <span style="font-size:9px;color:var(--text3)">${levels.source === 'alert' ? '🤖 Alert ATR คำนวณใหม่' : '📸 ใช้ค่า Snapshot'}</span>
         </div>
-        <div class="ph-ladder-row ph-lr-tp1">
-          <span class="lr-label">TP1</span>
-          <span class="lr-price">$${levels.tp1.toFixed(4)}</span>
-          <span class="lr-pct">+${levels.tp1Pct}%</span>
-          <span class="lr-rr">R:R 1:${levels.rr1}</span>
-          ${tp1Tag}
+
+        <!-- SL Row -->
+        <div class="ph-ladder-row ph-lr-sl" style="flex-direction:column;align-items:stretch;padding:8px 10px;gap:4px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span class="lr-label" style="color:#ff6b6b;font-weight:800">SL</span>
+            <span class="lr-price" style="color:#ff6b6b;font-size:14px;font-weight:800">$${levels.sl.toFixed(4)}</span>
+            <span class="lr-pct" style="color:#ff8a80">-${levels.slPct}%</span>
+            <span style="flex:1"></span>
+            ${slTag}
+          </div>
+          ${levels.source === 'alert' && pos.slSnap ? `<div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:rgba(255,255,255,0.04);border-radius:4px;margin-top:2px">
+            <span style="font-family:var(--mono);font-size:9px;color:var(--text3)">📸 Snapshot:</span>
+            <span style="font-family:var(--mono);font-size:10px;color:var(--text3);text-decoration:line-through">$${pos.slSnap.toFixed(4)}</span>
+            <span style="font-family:var(--mono);font-size:9px;color:var(--text3)">→</span>
+            <span style="font-family:var(--mono);font-size:10px;color:#ff8a80;font-weight:700">$${levels.sl.toFixed(4)}</span>
+            <span style="font-family:var(--mono);font-size:9px;padding:1px 5px;border-radius:3px;background:rgba(255,107,107,0.15);color:#ff8a80">🤖 แนะนำ ATR</span>
+          </div>` : ''}
         </div>
-        <div class="ph-ladder-row ph-lr-tp2">
-          <span class="lr-label">TP2</span>
-          <span class="lr-price">$${levels.tp2.toFixed(4)}</span>
-          <span class="lr-pct">+${levels.tp2Pct}%</span>
-          <span class="lr-rr">R:R 1:${levels.rr2}</span>
-          ${tp2Tag}
+
+        <!-- TP1 Row -->
+        <div class="ph-ladder-row ph-lr-tp1" style="flex-direction:column;align-items:stretch;padding:8px 10px;gap:4px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span class="lr-label" style="color:#69f0ae;font-weight:800">TP1</span>
+            <span class="lr-price" style="color:#69f0ae;font-size:14px;font-weight:800">$${levels.tp1.toFixed(4)}</span>
+            <span class="lr-pct" style="color:#b9f6ca">+${levels.tp1Pct}%</span>
+            <span class="lr-rr">R:R 1:${levels.rr1}</span>
+            <span style="flex:1"></span>
+            ${tp1Tag}
+          </div>
+          ${levels.source === 'alert' && pos.tp1Snap ? `<div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:rgba(255,255,255,0.04);border-radius:4px;margin-top:2px">
+            <span style="font-family:var(--mono);font-size:9px;color:var(--text3)">📸 Snapshot:</span>
+            <span style="font-family:var(--mono);font-size:10px;color:var(--text3);text-decoration:line-through">$${pos.tp1Snap.toFixed(4)}</span>
+            <span style="font-family:var(--mono);font-size:9px;color:var(--text3)">→</span>
+            <span style="font-family:var(--mono);font-size:10px;color:#69f0ae;font-weight:700">$${levels.tp1.toFixed(4)}</span>
+            <span style="font-family:var(--mono);font-size:9px;padding:1px 5px;border-radius:3px;background:rgba(105,240,174,0.15);color:#69f0ae">🤖 แนะนำ ATR</span>
+          </div>` : ''}
         </div>
+
+        <!-- TP2 Row -->
+        <div class="ph-ladder-row ph-lr-tp2" style="flex-direction:column;align-items:stretch;padding:8px 10px;gap:4px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span class="lr-label" style="color:#ffd700;font-weight:800">TP2</span>
+            <span class="lr-price" style="color:#ffd700;font-size:14px;font-weight:800">$${levels.tp2.toFixed(4)}</span>
+            <span class="lr-pct" style="color:#ffe566">+${levels.tp2Pct}%</span>
+            <span class="lr-rr">R:R 1:${levels.rr2}</span>
+            <span style="flex:1"></span>
+            ${tp2Tag}
+          </div>
+          ${levels.source === 'alert' && pos.tp2Snap ? `<div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:rgba(255,255,255,0.04);border-radius:4px;margin-top:2px">
+            <span style="font-family:var(--mono);font-size:9px;color:var(--text3)">📸 Snapshot:</span>
+            <span style="font-family:var(--mono);font-size:10px;color:var(--text3);text-decoration:line-through">$${pos.tp2Snap.toFixed(4)}</span>
+            <span style="font-family:var(--mono);font-size:9px;color:var(--text3)">→</span>
+            <span style="font-family:var(--mono);font-size:10px;color:#ffd700;font-weight:700">$${levels.tp2.toFixed(4)}</span>
+            <span style="font-family:var(--mono);font-size:9px;padding:1px 5px;border-radius:3px;background:rgba(255,215,0,0.15);color:#ffd700">🤖 แนะนำ ATR</span>
+          </div>` : ''}
+        </div>
+
       </div>
 
       <!-- Progress bar -->
