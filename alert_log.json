@@ -3031,5 +3031,23 @@
     "price": 11.145000457763672,
     "change_pct": -6.73639784298182,
     "value": -6.73639784298182
+  },
+  {
+    "timestamp": "2026-05-28T20:12:48Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 17.0,
+    "change_pct": -4.514230188106962,
+    "value": 2.8791400093167963
+  },
+  {
+    "timestamp": "2026-05-28T20:12:59Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 4.300000190734863,
+    "change_pct": -2.272722937844024,
+    "value": 1
   }
 ]
