@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Health Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #0a0d12;
+    --surface:   #111620;
+    --surface2:  #181f2e;
+    --border:    #1e2a3a;
+    --accent:    #00e5ff;
+    --accent2:   #7c3aed;
+    --green:     #00e676;
+    --yellow:    #ffea00;
+    --red:       #ff1744;
+    --orange:    #ff6d00;
+    --muted:     #4a5568;
+    --text:      #e2e8f0;
+    --text2:     #8899a6;
+    --mono:      'Space Mono', monospace;
+    --sans:      'Noto Sans Thai', sans-serif;
+    --radius:    8px;
+    --glow-c:    0 0 16px rgba(0,229,255,.18);
+    --glow-g:    0 0 16px rgba(0,230,118,.18);
+    --glow-r:    0 0 16px rgba(255,23,68,.22);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Grid background ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,229,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,229,255,.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page-wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 28px 20px 60px; }
+
+  /* ── Header ── */
+  .header {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 32px; padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .header-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: linear-gradient(135deg,#00e5ff22,#7c3aed33);
+    border: 1px solid var(--accent);
+    display: grid; place-items: center; font-size: 20px;
+    box-shadow: var(--glow-c);
+  }
+  .header h1 {
+    font-family: var(--mono); font-size: 18px; letter-spacing: .06em;
+    color: var(--accent); text-transform: uppercase;
+  }
+  .header p { font-size: 12px; color: var(--text2); margin-top: 3px; }
+  .header-badge {
+    margin-left: auto; padding: 4px 12px; border-radius: 20px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .08em;
+    background: #00e5ff11; border: 1px solid var(--accent);
+    color: var(--accent);
+  }
+
+  /* ── Input panel ── */
+  .input-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 28px;
+  }
+  .input-panel label {
+    display: block; font-size: 11px; font-family: var(--mono);
+    letter-spacing: .1em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .input-panel textarea {
+    width: 100%; min-height: 180px; resize: vertical;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: var(--radius); color: var(--text);
+    font-family: var(--mono); font-size: 12px; line-height: 1.6;
+    padding: 14px 16px; outline: none;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .input-panel textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(0,229,255,.12);
+  }
+  .input-panel textarea::placeholder { color: var(--muted); }
+
+  .btn-row { display: flex; gap: 12px; margin-top: 14px; }
+  .btn {
+    padding: 10px 28px; border-radius: var(--radius);
+    font-family: var(--mono); font-size: 13px; font-weight: 700;
+    letter-spacing: .06em; border: none; cursor: pointer;
+    transition: all .18s; text-transform: uppercase;
+  }
+  .btn-primary {
+    background: var(--accent); color: #0a0d12;
+    box-shadow: var(--glow-c);
+  }
+  .btn-primary:hover { filter: brightness(1.15); transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary {
+    background: transparent; color: var(--text2);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { border-color: var(--text2); color: var(--text); }
+
+  /* ── Spinner ── */
+  .spinner-wrap { display: none; align-items: center; gap: 10px; padding: 12px 0; }
+  .spinner-wrap.show { display: flex; }
+  .spinner {
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    animation: spin .7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spinner-wrap span { font-family: var(--mono); font-size: 12px; color: var(--text2); }
+
+  /* ── Summary bar ── */
+  .summary-bar {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 12px; margin-bottom: 24px;
+  }
+  .stat-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 18px;
+    transition: border-color .2s;
+  }
+  .stat-card:hover { border-color: var(--accent); }
+  .stat-card .sc-label {
+    font-family: var(--mono); font-size: 10px; letter-spacing: .12em;
+    color: var(--text2); text-transform: uppercase; margin-bottom: 8px;
+  }
+  .stat-card .sc-val {
+    font-family: var(--mono); font-size: 22px; font-weight: 700;
+  }
+  .sc-green { color: var(--green); }
+  .sc-red   { color: var(--red);   }
+  .sc-yellow{ color: var(--yellow);}
+  .sc-cyan  { color: var(--accent);}
+  .sc-white { color: var(--text);  }
+
+  /* ── Filter tabs ── */
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .ftab {
+    padding: 6px 14px; border-radius: 20px; font-size: 12px; font-family: var(--mono);
+    border: 1px solid var(--border); background: transparent;
+    color: var(--text2); cursor: pointer; transition: all .15s;
+  }
+  .ftab:hover { border-color: var(--accent); color: var(--accent); }
+  .ftab.active { background: var(--accent); border-color: var(--accent); color: #0a0d12; font-weight: 700; }
+
+  /* ── Position cards grid ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px,1fr));
+    gap: 16px;
+  }
+
+  /* ── Position card ── */
+  .pos-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
+    transition: transform .18s, box-shadow .18s, border-color .18s;
+    animation: fadeUp .35s ease both;
+  }
+  .pos-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,.4);
+  }
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(14px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+
+  .pos-card.status-sl_hit     { border-color: var(--red);    box-shadow: var(--glow-r); }
+  .pos-card.status-tp2_hit    { border-color: #ffd700; box-shadow: 0 0 16px rgba(255,215,0,.2); }
+  .pos-card.status-tp1_hit    { border-color: var(--green);  box-shadow: var(--glow-g); }
+  .pos-card.status-near_sl    { border-color: var(--orange); }
+  .pos-card.status-in_profit  { border-color: #1e3a2a; }
+  .pos-card.status-in_drawdown{ border-color: var(--border); }
+
+  .card-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 16px 12px; border-bottom: 1px solid var(--border);
+  }
+  .card-symbol {
+    font-family: var(--mono); font-size: 17px; font-weight: 700;
+    color: var(--text); letter-spacing: .04em;
+  }
+  .card-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .dot-green  { background: var(--green);  box-shadow: 0 0 6px var(--green);  }
+  .dot-yellow { background: var(--yellow); box-shadow: 0 0 6px var(--yellow); }
+  .dot-red    { background: var(--red);    box-shadow: 0 0 6px var(--red);    }
+
+  .status-badge {
+    font-family: var(--mono); font-size: 10px; font-weight: 700;
+    letter-spacing: .08em; padding: 3px 9px; border-radius: 4px;
+    text-transform: uppercase;
+  }
+  .badge-sl_hit      { background: rgba(255,23,68,.18);  color: var(--red);    border: 1px solid var(--red);    }
+  .badge-tp2_hit     { background: rgba(255,215,0,.12);  color: #ffd700;       border: 1px solid #ffd700; }
+  .badge-tp1_hit     { background: rgba(0,230,118,.14);  color: var(--green);  border: 1px solid var(--green);  }
+  .badge-near_sl     { background: rgba(255,109,0,.14);  color: var(--orange); border: 1px solid var(--orange); }
+  .badge-in_profit   { background: rgba(0,230,118,.08);  color: var(--green);  border: 1px solid #1e3a2a; }
+  .badge-in_drawdown { background: rgba(255,23,68,.06);  color: #ff6b6b;       border: 1px solid #2a1e1e; }
+
+  .card-body { padding: 14px 16px; }
+
+  /* price row */
+  .price-row {
+    display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px;
+  }
+  .price-current {
+    font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--text);
+  }
+  .price-chg {
+    font-family: var(--mono); font-size: 12px; padding: 2px 7px;
+    border-radius: 4px; font-weight: 700;
+  }
+  .chg-pos { background: rgba(0,230,118,.15); color: var(--green); }
+  .chg-neg { background: rgba(255,23,68,.15);  color: var(--red);   }
+  .chg-neu { background: rgba(255,234,0,.1);   color: var(--yellow);}
+
+  .card-meta {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px;
+    margin-bottom: 12px;
+  }
+  .meta-item { display: flex; flex-direction: column; }
+  .meta-label { font-size: 10px; font-family: var(--mono); color: var(--text2); letter-spacing: .08em; text-transform: uppercase; }
+  .meta-val   { font-family: var(--mono); font-size: 13px; color: var(--text); margin-top: 2px; }
+
+  /* price ladder */
+  .ladder { margin: 14px 0; }
+  .ladder-title { font-family: var(--mono); font-size: 10px; color: var(--text2); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
+  .ladder-row {
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 10px; border-radius: 6px; margin-bottom: 4px;
+    font-family: var(--mono); font-size: 12px;
+  }
+  .lr-sl  { background: rgba(255,23,68,.08);  border: 1px solid rgba(255,23,68,.2);  }
+  .lr-tp1 { background: rgba(0,230,118,.07);  border: 1px solid rgba(0,230,118,.18); }
+  .lr-tp2 { background: rgba(255,215,0,.07);  border: 1px solid rgba(255,215,0,.2);  }
+  .lr-label { width: 34px; font-weight: 700; font-size: 10px; }
+  .lr-sl  .lr-label { color: var(--red);    }
+  .lr-tp1 .lr-label { color: var(--green);  }
+  .lr-tp2 .lr-label { color: #ffd700; }
+  .lr-price { flex: 1; }
+  .lr-pct { font-size: 11px; opacity: .7; }
+  .lr-rr  { font-size: 10px; color: var(--text2); margin-left: auto; }
+  .lr-hit-tag {
+    font-size: 9px; padding: 1px 6px; border-radius: 3px; margin-left: 6px;
+    background: var(--green); color: #0a0d12; font-weight: 700;
+  }
+  .lr-near-tag {
+    font-size: 9px; padding: 1px 6px; border-radius: 3px; margin-left: 6px;
+    background: var(--red); color: #fff; font-weight: 700;
+  }
+
+  /* progress bar */
+  .prog-section { margin: 14px 0 10px; }
+  .prog-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 6px;
+    font-family: var(--mono); font-size: 10px; color: var(--text2); letter-spacing: .08em; text-transform: uppercase;
+  }
+  .prog-track {
+    height: 6px; background: var(--surface2); border-radius: 3px; overflow: visible;
+    position: relative;
+  }
+  .prog-fill {
+    height: 100%; border-radius: 3px;
+    transition: width 1s cubic-bezier(.4,0,.2,1);
+    position: relative;
+  }
+  .prog-glow::after {
+    content: ''; position: absolute; right: -1px; top: -3px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: currentColor; filter: blur(4px); opacity: .7;
+  }
+
+  /* action box */
+  .action-box {
+    margin-top: 12px; padding: 10px 12px; border-radius: 6px;
+    font-size: 12px; line-height: 1.5;
+    border-left: 3px solid;
+  }
+  .action-critical  { border-color: var(--red);    background: rgba(255,23,68,.07);  color: #ff8a80; }
+  .action-take_profit{border-color: #ffd700;       background: rgba(255,215,0,.07);  color: #ffd700; }
+  .action-high      { border-color: var(--orange); background: rgba(255,109,0,.07);  color: #ffab40; }
+  .action-medium    { border-color: var(--yellow); background: rgba(255,234,0,.06);  color: var(--yellow); }
+  .action-low       { border-color: var(--green);  background: rgba(0,230,118,.06);  color: #69f0ae; }
+
+  .action-icon { font-size: 13px; margin-right: 6px; }
+
+  /* source badge */
+  .src-badge {
+    display: inline-block; font-family: var(--mono); font-size: 9px;
+    letter-spacing: .08em; padding: 2px 6px; border-radius: 3px;
+    text-transform: uppercase; margin-left: 8px; vertical-align: middle;
+  }
+  .src-alert  { background: rgba(124,58,237,.25); color: #c4b5fd; border: 1px solid rgba(124,58,237,.4); }
+  .src-snap   { background: rgba(0,229,255,.1);   color: var(--accent); border: 1px solid rgba(0,229,255,.3); }
+
+  /* shares/alloc */
+  .alloc-bar {
+    display: flex; align-items: center; gap: 8px; margin: 8px 0;
+  }
+  .alloc-track {
+    flex: 1; height: 4px; background: var(--surface2); border-radius: 2px; overflow: hidden;
+  }
+  .alloc-fill { height: 100%; background: var(--accent2); border-radius: 2px; }
+  .alloc-label { font-family: var(--mono); font-size: 11px; color: var(--text2); min-width: 38px; }
+
+  /* pnl display */
+  .pnl-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 0; border-top: 1px solid var(--border); margin-top: 10px;
+  }
+  .pnl-label { font-family: var(--mono); font-size: 10px; color: var(--text2); letter-spacing: .08em; text-transform: uppercase; }
+  .pnl-val   { font-family: var(--mono); font-size: 14px; font-weight: 700; }
+
+  /* ── Error / empty state ── */
+  .error-box {
+    background: rgba(255,23,68,.08); border: 1px solid rgba(255,23,68,.3);
+    border-radius: 10px; padding: 18px 20px;
+    font-family: var(--mono); font-size: 13px; color: #ff8a80;
+    display: none;
+  }
+  .error-box.show { display: block; }
+  .empty-state {
+    text-align: center; padding: 60px 20px;
+    font-family: var(--mono); color: var(--muted); font-size: 13px;
+    display: none;
+  }
+  .empty-state.show { display: block; }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; opacity: .4; }
+
+  /* ── Tooltip ── */
+  [data-tip] { position: relative; cursor: help; }
+  [data-tip]::after {
+    content: attr(data-tip);
+    position: absolute; bottom: calc(100% + 6px); left: 50%;
+    transform: translateX(-50%);
+    background: #1e2a3a; color: var(--text); font-family: var(--mono);
+    font-size: 11px; white-space: nowrap; padding: 5px 9px; border-radius: 5px;
+    border: 1px solid var(--border); pointer-events: none; opacity: 0;
+    transition: opacity .15s; z-index: 10;
+  }
+  [data-tip]:hover::after { opacity: 1; }
+
+  /* ── Divider ── */
+  .section-title {
+    font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
+    color: var(--text2); text-transform: uppercase;
+    display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+  }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* ── TradingView link ── */
+  .tv-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-family: var(--mono); font-size: 10px; color: var(--text2);
+    text-decoration: none; padding: 3px 8px; border-radius: 4px;
+    border: 1px solid var(--border); transition: all .15s;
+  }
+  .tv-link:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-icon">📊</div>
+    <div>
+      <h1>Portfolio Health Dashboard</h1>
+      <p>วิเคราะห์ตาม Alert System — คำนวณ SL/TP จาก ATR จริง</p>
+    </div>
+    <div class="header-badge" id="lastUpdated">ยังไม่มีข้อมูล</div>
+  </div>
+
+  <!-- Input panel -->
+  <div class="input-panel">
+    <label>📋 วาง Portfolio Snapshot ที่นี่</label>
+    <textarea id="portfolioInput" placeholder="วาง portfolio snapshot จาก Telegram...
+📈 $(-28.19) (28/05/26 22:31)
+🔴 [GLD](https://...) (1.41) (29.5%) (-24.32 $)
+💰 603.99-24.32 = 579.67 (❤️ -4.0%)
+📊 428.32 ➡️ 411.07 ♦️ SL: 394.05 🎯TP1: 492.57 🎯TP2: 556.81
+..."></textarea>
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="runAnalysis()">⚡ วิเคราะห์ Portfolio</button>
+      <button class="btn btn-secondary" onclick="clearAll()">✕ ล้าง</button>
+    </div>
+    <div class="spinner-wrap" id="spinner">
+      <div class="spinner"></div>
+      <span id="spinnerText">กำลังวิเคราะห์...</span>
+    </div>
+  </div>
+
+  <div class="error-box" id="errorBox"></div>
+
+  <!-- Summary bar -->
+  <div id="summarySection" style="display:none">
+    <div class="summary-bar" id="summaryBar"></div>
+
+    <!-- Filter tabs -->
+    <div class="filter-bar" id="filterBar">
+      <button class="ftab active" data-filter="all" onclick="setFilter('all',this)">ทั้งหมด</button>
+      <button class="ftab" data-filter="sl_hit"      onclick="setFilter('sl_hit',this)">🚨 SL แตะ</button>
+      <button class="ftab" data-filter="take_profit" onclick="setFilter('take_profit',this)">🎯 ถึงเป้า</button>
+      <button class="ftab" data-filter="near_sl"     onclick="setFilter('near_sl',this)">⚠️ เฝ้าระวัง</button>
+      <button class="ftab" data-filter="in_profit"   onclick="setFilter('in_profit',this)">📈 กำไรอยู่</button>
+      <button class="ftab" data-filter="in_drawdown" onclick="setFilter('in_drawdown',this)">📉 ย่อตัว</button>
+    </div>
+
+    <div class="section-title">ตำแหน่งที่เปิดอยู่</div>
+    <div class="cards-grid" id="cardsGrid"></div>
+  </div>
+
+  <div class="empty-state" id="emptyState">
+    <div class="empty-icon">📭</div>
+    ไม่พบข้อมูล Position<br><span style="font-size:11px;opacity:.5">ตรวจสอบ format ข้อความ</span>
+  </div>
+
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════════
+//  PARSER — แปลงข้อความ snapshot → array of positions
+// ══════════════════════════════════════════════════════════════
+function parsePortfolio(text) {
+  const positions = [];
+
+  // timestamp + pnl
+  const tsM = text.match(/📈\s*\$\(([+-]?[\d.]+)\)\s*\(([^)]+)\)/);
+  const summary = {
+    timestamp : tsM ? tsM[2].trim() : '',
+    totalPnl  : tsM ? parseFloat(tsM[1]) : 0,
+  };
+  const fundM  = text.match(/Total Fund.*?:\s*([\d.]+)[+-][\d.]+\s*=\s*([\d.]+)/);
+  summary.totalFund  = fundM ? parseFloat(fundM[2]) : 0;
+  const openM  = text.match(/Open:\s*(\d+)/);
+  summary.openCount  = openM ? parseInt(openM[1]) : 0;
+
+  // per-position blocks
+  const re = /(🟢|🟡|🔴)\s+\[(\w+)\]\(https?:\/\/[^\)]+\)\s+\(([\d.]+)\)\s+\(([\d.]+)%\)\s+\(([+-][\d.]+)\s*\$\)\n💰\s*([\d.]+)[+-][\d.]+\s*=\s*([\d.]+)\s+\([❤️💚]+\s*([+-][\d.]+)%\)\n📊\s*([\d.]+)\s*➡️\s*([\d.]+)\s+(?:⚠️SL)?♦️\s*SL:\s*([\d.]+)\s+🎯TP1:\s*([\d.]+)\s+🎯TP2:\s*([\d.]+)/gm;
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    positions.push({
+      dot        : m[1],
+      symbol     : m[2],
+      shares     : parseFloat(m[3]),
+      allocPct   : parseFloat(m[4]),
+      pnlUsd     : parseFloat(m[5]),
+      fundBefore : parseFloat(m[6]),
+      fundAfter  : parseFloat(m[7]),
+      fundPnlPct : parseFloat(m[8]),
+      entry      : parseFloat(m[9]),
+      priceSnap  : parseFloat(m[10]),
+      slSnap     : parseFloat(m[11]),
+      tp1Snap    : parseFloat(m[12]),
+      tp2Snap    : parseFloat(m[13]),
+    });
+  }
+  return { positions, summary };
+}
+
+// ══════════════════════════════════════════════════════════════
+//  ATR-BASED SL/TP calculator (port from Python alert_engine)
+//  ใช้ Yahoo Finance unofficial API via proxy
+// ══════════════════════════════════════════════════════════════
+async function fetchOHLC(symbol) {
+  try {
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?range=90d&interval=1d&includePrePost=false`;
+    const res  = await fetch(url);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const q    = data?.chart?.result?.[0]?.indicators?.quote?.[0];
+    if (!q) return null;
+    return {
+      highs:  q.high.map(Number),
+      lows:   q.low.map(Number),
+      closes: q.close.map(Number),
+    };
+  } catch { return null; }
+}
+
+function calcATR(highs, lows, closes, period = 14) {
+  if (closes.length < period + 2) return null;
+  const trs = [];
+  for (let i = 1; i < closes.length; i++) {
+    trs.push(Math.max(
+      highs[i]  - lows[i],
+      Math.abs(highs[i]  - closes[i-1]),
+      Math.abs(lows[i]   - closes[i-1])
+    ));
+  }
+  let atr = trs.slice(0, period).reduce((a,b) => a+b, 0) / period;
+  for (let i = period; i < trs.length; i++)
+    atr = (atr * (period-1) + trs[i]) / period;
+  return atr;
+}
+
+function calcAlertLevels(price, highs, lows, closes, direction = 'bull') {
+  const atr = calcATR(highs, lows, closes);
+  if (!atr || atr <= 0) return null;
+
+  const n         = closes.length;
+  const recH      = highs.slice(Math.max(n-10,0));
+  const recL      = lows.slice(Math.max(n-10,0));
+  const swingLow  = Math.min(...recL);
+  const swingHigh = Math.max(...recH);
+
+  let entry, sl, risk, tp1, tp2;
+  const mult = 1.5, rr1 = 1.5, rr2 = 3.0;
+
+  if (direction === 'bull') {
+    entry = price;
+    const slAtr   = price - atr * mult;
+    const slSwing = swingLow * 0.995;
+    sl    = swingLow >= price ? slAtr : Math.max(slAtr, slSwing);
+    risk  = entry - sl;
+    if (risk <= 0) { sl = price - atr; risk = price - sl; }
+    if (risk <= 0) return null;
+    tp1 = entry + risk * rr1;
+    tp2 = entry + risk * rr2;
+  } else {
+    entry = price;
+    const slAtr   = price + atr * mult;
+    const slSwing = swingHigh * 1.005;
+    sl    = swingHigh <= price ? slAtr : Math.min(slAtr, slSwing);
+    risk  = sl - entry;
+    if (risk <= 0) { sl = price + atr; risk = sl - price; }
+    if (risk <= 0) return null;
+    tp1 = entry - risk * rr1;
+    tp2 = entry - risk * rr2;
+  }
+
+  const fmt = v => Math.round(v * 10000) / 10000;
+  const pctFrom = (a, b) => Math.round(Math.abs(a-b)/b*10000)/100;
+
+  return {
+    entry  : fmt(entry),
+    sl     : fmt(sl),
+    tp1    : fmt(tp1),
+    tp2    : fmt(tp2),
+    atr    : Math.round(atr*10000)/10000,
+    slPct  : pctFrom(sl, entry),
+    tp1Pct : pctFrom(tp1, entry),
+    tp2Pct : pctFrom(tp2, entry),
+    rr1, rr2,
+    source : 'alert',
+  };
+}
+
+// ══════════════════════════════════════════════════════════════
+//  STATUS ENGINE — เทียบ position ปัจจุบัน กับ levels
+// ══════════════════════════════════════════════════════════════
+function calcStatus(pos, currentPrice, levels) {
+  const { entry, sl, tp1, tp2 } = levels;
+  const p       = currentPrice;
+  const risk    = entry - sl;
+  const reward  = tp1 - entry;
+  const pnlPct  = ((p - entry) / entry * 100);
+
+  let progress  = 0;
+  if (reward > 0) progress = Math.max(0, Math.min(100, (p - entry) / reward * 100));
+
+  // หา condition ที่ match กับ alert system
+  let alertCondition, holdReason, nextAction;
+
+  if (p <= sl) {
+    alertCondition = 'sl_hit';
+    holdReason     = '🚨 ราคาหลุด Stop Loss';
+    nextAction     = '⛔ ขายตัดขาดทุนทันที — รอไม่ได้';
+  } else if (p >= tp2) {
+    alertCondition = 'tp2_hit';
+    holdReason     = '🏆 ถึงเป้าหมาย 2 แล้ว';
+    nextAction     = '💰 ทำกำไรทั้งหมด หรืออย่างน้อย 75%';
+  } else if (p >= tp1) {
+    alertCondition = 'tp1_hit';
+    holdReason     = '🎯 ถึงเป้าหมาย 1 แล้ว';
+    nextAction     = '💰 ทำกำไรบางส่วน 50% + เลื่อน SL มาที่ Entry';
+  } else {
+    const distToSlRatio = risk > 0 ? (p - sl) / risk : 1;
+    if (distToSlRatio <= 0.20) {
+      alertCondition = 'near_sl';
+      holdReason     = '⚠️ ใกล้ Stop Loss — เหลือ <20% ของ Risk';
+      nextAction     = '👀 เฝ้าระวังใกล้ชิด พิจารณาลดขนาดหรือรอยืนยัน';
+    } else if (p < entry) {
+      alertCondition = 'in_drawdown';
+      const distPct  = Math.round(distToSlRatio * 100);
+      holdReason     = `📉 ราคาต่ำกว่าจุดเข้า — ห่าง SL ${distPct}% ของ Risk`;
+      nextAction     = '⏳ ถือต่อได้ — SL ยังปลอดภัย ติดตามใกล้ชิด';
+    } else {
+      const progressTo50 = progress >= 50;
+      alertCondition = 'in_profit';
+      holdReason     = progressTo50
+        ? `📈 กำไรดี — ${Math.round(progress)}% ของทาง TP1 แล้ว`
+        : `📈 กำลังเดินหน้า — ${Math.round(progress)}% ของทาง TP1`;
+      nextAction     = progressTo50
+        ? '🔝 พิจารณาเลื่อน SL มาที่ Entry เพื่อ Lock กำไร'
+        : '✅ ถือต่อ — ราคากำลังเดินหน้า ไม่ต้องทำอะไร';
+    }
+  }
+
+  // สรุปภาพรวมว่าสอดคล้องกับ alert system แค่ไหน
+  let alertAlignment;
+  if (alertCondition === 'sl_hit') {
+    alertAlignment = { label: 'หลุดเงื่อนไข Alert', color: 'var(--red)', icon: '🚫' };
+  } else if (alertCondition === 'tp1_hit' || alertCondition === 'tp2_hit') {
+    alertAlignment = { label: 'บรรลุเป้าหมาย Alert', color: '#ffd700', icon: '✅' };
+  } else if (alertCondition === 'near_sl') {
+    alertAlignment = { label: 'ใกล้ขีดจำกัด Alert', color: 'var(--orange)', icon: '⚠️' };
+  } else if (alertCondition === 'in_profit') {
+    alertAlignment = { label: 'อยู่ในเงื่อนไข Alert ✓', color: 'var(--green)', icon: '🟢' };
+  } else {
+    alertAlignment = { label: 'ยังอยู่ในเงื่อนไข Alert', color: 'var(--yellow)', icon: '🟡' };
+  }
+
+  return { alertCondition, holdReason, nextAction, alertAlignment, pnlPct, progress };
+}
+
+// ══════════════════════════════════════════════════════════════
+//  MAIN — รัน analysis
+// ══════════════════════════════════════════════════════════════
+let currentFilter = 'all';
+let allResults    = [];
+
+async function runAnalysis() {
+  const text  = document.getElementById('portfolioInput').value.trim();
+  const errEl = document.getElementById('errorBox');
+  errEl.classList.remove('show');
+
+  if (!text) { showError('กรุณาวาง Portfolio Snapshot ก่อน'); return; }
+
+  const { positions, summary } = parsePortfolio(text);
+  if (!positions.length) { showError('ไม่พบข้อมูล Position — ตรวจสอบ format ข้อความ'); return; }
+
+  setSpinner(true, `กำลังดึงข้อมูลราคา ${positions.length} ตัว...`);
+  document.getElementById('summarySection').style.display = 'none';
+  document.getElementById('emptyState').classList.remove('show');
+
+  allResults = [];
+  let done   = 0;
+
+  for (const pos of positions) {
+    setSpinner(true, `กำลังวิเคราะห์ [${pos.symbol}] (${done+1}/${positions.length})...`);
+
+    // ดึง OHLC
+    const ohlc = await fetchOHLC(pos.symbol);
+    let levels, currentPrice;
+
+    if (ohlc && ohlc.closes.length >= 20) {
+      // ราคาล่าสุดจาก OHLC
+      const last = ohlc.closes.filter(v => v > 0).at(-1);
+      currentPrice = last || pos.priceSnap;
+
+      // คำนวณ levels จาก alert system (ATR)
+      const dir = pos.dot === '🔴' ? 'bear' : 'bull';
+      levels = calcAlertLevels(pos.entry, ohlc.highs, ohlc.lows, ohlc.closes, dir);
+    }
+
+    // fallback: ใช้ levels จาก snapshot
+    if (!levels) {
+      currentPrice = pos.priceSnap;
+      levels = {
+        entry  : pos.entry,
+        sl     : pos.slSnap,
+        tp1    : pos.tp1Snap,
+        tp2    : pos.tp2Snap,
+        atr    : null,
+        slPct  : Math.round(Math.abs(pos.slSnap - pos.entry) / pos.entry * 10000) / 100,
+        tp1Pct : Math.round(Math.abs(pos.tp1Snap - pos.entry) / pos.entry * 10000) / 100,
+        tp2Pct : Math.round(Math.abs(pos.tp2Snap - pos.entry) / pos.entry * 10000) / 100,
+        rr1    : 1.5, rr2: 3.0, source: 'snap',
+      };
+    }
+
+    const st = calcStatus(pos, currentPrice, levels);
+    const pnlUsd = (currentPrice - pos.entry) * pos.shares;
+
+    allResults.push({ pos, levels, currentPrice, status: st, pnlUsd });
+    done++;
+  }
+
+  setSpinner(false);
+  renderDashboard(summary);
+}
+
+function renderDashboard(summary) {
+  const critCnt  = allResults.filter(r => r.status.alertCondition === 'sl_hit').length;
+  const tpCnt    = allResults.filter(r => ['tp1_hit','tp2_hit'].includes(r.status.alertCondition)).length;
+  const warnCnt  = allResults.filter(r => r.status.alertCondition === 'near_sl').length;
+  const profitCnt= allResults.filter(r => r.status.alertCondition === 'in_profit').length;
+  const totalPnl = allResults.reduce((s,r) => s + r.pnlUsd, 0);
+
+  // summary bar
+  const sb = document.getElementById('summaryBar');
+  sb.innerHTML = `
+    <div class="stat-card">
+      <div class="sc-label">ไม้ที่เปิด</div>
+      <div class="sc-val sc-cyan">${allResults.length}</div>
+    </div>
+    <div class="stat-card">
+      <div class="sc-label">P&L ปัจจุบัน</div>
+      <div class="sc-val ${totalPnl >= 0 ? 'sc-green':'sc-red'}">${totalPnl >= 0 ? '+' : ''}${totalPnl.toFixed(2)} $</div>
+    </div>
+    <div class="stat-card">
+      <div class="sc-label">🚨 แตะ SL</div>
+      <div class="sc-val ${critCnt > 0 ? 'sc-red':'sc-white'}">${critCnt}</div>
+    </div>
+    <div class="stat-card">
+      <div class="sc-label">🎯 ถึงเป้า</div>
+      <div class="sc-val ${tpCnt > 0 ? 'sc-yellow':'sc-white'}">${tpCnt}</div>
+    </div>
+    <div class="stat-card">
+      <div class="sc-label">⚠️ เฝ้าระวัง</div>
+      <div class="sc-val ${warnCnt > 0 ? 'sc-yellow':'sc-white'}">${warnCnt}</div>
+    </div>
+    <div class="stat-card">
+      <div class="sc-label">📈 กำไรอยู่</div>
+      <div class="sc-val sc-green">${profitCnt}</div>
+    </div>`;
+
+  document.getElementById('lastUpdated').textContent = 'อัปเดต: ' + new Date().toLocaleTimeString('th-TH');
+
+  document.getElementById('summarySection').style.display = 'block';
+  renderCards(currentFilter);
+}
+
+function renderCards(filter) {
+  const grid = document.getElementById('cardsGrid');
+  grid.innerHTML = '';
+
+  // Sort: critical → near_sl → tp → in_drawdown → in_profit
+  const order = ['sl_hit','near_sl','tp2_hit','tp1_hit','in_drawdown','in_profit'];
+  const sorted = [...allResults].sort((a,b) =>
+    order.indexOf(a.status.alertCondition) - order.indexOf(b.status.alertCondition)
+  );
+
+  const visible = sorted.filter(r => {
+    if (filter === 'all') return true;
+    if (filter === 'take_profit') return ['tp1_hit','tp2_hit'].includes(r.status.alertCondition);
+    if (filter === 'near_sl')     return r.status.alertCondition === 'near_sl';
+    return r.status.alertCondition === filter;
+  });
+
+  if (!visible.length) {
+    document.getElementById('emptyState').classList.add('show');
+    return;
+  }
+  document.getElementById('emptyState').classList.remove('show');
+
+  visible.forEach((r, idx) => {
+    const card = buildCard(r);
+    card.style.animationDelay = `${idx * 0.045}s`;
+    grid.appendChild(card);
+  });
+}
+
+function buildCard(r) {
+  const { pos, levels, currentPrice, status, pnlUsd } = r;
+  const cond   = status.alertCondition;
+  const pnlPos = pnlUsd >= 0;
+  const chg    = ((currentPrice - pos.priceSnap) / pos.priceSnap * 100);
+
+  // Progress bar color
+  const progColor = cond === 'sl_hit' ? 'var(--red)' :
+                    cond.includes('tp') ? '#ffd700' :
+                    cond === 'near_sl'  ? 'var(--orange)' :
+                    cond === 'in_profit'? 'var(--green)' : 'var(--yellow)';
+
+  // dot
+  const dotClass = pos.dot === '🟢' ? 'dot-green' : pos.dot === '🟡' ? 'dot-yellow' : 'dot-red';
+
+  // SL/TP rows
+  const slHit  = currentPrice <= levels.sl;
+  const tp1Hit = currentPrice >= levels.tp1;
+  const tp2Hit = currentPrice >= levels.tp2;
+  const nearSl = !slHit && ((levels.sl !== 0) && ((currentPrice - levels.sl) / (pos.entry - levels.sl)) <= 0.2);
+
+  const slTag  = slHit  ? '<span class="lr-near-tag">BREACHED</span>' : nearSl ? '<span class="lr-near-tag">NEAR</span>' : '';
+  const tp1Tag = tp1Hit ? '<span class="lr-hit-tag">HIT</span>' : '';
+  const tp2Tag = tp2Hit ? '<span class="lr-hit-tag">HIT</span>' : '';
+
+  const srcBadge = levels.source === 'alert'
+    ? '<span class="src-badge src-alert">Alert ATR</span>'
+    : '<span class="src-badge src-snap">Snapshot</span>';
+
+  const tvLink = `https://www.tradingview.com/chart/?symbol=NASDAQ:${pos.symbol}`;
+
+  const card = document.createElement('div');
+  card.className = `pos-card status-${cond}`;
+  card.innerHTML = `
+    <div class="card-header">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="card-dot ${dotClass}"></div>
+        <div class="card-symbol">${pos.symbol}</div>
+        ${srcBadge}
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <a href="${tvLink}" target="_blank" class="tv-link">📈 TV</a>
+        <span class="status-badge badge-${cond}">${condLabel(cond)}</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <!-- Price row -->
+      <div class="price-row">
+        <div class="price-current">$${currentPrice.toFixed(4)}</div>
+        <span class="price-chg ${chg > 0 ? 'chg-pos' : chg < 0 ? 'chg-neg' : 'chg-neu'}">${chg >= 0 ? '+' : ''}${chg.toFixed(2)}%</span>
+      </div>
+
+      <!-- Meta grid -->
+      <div class="card-meta">
+        <div class="meta-item">
+          <div class="meta-label">จุดเข้า (Entry)</div>
+          <div class="meta-val">$${pos.entry.toFixed(4)}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">จำนวนหุ้น</div>
+          <div class="meta-val">${pos.shares % 1 !== 0 ? pos.shares.toFixed(4) : pos.shares}</div>
+        </div>
+      </div>
+
+      <!-- Alloc bar -->
+      <div class="alloc-bar">
+        <div class="alloc-label">${pos.allocPct}%</div>
+        <div class="alloc-track" data-tip="สัดส่วนใน Portfolio">
+          <div class="alloc-fill" style="width:${Math.min(pos.allocPct, 100)}%"></div>
+        </div>
+        <div class="alloc-label" style="text-align:right">สัดส่วน</div>
+      </div>
+
+      <!-- SL/TP Ladder -->
+      <div class="ladder">
+        <div class="ladder-title">ระดับราคา (Alert System ${levels.atr ? '• ATR: $'+levels.atr : ''})</div>
+        <div class="ladder-row lr-sl">
+          <span class="lr-label">SL</span>
+          <span class="lr-price">$${levels.sl.toFixed(4)}</span>
+          <span class="lr-pct">-${levels.slPct}%</span>
+          ${slTag}
+        </div>
+        <div class="ladder-row lr-tp1">
+          <span class="lr-label">TP1</span>
+          <span class="lr-price">$${levels.tp1.toFixed(4)}</span>
+          <span class="lr-pct">+${levels.tp1Pct}%</span>
+          <span class="lr-rr">R:R 1:${levels.rr1}</span>
+          ${tp1Tag}
+        </div>
+        <div class="ladder-row lr-tp2">
+          <span class="lr-label">TP2</span>
+          <span class="lr-price">$${levels.tp2.toFixed(4)}</span>
+          <span class="lr-pct">+${levels.tp2Pct}%</span>
+          <span class="lr-rr">R:R 1:${levels.rr2}</span>
+          ${tp2Tag}
+        </div>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="prog-section">
+        <div class="prog-header">
+          <span>ความคืบหน้าสู่ TP1</span>
+          <span>${Math.round(status.progress)}%</span>
+        </div>
+        <div class="prog-track">
+          <div class="prog-fill prog-glow"
+               style="width:${Math.min(status.progress,100)}%;background:${progColor};color:${progColor}"></div>
+        </div>
+      </div>
+
+      <!-- Alert alignment -->
+      <div style="margin:10px 0 6px;font-family:var(--mono);font-size:11px;color:var(--text2)">
+        <span style="margin-right:6px">สถานะ Alert:</span>
+        <span style="color:${status.alertAlignment.color};font-weight:700">
+          ${status.alertAlignment.icon} ${status.alertAlignment.label}
+        </span>
+      </div>
+
+      <!-- Reason & Action -->
+      <div class="action-box action-${riskLevel(cond)}">
+        <div style="font-weight:700;margin-bottom:4px">${status.holdReason}</div>
+        <div><span class="action-icon">👉</span>${status.nextAction}</div>
+      </div>
+
+      <!-- P&L -->
+      <div class="pnl-row">
+        <div class="pnl-label">P&L ปัจจุบัน</div>
+        <div class="pnl-val" style="color:${pnlPos ? 'var(--green)' : 'var(--red)'}">
+          ${pnlPos ? '+' : ''}${pnlUsd.toFixed(2)} $
+          <span style="font-size:11px;opacity:.65">(${status.pnlPct >= 0 ? '+' : ''}${status.pnlPct.toFixed(2)}%)</span>
+        </div>
+      </div>
+
+    </div>`;
+  return card;
+}
+
+// ── helpers ──
+function condLabel(c) {
+  const m = {
+    sl_hit:'SL แตะ', tp1_hit:'TP1 ✓', tp2_hit:'TP2 ✓',
+    near_sl:'ใกล้ SL', in_profit:'กำไรอยู่', in_drawdown:'ย่อตัว',
+  };
+  return m[c] || c;
+}
+function riskLevel(c) {
+  if (c === 'sl_hit')                   return 'critical';
+  if (c === 'tp1_hit' || c === 'tp2_hit') return 'take_profit';
+  if (c === 'near_sl')                  return 'high';
+  if (c === 'in_drawdown')              return 'medium';
+  return 'low';
+}
+function setFilter(f, el) {
+  currentFilter = f;
+  document.querySelectorAll('.ftab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  renderCards(f);
+}
+function setSpinner(show, txt='') {
+  const el = document.getElementById('spinner');
+  el.classList.toggle('show', show);
+  if (txt) document.getElementById('spinnerText').textContent = txt;
+}
+function showError(msg) {
+  setSpinner(false);
+  const el = document.getElementById('errorBox');
+  el.textContent = '⚠️ ' + msg;
+  el.classList.add('show');
+}
+function clearAll() {
+  document.getElementById('portfolioInput').value = '';
+  document.getElementById('summarySection').style.display = 'none';
+  document.getElementById('errorBox').classList.remove('show');
+  document.getElementById('emptyState').classList.remove('show');
+  document.getElementById('lastUpdated').textContent = 'ยังไม่มีข้อมูล';
+  allResults = [];
+}
+</script>
+</body>
+</html>
