@@ -2581,5 +2581,23 @@
     "price": 17.110000610351562,
     "change_pct": -3.8963776610953715,
     "value": 3.7393933611144208
+  },
+  {
+    "timestamp": "2026-05-28T13:32:26Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_CP_BULL",
+    "type": "candle_pattern",
+    "price": 69.4000015258789,
+    "change_pct": -1.9635520188177706,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-28T13:33:00Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_CP_BULL",
+    "type": "candle_pattern",
+    "price": 49.0099983215332,
+    "change_pct": -0.6887585962014006,
+    "value": 1
   }
 ]
