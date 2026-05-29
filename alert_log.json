@@ -2,15 +2,6 @@
   {
     "timestamp": "2026-05-27T09:22:26Z",
     "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 22.040000915527344,
-    "change_pct": -9.523805765487092,
-    "value": -9.523805765487092
-  },
-  {
-    "timestamp": "2026-05-27T09:22:26Z",
-    "symbol": "RDW",
     "alert_id": "RDW_VOL_ALARM",
     "type": "volume_spike",
     "price": 22.040000915527344,
@@ -4498,5 +4489,14 @@
     "price": 9.588899612426758,
     "change_pct": -13.457584725390273,
     "value": -13.457584725390273
+  },
+  {
+    "timestamp": "2026-05-29T17:03:00Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.369999885559082,
+    "change_pct": -6.021507837439103,
+    "value": -6.021507837439103
   }
 ]
