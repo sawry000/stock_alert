@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T01:57:32Z",
-    "symbol": "ETH-USD",
-    "alert_id": "ETH_NEWS_NEGATIVE",
-    "type": "news_sentiment",
-    "price": 2072.239990234375,
-    "change_pct": 0.2864958805583456,
-    "value": 2
-  },
-  {
     "timestamp": "2026-05-27T04:57:32Z",
     "symbol": "BTC-USD",
     "alert_id": "BTC_NEWS_ALERT",
@@ -4497,6 +4488,15 @@
     "type": "candle_pattern",
     "price": 20.079999923706055,
     "change_pct": -5.771938415269564,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T15:43:24Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 6.289999961853027,
+    "change_pct": -1.564945823896281,
     "value": 1
   }
 ]
