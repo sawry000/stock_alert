@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:53:10Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_BREAK_ABOVE",
-    "type": "support_resistance",
-    "price": 4.239999771118164,
-    "change_pct": 0.9523755028134258,
-    "value": 4.239999771118164
-  },
-  {
     "timestamp": "2026-05-27T09:53:14Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_BREAK_ABOVE",
@@ -4498,5 +4489,14 @@
     "price": 3.009999990463257,
     "change_pct": 3.7931031194226525,
     "value": 3
+  },
+  {
+    "timestamp": "2026-05-29T19:12:46Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 15.25,
+    "change_pct": -10.452143276570764,
+    "value": 3.6491023280126984
   }
 ]
