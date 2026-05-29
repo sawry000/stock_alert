@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:53:33Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_CP_BULL",
-    "type": "candle_pattern",
-    "price": 53.119998931884766,
-    "change_pct": -2.94171581968798,
-    "value": 1
-  },
-  {
     "timestamp": "2026-05-27T09:53:34Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 9.833499908447266,
     "change_pct": -11.250000826288217,
     "value": 2
+  },
+  {
+    "timestamp": "2026-05-29T20:22:35Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 15.109999656677246,
+    "change_pct": -11.274223977232852,
+    "value": 4.240425539029959
   }
 ]
