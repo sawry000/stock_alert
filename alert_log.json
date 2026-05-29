@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:53:32Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_POS_SIZE",
-    "type": "position_size",
-    "price": 332.95001220703125,
-    "change_pct": -2.6461952611019735,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-27T09:53:33Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 9.800000190734863,
     "change_pct": -11.552344848963328,
     "value": -11.552344848963328
+  },
+  {
+    "timestamp": "2026-05-29T19:57:52Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 9.833499908447266,
+    "change_pct": -11.250000826288217,
+    "value": 2
   }
 ]
