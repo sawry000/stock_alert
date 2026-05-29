@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T01:57:26Z",
-    "symbol": "BTC-USD",
-    "alert_id": "BTC_NEWS_ALERT",
-    "type": "news_sentiment",
-    "price": 75804.0625,
-    "change_pct": 0.17488161498561683,
-    "value": 1
-  },
-  {
     "timestamp": "2026-05-27T01:57:32Z",
     "symbol": "ETH-USD",
     "alert_id": "ETH_NEWS_NEGATIVE",
@@ -4498,5 +4489,14 @@
     "price": 4.019999980926514,
     "change_pct": -6.728538725602923,
     "value": -6.728538725602923
+  },
+  {
+    "timestamp": "2026-05-29T15:38:18Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_CP_BULL",
+    "type": "candle_pattern",
+    "price": 20.079999923706055,
+    "change_pct": -5.771938415269564,
+    "value": 1
   }
 ]
