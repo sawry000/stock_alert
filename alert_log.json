@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-26T22:52:24Z",
-    "symbol": "BTC-USD",
-    "alert_id": "BTC_NEWS_ALERT",
-    "type": "news_sentiment",
-    "price": 75585.703125,
-    "change_pct": -2.1532520466215157,
-    "value": 1
-  },
-  {
     "timestamp": "2026-05-26T22:52:30Z",
     "symbol": "ETH-USD",
     "alert_id": "ETH_NEWS_NEGATIVE",
@@ -4498,5 +4489,14 @@
     "price": 25.18000030517578,
     "change_pct": -0.9441372731086562,
     "value": 3
+  },
+  {
+    "timestamp": "2026-05-29T15:17:45Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "price": 357.0199890136719,
+    "change_pct": -6.047371312191612,
+    "value": -6.047371312191612
   }
 ]
