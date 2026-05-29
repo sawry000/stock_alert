@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:52:39Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_POS_SIZE",
-    "type": "position_size",
-    "price": 14.399999618530273,
-    "change_pct": 0.6992980316802289,
-    "value": 60
-  },
-  {
     "timestamp": "2026-05-27T09:52:41Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 347.0799865722656,
     "change_pct": -8.663161428351152,
     "value": -8.663161428351152
+  },
+  {
+    "timestamp": "2026-05-29T18:32:58Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 4.014999866485596,
+    "change_pct": -6.844550661587098,
+    "value": 1
   }
 ]
