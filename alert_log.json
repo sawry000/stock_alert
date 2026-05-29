@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:53:05Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_BREAK_ABOVE",
-    "type": "support_resistance",
-    "price": 4.099999904632568,
-    "change_pct": -0.6012435843539377,
-    "value": 4.099999904632568
-  },
-  {
     "timestamp": "2026-05-27T09:53:08Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 51.470001220703125,
     "change_pct": 1.3189000407541887,
     "value": 3
+  },
+  {
+    "timestamp": "2026-05-29T18:52:48Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 9.295000076293945,
+    "change_pct": -16.110107614675584,
+    "value": -16.110107614675584
   }
 ]
