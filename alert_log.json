@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:22:26Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.040000915527344,
-    "change_pct": -9.523805765487092,
-    "value": 3.530548400261351
-  },
-  {
     "timestamp": "2026-05-27T09:52:20Z",
     "symbol": "COHR",
     "alert_id": "COHR_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 4.369999885559082,
     "change_pct": -6.021507837439103,
     "value": -6.021507837439103
+  },
+  {
+    "timestamp": "2026-05-29T17:22:50Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.431399822235107,
+    "change_pct": -4.701079091718127,
+    "value": 2
   }
 ]
