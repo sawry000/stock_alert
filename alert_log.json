@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:53:25Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 49.439998626708984,
-    "change_pct": -0.882119834184078,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-05-27T09:53:28Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_POS_SIZE",
-    "type": "position_size",
-    "price": 174.02000427246094,
-    "change_pct": -0.35501358654320253,
-    "value": 9
-  },
-  {
     "timestamp": "2026-05-27T09:53:30Z",
     "symbol": "PSIX",
     "alert_id": "PSIX_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 4.014999866485596,
     "change_pct": -6.844550661587098,
     "value": -6.844550661587098
+  },
+  {
+    "timestamp": "2026-05-29T19:47:38Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 15.260000228881836,
+    "change_pct": -10.393422026530622,
+    "value": 4.000723754580793
+  },
+  {
+    "timestamp": "2026-05-29T19:47:51Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.324999809265137,
+    "change_pct": -6.989251413652981,
+    "value": -6.989251413652981
   }
 ]
