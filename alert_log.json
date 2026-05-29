@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:52:22Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_POS_SIZE",
-    "type": "position_size",
-    "price": 318.7200012207031,
-    "change_pct": 0.7778414028657226,
-    "value": 4
-  },
-  {
-    "timestamp": "2026-05-27T09:52:24Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_POS_SIZE",
-    "type": "position_size",
-    "price": 66.9000015258789,
-    "change_pct": -1.3255393895769245,
-    "value": 22
-  },
-  {
-    "timestamp": "2026-05-27T09:52:27Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_POS_SIZE",
-    "type": "position_size",
-    "price": 26.079999923706055,
-    "change_pct": -0.022234611527897557,
-    "value": 70
-  },
-  {
     "timestamp": "2026-05-27T09:52:29Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_POS_SIZE",
@@ -4498,5 +4471,32 @@
     "price": 348.6499938964844,
     "change_pct": -8.250001606188324,
     "value": -8.250001606188324
+  },
+  {
+    "timestamp": "2026-05-29T17:37:42Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 15.103400230407715,
+    "change_pct": -11.31297574628471,
+    "value": 2.766550334518634
+  },
+  {
+    "timestamp": "2026-05-29T17:37:53Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 26.53499984741211,
+    "change_pct": 4.386309391865097,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-29T17:37:57Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.025000095367432,
+    "change_pct": -6.612526789618747,
+    "value": -6.612526789618747
   }
 ]
