@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-05-26T22:52:30Z",
-    "symbol": "ETH-USD",
-    "alert_id": "ETH_NEWS_NEGATIVE",
-    "type": "news_sentiment",
-    "price": 2064.56005859375,
-    "change_pct": -2.196656191749392,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-05-26T22:52:31Z",
-    "symbol": "ETH-USD",
-    "alert_id": "ETH_POSITION_SIZE",
-    "type": "position_size",
-    "price": 2064.56005859375,
-    "change_pct": -2.196656191749392,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-05-26T22:52:36Z",
-    "symbol": "NVDA",
-    "alert_id": "NVDA_NEWS_CATALYST",
-    "type": "news_sentiment",
-    "price": 214.86000061035156,
-    "change_pct": 0.26253263471771104,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-27T01:57:26Z",
     "symbol": "BTC-USD",
     "alert_id": "BTC_NEWS_ALERT",
@@ -4498,5 +4471,32 @@
     "price": 357.0199890136719,
     "change_pct": -6.047371312191612,
     "value": -6.047371312191612
+  },
+  {
+    "timestamp": "2026-05-29T15:32:40Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 70.29000091552734,
+    "change_pct": -0.6361310213071122,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-29T15:32:58Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 25.059999465942383,
+    "change_pct": -1.4162098113989727,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T15:33:00Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.019999980926514,
+    "change_pct": -6.728538725602923,
+    "value": -6.728538725602923
   }
 ]
