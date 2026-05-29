@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:53:18Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_BREAK_ABOVE",
-    "type": "support_resistance",
-    "price": 6.050000190734863,
-    "change_pct": -6.162266518777425,
-    "value": 6.050000190734863
-  },
-  {
     "timestamp": "2026-05-27T09:53:21Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 351.7449951171875,
     "change_pct": -7.435527600740131,
     "value": -7.435527600740131
+  },
+  {
+    "timestamp": "2026-05-29T19:37:35Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 70.9800033569336,
+    "change_pct": 0.3392753137314092,
+    "value": 3
   }
 ]
