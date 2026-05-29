@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:52:20Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_POS_SIZE",
-    "type": "position_size",
-    "price": 381.3500061035156,
-    "change_pct": -0.06813078705599661,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-27T09:52:22Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 4.431399822235107,
     "change_pct": -4.701079091718127,
     "value": 2
+  },
+  {
+    "timestamp": "2026-05-29T17:27:23Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "price": 348.6499938964844,
+    "change_pct": -8.250001606188324,
+    "value": -8.250001606188324
   }
 ]
