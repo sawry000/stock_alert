@@ -4336,5 +4336,23 @@
     "price": 345.75,
     "change_pct": -0.6265913756814895,
     "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T13:52:45Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MA_GOLDEN",
+    "type": "ma_crossover",
+    "price": 3.0899999141693115,
+    "change_pct": 6.551721178252125,
+    "value": 2.599
+  },
+  {
+    "timestamp": "2026-05-29T13:52:54Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.381800174713135,
+    "change_pct": -5.767738178212163,
+    "value": -5.767738178212163
   }
 ]
