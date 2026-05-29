@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T08:02:23Z",
-    "symbol": "BTC-USD",
-    "alert_id": "BTC_NEWS_ALERT",
-    "type": "news_sentiment",
-    "price": 75879.71875,
-    "change_pct": 0.07711393573701304,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-05-27T09:22:25Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 22.040000915527344,
-    "change_pct": -9.523805765487092,
-    "value": 3.530548400261351
-  },
-  {
     "timestamp": "2026-05-27T09:22:25Z",
     "symbol": "RDW",
     "alert_id": "RDW_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 351.4800109863281,
     "change_pct": -7.505260266755756,
     "value": -7.505260266755756
+  },
+  {
+    "timestamp": "2026-05-29T16:37:40Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 15.130000114440918,
+    "change_pct": -11.156781477152572,
+    "value": 2.5157234747890205
+  },
+  {
+    "timestamp": "2026-05-29T16:37:50Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.9649999141693115,
+    "change_pct": -8.004642362660977,
+    "value": -8.004642362660977
   }
 ]
