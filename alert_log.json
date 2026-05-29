@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T04:57:32Z",
-    "symbol": "BTC-USD",
-    "alert_id": "BTC_NEWS_ALERT",
-    "type": "news_sentiment",
-    "price": 75461.2890625,
-    "change_pct": -0.4747596655415218,
-    "value": 1
-  },
-  {
     "timestamp": "2026-05-27T04:57:42Z",
     "symbol": "NVDA",
     "alert_id": "NVDA_NEWS_CATALYST",
@@ -4498,5 +4489,14 @@
     "price": 6.289999961853027,
     "change_pct": -1.564945823896281,
     "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T15:47:58Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 9.539999961853027,
+    "change_pct": -13.898917311795783,
+    "value": -13.898917311795783
   }
 ]
