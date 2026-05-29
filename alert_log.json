@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T04:57:42Z",
-    "symbol": "NVDA",
-    "alert_id": "NVDA_NEWS_CATALYST",
-    "type": "news_sentiment",
-    "price": 214.86000061035156,
-    "change_pct": 0.26253263471771104,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-27T05:27:25Z",
     "symbol": "ETH-USD",
     "alert_id": "ETH_CANDLE_BULL",
@@ -4498,5 +4489,14 @@
     "price": 9.539999961853027,
     "change_pct": -13.898917311795783,
     "value": -13.898917311795783
+  },
+  {
+    "timestamp": "2026-05-29T15:58:01Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.324999809265137,
+    "change_pct": -6.989251413652981,
+    "value": -6.989251413652981
   }
 ]
