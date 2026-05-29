@@ -3787,5 +3787,23 @@
     "price": 41.9900016784668,
     "change_pct": -0.023805527460007442,
     "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T07:17:44Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 25.3799991607666,
+    "change_pct": 0.6344138016122233,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T07:17:51Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 11.039999961853027,
+    "change_pct": -7.615063080727799,
+    "value": -7.615063080727799
   }
 ]
