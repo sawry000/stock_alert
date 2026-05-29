@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:52:29Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_POS_SIZE",
-    "type": "position_size",
-    "price": 19.1299991607666,
-    "change_pct": 0.26205010883963975,
-    "value": 93
-  },
-  {
     "timestamp": "2026-05-27T09:52:31Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 4.025000095367432,
     "change_pct": -6.612526789618747,
     "value": -6.612526789618747
+  },
+  {
+    "timestamp": "2026-05-29T17:52:48Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 9.454999923706055,
+    "change_pct": -14.666065670522974,
+    "value": -14.666065670522974
   }
 ]
