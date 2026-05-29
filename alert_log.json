@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:53:08Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.099999904632568,
-    "change_pct": -0.6012435843539377,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-27T09:53:10Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_BREAK_ABOVE",
@@ -4498,5 +4489,14 @@
     "price": 9.295000076293945,
     "change_pct": -16.110107614675584,
     "value": -16.110107614675584
+  },
+  {
+    "timestamp": "2026-05-29T18:57:40Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.009999990463257,
+    "change_pct": 3.7931031194226525,
+    "value": 3
   }
 ]
