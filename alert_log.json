@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:53:36Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_POS_SIZE",
-    "type": "position_size",
-    "price": 5.96999979019165,
-    "change_pct": 0.33613092759075985,
-    "value": 249
-  },
-  {
     "timestamp": "2026-05-27T09:53:38Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 4.099999904632568,
     "change_pct": -4.872392003884716,
     "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T20:42:36Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.0799999237060547,
+    "change_pct": 6.206893920898441,
+    "value": 6.206893920898441
   }
 ]
