@@ -4237,5 +4237,59 @@
     "price": 51.33000183105469,
     "change_pct": 0.5484854672961613,
     "value": 2.777505611848868
+  },
+  {
+    "timestamp": "2026-05-29T13:32:30Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_CP_BULL",
+    "type": "candle_pattern",
+    "price": 27.389999389648438,
+    "change_pct": -1.4748223393941122,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T13:32:39Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_CP_BULL",
+    "type": "candle_pattern",
+    "price": 13.295000076293945,
+    "change_pct": -2.242646497838635,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T13:32:48Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 25.56999969482422,
+    "change_pct": 0.5900853454925926,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T13:32:51Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.039999961853027,
+    "change_pct": -6.264502045173372,
+    "value": -6.264502045173372
+  },
+  {
+    "timestamp": "2026-05-29T13:33:04Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 346.3949890136719,
+    "change_pct": 0.2590416826836107,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T13:33:14Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_MA_GOLDEN",
+    "type": "ma_crossover",
+    "price": 20.31999969482422,
+    "change_pct": -4.6457076732791185,
+    "value": 0.576
   }
 ]
