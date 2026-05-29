@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:52:35Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_POS_SIZE",
-    "type": "position_size",
-    "price": 177.6199951171875,
-    "change_pct": -0.3198860108942689,
-    "value": 4
-  },
-  {
     "timestamp": "2026-05-27T09:52:39Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 70.83999633789062,
     "change_pct": 1.7313229350588581,
     "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T18:27:24Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "price": 347.0799865722656,
+    "change_pct": -8.663161428351152,
+    "value": -8.663161428351152
   }
 ]
