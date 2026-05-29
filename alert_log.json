@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:52:46Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 16.899999618530273,
-    "change_pct": -1.7441882643588713,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-27T09:52:48Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 4.005000114440918,
     "change_pct": -7.076563470048298,
     "value": -7.076563470048298
+  },
+  {
+    "timestamp": "2026-05-29T18:42:51Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.409900188446045,
+    "change_pct": -5.163436807611944,
+    "value": -5.163436807611944
   }
 ]
