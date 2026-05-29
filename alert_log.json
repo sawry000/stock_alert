@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:53:14Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_BREAK_ABOVE",
-    "type": "support_resistance",
-    "price": 11.420000076293945,
-    "change_pct": 1.5111117892795138,
-    "value": 11.420000076293945
-  },
-  {
     "timestamp": "2026-05-27T09:53:16Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 15.25,
     "change_pct": -10.452143276570764,
     "value": 3.6491023280126984
+  },
+  {
+    "timestamp": "2026-05-29T19:17:52Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 25.75,
+    "change_pct": 1.2981904012588446,
+    "value": 3
   }
 ]
