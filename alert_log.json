@@ -4381,5 +4381,23 @@
     "price": 359.7200012207031,
     "change_pct": -5.336841784025494,
     "value": -5.336841784025494
+  },
+  {
+    "timestamp": "2026-05-29T14:32:54Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.039999961853027,
+    "change_pct": -6.264502045173372,
+    "value": -6.264502045173372
+  },
+  {
+    "timestamp": "2026-05-29T14:33:13Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_CP_BULL",
+    "type": "candle_pattern",
+    "price": 17.319900512695312,
+    "change_pct": 2.825341443216049,
+    "value": 1
   }
 ]
