@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T09:52:33Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 72.7300033569336,
-    "change_pct": -0.06869557992086753,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-27T09:52:35Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 15.305100440979004,
     "change_pct": -10.128594004820886,
     "value": 3.0319357548385986
+  },
+  {
+    "timestamp": "2026-05-29T18:17:27Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_CP_BULL",
+    "type": "candle_pattern",
+    "price": 70.83999633789062,
+    "change_pct": 1.7313229350588581,
+    "value": 1
   }
 ]
