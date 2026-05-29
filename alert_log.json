@@ -4462,5 +4462,23 @@
     "price": 49.790000915527344,
     "change_pct": -1.9881871741587664,
     "value": 2
+  },
+  {
+    "timestamp": "2026-05-29T14:52:49Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.8499999046325684,
+    "change_pct": -1.7241412195666055,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-29T14:53:04Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.220699787139893,
+    "change_pct": -9.232262642152856,
+    "value": -9.232262642152856
   }
 ]
