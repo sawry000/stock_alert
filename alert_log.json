@@ -4300,5 +4300,32 @@
     "price": 2.9400999546051025,
     "change_pct": 1.3827570553483666,
     "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T13:42:29Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 20.2549991607666,
+    "change_pct": -0.9535493361046344,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-05-29T13:42:41Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.0999999046325684,
+    "change_pct": 6.896548435605809,
+    "value": 6.896548435605809
+  },
+  {
+    "timestamp": "2026-05-29T13:42:52Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 10.286700248718262,
+    "change_pct": -7.159745047669119,
+    "value": -7.159745047669119
   }
 ]
