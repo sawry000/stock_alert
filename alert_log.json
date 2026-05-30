@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T15:32:56Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.40500020980835,
-    "change_pct": 6.7930617195585254,
-    "value": 6.7930617195585254
-  },
-  {
     "timestamp": "2026-05-27T15:43:22Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 9.949999809265137,
     "change_pct": -10.198557678112486,
     "value": -10.198557678112486
+  },
+  {
+    "timestamp": "2026-05-30T01:17:43Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 15.109999656677246,
+    "change_pct": -11.274223977232852,
+    "value": 4.240425539029959
   }
 ]
