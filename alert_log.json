@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T14:07:26Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_CP_BULL",
-    "type": "candle_pattern",
-    "price": 26.235000610351562,
-    "change_pct": 0.5719610299533214,
-    "value": 1
-  },
-  {
     "timestamp": "2026-05-27T14:07:50Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 15.109999656677246,
     "change_pct": -11.274223977232852,
     "value": 4.240425539029959
+  },
+  {
+    "timestamp": "2026-05-30T00:42:46Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 4.099999904632568,
+    "change_pct": -4.872392003884716,
+    "value": 1
   }
 ]
