@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T18:37:44Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 187.63999938964844,
-    "change_pct": 5.303327565883855,
-    "value": 5.303327565883855
-  },
-  {
     "timestamp": "2026-05-27T18:47:36Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_VOL_3X",
@@ -4498,5 +4489,14 @@
     "price": 15.109999656677246,
     "change_pct": -11.274223977232852,
     "value": 3.999390377699989
+  },
+  {
+    "timestamp": "2026-05-30T04:47:44Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 4.099999904632568,
+    "change_pct": -4.872392003884716,
+    "value": 1
   }
 ]
