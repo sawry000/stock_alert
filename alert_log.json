@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T22:02:48Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.619999885559082,
-    "change_pct": 22.429901194349622,
-    "value": 22.429901194349622
-  },
-  {
     "timestamp": "2026-05-27T22:02:52Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 26.149999618530273,
     "change_pct": 2.871753023329157,
     "value": 3
+  },
+  {
+    "timestamp": "2026-05-30T07:48:02Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_CP_BULL",
+    "type": "candle_pattern",
+    "price": 20.280000686645508,
+    "change_pct": -4.833408321701037,
+    "value": 1
   }
 ]
