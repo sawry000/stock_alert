@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-05-27T17:37:57Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.335000038146973,
-    "change_pct": 5.096005579591085,
-    "value": 5.096005579591085
-  },
-  {
-    "timestamp": "2026-05-27T17:47:45Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.5,
-    "change_pct": 7.142857142857138,
-    "value": 7.142857142857138
-  },
-  {
-    "timestamp": "2026-05-27T17:47:48Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.5,
-    "change_pct": 7.142857142857138,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-27T17:57:32Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 72.75,
-    "change_pct": -0.041220115416324726,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-27T17:57:35Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_MTF_BULL",
@@ -4497,6 +4461,42 @@
     "type": "mtf_alignment",
     "price": 95.29000091552734,
     "change_pct": -2.4767158780806984,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-05-30T02:57:36Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 15.109999656677246,
+    "change_pct": -11.274223977232852,
+    "value": 4.240425539029959
+  },
+  {
+    "timestamp": "2026-05-30T02:57:46Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.099999904632568,
+    "change_pct": -4.872392003884716,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-30T02:57:55Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 6.210000038146973,
+    "change_pct": -3.4214613040906237,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-05-30T02:57:59Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 51.9900016784668,
+    "change_pct": 2.3425229891078736,
     "value": 3
   }
 ]
