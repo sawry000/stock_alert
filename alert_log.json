@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-28T17:58:00Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 25.78499984741211,
-    "change_pct": 2.2402848826808506,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-28T18:08:00Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 15.109999656677246,
     "change_pct": -11.274223977232852,
     "value": 3.999390377699989
+  },
+  {
+    "timestamp": "2026-06-01T06:12:39Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.0799999237060547,
+    "change_pct": 6.206893920898441,
+    "value": 6.206893920898441
   }
 ]
