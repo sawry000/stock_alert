@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T13:42:29Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_CP_BULL",
-    "type": "candle_pattern",
-    "price": 20.2549991607666,
-    "change_pct": -0.9535493361046344,
-    "value": 1
-  },
-  {
     "timestamp": "2026-05-29T13:42:41Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 4.630000114440918,
     "change_pct": 3.1180426378823554,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-01T23:27:49Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_3X",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": 43.321682583539776,
+    "value": 5.842185025174168
   }
 ]
