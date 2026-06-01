@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T02:02:39Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 25.3799991607666,
-    "change_pct": 0.6344138016122233,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-29T02:07:56Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 171.61500549316406,
     "change_pct": 9.714234428566728,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-01T14:37:30Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_DROP",
+    "type": "percent_change",
+    "price": 63.7599983215332,
+    "change_pct": -6.317957211970025,
+    "value": -6.317957211970025
   }
 ]
