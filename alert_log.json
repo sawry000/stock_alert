@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-28T22:57:51Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 11.039999961853027,
-    "change_pct": -7.615063080727799,
-    "value": -7.615063080727799
-  },
-  {
     "timestamp": "2026-05-28T23:08:03Z",
     "symbol": "PSIX",
     "alert_id": "PSIX_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 51.9900016784668,
     "change_pct": 1.976971679210535,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-01T12:17:48Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.0799999237060547,
+    "change_pct": 8.833919565584969,
+    "value": 8.833919565584969
   }
 ]
