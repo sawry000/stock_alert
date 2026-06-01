@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-28T18:23:13Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 6.360000133514404,
-    "change_pct": -3.1963449997807607,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-28T18:23:17Z",
     "symbol": "WGS",
     "alert_id": "WGS_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 15.109999656677246,
     "change_pct": -11.274223977232852,
     "value": 3.999390377699989
+  },
+  {
+    "timestamp": "2026-06-01T08:02:20Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_CP_BULL",
+    "type": "candle_pattern",
+    "price": 342.8500061035156,
+    "change_pct": 0.5454723315978814,
+    "value": 1
   }
 ]
