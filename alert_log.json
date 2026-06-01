@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-28T13:42:31Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_CP_BULL",
-    "type": "candle_pattern",
-    "price": 19.774999618530273,
-    "change_pct": -0.9556360449855658,
-    "value": 1
-  },
-  {
     "timestamp": "2026-05-28T13:43:04Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 9.949999809265137,
     "change_pct": -10.198557678112486,
     "value": -10.198557678112486
+  },
+  {
+    "timestamp": "2026-06-01T02:17:35Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 15.109999656677246,
+    "change_pct": -11.274223977232852,
+    "value": 3.999390377699989
   }
 ]
