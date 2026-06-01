@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T10:43:01Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 11.039999961853027,
-    "change_pct": -0.3610111746116672,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-05-29T10:43:05Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 6.369999885559082,
-    "change_pct": -0.9331277518027634,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-29T10:43:09Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 50.150001525878906,
-    "change_pct": -1.2795245553564782,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-05-29T10:52:33Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.0399999618530273,
-    "change_pct": 4.8275848914837045,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-29T10:57:35Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_VOL_SPIKE",
@@ -4498,5 +4462,41 @@
     "price": 27.149999618530273,
     "change_pct": 43.321682583539776,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-01T21:47:28Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_CP_BULL",
+    "type": "candle_pattern",
+    "price": 28.25,
+    "change_pct": 4.013254786450663,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-01T21:47:34Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_CP_BULL",
+    "type": "candle_pattern",
+    "price": 185.6699981689453,
+    "change_pct": 18.699653605002766,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-01T21:47:43Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_3X",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": 43.321682583539776,
+    "value": 5.842185025174168
+  },
+  {
+    "timestamp": "2026-06-01T21:47:49Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 3.9600000381469727,
+    "change_pct": -3.431120585583611,
+    "value": 1
   }
 ]
