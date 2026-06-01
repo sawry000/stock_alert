@@ -1,212 +1,5 @@
 [
   {
-    "timestamp": "2026-05-28T09:57:46Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_POS_SIZE",
-    "type": "position_size",
-    "price": 173.5500030517578,
-    "change_pct": -3.3669272399702845,
-    "value": 9
-  },
-  {
-    "timestamp": "2026-05-28T09:57:48Z",
-    "symbol": "PSIX",
-    "alert_id": "PSIX_POS_SIZE",
-    "type": "position_size",
-    "price": 42.84000015258789,
-    "change_pct": 2.0000003633045016,
-    "value": 17
-  },
-  {
-    "timestamp": "2026-05-28T09:57:50Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_POS_SIZE",
-    "type": "position_size",
-    "price": 345.8399963378906,
-    "change_pct": 0.26527399808381924,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-28T09:57:52Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_POS_SIZE",
-    "type": "position_size",
-    "price": 52.68000030517578,
-    "change_pct": 6.747937291009269,
-    "value": 25
-  },
-  {
-    "timestamp": "2026-05-28T09:57:54Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_POS_SIZE",
-    "type": "position_size",
-    "price": 6.360000133514404,
-    "change_pct": -0.15698377528407864,
-    "value": 246
-  },
-  {
-    "timestamp": "2026-05-28T09:57:56Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_POS_SIZE",
-    "type": "position_size",
-    "price": 16.770000457763672,
-    "change_pct": -0.17856870378767162,
-    "value": 48
-  },
-  {
-    "timestamp": "2026-05-28T09:57:58Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_POS_SIZE",
-    "type": "position_size",
-    "price": 3.700000047683716,
-    "change_pct": 1.2887490714236976e-06,
-    "value": 378
-  },
-  {
-    "timestamp": "2026-05-28T09:57:59Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_POS_SIZE",
-    "type": "position_size",
-    "price": 12.119999885559082,
-    "change_pct": -1.703163945181817,
-    "value": 120
-  },
-  {
-    "timestamp": "2026-05-28T09:58:01Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_POS_SIZE",
-    "type": "position_size",
-    "price": 17.15999984741211,
-    "change_pct": -0.23255902667377856,
-    "value": 61
-  },
-  {
-    "timestamp": "2026-05-28T10:07:54Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.570000171661377,
-    "change_pct": 0.21930201011792425,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-28T10:17:32Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 73.73999786376953,
-    "change_pct": 0.1629962833055239,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-28T10:17:36Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 179.8300018310547,
-    "change_pct": 0.9838395708929146,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-05-28T10:17:40Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.619999885559082,
-    "change_pct": -2.155173235926134,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-05-28T10:17:42Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_VOL_3X",
-    "type": "volume_spike",
-    "price": 17.110000610351562,
-    "change_pct": -3.8963776610953715,
-    "value": 3.7393933611144208
-  },
-  {
-    "timestamp": "2026-05-28T10:17:44Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 17.110000610351562,
-    "change_pct": -3.8963776610953715,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-28T10:17:49Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 94.55999755859375,
-    "change_pct": -0.6096304828739232,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-28T10:17:53Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 21.219999313354492,
-    "change_pct": 0.2361800347401534,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-28T10:17:59Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.369999885559082,
-    "change_pct": -0.6818207827481436,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-28T10:18:04Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 11.920000076293945,
-    "change_pct": -0.2510453866615395,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-28T10:18:08Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 6.570000171661377,
-    "change_pct": 2.61280634199251e-06,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-28T10:18:12Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 48.209999084472656,
-    "change_pct": -1.1076941856971154,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-05-28T10:32:37Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.619999885559082,
-    "change_pct": -0.38023248824782746,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-28T10:52:39Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_VOL_3X",
-    "type": "volume_spike",
-    "price": 17.110000610351562,
-    "change_pct": -3.8963776610953715,
-    "value": 3.7393933611144208
-  },
-  {
     "timestamp": "2026-05-28T10:57:32Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_VOL_SPIKE",
@@ -4498,5 +4291,212 @@
     "price": 20.280000686645508,
     "change_pct": -4.833408321701037,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-01T00:07:20Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_POS_SIZE",
+    "type": "position_size",
+    "price": 361.4700012207031,
+    "change_pct": -4.87631546823602,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-01T00:07:23Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_POS_SIZE",
+    "type": "position_size",
+    "price": 342.8500061035156,
+    "change_pct": -1.4600903734641977,
+    "value": 4
+  },
+  {
+    "timestamp": "2026-06-01T00:07:25Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_POS_SIZE",
+    "type": "position_size",
+    "price": 68.36000061035156,
+    "change_pct": -1.830129059270184,
+    "value": 21
+  },
+  {
+    "timestamp": "2026-06-01T00:07:27Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_POS_SIZE",
+    "type": "position_size",
+    "price": 27.110000610351562,
+    "change_pct": -2.4820121929799934,
+    "value": 68
+  },
+  {
+    "timestamp": "2026-06-01T00:07:30Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_POS_SIZE",
+    "type": "position_size",
+    "price": 21.3700008392334,
+    "change_pct": 4.498781609943273,
+    "value": 91
+  },
+  {
+    "timestamp": "2026-06-01T00:07:32Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_POS_SIZE",
+    "type": "position_size",
+    "price": 71.5199966430664,
+    "change_pct": 1.1026246014509633,
+    "value": 20
+  },
+  {
+    "timestamp": "2026-06-01T00:07:35Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_POS_SIZE",
+    "type": "position_size",
+    "price": 158.41000366210938,
+    "change_pct": -6.82312589723582,
+    "value": 4
+  },
+  {
+    "timestamp": "2026-06-01T00:07:38Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_POS_SIZE",
+    "type": "position_size",
+    "price": 12.079999923706055,
+    "change_pct": -11.176471149220184,
+    "value": 61
+  },
+  {
+    "timestamp": "2026-06-01T00:07:42Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_POS_SIZE",
+    "type": "position_size",
+    "price": 15.109999656677246,
+    "change_pct": -11.274223977232852,
+    "value": 95
+  },
+  {
+    "timestamp": "2026-06-01T00:07:44Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MA_GOLDEN",
+    "type": "ma_crossover",
+    "price": 3.0799999237060547,
+    "change_pct": 6.206893920898441,
+    "value": 2.557
+  },
+  {
+    "timestamp": "2026-06-01T00:07:45Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_POS_SIZE",
+    "type": "position_size",
+    "price": 3.0799999237060547,
+    "change_pct": 6.206893920898441,
+    "value": 260
+  },
+  {
+    "timestamp": "2026-06-01T00:07:47Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_POS_SIZE",
+    "type": "position_size",
+    "price": 95.29000091552734,
+    "change_pct": -2.4767158780806984,
+    "value": 20
+  },
+  {
+    "timestamp": "2026-06-01T00:07:49Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_POS_SIZE",
+    "type": "position_size",
+    "price": 18.8799991607666,
+    "change_pct": -11.152945125804228,
+    "value": 44
+  },
+  {
+    "timestamp": "2026-06-01T00:08:05Z",
+    "symbol": "VSEC",
+    "alert_id": "VSEC_POS_SIZE",
+    "type": "position_size",
+    "price": 185.14999389648438,
+    "change_pct": 3.783628865742359,
+    "value": 9
+  },
+  {
+    "timestamp": "2026-06-01T00:08:07Z",
+    "symbol": "PSIX",
+    "alert_id": "PSIX_POS_SIZE",
+    "type": "position_size",
+    "price": 41.68000030517578,
+    "change_pct": 0.041764808667206596,
+    "value": 18
+  },
+  {
+    "timestamp": "2026-06-01T00:08:10Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_POS_SIZE",
+    "type": "position_size",
+    "price": 334.8399963378906,
+    "change_pct": -3.0853845621155935,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-01T00:08:12Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_POS_SIZE",
+    "type": "position_size",
+    "price": 50.939998626708984,
+    "change_pct": -0.215477714575931,
+    "value": 24
+  },
+  {
+    "timestamp": "2026-06-01T00:08:14Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_POS_SIZE",
+    "type": "position_size",
+    "price": 6.400000095367432,
+    "change_pct": 0.1564960151397803,
+    "value": 250
+  },
+  {
+    "timestamp": "2026-06-01T00:08:16Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_POS_SIZE",
+    "type": "position_size",
+    "price": 17.764999389648438,
+    "change_pct": 5.467818746428617,
+    "value": 52
+  },
+  {
+    "timestamp": "2026-06-01T00:08:18Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_POS_SIZE",
+    "type": "position_size",
+    "price": 4.170000076293945,
+    "change_pct": 6.106872170329393,
+    "value": 364
+  },
+  {
+    "timestamp": "2026-06-01T00:08:20Z",
+    "symbol": "SHLS",
+    "alert_id": "SHLS_POS_SIZE",
+    "type": "position_size",
+    "price": 12.449999809265137,
+    "change_pct": 0.4032242682672287,
+    "value": 118
+  },
+  {
+    "timestamp": "2026-06-01T00:08:22Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_MA_GOLDEN",
+    "type": "ma_crossover",
+    "price": 20.280000686645508,
+    "change_pct": -4.833408321701037,
+    "value": 0.552
+  },
+  {
+    "timestamp": "2026-06-01T00:08:23Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_POS_SIZE",
+    "type": "position_size",
+    "price": 20.280000686645508,
+    "change_pct": -4.833408321701037,
+    "value": 54
   }
 ]
