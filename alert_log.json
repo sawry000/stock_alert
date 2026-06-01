@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T09:57:47Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_POS_SIZE",
-    "type": "position_size",
-    "price": 95.31999969482422,
-    "change_pct": -2.446014026379874,
-    "value": 20
-  },
-  {
     "timestamp": "2026-05-29T09:57:49Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 27.614999771118164,
     "change_pct": 5.858945861546401,
     "value": 5.858945861546401
+  },
+  {
+    "timestamp": "2026-06-01T20:02:48Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 10.84000015258789,
+    "change_pct": 10.611117770103265,
+    "value": 10.611117770103265
   }
 ]
