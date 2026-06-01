@@ -3717,6 +3717,108 @@
           "win_rate": 0.6
         }
       ]
+    },
+    {
+      "symbol": "AEHR",
+      "name": "Aehr Test System",
+      "market": "US",
+      "timeframe": "1D",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "AEHR_RSI_OS_1D",
+          "type": "rsi",
+          "emoji": "💚",
+          "cooldown_minutes": 360,
+          "note": "RSI Oversold 1D entry",
+          "enabled": true,
+          "condition": "oversold",
+          "interval": "1d",
+          "period": 14,
+          "oversold_level": 30,
+          "overbought_level": 70,
+          "action": "BUY"
+        },
+        {
+          "id": "AEHR_RSI_OS_4H",
+          "type": "rsi",
+          "emoji": "💛",
+          "cooldown_minutes": 120,
+          "note": "RSI Oversold 4H confirm",
+          "enabled": true,
+          "condition": "oversold",
+          "interval": "4h",
+          "period": 14,
+          "oversold_level": 32,
+          "overbought_level": 70,
+          "action": "BUY"
+        },
+        {
+          "id": "AEHR_VOL_SPIKE",
+          "type": "volume_spike",
+          "emoji": "🔊",
+          "cooldown_minutes": 60,
+          "note": "Volume spike 2.5x",
+          "enabled": true,
+          "multiplier": 2.5,
+          "action": "BUY"
+        },
+        {
+          "id": "AEHR_MA_GOLDEN",
+          "type": "ma_crossover",
+          "emoji": "✨",
+          "cooldown_minutes": 1440,
+          "note": "EMA9/21 Golden Cross 1D",
+          "enabled": true,
+          "condition": "golden_cross",
+          "ma_type": "EMA",
+          "interval": "1d",
+          "fast_period": 9,
+          "slow_period": 21,
+          "action": "BUY"
+        },
+        {
+          "id": "AEHR_CP_BULL",
+          "type": "candle_pattern",
+          "emoji": "🕯️",
+          "cooldown_minutes": 480,
+          "note": "Bullish reversal candle",
+          "enabled": true,
+          "patterns": [
+            "hammer",
+            "bullish_engulfing",
+            "morning_star"
+          ],
+          "interval": "1d",
+          "match_any": true,
+          "action": "BUY"
+        },
+        {
+          "id": "AEHR_SCORE_70",
+          "type": "alert_score",
+          "emoji": "🎯",
+          "cooldown_minutes": 240,
+          "note": "Score ≥70 bullish confirm",
+          "enabled": true,
+          "direction": "bullish",
+          "min_score": 70,
+          "interval": "1d",
+          "action": "BUY"
+        },
+        {
+          "id": "AEHR_POS_SIZE",
+          "type": "position_size",
+          "emoji": "💰",
+          "cooldown_minutes": 1440,
+          "note": "Position size 2% risk",
+          "enabled": true,
+          "condition": "triggered_always",
+          "account_size": 10000,
+          "risk_pct": 2,
+          "method": "fixed_risk",
+          "win_rate": 0.6
+        }
+      ]
     }
   ]
 }
