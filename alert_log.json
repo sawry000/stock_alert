@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T13:42:41Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.0999999046325684,
-    "change_pct": 6.896548435605809,
-    "value": 6.896548435605809
-  },
-  {
-    "timestamp": "2026-05-29T13:42:52Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 10.286700248718262,
-    "change_pct": -7.159745047669119,
-    "value": -7.159745047669119
-  },
-  {
     "timestamp": "2026-05-29T13:47:27Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_CP_BULL",
@@ -4498,5 +4480,23 @@
     "price": 27.149999618530273,
     "change_pct": 43.321682583539776,
     "value": 5.842185025174168
+  },
+  {
+    "timestamp": "2026-06-01T23:32:37Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 12.600000381469727,
+    "change_pct": 1.412534761718592,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-01T23:32:52Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 10.84000015258789,
+    "change_pct": 10.611117770103265,
+    "value": 1
   }
 ]
