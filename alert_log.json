@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T09:57:42Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_POS_SIZE",
-    "type": "position_size",
-    "price": 17.0,
-    "change_pct": -0.17615971814445763,
-    "value": 103
-  },
-  {
-    "timestamp": "2026-05-29T09:57:44Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_POS_SIZE",
-    "type": "position_size",
-    "price": 3.0399999618530273,
-    "change_pct": 4.8275848914837045,
-    "value": 254
-  },
-  {
     "timestamp": "2026-05-29T09:57:47Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 27.68000030517578,
     "change_pct": 46.119494415869276,
     "value": 46.119494415869276
+  },
+  {
+    "timestamp": "2026-06-01T19:52:27Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_DROP",
+    "type": "percent_change",
+    "price": 63.810001373291016,
+    "change_pct": -6.244488137979705,
+    "value": -6.244488137979705
+  },
+  {
+    "timestamp": "2026-06-01T19:52:43Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_UP_5",
+    "type": "percent_change",
+    "price": 27.614999771118164,
+    "change_pct": 5.858945861546401,
+    "value": 5.858945861546401
   }
 ]
