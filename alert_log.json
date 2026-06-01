@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T12:07:56Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 51.33000183105469,
-    "change_pct": 0.5484854672961613,
-    "value": 2.777505611848868
-  },
-  {
     "timestamp": "2026-05-29T13:02:45Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 63.7400016784668,
     "change_pct": -6.347338115682052,
     "value": -6.347338115682052
+  },
+  {
+    "timestamp": "2026-06-01T22:02:49Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 10.84000015258789,
+    "change_pct": 10.611117770103265,
+    "value": 10.611117770103265
   }
 ]
