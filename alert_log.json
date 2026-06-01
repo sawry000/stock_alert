@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T02:07:56Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 11.039999961853027,
-    "change_pct": -7.615063080727799,
-    "value": -7.615063080727799
-  },
-  {
     "timestamp": "2026-05-29T02:22:37Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 63.7599983215332,
     "change_pct": -6.317957211970025,
     "value": -6.317957211970025
+  },
+  {
+    "timestamp": "2026-06-01T14:48:17Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_POS_SIZE",
+    "type": "position_size",
+    "price": 88.66999816894531,
+    "change_pct": -3.6195672076681387,
+    "value": 9
   }
 ]
