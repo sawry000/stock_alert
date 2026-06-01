@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T09:57:31Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_POS_SIZE",
-    "type": "position_size",
-    "price": 20.329999923706055,
-    "change_pct": -0.5867974390901937,
-    "value": 95
-  },
-  {
-    "timestamp": "2026-05-29T09:57:33Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_POS_SIZE",
-    "type": "position_size",
-    "price": 70.1500015258789,
-    "change_pct": -0.8340379899930573,
-    "value": 20
-  },
-  {
     "timestamp": "2026-05-29T09:57:36Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_POS_SIZE",
@@ -4497,6 +4479,24 @@
     "type": "news_sentiment",
     "price": 10.760000228881836,
     "change_pct": 9.794800347770282,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-01T19:37:47Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_3X",
+    "type": "volume_spike",
+    "price": 27.174999237060547,
+    "change_pct": 43.45365265507009,
+    "value": 5.426878072340172
+  },
+  {
+    "timestamp": "2026-06-01T19:37:54Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 3.9600000381469727,
+    "change_pct": -3.431120585583611,
     "value": 1
   }
 ]
