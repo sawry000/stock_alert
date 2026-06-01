@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-28T23:08:03Z",
-    "symbol": "PSIX",
-    "alert_id": "PSIX_CP_BULL",
-    "type": "candle_pattern",
-    "price": 41.9900016784668,
-    "change_pct": -0.023805527460007442,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-05-28T23:22:37Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 17.0,
-    "change_pct": -4.514230188106962,
-    "value": 2.8791400093167963
-  },
-  {
     "timestamp": "2026-05-28T23:28:08Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 3.0799999237060547,
     "change_pct": 8.833919565584969,
     "value": 8.833919565584969
+  },
+  {
+    "timestamp": "2026-06-01T12:32:49Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 15.109999656677246,
+    "change_pct": -1.4935709612868688,
+    "value": 3.999390377699989
+  },
+  {
+    "timestamp": "2026-06-01T12:32:50Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_VOL_3X",
+    "type": "volume_spike",
+    "price": 15.109999656677246,
+    "change_pct": -1.4935709612868688,
+    "value": 3.999390377699989
   }
 ]
