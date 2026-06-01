@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T09:57:26Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_POS_SIZE",
-    "type": "position_size",
-    "price": 69.5,
-    "change_pct": -0.19300805349080255,
-    "value": 21
-  },
-  {
-    "timestamp": "2026-05-29T09:57:28Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_POS_SIZE",
-    "type": "position_size",
-    "price": 27.739999771118164,
-    "change_pct": -0.21582816144545555,
-    "value": 67
-  },
-  {
     "timestamp": "2026-05-29T09:57:31Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 4.579999923706055,
     "change_pct": 2.0044526437874044,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-01T19:32:35Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 12.529999732971191,
+    "change_pct": 0.8491265883632445,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-01T19:32:49Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 10.760000228881836,
+    "change_pct": 9.794800347770282,
+    "value": 1
   }
 ]
