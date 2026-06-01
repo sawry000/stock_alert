@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T13:33:04Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 346.3949890136719,
-    "change_pct": 0.2590416826836107,
-    "value": 1
-  },
-  {
     "timestamp": "2026-05-29T13:33:14Z",
     "symbol": "AMPX",
     "alert_id": "AMPX_MA_GOLDEN",
@@ -4498,5 +4489,14 @@
     "price": 3.9600000381469727,
     "change_pct": -3.431120585583611,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-01T22:57:41Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_3X",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": 43.321682583539776,
+    "value": 5.842185025174168
   }
 ]
