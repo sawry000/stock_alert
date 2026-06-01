@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T01:37:52Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 51.33000183105469,
-    "change_pct": 4.012372529741072,
-    "value": 2.8659138256181844
-  },
-  {
     "timestamp": "2026-05-29T01:52:38Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 6.300000190734863,
     "change_pct": 5.256126419869399,
     "value": 5.256126419869399
+  },
+  {
+    "timestamp": "2026-06-01T14:22:47Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.140000104904175,
+    "change_pct": 10.95406731110158,
+    "value": 10.95406731110158
   }
 ]
