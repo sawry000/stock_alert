@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T07:17:44Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 25.3799991607666,
-    "change_pct": 0.6344138016122233,
-    "value": 1
-  },
-  {
     "timestamp": "2026-05-29T07:17:51Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 10.845000267028809,
     "change_pct": 10.662138825407986,
     "value": 10.662138825407986
+  },
+  {
+    "timestamp": "2026-06-01T18:02:51Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_UP_5",
+    "type": "percent_change",
+    "price": 6.929999828338623,
+    "change_pct": 15.78173268851911,
+    "value": 15.78173268851911
   }
 ]
