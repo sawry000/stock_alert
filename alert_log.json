@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T13:32:51Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.039999961853027,
-    "change_pct": -6.264502045173372,
-    "value": -6.264502045173372
-  },
-  {
     "timestamp": "2026-05-29T13:33:04Z",
     "symbol": "VICR",
     "alert_id": "VICR_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 185.6699981689453,
     "change_pct": 18.699653605002766,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-01T22:47:56Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 3.9600000381469727,
+    "change_pct": -3.431120585583611,
+    "value": 1
   }
 ]
