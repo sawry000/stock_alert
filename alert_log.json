@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T13:33:14Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_MA_GOLDEN",
-    "type": "ma_crossover",
-    "price": 20.31999969482422,
-    "change_pct": -4.6457076732791185,
-    "value": 0.576
-  },
-  {
     "timestamp": "2026-05-29T13:37:37Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 27.149999618530273,
     "change_pct": 43.321682583539776,
     "value": 5.842185025174168
+  },
+  {
+    "timestamp": "2026-06-01T23:02:24Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_DROP",
+    "type": "percent_change",
+    "price": 63.7400016784668,
+    "change_pct": -6.347338115682052,
+    "value": -6.347338115682052
   }
 ]
