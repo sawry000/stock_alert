@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T05:57:38Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.0399999618530273,
-    "change_pct": 15.589352161712073,
-    "value": 15.589352161712073
-  },
-  {
-    "timestamp": "2026-05-29T06:02:50Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 25.3799991607666,
-    "change_pct": 0.6344138016122233,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-29T06:12:51Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 3.0220999717712402,
     "change_pct": 6.787984868241701,
     "value": 6.787984868241701
+  },
+  {
+    "timestamp": "2026-06-01T16:42:29Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_DROP",
+    "type": "percent_change",
+    "price": 63.439998626708984,
+    "change_pct": -6.788130140010311,
+    "value": -6.788130140010311
+  },
+  {
+    "timestamp": "2026-06-01T16:43:03Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_CP_BULL",
+    "type": "candle_pattern",
+    "price": 51.4900016784668,
+    "change_pct": 1.5982669267300655,
+    "value": 1
   }
 ]
