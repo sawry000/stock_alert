@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T06:37:32Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 70.1500015258789,
-    "change_pct": -4.713391027059356,
-    "value": 2
-  },
-  {
     "timestamp": "2026-05-29T06:37:39Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 70.47000122070312,
     "change_pct": -1.4681190985694506,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-01T17:03:01Z",
+    "symbol": "VSEC",
+    "alert_id": "VSEC_CP_BULL",
+    "type": "candle_pattern",
+    "price": 178.4199981689453,
+    "change_pct": -3.3477799734857436,
+    "value": 1
   }
 ]
