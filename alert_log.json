@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T09:58:22Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_POS_SIZE",
-    "type": "position_size",
-    "price": 12.199999809265137,
-    "change_pct": -1.6129047639908356,
-    "value": 123
-  },
-  {
-    "timestamp": "2026-05-29T09:58:24Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_POS_SIZE",
-    "type": "position_size",
-    "price": 20.850000381469727,
-    "change_pct": -2.1586091906629385,
-    "value": 53
-  },
-  {
     "timestamp": "2026-05-29T10:07:46Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 52.0,
     "change_pct": 1.9965831144656603,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-01T20:27:23Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "price": 320.0899963378906,
+    "change_pct": -6.129213074315781,
+    "value": -6.129213074315781
+  },
+  {
+    "timestamp": "2026-06-01T20:27:39Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": 43.321682583539776,
+    "value": 5.842185025174168
   }
 ]
