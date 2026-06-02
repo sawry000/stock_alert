@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-31T04:07:45Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 95.29000091552734,
-    "change_pct": -2.4767158780806984,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-31T04:07:52Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 26.149999618530273,
-    "change_pct": 2.871753023329157,
-    "value": 3
-  },
-  {
     "timestamp": "2026-05-31T04:07:56Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 5.150000095367432,
     "change_pct": 0.5859393626451471,
     "value": 3.0251979859688696
+  },
+  {
+    "timestamp": "2026-06-02T10:57:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 28.25,
+    "change_pct": 0.33029086905565214,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-02T10:57:48Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": -6.02284659560307,
+    "value": 5.413582659835271
   }
 ]
