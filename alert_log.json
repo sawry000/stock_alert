@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T17:13:02Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 27.3700008392334,
-    "change_pct": 44.48304337781707,
-    "value": 3.9847981104487684
-  },
-  {
-    "timestamp": "2026-06-01T17:22:45Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_VOL_3X",
-    "type": "volume_spike",
-    "price": 28.25,
-    "change_pct": 49.128456348913076,
-    "value": 4.213394642301865
-  },
-  {
-    "timestamp": "2026-06-01T17:28:03Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 10.57129955291748,
-    "change_pct": 7.8693028940263865,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-01T17:32:49Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 4.034999847412109,
-    "change_pct": -1.6021692049623337,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-01T17:37:53Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_MTF_BULL",
@@ -4498,5 +4462,41 @@
     "price": 86.75,
     "change_pct": -4.397178752479607,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-02T20:40:26Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 15.579999923706055,
+    "change_pct": -0.7010839789289026,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-02T20:40:30Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.9800000190734863,
+    "change_pct": 1.0169497991012255,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-02T20:40:32Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_3X",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.398559015040352
+  },
+  {
+    "timestamp": "2026-06-02T20:40:34Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.398559015040352
   }
 ]
