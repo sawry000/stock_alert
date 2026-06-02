@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T23:32:37Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 12.600000381469727,
-    "change_pct": 1.412534761718592,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-01T23:32:52Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 85.0,
     "change_pct": -3.4090909090909087,
     "value": 3.398559015040352
+  },
+  {
+    "timestamp": "2026-06-02T23:22:27Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.31999969482422,
+    "change_pct": -2.97261890533715,
+    "value": 2
   }
 ]
