@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-31T04:07:56Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.099999904632568,
-    "change_pct": -4.872392003884716,
-    "value": 2
-  },
-  {
     "timestamp": "2026-05-31T04:08:03Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_MTF_BULL",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-02T10:57:48Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": -6.02284659560307,
+    "value": 5.413582659835271
+  },
+  {
+    "timestamp": "2026-06-02T11:02:45Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_ALARM",
     "type": "volume_spike",
     "price": 27.149999618530273,
     "change_pct": -6.02284659560307,
