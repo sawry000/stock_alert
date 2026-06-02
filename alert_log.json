@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-31T00:03:36Z",
-    "symbol": "PSIX",
-    "alert_id": "PSIX_POS_SIZE",
-    "type": "position_size",
-    "price": 41.68000030517578,
-    "change_pct": 0.041764808667206596,
-    "value": 18
-  },
-  {
     "timestamp": "2026-05-31T00:03:38Z",
     "symbol": "VICR",
     "alert_id": "VICR_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 27.149999618530273,
     "change_pct": -6.02284659560307,
     "value": -6.02284659560307
+  },
+  {
+    "timestamp": "2026-06-02T09:27:44Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": -6.02284659560307,
+    "value": 5.413582659835271
   }
 ]
