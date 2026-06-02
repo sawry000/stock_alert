@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-31T00:03:33Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_POS_SIZE",
-    "type": "position_size",
-    "price": 185.14999389648438,
-    "change_pct": 3.783628865742359,
-    "value": 9
-  },
-  {
     "timestamp": "2026-05-31T00:03:36Z",
     "symbol": "PSIX",
     "alert_id": "PSIX_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 5.150000095367432,
     "change_pct": 0.5859393626451471,
     "value": 3.0251979859688696
+  },
+  {
+    "timestamp": "2026-06-02T09:07:46Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_PCT_DROP",
+    "type": "percent_change",
+    "price": 27.149999618530273,
+    "change_pct": -6.02284659560307,
+    "value": -6.02284659560307
   }
 ]
