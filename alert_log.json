@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T18:32:42Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 187.85000610351562,
-    "change_pct": 20.093342349773454,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-01T18:32:56Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_NEWS_BAD",
@@ -4498,5 +4489,14 @@
     "price": 27.31999969482422,
     "change_pct": -2.97261890533715,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-02T21:32:36Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 11.210000038146973,
+    "change_pct": -7.888249481125944,
+    "value": -7.888249481125944
   }
 ]
