@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T06:17:50Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.28000020980835,
-    "change_pct": -7.956984735304316,
-    "value": -7.956984735304316
-  },
-  {
     "timestamp": "2026-06-01T06:17:53Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 2.9800000190734863,
     "change_pct": 1.0169497991012255,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-02T16:43:11Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 27.329999923706055,
+    "change_pct": -1.4780103687597106,
+    "value": 2
   }
 ]
