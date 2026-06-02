@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-31T04:57:37Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_VOL_3X",
-    "type": "volume_spike",
-    "price": 15.109999656677246,
-    "change_pct": -11.274223977232852,
-    "value": 3.999390377699989
-  },
-  {
     "timestamp": "2026-05-31T05:17:36Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 27.149999618530273,
     "change_pct": -6.02284659560307,
     "value": 5.413582659835271
+  },
+  {
+    "timestamp": "2026-06-02T12:12:50Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 95.25,
+    "change_pct": 8.238636363636363,
+    "value": 8.238636363636363
   }
 ]
