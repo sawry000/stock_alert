@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-31T00:03:48Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_POS_SIZE",
-    "type": "position_size",
-    "price": 4.170000076293945,
-    "change_pct": 6.106872170329393,
-    "value": 364
-  },
-  {
-    "timestamp": "2026-05-31T00:03:50Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_POS_SIZE",
-    "type": "position_size",
-    "price": 12.449999809265137,
-    "change_pct": 0.4032242682672287,
-    "value": 118
-  },
-  {
     "timestamp": "2026-05-31T00:03:53Z",
     "symbol": "AMPX",
     "alert_id": "AMPX_MA_GOLDEN",
@@ -4498,5 +4480,23 @@
     "price": 27.149999618530273,
     "change_pct": -6.02284659560307,
     "value": 5.413582659835271
+  },
+  {
+    "timestamp": "2026-06-02T10:12:48Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 95.25,
+    "change_pct": 8.238636363636363,
+    "value": 8.238636363636363
+  },
+  {
+    "timestamp": "2026-06-02T10:12:50Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_PCT_DROP",
+    "type": "percent_change",
+    "price": 27.149999618530273,
+    "change_pct": -6.02284659560307,
+    "value": -6.02284659560307
   }
 ]
