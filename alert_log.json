@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T14:48:17Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_POS_SIZE",
-    "type": "position_size",
-    "price": 88.66999816894531,
-    "change_pct": -3.6195672076681387,
-    "value": 9
-  },
-  {
     "timestamp": "2026-06-01T15:08:13Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 21.079999923706055,
     "change_pct": 11.416490083012965,
     "value": 11.416490083012965
+  },
+  {
+    "timestamp": "2026-06-02T19:12:39Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.313499450683594,
+    "change_pct": -2.995704618092859,
+    "value": 2
   }
 ]
