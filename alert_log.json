@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T00:07:47Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_POS_SIZE",
-    "type": "position_size",
-    "price": 95.29000091552734,
-    "change_pct": -2.4767158780806984,
-    "value": 20
-  },
-  {
     "timestamp": "2026-06-01T00:07:49Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 86.1449966430664,
     "change_pct": -5.063922588641821,
     "value": -5.063922588641821
+  },
+  {
+    "timestamp": "2026-06-02T14:28:34Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 86.09500122070312,
+    "change_pct": -5.11902003449071,
+    "value": 1
   }
 ]
