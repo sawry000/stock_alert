@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T00:07:32Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_POS_SIZE",
-    "type": "position_size",
-    "price": 71.5199966430664,
-    "change_pct": 1.1026246014509633,
-    "value": 20
-  },
-  {
-    "timestamp": "2026-06-01T00:07:35Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_POS_SIZE",
-    "type": "position_size",
-    "price": 158.41000366210938,
-    "change_pct": -6.82312589723582,
-    "value": 4
-  },
-  {
     "timestamp": "2026-06-01T00:07:38Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_POS_SIZE",
@@ -4497,6 +4479,24 @@
     "type": "candle_pattern",
     "price": 5.320899963378906,
     "change_pct": -0.17073239439200416,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-02T14:07:56Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 11.5,
+    "change_pct": -5.5053410024650775,
+    "value": -5.5053410024650775
+  },
+  {
+    "timestamp": "2026-06-02T14:09:09Z",
+    "symbol": "BOBS",
+    "alert_id": "BOBS_CP_BULL",
+    "type": "candle_pattern",
+    "price": 13.0,
+    "change_pct": -0.990099009900996,
     "value": 1
   }
 ]
