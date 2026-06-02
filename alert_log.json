@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-31T00:02:42Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_POS_SIZE",
-    "type": "position_size",
-    "price": 12.079999923706055,
-    "change_pct": -11.176471149220184,
-    "value": 61
-  },
-  {
     "timestamp": "2026-05-31T00:02:46Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 5.150000095367432,
     "change_pct": 16.780047514000714,
     "value": 3.0251979859688696
+  },
+  {
+    "timestamp": "2026-06-02T07:57:29Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "price": 320.0899963378906,
+    "change_pct": -6.129213074315781,
+    "value": -6.129213074315781
   }
 ]
