@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T19:42:44Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 25.96500015258789,
-    "change_pct": 2.143981717497596,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-05-29T19:42:46Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.014999866485596,
-    "change_pct": -6.844550661587098,
-    "value": -6.844550661587098
-  },
-  {
     "timestamp": "2026-05-29T19:47:38Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_VOL_3X",
@@ -4498,5 +4480,23 @@
     "price": 4.630000114440918,
     "change_pct": 3.1180426378823554,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-02T03:32:39Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 12.600000381469727,
+    "change_pct": 1.412534761718592,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-02T03:32:46Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_3X",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": 43.321682583539776,
+    "value": 5.841719688084814
   }
 ]
