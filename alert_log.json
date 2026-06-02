@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T06:17:53Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.949999809265137,
-    "change_pct": -10.198557678112486,
-    "value": -10.198557678112486
-  },
-  {
-    "timestamp": "2026-06-01T06:32:46Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_VOL_3X",
-    "type": "volume_spike",
-    "price": 15.109999656677246,
-    "change_pct": -11.274223977232852,
-    "value": 3.999390377699989
-  },
-  {
     "timestamp": "2026-06-01T07:07:36Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_VOL_3X",
@@ -4498,5 +4480,23 @@
     "price": 27.329999923706055,
     "change_pct": -1.4780103687597106,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-02T16:48:50Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.119999885559082,
+    "change_pct": -9.470448570444256,
+    "value": -9.470448570444256
+  },
+  {
+    "timestamp": "2026-06-02T16:49:01Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 7.269999980926514,
+    "change_pct": -9.011264318817103,
+    "value": -9.011264318817103
   }
 ]
