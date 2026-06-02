@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-31T00:03:46Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_POS_SIZE",
-    "type": "position_size",
-    "price": 17.764999389648438,
-    "change_pct": 5.467818746428617,
-    "value": 52
-  },
-  {
     "timestamp": "2026-05-31T00:03:48Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 5.150000095367432,
     "change_pct": 0.5859393626451471,
     "value": 3.0251979859688696
+  },
+  {
+    "timestamp": "2026-06-02T09:57:47Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": -6.02284659560307,
+    "value": 5.413582659835271
   }
 ]
