@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-31T00:03:53Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_MA_GOLDEN",
-    "type": "ma_crossover",
-    "price": 20.280000686645508,
-    "change_pct": -4.833408321701037,
-    "value": 0.552
-  },
-  {
-    "timestamp": "2026-05-31T00:03:53Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_CP_BULL",
-    "type": "candle_pattern",
-    "price": 20.280000686645508,
-    "change_pct": -4.833408321701037,
-    "value": 1
-  },
-  {
     "timestamp": "2026-05-31T00:03:54Z",
     "symbol": "AMPX",
     "alert_id": "AMPX_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 27.149999618530273,
     "change_pct": -6.02284659560307,
     "value": -6.02284659560307
+  },
+  {
+    "timestamp": "2026-06-02T10:27:51Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": -6.02284659560307,
+    "value": 5.413582659835271
+  },
+  {
+    "timestamp": "2026-06-02T10:28:15Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 27.760000228881836,
+    "change_pct": 0.07209887844930607,
+    "value": 1
   }
 ]
