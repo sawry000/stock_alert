@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T17:42:43Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_PCT_UP_5",
-    "type": "percent_change",
-    "price": 28.31999969482422,
-    "change_pct": 49.497976576666375,
-    "value": 49.497976576666375
-  },
-  {
     "timestamp": "2026-06-01T17:47:34Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 27.510000228881836,
     "change_pct": -0.8291267884576875,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-02T20:57:23Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 426.8900146484375,
+    "change_pct": 17.78550744928331,
+    "value": 3
   }
 ]
