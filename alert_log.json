@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T19:42:35Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 15.312199592590332,
-    "change_pct": -10.086907853257012,
-    "value": 3.9738965847860577
-  },
-  {
     "timestamp": "2026-05-29T19:42:44Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 63.7400016784668,
     "change_pct": -6.347338115682052,
     "value": -6.347338115682052
+  },
+  {
+    "timestamp": "2026-06-02T03:27:45Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.630000114440918,
+    "change_pct": 3.1180426378823554,
+    "value": 3
   }
 ]
