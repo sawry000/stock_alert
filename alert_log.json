@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T00:02:29Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 71.5199966430664,
-    "change_pct": 1.1026246014509633,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-01T00:02:37Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_VOL_SPIKE",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-02T13:02:54Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": -6.02284659560307,
+    "value": 5.413582659835271
+  },
+  {
+    "timestamp": "2026-06-02T13:07:52Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_ALARM",
     "type": "volume_spike",
     "price": 27.149999618530273,
     "change_pct": -6.02284659560307,
