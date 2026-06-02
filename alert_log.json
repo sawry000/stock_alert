@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T00:07:30Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_POS_SIZE",
-    "type": "position_size",
-    "price": 320.0899963378906,
-    "change_pct": -6.129213074315781,
-    "value": 4
-  },
-  {
     "timestamp": "2026-06-02T00:07:33Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 202.3699951171875,
     "change_pct": 8.802008574905749,
     "value": 8.802008574905749
+  },
+  {
+    "timestamp": "2026-06-02T23:57:43Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 27.90999984741211,
+    "change_pct": -3.392177752121465,
+    "value": 2.8634648480193654
   }
 ]
