@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T22:47:42Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.0799999237060547,
-    "change_pct": 6.206893920898441,
-    "value": 6.206893920898441
-  },
-  {
-    "timestamp": "2026-05-29T22:47:46Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 95.29000091552734,
-    "change_pct": -2.4767158780806984,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-05-29T22:52:36Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 15.109999656677246,
-    "change_pct": -11.274223977232852,
-    "value": 4.240425539029959
-  },
-  {
-    "timestamp": "2026-05-29T22:52:47Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.099999904632568,
-    "change_pct": -4.872392003884716,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-05-29T22:52:52Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.28000020980835,
-    "change_pct": -7.956984735304316,
-    "value": -7.956984735304316
-  },
-  {
     "timestamp": "2026-05-29T22:52:58Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_MTF_BULL",
@@ -4498,5 +4453,50 @@
     "price": 27.149999618530273,
     "change_pct": 43.321682583539776,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-02T05:47:28Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "price": 320.0899963378906,
+    "change_pct": -6.129213074315781,
+    "value": -6.129213074315781
+  },
+  {
+    "timestamp": "2026-06-02T05:47:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_CP_BULL",
+    "type": "candle_pattern",
+    "price": 28.25,
+    "change_pct": 4.013254786450663,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-02T05:47:42Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_CP_BULL",
+    "type": "candle_pattern",
+    "price": 185.6699981689453,
+    "change_pct": 18.699653605002766,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-02T05:47:53Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": 43.321682583539776,
+    "value": 5.413582659835271
+  },
+  {
+    "timestamp": "2026-06-02T05:47:54Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_3X",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": 43.321682583539776,
+    "value": 5.413582659835271
   }
 ]
