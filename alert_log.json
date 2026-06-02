@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T11:32:39Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 15.109999656677246,
-    "change_pct": -1.4935709612868688,
-    "value": 3.999390377699989
-  },
-  {
-    "timestamp": "2026-06-01T11:57:42Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_VOL_3X",
-    "type": "volume_spike",
-    "price": 15.109999656677246,
-    "change_pct": -1.4935709612868688,
-    "value": 3.999390377699989
-  },
-  {
     "timestamp": "2026-06-01T12:12:30Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 27.879499435424805,
     "change_pct": -3.497752040758726,
     "value": 2.5069001007641547
+  },
+  {
+    "timestamp": "2026-06-02T18:47:28Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 420.9800109863281,
+    "change_pct": 16.154846725251254,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-02T18:48:17Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 27.389999389648438,
+    "change_pct": -1.2617181339277612,
+    "value": 2
   }
 ]
