@@ -1,77 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T15:37:59Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_PCT_UP_5",
-    "type": "percent_change",
-    "price": 25.909099578857422,
-    "change_pct": 36.77111594992146,
-    "value": 36.77111594992146
-  },
-  {
-    "timestamp": "2026-06-01T15:42:49Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_VOL_3X",
-    "type": "volume_spike",
-    "price": 26.040000915527344,
-    "change_pct": 37.46212884449118,
-    "value": 3.027564688680556
-  },
-  {
-    "timestamp": "2026-06-01T15:42:51Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 27.450000762939453,
-    "change_pct": 5.226441019295165,
-    "value": 5.226441019295165
-  },
-  {
-    "timestamp": "2026-06-01T15:43:06Z",
-    "symbol": "PSIX",
-    "alert_id": "PSIX_CP_BULL",
-    "type": "candle_pattern",
-    "price": 40.130001068115234,
-    "change_pct": -3.9952127557051744,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-01T15:52:31Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_PCT_DROP",
-    "type": "percent_change",
-    "price": 323.2099914550781,
-    "change_pct": -5.214231662195925,
-    "value": -5.214231662195925
-  },
-  {
-    "timestamp": "2026-06-01T15:52:46Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 98.33499908447266,
-    "change_pct": 5.294998484283816,
-    "value": 5.294998484283816
-  },
-  {
-    "timestamp": "2026-06-01T15:52:55Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.300000190734863,
-    "change_pct": 5.100970303719991,
-    "value": 5.100970303719991
-  },
-  {
-    "timestamp": "2026-06-01T15:58:08Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 6.46999979019165,
-    "change_pct": 8.096364323046917,
-    "value": 8.096364323046917
-  },
-  {
     "timestamp": "2026-06-01T16:12:42Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_MTF_BULL",
@@ -4498,5 +4426,77 @@
     "price": 84.68000030517578,
     "change_pct": -3.772726925936612,
     "value": 3.0036397193690387
+  },
+  {
+    "timestamp": "2026-06-02T19:42:34Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_UP_5",
+    "type": "percent_change",
+    "price": 72.13999938964844,
+    "change_pct": 14.055335003396738,
+    "value": 14.055335003396738
+  },
+  {
+    "timestamp": "2026-06-02T19:42:45Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 202.25,
+    "change_pct": 8.737494516081856,
+    "value": 8.737494516081856
+  },
+  {
+    "timestamp": "2026-06-02T19:43:02Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 28.385000228881836,
+    "change_pct": -1.7480088996821206,
+    "value": 2.707379711273487
+  },
+  {
+    "timestamp": "2026-06-02T19:43:09Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 113.37000274658203,
+    "change_pct": 21.903228759765625,
+    "value": 21.903228759765625
+  },
+  {
+    "timestamp": "2026-06-02T19:43:30Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.605000019073486,
+    "change_pct": -0.9357853270197691,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-02T19:43:33Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 13.1899995803833,
+    "change_pct": 21.56681640906268,
+    "value": 21.56681640906268
+  },
+  {
+    "timestamp": "2026-06-02T19:43:45Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_UP_5",
+    "type": "percent_change",
+    "price": 9.994999885559082,
+    "change_pct": 7.820926489310491,
+    "value": 7.820926489310491
+  },
+  {
+    "timestamp": "2026-06-02T19:44:21Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 23.364999771118164,
+    "change_pct": 7.425286303991559,
+    "value": 7.425286303991559
   }
 ]
