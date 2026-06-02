@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T18:32:56Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 4.030099868774414,
-    "change_pct": -1.7216604781033904,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-01T18:52:24Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_PCT_DROP",
-    "type": "percent_change",
-    "price": 64.30000305175781,
-    "change_pct": -5.524532689159844,
-    "value": -5.524532689159844
-  },
-  {
-    "timestamp": "2026-06-01T19:02:43Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_VOL_3X",
-    "type": "volume_spike",
-    "price": 27.940000534057617,
-    "change_pct": 47.49200531086086,
-    "value": 5.08063567255718
-  },
-  {
-    "timestamp": "2026-06-01T19:22:28Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_PCT_DROP",
-    "type": "percent_change",
-    "price": 323.135009765625,
-    "change_pct": -5.236221072282181,
-    "value": -5.236221072282181
-  },
-  {
-    "timestamp": "2026-06-01T19:22:44Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 27.104999542236328,
-    "change_pct": 43.08413242731678,
-    "value": 5.239900758863888
-  },
-  {
     "timestamp": "2026-06-01T19:22:52Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_MTF_BULL",
@@ -4498,5 +4453,50 @@
     "price": 11.210000038146973,
     "change_pct": -7.888249481125944,
     "value": -7.888249481125944
+  },
+  {
+    "timestamp": "2026-06-02T21:42:34Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 74.94999694824219,
+    "change_pct": 7.040841114313327,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-02T21:42:45Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_3X",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.398559015040352
+  },
+  {
+    "timestamp": "2026-06-02T21:42:57Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 113.0,
+    "change_pct": 21.50537634408602,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-02T21:43:12Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.099999904632568,
+    "change_pct": 3.2745567917523464,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-02T21:43:39Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 332.95001220703125,
+    "change_pct": 1.5091500631192836,
+    "value": 1
   }
 ]
