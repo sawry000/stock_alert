@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T20:18:06Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 10.84000015258789,
-    "change_pct": 10.611117770103265,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-01T20:18:10Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 85.0,
     "change_pct": -3.4090909090909087,
     "value": 3.398559015040352
+  },
+  {
+    "timestamp": "2026-06-02T22:22:53Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 20.579999923706055,
+    "change_pct": 2.644926974997398,
+    "value": 3
   }
 ]
