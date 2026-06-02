@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T23:02:54Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.949999809265137,
-    "change_pct": -10.198557678112486,
-    "value": -10.198557678112486
-  },
-  {
     "timestamp": "2026-05-29T23:12:37Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_VOL_3X",
@@ -4498,5 +4489,14 @@
     "price": 27.760000228881836,
     "change_pct": 6.414788546157165,
     "value": 6.414788546157165
+  },
+  {
+    "timestamp": "2026-06-02T06:07:44Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 10.84000015258789,
+    "change_pct": 10.611117770103265,
+    "value": 10.611117770103265
   }
 ]
