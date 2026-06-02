@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-01T00:07:49Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_POS_SIZE",
-    "type": "position_size",
-    "price": 18.8799991607666,
-    "change_pct": -11.152945125804228,
-    "value": 44
-  },
-  {
-    "timestamp": "2026-06-01T00:08:05Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_POS_SIZE",
-    "type": "position_size",
-    "price": 185.14999389648438,
-    "change_pct": 3.783628865742359,
-    "value": 9
-  },
-  {
     "timestamp": "2026-06-01T00:08:07Z",
     "symbol": "PSIX",
     "alert_id": "PSIX_POS_SIZE",
@@ -4497,6 +4479,24 @@
     "type": "news_sentiment",
     "price": 86.09500122070312,
     "change_pct": -5.11902003449071,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-02T14:37:52Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_PCT_DROP",
+    "type": "percent_change",
+    "price": 82.80999755859375,
+    "change_pct": -5.897730047052557,
+    "value": -5.897730047052557
+  },
+  {
+    "timestamp": "2026-06-02T14:38:13Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 27.639999389648438,
+    "change_pct": -0.36049246702076765,
     "value": 1
   }
 ]
