@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-05-31T04:08:03Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 9.949999809265137,
-    "change_pct": -10.198557678112486,
-    "value": 2
-  },
-  {
     "timestamp": "2026-05-31T04:08:07Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 27.149999618530273,
     "change_pct": -6.02284659560307,
     "value": 5.413582659835271
+  },
+  {
+    "timestamp": "2026-06-02T11:17:48Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_PCT_DROP",
+    "type": "percent_change",
+    "price": 27.149999618530273,
+    "change_pct": -6.02284659560307,
+    "value": -6.02284659560307
   }
 ]
