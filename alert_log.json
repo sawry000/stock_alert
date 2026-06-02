@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T00:02:52Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.84000015258789,
-    "change_pct": 10.611117770103265,
-    "value": 10.611117770103265
-  },
-  {
-    "timestamp": "2026-06-02T00:07:26Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_POS_SIZE",
-    "type": "position_size",
-    "price": 362.8999938964844,
-    "change_pct": 1.2019280784417858,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-02T00:07:30Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 22.90999984741211,
     "change_pct": 5.333332631779814,
     "value": 5.333332631779814
+  },
+  {
+    "timestamp": "2026-06-02T23:52:27Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_UP_5",
+    "type": "percent_change",
+    "price": 72.33000183105469,
+    "change_pct": 14.355734120244565,
+    "value": 14.355734120244565
+  },
+  {
+    "timestamp": "2026-06-02T23:52:35Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 202.3699951171875,
+    "change_pct": 8.802008574905749,
+    "value": 8.802008574905749
   }
 ]
