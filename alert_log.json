@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-05-29T19:47:38Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_VOL_3X",
-    "type": "volume_spike",
-    "price": 15.260000228881836,
-    "change_pct": -10.393422026530622,
-    "value": 4.000723754580793
-  },
-  {
-    "timestamp": "2026-05-29T19:47:51Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.324999809265137,
-    "change_pct": -6.989251413652981,
-    "value": -6.989251413652981
-  },
-  {
     "timestamp": "2026-05-29T19:52:50Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4494,6 +4476,24 @@
     "timestamp": "2026-06-02T03:32:46Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_VOL_3X",
+    "type": "volume_spike",
+    "price": 27.149999618530273,
+    "change_pct": 43.321682583539776,
+    "value": 5.841719688084814
+  },
+  {
+    "timestamp": "2026-06-02T03:47:20Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "price": 320.0899963378906,
+    "change_pct": -6.129213074315781,
+    "value": -6.129213074315781
+  },
+  {
+    "timestamp": "2026-06-02T03:47:37Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_SPIKE",
     "type": "volume_spike",
     "price": 27.149999618530273,
     "change_pct": 43.321682583539776,
