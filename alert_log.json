@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T15:12:42Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "price": 11.470000267028809,
-    "change_pct": -5.751846614389411,
-    "value": -5.751846614389411
-  },
-  {
     "timestamp": "2026-06-02T15:37:32Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 27.90999984741211,
     "change_pct": 2.477299120671007,
     "value": 2.7607764648961663
+  },
+  {
+    "timestamp": "2026-06-03T12:32:31Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 22.8700008392334,
+    "change_pct": -0.8239339148594982,
+    "value": 2
   }
 ]
