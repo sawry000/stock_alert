@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T06:48:50Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.2899999618530273,
-    "change_pct": 7.51633862264795,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-02T06:48:51Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_POS_SIZE",
-    "type": "position_size",
-    "price": 3.2899999618530273,
-    "change_pct": 7.51633862264795,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-02T06:48:53Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 85.0,
     "change_pct": -3.4090909090909087,
     "value": 3.2642320062275867
+  },
+  {
+    "timestamp": "2026-06-03T04:33:12Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 27.510000228881836,
+    "change_pct": -0.8291267884576875,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-03T04:33:22Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.229999542236328,
+    "change_pct": 21.935479651947727,
+    "value": 3
   }
 ]
