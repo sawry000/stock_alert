@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T00:08:55Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_POS_SIZE",
-    "type": "position_size",
-    "price": 332.95001220703125,
-    "change_pct": 1.5091500631192836,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-03T00:08:57Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_POS_SIZE",
-    "type": "position_size",
-    "price": 51.16999816894531,
-    "change_pct": 1.0067077949966756,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-03T00:09:00Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_POS_SIZE",
-    "type": "position_size",
-    "price": 6.21999979019165,
-    "change_pct": 1.2897308199526252,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-03T00:09:02Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_POS_SIZE",
@@ -4498,5 +4471,32 @@
     "price": 4.965000152587891,
     "change_pct": -5.965906200986924,
     "value": -5.965906200986924
+  },
+  {
+    "timestamp": "2026-06-03T19:22:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.879899978637695,
+    "change_pct": 1.9747621749732824,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T19:23:34Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_DROP",
+    "type": "percent_change",
+    "price": 28.30660057067871,
+    "change_pct": -6.051773744843306,
+    "value": -6.051773744843306
+  },
+  {
+    "timestamp": "2026-06-03T19:24:11Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 4.90500020980835,
+    "change_pct": -3.444877759678159,
+    "value": 2.5653066611194952
   }
 ]
