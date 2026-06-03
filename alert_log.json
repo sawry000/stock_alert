@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T11:02:45Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 27.149999618530273,
-    "change_pct": -6.02284659560307,
-    "value": 5.413582659835271
-  },
-  {
     "timestamp": "2026-06-02T11:17:48Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 7.320000171661377,
     "change_pct": -8.38547970386262,
     "value": -8.38547970386262
+  },
+  {
+    "timestamp": "2026-06-03T07:47:23Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 426.8900146484375,
+    "change_pct": 17.78550744928331,
+    "value": 3
   }
 ]
