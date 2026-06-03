@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T20:07:56Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 85.0,
-    "change_pct": -3.4090909090909087,
-    "value": 3.398559015040352
-  },
-  {
-    "timestamp": "2026-06-02T20:18:09Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 20.579999923706055,
-    "change_pct": 2.644926974997398,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-02T20:27:50Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 414.1099853515625,
     "change_pct": -3.000565597404084,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-03T16:13:03Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.509999990463257,
+    "change_pct": -5.006766157963275,
+    "value": -5.006766157963275
+  },
+  {
+    "timestamp": "2026-06-03T16:13:12Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.994999885559082,
+    "change_pct": -5.397729440168905,
+    "value": -5.397729440168905
   }
 ]
