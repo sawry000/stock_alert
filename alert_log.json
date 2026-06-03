@@ -2,15 +2,6 @@
   {
     "timestamp": "2026-06-02T06:49:57Z",
     "symbol": "VELO",
-    "alert_id": "VELO_POS_SIZE",
-    "type": "position_size",
-    "price": 21.510000228881836,
-    "change_pct": -9.811319795044717,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-02T06:49:57Z",
-    "symbol": "VELO",
     "alert_id": "VELO_PCT_DROP",
     "type": "percent_change",
     "price": 21.510000228881836,
@@ -4498,5 +4489,14 @@
     "price": 22.90999984741211,
     "change_pct": 5.333332631779814,
     "value": 5.333332631779814
+  },
+  {
+    "timestamp": "2026-06-03T06:07:42Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 27.90999984741211,
+    "change_pct": -3.392177752121465,
+    "value": 2.7607764648961663
   }
 ]
