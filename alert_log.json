@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T13:38:24Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 9.8100004196167,
-    "change_pct": 5.825247245056091,
-    "value": 5.825247245056091
-  },
-  {
     "timestamp": "2026-06-02T13:38:43Z",
     "symbol": "VICR",
     "alert_id": "VICR_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 27.90999984741211,
     "change_pct": 2.477299120671007,
     "value": 2.7607764648961663
+  },
+  {
+    "timestamp": "2026-06-03T10:32:27Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 22.8700008392334,
+    "change_pct": -0.8239339148594982,
+    "value": 2
   }
 ]
