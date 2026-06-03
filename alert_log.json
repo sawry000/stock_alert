@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T17:43:00Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 110.77999877929688,
-    "change_pct": 19.118278257308468,
-    "value": 19.118278257308468
-  },
-  {
     "timestamp": "2026-06-02T17:43:19Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 7.0,
     "change_pct": -10.941475826972013,
     "value": -10.941475826972013
+  },
+  {
+    "timestamp": "2026-06-03T13:54:03Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_CP_BULL",
+    "type": "candle_pattern",
+    "price": 17.040000915527344,
+    "change_pct": -0.35087183902138985,
+    "value": 1
   }
 ]
