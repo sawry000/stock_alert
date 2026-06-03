@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T00:07:33Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_POS_SIZE",
-    "type": "position_size",
-    "price": 63.7400016784668,
-    "change_pct": -6.347338115682052,
-    "value": 20
-  },
-  {
-    "timestamp": "2026-06-02T00:07:36Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_POS_SIZE",
-    "type": "position_size",
-    "price": 28.25,
-    "change_pct": 4.013254786450663,
-    "value": 63
-  },
-  {
     "timestamp": "2026-06-02T00:07:40Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 27.90999984741211,
     "change_pct": -3.392177752121465,
     "value": 2.8634648480193654
+  },
+  {
+    "timestamp": "2026-06-03T00:02:52Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.398559015040352
+  },
+  {
+    "timestamp": "2026-06-03T00:03:57Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 51.16999816894531,
+    "change_pct": 1.0067077949966756,
+    "value": 2
   }
 ]
