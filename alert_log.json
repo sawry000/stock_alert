@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T14:09:09Z",
-    "symbol": "BOBS",
-    "alert_id": "BOBS_CP_BULL",
-    "type": "candle_pattern",
-    "price": 13.0,
-    "change_pct": -0.990099009900996,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-02T14:12:43Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 7.320000171661377,
     "change_pct": -6.8702268236466075,
     "value": -6.8702268236466075
+  },
+  {
+    "timestamp": "2026-06-03T11:02:25Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 355.760009765625,
+    "change_pct": -0.347336200105042,
+    "value": 75.58
   }
 ]
