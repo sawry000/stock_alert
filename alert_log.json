@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T19:42:34Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_PCT_UP_5",
-    "type": "percent_change",
-    "price": 72.13999938964844,
-    "change_pct": 14.055335003396738,
-    "value": 14.055335003396738
-  },
-  {
-    "timestamp": "2026-06-02T19:42:45Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 202.25,
-    "change_pct": 8.737494516081856,
-    "value": 8.737494516081856
-  },
-  {
     "timestamp": "2026-06-02T19:43:02Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 27.94499969482422,
     "change_pct": 2.2128737923343778,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T15:33:46Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_PCT_DROP",
+    "type": "percent_change",
+    "price": 47.220001220703125,
+    "change_pct": -8.665374814887578,
+    "value": -8.665374814887578
+  },
+  {
+    "timestamp": "2026-06-03T15:33:53Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.884999990463257,
+    "change_pct": -12.30248328525379,
+    "value": -12.30248328525379
   }
 ]
