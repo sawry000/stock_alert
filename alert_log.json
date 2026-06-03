@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T14:53:28Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.340000152587891,
-    "change_pct": 0.187620123600198,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-02T14:53:41Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_CP_BULL",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-03T11:12:45Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_VOL_3X",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": 1.6972675738860534,
+    "value": 3.2642320062275867
+  },
+  {
+    "timestamp": "2026-06-03T11:22:42Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_ALARM",
     "type": "volume_spike",
     "price": 85.0,
     "change_pct": 1.6972675738860534,
