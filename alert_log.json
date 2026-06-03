@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T04:12:40Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_VOL_3X",
-    "type": "volume_spike",
-    "price": 85.0,
-    "change_pct": -3.4090909090909087,
-    "value": 3.2642320062275867
-  },
-  {
     "timestamp": "2026-06-03T04:17:35Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 3.75,
     "change_pct": -15.349887133182838,
     "value": -15.349887133182838
+  },
+  {
+    "timestamp": "2026-06-03T22:57:52Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 18.6200008392334,
+    "change_pct": -8.366137602197844,
+    "value": 1
   }
 ]
