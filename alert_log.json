@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T06:50:00Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_POS_SIZE",
-    "type": "position_size",
-    "price": 5.150000095367432,
-    "change_pct": 16.780047514000714,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-02T06:52:28Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 85.0,
     "change_pct": -3.4090909090909087,
     "value": 3.2642320062275867
+  },
+  {
+    "timestamp": "2026-06-03T06:22:33Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 74.94999694824219,
+    "change_pct": 7.040841114313327,
+    "value": 7.040841114313327
   }
 ]
