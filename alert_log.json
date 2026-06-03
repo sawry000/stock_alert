@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T23:07:28Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 355.760009765625,
-    "change_pct": 13.978116742225428,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-02T23:08:39Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.28000020980835,
-    "change_pct": -5.9547306128686115,
-    "value": -5.9547306128686115
-  },
-  {
     "timestamp": "2026-06-02T23:08:51Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 12.75,
     "change_pct": -5.555555555555555,
     "value": -5.555555555555555
+  },
+  {
+    "timestamp": "2026-06-03T18:32:43Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_DROP",
+    "type": "percent_change",
+    "price": 187.27999877929688,
+    "change_pct": -6.8768341806489675,
+    "value": -6.8768341806489675
+  },
+  {
+    "timestamp": "2026-06-03T18:33:32Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.884999990463257,
+    "change_pct": -5.403102328684496,
+    "value": -5.403102328684496
   }
 ]
