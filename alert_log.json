@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T00:09:02Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_POS_SIZE",
-    "type": "position_size",
-    "price": 20.770000457763672,
-    "change_pct": 9.778015104459143,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-03T00:09:04Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_POS_SIZE",
-    "type": "position_size",
-    "price": 4.28000020980835,
-    "change_pct": -5.9547306128686115,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-03T00:09:05Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 4.90500020980835,
     "change_pct": -3.444877759678159,
     "value": 2.5653066611194952
+  },
+  {
+    "timestamp": "2026-06-03T19:28:10Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.5950000286102295,
+    "change_pct": -7.105942413172367,
+    "value": -7.105942413172367
+  },
+  {
+    "timestamp": "2026-06-03T19:28:25Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 12.385000228881836,
+    "change_pct": -8.259257563838252,
+    "value": -8.259257563838252
   }
 ]
