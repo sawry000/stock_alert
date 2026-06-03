@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T12:58:10Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 3.9600000381469727,
-    "change_pct": -0.25188820788482463,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-02T12:58:19Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.2899999618530273,
-    "change_pct": 7.51633862264795,
-    "value": 7.51633862264795
-  },
-  {
     "timestamp": "2026-06-02T12:59:00Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 2.9800000190734863,
     "change_pct": -0.9966771071931382,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-03T09:02:44Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_3X",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.2642320062275867
+  },
+  {
+    "timestamp": "2026-06-03T09:02:47Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.2642320062275867
   }
 ]
