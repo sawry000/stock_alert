@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T06:48:05Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_POS_SIZE",
-    "type": "position_size",
-    "price": 20.68000030517578,
-    "change_pct": -13.819327702519232,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-02T06:48:06Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 7.320000171661377,
     "change_pct": -8.38547970386262,
     "value": -8.38547970386262
+  },
+  {
+    "timestamp": "2026-06-03T03:27:42Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.398559015040352
   }
 ]
