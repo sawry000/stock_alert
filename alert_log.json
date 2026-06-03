@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T19:53:32Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.494999885559082,
-    "change_pct": -5.182483422495148,
-    "value": -5.182483422495148
-  },
-  {
-    "timestamp": "2026-06-02T19:57:28Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 355.69000244140625,
-    "change_pct": 13.955687849844093,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-02T19:57:37Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 74.9800033569336,
-    "change_pct": 7.083695168428446,
-    "value": 7.083695168428446
-  },
-  {
-    "timestamp": "2026-06-02T19:58:41Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 51.130001068115234,
-    "change_pct": 0.9277557601958898,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-02T19:58:46Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.275000095367432,
-    "change_pct": -6.064599091025456,
-    "value": -6.064599091025456
-  },
-  {
     "timestamp": "2026-06-02T19:58:57Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_DROP",
@@ -4498,5 +4453,50 @@
     "price": 47.209999084472656,
     "change_pct": -8.684721306629296,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-03T15:57:54Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_PCT_DROP",
+    "type": "percent_change",
+    "price": 25.729999542236328,
+    "change_pct": -5.527019925477856,
+    "value": -5.527019925477856
+  },
+  {
+    "timestamp": "2026-06-03T15:58:36Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_DROP",
+    "type": "percent_change",
+    "price": 9.28499984741211,
+    "change_pct": -8.061115867630686,
+    "value": -8.061115867630686
+  },
+  {
+    "timestamp": "2026-06-03T15:58:48Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 84.86000061035156,
+    "change_pct": -0.6206808638581075,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-03T15:58:58Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.840000152587891,
+    "change_pct": -5.958129587956672,
+    "value": -5.958129587956672
+  },
+  {
+    "timestamp": "2026-06-03T15:59:14Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.975599765777588,
+    "change_pct": -11.251911376875476,
+    "value": -11.251911376875476
   }
 ]
