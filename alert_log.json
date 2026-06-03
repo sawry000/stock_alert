@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T05:47:28Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_PCT_DROP",
-    "type": "percent_change",
-    "price": 320.0899963378906,
-    "change_pct": -6.129213074315781,
-    "value": -6.129213074315781
-  },
-  {
     "timestamp": "2026-06-02T05:47:33Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 3.259999990463257,
     "change_pct": -0.9118532443044048,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T02:52:44Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 11.210000038146973,
+    "change_pct": -7.888249481125944,
+    "value": -7.888249481125944
   }
 ]
