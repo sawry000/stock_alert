@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T02:59:02Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 30.15999984741211,
-    "change_pct": -4.858044645387666,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-03T02:59:10Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 94.25,
-    "change_pct": 3.3182421099941912,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-03T02:59:15Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 12.369999885559082,
-    "change_pct": -2.5984260979599787,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-03T02:59:19Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 86.75,
-    "change_pct": -4.397178752479607,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-03T02:59:35Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -4498,5 +4462,41 @@
     "price": 18.6200008392334,
     "change_pct": -8.366137602197844,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T21:57:43Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 10.029999732971191,
+    "change_pct": -9.802971799073832,
+    "value": -9.802971799073832
+  },
+  {
+    "timestamp": "2026-06-03T21:58:01Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_DROP",
+    "type": "percent_change",
+    "price": 18.6200008392334,
+    "change_pct": -8.366137602197844,
+    "value": -8.366137602197844
+  },
+  {
+    "timestamp": "2026-06-03T21:58:56Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 46.66999816894531,
+    "change_pct": -9.729210504941374,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T21:59:19Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_PCT_DROP",
+    "type": "percent_change",
+    "price": 19.610000610351562,
+    "change_pct": -11.865165796172752,
+    "value": -11.865165796172752
   }
 ]
