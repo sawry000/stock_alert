@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T01:17:47Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 85.0,
-    "change_pct": -3.4090909090909087,
-    "value": 3.398559015040352
-  },
-  {
-    "timestamp": "2026-06-03T01:18:42Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 20.770000457763672,
-    "change_pct": 9.778015104459143,
-    "value": 9.778015104459143
-  },
-  {
-    "timestamp": "2026-06-03T01:27:31Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.31999969482422,
-    "change_pct": -2.97261890533715,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-03T01:27:48Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_VOL_3X",
@@ -4498,5 +4471,32 @@
     "price": 3.0799999237060547,
     "change_pct": -5.521474456557392,
     "value": -5.521474456557392
+  },
+  {
+    "timestamp": "2026-06-03T20:22:24Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 417.42999267578125,
+    "change_pct": -2.2229006193710217,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-03T20:22:59Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.4700000286102295,
+    "change_pct": -6.089309103918008,
+    "value": -6.089309103918008
+  },
+  {
+    "timestamp": "2026-06-03T20:23:07Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.949999809265137,
+    "change_pct": -6.250003612402718,
+    "value": -6.250003612402718
   }
 ]
