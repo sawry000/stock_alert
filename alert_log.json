@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T19:43:02Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 28.385000228881836,
-    "change_pct": -1.7480088996821206,
-    "value": 2.707379711273487
-  },
-  {
     "timestamp": "2026-06-02T19:43:09Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 3.884999990463257,
     "change_pct": -12.30248328525379,
     "value": -12.30248328525379
+  },
+  {
+    "timestamp": "2026-06-03T15:38:06Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 3.7699999809265137,
+    "change_pct": -2.5839798210203213,
+    "value": 1
   }
 ]
