@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T18:28:43Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 87.47000122070312,
-    "change_pct": -3.603701542094853,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-02T18:33:20Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_PCT_DROP",
@@ -4497,6 +4488,15 @@
     "type": "candle_pattern",
     "price": 7.807499885559082,
     "change_pct": -0.12664203495942505,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T14:17:42Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 74.72000122070312,
+    "change_pct": 1.6728686671535196,
     "value": 1
   }
 ]
