@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T21:42:57Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 113.0,
-    "change_pct": 21.50537634408602,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-02T21:43:12Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.099999904632568,
-    "change_pct": 3.2745567917523464,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-02T21:43:39Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 332.95001220703125,
-    "change_pct": 1.5091500631192836,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-02T21:47:26Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_PCT_UP_5",
-    "type": "percent_change",
-    "price": 72.33000183105469,
-    "change_pct": 14.355734120244565,
-    "value": 14.355734120244565
-  },
-  {
     "timestamp": "2026-06-02T21:47:33Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_PCT_UP_5",
@@ -4498,5 +4462,41 @@
     "price": 3.0899999141693115,
     "change_pct": -5.214726281940503,
     "value": -5.214726281940503
+  },
+  {
+    "timestamp": "2026-06-03T17:02:54Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_PCT_DROP",
+    "type": "percent_change",
+    "price": 25.3700008392334,
+    "change_pct": -6.848829132657251,
+    "value": -6.848829132657251
+  },
+  {
+    "timestamp": "2026-06-03T17:03:33Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_DROP",
+    "type": "percent_change",
+    "price": 9.145000457763672,
+    "change_pct": -9.447371966178453,
+    "value": -9.447371966178453
+  },
+  {
+    "timestamp": "2026-06-03T17:03:54Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.840000152587891,
+    "change_pct": -5.958129587956672,
+    "value": -5.958129587956672
+  },
+  {
+    "timestamp": "2026-06-03T17:04:09Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.925000190734863,
+    "change_pct": -11.895671873602252,
+    "value": -11.895671873602252
   }
 ]
