@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T21:12:44Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_VOL_3X",
-    "type": "volume_spike",
-    "price": 85.0,
-    "change_pct": -3.4090909090909087,
-    "value": 3.398559015040352
-  },
-  {
     "timestamp": "2026-06-02T21:12:47Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 11.880000114440918,
     "change_pct": -11.999999152289496,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-03T16:43:59Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_PCT_DROP",
+    "type": "percent_change",
+    "price": 21.75,
+    "change_pct": -5.021834061135365,
+    "value": -5.021834061135365
   }
 ]
