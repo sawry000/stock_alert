@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T22:58:35Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 10.1899995803833,
-    "change_pct": 9.924483067781027,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-02T22:58:39Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 30.15999984741211,
-    "change_pct": -4.858044645387666,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-02T22:58:46Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 94.25,
-    "change_pct": 3.3182421099941912,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-02T22:58:50Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 12.369999885559082,
-    "change_pct": -2.5984260979599787,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-02T22:58:54Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -4498,5 +4462,41 @@
     "price": 3.0899999141693115,
     "change_pct": -5.214726281940503,
     "value": -5.214726281940503
+  },
+  {
+    "timestamp": "2026-06-03T18:12:29Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 418.0400085449219,
+    "change_pct": -2.0800129895713813,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-03T18:12:40Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.559999465942383,
+    "change_pct": 0.8046798315376114,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T18:13:19Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.4800000190734863,
+    "change_pct": -5.818673367429324,
+    "value": -5.818673367429324
+  },
+  {
+    "timestamp": "2026-06-03T18:13:29Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.988999843597412,
+    "change_pct": -5.511366598533866,
+    "value": -5.511366598533866
   }
 ]
