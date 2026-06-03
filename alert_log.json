@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T00:08:06Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_POS_SIZE",
-    "type": "position_size",
-    "price": 27.90999984741211,
-    "change_pct": -3.392177752121465,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-03T00:08:50Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_POS_SIZE",
-    "type": "position_size",
-    "price": 180.19000244140625,
-    "change_pct": -2.028054348952663,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-03T00:08:53Z",
-    "symbol": "PSIX",
-    "alert_id": "PSIX_POS_SIZE",
-    "type": "position_size",
-    "price": 40.59000015258789,
-    "change_pct": 2.2418139863674753,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-03T00:08:55Z",
     "symbol": "VICR",
     "alert_id": "VICR_POS_SIZE",
@@ -4498,5 +4471,32 @@
     "price": 68.80000305175781,
     "change_pct": -5.037952999644155,
     "value": -5.037952999644155
+  },
+  {
+    "timestamp": "2026-06-03T19:17:31Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 416.0450134277344,
+    "change_pct": -2.547312511071311,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-03T19:18:08Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.4749999046325684,
+    "change_pct": -5.95399446190613,
+    "value": -5.95399446190613
+  },
+  {
+    "timestamp": "2026-06-03T19:18:16Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.965000152587891,
+    "change_pct": -5.965906200986924,
+    "value": -5.965906200986924
   }
 ]
