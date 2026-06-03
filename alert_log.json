@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T14:53:41Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_CP_BULL",
-    "type": "candle_pattern",
-    "price": 6.775000095367432,
-    "change_pct": -1.0948891187236207,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-02T14:53:47Z",
     "symbol": "NLST",
     "alert_id": "NLST_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 85.0,
     "change_pct": 1.6972675738860534,
     "value": 3.2642320062275867
+  },
+  {
+    "timestamp": "2026-06-03T11:27:49Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 27.90999984741211,
+    "change_pct": 2.477299120671007,
+    "value": 2.7607764648961663
   }
 ]
