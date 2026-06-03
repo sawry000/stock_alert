@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T18:52:58Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 198.47000122070312,
-    "change_pct": 6.705219625923191,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-02T18:53:16Z",
     "symbol": "RDW",
     "alert_id": "RDW_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 4.690000057220459,
     "change_pct": -7.677164227943722,
     "value": -7.677164227943722
+  },
+  {
+    "timestamp": "2026-06-03T14:47:57Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 18.885000228881836,
+    "change_pct": -7.062006747628762,
+    "value": 1
   }
 ]
