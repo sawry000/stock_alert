@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T00:09:05Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.28000020980835,
-    "change_pct": -5.9547306128686115,
-    "value": -5.9547306128686115
-  },
-  {
-    "timestamp": "2026-06-03T00:09:08Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_POS_SIZE",
-    "type": "position_size",
-    "price": 12.460000038146973,
-    "change_pct": 1.7142860256895727,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-03T00:09:11Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_POS_SIZE",
-    "type": "position_size",
-    "price": 22.90999984741211,
-    "change_pct": 5.333332631779814,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-03T00:09:19Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 12.385000228881836,
     "change_pct": -8.259257563838252,
     "value": -8.259257563838252
+  },
+  {
+    "timestamp": "2026-06-03T19:37:40Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_DROP",
+    "type": "percent_change",
+    "price": 185.8498992919922,
+    "change_pct": -7.587937301977934,
+    "value": -7.587937301977934
+  },
+  {
+    "timestamp": "2026-06-03T19:38:20Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.8450000286102295,
+    "change_pct": -6.377072034619078,
+    "value": -6.377072034619078
+  },
+  {
+    "timestamp": "2026-06-03T19:38:31Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_PCT_DROP",
+    "type": "percent_change",
+    "price": 28.350000381469727,
+    "change_pct": -6.1801923340126566,
+    "value": -6.1801923340126566
   }
 ]
