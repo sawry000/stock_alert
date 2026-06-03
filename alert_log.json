@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T11:59:00Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 5.150000095367432,
-    "change_pct": 0.5859393626451471,
-    "value": 3.0251979859688696
-  },
-  {
     "timestamp": "2026-06-02T12:02:48Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 51.16999816894531,
     "change_pct": -1.0251486093901168,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-03T08:12:47Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 27.90999984741211,
+    "change_pct": 2.477299120671007,
+    "value": 2.7607764648961663
   }
 ]
