@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T15:38:32Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 9.895000457763672,
-    "change_pct": 6.7421840103956026,
-    "value": 6.7421840103956026
-  },
-  {
-    "timestamp": "2026-06-02T15:39:00Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 23.760000228881836,
-    "change_pct": 9.241380362675109,
-    "value": 9.241380362675109
-  },
-  {
-    "timestamp": "2026-06-02T15:42:48Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_PCT_DROP",
-    "type": "percent_change",
-    "price": 83.25,
-    "change_pct": -5.3977272727272725,
-    "value": -5.3977272727272725
-  },
-  {
-    "timestamp": "2026-06-02T15:47:54Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_UP_5",
-    "type": "percent_change",
-    "price": 21.135000228881836,
-    "change_pct": 5.413049715865247,
-    "value": 5.413049715865247
-  },
-  {
     "timestamp": "2026-06-02T15:48:47Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 7.320000171661377,
     "change_pct": -6.8702268236466075,
     "value": -6.8702268236466075
+  },
+  {
+    "timestamp": "2026-06-03T12:52:24Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 426.8900146484375,
+    "change_pct": -0.0070236464823657625,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-03T12:52:44Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 15.579999923706055,
+    "change_pct": 1.168830673415937,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-03T12:52:48Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.9800000190734863,
+    "change_pct": -0.9966771071931382,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-03T12:52:50Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": 1.6972675738860534,
+    "value": 3.2642320062275867
   }
 ]
