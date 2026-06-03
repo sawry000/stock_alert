@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T15:48:59Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.420000076293945,
-    "change_pct": -7.133916441878034,
-    "value": -7.133916441878034
-  },
-  {
     "timestamp": "2026-06-02T16:07:57Z",
     "symbol": "RDW",
     "alert_id": "RDW_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 85.0,
     "change_pct": 1.6972675738860534,
     "value": 3.2642320062275867
+  },
+  {
+    "timestamp": "2026-06-03T13:02:30Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 355.760009765625,
+    "change_pct": -0.347336200105042,
+    "value": 3
   }
 ]
