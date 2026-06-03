@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T02:57:47Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 202.3699951171875,
-    "change_pct": 8.802008574905749,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-03T02:58:03Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 27.90999984741211,
-    "change_pct": -3.392177752121465,
-    "value": 2.8634648480193654
-  },
-  {
     "timestamp": "2026-06-03T02:58:08Z",
     "symbol": "RDW",
     "alert_id": "RDW_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 5.329999923706055,
     "change_pct": 4.9212583406703665,
     "value": 3.069353158378001
+  },
+  {
+    "timestamp": "2026-06-03T21:38:10Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.609999895095825,
+    "change_pct": -6.718348963932168,
+    "value": -6.718348963932168
+  },
+  {
+    "timestamp": "2026-06-03T21:38:24Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 12.630000114440918,
+    "change_pct": -6.444443596733941,
+    "value": -6.444443596733941
   }
 ]
