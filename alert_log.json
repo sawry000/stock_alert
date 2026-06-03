@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T15:48:47Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.144999980926514,
-    "change_pct": -8.921116657294803,
-    "value": -8.921116657294803
-  },
-  {
     "timestamp": "2026-06-02T15:48:59Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_DROP",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-03T12:52:50Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": 1.6972675738860534,
+    "value": 3.2642320062275867
+  },
+  {
+    "timestamp": "2026-06-03T12:57:46Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_ALARM",
     "type": "volume_spike",
     "price": 85.0,
     "change_pct": 1.6972675738860534,
