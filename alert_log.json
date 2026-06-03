@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T01:37:49Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 10.84000015258789,
-    "change_pct": 10.611117770103265,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-02T01:42:21Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 13.229999542236328,
     "change_pct": 21.935479651947727,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-03T00:37:46Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.398559015040352
   }
 ]
