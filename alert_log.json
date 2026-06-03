@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T00:37:36Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_PCT_DROP",
-    "type": "percent_change",
-    "price": 320.0899963378906,
-    "change_pct": -6.129213074315781,
-    "value": -6.129213074315781
-  },
-  {
     "timestamp": "2026-06-02T00:37:57Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_VOL_SPIKE",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-03T00:17:43Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.398559015040352
+  },
+  {
+    "timestamp": "2026-06-03T00:22:40Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_3X",
     "type": "volume_spike",
     "price": 85.0,
     "change_pct": -3.4090909090909087,
