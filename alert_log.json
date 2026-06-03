@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T11:37:37Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 12.600000381469727,
-    "change_pct": 3.5332816883297173,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-02T11:59:00Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 4.690000057220459,
     "change_pct": 0.8927623366776096,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-03T08:08:44Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 51.16999816894531,
+    "change_pct": -1.0251486093901168,
+    "value": 2
   }
 ]
