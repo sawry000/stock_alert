@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T06:49:15Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_POS_SIZE",
-    "type": "position_size",
-    "price": 12.640000343322754,
-    "change_pct": -0.23677708506113673,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-02T06:49:18Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 92.54000091552734,
-    "change_pct": 0.5869575168775476,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-02T06:49:19Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_POS_SIZE",
-    "type": "position_size",
-    "price": 92.54000091552734,
-    "change_pct": 0.5869575168775476,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-02T06:49:23Z",
     "symbol": "PSIX",
     "alert_id": "PSIX_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 20.770000457763672,
     "change_pct": 9.778015104459143,
     "value": 9.778015104459143
+  },
+  {
+    "timestamp": "2026-06-03T05:27:28Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 426.8900146484375,
+    "change_pct": 17.78550744928331,
+    "value": 5
+  },
+  {
+    "timestamp": "2026-06-03T05:28:43Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.28000020980835,
+    "change_pct": -5.9547306128686115,
+    "value": -5.9547306128686115
+  },
+  {
+    "timestamp": "2026-06-03T05:28:55Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 7.320000171661377,
+    "change_pct": -8.38547970386262,
+    "value": -8.38547970386262
   }
 ]
