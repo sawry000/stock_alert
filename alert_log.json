@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T13:38:15Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 11.524999618530273,
-    "change_pct": 6.2211946408320165,
-    "value": 6.2211946408320165
-  },
-  {
     "timestamp": "2026-06-02T13:38:24Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 85.0,
     "change_pct": 1.6972675738860534,
     "value": 3.2642320062275867
+  },
+  {
+    "timestamp": "2026-06-03T10:22:46Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 27.90999984741211,
+    "change_pct": 2.477299120671007,
+    "value": 2.7607764648961663
   }
 ]
