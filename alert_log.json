@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T21:02:30Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 355.760009765625,
-    "change_pct": 13.978116742225428,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-02T21:03:43Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.28000020980835,
-    "change_pct": -5.9547306128686115,
-    "value": -5.9547306128686115
-  },
-  {
-    "timestamp": "2026-06-02T21:03:54Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.320000171661377,
-    "change_pct": -8.38547970386262,
-    "value": -8.38547970386262
-  },
-  {
-    "timestamp": "2026-06-02T21:12:34Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 202.3699951171875,
-    "change_pct": 8.802008574905749,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-02T21:12:44Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 85.0,
-    "change_pct": -3.4090909090909087,
-    "value": 3.398559015040352
-  },
-  {
     "timestamp": "2026-06-02T21:12:44Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_VOL_3X",
@@ -4498,5 +4453,50 @@
     "price": 3.924999952316284,
     "change_pct": -11.399549609113219,
     "value": -11.399549609113219
+  },
+  {
+    "timestamp": "2026-06-03T16:37:26Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_DROP",
+    "type": "percent_change",
+    "price": 68.6500015258789,
+    "change_pct": -5.244994443231327,
+    "value": -5.244994443231327
+  },
+  {
+    "timestamp": "2026-06-03T16:37:30Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.40999984741211,
+    "change_pct": 0.2560345552747239,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T16:38:07Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 3.6449999809265137,
+    "change_pct": -5.81395398122704,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T16:38:17Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 26.520000457763672,
+    "change_pct": -2.8571411803528526,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-03T16:38:26Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 11.880000114440918,
+    "change_pct": -11.999999152289496,
+    "value": 3
   }
 ]
