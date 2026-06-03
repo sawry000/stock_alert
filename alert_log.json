@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T01:17:37Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 202.3699951171875,
-    "change_pct": 8.802008574905749,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-03T01:17:47Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 7.010000228881836,
     "change_pct": -10.814246451885042,
     "value": -10.814246451885042
+  },
+  {
+    "timestamp": "2026-06-03T20:18:22Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.0799999237060547,
+    "change_pct": -5.521474456557392,
+    "value": -5.521474456557392
   }
 ]
