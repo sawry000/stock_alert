@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T06:52:28Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_PCT_DROP",
-    "type": "percent_change",
-    "price": 320.0899963378906,
-    "change_pct": -6.129213074315781,
-    "value": -6.129213074315781
-  },
-  {
     "timestamp": "2026-06-02T07:17:30Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 74.94999694824219,
     "change_pct": 7.040841114313327,
     "value": 7.040841114313327
+  },
+  {
+    "timestamp": "2026-06-03T06:27:33Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 22.8700008392334,
+    "change_pct": 2.556057575037658,
+    "value": 1
   }
 ]
