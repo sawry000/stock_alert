@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T06:48:37Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_POS_SIZE",
-    "type": "position_size",
-    "price": 3.9600000381469727,
-    "change_pct": -3.431120585583611,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-02T06:48:39Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 51.16999816894531,
     "change_pct": 1.0067077949966756,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-03T04:12:40Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_3X",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.2642320062275867
   }
 ]
