@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T06:48:06Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 20.68000030517578,
-    "change_pct": -13.819327702519232,
-    "value": -13.819327702519232
-  },
-  {
     "timestamp": "2026-06-02T06:48:08Z",
     "symbol": "RDW",
     "alert_id": "RDW_NEWS_BAD",
@@ -4498,5 +4489,14 @@
     "price": 85.0,
     "change_pct": -3.4090909090909087,
     "value": 3.398559015040352
+  },
+  {
+    "timestamp": "2026-06-03T03:32:30Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.31999969482422,
+    "change_pct": -2.97261890533715,
+    "value": 2
   }
 ]
