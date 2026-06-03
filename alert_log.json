@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T15:37:42Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 202.0,
-    "change_pct": 8.603084757718344,
-    "value": 8.603084757718344
-  },
-  {
-    "timestamp": "2026-06-02T15:38:01Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 111.0,
-    "change_pct": 19.35483870967742,
-    "value": 19.35483870967742
-  },
-  {
-    "timestamp": "2026-06-02T15:38:21Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.715000152587891,
-    "change_pct": 1.430572283271815,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-02T15:38:23Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 12.25,
-    "change_pct": 12.903225806451616,
-    "value": 12.903225806451616
-  },
-  {
     "timestamp": "2026-06-02T15:38:32Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_UP_5",
@@ -4498,5 +4462,41 @@
     "price": 13.229999542236328,
     "change_pct": -2.000003390842014,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-03T12:47:47Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_3X",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": 1.6972675738860534,
+    "value": 3.2642320062275867
+  },
+  {
+    "timestamp": "2026-06-03T12:47:54Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 20.579999923706055,
+    "change_pct": 1.2795271835927875,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T12:48:54Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 20.770000457763672,
+    "change_pct": -0.6220073791211805,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T12:49:09Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 7.320000171661377,
+    "change_pct": -6.8702268236466075,
+    "value": -6.8702268236466075
   }
 ]
