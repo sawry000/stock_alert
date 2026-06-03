@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T01:42:44Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 85.0,
-    "change_pct": -3.4090909090909087,
-    "value": 3.398559015040352
-  },
-  {
-    "timestamp": "2026-06-03T01:47:32Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 74.94999694824219,
-    "change_pct": 7.040841114313327,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-03T01:47:38Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 5.329999923706055,
     "change_pct": 4.9212583406703665,
     "value": 3.069353158378001
+  },
+  {
+    "timestamp": "2026-06-03T20:33:13Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.609999895095825,
+    "change_pct": -6.718348963932168,
+    "value": -6.718348963932168
+  },
+  {
+    "timestamp": "2026-06-03T20:33:30Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 12.630000114440918,
+    "change_pct": -6.444443596733941,
+    "value": -6.444443596733941
   }
 ]
