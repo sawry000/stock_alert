@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T06:48:46Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_POS_SIZE",
-    "type": "position_size",
-    "price": 52.0,
-    "change_pct": 1.9965831144656603,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-02T06:48:48Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.2899999618530273,
-    "change_pct": 7.51633862264795,
-    "value": 7.51633862264795
-  },
-  {
     "timestamp": "2026-06-02T06:48:50Z",
     "symbol": "NLST",
     "alert_id": "NLST_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 7.320000171661377,
     "change_pct": -8.38547970386262,
     "value": -8.38547970386262
+  },
+  {
+    "timestamp": "2026-06-03T04:27:51Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.2642320062275867
+  },
+  {
+    "timestamp": "2026-06-03T04:27:54Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 85.0,
+    "change_pct": -3.4090909090909087,
+    "value": 3.2642320062275867
   }
 ]
