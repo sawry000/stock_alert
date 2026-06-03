@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T17:52:46Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 73.69499969482422,
-    "change_pct": 5.248499992608145,
-    "value": 5.248499992608145
-  },
-  {
-    "timestamp": "2026-06-02T18:07:47Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 84.98999786376953,
-    "change_pct": -3.4204569729891694,
-    "value": 2.5159255679349104
-  },
-  {
-    "timestamp": "2026-06-02T18:13:06Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 21.139999389648438,
-    "change_pct": 5.437983559097822,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-02T18:22:42Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 5.010000228881836,
     "change_pct": -5.113632028753112,
     "value": -5.113632028753112
+  },
+  {
+    "timestamp": "2026-06-03T14:08:35Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_DROP",
+    "type": "percent_change",
+    "price": 80.4800033569336,
+    "change_pct": -5.750083901002935,
+    "value": -5.750083901002935
+  },
+  {
+    "timestamp": "2026-06-03T14:08:41Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 335.0,
+    "change_pct": 4.5241809672386895,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T14:08:57Z",
+    "symbol": "BOBS",
+    "alert_id": "BOBS_CP_BULL",
+    "type": "candle_pattern",
+    "price": 13.079999923706055,
+    "change_pct": -2.7509299352709635,
+    "value": 1
   }
 ]
