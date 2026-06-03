@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T20:40:32Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_VOL_3X",
-    "type": "volume_spike",
-    "price": 85.0,
-    "change_pct": -3.4090909090909087,
-    "value": 3.398559015040352
-  },
-  {
-    "timestamp": "2026-06-02T20:40:34Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 85.0,
-    "change_pct": -3.4090909090909087,
-    "value": 3.398559015040352
-  },
-  {
     "timestamp": "2026-06-02T20:47:56Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 12.770000457763672,
     "change_pct": -5.055758678337007,
     "value": -5.055758678337007
+  },
+  {
+    "timestamp": "2026-06-03T16:28:21Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_PCT_DROP",
+    "type": "percent_change",
+    "price": 28.6299991607666,
+    "change_pct": -5.253581001847935,
+    "value": -5.253581001847935
+  },
+  {
+    "timestamp": "2026-06-03T16:29:04Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_CP_BULL",
+    "type": "candle_pattern",
+    "price": 4.90500020980835,
+    "change_pct": -3.444877759678159,
+    "value": 1
   }
 ]
