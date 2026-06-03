@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-02T18:53:36Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.369999885559082,
-    "change_pct": 0.7504668960428136,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-02T18:53:53Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.240000009536743,
-    "change_pct": -1.519755407174008,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-02T18:54:00Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 9.984999656677246,
-    "change_pct": 7.713049155094353,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-02T18:54:04Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 30.100000381469727,
-    "change_pct": -5.047317408612847,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-02T18:54:12Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4498,5 +4462,41 @@
     "price": 6.960999965667725,
     "change_pct": -11.43765946987628,
     "value": -11.43765946987628
+  },
+  {
+    "timestamp": "2026-06-03T14:57:35Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 28.200000762939453,
+    "change_pct": 3.1455770407441594,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-03T14:57:58Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_POS_SIZE",
+    "type": "position_size",
+    "price": 117.66999816894531,
+    "change_pct": 3.228351758000981,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-06-03T14:58:30Z",
+    "symbol": "ANNA",
+    "alert_id": "ANNA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.3399999141693115,
+    "change_pct": -0.5952406497228676,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-03T14:58:46Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.875,
+    "change_pct": -5.394524959742351,
+    "value": -5.394524959742351
   }
 ]
