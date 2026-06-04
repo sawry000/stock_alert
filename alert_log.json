@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T21:17:34Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_NEWS_C",
-    "type": "news_sentiment",
-    "price": 27.649999618530273,
-    "change_pct": 1.1338683925759823,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-03T21:17:56Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_PCT_DROP",
-    "type": "percent_change",
-    "price": 24.850000381469727,
-    "change_pct": -8.758117658077099,
-    "value": -8.758117658077099
-  },
-  {
     "timestamp": "2026-06-03T21:18:31Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 4.385000228881836,
     "change_pct": 12.510910578381376,
     "value": 12.510910578381376
+  },
+  {
+    "timestamp": "2026-06-04T18:17:35Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 22.579999923706055,
+    "change_pct": 3.5779813014039172,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T18:18:01Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 117.41999816894531,
+    "change_pct": 6.98860880997295,
+    "value": 3
   }
 ]
