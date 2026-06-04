@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T00:19:03Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_DROP",
-    "type": "percent_change",
-    "price": 21.739999771118164,
-    "change_pct": -5.065503182890108,
-    "value": -5.065503182890108
-  },
-  {
     "timestamp": "2026-06-04T00:27:52Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 4.380000114440918,
     "change_pct": 12.382616986732636,
     "value": 12.382616986732636
+  },
+  {
+    "timestamp": "2026-06-04T22:27:36Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 22.260000228881836,
+    "change_pct": 2.110092793035941,
+    "value": 1
   }
 ]
