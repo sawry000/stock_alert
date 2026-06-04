@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T23:13:17Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 108.2699966430664,
-    "change_pct": -4.834317796373024,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-03T23:13:22Z",
     "symbol": "DDD",
     "alert_id": "DDD_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 5.880000114440918,
     "change_pct": 11.666067463792434,
     "value": 4.131219705976898
+  },
+  {
+    "timestamp": "2026-06-04T20:18:10Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.380000114440918,
+    "change_pct": 12.382616986732636,
+    "value": 12.382616986732636
   }
 ]
