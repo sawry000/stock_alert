@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T19:07:39Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 363.79998779296875,
-    "change_pct": 1.90475848542542,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-03T19:07:45Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 23.065000534057617,
     "change_pct": 5.802754743383562,
     "value": 5.802754743383562
+  },
+  {
+    "timestamp": "2026-06-04T14:32:51Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 9.354999542236328,
+    "change_pct": -6.729815132239993,
+    "value": -6.729815132239993
   }
 ]
