@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T17:38:09Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 3.6449999809265137,
-    "change_pct": -5.81395398122704,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-03T17:38:48Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 20.829999923706055,
     "change_pct": 5.202019816697242,
     "value": 5.202019816697242
+  },
+  {
+    "timestamp": "2026-06-04T12:17:31Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 22.15999984741211,
+    "change_pct": 1.651375446844535,
+    "value": 1
   }
 ]
