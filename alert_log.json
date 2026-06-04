@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T00:09:11Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_POS_SIZE",
-    "type": "position_size",
-    "price": 46.66999816894531,
-    "change_pct": -9.729210504941374,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-04T00:09:15Z",
     "symbol": "ASPN",
     "alert_id": "ASPN_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 95.2300033569336,
     "change_pct": 18.7850858886536,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-04T21:49:19Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_CP_BULL",
+    "type": "candle_pattern",
+    "price": 18.139999389648438,
+    "change_pct": 8.233886573081358,
+    "value": 1
   }
 ]
