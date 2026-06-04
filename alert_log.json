@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T17:54:40Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.760000228881836,
-    "change_pct": -6.2992080928772465,
-    "value": -6.2992080928772465
-  },
-  {
     "timestamp": "2026-06-03T17:57:34Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4498,5 +4489,14 @@
     "price": 417.42999267578125,
     "change_pct": 4.613801983805641,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-04T13:12:31Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 363.5400085449219,
+    "change_pct": 3.563800400228443,
+    "value": 3
   }
 ]
