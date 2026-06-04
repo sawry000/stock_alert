@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T13:38:16Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_PCT_DROP",
-    "type": "percent_change",
-    "price": 51.06999969482422,
-    "change_pct": -5.390886078502739,
-    "value": -5.390886078502739
-  },
-  {
-    "timestamp": "2026-06-03T13:38:27Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.1500000953674316,
-    "change_pct": -6.249997161683578,
-    "value": -6.249997161683578
-  },
-  {
-    "timestamp": "2026-06-03T13:38:44Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_DROP",
-    "type": "percent_change",
-    "price": 19.834999084472656,
-    "change_pct": -5.095698160417906,
-    "value": -5.095698160417906
-  },
-  {
-    "timestamp": "2026-06-03T13:42:56Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 19.094999313354492,
-    "change_pct": -6.028546686247579,
-    "value": -6.028546686247579
-  },
-  {
     "timestamp": "2026-06-03T13:43:11Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 5.329999923706055,
     "change_pct": 4.9212583406703665,
     "value": 2.930353232721885
+  },
+  {
+    "timestamp": "2026-06-04T05:57:58Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.4700000286102295,
+    "change_pct": -6.089309103918008,
+    "value": -6.089309103918008
+  },
+  {
+    "timestamp": "2026-06-04T05:58:02Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.609999895095825,
+    "change_pct": -6.718348963932168,
+    "value": -6.718348963932168
+  },
+  {
+    "timestamp": "2026-06-04T05:58:06Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.949999809265137,
+    "change_pct": -6.250003612402718,
+    "value": -6.250003612402718
+  },
+  {
+    "timestamp": "2026-06-04T05:58:14Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 12.630000114440918,
+    "change_pct": -6.444443596733941,
+    "value": -6.444443596733941
   }
 ]
