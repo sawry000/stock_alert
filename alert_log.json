@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T21:53:00Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 18.6200008392334,
-    "change_pct": -8.366137602197844,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-03T21:57:43Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "price": 10.029999732971191,
-    "change_pct": -9.802971799073832,
-    "value": -9.802971799073832
-  },
-  {
     "timestamp": "2026-06-03T21:58:01Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 5.744999885559082,
     "change_pct": 9.10230141403958,
     "value": 3.2295043353332
+  },
+  {
+    "timestamp": "2026-06-04T19:12:29Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.8700008392334,
+    "change_pct": 3.4137322420534293,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T19:12:59Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 123.5250015258789,
+    "change_pct": 21.1029426724303,
+    "value": 1
   }
 ]
