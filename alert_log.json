@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T19:28:10Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.5950000286102295,
-    "change_pct": -7.105942413172367,
-    "value": -7.105942413172367
-  },
-  {
     "timestamp": "2026-06-03T19:28:25Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 3.0199999809265137,
     "change_pct": -1.9480525673209867,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-04T15:48:03Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 21.395000457763672,
+    "change_pct": 18.861113654242622,
+    "value": 1
   }
 ]
