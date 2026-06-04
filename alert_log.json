@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T21:18:36Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.15999984741211,
-    "change_pct": -9.298849923140583,
-    "value": -9.298849923140583
-  },
-  {
     "timestamp": "2026-06-03T21:19:17Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 22.56999969482422,
     "change_pct": 3.5321086918542113,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T18:32:45Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.880000114440918,
+    "change_pct": 2.5239441259092965,
+    "value": 2
   }
 ]
