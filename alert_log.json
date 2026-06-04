@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T17:02:54Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_PCT_DROP",
-    "type": "percent_change",
-    "price": 25.3700008392334,
-    "change_pct": -6.848829132657251,
-    "value": -6.848829132657251
-  },
-  {
     "timestamp": "2026-06-03T17:03:33Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 27.649999618530273,
     "change_pct": 2.5974011819305165,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T11:22:22Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 363.5400085449219,
+    "change_pct": 3.563800400228443,
+    "value": 76.56
   }
 ]
