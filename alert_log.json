@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T01:08:17Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 108.2699966430664,
-    "change_pct": -4.834317796373024,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-04T01:09:42Z",
     "symbol": "VELO",
     "alert_id": "VELO_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 5.880000114440918,
     "change_pct": 11.666067463792434,
     "value": 4.131219705976898
+  },
+  {
+    "timestamp": "2026-06-04T23:23:00Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 116.58000183105469,
+    "change_pct": 6.223236292532745,
+    "value": 6.223236292532745
   }
 ]
