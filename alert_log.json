@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T00:43:10Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.949999809265137,
-    "change_pct": -6.250003612402718,
-    "value": -6.250003612402718
-  },
-  {
     "timestamp": "2026-06-04T00:43:20Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 27.469999313354492,
     "change_pct": 1.929496524506467,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-04T22:58:10Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.7858729363863937
   }
 ]
