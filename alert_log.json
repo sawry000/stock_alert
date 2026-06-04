@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T19:48:50Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_DROP",
-    "type": "percent_change",
-    "price": 46.595001220703125,
-    "change_pct": -9.874272300380808,
-    "value": -9.874272300380808
-  },
-  {
     "timestamp": "2026-06-03T19:48:57Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 119.90899658203125,
     "change_pct": 17.557839786305145,
     "value": 17.557839786305145
+  },
+  {
+    "timestamp": "2026-06-04T16:13:16Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.482399940490723,
+    "change_pct": 15.010005144217233,
+    "value": 15.010005144217233
   }
 ]
