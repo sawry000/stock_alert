@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T00:43:02Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.4700000286102295,
-    "change_pct": -6.089309103918008,
-    "value": -6.089309103918008
-  },
-  {
     "timestamp": "2026-06-04T00:43:06Z",
     "symbol": "DDD",
     "alert_id": "DDD_PCT_DROP",
@@ -4497,6 +4488,15 @@
     "type": "news_sentiment",
     "price": 104.58999633789062,
     "change_pct": 8.495846823537986,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T22:47:35Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 71.05999755859375,
+    "change_pct": 0.08450360365316902,
     "value": 1
   }
 ]
