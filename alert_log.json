@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T00:12:34Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.649999618530273,
-    "change_pct": 1.1338683925759823,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-04T00:12:37Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_POS_SIZE",
-    "type": "position_size",
-    "price": 22.15999984741211,
-    "change_pct": -3.9028627605719404,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-04T00:12:40Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_POS_SIZE",
-    "type": "position_size",
-    "price": 72.44999694824219,
-    "change_pct": -1.4159675547047013,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-04T00:12:43Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_POS_SIZE",
-    "type": "position_size",
-    "price": 184.07000732421875,
-    "change_pct": -8.472971346915251,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-04T00:12:47Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_POS_SIZE",
-    "type": "position_size",
-    "price": 10.029999732971191,
-    "change_pct": -9.802971799073832,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-04T00:12:50Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_POS_SIZE",
@@ -4498,5 +4453,50 @@
     "price": 6.519999980926514,
     "change_pct": -6.8571431296212335,
     "value": -6.8571431296212335
+  },
+  {
+    "timestamp": "2026-06-04T22:07:26Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 358.04998779296875,
+    "change_pct": 1.9998255969486307,
+    "value": 4
+  },
+  {
+    "timestamp": "2026-06-04T22:07:34Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.469999313354492,
+    "change_pct": 1.929496524506467,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T22:08:09Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_3X",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.7858729363863937
+  },
+  {
+    "timestamp": "2026-06-04T22:08:12Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.7858729363863937
+  },
+  {
+    "timestamp": "2026-06-04T22:08:46Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_PCT_UP_5",
+    "type": "percent_change",
+    "price": 14.319999694824219,
+    "change_pct": 7.5882771962751185,
+    "value": 7.5882771962751185
   }
 ]
