@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T13:48:13Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_DROP",
-    "type": "percent_change",
-    "price": 106.12000274658203,
-    "change_pct": -6.724090053105357,
-    "value": -6.724090053105357
-  },
-  {
-    "timestamp": "2026-06-03T13:48:33Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "price": 28.669099807739258,
-    "change_pct": -5.124183642792233,
-    "value": -5.124183642792233
-  },
-  {
     "timestamp": "2026-06-03T13:48:35Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 19.610000610351562,
     "change_pct": -11.865165796172752,
     "value": -11.865165796172752
+  },
+  {
+    "timestamp": "2026-06-04T06:37:40Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 10.029999732971191,
+    "change_pct": -9.802971799073832,
+    "value": -9.802971799073832
+  },
+  {
+    "timestamp": "2026-06-04T06:38:59Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_PCT_DROP",
+    "type": "percent_change",
+    "price": 21.739999771118164,
+    "change_pct": -5.065503182890108,
+    "value": -5.065503182890108
   }
 ]
