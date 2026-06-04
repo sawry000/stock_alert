@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T23:13:59Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 98.36000061035156,
-    "change_pct": 3.5368427477384867,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-03T23:14:03Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.300000190734863,
-    "change_pct": 6.941553553071661,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-03T23:14:20Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 20.829999923706055,
-    "change_pct": -0.3349285947078655,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-03T23:14:27Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 21.739999771118164,
-    "change_pct": -5.065503182890108,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-03T23:14:28Z",
     "symbol": "AMPX",
     "alert_id": "AMPX_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 22.260000228881836,
     "change_pct": 2.110092793035941,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T20:32:40Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 202.88999938964844,
+    "change_pct": 15.154094664650911,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-04T20:33:06Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_3X",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.7858729363863937
+  },
+  {
+    "timestamp": "2026-06-04T20:33:09Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.7858729363863937
+  },
+  {
+    "timestamp": "2026-06-04T20:33:19Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.869999885559082,
+    "change_pct": 10.180992885952083,
+    "value": 3
   }
 ]
