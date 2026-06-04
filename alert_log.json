@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T23:24:12Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.010000228881836,
-    "change_pct": -10.814246451885042,
-    "value": -10.814246451885042
-  },
-  {
-    "timestamp": "2026-06-03T23:37:21Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 417.42999267578125,
-    "change_pct": -2.2229006193710217,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-03T23:37:29Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_NEWS_C",
-    "type": "news_sentiment",
-    "price": 27.649999618530273,
-    "change_pct": 1.1338683925759823,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-03T23:38:02Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.4700000286102295,
-    "change_pct": -6.089309103918008,
-    "value": -6.089309103918008
-  },
-  {
-    "timestamp": "2026-06-03T23:38:10Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.949999809265137,
-    "change_pct": -6.250003612402718,
-    "value": -6.250003612402718
-  },
-  {
     "timestamp": "2026-06-03T23:38:33Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_DROP",
@@ -4498,5 +4453,50 @@
     "price": 3.069999933242798,
     "change_pct": -0.3246774921169552,
     "value": 3.7858729363863937
+  },
+  {
+    "timestamp": "2026-06-04T20:57:36Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.469999313354492,
+    "change_pct": 1.929496524506467,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T20:57:45Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 202.88999938964844,
+    "change_pct": 15.154094664650911,
+    "value": 15.154094664650911
+  },
+  {
+    "timestamp": "2026-06-04T20:57:50Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 8.59000015258789,
+    "change_pct": -14.356927691047943,
+    "value": -14.356927691047943
+  },
+  {
+    "timestamp": "2026-06-04T20:58:26Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 28.010000228881836,
+    "change_pct": 4.707149800685715,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-04T20:59:30Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.519999980926514,
+    "change_pct": -6.8571431296212335,
+    "value": -6.8571431296212335
   }
 ]
