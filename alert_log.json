@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T21:28:13Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.949999809265137,
-    "change_pct": -6.250003612402718,
-    "value": -6.250003612402718
-  },
-  {
-    "timestamp": "2026-06-03T21:28:37Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_DROP",
-    "type": "percent_change",
-    "price": 28.030000686645508,
-    "change_pct": -6.96979526503316,
-    "value": -6.96979526503316
-  },
-  {
-    "timestamp": "2026-06-03T21:29:18Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 5.329999923706055,
-    "change_pct": 4.9212583406703665,
-    "value": 3.069353158378001
-  },
-  {
-    "timestamp": "2026-06-03T21:38:10Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.609999895095825,
-    "change_pct": -6.718348963932168,
-    "value": -6.718348963932168
-  },
-  {
     "timestamp": "2026-06-03T21:38:24Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 3.0850000381469727,
     "change_pct": 0.16233890087573327,
     "value": 2.904207597059483
+  },
+  {
+    "timestamp": "2026-06-04T18:52:41Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 8.99530029296875,
+    "change_pct": -10.316048923541869,
+    "value": -10.316048923541869
+  },
+  {
+    "timestamp": "2026-06-04T18:53:08Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_3X",
+    "type": "volume_spike",
+    "price": 3.0999999046325684,
+    "change_pct": 0.6493475530054639,
+    "value": 3.019798786559816
+  },
+  {
+    "timestamp": "2026-06-04T18:53:11Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 3.0999999046325684,
+    "change_pct": 0.6493475530054639,
+    "value": 3.019798786559816
+  },
+  {
+    "timestamp": "2026-06-04T18:54:18Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.480000019073486,
+    "change_pct": -7.428571156093053,
+    "value": -7.428571156093053
   }
 ]
