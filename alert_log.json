@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T23:08:05Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 108.2699966430664,
-    "change_pct": -4.834317796373024,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-03T23:12:22Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_RSI_OB",
@@ -4498,5 +4489,14 @@
     "price": 6.514999866485596,
     "change_pct": -6.928573335920062,
     "value": -6.928573335920062
+  },
+  {
+    "timestamp": "2026-06-04T20:03:48Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 6.239999771118164,
+    "change_pct": 7.772016772334439,
+    "value": 1
   }
 ]
