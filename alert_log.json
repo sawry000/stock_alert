@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T23:23:34Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.15999984741211,
-    "change_pct": -9.298849923140583,
-    "value": -9.298849923140583
-  },
-  {
     "timestamp": "2026-06-03T23:24:12Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 27.469999313354492,
     "change_pct": 1.929496524506467,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-04T20:53:02Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.7858729363863937
   }
 ]
