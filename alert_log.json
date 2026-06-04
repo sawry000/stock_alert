@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T23:12:22Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_RSI_OB",
-    "type": "rsi",
-    "price": 363.5400085449219,
-    "change_pct": 1.831935166644783,
-    "value": 76.56
-  },
-  {
-    "timestamp": "2026-06-03T23:12:25Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 363.5400085449219,
-    "change_pct": 1.831935166644783,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-03T23:12:32Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 6.239999771118164,
     "change_pct": 7.772016772334439,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T20:07:19Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 421.82000732421875,
+    "change_pct": 5.714001133832582,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-04T20:08:37Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_PCT_UP_5",
+    "type": "percent_change",
+    "price": 14.319999694824219,
+    "change_pct": 7.5882771962751185,
+    "value": 7.5882771962751185
   }
 ]
