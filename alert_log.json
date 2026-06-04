@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T00:09:03Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_POS_SIZE",
-    "type": "position_size",
-    "price": 176.02999877929688,
-    "change_pct": -2.4440263914337854,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-04T00:09:06Z",
-    "symbol": "PSIX",
-    "alert_id": "PSIX_POS_SIZE",
-    "type": "position_size",
-    "price": 40.41999816894531,
-    "change_pct": 0.7980004213100026,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-04T00:09:08Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_POS_SIZE",
-    "type": "position_size",
-    "price": 330.4800109863281,
-    "change_pct": 3.113887983253705,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-04T00:09:11Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_POS_SIZE",
@@ -4498,5 +4471,32 @@
     "price": 19.90999984741211,
     "change_pct": 0.5555547849096396,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T21:43:12Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_UP_5",
+    "type": "percent_change",
+    "price": 21.43000030517578,
+    "change_pct": 19.055557250976562,
+    "value": 19.055557250976562
+  },
+  {
+    "timestamp": "2026-06-04T21:44:27Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 95.2300033569336,
+    "change_pct": 18.7850858886536,
+    "value": 18.7850858886536
+  },
+  {
+    "timestamp": "2026-06-04T21:44:30Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 95.2300033569336,
+    "change_pct": 18.7850858886536,
+    "value": 3
   }
 ]
