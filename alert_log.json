@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T21:18:31Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.0799999237060547,
-    "change_pct": -5.521474456557392,
-    "value": -5.521474456557392
-  },
-  {
     "timestamp": "2026-06-03T21:18:36Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 117.41999816894531,
     "change_pct": 6.98860880997295,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-04T18:22:36Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 22.56999969482422,
+    "change_pct": 3.5321086918542113,
+    "value": 1
   }
 ]
