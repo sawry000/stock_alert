@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T17:38:48Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_DROP",
-    "type": "percent_change",
-    "price": 46.984901428222656,
-    "change_pct": -9.120113291638967,
-    "value": -9.120113291638967
-  },
-  {
-    "timestamp": "2026-06-03T17:38:55Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.880000114440918,
-    "change_pct": -12.415347303816745,
-    "value": -12.415347303816745
-  },
-  {
     "timestamp": "2026-06-03T17:42:37Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_NEWS_C",
@@ -4498,5 +4480,23 @@
     "price": 22.15999984741211,
     "change_pct": 1.651375446844535,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T12:22:36Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 27.649999618530273,
+    "change_pct": 2.5974011819305165,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T12:23:33Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.559999942779541,
+    "change_pct": 3.1674195198991195,
+    "value": 3
   }
 ]
