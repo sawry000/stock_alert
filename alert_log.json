@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T18:44:00Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.825000047683716,
-    "change_pct": -13.656883799464648,
-    "value": -13.656883799464648
-  },
-  {
-    "timestamp": "2026-06-03T18:47:40Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_NEWS_C",
-    "type": "news_sentiment",
-    "price": 28.079999923706055,
-    "change_pct": 2.7066566338919342,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-03T18:47:52Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "price": 10.386199951171875,
-    "change_pct": -6.599761232615946,
-    "value": -6.599761232615946
-  },
-  {
     "timestamp": "2026-06-03T18:48:10Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 386.0150146484375,
     "change_pct": -3.259231454955261,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-04T14:07:57Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_DROP",
+    "type": "percent_change",
+    "price": 103.86000061035156,
+    "change_pct": -5.366742040681947,
+    "value": -5.366742040681947
+  },
+  {
+    "timestamp": "2026-06-04T14:08:03Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 113.54000091552734,
+    "change_pct": 11.313726387771904,
+    "value": 11.313726387771904
+  },
+  {
+    "timestamp": "2026-06-04T14:08:31Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_DROP",
+    "type": "percent_change",
+    "price": 26.270099639892578,
+    "change_pct": -5.503238705422383,
+    "value": -5.503238705422383
   }
 ]
