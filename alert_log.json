@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T19:58:51Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 46.64500045776367,
-    "change_pct": -9.777561977246288,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-03T19:59:01Z",
     "symbol": "AMPX",
     "alert_id": "AMPX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 8.85990047454834,
     "change_pct": -11.66599726272841,
     "value": -11.66599726272841
+  },
+  {
+    "timestamp": "2026-06-04T16:47:31Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 359.70001220703125,
+    "change_pct": 2.469877847201458,
+    "value": 2
   }
 ]
