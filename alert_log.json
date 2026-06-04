@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T20:23:07Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.949999809265137,
-    "change_pct": -6.250003612402718,
-    "value": -6.250003612402718
-  },
-  {
     "timestamp": "2026-06-03T20:28:32Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 13.420000076293945,
     "change_pct": 5.66929193932241,
     "value": 5.66929193932241
+  },
+  {
+    "timestamp": "2026-06-04T17:19:14Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_RSI_OS_4H",
+    "type": "rsi",
+    "price": 6.559999942779541,
+    "change_pct": -6.285715103149414,
+    "value": 31.95
   }
 ]
