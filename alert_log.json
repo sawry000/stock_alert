@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T19:23:34Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_DROP",
-    "type": "percent_change",
-    "price": 28.30660057067871,
-    "change_pct": -6.051773744843306,
-    "value": -6.051773744843306
-  },
-  {
     "timestamp": "2026-06-03T19:24:11Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 96.13999938964844,
     "change_pct": 19.92016887819438,
     "value": 19.92016887819438
+  },
+  {
+    "timestamp": "2026-06-04T15:37:53Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 9.0,
+    "change_pct": -10.269192422731798,
+    "value": -10.269192422731798
   }
 ]
