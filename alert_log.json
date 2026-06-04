@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T21:48:32Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.7899999618530273,
-    "change_pct": -7.716283282937813,
-    "value": -7.716283282937813
-  },
-  {
-    "timestamp": "2026-06-03T21:48:46Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "price": 28.56999969482422,
-    "change_pct": -5.452139671302333,
-    "value": -5.452139671302333
-  },
-  {
     "timestamp": "2026-06-03T21:49:15Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 205.09500122070312,
     "change_pct": 16.405585572792514,
     "value": 16.405585572792514
+  },
+  {
+    "timestamp": "2026-06-04T19:03:08Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 5.389999866485596,
+    "change_pct": 6.944441795349119,
+    "value": 6.944441795349119
+  },
+  {
+    "timestamp": "2026-06-04T19:03:56Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 22.649999618530273,
+    "change_pct": 7.754517690438982,
+    "value": 7.754517690438982
   }
 ]
