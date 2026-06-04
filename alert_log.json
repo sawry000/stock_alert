@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T19:09:08Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.25,
-    "change_pct": -8.407679892267627,
-    "value": -8.407679892267627
-  },
-  {
     "timestamp": "2026-06-03T19:09:20Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 26.390100479125977,
     "change_pct": -5.071581010338217,
     "value": -5.071581010338217
+  },
+  {
+    "timestamp": "2026-06-04T15:22:31Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 355.8450012207031,
+    "change_pct": 1.371677982139177,
+    "value": 73.42
   }
 ]
