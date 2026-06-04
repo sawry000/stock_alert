@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T22:52:35Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_DROP",
-    "type": "percent_change",
-    "price": 184.07000732421875,
-    "change_pct": -8.472971346915251,
-    "value": -8.472971346915251
-  },
-  {
-    "timestamp": "2026-06-03T22:53:18Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.7899999618530273,
-    "change_pct": -7.716283282937813,
-    "value": -7.716283282937813
-  },
-  {
     "timestamp": "2026-06-03T22:53:29Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 3.119999885559082,
     "change_pct": 1.2986975830870766,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-04T19:52:44Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 8.40999984741211,
+    "change_pct": -16.15154688522323,
+    "value": -16.15154688522323
+  },
+  {
+    "timestamp": "2026-06-04T19:52:58Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 21.69499969482422,
+    "change_pct": 20.527776082356773,
+    "value": 2
   }
 ]
