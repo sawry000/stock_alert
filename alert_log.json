@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T11:47:26Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 426.8900146484375,
-    "change_pct": -0.0070236464823657625,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-03T11:47:35Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.31999969482422,
-    "change_pct": -0.07315400576364707,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-03T11:47:49Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 85.0,
-    "change_pct": 1.6972675738860534,
-    "value": 3.2642320062275867
-  },
-  {
-    "timestamp": "2026-06-03T11:48:55Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.320000171661377,
-    "change_pct": -6.8702268236466075,
-    "value": -6.8702268236466075
-  },
-  {
     "timestamp": "2026-06-03T11:52:49Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_VOL_ALARM",
@@ -4498,5 +4462,41 @@
     "price": 21.739999771118164,
     "change_pct": -5.065503182890108,
     "value": -5.065503182890108
+  },
+  {
+    "timestamp": "2026-06-04T04:42:50Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_PCT_DROP",
+    "type": "percent_change",
+    "price": 24.850000381469727,
+    "change_pct": -8.758117658077099,
+    "value": -8.758117658077099
+  },
+  {
+    "timestamp": "2026-06-04T04:43:24Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.0799999237060547,
+    "change_pct": -5.23077157827524,
+    "value": -5.23077157827524
+  },
+  {
+    "timestamp": "2026-06-04T04:43:30Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_DROP",
+    "type": "percent_change",
+    "price": 9.15999984741211,
+    "change_pct": -9.298849923140583,
+    "value": -9.298849923140583
+  },
+  {
+    "timestamp": "2026-06-04T04:44:09Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 7.010000228881836,
+    "change_pct": -10.814246451885042,
+    "value": -10.814246451885042
   }
 ]
