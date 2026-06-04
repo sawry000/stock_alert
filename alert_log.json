@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T20:43:27Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 12.630000114440918,
-    "change_pct": -6.444443596733941,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-03T20:43:34Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "price": 28.56999969482422,
-    "change_pct": -5.452139671302333,
-    "value": -5.452139671302333
-  },
-  {
-    "timestamp": "2026-06-03T20:49:04Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_DROP",
-    "type": "percent_change",
-    "price": 46.66999816894531,
-    "change_pct": -9.729210504941374,
-    "value": -9.729210504941374
-  },
-  {
     "timestamp": "2026-06-03T20:49:12Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 4.425000190734863,
     "change_pct": 13.537234842070689,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-04T17:52:25Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 360.739990234375,
+    "change_pct": 2.766142561711258,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-04T17:52:56Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 21.94499969482422,
+    "change_pct": 21.91666497124566,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T17:54:12Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.5,
+    "change_pct": -7.142857142857142,
+    "value": -7.142857142857142
   }
 ]
