@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T00:27:52Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_PCT_DROP",
-    "type": "percent_change",
-    "price": 24.850000381469727,
-    "change_pct": -8.758117658077099,
-    "value": -8.758117658077099
-  },
-  {
-    "timestamp": "2026-06-04T00:28:30Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.0799999237060547,
-    "change_pct": -5.521474456557392,
-    "value": -5.521474456557392
-  },
-  {
     "timestamp": "2026-06-04T00:28:36Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 22.260000228881836,
     "change_pct": 2.110092793035941,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-04T22:32:53Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.9200000762939453,
+    "change_pct": 3.9478863797638173,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-04T22:34:30Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_RSI_OS_1D",
+    "type": "rsi",
+    "price": 6.519999980926514,
+    "change_pct": -6.8571431296212335,
+    "value": 29.13
   }
 ]
