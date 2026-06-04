@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-03T19:48:07Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 3.5850000381469727,
-    "change_pct": -7.364340099561432,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-03T19:48:50Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 14.545000076293945,
     "change_pct": 9.278738364342184,
     "value": 9.278738364342184
+  },
+  {
+    "timestamp": "2026-06-04T16:08:05Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 119.90899658203125,
+    "change_pct": 17.557839786305145,
+    "value": 17.557839786305145
   }
 ]
