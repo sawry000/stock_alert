@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T09:28:17Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 5.380000114440918,
-    "change_pct": 6.746034016684879,
-    "value": 6.746034016684879
-  },
-  {
-    "timestamp": "2026-06-05T09:32:38Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 202.89,
-    "change_pct": 3.620988957615446,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-05T09:33:01Z",
     "symbol": "DDD",
     "alert_id": "DDD_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 12.289999961853027,
     "change_pct": -7.593985249225363,
     "value": -7.593985249225363
+  },
+  {
+    "timestamp": "2026-06-05T22:39:07Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_PCT_DROP",
+    "type": "percent_change",
+    "price": 18.06999969482422,
+    "change_pct": -10.054755127803789,
+    "value": -10.054755127803789
+  },
+  {
+    "timestamp": "2026-06-05T22:39:25Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 5.179999828338623,
+    "change_pct": -13.522540428403627,
+    "value": 2.7394456068465165
   }
 ]
