@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T06:54:10Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_POS_SIZE",
-    "type": "position_size",
-    "price": 7.010000228881836,
-    "change_pct": -10.814246451885042,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-04T06:54:11Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.010000228881836,
-    "change_pct": -10.814246451885042,
-    "value": -10.814246451885042
-  },
-  {
     "timestamp": "2026-06-04T06:54:13Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_POS_SIZE",
@@ -4497,6 +4479,24 @@
     "type": "mtf_alignment",
     "price": 28.01,
     "change_pct": 4.707148945078277,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T05:12:35Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 202.89,
+    "change_pct": 15.154095011067593,
+    "value": 15.154095011067593
+  },
+  {
+    "timestamp": "2026-06-05T05:13:15Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.14,
+    "change_pct": 3.4645669291338685,
     "value": 2
   }
 ]
