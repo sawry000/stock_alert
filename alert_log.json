@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T15:29:15Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 108.6050033569336,
-    "change_pct": 12.660791864038993,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-04T15:29:19Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 14.989999771118164,
-    "change_pct": 12.622086935523392,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-04T15:29:40Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 20.405000686645508,
-    "change_pct": 3.055559023462157,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-04T15:29:49Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 22.530000686645508,
-    "change_pct": 7.1836379003116475,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-04T15:33:00Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_UP_5",
@@ -4498,5 +4462,41 @@
     "price": 3.069999933242798,
     "change_pct": 0.32679520401299994,
     "value": 3.5844349367451334
+  },
+  {
+    "timestamp": "2026-06-05T10:42:24Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 421.8999938964844,
+    "change_pct": 2.1549622025385897,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T10:43:09Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_3X",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": 0.32679520401299994,
+    "value": 3.5844349367451334
+  },
+  {
+    "timestamp": "2026-06-05T10:43:12Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": 0.32679520401299994,
+    "value": 3.5844349367451334
+  },
+  {
+    "timestamp": "2026-06-05T10:44:25Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 5.88,
+    "change_pct": -1.8363939899833106,
+    "value": 3.892460821480326
   }
 ]
