@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T07:53:45Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_DROP",
-    "type": "percent_change",
-    "price": 28.030000686645508,
-    "change_pct": -6.96979526503316,
-    "value": -6.96979526503316
-  },
-  {
     "timestamp": "2026-06-04T07:54:27Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 3.07,
     "change_pct": -0.32467532467533217,
     "value": 3.597122810630897
+  },
+  {
+    "timestamp": "2026-06-05T06:27:59Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 116.58,
+    "change_pct": 6.223234624145784,
+    "value": 2
   }
 ]
