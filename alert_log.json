@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T13:38:48Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_CP_BULL",
-    "type": "candle_pattern",
-    "price": 7.249899864196777,
-    "change_pct": -0.6863032301811299,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-04T13:43:01Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 19.940000534057617,
-    "change_pct": 10.77778074476454,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-04T13:43:04Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 19.940000534057617,
-    "change_pct": 10.77778074476454,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-04T13:43:29Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.9549999237060547,
-    "change_pct": 1.4779063915957944,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-04T13:48:12Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_CP_BULL",
@@ -4498,5 +4462,41 @@
     "price": 95.23,
     "change_pct": 18.78508170138456,
     "value": 18.78508170138456
+  },
+  {
+    "timestamp": "2026-06-05T08:12:25Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 421.8999938964844,
+    "change_pct": 2.1549622025385897,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T08:13:02Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 21.43,
+    "change_pct": 0.28076743097800055,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T08:13:28Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.9,
+    "change_pct": -6.755496695901288,
+    "value": -6.755496695901288
+  },
+  {
+    "timestamp": "2026-06-05T08:13:47Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_PCT_UP_5",
+    "type": "percent_change",
+    "price": 104.59,
+    "change_pct": 8.495850622406637,
+    "value": 8.495850622406637
   }
 ]
