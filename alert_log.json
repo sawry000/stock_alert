@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T14:08:31Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_DROP",
-    "type": "percent_change",
-    "price": 26.270099639892578,
-    "change_pct": -5.503238705422383,
-    "value": -5.503238705422383
-  },
-  {
-    "timestamp": "2026-06-04T14:12:27Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 385.9800109863281,
-    "change_pct": -3.2680038628820256,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-04T14:12:46Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_CP_BULL",
@@ -4498,5 +4480,23 @@
     "price": 28.01,
     "change_pct": 0.3942652329749211,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T09:18:26Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.14,
+    "change_pct": -0.5299015897047712,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T09:18:29Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.9,
+    "change_pct": -6.755496695901288,
+    "value": -6.755496695901288
   }
 ]
