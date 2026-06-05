@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T04:58:05Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.949999809265137,
-    "change_pct": -6.250003612402718,
-    "value": -6.250003612402718
-  },
-  {
-    "timestamp": "2026-06-04T05:12:37Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_DROP",
-    "type": "percent_change",
-    "price": 184.07000732421875,
-    "change_pct": -8.472971346915251,
-    "value": -8.472971346915251
-  },
-  {
-    "timestamp": "2026-06-04T05:12:49Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.869999885559082,
-    "change_pct": -4.65116659272152,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-04T05:13:13Z",
     "symbol": "INOD",
     "alert_id": "INOD_NEWS_POS",
@@ -4498,5 +4471,32 @@
     "price": 5.880000114440918,
     "change_pct": 11.666067463792434,
     "value": 4.131219705976898
+  },
+  {
+    "timestamp": "2026-06-05T02:32:57Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_3X",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.7858729363863937
+  },
+  {
+    "timestamp": "2026-06-05T02:33:00Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.7858729363863937
+  },
+  {
+    "timestamp": "2026-06-05T02:33:07Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.380000114440918,
+    "change_pct": 12.382616986732636,
+    "value": 12.382616986732636
   }
 ]
