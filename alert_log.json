@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T00:17:31Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_POS_SIZE",
-    "type": "position_size",
-    "price": 68.38999938964844,
-    "change_pct": 0.6623482332181921,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-05T00:17:36Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 59.560001373291016,
     "change_pct": -6.937497854232788,
     "value": -6.937497854232788
+  },
+  {
+    "timestamp": "2026-06-05T17:17:57Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_PCT_DROP",
+    "type": "percent_change",
+    "price": 80.55000305175781,
+    "change_pct": -5.01178885405918,
+    "value": -5.01178885405918
   }
 ]
