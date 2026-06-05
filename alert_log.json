@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T16:29:30Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_RSI_OS_1D",
-    "type": "rsi",
-    "price": 6.650000095367432,
-    "change_pct": -4.99999863760812,
-    "value": 29.74
-  },
-  {
-    "timestamp": "2026-06-04T16:32:37Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 27.170000076293945,
-    "change_pct": 0.8163268137066643,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-04T16:42:37Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.325000762939453,
-    "change_pct": 1.3914685081241331,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-04T16:42:47Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "price": 8.85990047454834,
-    "change_pct": -11.66599726272841,
-    "value": -11.66599726272841
-  },
-  {
-    "timestamp": "2026-06-04T16:47:31Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 359.70001220703125,
-    "change_pct": 2.469877847201458,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-04T16:52:41Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_PCT_UP_5",
@@ -4498,5 +4453,50 @@
     "price": 5.88,
     "change_pct": -1.8363939899833106,
     "value": 3.892460821480326
+  },
+  {
+    "timestamp": "2026-06-05T11:53:00Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 121.5,
+    "change_pct": 1.4613778705636742,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T11:53:09Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 5.380000114440918,
+    "change_pct": 0.18622187040815386,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T11:53:38Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 104.59,
+    "change_pct": -0.3904761904761872,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T11:53:43Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 14.32,
+    "change_pct": -1.4452856159669587,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T11:54:04Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 22.54,
+    "change_pct": 0.40089086859688133,
+    "value": 2
   }
 ]
