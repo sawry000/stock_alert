@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T09:33:01Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 3.069999933242798,
-    "change_pct": 0.32679520401299994,
-    "value": 3.5844349367451334
-  },
-  {
     "timestamp": "2026-06-05T09:34:01Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 5.179999828338623,
     "change_pct": -13.522540428403627,
     "value": 2.7394456068465165
+  },
+  {
+    "timestamp": "2026-06-05T22:47:40Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 177.0,
+    "change_pct": -9.601680489437946,
+    "value": 1
   }
 ]
