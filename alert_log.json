@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T04:53:27Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_DROP",
-    "type": "percent_change",
-    "price": 28.030000686645508,
-    "change_pct": -6.96979526503316,
-    "value": -6.96979526503316
-  },
-  {
-    "timestamp": "2026-06-04T04:54:06Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 5.329999923706055,
-    "change_pct": 4.9212583406703665,
-    "value": 2.930353232721885
-  },
-  {
-    "timestamp": "2026-06-04T04:57:57Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.4700000286102295,
-    "change_pct": -6.089309103918008,
-    "value": -6.089309103918008
-  },
-  {
-    "timestamp": "2026-06-04T04:58:01Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.609999895095825,
-    "change_pct": -6.718348963932168,
-    "value": -6.718348963932168
-  },
-  {
     "timestamp": "2026-06-04T04:58:05Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 121.5,
     "change_pct": 19.11764705882353,
     "value": 19.11764705882353
+  },
+  {
+    "timestamp": "2026-06-05T02:27:23Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 358.04998779296875,
+    "change_pct": 1.9998255969486307,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T02:27:55Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 116.58000183105469,
+    "change_pct": 6.223236292532745,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T02:28:26Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_DROP",
+    "type": "percent_change",
+    "price": 8.649999618530273,
+    "change_pct": -5.773424634746474,
+    "value": -5.773424634746474
+  },
+  {
+    "timestamp": "2026-06-05T02:29:11Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 5.880000114440918,
+    "change_pct": 11.666067463792434,
+    "value": 4.131219705976898
   }
 ]
