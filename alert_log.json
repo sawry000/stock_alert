@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T20:59:30Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.519999980926514,
-    "change_pct": -6.8571431296212335,
-    "value": -6.8571431296212335
-  },
-  {
     "timestamp": "2026-06-04T21:02:31Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_NEWS_ANY",
@@ -4498,5 +4489,14 @@
     "price": 3.059999942779541,
     "change_pct": -6.990883198190244,
     "value": -6.990883198190244
+  },
+  {
+    "timestamp": "2026-06-05T15:14:01Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_PCT_DROP",
+    "type": "percent_change",
+    "price": 60.689998626708984,
+    "change_pct": -5.171877145767212,
+    "value": -5.171877145767212
   }
 ]
