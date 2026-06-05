@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T00:17:36Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_POS_SIZE",
-    "type": "position_size",
-    "price": 22.260000228881836,
-    "change_pct": 2.110092793035941,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-05T00:17:39Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 80.55000305175781,
     "change_pct": -5.01178885405918,
     "value": -5.01178885405918
+  },
+  {
+    "timestamp": "2026-06-05T17:24:06Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_PCT_DROP",
+    "type": "percent_change",
+    "price": 18.540000915527344,
+    "change_pct": -7.7152766773153605,
+    "value": -7.7152766773153605
   }
 ]
