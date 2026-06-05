@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T05:54:07Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 5.329999923706055,
-    "change_pct": 4.9212583406703665,
-    "value": 2.930353232721885
-  },
-  {
-    "timestamp": "2026-06-04T05:57:58Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.4700000286102295,
-    "change_pct": -6.089309103918008,
-    "value": -6.089309103918008
-  },
-  {
-    "timestamp": "2026-06-04T05:58:02Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.609999895095825,
-    "change_pct": -6.718348963932168,
-    "value": -6.718348963932168
-  },
-  {
-    "timestamp": "2026-06-04T05:58:06Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.949999809265137,
-    "change_pct": -6.250003612402718,
-    "value": -6.250003612402718
-  },
-  {
     "timestamp": "2026-06-04T05:58:14Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 421.8999938964844,
     "change_pct": 5.7340468889991465,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T03:27:35Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 202.88999938964844,
+    "change_pct": 15.154094664650911,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-05T03:27:56Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 116.58000183105469,
+    "change_pct": 6.223236292532745,
+    "value": 6.223236292532745
+  },
+  {
+    "timestamp": "2026-06-05T03:28:27Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_DROP",
+    "type": "percent_change",
+    "price": 8.649999618530273,
+    "change_pct": -5.773424634746474,
+    "value": -5.773424634746474
+  },
+  {
+    "timestamp": "2026-06-05T03:29:12Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 5.880000114440918,
+    "change_pct": 11.666067463792434,
+    "value": 4.131219705976898
   }
 ]
