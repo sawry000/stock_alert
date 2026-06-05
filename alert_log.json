@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T01:38:40Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 46.400001525878906,
-    "change_pct": 0.43290373566862206,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-05T01:39:00Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_RSI_OS_4H",
-    "type": "rsi",
-    "price": 6.519999980926514,
-    "change_pct": -6.8571431296212335,
-    "value": 31.84
-  },
-  {
     "timestamp": "2026-06-05T01:43:50Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_NEWS_POS",
@@ -4498,5 +4480,23 @@
     "price": 5.380099773406982,
     "change_pct": -10.181973732771581,
     "value": -10.181973732771581
+  },
+  {
+    "timestamp": "2026-06-05T18:07:20Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "price": 325.55999755859375,
+    "change_pct": -6.9828578404017865,
+    "value": -6.9828578404017865
+  },
+  {
+    "timestamp": "2026-06-05T18:09:04Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.494999885559082,
+    "change_pct": -9.455961514013415,
+    "value": -9.455961514013415
   }
 ]
