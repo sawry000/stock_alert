@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T08:03:01Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.609999895095825,
-    "change_pct": 17.207788801812505,
-    "value": 17.207788801812505
-  },
-  {
-    "timestamp": "2026-06-04T08:03:47Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 20.829999923706055,
-    "change_pct": 5.202019816697242,
-    "value": 5.202019816697242
-  },
-  {
-    "timestamp": "2026-06-04T08:08:04Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.4700000286102295,
-    "change_pct": -6.089309103918008,
-    "value": -6.089309103918008
-  },
-  {
     "timestamp": "2026-06-04T08:08:12Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 5.88,
     "change_pct": 11.666065290464706,
     "value": 3.892460821480326
+  },
+  {
+    "timestamp": "2026-06-05T06:42:34Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 22.26,
+    "change_pct": 2.11009174311927,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-05T06:42:52Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.92,
+    "change_pct": 3.9478836638069135,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T06:43:21Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.380000114440918,
+    "change_pct": 12.382616986732636,
+    "value": 12.382616986732636
   }
 ]
