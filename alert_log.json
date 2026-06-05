@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T06:53:55Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_POS_SIZE",
-    "type": "position_size",
-    "price": 14.32,
-    "change_pct": 7.588279489105934,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-05T06:53:58Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_POS_SIZE",
-    "type": "position_size",
-    "price": 95.23,
-    "change_pct": 18.78508170138456,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-05T06:54:18Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_POS_SIZE",
-    "type": "position_size",
-    "price": 7.449999809265137,
-    "change_pct": 2.0547919077416013,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-05T06:54:21Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_POS_SIZE",
-    "type": "position_size",
-    "price": 64.59,
-    "change_pct": 12.820960698689962,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-05T06:54:23Z",
     "symbol": "BOBS",
     "alert_id": "BOBS_POS_SIZE",
@@ -4498,5 +4462,41 @@
     "price": 2.450000047683716,
     "change_pct": -13.732392687193101,
     "value": -13.732392687193101
+  },
+  {
+    "timestamp": "2026-06-05T21:12:24Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "price": 317.05999755859375,
+    "change_pct": -9.411429268973215,
+    "value": -9.411429268973215
+  },
+  {
+    "timestamp": "2026-06-05T21:14:15Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.4100000858306885,
+    "change_pct": -11.658028864489934,
+    "value": -11.658028864489934
+  },
+  {
+    "timestamp": "2026-06-05T21:14:30Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.809999942779541,
+    "change_pct": -9.28571564810617,
+    "value": -9.28571564810617
+  },
+  {
+    "timestamp": "2026-06-05T21:14:34Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.179999828338623,
+    "change_pct": -13.522540428403627,
+    "value": -13.522540428403627
   }
 ]
