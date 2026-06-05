@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T17:48:01Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 21.791799545288086,
-    "change_pct": 21.065553029378258,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-04T17:48:24Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 6.9,
     "change_pct": -6.755496695901288,
     "value": -6.755496695901288
+  },
+  {
+    "timestamp": "2026-06-05T13:27:23Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 358.05,
+    "change_pct": 2.300000000000003,
+    "value": 2
   }
 ]
