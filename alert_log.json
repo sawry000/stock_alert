@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T00:13:36Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_POS_SIZE",
-    "type": "position_size",
-    "price": 183.92999267578125,
-    "change_pct": 5.102852957589286,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-05T00:13:39Z",
-    "symbol": "PSIX",
-    "alert_id": "PSIX_POS_SIZE",
-    "type": "position_size",
-    "price": 40.18000030517578,
-    "change_pct": 1.0878651923028881,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-05T00:13:41Z",
     "symbol": "VICR",
     "alert_id": "VICR_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 5.539999961853027,
     "change_pct": -7.51252150495781,
     "value": -7.51252150495781
+  },
+  {
+    "timestamp": "2026-06-05T17:02:25Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "price": 324.2550048828125,
+    "change_pct": -7.355712890625001,
+    "value": -7.355712890625001
+  },
+  {
+    "timestamp": "2026-06-05T17:04:24Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.4549999237060547,
+    "change_pct": -10.492229955801688,
+    "value": -10.492229955801688
   }
 ]
