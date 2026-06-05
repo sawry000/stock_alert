@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T06:53:49Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_POS_SIZE",
-    "type": "position_size",
-    "price": 3.22,
-    "change_pct": -2.424242424242413,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-05T06:53:52Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 15.850000381469727,
     "change_pct": -15.736308445137015,
     "value": -15.736308445137015
+  },
+  {
+    "timestamp": "2026-06-05T20:57:22Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "price": 376.989990234375,
+    "change_pct": -8.719130693855933,
+    "value": -8.719130693855933
   }
 ]
