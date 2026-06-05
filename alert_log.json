@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T05:13:39Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "price": 28.56999969482422,
-    "change_pct": -5.452139671302333,
-    "value": -5.452139671302333
-  },
-  {
     "timestamp": "2026-06-04T05:14:08Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 2.9200000762939453,
     "change_pct": 3.9478863797638173,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T02:57:28Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 71.05999755859375,
+    "change_pct": 0.08450360365316902,
+    "value": 1
   }
 ]
