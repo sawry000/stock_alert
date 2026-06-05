@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T20:33:19Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.869999885559082,
-    "change_pct": 10.180992885952083,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-04T20:43:36Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 5.460000038146973,
     "change_pct": -8.848079496711645,
     "value": -8.848079496711645
+  },
+  {
+    "timestamp": "2026-06-05T14:58:57Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.565000057220459,
+    "change_pct": -7.64248556423681,
+    "value": -7.64248556423681
   }
 ]
