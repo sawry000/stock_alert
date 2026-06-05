@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T02:08:20Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.869999885559082,
-    "change_pct": 10.180992885952083,
-    "value": 10.180992885952083
-  },
-  {
-    "timestamp": "2026-06-05T02:08:42Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 104.58999633789062,
-    "change_pct": 8.495846823537986,
-    "value": 8.495846823537986
-  },
-  {
     "timestamp": "2026-06-05T02:12:40Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 16.0,
     "change_pct": -14.938862307283355,
     "value": 31.93
+  },
+  {
+    "timestamp": "2026-06-05T18:22:59Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_PCT_DROP",
+    "type": "percent_change",
+    "price": 80.2300033569336,
+    "change_pct": -5.389146984748117,
+    "value": -5.389146984748117
+  },
+  {
+    "timestamp": "2026-06-05T18:24:09Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_PCT_DROP",
+    "type": "percent_change",
+    "price": 18.270599365234375,
+    "change_pct": -9.056250048609382,
+    "value": -9.056250048609382
   }
 ]
