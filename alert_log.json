@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T07:03:42Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 12.630000114440918,
-    "change_pct": -6.444443596733941,
-    "value": -6.444443596733941
-  },
-  {
-    "timestamp": "2026-06-04T07:04:19Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_BT_VOL",
-    "type": "backtest_check",
-    "price": 330.4800109863281,
-    "change_pct": 3.113887983253705,
-    "value": 87.5
-  },
-  {
-    "timestamp": "2026-06-04T07:12:28Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 363.5400085449219,
-    "change_pct": 1.831935166644783,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-04T07:17:24Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_RSI_OB",
-    "type": "rsi",
-    "price": 363.5400085449219,
-    "change_pct": 1.831935166644783,
-    "value": 76.56
-  },
-  {
     "timestamp": "2026-06-04T07:17:33Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 121.5,
     "change_pct": 19.11764705882353,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-05T05:27:24Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 421.9,
+    "change_pct": 5.734048418625632,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T05:27:40Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 202.89,
+    "change_pct": 15.154095011067593,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-05T05:27:45Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 8.59,
+    "change_pct": -14.356929212362907,
+    "value": -14.356929212362907
+  },
+  {
+    "timestamp": "2026-06-05T05:28:02Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 116.58,
+    "change_pct": 6.223234624145784,
+    "value": 6.223234624145784
   }
 ]
