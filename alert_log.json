@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T06:19:17Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.52,
-    "change_pct": -6.857142857142863,
-    "value": -6.857142857142863
-  },
-  {
-    "timestamp": "2026-06-05T06:23:04Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 121.5,
-    "change_pct": 19.11764705882353,
-    "value": 19.11764705882353
-  },
-  {
     "timestamp": "2026-06-05T06:23:06Z",
     "symbol": "DDD",
     "alert_id": "DDD_VOL_3X",
@@ -4498,5 +4480,23 @@
     "price": 12.289999961853027,
     "change_pct": -7.593985249225363,
     "value": -7.593985249225363
+  },
+  {
+    "timestamp": "2026-06-05T20:34:16Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_PCT_DROP",
+    "type": "percent_change",
+    "price": 18.06999969482422,
+    "change_pct": -10.054755127803789,
+    "value": -10.054755127803789
+  },
+  {
+    "timestamp": "2026-06-05T20:34:36Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 5.179999828338623,
+    "change_pct": -13.522540428403627,
+    "value": 2.7394456068465165
   }
 ]
