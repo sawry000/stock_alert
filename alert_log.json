@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T00:12:25Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_POS_SIZE",
-    "type": "position_size",
-    "price": 358.04998779296875,
-    "change_pct": 1.9998255969486307,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-05T00:13:32Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.319999694824219,
-    "change_pct": 7.5882771962751185,
-    "value": 7.5882771962751185
-  },
-  {
     "timestamp": "2026-06-05T00:13:36Z",
     "symbol": "VSEC",
     "alert_id": "VSEC_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 2.930000066757202,
     "change_pct": -6.089741450089678,
     "value": -6.089741450089678
+  },
+  {
+    "timestamp": "2026-06-05T16:59:18Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.235000133514404,
+    "change_pct": -6.099395579602341,
+    "value": -6.099395579602341
+  },
+  {
+    "timestamp": "2026-06-05T16:59:23Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.539999961853027,
+    "change_pct": -7.51252150495781,
+    "value": -7.51252150495781
   }
 ]
