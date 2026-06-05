@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T15:08:34Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_DROP",
-    "type": "percent_change",
-    "price": 26.390100479125977,
-    "change_pct": -5.071581010338217,
-    "value": -5.071581010338217
-  },
-  {
-    "timestamp": "2026-06-04T15:22:31Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_RSI_OB",
-    "type": "rsi",
-    "price": 355.8450012207031,
-    "change_pct": 1.371677982139177,
-    "value": 73.42
-  },
-  {
     "timestamp": "2026-06-04T15:27:36Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 4.380000114440918,
     "change_pct": -0.6802695138113871,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T10:13:01Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_3X",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": 0.32679520401299994,
+    "value": 3.5844349367451334
+  },
+  {
+    "timestamp": "2026-06-05T10:13:05Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": 0.32679520401299994,
+    "value": 3.5844349367451334
   }
 ]
