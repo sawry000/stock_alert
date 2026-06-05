@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T03:18:31Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.0799999237060547,
-    "change_pct": -5.521474456557392,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-04T03:18:46Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 3.069999933242798,
     "change_pct": -0.3246774921169552,
     "value": 3.7858729363863937
+  },
+  {
+    "timestamp": "2026-06-05T00:57:30Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.469999313354492,
+    "change_pct": 1.929496524506467,
+    "value": 2
   }
 ]
