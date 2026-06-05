@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T15:28:25Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 120.01499938964844,
-    "change_pct": 17.661764107498467,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-04T15:28:36Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.53000020980835,
-    "change_pct": 9.722226385086302,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-04T15:29:15Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 104.59,
     "change_pct": 8.495850622406637,
     "value": 8.495850622406637
+  },
+  {
+    "timestamp": "2026-06-05T10:32:55Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 116.58000183105469,
+    "change_pct": 1.5770687732462243,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T10:33:03Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": 0.32679520401299994,
+    "value": 3.5844349367451334
   }
 ]
