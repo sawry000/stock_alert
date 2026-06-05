@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T15:48:03Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 21.395000457763672,
-    "change_pct": 18.861113654242622,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-04T15:53:24Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 28.940000534057617,
-    "change_pct": 8.183682484477531,
-    "value": 8.183682484477531
-  },
-  {
-    "timestamp": "2026-06-04T15:53:29Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.894999980926514,
-    "change_pct": 10.74660590331479,
-    "value": 10.74660590331479
-  },
-  {
     "timestamp": "2026-06-04T15:53:55Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_PCT_UP_5",
@@ -4498,5 +4471,32 @@
     "price": 6.9,
     "change_pct": -6.755496695901288,
     "value": -6.755496695901288
+  },
+  {
+    "timestamp": "2026-06-05T11:32:40Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 202.89,
+    "change_pct": 3.620988957615446,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-05T11:33:05Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 121.5,
+    "change_pct": 1.4613778705636742,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-05T11:33:08Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": 0.32679520401299994,
+    "value": 3.5844349367451334
   }
 ]
