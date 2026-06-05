@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T06:53:33Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_DROP",
-    "type": "percent_change",
-    "price": 28.030000686645508,
-    "change_pct": -6.96979526503316,
-    "value": -6.96979526503316
-  },
-  {
-    "timestamp": "2026-06-04T06:53:37Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_POS_SIZE",
-    "type": "position_size",
-    "price": 3.3499999046325684,
-    "change_pct": -0.2976218859354618,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-04T06:53:39Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_POS_SIZE",
-    "type": "position_size",
-    "price": 98.36000061035156,
-    "change_pct": 3.5368427477384867,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-04T06:53:41Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_POS_SIZE",
-    "type": "position_size",
-    "price": 13.300000190734863,
-    "change_pct": 6.941553553071661,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-04T06:53:45Z",
     "symbol": "AGL",
     "alert_id": "AGL_POS_SIZE",
@@ -4498,5 +4462,41 @@
     "price": 5.88,
     "change_pct": 11.666065290464706,
     "value": 3.892460821480326
+  },
+  {
+    "timestamp": "2026-06-05T04:37:23Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 358.05,
+    "change_pct": 1.9998290744380933,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T04:37:35Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 202.89,
+    "change_pct": 15.154095011067593,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T04:38:11Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.38,
+    "change_pct": 12.382614050392561,
+    "value": 12.382614050392561
+  },
+  {
+    "timestamp": "2026-06-05T04:38:18Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.87,
+    "change_pct": 10.180995475113127,
+    "value": 2
   }
 ]
