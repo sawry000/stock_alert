@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T06:53:45Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_POS_SIZE",
-    "type": "position_size",
-    "price": 82.69999694824219,
-    "change_pct": -3.150255359828801,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-04T06:54:02Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_POS_SIZE",
-    "type": "position_size",
-    "price": 7.5,
-    "change_pct": -4.060173459206387,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-04T06:54:04Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_POS_SIZE",
-    "type": "position_size",
-    "price": 59.779998779296875,
-    "change_pct": 7.888802664006815,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-04T06:54:06Z",
     "symbol": "BOBS",
     "alert_id": "BOBS_POS_SIZE",
@@ -4498,5 +4471,32 @@
     "price": 4.87,
     "change_pct": 10.180995475113127,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T04:42:28Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 22.26,
+    "change_pct": 2.11009174311927,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-05T04:43:06Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_3X",
+    "type": "volume_spike",
+    "price": 3.07,
+    "change_pct": -0.32467532467533217,
+    "value": 3.597122810630897
+  },
+  {
+    "timestamp": "2026-06-05T04:43:09Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 3.07,
+    "change_pct": -0.32467532467533217,
+    "value": 3.597122810630897
   }
 ]
