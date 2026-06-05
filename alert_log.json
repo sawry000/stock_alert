@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T06:52:51Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_POS_SIZE",
-    "type": "position_size",
-    "price": 18.6200008392334,
-    "change_pct": -8.366137602197844,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-04T06:52:58Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_POS_SIZE",
-    "type": "position_size",
-    "price": 3.4700000286102295,
-    "change_pct": -6.089309103918008,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-04T06:53:00Z",
     "symbol": "INOD",
     "alert_id": "INOD_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 22.540000915527344,
     "change_pct": 7.231212728484035,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T03:52:53Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_UP_5",
+    "type": "percent_change",
+    "price": 21.43000030517578,
+    "change_pct": 19.055557250976562,
+    "value": 19.055557250976562
+  },
+  {
+    "timestamp": "2026-06-05T03:53:41Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 95.2300033569336,
+    "change_pct": 18.7850858886536,
+    "value": 18.7850858886536
   }
 ]
