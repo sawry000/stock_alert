@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T06:53:08Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_POS_SIZE",
-    "type": "position_size",
-    "price": 27.510000228881836,
-    "change_pct": 0.76923160762577,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-04T06:53:12Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_POS_SIZE",
-    "type": "position_size",
-    "price": 3.7899999618530273,
-    "change_pct": -7.716283282937813,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-04T06:53:14Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_POS_SIZE",
-    "type": "position_size",
-    "price": 4.559999942779541,
-    "change_pct": -2.978724621711897,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-04T06:53:16Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_POS_SIZE",
-    "type": "position_size",
-    "price": 12.630000114440918,
-    "change_pct": -6.444443596733941,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-04T06:53:18Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_POS_SIZE",
@@ -4498,5 +4462,41 @@
     "price": 21.43,
     "change_pct": 19.055555555555554,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T04:08:16Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_3X",
+    "type": "volume_spike",
+    "price": 3.07,
+    "change_pct": -0.32467532467533217,
+    "value": 3.597122810630897
+  },
+  {
+    "timestamp": "2026-06-05T04:08:19Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 3.07,
+    "change_pct": -0.32467532467533217,
+    "value": 3.597122810630897
+  },
+  {
+    "timestamp": "2026-06-05T04:08:31Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.87,
+    "change_pct": 10.180995475113127,
+    "value": 10.180995475113127
+  },
+  {
+    "timestamp": "2026-06-05T04:08:57Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_PCT_UP_5",
+    "type": "percent_change",
+    "price": 104.59,
+    "change_pct": 8.495850622406637,
+    "value": 8.495850622406637
   }
 ]
