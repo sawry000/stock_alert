@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T17:37:30Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_NEWS_C",
-    "type": "news_sentiment",
-    "price": 27.415000915527344,
-    "change_pct": 1.7254208368361577,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-04T17:37:52Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 5.88,
     "change_pct": -1.8363939899833106,
     "value": 3.892460821480326
+  },
+  {
+    "timestamp": "2026-06-05T13:13:14Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 28.01,
+    "change_pct": 0.3942652329749211,
+    "value": 2
   }
 ]
