@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T14:58:27Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_DROP",
-    "type": "percent_change",
-    "price": 8.640000343322754,
-    "change_pct": -5.882349201277188,
-    "value": -5.882349201277188
-  },
-  {
     "timestamp": "2026-06-04T15:02:55Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 6.52,
     "change_pct": -1.8072289156626522,
     "value": 31.84
+  },
+  {
+    "timestamp": "2026-06-05T09:58:37Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 95.23,
+    "change_pct": 2.0357869923925915,
+    "value": 2
   }
 ]
