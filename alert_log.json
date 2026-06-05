@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T17:37:52Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_UP_5",
-    "type": "percent_change",
-    "price": 21.730100631713867,
-    "change_pct": 20.722781287299263,
-    "value": 20.722781287299263
-  },
-  {
     "timestamp": "2026-06-04T17:38:38Z",
     "symbol": "AGL",
     "alert_id": "AGL_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 28.01,
     "change_pct": 0.3942652329749211,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T13:17:22Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 421.8999938964844,
+    "change_pct": 2.1549622025385897,
+    "value": 1
   }
 ]
