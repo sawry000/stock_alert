@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T13:33:24Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 11.800000190734863,
-    "change_pct": -7.086612671379024,
-    "value": -7.086612671379024
-  },
-  {
-    "timestamp": "2026-06-04T13:33:47Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 87.52999877929688,
-    "change_pct": 9.180489933013437,
-    "value": 9.180489933013437
-  },
-  {
-    "timestamp": "2026-06-04T13:33:50Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 87.52999877929688,
-    "change_pct": 9.180489933013437,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-04T13:33:59Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 45.560001373291016,
-    "change_pct": -1.3852784127900155,
-    "value": -1.008
-  },
-  {
-    "timestamp": "2026-06-04T13:37:33Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 69.07499694824219,
-    "change_pct": -2.711271903884243,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-04T13:38:48Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_CP_BULL",
@@ -4498,5 +4453,50 @@
     "price": 22.54,
     "change_pct": 7.231208372978114,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T07:57:58Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_UP_5",
+    "type": "percent_change",
+    "price": 21.43,
+    "change_pct": 19.055555555555554,
+    "value": 19.055555555555554
+  },
+  {
+    "timestamp": "2026-06-05T07:58:10Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_3X",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.5844349367451334
+  },
+  {
+    "timestamp": "2026-06-05T07:58:13Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.5844349367451334
+  },
+  {
+    "timestamp": "2026-06-05T07:58:32Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.119999885559082,
+    "change_pct": 1.2986975830870766,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T07:58:54Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 95.23,
+    "change_pct": 18.78508170138456,
+    "value": 18.78508170138456
   }
 ]
