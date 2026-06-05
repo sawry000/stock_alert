@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T21:03:32Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.140000343322754,
-    "change_pct": 3.464569632462635,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-04T21:04:18Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 22.540000915527344,
-    "change_pct": 7.231212728484035,
-    "value": 7.231212728484035
-  },
-  {
     "timestamp": "2026-06-04T21:13:01Z",
     "symbol": "INOD",
     "alert_id": "INOD_NEWS_POS",
@@ -4498,5 +4480,23 @@
     "price": 13.805000305175781,
     "change_pct": -5.185437464452055,
     "value": -5.185437464452055
+  },
+  {
+    "timestamp": "2026-06-05T15:33:15Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_DROP",
+    "type": "percent_change",
+    "price": 26.450000762939453,
+    "change_pct": -5.197129881937439,
+    "value": -5.197129881937439
+  },
+  {
+    "timestamp": "2026-06-05T15:33:23Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.0233001708984375,
+    "change_pct": -18.602951784504686,
+    "value": -18.602951784504686
   }
 ]
