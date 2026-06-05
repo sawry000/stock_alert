@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T21:38:52Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 19.90999984741211,
-    "change_pct": 0.5555547849096396,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-04T21:43:12Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_UP_5",
-    "type": "percent_change",
-    "price": 21.43000030517578,
-    "change_pct": 19.055557250976562,
-    "value": 19.055557250976562
-  },
-  {
     "timestamp": "2026-06-04T21:44:27Z",
     "symbol": "AGL",
     "alert_id": "AGL_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 11.239999771118164,
     "change_pct": -11.273900229565657,
     "value": -11.273900229565657
+  },
+  {
+    "timestamp": "2026-06-05T15:43:44Z",
+    "symbol": "VSEC",
+    "alert_id": "VSEC_MA_GOLDEN",
+    "type": "ma_crossover",
+    "price": 183.89999389648438,
+    "change_pct": 0.2452951193700662,
+    "value": 0.017
+  },
+  {
+    "timestamp": "2026-06-05T15:43:47Z",
+    "symbol": "PSIX",
+    "alert_id": "PSIX_PCT_DROP",
+    "type": "percent_change",
+    "price": 37.53990173339844,
+    "change_pct": -5.0824229244034385,
+    "value": -5.0824229244034385
   }
 ]
