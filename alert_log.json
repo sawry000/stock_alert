@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T13:58:22Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_DROP",
-    "type": "percent_change",
-    "price": 8.630000114440918,
-    "change_pct": -5.991284156417013,
-    "value": -5.991284156417013
-  },
-  {
     "timestamp": "2026-06-04T13:58:33Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 202.89,
     "change_pct": 3.620988957615446,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-05T08:43:11Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.869999885559082,
+    "change_pct": -0.4090002953152894,
+    "value": 3
   }
 ]
