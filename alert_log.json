@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T05:13:13Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 108.2699966430664,
-    "change_pct": -4.834317796373024,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-04T05:13:26Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.7899999618530273,
-    "change_pct": -7.716283282937813,
-    "value": -7.716283282937813
-  },
-  {
     "timestamp": "2026-06-04T05:13:39Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 4.380000114440918,
     "change_pct": 12.382616986732636,
     "value": 12.382616986732636
+  },
+  {
+    "timestamp": "2026-06-05T02:37:29Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 22.260000228881836,
+    "change_pct": 2.110092793035941,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-05T02:37:45Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.9200000762939453,
+    "change_pct": 3.9478863797638173,
+    "value": 2
   }
 ]
