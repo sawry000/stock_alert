@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T04:17:48Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 18.6200008392334,
-    "change_pct": -8.366137602197844,
-    "value": -8.366137602197844
-  },
-  {
-    "timestamp": "2026-06-04T04:18:27Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 13.300000190734863,
-    "change_pct": 6.941553553071661,
-    "value": 6.941553553071661
-  },
-  {
-    "timestamp": "2026-06-04T04:22:30Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.649999618530273,
-    "change_pct": 1.1338683925759823,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-04T04:24:01Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_PCT_DROP",
-    "type": "percent_change",
-    "price": 19.610000610351562,
-    "change_pct": -11.865165796172752,
-    "value": -11.865165796172752
-  },
-  {
     "timestamp": "2026-06-04T04:27:38Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -4497,6 +4461,42 @@
     "type": "mtf_alignment",
     "price": 95.2300033569336,
     "change_pct": 18.7850858886536,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T01:57:59Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 21.43000030517578,
+    "change_pct": 19.055557250976562,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T01:58:12Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_3X",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.7858729363863937
+  },
+  {
+    "timestamp": "2026-06-05T01:58:15Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 3.069999933242798,
+    "change_pct": -0.3246774921169552,
+    "value": 3.7858729363863937
+  },
+  {
+    "timestamp": "2026-06-05T01:58:26Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.380000114440918,
+    "change_pct": 12.382616986732636,
     "value": 3
   }
 ]
