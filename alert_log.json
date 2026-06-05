@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T03:12:56Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 18.6200008392334,
-    "change_pct": -8.366137602197844,
-    "value": -8.366137602197844
-  },
-  {
     "timestamp": "2026-06-04T03:13:07Z",
     "symbol": "INOD",
     "alert_id": "INOD_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 5.880000114440918,
     "change_pct": 11.666067463792434,
     "value": 4.131219705976898
+  },
+  {
+    "timestamp": "2026-06-05T00:28:12Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.380000114440918,
+    "change_pct": 12.382616986732636,
+    "value": 12.382616986732636
   }
 ]
