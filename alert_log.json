@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T07:22:29Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 69.0199966430664,
-    "change_pct": -4.73430415035693,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-04T07:22:35Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 6.52,
     "change_pct": -6.857142857142863,
     "value": 31.84
+  },
+  {
+    "timestamp": "2026-06-05T05:48:48Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 19.91,
+    "change_pct": 0.5555555555555526,
+    "value": 1
   }
 ]
