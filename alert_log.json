@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T05:37:30Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 68.39,
-    "change_pct": 0.6623491315866983,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-05T05:39:12Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 6.309999942779541,
     "change_pct": -4.9698803798261855,
     "value": 30.61
+  },
+  {
+    "timestamp": "2026-06-05T20:02:51Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.450000047683716,
+    "change_pct": -13.732392687193101,
+    "value": -13.732392687193101
   }
 ]
