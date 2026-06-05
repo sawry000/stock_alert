@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T03:37:47Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_CP_BULL",
-    "type": "candle_pattern",
-    "price": 27.149999618530273,
-    "change_pct": 15.04237126495878,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-05T03:37:59Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_VOL_3X",
-    "type": "volume_spike",
-    "price": 3.069999933242798,
-    "change_pct": -0.3246774921169552,
-    "value": 3.7858729363863937
-  },
-  {
     "timestamp": "2026-06-05T03:38:02Z",
     "symbol": "DDD",
     "alert_id": "DDD_VOL_ALARM",
@@ -4498,5 +4480,23 @@
     "price": 15.229999542236328,
     "change_pct": -19.032431992364014,
     "value": -19.032431992364014
+  },
+  {
+    "timestamp": "2026-06-05T18:58:03Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.5399999618530273,
+    "change_pct": -10.563381624893399,
+    "value": -10.563381624893399
+  },
+  {
+    "timestamp": "2026-06-05T18:59:14Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 98.29499816894531,
+    "change_pct": 5.319830889258881,
+    "value": 5.319830889258881
   }
 ]
