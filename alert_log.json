@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T04:27:38Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "price": 10.029999732971191,
-    "change_pct": -9.802971799073832,
-    "value": -9.802971799073832
-  },
-  {
     "timestamp": "2026-06-04T04:32:31Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_NEWS_ANY",
@@ -4498,5 +4489,14 @@
     "price": 4.380000114440918,
     "change_pct": 12.382616986732636,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T02:02:48Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 21.43000030517578,
+    "change_pct": 19.055557250976562,
+    "value": 2
   }
 ]
