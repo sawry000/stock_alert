@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T06:53:18Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_POS_SIZE",
-    "type": "position_size",
-    "price": 6.820000171661377,
-    "change_pct": 4.281348190540932,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-04T06:53:20Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_POS_SIZE",
-    "type": "position_size",
-    "price": 53.02000045776367,
-    "change_pct": -1.7784356099227956,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-04T06:53:22Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_POS_SIZE",
-    "type": "position_size",
-    "price": 3.0799999237060547,
-    "change_pct": -5.23077157827524,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-04T06:53:23Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 104.59,
     "change_pct": 8.495850622406637,
     "value": 8.495850622406637
+  },
+  {
+    "timestamp": "2026-06-05T04:13:09Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 3.07,
+    "change_pct": -0.32467532467533217,
+    "value": 3.597122810630897
+  },
+  {
+    "timestamp": "2026-06-05T04:13:53Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_PCT_UP_5",
+    "type": "percent_change",
+    "price": 14.32,
+    "change_pct": 7.588279489105934,
+    "value": 7.588279489105934
+  },
+  {
+    "timestamp": "2026-06-05T04:14:29Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.52,
+    "change_pct": -6.857142857142863,
+    "value": -6.857142857142863
   }
 ]
