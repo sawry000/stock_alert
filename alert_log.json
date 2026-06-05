@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T06:53:00Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_POS_SIZE",
-    "type": "position_size",
-    "price": 108.2699966430664,
-    "change_pct": -4.834317796373024,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-04T06:53:02Z",
     "symbol": "DDD",
     "alert_id": "DDD_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 95.2300033569336,
     "change_pct": 18.7850858886536,
     "value": 18.7850858886536
+  },
+  {
+    "timestamp": "2026-06-05T03:58:18Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.119999885559082,
+    "change_pct": 1.2986975830870766,
+    "value": 3
   }
 ]
