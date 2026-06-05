@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T02:03:40Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_DROP",
-    "type": "percent_change",
-    "price": 46.66999816894531,
-    "change_pct": -9.729210504941374,
-    "value": -9.729210504941374
-  },
-  {
     "timestamp": "2026-06-04T02:03:47Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 6.519999980926514,
     "change_pct": -6.8571431296212335,
     "value": -6.8571431296212335
+  },
+  {
+    "timestamp": "2026-06-05T00:07:37Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 8.59000015258789,
+    "change_pct": -14.356927691047943,
+    "value": -14.356927691047943
   }
 ]
