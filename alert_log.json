@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T02:13:37Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.319999694824219,
-    "change_pct": 7.5882771962751185,
-    "value": 7.5882771962751185
-  },
-  {
-    "timestamp": "2026-06-05T02:14:07Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.519999980926514,
-    "change_pct": -6.8571431296212335,
-    "value": -6.8571431296212335
-  },
-  {
-    "timestamp": "2026-06-05T02:17:27Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 421.8999938964844,
-    "change_pct": 5.7340468889991465,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-05T02:18:16Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 121.5,
-    "change_pct": 19.11764705882353,
-    "value": 19.11764705882353
-  },
-  {
-    "timestamp": "2026-06-05T02:27:23Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 358.04998779296875,
-    "change_pct": 1.9998255969486307,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-05T02:27:55Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_MTF_BULL",
@@ -4498,5 +4453,50 @@
     "price": 36.900001525878906,
     "change_pct": -6.70037540865004,
     "value": 31.46
+  },
+  {
+    "timestamp": "2026-06-05T18:32:20Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 383.5150146484375,
+    "change_pct": -7.139221634760896,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-05T18:32:24Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 320.6400146484375,
+    "change_pct": -8.388567243303571,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-05T18:32:36Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_PCT_DROP",
+    "type": "percent_change",
+    "price": 20.8799991607666,
+    "change_pct": -7.200003729926216,
+    "value": -7.200003729926216
+  },
+  {
+    "timestamp": "2026-06-05T18:32:50Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_PCT_DROP",
+    "type": "percent_change",
+    "price": 13.385000228881836,
+    "change_pct": -8.070053373064317,
+    "value": -8.070053373064317
+  },
+  {
+    "timestamp": "2026-06-05T18:34:18Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_PCT_DROP",
+    "type": "percent_change",
+    "price": 17.174999237060547,
+    "change_pct": -5.058047335209801,
+    "value": -5.058047335209801
   }
 ]
