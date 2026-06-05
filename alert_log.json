@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T04:14:29Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.52,
-    "change_pct": -6.857142857142863,
-    "value": -6.857142857142863
-  },
-  {
     "timestamp": "2026-06-05T04:22:23Z",
     "symbol": "COHR",
     "alert_id": "COHR_NEWS_ANY",
@@ -4498,5 +4489,14 @@
     "price": 6.269999980926514,
     "change_pct": -5.572289443877802,
     "value": 27.96
+  },
+  {
+    "timestamp": "2026-06-05T19:44:32Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_PCT_DROP",
+    "type": "percent_change",
+    "price": 17.149999618530273,
+    "change_pct": -5.196243125869135,
+    "value": -5.196243125869135
   }
 ]
