@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-04T19:34:23Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 22.639999389648438,
-    "change_pct": 7.706942862266594,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-04T19:38:04Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 61.849998474121094,
     "change_pct": -3.359377384185791,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-05T14:23:22Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.9600000381469727,
+    "change_pct": -5.128203905545751,
+    "value": -5.128203905545751
   }
 ]
