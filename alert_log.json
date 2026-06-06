@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T14:28:16Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_DROP",
-    "type": "percent_change",
-    "price": 26.434999465942383,
-    "change_pct": -5.250897971532673,
-    "value": -5.250897971532673
-  },
-  {
     "timestamp": "2026-06-05T14:28:24Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 5.179999828338623,
     "change_pct": -13.522540428403627,
     "value": 2.7394456068465165
+  },
+  {
+    "timestamp": "2026-06-06T00:48:32Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.889999866485596,
+    "change_pct": -2.7303559095527764e-06,
+    "value": 3
   }
 ]
