@@ -1,77 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T15:08:39Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.059999942779541,
-    "change_pct": -6.990883198190244,
-    "value": -6.990883198190244
-  },
-  {
-    "timestamp": "2026-06-05T15:14:01Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "price": 60.689998626708984,
-    "change_pct": -5.171877145767212,
-    "value": -5.171877145767212
-  },
-  {
-    "timestamp": "2026-06-05T15:22:24Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 402.7101135253906,
-    "change_pct": -2.4914979357407687,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-05T15:22:35Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_DROP",
-    "type": "percent_change",
-    "price": 21.350000381469727,
-    "change_pct": -5.1111094156901045,
-    "value": -5.1111094156901045
-  },
-  {
-    "timestamp": "2026-06-05T15:23:59Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_DROP",
-    "type": "percent_change",
-    "price": 19.07990074157715,
-    "change_pct": -5.027870873184925,
-    "value": -5.027870873184925
-  },
-  {
-    "timestamp": "2026-06-05T15:27:47Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_DROP",
-    "type": "percent_change",
-    "price": 13.805000305175781,
-    "change_pct": -5.185437464452055,
-    "value": -5.185437464452055
-  },
-  {
-    "timestamp": "2026-06-05T15:33:15Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_DROP",
-    "type": "percent_change",
-    "price": 26.450000762939453,
-    "change_pct": -5.197129881937439,
-    "value": -5.197129881937439
-  },
-  {
-    "timestamp": "2026-06-05T15:33:23Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.0233001708984375,
-    "change_pct": -18.602951784504686,
-    "value": -18.602951784504686
-  },
-  {
     "timestamp": "2026-06-05T15:37:38Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_DROP",
@@ -4498,5 +4426,77 @@
     "price": 5.179999828338623,
     "change_pct": -13.522540428403627,
     "value": -13.522540428403627
+  },
+  {
+    "timestamp": "2026-06-06T01:32:40Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 376.989990234375,
+    "change_pct": -8.719130693855933,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-06T01:33:29Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.2899999618530273,
+    "change_pct": -7.0621479702534655,
+    "value": -7.0621479702534655
+  },
+  {
+    "timestamp": "2026-06-06T01:33:33Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 101.97000122070312,
+    "change_pct": -14.847598145550625,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-06T01:33:35Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_DROP",
+    "type": "percent_change",
+    "price": 101.97000122070312,
+    "change_pct": -14.847598145550625,
+    "value": -14.847598145550625
+  },
+  {
+    "timestamp": "2026-06-06T01:33:59Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_PCT_DROP",
+    "type": "percent_change",
+    "price": 52.209999084472656,
+    "change_pct": -8.293945776493219,
+    "value": -8.293945776493219
+  },
+  {
+    "timestamp": "2026-06-06T01:34:14Z",
+    "symbol": "ANNA",
+    "alert_id": "ANNA_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.0399999618530273,
+    "change_pct": -7.598785354011328,
+    "value": -7.598785354011328
+  },
+  {
+    "timestamp": "2026-06-06T01:34:45Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_PCT_DROP",
+    "type": "percent_change",
+    "price": 59.130001068115234,
+    "change_pct": -7.609373331069946,
+    "value": -7.609373331069946
+  },
+  {
+    "timestamp": "2026-06-06T01:34:47Z",
+    "symbol": "BOBS",
+    "alert_id": "BOBS_PCT_DROP",
+    "type": "percent_change",
+    "price": 12.289999961853027,
+    "change_pct": -7.593985249225363,
+    "value": -7.593985249225363
   }
 ]
