@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T17:48:52Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.829800128936768,
-    "change_pct": -10.002297368542894,
-    "value": -10.002297368542894
-  },
-  {
     "timestamp": "2026-06-05T17:48:57Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 376.989990234375,
     "change_pct": -8.719130693855933,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-06T05:43:07Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 101.97000122070312,
+    "change_pct": -14.847598145550625,
+    "value": 1
   }
 ]
