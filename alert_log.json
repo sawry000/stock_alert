@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T17:49:16Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_PCT_DROP",
-    "type": "percent_change",
-    "price": 275.2900085449219,
-    "change_pct": -10.071211111681082,
-    "value": -10.071211111681082
-  },
-  {
-    "timestamp": "2026-06-05T17:49:19Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_DROP",
-    "type": "percent_change",
-    "price": 42.224998474121094,
-    "change_pct": -8.781597593171107,
-    "value": -8.781597593171107
-  },
-  {
     "timestamp": "2026-06-05T17:49:23Z",
     "symbol": "ASPN",
     "alert_id": "ASPN_PCT_DROP",
@@ -4497,6 +4479,24 @@
     "type": "position_size",
     "price": 5.179999828338623,
     "change_pct": -13.522540428403627,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-06T05:52:47Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 21.200000762939453,
+    "change_pct": -5.777774386935764,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-06T05:54:43Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 18.06999969482422,
+    "change_pct": -10.054755127803789,
     "value": 1
   }
 ]
