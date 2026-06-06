@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T18:09:04Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.494999885559082,
-    "change_pct": -9.455961514013415,
-    "value": -9.455961514013415
-  },
-  {
     "timestamp": "2026-06-05T18:12:23Z",
     "symbol": "COHR",
     "alert_id": "COHR_NEWS_ANY",
@@ -4498,5 +4489,14 @@
     "price": 5.179999828338623,
     "change_pct": -13.522540428403627,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-06T07:19:05Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_BT_VOL",
+    "type": "backtest_check",
+    "price": 271.0400085449219,
+    "change_pct": -11.459555551769936,
+    "value": 87.5
   }
 ]
