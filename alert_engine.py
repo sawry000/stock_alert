@@ -1662,163 +1662,104 @@ def build_news_message(stock, alert, news_list, quote):
     return "\n".join(lines)
 
 
+
+def _calc_tp_sl(entry, stop_pct):
+    """คำนวณ TP1/TP2 จาก R:R อัตโนมัติ"""
+    risk    = entry * stop_pct / 100
+    tp1     = round(entry + risk * 1.5, 4)
+    tp2     = round(entry + risk * 2.5, 4)
+    tp1_pct = round((tp1 - entry) / entry * 100, 1)
+    tp2_pct = round((tp2 - entry) / entry * 100, 1)
+    return tp1, tp2, tp1_pct, tp2_pct
+
 def build_position_message(stock, alert, pos, quote):
     emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, alert)
-    note    = alert.get("note", "")
-    account = pos.get("account", 100)
+    note    = alert.get('note', '')
+    account = pos.get('account', 100)
+    is_frac = pos.get('is_fractional', False)
+    shares  = pos['shares']
 
-    is_frac = pos.get("is_fractional", False)
-    shares  = pos["shares"]
-
-    # ── แสดง shares ──────────────────────────────────────────────────
     if is_frac:
-        shares_line   = f"<b>{shares:.7f} หุ้น</b> (fractional)"
-        broker_note   = "\n  ⚠️ ต้องใช้ broker ที่รองรับ <b>Fractional Shares</b> (Webull / IBKR)"
-        action_shares = f"<b>{shares:.7f} หุ้น</b>"
+        shares_line   = '<b>{:.7f} หุ้น</b> (fractional)'.format(shares)
+        broker_note   = 'ใช้ broker ที่รองรับ Fractional Shares เช่น Webull หรือ IBKR'
+        action_shares = '{:.7f} หุ้น'.format(shares)
     else:
-        shares_line   = f"<b>{int(shares):,} หุ้น</b>"
-        broker_note   = ""
-        action_shares = f"<b>{int(shares):,} หุ้น</b>"
+        shares_line   = '<b>{:,} หุ้น</b>'.format(int(shares))
+        broker_note   = ''
+        action_shares = '{:,} หุ้น'.format(int(shares))
 
-    # ── Risk color ────────────────────────────────────────────────────
-    pp = pos.get("pos_pct", 0)
-    if pp >= 95:
-        risk_color = "🟢 ใช้งบครบ — Fully deployed"
-    elif pp >= 80:
-        risk_color = "🟢 ขนาด position เหมาะสม"
-    elif pp >= 50:
-        risk_color = "🟡 ใช้งบ ~50% — พิจารณาเพิ่มได้"
-    else:
-        risk_color = "🟡 ใช้งบน้อย — ราคาหุ้นสูงเกิน $100"
+    tp1 = tp2 = None
+    tp1_pct = tp2_pct = 0.0
+    if pos.get('stop_pct', 0) > 0:
+        tp1, tp2, tp1_pct, tp2_pct = _calc_tp_sl(pos['entry'], pos['stop_pct'])
 
-    leftover = round(account - pos["pos_value"], 2)
+    tp1_usd = round(shares * (tp1 - pos['entry']), 2) if tp1 else 0
+    tp2_usd = round(shares * (tp2 - pos['entry']), 2) if tp2 else 0
+    stp = pos.get('stop_pct', 1) or 1
+    rr1 = round(tp1_pct / stp, 1) if tp1 else 0
+    rr2 = round(tp2_pct / stp, 1) if tp2 else 0
+
+    pp = pos.get('pos_pct', 0)
+    if pp >= 95:   risk_color = 'ใช้งบครบ — เหมาะสมดี'
+    elif pp >= 80: risk_color = 'ขนาด position เหมาะสม'
+    elif pp >= 50: risk_color = 'ใช้งบประมาณครึ่งหนึ่ง'
+    else:          risk_color = 'ราคาหุ้นสูง — ซื้อได้น้อยกว่าพอร์ต'
+
+    leftover      = round(account - pos['pos_value'], 2)
+    actual_risk   = pos.get('actual_risk', 0)
+    risk_real_pct = round(actual_risk / account * 100, 1) if account > 0 else 0
+
+    entry_s = '${:.4f}'.format(pos['entry'])
+    stop_s  = '${:.4f}'.format(pos['stop'])
+    stop2_s = '${:.2f}'.format(pos['stop'])
+    entry2_s= '${:.2f}'.format(pos['entry'])
+    val_s   = '${:.2f}'.format(pos['pos_value'])
+    stop_pct_s = '{:.1f}'.format(pos['stop_pct'])
 
     lines = [
-        f"💰 <b>POSITION SIZE: {symbol}</b> ({name})", "",
-        f"💰 Entry: <b>${pos['entry']:.4f}</b>  {arrow} {sign}{pct:.2f}%",
-        f"🛑 Stop Loss: <b>${pos['stop']:.4f}</b>  (-{pos['stop_pct']:.1f}% จาก entry)",
-        "",
-        f"📊 ผลคำนวณ (max shares ≤ ${account:.0f}):",
-        f"  • จำนวน: {shares_line}",
-        f"  • มูลค่า: <b>${pos['pos_value']:,.2f}</b>  ({pos['pos_pct']:.1f}% ของ ${account:.0f})",
-        f"  • เงินเหลือ: <b>${leftover:.2f}</b>",
-        f"  • Risk ถ้า SL hit: <b>${pos['actual_risk']:.2f}</b>  ({pos['actual_risk']/account*100:.1f}% พอร์ต)",
+        '<b>🎯 สัญญาณซื้อ: {}</b> ({})'.format(symbol, name), '',
+        '━━━━━━━━━━━━━━━━━━━━━━━━━',
+        '💰 ราคาเข้า: <b>{}</b>  {} {}{:.2f}%'.format(entry_s, arrow, sign, pct),
+        '🛑 Stop Loss: <b>{}</b>  (ลด {}% จากราคาเข้า)'.format(stop_s, stop_pct_s),
     ]
-
-    if pos.get("atr"):
-        lines.append(f"  • ATR(14): <b>${pos['atr']:.4f}</b>  (stop = ATR×2)")
-    if pos.get("rr_ratio"):
-        lines.append(f"  • R:R Ratio: <b>1:{pos['rr_ratio']:.1f}</b>")
-    if pos.get("target"):
-        lines.append(f"  • Target: <b>${pos['target']:.4f}</b>  (+{pos.get('target_pct',0):.1f}%)")
-    if pos.get("target_usd"):
-        lines.append(f"  • กำไรเป้าหมาย: <b>${pos['target_usd']:.2f}</b>")
+    if tp1:
+        lines.append('🎯 TP1 เป้าแรก: <b>${:.4f}</b>  (+{:.1f}%)  R:R=1:{:.1f}  กำไร~${:.2f}'.format(tp1, tp1_pct, rr1, tp1_usd))
+    if tp2:
+        lines.append('🚀 TP2 เป้าสอง: <b>${:.4f}</b>  (+{:.1f}%)  R:R=1:{:.1f}  กำไร~${:.2f}'.format(tp2, tp2_pct, rr2, tp2_usd))
 
     lines += [
-        "",
-        f"💡 {risk_color}",
+        '',
+        '📦 ขนาด position (งบ ${:.0f}):'.format(account),
+        '  • ซื้อ: {}'.format(shares_line),
+        '  • ใช้เงิน: <b>${:,.2f}</b>  ({:.1f}% ของพอร์ต)'.format(pos['pos_value'], pos['pos_pct']),
+        '  • เงินเหลือ: <b>${:.2f}</b>'.format(leftover),
+        '  • ความเสี่ยงถ้า SL โดน: <b>-${:.2f}</b>  ({}% พอร์ต)'.format(actual_risk, risk_real_pct),
     ]
+    if pos.get('atr'):
+        lines.append('  • ATR(14) วันนี้: ${:.4f}  (stop=ATR×2)'.format(pos['atr']))
 
+    lines += ['', '💡 {}'.format(risk_color)]
     if broker_note:
-        lines.append(broker_note)
+        lines.append('  ⚠️ ' + broker_note)
 
     lines += [
-        "",
-        "📌 <b>สิ่งที่ควรทำ:</b>",
-        f"  1️⃣ ยืนยัน signal (RSI / MTF / Candle) ก่อนเข้าจริง",
-        f"  2️⃣ เข้าซื้อ {action_shares} ที่ราคาใกล้ ${pos['entry']:.2f}  (ใช้ ${pos['pos_value']:.2f})",
-        f"  3️⃣ ตั้ง Stop Loss ที่ <b>${pos['stop']:.2f}</b> ทันทีหลังเข้า",
-        f"  4️⃣ ไม่ Average Down ถ้า price ลงหา Stop",
+        '',
+        '📌 <b>ทำตามนี้ได้เลย:</b>',
+        '  1️⃣ เข้าซื้อ {} ที่ราคาใกล้ <b>{}</b>  (ใช้ {})'.format(action_shares, entry2_s, val_s),
+        '  2️⃣ ตั้ง Stop Loss ที่ <b>{}</b> ทันทีหลังซื้อ — ห้ามลืม'.format(stop2_s),
     ]
-
-    if note: lines.append(f"\n📋 Note: {note}")
-    lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
-    return "\n".join(lines)
-
-
-def build_mtf_message(stock, alert, mtf_result, quote):
-    emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, alert)
-    note    = alert.get("note", "")
-    overall = mtf_result["overall"]
-    trend_icon = {
-        "strong_bullish": "🟢🟢", "bullish": "🟢",
-        "neutral": "⚪", "bearish": "🔴",
-        "strong_bearish": "🔴🔴", "unknown": "❓"
-    }
-    align_th = {
-        "strong_bullish_all": "🟢🟢🟢 ทุก TF Bullish — แนวโน้มแข็งมาก",
-        "mostly_bullish":     "🟢🟢 ส่วนใหญ่ Bullish — แนวโน้มขาขึ้น",
-        "leaning_bullish":    "🟡🟢 เอนไปทาง Bullish — ยังไม่แข็งแกร่ง",
-        "strong_bearish_all": "🔴🔴🔴 ทุก TF Bearish — ระวังขาลงแรง!",
-        "mostly_bearish":     "🔴🔴 ส่วนใหญ่ Bearish — แนวโน้มขาลง",
-        "leaning_bearish":    "🟡🔴 เอนไปทาง Bearish — ระวัง",
-        "mixed":              "⚪ Mixed — ทิศทางยังไม่ชัด รอสัญญาณ",
-    }
-
-    # Next action by alignment
-    action_map = {
-        "strong_bullish_all": [
-            "1️⃣ Trend แข็งแกร่งทุก TF — ถือ position หรือเข้าใหม่ได้",
-            "2️⃣ ใช้ EMA บน 4H เป็น dynamic support",
-            "3️⃣ Stop Loss ใต้ low ของ swing ล่าสุดบน 1D",
-        ],
-        "mostly_bullish": [
-            "1️⃣ Bias ขาขึ้น — หา Buy setup บน TF เล็ก",
-            "2️⃣ รอ RSI pullback หรือ candle reversal บน 1H/4H",
-            "3️⃣ ตั้ง Stop ใต้ EMA21 บน 4H",
-        ],
-        "leaning_bullish": [
-            "1️⃣ Bias อ่อน — ใช้ position size เล็ก",
-            "2️⃣ ต้องการ signal เพิ่ม เช่น Volume spike หรือ candle pattern",
-            "3️⃣ อย่า all-in — รอยืนยันมากขึ้น",
-        ],
-        "strong_bearish_all": [
-            "1️⃣ ระวัง! ทุก TF ขาลง — ไม่ควรซื้อ",
-            "2️⃣ ถ้าถือ position → พิจารณา cut loss ทันที",
-            "3️⃣ รอ trend กลับตัวก่อนเข้าใหม่",
-        ],
-        "mostly_bearish": [
-            "1️⃣ Bias ขาลง — หลีกเลี่ยงการซื้อ",
-            "2️⃣ ถ้าถือ → tighten stop loss",
-            "3️⃣ รอ MTF กลับมา mostly_bullish ก่อน",
-        ],
-        "mixed": [
-            "1️⃣ สัญญาณยังขัดแย้ง — อย่าเพิ่ง trade",
-            "2️⃣ รอให้ TF ใหญ่ (1D) กลับมา Bullish ก่อน",
-            "3️⃣ ติดตาม alert รอบถัดไป",
-        ],
-    }
-    steps = action_map.get(overall, ["1️⃣ ดูชาร์ทเพิ่มเติมก่อนตัดสินใจ"])
-
-    lines = [
-        f"{emoji} <b>MTF ALERT: {symbol}</b> ({name})", "",
-        f"📡 Alignment: <b>{align_th.get(overall, overall)}</b>",
-        f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
-        f"📊 Bull:{mtf_result['bull_count']}/{mtf_result['total']}  Bear:{mtf_result['bear_count']}/{mtf_result['total']}", "",
-        "⏱ รายละเอียด:",
-    ]
-    for tf, d in mtf_result["timeframes"].items():
-        ti = trend_icon.get(d["trend"], "⚪")
-        rsi_val = d["rsi"]
-        rsi_str = f"RSI={rsi_val}" if rsi_val else ""
-        # RSI warning flags
-        rsi_warn = ""
-        if rsi_val and rsi_val >= 75:
-            rsi_warn = " ⚠️ Overbought"
-        elif rsi_val and rsi_val <= 25:
-            rsi_warn = " 🔥 Extreme Oversold"
-        elif rsi_val and rsi_val >= 70:
-            rsi_warn = " ⚡ Near Overbought"
-        lines.append(f"  {ti} <b>{tf}</b>: {d['trend'].replace('_',' ').upper()}  {rsi_str}{rsi_warn}")
-
+    if tp1:
+        lines.append('  3️⃣ ขายครึ่งหนึ่งที่ <b>${:.2f}</b>  (เป้าแรก)'.format(tp1))
+    if tp2:
+        lines.append('  4️⃣ ขายส่วนที่เหลือที่ <b>${:.2f}</b>  (เป้าสอง)'.format(tp2))
     lines += [
-        "",
-        "📌 <b>สิ่งที่ควรทำ:</b>",
-    ] + [f"  {s}" for s in steps]
-    if note: lines.append(f"\n📋 Note: {note}")
-    lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
-    return "\n".join(lines)
-
+        '  ❌ ถ้าราคาลงถึง {} ขายออกทันที ไม่รอ'.format(stop2_s),
+        '  ❌ ไม่ซื้อเพิ่มถ้าราคายังลงอยู่',
+    ]
+    if note:
+        lines.append('📋 หมายเหตุ: ' + note)
+    lines += ['', '<a href="{}">📊 ดู Chart TradingView</a>'.format(tv), '🕐 {}'.format(now_bkk_str())]
+    return '\n'.join(lines)
 
 def build_score_message(stock, alert, total_score, grade, breakdown, quote):
     emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, alert)
@@ -1861,8 +1802,9 @@ def build_score_message(stock, alert, total_score, grade, breakdown, quote):
     steps = action_map.get(grade, [])
 
     lines = [
-        f"{emoji} <b>SCORE ALERT: {symbol}</b> ({name})", "",
-        f"🎯 Confidence Score: <b>{total_score}/100</b>  [{bar}]",
+        '<b>🎯 ผลวิเคราะห์: {}</b> ({})'.format(symbol, name), '',
+                '━━━━━━━━━━━━━━━━━━━━━━━━━',
+                '📊 คะแนนความเชื่อมั่น: <b>{}/100</b>  [{}]'.format(total_score, bar),
         f"📊 Grade: <b>{grade}</b>  — {grade_label} ({grade_desc})",
         f"📈 Direction: <b>{direction.upper()}</b>  (min score: {min_score})",
         f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
@@ -1916,41 +1858,45 @@ def build_backtest_message(stock, alert, result, quote):
 # ══════════════════════════════════════════════════════════════════════════════
 
 def build_daily_summary(watchlist, quotes_cache):
+    gainers = sorted(
+        [(s['symbol'], quotes_cache[s['symbol']]['price'], quotes_cache[s['symbol']]['change_pct'])
+         for s in watchlist if s['symbol'] in quotes_cache and quotes_cache[s['symbol']]['change_pct'] > 0],
+        key=lambda x: -x[2]
+    )
+    losers = sorted(
+        [(s['symbol'], quotes_cache[s['symbol']]['price'], quotes_cache[s['symbol']]['change_pct'])
+         for s in watchlist if s['symbol'] in quotes_cache and quotes_cache[s['symbol']]['change_pct'] < 0],
+        key=lambda x: x[2]
+    )
     lines = [
-        "📊 <b>Daily Watchlist Summary</b>",
-        f"🕐 {now_bkk_str()}", "",
+        '<b>📊 สรุปประจำวัน — Stock Alert Pro</b>',
+        '🕐 {}'.format(now_bkk_str()), '',
+        'ขึ้น: {} ตัว  |  ลง: {} ตัว  |  ดูอยู่: {} ตัว'.format(len(gainers), len(losers), len(watchlist)),
+        '', '━━━━━━━━━━━━━━━━━━━━━━━━━', '<b>🔥 ขึ้นแรงสุด 5 ตัว:</b>',
     ]
+    for sym, p, chg in gainers[:5]:
+        lines.append('  📈 <b>{}</b> ${:.2f}  +{:.1f}%'.format(sym, p, chg))
+    lines += ['', '<b>💧 ลงแรงสุด 5 ตัว:</b>']
+    for sym, p, chg in losers[:5]:
+        lines.append('  📉 <b>{}</b> ${:.2f}  {:.1f}%'.format(sym, p, chg))
+    lines += ['', '━━━━━━━━━━━━━━━━━━━━━━━━━', '<b>📋 รายชื่อทั้งหมด:</b>']
     for stock in watchlist:
-        symbol = stock["symbol"]
-        name   = stock["name"]
-        quote  = quotes_cache.get(symbol)
-        if not quote:
-            lines.append(f"• <b>{symbol}</b> — ⚠️ No data")
+        sym  = stock['symbol']
+        q    = quotes_cache.get(sym)
+        if not q:
+            lines.append('  • {} — ไม่มีข้อมูล'.format(sym))
             continue
-        price = quote["price"]
-        pct   = quote["change_pct"]
-        arrow = "📈" if pct >= 0 else "📉"
-        sign  = "+" if pct >= 0 else ""
-        lines.append(
-            f"• <b>{symbol}</b> ({name})\n"
-            f"  💰 ${price:.4f}  {arrow} {sign}{pct:.2f}%"
-        )
-        for alert in stock.get("alerts", []):
-            if alert["type"] == "price_target":
-                target   = alert["target_price"]
-                diff_pct = ((price - target) / target) * 100
-                diff_s   = "+" if diff_pct >= 0 else ""
-                lines.append(
-                    f"  🎯 Target ${target:.4f} — "
-                    f"{'✅ HIT' if abs(diff_pct) < 0.5 else f'{diff_s}{diff_pct:.1f}% away'}"
-                )
-        lines.append("")
-    return "\n".join(lines)
+        arr = '📈' if q['change_pct'] >= 0 else '📉'
+        sgn = '+' if q['change_pct'] >= 0 else ''
+        lines.append('  • <b>{}</b> ${:.2f}  {} {}{:.1f}%'.format(sym, q['price'], arr, sgn, q['change_pct']))
+    lines += [
+        '',
+        '━━━━━━━━━━━━━━━━━━━━━━━━━',
+        '💡 กฎสำคัญ: ตั้ง Stop Loss ทุกครั้ง — ห้ามข้าม',
+        '🤖 Stock Alert Pro v2  •  {}'.format(now_bkk_str()),
+    ]
+    return '\n'.join(lines)
 
-
-# ══════════════════════════════════════════════════════════════════════════════
-#  MAIN
-# ══════════════════════════════════════════════════════════════════════════════
 
 def main():
     config    = load_json(WATCHLIST_PATH, {})
@@ -1980,6 +1926,20 @@ def main():
     except Exception:
         pass
 
+
+    # ── Macro: BTC ตรวจ crypto-linked stocks ──────
+    btc_down  = False
+    btc_pct   = 0.0
+    BTC_LINKED = {'RIOT', 'MARA', 'CLSK', 'HUT', 'BITF'}
+    try:
+        btc_q = fetch_quote('BTC-USD')
+        if btc_q:
+            btc_pct  = btc_q.get('change_pct', 0)
+            btc_down = btc_pct < -3.0
+            btc_lbl  = 'CRASH' if btc_down else 'ปกติ'
+            print('[Macro] BTC  {:+.2f}%  {}'.format(btc_pct, btc_lbl))
+    except Exception:
+        pass
     print(f"[{now_str()}] เริ่ม alert check — {len(watchlist)} symbols")
 
     for stock in watchlist:
@@ -1998,14 +1958,28 @@ def main():
         print(f"  [{symbol}] Price=${quote['price']:.4f}  Chg={quote['change_pct']:+.2f}%  Vol={quote['volume']:.0f}")
 
         sym_state = state.get(symbol, {})
-
-        # ── P6: ติดตาม BUY signals ที่ fired ใน run นี้ เพื่อ trigger position_size ──
+        has_open_position      = sym_state.get('open_position', False)
         buy_triggered_this_run = False
+
+        suppress_buy    = False
+        suppress_reason = ''
+        spy_chg = spy_q.get('change_pct', 0) if spy_q else 0
+        if market_down and not has_open_position:
+            suppress_buy    = True
+            suppress_reason = 'SPY ลง {:.1f}% ตลาด down day'.format(spy_chg)
+        if btc_down and symbol in BTC_LINKED and not has_open_position:
+            suppress_buy    = True
+            suppress_reason = 'BTC ลง {:.1f}% กดดัน {}'.format(btc_pct, symbol)
+        if suppress_buy:
+            print('  [{}] Suppress BUY: {}'.format(symbol, suppress_reason))
 
         for alert in stock.get("alerts", []):
             alert_id  = alert["id"]
             atype     = alert["type"]
 
+            if suppress_buy and alert.get('action', '') == 'BUY':
+                print('  [{}] ข้าม macro suppress: {}'.format(alert_id, suppress_reason))
+                continue
             # ── P2+P7: Dynamic cooldown สำหรับ PCT_DROP ──────────────────
             if "DROP" in alert_id:
                 # market down day → cooldown 480m, ปกติ 60m
@@ -2018,7 +1992,9 @@ def main():
                 if not buy_triggered_this_run:
                     print(f"  [{alert_id}] ข้าม: ยังไม่มี BUY signal ใน run นี้")
                     continue
-                # reset cooldown ให้ 0 เพื่อให้ fire ตาม BUY เสมอ
+                if has_open_position:
+                    print('  [{}] ข้าม: มี open position อยู่แล้ว'.format(alert_id))
+                    continue
                 cooldown = 0
 
             # Cooldown check
@@ -2139,6 +2115,19 @@ def main():
                     merged = list(dict.fromkeys(old_seen + new_hashes))[-50:]
                     state[symbol][alert_id] = {"last_fired": now_str(), "seen_news": merged}
 
+                if atype == 'position_size':
+                    state[symbol]['open_position'] = True
+                    state[symbol]['open_entry']    = quote['price']
+                    state[symbol]['open_time']     = now_str()
+                if alert.get('action') == 'SELL' or 'SL_BREAK' in alert_id or 'MA_DEATH' in alert_id:
+                    state[symbol]['open_position'] = False
+                # ── track open/close position ──────────────────────────
+                if atype == 'position_size':
+                    state[symbol]['open_position'] = True
+                    state[symbol]['open_entry']    = quote['price']
+                    state[symbol]['open_time']     = now_str()
+                if alert.get('action') == 'SELL' or 'SL_BREAK' in alert_id or 'MA_DEATH' in alert_id:
+                    state[symbol]['open_position'] = False
                 # ── P6: mark ว่า BUY fired ────────────────────────────────
                 if alert.get("action") == "BUY":
                     buy_triggered_this_run = True
