@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T18:04:29Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.380099773406982,
-    "change_pct": -10.181973732771581,
-    "value": -10.181973732771581
-  },
-  {
-    "timestamp": "2026-06-05T18:07:20Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_PCT_DROP",
-    "type": "percent_change",
-    "price": 325.55999755859375,
-    "change_pct": -6.9828578404017865,
-    "value": -6.9828578404017865
-  },
-  {
     "timestamp": "2026-06-05T18:09:04Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 15.850000381469727,
     "change_pct": -15.736308445137015,
     "value": 0
+  },
+  {
+    "timestamp": "2026-06-06T06:49:51Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 5.179999828338623,
+    "change_pct": -13.522540428403627,
+    "value": 2.635978520867688
+  },
+  {
+    "timestamp": "2026-06-06T06:49:51Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_POS_SIZE",
+    "type": "position_size",
+    "price": 5.179999828338623,
+    "change_pct": -13.522540428403627,
+    "value": 1
   }
 ]
