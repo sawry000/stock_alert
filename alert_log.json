@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T16:14:09Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "price": 60.63999938964844,
-    "change_pct": -5.250000953674316,
-    "value": -5.250000953674316
-  },
-  {
     "timestamp": "2026-06-05T16:24:01Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 5.179999828338623,
     "change_pct": -13.522540428403627,
     "value": -13.522540428403627
+  },
+  {
+    "timestamp": "2026-06-06T02:27:22Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "price": 317.05999755859375,
+    "change_pct": -9.411429268973215,
+    "value": -9.411429268973215
   }
 ]
