@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T17:07:39Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 392.0299987792969,
-    "change_pct": -5.077482135763469,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-05T17:08:24Z",
     "symbol": "TYGO",
     "alert_id": "TYGO_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 5.179999828338623,
     "change_pct": -13.522540428403627,
     "value": -13.522540428403627
+  },
+  {
+    "timestamp": "2026-06-06T03:27:26Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "price": 317.05999755859375,
+    "change_pct": -9.411429268973215,
+    "value": -9.411429268973215
   }
 ]
