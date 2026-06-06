@@ -149,14 +149,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "COHR_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -357,14 +357,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "ALAB_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -442,7 +442,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "ENPH_VOL_3X",
@@ -534,14 +534,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "ENPH_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -710,14 +710,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "RIOT_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -889,7 +889,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "NAVN_VOL_3X",
@@ -967,14 +967,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "NAVN_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -1146,7 +1146,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "ICHR_VOL_3X",
@@ -1224,14 +1224,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "ICHR_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -1309,7 +1309,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AAOI_VOL_3X",
@@ -1401,14 +1401,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AAOI_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -1486,7 +1486,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AIXI_VOL_3X",
@@ -1578,14 +1578,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AIXI_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -1757,7 +1757,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "HLIT_VOL_3X",
@@ -1835,14 +1835,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "HLIT_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -1920,7 +1920,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "LNAI_VOL_3X",
@@ -2012,14 +2012,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "LNAI_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -2191,7 +2191,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "XMTR_VOL_3X",
@@ -2269,14 +2269,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "XMTR_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -2448,14 +2448,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "FLNC_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -2533,7 +2533,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "RDW_VOL_3X",
@@ -2625,14 +2625,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "RDW_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -2804,7 +2804,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AEHR_VOL_3X",
@@ -2882,14 +2882,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AEHR_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -2967,7 +2967,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "TYGO_VOL_3X",
@@ -3059,14 +3059,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "TYGO_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -3144,7 +3144,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "INOD_VOL_3X",
@@ -3236,14 +3236,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "INOD_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -3415,7 +3415,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "DDD_VOL_3X",
@@ -3493,14 +3493,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "DDD_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -3672,7 +3672,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "OPRX_VOL_3X",
@@ -3750,14 +3750,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "OPRX_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -3850,7 +3850,7 @@
           "days": 180,
           "hold_days": 3,
           "min_win_rate": 52,
-          "min_avg_return": 1
+          "min_avg_return": 1.0
         },
         {
           "id": "HIMS_RSI_OS_BT",
@@ -3919,7 +3919,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "HIMS_VOL_3X",
@@ -3997,14 +3997,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "HIMS_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -4082,7 +4082,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "IOVA_VOL_3X",
@@ -4174,14 +4174,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "IOVA_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -4259,7 +4259,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "LFMD_VOL_3X",
@@ -4351,14 +4351,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "LFMD_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -4436,7 +4436,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "OPTX_VOL_3X",
@@ -4528,14 +4528,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "OPTX_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -4707,14 +4707,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "TGEN_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -4807,7 +4807,7 @@
           "days": 180,
           "hold_days": 3,
           "min_win_rate": 52,
-          "min_avg_return": 1
+          "min_avg_return": 1.0
         },
         {
           "id": "WGS_RSI_OS_BT",
@@ -4876,14 +4876,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "WGS_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -4961,7 +4961,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "NLST_VOL_3X",
@@ -5053,14 +5053,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "NLST_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -5232,14 +5232,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "MRAM_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -5317,7 +5317,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "UAMY_VOL_3X",
@@ -5409,14 +5409,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "UAMY_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -5494,7 +5494,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "WYFI_VOL_3X",
@@ -5586,14 +5586,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "WYFI_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -5671,7 +5671,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "ANNA_VOL_3X",
@@ -5763,14 +5763,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "ANNA_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -5848,7 +5848,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "BLLN_VOL_3X",
@@ -5940,14 +5940,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "BLLN_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -6025,7 +6025,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "CLPT_VOL_3X",
@@ -6117,14 +6117,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "CLPT_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -6202,7 +6202,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AGL_VOL_3X",
@@ -6294,14 +6294,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AGL_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -6473,14 +6473,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "VSEC_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -6564,7 +6564,7 @@
           "days": 180,
           "hold_days": 3,
           "min_win_rate": 52,
-          "min_avg_return": 1
+          "min_avg_return": 1.0
         }
       ]
     },
@@ -6682,14 +6682,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "PSIX_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -6825,14 +6825,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "VICR_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -6916,7 +6916,7 @@
           "days": 180,
           "hold_days": 3,
           "min_win_rate": 52,
-          "min_avg_return": 1
+          "min_avg_return": 1.0
         }
       ]
     },
@@ -7034,14 +7034,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AMSC_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -7110,7 +7110,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AMSC_VOL_3X",
@@ -7291,14 +7291,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "ASPN_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -7434,7 +7434,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "FSLY_VOL_3X",
@@ -7512,14 +7512,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "FSLY_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -7691,14 +7691,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "DOMO_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -7870,14 +7870,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "SHLS_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -7919,7 +7919,7 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AMPX_VOL_3X",
@@ -8011,14 +8011,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AMPX_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -8190,14 +8190,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "LTRX_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -8333,14 +8333,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "FPS_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -8476,14 +8476,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "BOBS_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -8619,14 +8619,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "ISSC_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -8798,14 +8798,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "BRCB_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -8941,14 +8941,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "BWEN_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -9120,14 +9120,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "VELO_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -9299,14 +9299,14 @@
           "auto_lookback": 60,
           "auto_swing_bars": 2,
           "auto_min_dist_pct": 0.5,
-          "auto_max_dist_pct": 25
+          "auto_max_dist_pct": 25.0
         },
         {
           "id": "AMPG_PCT_DROP",
           "emoji": "📉",
           "type": "percent_change",
           "action": "SELL",
-          "cooldown_minutes": 60,
+          "cooldown_minutes": 480,
           "note": "Drop ≥5% single day SL",
           "enabled": true,
           "threshold_pct": 5,
@@ -9325,6 +9325,175 @@
           "interval": "1d",
           "fast_period": 9,
           "slow_period": 21
+        }
+      ]
+    },
+    {
+      "symbol": "GLD",
+      "name": "SPDR Gold Shares ETF",
+      "market": "US",
+      "timeframe": "1D",
+      "enabled": true,
+      "alerts": [
+        {
+          "id": "GLD_RSI_OS_1D",
+          "emoji": "💚",
+          "type": "rsi",
+          "action": "BUY",
+          "cooldown_minutes": 360,
+          "note": "RSI Oversold 1D — gold cycle entry",
+          "enabled": true,
+          "condition": "oversold",
+          "interval": "1d",
+          "period": 14,
+          "oversold_level": 30,
+          "overbought_level": 70
+        },
+        {
+          "id": "GLD_RSI_OS_4H",
+          "emoji": "💛",
+          "type": "rsi",
+          "action": "BUY",
+          "cooldown_minutes": 120,
+          "note": "RSI Oversold 4H confirm",
+          "enabled": true,
+          "condition": "oversold",
+          "interval": "4h",
+          "period": 14,
+          "oversold_level": 32,
+          "overbought_level": 70
+        },
+        {
+          "id": "GLD_VOL_SPIKE",
+          "emoji": "🔊",
+          "type": "volume_spike",
+          "action": "BUY",
+          "cooldown_minutes": 60,
+          "note": "Volume spike 2.5x",
+          "enabled": true,
+          "multiplier": 2.5
+        },
+        {
+          "id": "GLD_MA_GOLDEN",
+          "emoji": "✨",
+          "type": "ma_crossover",
+          "action": "BUY",
+          "cooldown_minutes": 1440,
+          "note": "EMA9/21 Golden Cross 1D",
+          "enabled": true,
+          "condition": "golden_cross",
+          "ma_type": "EMA",
+          "interval": "1d",
+          "fast_period": 9,
+          "slow_period": 21
+        },
+        {
+          "id": "GLD_CP_BULL",
+          "emoji": "🕯️",
+          "type": "candle_pattern",
+          "action": "BUY",
+          "cooldown_minutes": 480,
+          "note": "Bullish reversal candle",
+          "enabled": true,
+          "patterns": [
+            "hammer",
+            "bullish_engulfing",
+            "morning_star"
+          ],
+          "interval": "1d",
+          "match_any": true
+        },
+        {
+          "id": "GLD_SCORE_70",
+          "emoji": "🎯",
+          "type": "alert_score",
+          "action": "BUY",
+          "cooldown_minutes": 240,
+          "note": "Score ≥70 bullish confirm",
+          "enabled": true,
+          "direction": "bullish",
+          "min_score": 70,
+          "interval": "1d"
+        },
+        {
+          "id": "GLD_POS_SIZE",
+          "emoji": "💰",
+          "type": "position_size",
+          "action": "",
+          "cooldown_minutes": 0,
+          "note": "Position size 2% risk — $100 account",
+          "enabled": true,
+          "condition": "triggered_always",
+          "account_size": 100,
+          "risk_pct": 2,
+          "method": "fixed_risk",
+          "win_rate": 0.6
+        },
+        {
+          "id": "GLD_SL_BREAK",
+          "emoji": "🚨",
+          "type": "support_resistance",
+          "action": "SELL",
+          "cooldown_minutes": 30,
+          "note": "Auto stop loss — แนวรับอัตโนมัติ",
+          "enabled": true,
+          "level": 0,
+          "direction": "break_below",
+          "auto_lookback": 60,
+          "auto_swing_bars": 2,
+          "auto_min_dist_pct": 0.5,
+          "auto_max_dist_pct": 25.0
+        },
+        {
+          "id": "GLD_PCT_DROP",
+          "emoji": "📉",
+          "type": "percent_change",
+          "action": "SELL",
+          "cooldown_minutes": 480,
+          "note": "Drop ≥3% SL (gold ใช้ 3% แคบกว่าหุ้น)",
+          "enabled": true,
+          "threshold_pct": 3,
+          "direction": "down"
+        },
+        {
+          "id": "GLD_MA_DEATH",
+          "emoji": "💀",
+          "type": "ma_crossover",
+          "action": "SELL",
+          "cooldown_minutes": 1440,
+          "note": "Death Cross warning 1D",
+          "enabled": true,
+          "condition": "death_cross",
+          "ma_type": "EMA",
+          "interval": "1d",
+          "fast_period": 9,
+          "slow_period": 21
+        },
+        {
+          "id": "GLD_NEWS_BAD",
+          "emoji": "🔴",
+          "type": "news_sentiment",
+          "action": "SELL",
+          "cooldown_minutes": 60,
+          "note": "Negative news — macro risk",
+          "enabled": true,
+          "condition": "strong_negative",
+          "hours_back": 6,
+          "max_news": 3,
+          "min_news": 1,
+          "translate": true
+        },
+        {
+          "id": "GLD_SCORE_BEAR",
+          "emoji": "🐻",
+          "type": "alert_score",
+          "action": "SELL",
+          "cooldown_minutes": 180,
+          "note": "Bearish score ≥72 danger",
+          "enabled": true,
+          "direction": "bearish",
+          "min_score": 72,
+          "interval": "1d"
         }
       ]
     }
