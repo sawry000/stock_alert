@@ -897,15 +897,21 @@ def check_news_sentiment(alert, symbol, sym_state=None):
 
 def calc_position_size(alert, symbol, entry_price=None):
     """
-    คำนวณ position size
+    คำนวณ position size สำหรับ account $100 ต่อไม้
+    Logic: ซื้อให้ได้มากที่สุดโดยไม่เกิน account_size
+      - shares_int  = floor(account / price)   → เต็มหุ้น ไม่เกิน $100
+      - shares_frac = account / price           → fractional (broker รองรับ)
+    Stop Loss คำนวณจาก ATR×2 (cap 15%) หรือ fallback 5%
     Returns: dict ผลลัพธ์
     """
-    account = alert.get("account_size", 10000)
-    risk_pct = alert.get("risk_pct", 2.0)
-    method  = alert.get("method", "fixed_risk")
-    win_rate = alert.get("win_rate", 0.55)
-    stop_pct = alert.get("stop_pct", None)
-    target_pct = alert.get("target_pct", None)
+    import math
+
+    account    = alert.get("account_size", 100)
+    risk_pct   = alert.get("risk_pct",    2.0)   # ใช้สำหรับแสดง risk amount เท่านั้น
+    method     = alert.get("method",      "fixed_risk")
+    win_rate   = alert.get("win_rate",    0.55)
+    stop_pct   = alert.get("stop_pct",    None)
+    target_pct = alert.get("target_pct",  None)
 
     if entry_price is None:
         q = fetch_quote(symbol)
@@ -914,53 +920,70 @@ def calc_position_size(alert, symbol, entry_price=None):
     if entry_price <= 0:
         return None
 
-    # คำนวณ stop โดยใช้ ATR ถ้าไม่ได้กำหนด
+    # ── Stop Loss ด้วย ATR×2 (cap 15%) ──────────────────────────────
+    atr_val = None
     if stop_pct is None:
         hist = fetch_history(symbol, period="90d", interval="1d")
         if hist is not None and len(hist) >= 16:
             highs  = list(hist["High"].astype(float))
             lows   = list(hist["Low"].astype(float))
             closes = list(hist["Close"].astype(float))
-            atr = _calc_atr(highs, lows, closes, 14)
-            if atr:
-                stop_pct = (atr * 2 / entry_price) * 100
+            atr_val = _calc_atr(highs, lows, closes, 14)
+            if atr_val:
+                raw_stop_pct = (atr_val * 2 / entry_price) * 100
+                stop_pct     = min(raw_stop_pct, 15.0)
             else:
-                stop_pct = 2.0
+                stop_pct = 5.0
         else:
-            stop_pct = 2.0
+            stop_pct = 5.0
 
-    stop_price   = entry_price * (1 - stop_pct / 100)
-    risk_per_sh  = entry_price - stop_price
-    risk_amount  = account * (risk_pct / 100)
-    shares       = int(risk_amount / risk_per_sh) if risk_per_sh > 0 else 0
-    pos_value    = shares * entry_price
-    pos_pct      = (pos_value / account) * 100 if account > 0 else 0
+    stop_price  = entry_price * (1 - stop_pct / 100)
+    risk_per_sh = entry_price - stop_price
+
+    # ── CORE LOGIC: max shares ≤ account ─────────────────────────────
+    shares_frac  = account / entry_price                   # fractional exact
+    shares_int   = math.floor(account / entry_price)       # เต็มหุ้น ไม่เกิน $100
+    is_frac      = shares_int == 0                         # ราคาแพงกว่า $100
+
+    # display: ถ้าซื้อเต็มหุ้นไม่ได้ → ใช้ fractional
+    display_shares = round(shares_frac, 7) if is_frac else shares_int
+
+    pos_value   = round(display_shares * entry_price, 2)
+    pos_pct     = round(pos_value / account * 100, 1) if account > 0 else 0
+    actual_risk = round(display_shares * risk_per_sh, 2)
+    risk_amount = round(account * risk_pct / 100, 2)       # แสดง reference risk
 
     result = {
-        "entry": round(entry_price, 4),
-        "stop":  round(stop_price, 4),
-        "stop_pct": round(stop_pct, 2),
-        "shares": shares,
-        "pos_value": round(pos_value, 2),
-        "pos_pct":   round(pos_pct, 1),
-        "risk_amount": round(risk_amount, 2),
-        "risk_pct": risk_pct,
-        "method": method,
+        "entry":          round(entry_price, 4),
+        "stop":           round(stop_price,  4),
+        "stop_pct":       round(stop_pct,    2),
+        "shares":         display_shares,
+        "shares_int":     shares_int,
+        "shares_frac":    round(shares_frac, 7),
+        "is_fractional":  is_frac,
+        "pos_value":      pos_value,
+        "pos_pct":        pos_pct,
+        "risk_amount":    risk_amount,
+        "actual_risk":    actual_risk,
+        "risk_per_sh":    round(risk_per_sh, 4),
+        "risk_pct":       risk_pct,
+        "method":         method,
+        "account":        account,
+        "atr":            round(atr_val, 4) if atr_val else None,
     }
 
     if target_pct:
         target_price = entry_price * (1 + target_pct / 100)
         rr = target_pct / stop_pct if stop_pct > 0 else 0
-        result["target"]   = round(target_price, 4)
+        result["target"]     = round(target_price, 4)
         result["target_pct"] = target_pct
-        result["rr_ratio"] = round(rr, 2)
+        result["rr_ratio"]   = round(rr, 2)
+        result["target_usd"] = round(display_shares * (target_price - entry_price), 2)
 
-    # Kelly
     if method == "half_kelly" and target_pct and stop_pct:
-        rr = target_pct / stop_pct
+        rr    = target_pct / stop_pct
         kelly = max(0, win_rate - (1 - win_rate) / rr)
-        hk_pct = kelly / 2 * 100
-        result["half_kelly_pct"] = round(hk_pct, 1)
+        result["half_kelly_pct"] = round(kelly / 2 * 100, 1)
 
     return result
 
@@ -1641,47 +1664,73 @@ def build_news_message(stock, alert, news_list, quote):
 
 def build_position_message(stock, alert, pos, quote):
     emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, alert)
-    note = alert.get("note", "")
+    note    = alert.get("note", "")
+    account = pos.get("account", 100)
 
-    size_warn = "✅ ขนาด OK" if pos["pos_pct"] <= 20 else "⚠️ Position ใหญ่ — ระวัง Risk"
-    rr_line  = f"  • R:R Ratio: <b>1:{pos['rr_ratio']:.1f}</b>" if pos.get("rr_ratio") else ""
-    tgt_line = f"  • Target: <b>${pos['target']:.4f}</b> (+{pos.get('target_pct',0):.1f}%)" if pos.get("target") else ""
-    hk_line  = f"  • Half-Kelly: <b>{pos.get('half_kelly_pct',0):.1f}%</b> พอร์ต" if pos.get("half_kelly_pct") else ""
+    is_frac = pos.get("is_fractional", False)
+    shares  = pos["shares"]
 
-    # Risk color assessment
-    if pos["pos_pct"] > 20:
-        risk_note = "⚠️ ขนาด position เกิน 20% — พิจารณาลด shares"
-    elif pos["pos_pct"] > 15:
-        risk_note = "🟡 ขนาด position ปานกลาง — ติดตามใกล้ชิด"
+    # ── แสดง shares ──────────────────────────────────────────────────
+    if is_frac:
+        shares_line   = f"<b>{shares:.7f} หุ้น</b> (fractional)"
+        broker_note   = "\n  ⚠️ ต้องใช้ broker ที่รองรับ <b>Fractional Shares</b> (Webull / IBKR)"
+        action_shares = f"<b>{shares:.7f} หุ้น</b>"
     else:
-        risk_note = "🟢 ขนาด position เหมาะสม — ความเสี่ยงอยู่ในกรอบ"
+        shares_line   = f"<b>{int(shares):,} หุ้น</b>"
+        broker_note   = ""
+        action_shares = f"<b>{int(shares):,} หุ้น</b>"
+
+    # ── Risk color ────────────────────────────────────────────────────
+    pp = pos.get("pos_pct", 0)
+    if pp >= 95:
+        risk_color = "🟢 ใช้งบครบ — Fully deployed"
+    elif pp >= 80:
+        risk_color = "🟢 ขนาด position เหมาะสม"
+    elif pp >= 50:
+        risk_color = "🟡 ใช้งบ ~50% — พิจารณาเพิ่มได้"
+    else:
+        risk_color = "🟡 ใช้งบน้อย — ราคาหุ้นสูงเกิน $100"
+
+    leftover = round(account - pos["pos_value"], 2)
 
     lines = [
-        f"{emoji} <b>POSITION SIZE: {symbol}</b> ({name})", "",
-        f"💰 Entry Reference: <b>${pos['entry']:.4f}</b>  {arrow} {sign}{pct:.2f}%",
+        f"💰 <b>POSITION SIZE: {symbol}</b> ({name})", "",
+        f"💰 Entry: <b>${pos['entry']:.4f}</b>  {arrow} {sign}{pct:.2f}%",
         f"🛑 Stop Loss: <b>${pos['stop']:.4f}</b>  (-{pos['stop_pct']:.1f}% จาก entry)",
+        "",
+        f"📊 ผลคำนวณ (max shares ≤ ${account:.0f}):",
+        f"  • จำนวน: {shares_line}",
+        f"  • มูลค่า: <b>${pos['pos_value']:,.2f}</b>  ({pos['pos_pct']:.1f}% ของ ${account:.0f})",
+        f"  • เงินเหลือ: <b>${leftover:.2f}</b>",
+        f"  • Risk ถ้า SL hit: <b>${pos['actual_risk']:.2f}</b>  ({pos['actual_risk']/account*100:.1f}% พอร์ต)",
     ]
-    if tgt_line: lines.append(tgt_line)
+
+    if pos.get("atr"):
+        lines.append(f"  • ATR(14): <b>${pos['atr']:.4f}</b>  (stop = ATR×2)")
+    if pos.get("rr_ratio"):
+        lines.append(f"  • R:R Ratio: <b>1:{pos['rr_ratio']:.1f}</b>")
+    if pos.get("target"):
+        lines.append(f"  • Target: <b>${pos['target']:.4f}</b>  (+{pos.get('target_pct',0):.1f}%)")
+    if pos.get("target_usd"):
+        lines.append(f"  • กำไรเป้าหมาย: <b>${pos['target_usd']:.2f}</b>")
+
     lines += [
         "",
-        f"📊 ผลคำนวณ ({pos['method']}):",
-        f"  • จำนวน: <b>{pos['shares']:,} หุ้น</b>",
-        f"  • มูลค่า: <b>${pos['pos_value']:,.2f}</b>  ({pos['pos_pct']:.1f}% พอร์ต)",
-        f"  • Risk: <b>${pos['risk_amount']:,.2f}</b>  ({pos['risk_pct']}% พอร์ต)",
+        f"💡 {risk_color}",
     ]
-    if rr_line: lines.append(rr_line)
-    if hk_line: lines.append(hk_line)
+
+    if broker_note:
+        lines.append(broker_note)
+
     lines += [
-        "",
-        f"{size_warn}",
-        f"💡 {risk_note}",
         "",
         "📌 <b>สิ่งที่ควรทำ:</b>",
         f"  1️⃣ ยืนยัน signal (RSI / MTF / Candle) ก่อนเข้าจริง",
-        f"  2️⃣ เข้าซื้อ {pos['shares']:,} หุ้น ที่ราคาใกล้ ${pos['entry']:.2f}",
-        f"  3️⃣ ตั้ง Stop Loss ที่ ${pos['stop']:.2f} ทันทีหลังเข้า",
+        f"  2️⃣ เข้าซื้อ {action_shares} ที่ราคาใกล้ ${pos['entry']:.2f}  (ใช้ ${pos['pos_value']:.2f})",
+        f"  3️⃣ ตั้ง Stop Loss ที่ <b>${pos['stop']:.2f}</b> ทันทีหลังเข้า",
         f"  4️⃣ ไม่ Average Down ถ้า price ลงหา Stop",
     ]
+
     if note: lines.append(f"\n📋 Note: {note}")
     lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
     return "\n".join(lines)
