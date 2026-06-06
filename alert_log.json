@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T15:02:22Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 409.5,
-    "change_pct": -0.847457627118644,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-05T15:03:03Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_POS_SIZE",
-    "type": "position_size",
-    "price": 108.947998046875,
-    "change_pct": -5.072755905833402,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-05T15:03:08Z",
     "symbol": "TYGO",
     "alert_id": "TYGO_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 15.850000381469727,
     "change_pct": -15.736308445137015,
     "value": -15.736308445137015
+  },
+  {
+    "timestamp": "2026-06-06T01:17:21Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "price": 376.989990234375,
+    "change_pct": -8.719130693855933,
+    "value": -8.719130693855933
+  },
+  {
+    "timestamp": "2026-06-06T01:17:52Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.450000047683716,
+    "change_pct": -13.732392687193101,
+    "value": -13.732392687193101
   }
 ]
