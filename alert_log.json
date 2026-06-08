@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T21:53:38Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.940000057220459,
-    "change_pct": -5.769228935241703,
-    "value": -5.769228935241703
-  },
-  {
     "timestamp": "2026-06-05T21:53:51Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 171.3000030517578,
     "change_pct": -5.128487454719865,
     "value": -5.128487454719865
+  },
+  {
+    "timestamp": "2026-06-08T17:58:25Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 102.97000122070312,
+    "change_pct": 5.071429817044005,
+    "value": 5.071429817044005
   }
 ]
