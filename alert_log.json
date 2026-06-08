@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T21:57:42Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_DROP",
-    "type": "percent_change",
-    "price": 177.0,
-    "change_pct": -9.601680489437946,
-    "value": -9.601680489437946
-  },
-  {
     "timestamp": "2026-06-05T21:57:56Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 5.885000228881836,
     "change_pct": 13.610043028606878,
     "value": 2.550381798057695
+  },
+  {
+    "timestamp": "2026-06-08T18:27:25Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 351.5199890136719,
+    "change_pct": 13.948584723547558,
+    "value": 2
   }
 ]
