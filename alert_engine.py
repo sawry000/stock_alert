@@ -1857,6 +1857,74 @@ def build_backtest_message(stock, alert, result, quote):
 #  DAILY SUMMARY
 # ══════════════════════════════════════════════════════════════════════════════
 
+def build_mtf_message(stock, alert, mtf_result, quote):
+    emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, alert)
+    note        = alert.get("note", "")
+    action      = alert.get("action", "")
+    required    = alert.get("required_alignment", "mostly_bullish")
+    timeframes  = mtf_result.get("timeframes", {})
+    overall     = mtf_result.get("overall", "mixed")
+    bull_count  = mtf_result.get("bull_count", 0)
+    bear_count  = mtf_result.get("bear_count", 0)
+    total       = mtf_result.get("total", len(timeframes))
+
+    overall_info = {
+        "strong_bullish_all": ("🟢🟢 Strong Bullish ทุก TF", "สัญญาณขาขึ้นแข็งมาก — เชื่อถือได้สูง"),
+        "mostly_bullish":     ("🟢 Mostly Bullish", "ส่วนใหญ่ขาขึ้น — bias ดี"),
+        "strong_bearish_all": ("🔴🔴 Strong Bearish ทุก TF", "สัญญาณขาลงแข็งมาก — ระวัง"),
+        "mostly_bearish":     ("🔴 Mostly Bearish", "ส่วนใหญ่ขาลง — หลีกเลี่ยงซื้อ"),
+        "leaning_bullish":    ("🟡 Leaning Bullish", "เอียงขาขึ้น แต่ยังไม่ชัด"),
+        "leaning_bearish":    ("🟡 Leaning Bearish", "เอียงขาลง รอยืนยัน"),
+        "mixed":              ("⚪ Mixed", "สัญญาณขัดแย้ง — รอดูทิศทาง"),
+    }
+    overall_label, overall_desc = overall_info.get(overall, (overall, ""))
+
+    trend_icon = {"strong_bullish": "🟢🟢", "bullish": "🟢", "neutral": "🟡",
+                  "bearish": "🔴", "strong_bearish": "🔴🔴", "unknown": "⚪"}
+
+    tf_lines = []
+    for tf, info in timeframes.items():
+        t     = info.get("trend", "unknown")
+        score = info.get("score", 0)
+        rsi   = info.get("rsi")
+        icon  = trend_icon.get(t, "⚪")
+        rsi_s = f" RSI={rsi}" if rsi is not None else ""
+        tf_lines.append(f"  • {tf}: {icon} {t}  (score {score:+d}{rsi_s})")
+
+    is_bull = "bullish" in overall
+    if is_bull:
+        steps = [
+            "1️⃣ MTF Bullish aligned — หา buy setup บน TF เล็ก",
+            "2️⃣ รอ RSI pullback บน 1H ก่อนเข้า",
+            "3️⃣ Stop ใต้ EMA21 ของ TF ที่เข้า",
+        ]
+    else:
+        steps = [
+            "1️⃣ MTF ขัดแย้ง/ขาลง — หลีกเลี่ยงซื้อใหม่",
+            "2️⃣ ถ้าถือ position → review stop ให้แน่น",
+            "3️⃣ รอ overall กลับเป็น bullish ก่อน",
+        ]
+
+    lines = [
+        f"{emoji} <b>MTF ALIGNMENT ALERT: {symbol}</b> ({name})", "",
+        f"⚡ {overall_label} — {overall_desc}",
+        f"📊 Bull: {bull_count}/{total}  Bear: {bear_count}/{total}",
+        f"💰 Price: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
+        "",
+        "🕐 Timeframe Analysis:",
+    ] + tf_lines
+    if action:
+        lines.append(f"🎯 Signal: <b>{action}</b>")
+    lines += [
+        "",
+        "📌 <b>สิ่งที่ควรทำ:</b>",
+    ] + [f"  {s}" for s in steps]
+    if note:
+        lines.append(f"\n📋 Note: {note}")
+    lines += ["", f"📊 <a href='{tv}'>TradingView</a>", f"🕐 {now_bkk_str()}"]
+    return "\n".join(lines)
+
+
 def build_daily_summary(watchlist, quotes_cache):
     gainers = sorted(
         [(s['symbol'], quotes_cache[s['symbol']]['price'], quotes_cache[s['symbol']]['change_pct'])
@@ -2115,12 +2183,6 @@ def main():
                     merged = list(dict.fromkeys(old_seen + new_hashes))[-50:]
                     state[symbol][alert_id] = {"last_fired": now_str(), "seen_news": merged}
 
-                if atype == 'position_size':
-                    state[symbol]['open_position'] = True
-                    state[symbol]['open_entry']    = quote['price']
-                    state[symbol]['open_time']     = now_str()
-                if alert.get('action') == 'SELL' or 'SL_BREAK' in alert_id or 'MA_DEATH' in alert_id:
-                    state[symbol]['open_position'] = False
                 # ── track open/close position ──────────────────────────
                 if atype == 'position_size':
                     state[symbol]['open_position'] = True
