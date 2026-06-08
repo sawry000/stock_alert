@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T22:14:21Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_RSI_OS_4H",
-    "type": "rsi",
-    "price": 42.34000015258789,
-    "change_pct": -8.533160180194661,
-    "value": 31.31
-  },
-  {
     "timestamp": "2026-06-05T22:14:32Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 6.570000171661377,
     "change_pct": 26.833980147903034,
     "value": 4.036210984143954
+  },
+  {
+    "timestamp": "2026-06-08T20:28:05Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 82.19999694824219,
+    "change_pct": 3.266327824424866,
+    "value": 1
   }
 ]
