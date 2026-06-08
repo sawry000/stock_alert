@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T22:52:59Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_DROP",
-    "type": "percent_change",
-    "price": 13.270000457763672,
-    "change_pct": -8.859886965908851,
-    "value": -8.859886965908851
-  },
-  {
     "timestamp": "2026-06-05T22:53:43Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 6.570000171661377,
     "change_pct": 26.833980147903034,
     "value": 4.036210984143954
+  },
+  {
+    "timestamp": "2026-06-08T22:32:56Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 82.19999694824219,
+    "change_pct": 3.266327824424866,
+    "value": 1
   }
 ]
