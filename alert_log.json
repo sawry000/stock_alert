@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T22:13:50Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 2.940000057220459,
-    "change_pct": -5.769228935241703,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-05T22:14:21Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 27.18000030517578,
     "change_pct": 5.0231851050068865,
     "value": 5.0231851050068865
+  },
+  {
+    "timestamp": "2026-06-08T20:20:14Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 6.570000171661377,
+    "change_pct": 26.833980147903034,
+    "value": 4.036210984143954
   }
 ]
