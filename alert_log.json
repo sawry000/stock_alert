@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T22:29:53Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "price": 59.130001068115234,
-    "change_pct": -7.609373331069946,
-    "value": -7.609373331069946
-  },
-  {
-    "timestamp": "2026-06-05T22:29:55Z",
-    "symbol": "BOBS",
-    "alert_id": "BOBS_PCT_DROP",
-    "type": "percent_change",
-    "price": 12.289999961853027,
-    "change_pct": -7.593985249225363,
-    "value": -7.593985249225363
-  },
-  {
     "timestamp": "2026-06-05T22:39:07Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 397.2699890136719,
     "change_pct": 0.09039528581503041,
     "value": 31.1
+  },
+  {
+    "timestamp": "2026-06-08T21:22:39Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 196.63999938964844,
+    "change_pct": 13.242208631751723,
+    "value": 13.242208631751723
+  },
+  {
+    "timestamp": "2026-06-08T21:24:30Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 6.570000171661377,
+    "change_pct": 26.833980147903034,
+    "value": 4.036210984143954
   }
 ]
