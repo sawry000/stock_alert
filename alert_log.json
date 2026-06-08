@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T19:54:15Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_DROP",
-    "type": "percent_change",
-    "price": 42.209999084472656,
-    "change_pct": -8.814000681631763,
-    "value": -8.814000681631763
-  },
-  {
     "timestamp": "2026-06-05T19:54:19Z",
     "symbol": "ASPN",
     "alert_id": "ASPN_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 396.239990234375,
     "change_pct": -3.1908159701013954,
     "value": -3.1908159701013954
+  },
+  {
+    "timestamp": "2026-06-08T06:38:18Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 42.34000015258789,
+    "change_pct": -8.533160180194661,
+    "value": 1
   }
 ]
