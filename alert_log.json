@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T21:28:08Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.2899999618530273,
-    "change_pct": -7.0621479702534655,
-    "value": -7.0621479702534655
-  },
-  {
     "timestamp": "2026-06-05T21:28:12Z",
     "symbol": "INOD",
     "alert_id": "INOD_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 66.92500305175781,
     "change_pct": 5.456813607761824,
     "value": -0.071
+  },
+  {
+    "timestamp": "2026-06-08T15:57:55Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 8.229999542236328,
+    "change_pct": -5.293446004184942,
+    "value": -5.293446004184942
   }
 ]
