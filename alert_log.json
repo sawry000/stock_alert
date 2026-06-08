@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T22:17:40Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 21.200000762939453,
-    "change_pct": -5.777774386935764,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-05T22:19:45Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_RSI_OS_4H",
-    "type": "rsi",
-    "price": 15.850000381469727,
-    "change_pct": -15.736308445137015,
-    "value": 31.64
-  },
-  {
-    "timestamp": "2026-06-05T22:27:36Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 376.989990234375,
-    "change_pct": -8.719130693855933,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-05T22:28:29Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.2899999618530273,
-    "change_pct": -7.0621479702534655,
-    "value": -7.0621479702534655
-  },
-  {
     "timestamp": "2026-06-05T22:28:34Z",
     "symbol": "INOD",
     "alert_id": "INOD_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 401.92999267578125,
     "change_pct": 8.424600128346713,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-08T21:12:24Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 401.92999267578125,
+    "change_pct": 8.424600128346713,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-08T21:12:30Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 346.3299865722656,
+    "change_pct": 12.26619552409012,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-08T21:12:54Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_PCT_UP_5",
+    "type": "percent_change",
+    "price": 14.09000015258789,
+    "change_pct": 6.742425398393117,
+    "value": 6.742425398393117
+  },
+  {
+    "timestamp": "2026-06-08T21:14:30Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_RSI_OS_1D",
+    "type": "rsi",
+    "price": 6.190000057220459,
+    "change_pct": -2.505866072034477,
+    "value": 27.57
   }
 ]
