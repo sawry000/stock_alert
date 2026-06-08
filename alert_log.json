@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T21:57:38Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 62.90999984741211,
-    "change_pct": -12.794566332946896,
-    "value": -12.794566332946896
-  },
-  {
     "timestamp": "2026-06-05T21:57:42Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 12.390000343322754,
     "change_pct": 5.26763248362578,
     "value": 5.26763248362578
+  },
+  {
+    "timestamp": "2026-06-08T18:19:29Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 5.885000228881836,
+    "change_pct": 13.610043028606878,
+    "value": 2.550381798057695
   }
 ]
