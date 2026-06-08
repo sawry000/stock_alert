@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T21:57:56Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_PCT_DROP",
-    "type": "percent_change",
-    "price": 22.90999984741211,
-    "change_pct": -14.553823082730592,
-    "value": -14.553823082730592
-  },
-  {
     "timestamp": "2026-06-05T21:58:00Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 351.5199890136719,
     "change_pct": 13.948584723547558,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-08T18:32:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 25.809900283813477,
+    "change_pct": 5.561964350975368,
+    "value": 5.561964350975368
   }
 ]
