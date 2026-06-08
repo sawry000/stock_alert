@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T22:14:48Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.809999942779541,
-    "change_pct": -9.28571564810617,
-    "value": -9.28571564810617
-  },
-  {
     "timestamp": "2026-06-05T22:14:53Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 346.3299865722656,
     "change_pct": 12.26619552409012,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-08T20:42:34Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 25.690000534057617,
+    "change_pct": 5.071576826411525,
+    "value": 5.071576826411525
   }
 ]
