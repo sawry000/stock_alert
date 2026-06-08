@@ -369,7 +369,7 @@
       "last_fired": "2026-06-08T15:08:55Z"
     },
     "HIMS_PCT_UP_5": {
-      "last_fired": "2026-06-04T19:58:23Z"
+      "last_fired": "2026-06-08T15:13:26Z"
     },
     "HIMS_NEWS_BAD": {
       "last_fired": "2026-05-27T17:57:54Z"
@@ -702,7 +702,7 @@
       "last_fired": "2026-06-08T15:08:39Z"
     },
     "INOD_MTF_BULL": {
-      "last_fired": "2026-06-05T15:53:12Z"
+      "last_fired": "2026-06-08T15:13:16Z"
     },
     "INOD_POS_SIZE": {
       "last_fired": "2026-06-08T15:08:42Z"
@@ -1001,15 +1001,17 @@
       "last_fired": "2026-06-06T07:54:36Z"
     },
     "AMPG_POS_SIZE": {
-      "last_fired": "2026-06-06T07:54:36Z"
+      "last_fired": "2026-06-08T15:14:37Z"
     },
     "AMPG_PCT_DROP": {
       "last_fired": "2026-06-08T00:04:02Z"
     },
     "AMPG_CP_BULL": {
-      "last_fired": "2026-06-04T08:34:02Z"
+      "last_fired": "2026-06-08T15:14:36Z"
     },
-    "open_position": false
+    "open_position": true,
+    "open_entry": 5.309999942779541,
+    "open_time": "2026-06-08T15:14:37Z"
   },
   "GLD": {
     "GLD_RSI_OS_4H": {
