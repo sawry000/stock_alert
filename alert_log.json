@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T22:02:26Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 376.989990234375,
-    "change_pct": -8.719130693855933,
-    "value": -8.719130693855933
-  },
-  {
     "timestamp": "2026-06-05T22:03:04Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 6.264999866485596,
     "change_pct": 20.9459433684478,
     "value": 3.476595039908031
+  },
+  {
+    "timestamp": "2026-06-08T19:27:28Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 344.5849914550781,
+    "change_pct": 11.700538576640447,
+    "value": 2
   }
 ]
