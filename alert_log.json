@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T21:02:55Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.450000047683716,
-    "change_pct": -13.732392687193101,
-    "value": -13.732392687193101
-  },
-  {
-    "timestamp": "2026-06-05T21:12:24Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_PCT_DROP",
-    "type": "percent_change",
-    "price": 317.05999755859375,
-    "change_pct": -9.411429268973215,
-    "value": -9.411429268973215
-  },
-  {
-    "timestamp": "2026-06-05T21:14:15Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.4100000858306885,
-    "change_pct": -11.658028864489934,
-    "value": -11.658028864489934
-  },
-  {
     "timestamp": "2026-06-05T21:14:30Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 5.309999942779541,
     "change_pct": 2.50965140501045,
     "value": 18
+  },
+  {
+    "timestamp": "2026-06-08T15:22:38Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 25.7549991607666,
+    "change_pct": 5.337419880436001,
+    "value": 5.337419880436001
+  },
+  {
+    "timestamp": "2026-06-08T15:22:40Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_POS_KELLY",
+    "type": "position_size",
+    "price": 25.7549991607666,
+    "change_pct": 5.337419880436001,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-08T15:24:13Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MA_DEATH",
+    "type": "ma_crossover",
+    "price": 3.440000057220459,
+    "change_pct": -0.2030734777934749,
+    "value": -0.006
   }
 ]
