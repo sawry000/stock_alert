@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T06:19:41Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_RSI_OS_4H",
-    "type": "rsi",
-    "price": 6.309999942779541,
-    "change_pct": -4.9698803798261855,
-    "value": 30.71
-  },
-  {
     "timestamp": "2026-06-06T06:19:42Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 28.979999542236328,
     "change_pct": 6.962922997162897,
     "value": 6.962922997162897
+  },
+  {
+    "timestamp": "2026-06-09T22:40:08Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 19.43000030517578,
+    "change_pct": 17.767570007005332,
+    "value": 3.143662031910677
   }
 ]
