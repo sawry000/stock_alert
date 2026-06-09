@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T00:33:51Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_PCT_DROP",
-    "type": "percent_change",
-    "price": 52.209999084472656,
-    "change_pct": -8.293945776493219,
-    "value": -8.293945776493219
-  },
-  {
     "timestamp": "2026-06-06T00:34:07Z",
     "symbol": "ANNA",
     "alert_id": "ANNA_PCT_DROP",
@@ -4497,6 +4488,15 @@
     "type": "news_sentiment",
     "price": 18.56999969482422,
     "change_pct": 0.5882527588602035,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-09T10:58:12Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 102.79000091552734,
+    "change_pct": -0.5893642366132262,
     "value": 1
   }
 ]
