@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T03:39:05Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.0399999618530273,
-    "change_pct": -7.598785354011328,
-    "value": -7.598785354011328
-  },
-  {
-    "timestamp": "2026-06-06T03:39:34Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "price": 59.130001068115234,
-    "change_pct": -7.609373331069946,
-    "value": -7.609373331069946
-  },
-  {
     "timestamp": "2026-06-06T03:39:36Z",
     "symbol": "BOBS",
     "alert_id": "BOBS_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 29.110000610351562,
     "change_pct": 7.44274682249087,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-09T19:58:45Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 11.579999923706055,
+    "change_pct": -4.612850710823277,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-09T19:59:44Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 19.454999923706055,
+    "change_pct": 17.919095703308493,
+    "value": 3.054340218223958
   }
 ]
