@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T00:19:52Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.179999828338623,
-    "change_pct": -13.522540428403627,
-    "value": -13.522540428403627
-  },
-  {
-    "timestamp": "2026-06-06T00:32:32Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 376.989990234375,
-    "change_pct": -8.719130693855933,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-06T00:33:21Z",
     "symbol": "TYGO",
     "alert_id": "TYGO_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 6.190000057220459,
     "change_pct": -2.505866072034477,
     "value": 27.57
+  },
+  {
+    "timestamp": "2026-06-09T09:34:12Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_RSI_OS_4H",
+    "type": "rsi",
+    "price": 6.190000057220459,
+    "change_pct": -2.505866072034477,
+    "value": 29.69
+  },
+  {
+    "timestamp": "2026-06-09T09:34:19Z",
+    "symbol": "GLD",
+    "alert_id": "GLD_RSI_OS_4H",
+    "type": "rsi",
+    "price": 397.2699890136719,
+    "change_pct": 0.2928451727226935,
+    "value": 31.1
   }
 ]
