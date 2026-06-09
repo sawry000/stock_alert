@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T00:34:07Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.0399999618530273,
-    "change_pct": -7.598785354011328,
-    "value": -7.598785354011328
-  },
-  {
     "timestamp": "2026-06-06T00:34:38Z",
     "symbol": "FPS",
     "alert_id": "FPS_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 102.79000091552734,
     "change_pct": -0.5893642366132262,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-09T11:09:57Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 6.570000171661377,
+    "change_pct": -4.781226225577512,
+    "value": 3.747455079458468
   }
 ]
