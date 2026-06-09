@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T03:08:58Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.739999771118164,
-    "change_pct": -22.43138730093428,
-    "value": -22.43138730093428
-  },
-  {
     "timestamp": "2026-06-06T03:09:08Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 319.80499267578125,
     "change_pct": -7.570811365381141,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-09T17:59:54Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 7.152699947357178,
+    "change_pct": 3.6638204518497086,
+    "value": 5.265516503638635
   }
 ]
