@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T23:57:56Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_DROP",
-    "type": "percent_change",
-    "price": 13.270000457763672,
-    "change_pct": -8.859886965908851,
-    "value": -8.859886965908851
-  },
-  {
     "timestamp": "2026-06-05T23:58:37Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 6.570000171661377,
     "change_pct": 26.833980147903034,
     "value": 4.035686181499379
+  },
+  {
+    "timestamp": "2026-06-09T02:57:30Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 25.690000534057617,
+    "change_pct": 5.071576826411525,
+    "value": 5.071576826411525
   }
 ]
