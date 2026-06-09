@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T00:18:55Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 3.12,
-    "change_pct": 0.0,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-06T00:19:23Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 6.570000171661377,
     "change_pct": 26.833980147903034,
     "value": 3.747455079458468
+  },
+  {
+    "timestamp": "2026-06-09T08:43:06Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 18.56999969482422,
+    "change_pct": 0.5882527588602035,
+    "value": 1
   }
 ]
