@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T02:44:36Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_DROP",
-    "type": "percent_change",
-    "price": 18.06999969482422,
-    "change_pct": -10.054755127803789,
-    "value": -10.054755127803789
-  },
-  {
     "timestamp": "2026-06-06T02:45:02Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 6.239999771118164,
     "change_pct": -3.1055936161775826,
     "value": 31.3
+  },
+  {
+    "timestamp": "2026-06-09T16:38:19Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.799999952316284,
+    "change_pct": -5.0000011920928955,
+    "value": -5.0000011920928955
   }
 ]
