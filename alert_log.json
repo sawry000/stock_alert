@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T03:09:08Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "price": 23.65999984741211,
-    "change_pct": -15.650624429903356,
-    "value": -15.650624429903356
-  },
-  {
-    "timestamp": "2026-06-06T03:09:13Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.710000038146973,
-    "change_pct": -11.379309906356628,
-    "value": -11.379309906356628
-  },
-  {
     "timestamp": "2026-06-06T03:09:17Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 7.152699947357178,
     "change_pct": 3.6638204518497086,
     "value": 5.265516503638635
+  },
+  {
+    "timestamp": "2026-06-09T18:07:24Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 353.0,
+    "change_pct": -12.011764999127594,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-09T18:09:41Z",
+    "symbol": "GLD",
+    "alert_id": "GLD_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 391.4849853515625,
+    "change_pct": -1.1676086562918162,
+    "value": 1
   }
 ]
