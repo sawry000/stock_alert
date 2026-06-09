@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T03:09:46Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.639999866485596,
-    "change_pct": -9.324760988977557,
-    "value": -9.324760988977557
-  },
-  {
     "timestamp": "2026-06-06T03:09:56Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 11.340100288391113,
     "change_pct": -6.58895973318688,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-09T18:39:08Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_PCT_UP_5",
+    "type": "percent_change",
+    "price": 13.545000076293945,
+    "change_pct": 5.0000005914259305,
+    "value": 5.0000005914259305
   }
 ]
