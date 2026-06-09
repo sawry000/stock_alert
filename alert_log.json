@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-05T23:39:08Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_DROP",
-    "type": "percent_change",
-    "price": 18.06999969482422,
-    "change_pct": -10.054755127803789,
-    "value": -10.054755127803789
-  },
-  {
     "timestamp": "2026-06-05T23:39:27Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 6.570000171661377,
     "change_pct": 26.833980147903034,
     "value": 4.035686181499379
+  },
+  {
+    "timestamp": "2026-06-09T01:52:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 25.690000534057617,
+    "change_pct": 5.071576826411525,
+    "value": 5.071576826411525
   }
 ]
