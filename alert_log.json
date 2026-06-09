@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T00:14:12Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_POS_SIZE",
-    "type": "position_size",
-    "price": 18.06999969482422,
-    "change_pct": -10.054755127803789,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-06T00:14:16Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 6.570000171661377,
     "change_pct": 26.833980147903034,
     "value": 3.747455079458468
+  },
+  {
+    "timestamp": "2026-06-09T07:14:05Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 274.9700012207031,
+    "change_pct": 2.600746724142957,
+    "value": 1
   }
 ]
