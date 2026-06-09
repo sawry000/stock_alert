@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T02:24:12Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.4100000858306885,
-    "change_pct": -11.658028864489934,
-    "value": -11.658028864489934
-  },
-  {
-    "timestamp": "2026-06-06T02:24:26Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.809999942779541,
-    "change_pct": -9.28571564810617,
-    "value": -9.28571564810617
-  },
-  {
     "timestamp": "2026-06-06T02:24:28Z",
     "symbol": "VELO",
     "alert_id": "VELO_RSI_OS_4H",
@@ -4498,5 +4480,23 @@
     "price": 11.460000038146973,
     "change_pct": -5.601317642940922,
     "value": 8
+  },
+  {
+    "timestamp": "2026-06-09T15:54:40Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 6.279900074005127,
+    "change_pct": -8.985636400453236,
+    "value": 3.498179109549174
+  },
+  {
+    "timestamp": "2026-06-09T15:54:41Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_POS_SIZE",
+    "type": "position_size",
+    "price": 6.279900074005127,
+    "change_pct": -8.985636400453236,
+    "value": 15
   }
 ]
