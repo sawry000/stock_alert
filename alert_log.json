@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T00:12:56Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.450000047683716,
-    "change_pct": -13.732392687193101,
-    "value": -13.732392687193101
-  },
-  {
     "timestamp": "2026-06-06T00:14:00Z",
     "symbol": "VSEC",
     "alert_id": "VSEC_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 397.2699890136719,
     "change_pct": 0.09039528581503041,
     "value": 31.1
+  },
+  {
+    "timestamp": "2026-06-09T05:49:16Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 6.570000171661377,
+    "change_pct": 26.833980147903034,
+    "value": 3.747455079458468
   }
 ]
