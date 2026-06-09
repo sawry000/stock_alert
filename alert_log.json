@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T02:05:03Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_DROP",
-    "type": "percent_change",
-    "price": 10.8100004196167,
-    "change_pct": -14.668221060476636,
-    "value": -14.668221060476636
-  },
-  {
-    "timestamp": "2026-06-06T02:05:07Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_DROP",
-    "type": "percent_change",
-    "price": 19.690000534057617,
-    "change_pct": -12.293984258095243,
-    "value": -12.293984258095243
-  },
-  {
     "timestamp": "2026-06-06T02:05:10Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 2.9149999618530273,
     "change_pct": -5.357144095680932,
     "value": -5.357144095680932
+  },
+  {
+    "timestamp": "2026-06-09T15:33:20Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_PCT_DROP",
+    "type": "percent_change",
+    "price": 22.90999984741211,
+    "change_pct": -5.330579142925165,
+    "value": -5.330579142925165
+  },
+  {
+    "timestamp": "2026-06-09T15:33:43Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.310200214385986,
+    "change_pct": -5.17499617167881,
+    "value": -5.17499617167881
   }
 ]
