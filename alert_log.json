@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T03:08:45Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_DROP",
-    "type": "percent_change",
-    "price": 26.190000534057617,
-    "change_pct": -6.129030343879503,
-    "value": -6.129030343879503
-  },
-  {
     "timestamp": "2026-06-06T03:08:56Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 391.2799987792969,
     "change_pct": -1.2193585672422151,
     "value": 26.67
+  },
+  {
+    "timestamp": "2026-06-09T17:42:45Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 71.66999816894531,
+    "change_pct": 7.916428637598824,
+    "value": 7.916428637598824
   }
 ]
