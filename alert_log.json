@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T07:54:36Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 5.179999828338623,
-    "change_pct": -13.522540428403627,
-    "value": 2.635978520867688
-  },
-  {
-    "timestamp": "2026-06-06T07:54:36Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_POS_SIZE",
-    "type": "position_size",
-    "price": 5.179999828338623,
-    "change_pct": -13.522540428403627,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-07T00:02:23Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 376.989990234375,
-    "change_pct": -8.719130693855933,
-    "value": -8.719130693855933
-  },
-  {
-    "timestamp": "2026-06-07T00:02:26Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_PCT_DROP",
-    "type": "percent_change",
-    "price": 317.05999755859375,
-    "change_pct": -9.411429268973215,
-    "value": -9.411429268973215
-  },
-  {
     "timestamp": "2026-06-07T00:02:28Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_PCT_DROP",
@@ -4494,6 +4458,42 @@
     "timestamp": "2026-06-09T23:34:28Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 19.43000030517578,
+    "change_pct": 17.767570007005332,
+    "value": 3.143662031910677
+  },
+  {
+    "timestamp": "2026-06-09T23:43:33Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.820000171661377,
+    "change_pct": -5.490192712522013,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-09T23:43:58Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.59000015258789,
+    "change_pct": 5.348838392154188,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-09T23:44:02Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 102.16000366210938,
+    "change_pct": 7.888904490558008,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-09T23:44:34Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
     "type": "volume_spike",
     "price": 19.43000030517578,
     "change_pct": 17.767570007005332,
