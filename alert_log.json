@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T00:04:35Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_PCT_DROP",
-    "type": "percent_change",
-    "price": 15.850000381469727,
-    "change_pct": -15.736308445137015,
-    "value": -15.736308445137015
-  },
-  {
     "timestamp": "2026-06-06T00:08:53Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 25.690000534057617,
     "change_pct": 5.071576826411525,
     "value": 5.071576826411525
+  },
+  {
+    "timestamp": "2026-06-09T05:22:30Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_BAD",
+    "type": "news_sentiment",
+    "price": 25.690000534057617,
+    "change_pct": 5.071576826411525,
+    "value": 1
   }
 ]
