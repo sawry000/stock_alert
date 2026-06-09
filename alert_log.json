@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T00:04:25Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.559999942779541,
-    "change_pct": -10.136987085211764,
-    "value": -10.136987085211764
-  },
-  {
     "timestamp": "2026-06-06T00:04:35Z",
     "symbol": "VELO",
     "alert_id": "VELO_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 6.570000171661377,
     "change_pct": 26.833980147903034,
     "value": 3.747455079458468
+  },
+  {
+    "timestamp": "2026-06-09T05:07:31Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 25.690000534057617,
+    "change_pct": 5.071576826411525,
+    "value": 5.071576826411525
   }
 ]
