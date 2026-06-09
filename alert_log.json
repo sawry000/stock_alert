@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T02:38:09Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_DROP",
-    "type": "percent_change",
-    "price": 101.97000122070312,
-    "change_pct": -14.847598145550625,
-    "value": -14.847598145550625
-  },
-  {
     "timestamp": "2026-06-06T02:38:32Z",
     "symbol": "WGS",
     "alert_id": "WGS_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 56.470001220703125,
     "change_pct": -5.726208312682593,
     "value": -5.726208312682593
+  },
+  {
+    "timestamp": "2026-06-09T16:03:19Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.8403000831604,
+    "change_pct": -5.092155232149005,
+    "value": -5.092155232149005
   }
 ]
