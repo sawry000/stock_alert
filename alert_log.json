@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T03:39:36Z",
-    "symbol": "BOBS",
-    "alert_id": "BOBS_PCT_DROP",
-    "type": "percent_change",
-    "price": 12.289999961853027,
-    "change_pct": -7.593985249225363,
-    "value": -7.593985249225363
-  },
-  {
     "timestamp": "2026-06-06T03:44:36Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 19.454999923706055,
     "change_pct": 17.919095703308493,
     "value": 3.054340218223958
+  },
+  {
+    "timestamp": "2026-06-09T20:05:22Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 6.840000152587891,
+    "change_pct": -0.8681263121510322,
+    "value": 6.137138548124525
   }
 ]
