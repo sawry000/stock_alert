@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T04:13:50Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 97.19000244140625,
-    "change_pct": -7.438092912946429,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-06T04:14:27Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 19.43000030517578,
     "change_pct": 17.767570007005332,
     "value": 3.143662031910677
+  },
+  {
+    "timestamp": "2026-06-09T20:44:23Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_PCT_UP_5",
+    "type": "percent_change",
+    "price": 13.59000015258789,
+    "change_pct": 5.348838392154188,
+    "value": 5.348838392154188
   }
 ]
