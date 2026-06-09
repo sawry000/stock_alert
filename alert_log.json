@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T01:02:48Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_DROP",
-    "type": "percent_change",
-    "price": 177.0,
-    "change_pct": -9.601680489437946,
-    "value": -9.601680489437946
-  },
-  {
     "timestamp": "2026-06-06T01:02:55Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_PCT_DROP",
@@ -4497,6 +4488,15 @@
     "type": "news_sentiment",
     "price": 5.050000190734863,
     "change_pct": -0.07320991086009854,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-09T12:48:15Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 18.56999969482422,
+    "change_pct": 0.5882527588602035,
     "value": 1
   }
 ]
