@@ -577,10 +577,10 @@
   },
   "AMSC": {
     "AMSC_CP_BULL": {
-      "last_fired": "2026-06-05T13:43:45Z"
+      "last_fired": "2026-06-09T13:48:56Z"
     },
     "AMSC_POS_SIZE": {
-      "last_fired": "2026-06-06T06:29:32Z"
+      "last_fired": "2026-06-09T13:48:56Z"
     },
     "AMSC_VOL_SPIKE": {
       "last_fired": "2026-05-29T13:07:57Z"
@@ -603,10 +603,12 @@
     "AMSC_RSI_OS_4H": {
       "last_fired": "2026-06-06T06:29:31Z"
     },
-    "open_position": false,
+    "open_position": true,
     "AMSC_PCT_UP_5": {
       "last_fired": "2026-06-08T15:09:51Z"
-    }
+    },
+    "open_entry": 44.5,
+    "open_time": "2026-06-09T13:48:56Z"
   },
   "ASPN": {
     "ASPN_POS_SIZE": {
@@ -703,7 +705,7 @@
       "last_fired": "2026-06-09T13:33:39Z"
     },
     "AEHR_MTF_BULL": {
-      "last_fired": "2026-06-05T14:33:19Z"
+      "last_fired": "2026-06-09T13:48:01Z"
     },
     "AEHR_CP_BULL": {
       "last_fired": "2026-06-05T14:07:59Z"
@@ -856,18 +858,20 @@
   },
   "WYFI": {
     "WYFI_PCT_UP_5": {
-      "last_fired": "2026-06-02T06:48:58Z"
+      "last_fired": "2026-06-09T13:48:36Z"
     },
     "WYFI_MTF_BULL": {
       "last_fired": "2026-06-03T11:08:40Z"
     },
     "WYFI_POS_SIZE": {
-      "last_fired": "2026-06-05T06:53:44Z"
+      "last_fired": "2026-06-09T13:48:39Z"
     },
     "WYFI_PCT_DROP": {
       "last_fired": "2026-06-08T00:03:21Z"
     },
-    "open_position": false
+    "open_position": true,
+    "open_entry": 25.385000228881836,
+    "open_time": "2026-06-09T13:48:39Z"
   },
   "ANNA": {
     "ANNA_PCT_UP_5": {
@@ -959,15 +963,17 @@
   },
   "FPS": {
     "FPS_POS_SIZE": {
-      "last_fired": "2026-06-05T06:54:21Z"
+      "last_fired": "2026-06-09T13:49:15Z"
     },
     "FPS_PCT_DROP": {
       "last_fired": "2026-06-08T00:03:52Z"
     },
     "FPS_CP_BULL": {
-      "last_fired": "2026-06-05T14:19:02Z"
+      "last_fired": "2026-06-09T13:49:14Z"
     },
-    "open_position": false
+    "open_position": true,
+    "open_entry": 60.70000076293945,
+    "open_time": "2026-06-09T13:49:15Z"
   },
   "BOBS": {
     "BOBS_POS_SIZE": {
