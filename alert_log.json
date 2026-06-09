@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T02:02:35Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_PCT_DROP",
-    "type": "percent_change",
-    "price": 56.06999969482422,
-    "change_pct": -17.675957628409485,
-    "value": -17.675957628409485
-  },
-  {
     "timestamp": "2026-06-06T02:02:40Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 10.914999961853027,
     "change_pct": 0.41398308972426984,
     "value": 9
+  },
+  {
+    "timestamp": "2026-06-09T14:02:41Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_DROP",
+    "type": "percent_change",
+    "price": 186.36500549316406,
+    "change_pct": -5.336005743300626,
+    "value": -5.336005743300626
   }
 ]
