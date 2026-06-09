@@ -1046,7 +1046,7 @@
   },
   "VELO": {
     "VELO_POS_SIZE": {
-      "last_fired": "2026-06-06T06:30:05Z"
+      "last_fired": "2026-06-09T18:55:17Z"
     },
     "VELO_PCT_DROP": {
       "last_fired": "2026-06-09T15:20:04Z"
@@ -1054,10 +1054,15 @@
     "VELO_RSI_OS_4H": {
       "last_fired": "2026-06-06T06:30:05Z"
     },
-    "open_position": false,
+    "open_position": true,
     "VELO_MA_DEATH": {
       "last_fired": "2026-06-09T13:35:31Z"
-    }
+    },
+    "VELO_CP_BULL": {
+      "last_fired": "2026-06-09T18:55:17Z"
+    },
+    "open_entry": 20.135000228881836,
+    "open_time": "2026-06-09T18:55:17Z"
   },
   "AMPG": {
     "AMPG_VOL_SPIKE": {
