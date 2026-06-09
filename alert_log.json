@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-06T00:14:00Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_POS_SIZE",
-    "type": "position_size",
-    "price": 180.55999755859375,
-    "change_pct": -1.575362464653169,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-06T00:14:03Z",
-    "symbol": "PSIX",
-    "alert_id": "PSIX_POS_SIZE",
-    "type": "position_size",
-    "price": 37.61000061035156,
-    "change_pct": -4.905181769022591,
-    "value": 0
-  },
-  {
     "timestamp": "2026-06-06T00:14:04Z",
     "symbol": "VICR",
     "alert_id": "VICR_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 6.570000171661377,
     "change_pct": 26.833980147903034,
     "value": 3.747455079458468
+  },
+  {
+    "timestamp": "2026-06-09T06:12:32Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 25.690000534057617,
+    "change_pct": 5.071576826411525,
+    "value": 5.071576826411525
+  },
+  {
+    "timestamp": "2026-06-09T06:12:36Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_POS_KELLY",
+    "type": "position_size",
+    "price": 25.690000534057617,
+    "change_pct": 5.071576826411525,
+    "value": 3
   }
 ]
