@@ -240,7 +240,7 @@
   },
   "AAOI": {
     "AAOI_POS_SIZE": {
-      "last_fired": "2026-06-08T15:08:02Z"
+      "last_fired": "2026-06-10T13:37:51Z"
     },
     "AAOI_MTF_BULL": {
       "last_fired": "2026-06-09T11:32:40Z"
@@ -249,7 +249,7 @@
       "last_fired": "2026-06-02T05:47:42Z"
     },
     "AAOI_PCT_UP_5": {
-      "last_fired": "2026-06-09T07:27:47Z"
+      "last_fired": "2026-06-10T13:37:48Z"
     },
     "AAOI_NEWS_POS": {
       "last_fired": "2026-06-10T09:27:43Z",
@@ -260,9 +260,9 @@
     "AAOI_PCT_DROP": {
       "last_fired": "2026-06-10T06:07:43Z"
     },
-    "open_position": false,
-    "open_entry": 201.66000366210938,
-    "open_time": "2026-06-08T15:08:02Z"
+    "open_position": true,
+    "open_entry": 178.74000549316406,
+    "open_time": "2026-06-10T13:37:51Z"
   },
   "AIXI": {
     "AIXI_POS_SIZE": {
@@ -812,13 +812,13 @@
   },
   "OPRX": {
     "OPRX_POS_SIZE": {
-      "last_fired": "2026-06-05T06:53:15Z"
+      "last_fired": "2026-06-10T13:38:32Z"
     },
     "OPRX_MTF_BULL": {
       "last_fired": "2026-06-05T11:53:09Z"
     },
     "OPRX_CP_BULL": {
-      "last_fired": "2026-06-02T14:03:06Z"
+      "last_fired": "2026-06-10T13:38:31Z"
     },
     "OPRX_PCT_DROP": {
       "last_fired": "2026-06-05T19:58:22Z"
@@ -831,7 +831,10 @@
       "seen_news": [
         "3c71b6c95a89"
       ]
-    }
+    },
+    "open_position": true,
+    "open_entry": 5.105000019073486,
+    "open_time": "2026-06-10T13:38:32Z"
   },
   "NLST": {
     "NLST_PCT_UP_5": {
@@ -1030,14 +1033,17 @@
   },
   "ISSC": {
     "ISSC_POS_SIZE": {
-      "last_fired": "2026-06-05T06:54:25Z"
+      "last_fired": "2026-06-10T13:39:45Z"
     },
     "ISSC_CP_BULL": {
-      "last_fired": "2026-06-05T06:33:57Z"
+      "last_fired": "2026-06-10T13:39:44Z"
     },
     "ISSC_PCT_DROP": {
       "last_fired": "2026-06-05T19:44:32Z"
-    }
+    },
+    "open_position": true,
+    "open_entry": 17.829999923706055,
+    "open_time": "2026-06-10T13:39:45Z"
   },
   "BRCB": {
     "BRCB_POS_SIZE": {
