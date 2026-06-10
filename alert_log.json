@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T05:27:51Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.09000015258789,
-    "change_pct": 6.742425398393117,
-    "value": 6.742425398393117
-  },
-  {
     "timestamp": "2026-06-09T05:29:08Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 7.599999904632568,
     "change_pct": 8.10810675153013,
     "value": 4.721232987133328
+  },
+  {
+    "timestamp": "2026-06-10T20:54:24Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.68000030517578,
+    "change_pct": 16.067820377250005,
+    "value": 3.187595137084964
   }
 ]
