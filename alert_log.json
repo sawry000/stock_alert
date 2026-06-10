@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T03:14:52Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_RSI_OS_1D",
-    "type": "rsi",
-    "price": 6.190000057220459,
-    "change_pct": -2.505866072034477,
-    "value": 27.57
-  },
-  {
     "timestamp": "2026-06-09T03:17:20Z",
     "symbol": "COHR",
     "alert_id": "COHR_MTF_ALIGN",
@@ -4498,5 +4489,14 @@
     "price": 23.450000762939453,
     "change_pct": 20.008396815501577,
     "value": 2.530023057812787
+  },
+  {
+    "timestamp": "2026-06-10T18:23:49Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.6600000858306885,
+    "change_pct": 6.400003433227538,
+    "value": 6.400003433227538
   }
 ]
