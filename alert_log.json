@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T23:52:27Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_PCT_5_UP",
-    "type": "percent_change",
-    "price": 25.690000534057617,
-    "change_pct": 5.071576826411525,
-    "value": 5.071576826411525
-  },
-  {
     "timestamp": "2026-06-09T00:12:38Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 378.8999938964844,
     "change_pct": -2.2697978084899697,
     "value": 19.64
+  },
+  {
+    "timestamp": "2026-06-10T16:18:54Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.680000066757202,
+    "change_pct": 7.200002670288086,
+    "value": 7.200002670288086
   }
 ]
