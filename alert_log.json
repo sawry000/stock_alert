@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:10:23Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_POS_SIZE",
-    "type": "position_size",
-    "price": 397.260009765625,
-    "change_pct": 0.087881058943409,
-    "value": 0.2517243
-  },
-  {
-    "timestamp": "2026-06-08T15:10:26Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 397.260009765625,
-    "change_pct": 0.087881058943409,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-08T15:13:16Z",
     "symbol": "INOD",
     "alert_id": "INOD_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 390.78,
     "change_pct": 0.7944286819705918,
     "value": 26.3
+  },
+  {
+    "timestamp": "2026-06-10T12:07:29Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 341.7,
+    "change_pct": 0.21997360316761988,
+    "value": 100.0
+  },
+  {
+    "timestamp": "2026-06-10T12:09:49Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 19.43,
+    "change_pct": -0.5644744451211022,
+    "value": 3.03860985155766
   }
 ]
