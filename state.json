@@ -128,7 +128,7 @@
       "last_fired": "2026-06-01T15:17:30Z"
     },
     "ENPH_PCT_DROP": {
-      "last_fired": "2026-06-10T05:42:38Z"
+      "last_fired": "2026-06-10T15:52:32Z"
     },
     "ENPH_MTF_BULL": {
       "last_fired": "2026-06-05T11:47:30Z"
@@ -342,13 +342,13 @@
   },
   "XMTR": {
     "XMTR_POS_SIZE": {
-      "last_fired": "2026-06-06T00:18:09Z"
+      "last_fired": "2026-06-10T15:52:58Z"
     },
     "XMTR_MTF_BULL": {
       "last_fired": "2026-06-10T15:38:25Z"
     },
     "XMTR_CP_BULL": {
-      "last_fired": "2026-06-05T14:27:51Z"
+      "last_fired": "2026-06-10T15:52:57Z"
     },
     "XMTR_PCT_UP_5": {
       "last_fired": "2026-06-08T19:12:59Z"
@@ -370,7 +370,10 @@
       "seen_news": [
         "061aed752b37"
       ]
-    }
+    },
+    "open_position": true,
+    "open_entry": 83.62999725341797,
+    "open_time": "2026-06-10T15:52:58Z"
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -514,7 +517,7 @@
       "last_fired": "2026-06-02T04:23:17Z"
     },
     "TGEN_PCT_DROP": {
-      "last_fired": "2026-06-10T07:28:57Z"
+      "last_fired": "2026-06-10T15:53:29Z"
     },
     "TGEN_PCT_UP_5": {
       "last_fired": "2026-06-02T06:17:52Z"
@@ -915,7 +918,7 @@
   },
   "ANNA": {
     "ANNA_PCT_UP_5": {
-      "last_fired": "2026-06-02T06:49:03Z"
+      "last_fired": "2026-06-10T15:53:45Z"
     },
     "ANNA_POS_SIZE": {
       "last_fired": "2026-06-10T13:33:51Z"
