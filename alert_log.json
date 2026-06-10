@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T00:02:30Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_PCT_DROP",
-    "type": "percent_change",
-    "price": 24.65999984741211,
-    "change_pct": -9.504587715918865,
-    "value": -9.504587715918865
-  },
-  {
-    "timestamp": "2026-06-08T00:02:32Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_DROP",
-    "type": "percent_change",
-    "price": 21.200000762939453,
-    "change_pct": -5.777774386935764,
-    "value": -5.777774386935764
-  },
-  {
-    "timestamp": "2026-06-08T00:02:35Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 62.90999984741211,
-    "change_pct": -12.794566332946896,
-    "value": -12.794566332946896
-  },
-  {
-    "timestamp": "2026-06-08T00:02:37Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_DROP",
-    "type": "percent_change",
-    "price": 177.0,
-    "change_pct": -9.601680489437946,
-    "value": -9.601680489437946
-  },
-  {
-    "timestamp": "2026-06-08T00:02:41Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 13.270000457763672,
-    "change_pct": -8.859886965908851,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-08T00:02:41Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_PCT_DROP",
@@ -4494,6 +4449,51 @@
     "timestamp": "2026-06-10T03:34:19Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 19.43000030517578,
+    "change_pct": 17.767570007005332,
+    "value": 3.143662031910677
+  },
+  {
+    "timestamp": "2026-06-10T03:48:25Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.820000171661377,
+    "change_pct": -5.490192712522013,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T03:48:26Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_POS_SIZE",
+    "type": "position_size",
+    "price": 4.820000171661377,
+    "change_pct": -5.490192712522013,
+    "value": 20
+  },
+  {
+    "timestamp": "2026-06-10T03:48:51Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.59000015258789,
+    "change_pct": 5.348838392154188,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-10T03:48:54Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 102.16000366210938,
+    "change_pct": 7.888904490558008,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-10T03:49:25Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
     "type": "volume_spike",
     "price": 19.43000030517578,
     "change_pct": 17.767570007005332,
