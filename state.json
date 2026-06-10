@@ -275,7 +275,7 @@
       "last_fired": "2026-05-29T13:32:39Z"
     },
     "AIXI_PCT_DROP": {
-      "last_fired": "2026-06-10T00:52:49Z"
+      "last_fired": "2026-06-10T13:32:46Z"
     },
     "AIXI_PCT_UP_5": {
       "last_fired": "2026-06-09T13:33:12Z"
@@ -333,7 +333,10 @@
     "LNAI_PCT_DROP": {
       "last_fired": "2026-06-08T00:02:43Z"
     },
-    "open_position": false
+    "open_position": false,
+    "LNAI_MA_DEATH": {
+      "last_fired": "2026-06-10T13:32:54Z"
+    }
   },
   "XMTR": {
     "XMTR_POS_SIZE": {
@@ -578,7 +581,7 @@
       "last_fired": "2026-06-08T15:09:48Z"
     },
     "VICR_CP_BULL": {
-      "last_fired": "2026-06-09T07:14:05Z"
+      "last_fired": "2026-06-10T13:34:05Z"
     },
     "VICR_BT_VOL": {
       "last_fired": "2026-06-10T03:23:54Z"
@@ -592,7 +595,7 @@
   },
   "AMSC": {
     "AMSC_CP_BULL": {
-      "last_fired": "2026-06-09T13:48:56Z"
+      "last_fired": "2026-06-10T13:34:08Z"
     },
     "AMSC_POS_SIZE": {
       "last_fired": "2026-06-10T07:59:26Z"
@@ -895,22 +898,27 @@
     },
     "open_position": false,
     "open_entry": 25.385000228881836,
-    "open_time": "2026-06-09T13:48:39Z"
+    "open_time": "2026-06-09T13:48:39Z",
+    "WYFI_MA_DEATH": {
+      "last_fired": "2026-06-10T13:33:47Z"
+    }
   },
   "ANNA": {
     "ANNA_PCT_UP_5": {
       "last_fired": "2026-06-02T06:49:03Z"
     },
     "ANNA_POS_SIZE": {
-      "last_fired": "2026-06-05T06:53:49Z"
+      "last_fired": "2026-06-10T13:33:51Z"
     },
     "ANNA_MTF_BULL": {
-      "last_fired": "2026-06-03T14:58:30Z"
+      "last_fired": "2026-06-10T13:33:51Z"
     },
     "ANNA_PCT_DROP": {
       "last_fired": "2026-06-09T14:44:04Z"
     },
-    "open_position": false
+    "open_position": true,
+    "open_entry": 3.2774999141693115,
+    "open_time": "2026-06-10T13:33:51Z"
   },
   "BLLN": {
     "BLLN_MTF_BULL": {
@@ -958,7 +966,7 @@
       "last_fired": "2026-06-10T11:49:05Z"
     },
     "AGL_POS_SIZE": {
-      "last_fired": "2026-06-08T15:09:41Z"
+      "last_fired": "2026-06-10T13:33:59Z"
     },
     "AGL_NEWS_POS": {
       "last_fired": "2026-06-02T22:38:49Z"
@@ -967,11 +975,11 @@
       "last_fired": "2026-06-03T14:08:35Z"
     },
     "AGL_PCT_UP_5": {
-      "last_fired": "2026-06-10T07:34:25Z"
+      "last_fired": "2026-06-10T13:33:58Z"
     },
-    "open_position": false,
-    "open_entry": 98.06999969482422,
-    "open_time": "2026-06-08T15:09:41Z",
+    "open_position": true,
+    "open_entry": 102.16,
+    "open_time": "2026-06-10T13:33:59Z",
     "AGL_NEWS_BAD": {
       "last_fired": "2026-06-10T12:19:05Z",
       "seen_news": [
@@ -989,7 +997,10 @@
     "LTRX_PCT_DROP": {
       "last_fired": "2026-06-09T15:39:28Z"
     },
-    "open_position": false
+    "open_position": false,
+    "LTRX_MA_DEATH": {
+      "last_fired": "2026-06-10T13:34:25Z"
+    }
   },
   "FPS": {
     "FPS_POS_SIZE": {
@@ -1091,17 +1102,17 @@
       "last_fired": "2026-06-10T13:04:31Z"
     },
     "AMPG_POS_SIZE": {
-      "last_fired": "2026-06-09T15:54:41Z"
+      "last_fired": "2026-06-10T13:34:38Z"
     },
     "AMPG_PCT_DROP": {
       "last_fired": "2026-06-10T13:30:19Z"
     },
     "AMPG_CP_BULL": {
-      "last_fired": "2026-06-08T15:14:36Z"
+      "last_fired": "2026-06-10T13:34:37Z"
     },
-    "open_position": false,
-    "open_entry": 6.279900074005127,
-    "open_time": "2026-06-09T15:54:41Z"
+    "open_position": true,
+    "open_entry": 7.275000095367432,
+    "open_time": "2026-06-10T13:34:38Z"
   },
   "GLD": {
     "GLD_RSI_OS_4H": {
