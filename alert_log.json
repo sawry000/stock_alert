@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-07T00:02:59Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_DROP",
-    "type": "percent_change",
-    "price": 101.97000122070312,
-    "change_pct": -14.847598145550625,
-    "value": -14.847598145550625
-  },
-  {
-    "timestamp": "2026-06-07T00:03:05Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_DROP",
-    "type": "percent_change",
-    "price": 26.190000534057617,
-    "change_pct": -6.129030343879503,
-    "value": -6.129030343879503
-  },
-  {
     "timestamp": "2026-06-07T00:03:10Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 6.260000228881836,
     "change_pct": -2.7950275018348516,
     "value": 31.83
+  },
+  {
+    "timestamp": "2026-06-10T00:38:28Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_UP_5",
+    "type": "percent_change",
+    "price": 28.979999542236328,
+    "change_pct": 6.962922997162897,
+    "value": 6.962922997162897
+  },
+  {
+    "timestamp": "2026-06-10T00:39:40Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 19.43000030517578,
+    "change_pct": 17.767570007005332,
+    "value": 3.143662031910677
   }
 ]
