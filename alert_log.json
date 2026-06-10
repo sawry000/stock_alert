@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T07:27:50Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 196.63999938964844,
-    "change_pct": 13.242208631751723,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-09T07:27:56Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.09000015258789,
-    "change_pct": 6.742425398393117,
-    "value": 6.742425398393117
-  },
-  {
     "timestamp": "2026-06-09T07:28:35Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 22.68000030517578,
     "change_pct": 16.067820377250005,
     "value": 3.187595137084964
+  },
+  {
+    "timestamp": "2026-06-10T22:18:22Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 12.800000190734863,
+    "change_pct": 8.199494427175512,
+    "value": 8.199494427175512
+  },
+  {
+    "timestamp": "2026-06-10T22:18:51Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_RSI_OS_4H",
+    "type": "rsi",
+    "price": 36.779998779296875,
+    "change_pct": -9.11764353433818,
+    "value": 24.31
   }
 ]
