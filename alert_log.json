@@ -2,15 +2,6 @@
   {
     "timestamp": "2026-06-08T15:07:37Z",
     "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 350.25,
-    "change_pct": 13.536905572303798,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-08T15:07:37Z",
-    "symbol": "ALAB",
     "alert_id": "ALAB_POS_SIZE",
     "type": "position_size",
     "price": 350.25,
@@ -4498,5 +4489,14 @@
     "price": 5.67,
     "change_pct": -5.500000000000002,
     "value": -5.500000000000002
+  },
+  {
+    "timestamp": "2026-06-10T07:34:25Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 102.16,
+    "change_pct": 7.888900623085858,
+    "value": 7.888900623085858
   }
 ]
