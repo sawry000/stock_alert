@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T16:23:41Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 13.539999961853027,
-    "change_pct": 5.1242233063123175,
-    "value": 5.1242233063123175
-  },
-  {
     "timestamp": "2026-06-08T16:27:38Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_PCT_5_UP",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-10T13:09:30Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 19.43000030517578,
+    "change_pct": -0.5644728833447654,
+    "value": 3.036708793387919
+  },
+  {
+    "timestamp": "2026-06-10T13:14:50Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
     "type": "volume_spike",
     "price": 19.43000030517578,
     "change_pct": -0.5644728833447654,
