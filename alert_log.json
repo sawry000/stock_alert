@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-07T00:03:49Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.4100000858306885,
-    "change_pct": -11.658028864489934,
-    "value": -11.658028864489934
-  },
-  {
     "timestamp": "2026-06-07T00:03:51Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 19.43000030517578,
     "change_pct": 17.767570007005332,
     "value": 3.143662031910677
+  },
+  {
+    "timestamp": "2026-06-10T02:14:45Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_CP_BULL",
+    "type": "candle_pattern",
+    "price": 18.6299991607666,
+    "change_pct": -3.869973370657366,
+    "value": 1
   }
 ]
