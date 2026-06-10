@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T08:43:06Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 18.56999969482422,
-    "change_pct": 0.5882527588602035,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-09T08:59:25Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 22.68000030517578,
     "change_pct": 16.067820377250005,
     "value": 3.187595137084964
+  },
+  {
+    "timestamp": "2026-06-10T23:19:24Z",
+    "symbol": "SHLS",
+    "alert_id": "SHLS_PCT_DROP",
+    "type": "percent_change",
+    "price": 9.25,
+    "change_pct": -5.209870470568945,
+    "value": -5.209870470568945
   }
 ]
