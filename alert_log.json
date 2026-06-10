@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:09:36Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.300000190734863,
-    "change_pct": 3.2608710460781247,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-08T15:09:37Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 19.43,
     "change_pct": -0.5644744451211022,
     "value": 3.03860985155766
+  },
+  {
+    "timestamp": "2026-06-10T10:44:19Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_RSI_OS_4H",
+    "type": "rsi",
+    "price": 6.26,
+    "change_pct": -1.8808777429467103,
+    "value": 31.83
   }
 ]
