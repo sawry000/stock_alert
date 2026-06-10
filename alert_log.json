@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:07:53Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 21.479999542236328,
-    "change_pct": 0.8450682734099879,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-08T15:07:56Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 68.37000274658203,
-    "change_pct": 7.733766264192789,
-    "value": 7.733766264192789
-  },
-  {
-    "timestamp": "2026-06-08T15:07:59Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 201.66000366210938,
-    "change_pct": 16.13315845334856,
-    "value": 16.13315845334856
-  },
-  {
-    "timestamp": "2026-06-08T15:08:02Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 201.66000366210938,
-    "change_pct": 16.13315845334856,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-08T15:08:02Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_POS_SIZE",
-    "type": "position_size",
-    "price": 201.66000366210938,
-    "change_pct": 16.13315845334856,
-    "value": 0.4958842
-  },
-  {
     "timestamp": "2026-06-08T15:08:08Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_PCT_UP_5",
@@ -4498,5 +4453,50 @@
     "price": 102.16,
     "change_pct": 7.888900623085858,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T07:58:38Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 28.98,
+    "change_pct": 6.962924686732987,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T07:59:25Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_RSI_OS_4H",
+    "type": "rsi",
+    "price": 40.53,
+    "change_pct": -6.278182448838007,
+    "value": 29.9
+  },
+  {
+    "timestamp": "2026-06-10T07:59:26Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_POS_SIZE",
+    "type": "position_size",
+    "price": 40.53,
+    "change_pct": -6.278182448838007,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T07:59:54Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 19.43,
+    "change_pct": 17.767568157298193,
+    "value": 3.03860985155766
+  },
+  {
+    "timestamp": "2026-06-10T07:59:59Z",
+    "symbol": "GLD",
+    "alert_id": "GLD_RSI_OS_4H",
+    "type": "rsi",
+    "price": 390.78,
+    "change_pct": -1.3455858221201284,
+    "value": 26.3
   }
 ]
