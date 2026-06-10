@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:22:40Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_POS_KELLY",
-    "type": "position_size",
-    "price": 25.7549991607666,
-    "change_pct": 5.337419880436001,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-08T15:24:13Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MA_DEATH",
@@ -4498,5 +4489,14 @@
     "price": 19.43,
     "change_pct": -0.5644744451211022,
     "value": 3.03860985155766
+  },
+  {
+    "timestamp": "2026-06-10T12:44:33Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_RSI_OS_4H",
+    "type": "rsi",
+    "price": 6.26,
+    "change_pct": -1.8808777429467103,
+    "value": 31.83
   }
 ]
