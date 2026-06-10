@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T03:17:20Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 401.92999267578125,
-    "change_pct": 8.424600128346713,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-09T03:17:25Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_ALIGN",
@@ -4498,5 +4489,14 @@
     "price": 2.6600000858306885,
     "change_pct": 6.400003433227538,
     "value": 6.400003433227538
+  },
+  {
+    "timestamp": "2026-06-10T18:28:36Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 3.8550000190734863,
+    "change_pct": -0.6443294053225146,
+    "value": 1
   }
 ]
