@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:08:55Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 27.020299911499023,
-    "change_pct": 4.406104758497004,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-08T15:09:00Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.135000228881836,
-    "change_pct": -1.0694492695208861,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-08T15:09:00Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 162.88,
     "change_pct": -2.4261666566824482,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-10T09:32:25Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 341.7,
+    "change_pct": 0.21997360316761988,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T09:32:25Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_POS_SIZE",
+    "type": "position_size",
+    "price": 341.7,
+    "change_pct": 0.21997360316761988,
+    "value": 0.2926544
   }
 ]
