@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T06:49:25Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 6.570000171661377,
-    "change_pct": 26.833980147903034,
-    "value": 3.747455079458468
-  },
-  {
     "timestamp": "2026-06-09T07:14:05Z",
     "symbol": "VICR",
     "alert_id": "VICR_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 330.8599853515625,
     "change_pct": -2.959382504307813,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T21:54:25Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 7.599999904632568,
+    "change_pct": 8.10810675153013,
+    "value": 4.721232987133328
   }
 ]
