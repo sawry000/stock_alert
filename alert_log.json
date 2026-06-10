@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T00:02:49Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 18.450000762939453,
-    "change_pct": -13.664011404120485,
-    "value": -13.664011404120485
-  },
-  {
     "timestamp": "2026-06-08T00:02:51Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 390.7799987792969,
     "change_pct": -1.3455861302928829,
     "value": 26.3
+  },
+  {
+    "timestamp": "2026-06-10T03:57:38Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 71.5999984741211,
+    "change_pct": 7.811027252582119,
+    "value": 7.811027252582119
   }
 ]
