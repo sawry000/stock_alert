@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T22:12:21Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 401.92999267578125,
-    "change_pct": 8.424600128346713,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-08T22:29:18Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 38.389198303222656,
     "change_pct": -5.141356160448497,
     "value": -5.141356160448497
+  },
+  {
+    "timestamp": "2026-06-10T15:19:09Z",
+    "symbol": "SHLS",
+    "alert_id": "SHLS_PCT_DROP",
+    "type": "percent_change",
+    "price": 9.260000228881836,
+    "change_pct": -5.107392309376168,
+    "value": -5.107392309376168
   }
 ]
