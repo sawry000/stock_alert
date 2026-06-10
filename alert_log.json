@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T03:22:54Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.09000015258789,
-    "change_pct": 6.742425398393117,
-    "value": 6.742425398393117
-  },
-  {
     "timestamp": "2026-06-09T03:23:33Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 7.889999866485596,
     "change_pct": 12.233284018287275,
     "value": 3.919306980304216
+  },
+  {
+    "timestamp": "2026-06-10T18:52:23Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 358.6300048828125,
+    "change_pct": 1.025382372126677,
+    "value": 2
   }
 ]
