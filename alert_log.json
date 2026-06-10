@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T00:03:23Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.0399999618530273,
-    "change_pct": -7.598785354011328,
-    "value": -7.598785354011328
-  },
-  {
-    "timestamp": "2026-06-08T00:03:25Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_PCT_DROP",
-    "type": "percent_change",
-    "price": 97.19000244140625,
-    "change_pct": -7.438092912946429,
-    "value": -7.438092912946429
-  },
-  {
     "timestamp": "2026-06-08T00:03:27Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 6.84,
     "change_pct": -0.8681285236017892,
     "value": 5.676399473993941
+  },
+  {
+    "timestamp": "2026-06-10T05:42:38Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_DROP",
+    "type": "percent_change",
+    "price": 53.51,
+    "change_pct": -5.8088364724520405,
+    "value": -5.8088364724520405
+  },
+  {
+    "timestamp": "2026-06-10T05:43:21Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_DROP",
+    "type": "percent_change",
+    "price": 15.75,
+    "change_pct": -14.686860151451143,
+    "value": -14.686860151451143
   }
 ]
