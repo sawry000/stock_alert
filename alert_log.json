@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T03:22:48Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 196.63999938964844,
-    "change_pct": 13.242208631751723,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-09T03:22:54Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 21.90999984741211,
     "change_pct": -5.23356467382306,
     "value": -5.23356467382306
+  },
+  {
+    "timestamp": "2026-06-10T18:44:38Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 7.889999866485596,
+    "change_pct": 12.233284018287275,
+    "value": 3.919306980304216
   }
 ]
