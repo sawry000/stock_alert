@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:09:49Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_BT_VOL",
-    "type": "backtest_check",
-    "price": 274.8999938964844,
-    "change_pct": 2.574624588240438,
-    "value": 87.5
-  },
-  {
-    "timestamp": "2026-06-08T15:09:51Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_UP_5",
-    "type": "percent_change",
-    "price": 43.94499969482422,
-    "change_pct": 5.484876847873794,
-    "value": 5.484876847873794
-  },
-  {
     "timestamp": "2026-06-08T15:09:56Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 19.43,
     "change_pct": -0.5644744451211022,
     "value": 3.03860985155766
+  },
+  {
+    "timestamp": "2026-06-10T11:49:01Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.59,
+    "change_pct": -0.07352941176470432,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T11:49:05Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 102.16,
+    "change_pct": -0.8155339805825276,
+    "value": 2
   }
 ]
