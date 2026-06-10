@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:07:30Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_POS_SIZE",
-    "type": "position_size",
-    "price": 409.5299987792969,
-    "change_pct": 10.474777118774451,
-    "value": 0.2441824
-  },
-  {
     "timestamp": "2026-06-08T15:07:35Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_ALIGN",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-10T06:55:18Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 19.43,
+    "change_pct": 17.767568157298193,
+    "value": 3.03860985155766
+  },
+  {
+    "timestamp": "2026-06-10T07:14:34Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
     "type": "volume_spike",
     "price": 19.43,
     "change_pct": 17.767568157298193,
