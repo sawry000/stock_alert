@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:07:35Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 350.25,
-    "change_pct": 13.536905572303798,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-08T15:07:37Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_NEWS_ANY",
@@ -4498,5 +4489,14 @@
     "price": 19.43,
     "change_pct": 17.767568157298193,
     "value": 3.03860985155766
+  },
+  {
+    "timestamp": "2026-06-10T07:28:57Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.67,
+    "change_pct": -5.500000000000002,
+    "value": -5.500000000000002
   }
 ]
