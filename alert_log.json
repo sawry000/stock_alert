@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:09:41Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_POS_SIZE",
-    "type": "position_size",
-    "price": 98.06999969482422,
-    "change_pct": 1.6374750697732656,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-08T15:09:48Z",
     "symbol": "VICR",
     "alert_id": "VICR_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 6.84,
     "change_pct": -2.702702702702708,
     "value": 5.676399473993941
+  },
+  {
+    "timestamp": "2026-06-10T11:05:11Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 19.43,
+    "change_pct": -0.5644744451211022,
+    "value": 3.03860985155766
   }
 ]
