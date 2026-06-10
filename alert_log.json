@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-07T00:02:57Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.2899999618530273,
-    "change_pct": -7.0621479702534655,
-    "value": -7.0621479702534655
-  },
-  {
     "timestamp": "2026-06-07T00:02:59Z",
     "symbol": "INOD",
     "alert_id": "INOD_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 355.94000244140625,
     "change_pct": -11.27894452967266,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T00:34:24Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_RSI_OS_4H",
+    "type": "rsi",
+    "price": 6.260000228881836,
+    "change_pct": -2.7950275018348516,
+    "value": 31.83
   }
 ]
