@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T00:52:57Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 18.56999969482422,
-    "change_pct": 1.53088952883663,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-09T01:17:54Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.09000015258789,
-    "change_pct": 6.742425398393117,
-    "value": 6.742425398393117
-  },
-  {
     "timestamp": "2026-06-09T01:19:33Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 5.03000020980835,
     "change_pct": 4.356850825899363,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-10T17:34:13Z",
+    "symbol": "ANNA",
+    "alert_id": "ANNA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.440000057220459,
+    "change_pct": 8.176102428316314,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-10T17:34:43Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.0950000286102295,
+    "change_pct": -5.12537463643463,
+    "value": -5.12537463643463
   }
 ]
