@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:08:42Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_POS_SIZE",
-    "type": "position_size",
-    "price": 104.65499877929688,
-    "change_pct": 6.790815080915179,
-    "value": 0.9555205
-  },
-  {
     "timestamp": "2026-06-08T15:08:44Z",
     "symbol": "DDD",
     "alert_id": "DDD_CP_BULL",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-10T09:04:23Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 19.43,
+    "change_pct": -0.5644744451211022,
+    "value": 3.03860985155766
+  },
+  {
+    "timestamp": "2026-06-10T09:20:09Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
     "type": "volume_spike",
     "price": 19.43,
     "change_pct": -0.5644744451211022,
