@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T21:07:26Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 401.92999267578125,
-    "change_pct": 8.424600128346713,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-08T21:12:24Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 401.92999267578125,
-    "change_pct": 8.424600128346713,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-08T21:12:30Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 346.3299865722656,
-    "change_pct": 12.26619552409012,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-08T21:12:54Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.09000015258789,
-    "change_pct": 6.742425398393117,
-    "value": 6.742425398393117
-  },
-  {
     "timestamp": "2026-06-08T21:14:30Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_RSI_OS_1D",
@@ -4498,5 +4462,41 @@
     "price": 9.524999618530273,
     "change_pct": -2.391789447755027,
     "value": 10
+  },
+  {
+    "timestamp": "2026-06-10T14:12:47Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 8.904600143432617,
+    "change_pct": 5.57979776419988,
+    "value": 5.57979776419988
+  },
+  {
+    "timestamp": "2026-06-10T14:12:50Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_POS_SIZE",
+    "type": "position_size",
+    "price": 8.904600143432617,
+    "change_pct": 5.57979776419988,
+    "value": 11
+  },
+  {
+    "timestamp": "2026-06-10T14:13:27Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.03000020980835,
+    "change_pct": 3.8659847888749925,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T14:13:28Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_POS_SIZE",
+    "type": "position_size",
+    "price": 4.03000020980835,
+    "change_pct": 3.8659847888749925,
+    "value": 24
   }
 ]
