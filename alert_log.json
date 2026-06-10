@@ -2,15 +2,6 @@
   {
     "timestamp": "2026-06-08T15:08:27Z",
     "symbol": "RDW",
-    "alert_id": "RDW_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 19.360000610351562,
-    "change_pct": 5.850194698477656,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-08T15:08:27Z",
-    "symbol": "RDW",
     "alert_id": "RDW_POS_SIZE",
     "type": "position_size",
     "price": 19.360000610351562,
@@ -4498,5 +4489,14 @@
     "price": 6.26,
     "change_pct": -1.8808777429467103,
     "value": 31.83
+  },
+  {
+    "timestamp": "2026-06-10T08:42:23Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 355.94,
+    "change_pct": 0.2676131722020306,
+    "value": 2
   }
 ]
