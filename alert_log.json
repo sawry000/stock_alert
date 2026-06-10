@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-08T15:09:56Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 19.570600509643555,
-    "change_pct": 9.516510966108301,
-    "value": 9.516510966108301
-  },
-  {
-    "timestamp": "2026-06-08T15:10:14Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_RSI_OS_1D",
-    "type": "rsi",
-    "price": 6.315000057220459,
-    "change_pct": -0.5370830949196104,
-    "value": 28.22
-  },
-  {
-    "timestamp": "2026-06-08T15:10:15Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_RSI_OS_4H",
-    "type": "rsi",
-    "price": 6.315000057220459,
-    "change_pct": -0.5370830949196104,
-    "value": 30.71
-  },
-  {
-    "timestamp": "2026-06-08T15:10:15Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_POS_SIZE",
-    "type": "position_size",
-    "price": 6.315000057220459,
-    "change_pct": -0.5370830949196104,
-    "value": 15
-  },
-  {
-    "timestamp": "2026-06-08T15:10:23Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_RSI_OS_4H",
-    "type": "rsi",
-    "price": 397.260009765625,
-    "change_pct": 0.087881058943409,
-    "value": 30.19
-  },
-  {
     "timestamp": "2026-06-08T15:10:23Z",
     "symbol": "GLD",
     "alert_id": "GLD_POS_SIZE",
@@ -4498,5 +4453,50 @@
     "price": 102.16,
     "change_pct": -0.8155339805825276,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T12:01:07Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 28.98,
+    "change_pct": 1.75561797752809,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-10T12:02:37Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_RSI_OS_4H",
+    "type": "rsi",
+    "price": 40.53,
+    "change_pct": 0.14850543243249548,
+    "value": 29.9
+  },
+  {
+    "timestamp": "2026-06-10T12:03:27Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 19.43,
+    "change_pct": -0.5644744451211022,
+    "value": 3.03860985155766
+  },
+  {
+    "timestamp": "2026-06-10T12:03:29Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 6.84,
+    "change_pct": -2.702702702702708,
+    "value": 5.676399473993941
+  },
+  {
+    "timestamp": "2026-06-10T12:03:31Z",
+    "symbol": "GLD",
+    "alert_id": "GLD_RSI_OS_4H",
+    "type": "rsi",
+    "price": 390.78,
+    "change_pct": 0.7944286819705918,
+    "value": 26.3
   }
 ]
