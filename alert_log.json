@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T00:12:38Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 66.75,
-    "change_pct": 5.181053228703786,
-    "value": 5.181053228703786
-  },
-  {
-    "timestamp": "2026-06-09T00:22:19Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 401.92999267578125,
-    "change_pct": 8.424600128346713,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-09T00:32:25Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_NEWS_POS",
@@ -4498,5 +4480,23 @@
     "price": 2.680000066757202,
     "change_pct": 7.200002670288086,
     "value": 7.200002670288086
+  },
+  {
+    "timestamp": "2026-06-10T16:27:51Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 171.4199981689453,
+    "change_pct": 2.689749097792671,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-10T16:28:20Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.0399999618530273,
+    "change_pct": -5.245769976217081,
+    "value": -5.245769976217081
   }
 ]
