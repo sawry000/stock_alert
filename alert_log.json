@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T14:18:48Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_POS_SIZE",
-    "type": "position_size",
-    "price": 2.640000104904175,
-    "change_pct": 5.600004196166992,
-    "value": 37
-  },
-  {
     "timestamp": "2026-06-10T14:22:33Z",
     "symbol": "COHR",
     "alert_id": "COHR_NEWS_ANY",
@@ -4498,5 +4489,14 @@
     "price": 24.549999237060547,
     "change_pct": 9.941778938918713,
     "value": 9.941778938918713
+  },
+  {
+    "timestamp": "2026-06-11T23:57:31Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_3X",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4.15436151736004
   }
 ]
