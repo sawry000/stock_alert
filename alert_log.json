@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T06:44:29Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 19.43,
-    "change_pct": 17.767568157298193,
-    "value": 3.03860985155766
-  },
-  {
     "timestamp": "2026-06-10T06:44:31Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 8.75,
     "change_pct": 16.947340283346694,
     "value": 4.135849154762239
+  },
+  {
+    "timestamp": "2026-06-11T19:18:59Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 18.895000457763672,
+    "change_pct": 3.2513686216594047,
+    "value": 2
   }
 ]
