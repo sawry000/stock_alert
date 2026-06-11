@@ -78,7 +78,7 @@
       "last_fired": "2026-06-09T09:17:27Z"
     },
     "COHR_RSI_OB": {
-      "last_fired": "2026-06-11T04:02:18Z"
+      "last_fired": "2026-06-11T08:02:20Z"
     },
     "COHR_NEWS_BAD": {
       "last_fired": "2026-06-10T09:22:23Z",
@@ -102,7 +102,7 @@
       "last_fired": "2026-06-09T15:57:35Z"
     },
     "ALAB_RSI_OB": {
-      "last_fired": "2026-06-11T04:02:21Z"
+      "last_fired": "2026-06-11T08:02:26Z"
     },
     "ALAB_MTF_ALIGN": {
       "last_fired": "2026-06-11T03:47:22Z"
@@ -205,9 +205,9 @@
       "last_fired": "2026-06-04T18:17:35Z"
     },
     "NAVN_PCT_DROP": {
-      "last_fired": "2026-06-08T00:02:32Z"
+      "last_fired": "2026-06-11T08:02:40Z"
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 21.93000030517578,
     "open_time": "2026-06-09T13:52:35Z"
   },
@@ -609,7 +609,7 @@
       "last_fired": "2026-06-10T13:34:08Z"
     },
     "AMSC_POS_SIZE": {
-      "last_fired": "2026-06-10T16:09:33Z"
+      "last_fired": "2026-06-11T08:04:45Z"
     },
     "AMSC_VOL_SPIKE": {
       "last_fired": "2026-05-29T13:07:57Z"
@@ -630,14 +630,14 @@
       "last_fired": "2026-06-04T13:33:59Z"
     },
     "AMSC_RSI_OS_4H": {
-      "last_fired": "2026-06-10T22:18:51Z"
+      "last_fired": "2026-06-11T08:04:44Z"
     },
-    "open_position": false,
+    "open_position": true,
     "AMSC_PCT_UP_5": {
       "last_fired": "2026-06-08T15:09:51Z"
     },
-    "open_entry": 38.244998931884766,
-    "open_time": "2026-06-10T16:09:33Z"
+    "open_entry": 36.78,
+    "open_time": "2026-06-11T08:04:45Z"
   },
   "ASPN": {
     "ASPN_POS_SIZE": {
@@ -1117,7 +1117,7 @@
     "open_entry": 20.135000228881836,
     "open_time": "2026-06-09T18:55:17Z",
     "VELO_VOL_SPIKE": {
-      "last_fired": "2026-06-11T07:04:23Z"
+      "last_fired": "2026-06-11T08:05:20Z"
     },
     "VELO_VOL_ALARM": {
       "last_fired": "2026-06-11T07:59:14Z"
@@ -1142,17 +1142,17 @@
   },
   "GLD": {
     "GLD_RSI_OS_4H": {
-      "last_fired": "2026-06-10T18:10:16Z"
+      "last_fired": "2026-06-11T08:05:26Z"
     },
     "GLD_POS_SIZE": {
-      "last_fired": "2026-06-09T19:40:09Z"
+      "last_fired": "2026-06-11T08:05:27Z"
     },
     "GLD_PCT_DROP": {
       "last_fired": "2026-06-11T03:04:19Z"
     },
-    "open_position": false,
-    "open_entry": 390.2799987792969,
-    "open_time": "2026-06-09T19:40:09Z",
+    "open_position": true,
+    "open_entry": 374.58,
+    "open_time": "2026-06-11T08:05:27Z",
     "GLD_NEWS_BAD": {
       "last_fired": "2026-06-11T05:54:09Z",
       "seen_news": [
