@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T10:47:54Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 18.56999969482422,
-    "change_pct": 0.5882527588602035,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-09T10:58:12Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 102.79000091552734,
-    "change_pct": -0.5893642366132262,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-09T11:09:57Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 5.320000171661377,
     "change_pct": -6.666663655063565,
     "value": -6.666663655063565
+  },
+  {
+    "timestamp": "2026-06-11T00:03:33Z",
+    "symbol": "ANNA",
+    "alert_id": "ANNA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.569999933242798,
+    "change_pct": 12.264148844113135,
+    "value": 12.264148844113135
+  },
+  {
+    "timestamp": "2026-06-11T00:04:07Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 7.599999904632568,
+    "change_pct": 8.10810675153013,
+    "value": 4.721232987133328
   }
 ]
