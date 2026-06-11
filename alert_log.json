@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T04:34:56Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 19.43,
-    "change_pct": 17.767568157298193,
-    "value": 3.03860985155766
-  },
-  {
-    "timestamp": "2026-06-10T04:34:59Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 6.84,
-    "change_pct": -0.8681285236017892,
-    "value": 5.676399473993941
-  },
-  {
     "timestamp": "2026-06-10T04:48:44Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 8.470000267028809,
     "change_pct": 13.205028963229196,
     "value": 3.8762255962360066
+  },
+  {
+    "timestamp": "2026-06-11T18:13:27Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.950000047683716,
+    "change_pct": 3.699037769649416,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-11T18:14:30Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 30.479999542236328,
+    "change_pct": 32.89731651291184,
+    "value": 4.235381185724062
   }
 ]
