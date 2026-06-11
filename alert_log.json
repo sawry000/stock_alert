@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:48:56Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_POS_SIZE",
-    "type": "position_size",
-    "price": 44.5,
-    "change_pct": 2.902069603422367,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-09T13:49:14Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_CP_BULL",
-    "type": "candle_pattern",
-    "price": 60.70000076293945,
-    "change_pct": 1.335560539130976,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-09T13:49:15Z",
     "symbol": "FPS",
     "alert_id": "FPS_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 101.69999694824219,
     "change_pct": -1.2621388852017599,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-11T04:02:18Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_RSI_OB",
+    "type": "rsi",
+    "price": 354.77,
+    "change_pct": -0.061973576720478686,
+    "value": 100.0
+  },
+  {
+    "timestamp": "2026-06-11T04:02:21Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 330.86,
+    "change_pct": -2.9593782079483724,
+    "value": 100.0
   }
 ]
