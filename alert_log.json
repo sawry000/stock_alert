@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:53:16Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 28.530899047851562,
-    "change_pct": 5.305328022778761,
-    "value": 5.305328022778761
-  },
-  {
     "timestamp": "2026-06-09T13:53:29Z",
     "symbol": "NLST",
     "alert_id": "NLST_MTF_BULL",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-11T04:49:01Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.68,
+    "change_pct": 16.067818815473668,
+    "value": 3.0542081546815325
+  },
+  {
+    "timestamp": "2026-06-11T04:54:14Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
     "type": "volume_spike",
     "price": 22.68,
     "change_pct": 16.067818815473668,
