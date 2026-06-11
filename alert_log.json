@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T22:53:49Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.5,
-    "change_pct": -16.10738255033557,
-    "value": -16.10738255033557
-  },
-  {
     "timestamp": "2026-06-09T22:53:55Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 8.600000381469727,
     "change_pct": 14.942533834131599,
     "value": 2.520920650586772
+  },
+  {
+    "timestamp": "2026-06-11T15:09:37Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 29.53689956665039,
+    "change_pct": 28.78526080946323,
+    "value": 2.5175838150174963
   }
 ]
