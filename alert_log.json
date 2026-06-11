@@ -1,59 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T07:34:25Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 102.16,
-    "change_pct": 7.888900623085858,
-    "value": 7.888900623085858
-  },
-  {
-    "timestamp": "2026-06-10T07:44:48Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 19.43,
-    "change_pct": 17.767568157298193,
-    "value": 3.03860985155766
-  },
-  {
-    "timestamp": "2026-06-10T07:44:50Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 6.84,
-    "change_pct": -0.8681285236017892,
-    "value": 5.676399473993941
-  },
-  {
-    "timestamp": "2026-06-10T07:48:55Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.59,
-    "change_pct": 5.348837209302322,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-10T07:48:58Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 102.16,
-    "change_pct": 7.888900623085858,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-10T07:58:38Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 28.98,
-    "change_pct": 6.962924686732987,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-10T07:59:25Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_RSI_OS_4H",
@@ -4498,5 +4444,59 @@
     "price": 2.559999942779541,
     "change_pct": 16.3636337627064,
     "value": 16.3636337627064
+  },
+  {
+    "timestamp": "2026-06-11T19:42:40Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 22.280000686645508,
+    "change_pct": -10.28572992846411,
+    "value": 3.8359494746654486
+  },
+  {
+    "timestamp": "2026-06-11T19:42:41Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_3X",
+    "type": "volume_spike",
+    "price": 22.280000686645508,
+    "change_pct": -10.28572992846411,
+    "value": 3.8359494746654486
+  },
+  {
+    "timestamp": "2026-06-11T19:43:08Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_UP_5",
+    "type": "percent_change",
+    "price": 17.189899444580078,
+    "change_pct": 18.551030652276403,
+    "value": 18.551030652276403
+  },
+  {
+    "timestamp": "2026-06-11T19:43:34Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.014999866485596,
+    "change_pct": 5.405472854101908,
+    "value": 5.405472854101908
+  },
+  {
+    "timestamp": "2026-06-11T19:43:39Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 13.819999694824219,
+    "change_pct": 7.131780580032701,
+    "value": 7.131780580032701
+  },
+  {
+    "timestamp": "2026-06-11T19:43:58Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 24.510000228881836,
+    "change_pct": 9.762652166958521,
+    "value": 9.762652166958521
   }
 ]
