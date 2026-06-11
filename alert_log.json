@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:37:51Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_CP_BULL",
-    "type": "candle_pattern",
-    "price": 25.299999237060547,
-    "change_pct": 5.636740029480366,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-09T13:37:52Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 354.7699890136719,
     "change_pct": -0.0619766715479687,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-11T03:29:04Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_PCT_DROP",
+    "type": "percent_change",
+    "price": 16.43000030517578,
+    "change_pct": -5.193304644109736,
+    "value": -5.193304644109736
   }
 ]
