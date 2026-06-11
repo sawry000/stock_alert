@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T22:53:55Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.28000020980835,
-    "change_pct": -7.261143824097453,
-    "value": -7.261143824097453
-  },
-  {
     "timestamp": "2026-06-09T22:54:16Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 29.53689956665039,
     "change_pct": 28.78526080946323,
     "value": 2.5175838150174963
+  },
+  {
+    "timestamp": "2026-06-11T15:18:41Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_PCT_UP_5",
+    "type": "percent_change",
+    "price": 14.210000038146973,
+    "change_pct": 5.259259541829428,
+    "value": 5.259259541829428
   }
 ]
