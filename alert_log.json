@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T01:19:57Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 6.840000152587891,
-    "change_pct": -0.8681263121510322,
-    "value": 6.137138548124525
-  },
-  {
     "timestamp": "2026-06-10T01:22:26Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 8.505000114440918,
     "change_pct": 13.672816284962813,
     "value": 3.4524802606673517
+  },
+  {
+    "timestamp": "2026-06-11T17:13:33Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.430000066757202,
+    "change_pct": -5.813948115679959,
+    "value": -5.813948115679959
   }
 ]
