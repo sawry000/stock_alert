@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:33:12Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 9.770000457763672,
-    "change_pct": 7.450019331804686,
-    "value": 7.450019331804686
-  },
-  {
     "timestamp": "2026-06-09T13:33:14Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_MTF_BULL",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-11T01:44:12Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 22.68000030517578,
+    "change_pct": 16.067820377250005,
+    "value": 3.187595137084964
+  },
+  {
+    "timestamp": "2026-06-11T01:59:28Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
     "type": "volume_spike",
     "price": 22.68000030517578,
     "change_pct": 16.067820377250005,
