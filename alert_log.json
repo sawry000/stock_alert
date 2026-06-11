@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T15:59:25Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "price": 56.470001220703125,
-    "change_pct": -5.726208312682593,
-    "value": -5.726208312682593
-  },
-  {
     "timestamp": "2026-06-09T16:03:19Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 4.97,
     "change_pct": 3.9748953974895294,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-11T09:39:15Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.015,
+    "change_pct": -7.57770829501563,
+    "value": -7.57770829501563
   }
 ]
