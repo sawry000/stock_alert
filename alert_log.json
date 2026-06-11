@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:43:22Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 104.5,
-    "change_pct": 1.0644162345236046,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-09T13:43:42Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 16.43000030517578,
     "change_pct": -5.193304644109736,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-11T03:39:46Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.68000030517578,
+    "change_pct": 16.067820377250005,
+    "value": 3.187595137084964
   }
 ]
