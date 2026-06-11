@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:37:52Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_POS_SIZE",
-    "type": "position_size",
-    "price": 25.299999237060547,
-    "change_pct": 5.636740029480366,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-09T13:43:22Z",
     "symbol": "INOD",
     "alert_id": "INOD_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 16.43000030517578,
     "change_pct": -5.193304644109736,
     "value": -5.193304644109736
+  },
+  {
+    "timestamp": "2026-06-11T03:34:04Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 16.43000030517578,
+    "change_pct": -5.193304644109736,
+    "value": 1
   }
 ]
