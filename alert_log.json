@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T13:48:52Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 2.380000114440918,
-    "change_pct": -4.799995422363281,
-    "value": -0.087
-  },
-  {
-    "timestamp": "2026-06-10T13:49:00Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 24.354999542236328,
-    "change_pct": 5.069023046748613,
-    "value": 5.069023046748613
-  },
-  {
-    "timestamp": "2026-06-10T13:49:02Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_POS_SIZE",
-    "type": "position_size",
-    "price": 24.354999542236328,
-    "change_pct": 5.069023046748613,
-    "value": 4
-  },
-  {
-    "timestamp": "2026-06-10T13:49:28Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 19.250499725341797,
-    "change_pct": 6.769271909826931,
-    "value": 6.769271909826931
-  },
-  {
-    "timestamp": "2026-06-10T13:49:31Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 19.250499725341797,
-    "change_pct": 6.769271909826931,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-10T13:52:42Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_UP_5",
@@ -4498,5 +4453,50 @@
     "price": 30.610000610351562,
     "change_pct": 33.464140441907844,
     "value": 5.3489292961973645
+  },
+  {
+    "timestamp": "2026-06-11T23:27:29Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 26.139999389648438,
+    "change_pct": 10.57529352643163,
+    "value": 10.57529352643163
+  },
+  {
+    "timestamp": "2026-06-11T23:27:31Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_3X",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4.15436151736004
+  },
+  {
+    "timestamp": "2026-06-11T23:27:35Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4.15436151736004
+  },
+  {
+    "timestamp": "2026-06-11T23:28:07Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 105.36000061035156,
+    "change_pct": 7.510204704440369,
+    "value": 7.510204704440369
+  },
+  {
+    "timestamp": "2026-06-11T23:29:21Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 8.670000076293945,
+    "change_pct": 15.878108477598838,
+    "value": 4.545847151500943
   }
 ]
