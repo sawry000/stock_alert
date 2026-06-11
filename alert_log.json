@@ -2,15 +2,6 @@
   {
     "timestamp": "2026-06-09T18:55:17Z",
     "symbol": "VELO",
-    "alert_id": "VELO_CP_BULL",
-    "type": "candle_pattern",
-    "price": 20.135000228881836,
-    "change_pct": 22.04065938250419,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-09T18:55:17Z",
-    "symbol": "VELO",
     "alert_id": "VELO_POS_SIZE",
     "type": "position_size",
     "price": 20.135000228881836,
@@ -4498,5 +4489,14 @@
     "price": 22.68000030517578,
     "change_pct": -1.111836471873632,
     "value": 3.052740757402513
+  },
+  {
+    "timestamp": "2026-06-11T13:07:41Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 354.7699890136719,
+    "change_pct": 1.5361617268079484,
+    "value": 2
   }
 ]
