@@ -68,10 +68,11 @@
       "last_fired": "2026-05-28T06:52:17Z"
     },
     "COHR_NEWS_ANY": {
-      "last_fired": "2026-06-11T18:27:26Z",
+      "last_fired": "2026-06-11T19:32:27Z",
       "seen_news": [
-        "0b6b174090ac",
-        "2dc57757ab65"
+        "9d88effe2d24",
+        "6c3cb8f5a9e6",
+        "3061461e93d6"
       ]
     },
     "COHR_MTF_ALIGN": {
@@ -351,7 +352,7 @@
       "last_fired": "2026-06-11T17:33:05Z"
     },
     "LNAI_MTF_BULL": {
-      "last_fired": "2026-06-11T13:43:04Z"
+      "last_fired": "2026-06-11T19:32:59Z"
     },
     "LNAI_MA_GOLDEN": {
       "last_fired": "2026-06-01T00:07:44Z"
@@ -928,15 +929,17 @@
       "last_fired": "2026-06-03T11:08:36Z"
     },
     "UAMY_POS_SIZE": {
-      "last_fired": "2026-06-05T06:53:39Z"
+      "last_fired": "2026-06-11T19:33:48Z"
     },
     "UAMY_PCT_UP_5": {
-      "last_fired": "2026-06-03T06:03:18Z"
+      "last_fired": "2026-06-11T19:33:45Z"
     },
     "UAMY_PCT_DROP": {
       "last_fired": "2026-06-11T07:13:39Z"
     },
-    "open_position": false
+    "open_position": true,
+    "open_entry": 7.15500020980835,
+    "open_time": "2026-06-11T19:33:48Z"
   },
   "WYFI": {
     "WYFI_PCT_UP_5": {
