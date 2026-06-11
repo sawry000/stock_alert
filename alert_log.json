@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T14:12:22Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 377.8999938964844,
-    "change_pct": -5.805230963761714,
-    "value": -5.805230963761714
-  },
-  {
     "timestamp": "2026-06-09T14:19:08Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_RSI_OS_4H",
@@ -4497,6 +4488,15 @@
     "type": "mtf_alignment",
     "price": 4.97,
     "change_pct": 3.1120331950207354,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-11T05:48:30Z",
+    "symbol": "ANNA",
+    "alert_id": "ANNA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.57,
+    "change_pct": 12.264150943396215,
     "value": 2
   }
 ]
