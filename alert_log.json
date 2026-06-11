@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:48:01Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 104.87000274658203,
-    "change_pct": 10.20387005735817,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-09T13:48:36Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 25.385000228881836,
-    "change_pct": 5.828599063996754,
-    "value": 5.828599063996754
-  },
-  {
     "timestamp": "2026-06-09T13:48:39Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 275.510009765625,
     "change_pct": -1.6035679408482144,
     "value": 87.5
+  },
+  {
+    "timestamp": "2026-06-11T03:47:22Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 330.8599853515625,
+    "change_pct": -2.959382504307813,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-11T03:49:06Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 22.68000030517578,
+    "change_pct": 16.067820377250005,
+    "value": 3.187595137084964
   }
 ]
