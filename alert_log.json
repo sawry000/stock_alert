@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:35:36Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_RSI_OS_4H",
-    "type": "rsi",
-    "price": 397.4700012207031,
-    "change_pct": 0.34333927967057415,
-    "value": 31.73
-  },
-  {
     "timestamp": "2026-06-09T13:37:28Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 22.68000030517578,
     "change_pct": 16.067820377250005,
     "value": 3.187595137084964
+  },
+  {
+    "timestamp": "2026-06-11T02:47:34Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 20.8700008392334,
+    "change_pct": 0.92803903276122,
+    "value": 2
   }
 ]
