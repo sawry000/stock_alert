@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T13:03:30Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 11.630000114440918,
-    "change_pct": -1.6906161078536104,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-10T13:04:08Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_CP_BULL",
-    "type": "candle_pattern",
-    "price": 18.6299991607666,
-    "change_pct": 3.3277823669805904,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-10T13:04:25Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_RSI_OS_1D",
@@ -4498,5 +4480,23 @@
     "price": 3.380000114440918,
     "change_pct": -7.397257138604985,
     "value": -7.397257138604985
+  },
+  {
+    "timestamp": "2026-06-11T21:52:32Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_UP_5",
+    "type": "percent_change",
+    "price": 54.93000030517578,
+    "change_pct": 9.45676189951376,
+    "value": 9.45676189951376
+  },
+  {
+    "timestamp": "2026-06-11T21:52:57Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 86.1500015258789,
+    "change_pct": 5.060977470584032,
+    "value": 5.060977470584032
   }
 ]
