@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T22:49:11Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.630000114440918,
-    "change_pct": -11.407542645437731,
-    "value": -11.407542645437731
-  },
-  {
     "timestamp": "2026-06-09T22:53:49Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 24.950000762939453,
     "change_pct": 5.54145838806875,
     "value": 4
+  },
+  {
+    "timestamp": "2026-06-11T15:04:31Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 8.600000381469727,
+    "change_pct": 14.942533834131599,
+    "value": 2.520920650586772
   }
 ]
