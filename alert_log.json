@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T08:07:28Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_RSI_OB",
-    "type": "rsi",
-    "price": 341.7,
-    "change_pct": 0.21997360316761988,
-    "value": 100.0
-  },
-  {
-    "timestamp": "2026-06-10T08:08:37Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.82,
-    "change_pct": -5.490196078431361,
-    "value": -5.490196078431361
-  },
-  {
-    "timestamp": "2026-06-10T08:19:34Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 19.43,
-    "change_pct": -0.5644744451211022,
-    "value": 3.03860985155766
-  },
-  {
-    "timestamp": "2026-06-10T08:40:21Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_RSI_OS_4H",
-    "type": "rsi",
-    "price": 6.26,
-    "change_pct": -1.8808777429467103,
-    "value": 31.83
-  },
-  {
     "timestamp": "2026-06-10T08:42:23Z",
     "symbol": "COHR",
     "alert_id": "COHR_NEWS_ANY",
@@ -4498,5 +4462,41 @@
     "price": 30.649999618530273,
     "change_pct": 33.638542047221605,
     "value": 5.273461841463238
+  },
+  {
+    "timestamp": "2026-06-11T20:03:55Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 114.9800033569336,
+    "change_pct": 13.650294906527224,
+    "value": 13.650294906527224
+  },
+  {
+    "timestamp": "2026-06-11T20:04:15Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_RSI_OS_4H",
+    "type": "rsi",
+    "price": 2.9600000381469727,
+    "change_pct": -3.58306064667841,
+    "value": 31.07
+  },
+  {
+    "timestamp": "2026-06-11T20:04:19Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 17.1200008392334,
+    "change_pct": 5.353851318359375,
+    "value": 5.353851318359375
+  },
+  {
+    "timestamp": "2026-06-11T20:04:22Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_POS_SIZE",
+    "type": "position_size",
+    "price": 17.1200008392334,
+    "change_pct": 5.353851318359375,
+    "value": 5
   }
 ]
