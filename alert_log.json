@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:43:42Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 13.14430046081543,
-    "change_pct": 8.272656184641097,
-    "value": 8.272656184641097
-  },
-  {
     "timestamp": "2026-06-09T13:48:01Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 22.68000030517578,
     "change_pct": 16.067820377250005,
     "value": 3.187595137084964
+  },
+  {
+    "timestamp": "2026-06-11T03:43:40Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_BT_VOL",
+    "type": "backtest_check",
+    "price": 275.510009765625,
+    "change_pct": -1.6035679408482144,
+    "value": 87.5
   }
 ]
