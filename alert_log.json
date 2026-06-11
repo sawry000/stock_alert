@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T14:44:04Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.9200000762939453,
-    "change_pct": -5.806449151808218,
-    "value": -5.806449151808218
-  },
-  {
-    "timestamp": "2026-06-09T14:44:23Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_RSI_OS_4H",
-    "type": "rsi",
-    "price": 41.38999938964844,
-    "change_pct": -4.28951464990533,
-    "value": 31.28
-  },
-  {
     "timestamp": "2026-06-09T14:44:33Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 22.68,
     "change_pct": 16.067818815473668,
     "value": 3.0542081546815325
+  },
+  {
+    "timestamp": "2026-06-11T06:07:40Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 72.17,
+    "change_pct": 3.068637685961279,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-11T06:08:37Z",
+    "symbol": "ANNA",
+    "alert_id": "ANNA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.57,
+    "change_pct": 12.264150943396215,
+    "value": 12.264150943396215
   }
 ]
