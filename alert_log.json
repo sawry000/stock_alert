@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:35:31Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 17.097000122070312,
-    "change_pct": 3.626975149832791,
-    "value": -0.049
-  },
-  {
     "timestamp": "2026-06-09T13:35:36Z",
     "symbol": "GLD",
     "alert_id": "GLD_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 21.6200008392334,
     "change_pct": -6.487885643454162,
     "value": -6.487885643454162
+  },
+  {
+    "timestamp": "2026-06-11T02:44:41Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 22.68000030517578,
+    "change_pct": 16.067820377250005,
+    "value": 3.187595137084964
   }
 ]
