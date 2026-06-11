@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:37:35Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 70.58999633789062,
-    "change_pct": 6.2902259934359215,
-    "value": 6.2902259934359215
-  },
-  {
     "timestamp": "2026-06-09T13:37:51Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 7.599999904632568,
     "change_pct": 8.10810675153013,
     "value": 4.721232987133328
+  },
+  {
+    "timestamp": "2026-06-11T03:12:28Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 354.7699890136719,
+    "change_pct": -0.0619766715479687,
+    "value": 2
   }
 ]
