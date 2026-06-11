@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T23:49:01Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_RSI_OS_4H",
-    "type": "rsi",
-    "price": 40.529998779296875,
-    "change_pct": -6.2781852715993125,
-    "value": 29.9
-  },
-  {
-    "timestamp": "2026-06-09T23:49:02Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_POS_SIZE",
-    "type": "position_size",
-    "price": 40.529998779296875,
-    "change_pct": -6.2781852715993125,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-09T23:49:31Z",
     "symbol": "GLD",
     "alert_id": "GLD_RSI_OS_4H",
@@ -4498,5 +4480,23 @@
     "price": 106.73999786376953,
     "change_pct": 5.505582547958416,
     "value": 5.505582547958416
+  },
+  {
+    "timestamp": "2026-06-11T16:02:39Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 25.030000686645508,
+    "change_pct": 5.879867540801638,
+    "value": 5.879867540801638
+  },
+  {
+    "timestamp": "2026-06-11T16:03:54Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.59000015258789,
+    "change_pct": 0.2848425445923772,
+    "value": 3
   }
 ]
