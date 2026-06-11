@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:33:53Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_CP_BULL",
-    "type": "candle_pattern",
-    "price": 3.069999933242798,
-    "change_pct": -0.3246774921169552,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-09T13:34:08Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 7.599999904632568,
     "change_pct": 8.10810675153013,
     "value": 4.721232987133328
+  },
+  {
+    "timestamp": "2026-06-11T02:07:29Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 354.7699890136719,
+    "change_pct": -0.0619766715479687,
+    "value": 3
   }
 ]
