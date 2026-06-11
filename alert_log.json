@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T13:48:41Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 5.079999923706055,
-    "change_pct": 5.394189288507353,
-    "value": 5.394189288507353
-  },
-  {
     "timestamp": "2026-06-10T13:48:52Z",
     "symbol": "NLST",
     "alert_id": "NLST_MA_DEATH",
@@ -4498,5 +4489,14 @@
     "price": 39.5099983215332,
     "change_pct": 7.627931292279451,
     "value": 7.627931292279451
+  },
+  {
+    "timestamp": "2026-06-11T23:14:16Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": 33.464140441907844,
+    "value": 5.3489292961973645
   }
 ]
