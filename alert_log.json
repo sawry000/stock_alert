@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:37:28Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_PCT_DROP",
-    "type": "percent_change",
-    "price": 53.790000915527344,
-    "change_pct": -5.315963887471675,
-    "value": -5.315963887471675
-  },
-  {
     "timestamp": "2026-06-09T13:37:34Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MA_GOLDEN",
@@ -4498,5 +4489,14 @@
     "price": 20.8700008392334,
     "change_pct": 0.92803903276122,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-11T03:04:19Z",
+    "symbol": "GLD",
+    "alert_id": "GLD_PCT_DROP",
+    "type": "percent_change",
+    "price": 374.5799865722656,
+    "change_pct": -3.3840633035167302,
+    "value": -3.3840633035167302
   }
 ]
