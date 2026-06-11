@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T12:14:30Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 6.570000171661377,
-    "change_pct": -4.781226225577512,
-    "value": 3.747455079458468
-  },
-  {
     "timestamp": "2026-06-09T12:33:18Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 12.800000190734863,
     "change_pct": 8.199494427175512,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-11T01:24:14Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.68000030517578,
+    "change_pct": 16.067820377250005,
+    "value": 3.187595137084964
   }
 ]
