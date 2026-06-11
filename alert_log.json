@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T12:33:18Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 5.050000190734863,
-    "change_pct": -0.07320991086009854,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-09T12:48:15Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 18.56999969482422,
-    "change_pct": 0.5882527588602035,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-09T13:20:04Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 22.68000030517578,
     "change_pct": 16.067820377250005,
     "value": 3.187595137084964
+  },
+  {
+    "timestamp": "2026-06-11T01:27:28Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 330.8599853515625,
+    "change_pct": -2.959382504307813,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-11T01:28:34Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.96999979019165,
+    "change_pct": 3.112028842150417,
+    "value": 3
   }
 ]
