@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T13:39:45Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_POS_SIZE",
-    "type": "position_size",
-    "price": 17.829999923706055,
-    "change_pct": 3.7979690044363177,
-    "value": 5
-  },
-  {
     "timestamp": "2026-06-10T13:43:17Z",
     "symbol": "DDD",
     "alert_id": "DDD_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 8.670000076293945,
     "change_pct": 15.878108477598838,
     "value": 4.545847151500943
+  },
+  {
+    "timestamp": "2026-06-11T22:28:30Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 5.28000020980835,
+    "change_pct": 5.389225744677641,
+    "value": 2
   }
 ]
