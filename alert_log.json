@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T11:34:40Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_RSI_OS_4H",
-    "type": "rsi",
-    "price": 397.2699890136719,
-    "change_pct": 0.2928451727226935,
-    "value": 31.1
-  },
-  {
     "timestamp": "2026-06-09T12:14:30Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 354.7699890136719,
     "change_pct": -0.0619766715479687,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-11T01:13:25Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 12.800000190734863,
+    "change_pct": 8.199494427175512,
+    "value": 3
   }
 ]
