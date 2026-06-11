@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T13:43:17Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_POS_SIZE",
-    "type": "position_size",
-    "price": 2.994999885559082,
-    "change_pct": 2.5684892314754144,
-    "value": 33
-  },
-  {
     "timestamp": "2026-06-10T13:47:48Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_MTF_BULL",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-11T22:34:21Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": 33.464140441907844,
+    "value": 5.3489292961973645
+  },
+  {
+    "timestamp": "2026-06-11T22:39:51Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
     "type": "volume_spike",
     "price": 30.610000610351562,
     "change_pct": 33.464140441907844,
