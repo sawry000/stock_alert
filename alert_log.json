@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T13:34:38Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_POS_SIZE",
-    "type": "position_size",
-    "price": 7.275000095367432,
-    "change_pct": 3.4850653679577723,
-    "value": 13
-  },
-  {
     "timestamp": "2026-06-10T13:37:48Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 3.380000114440918,
     "change_pct": -7.397257138604985,
     "value": 29
+  },
+  {
+    "timestamp": "2026-06-11T22:18:18Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.9600000381469727,
+    "change_pct": 3.9615667256562634,
+    "value": 2
   }
 ]
