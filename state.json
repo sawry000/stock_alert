@@ -51,7 +51,7 @@
       "last_fired": "2026-06-04T02:12:55Z"
     },
     "RDW_PCT_UP_5": {
-      "last_fired": "2026-06-11T15:37:57Z"
+      "last_fired": "2026-06-11T17:38:03Z"
     },
     "open_position": true,
     "open_entry": 15.270000457763672,
@@ -182,7 +182,7 @@
   },
   "NAVN": {
     "NAVN_POS_SIZE": {
-      "last_fired": "2026-06-11T13:42:44Z"
+      "last_fired": "2026-06-11T17:37:44Z"
     },
     "NAVN_CP_BULL": {
       "last_fired": "2026-06-11T13:42:44Z"
@@ -211,11 +211,11 @@
     "NAVN_PCT_DROP": {
       "last_fired": "2026-06-11T16:32:53Z"
     },
-    "open_position": false,
-    "open_entry": 23.701499938964844,
-    "open_time": "2026-06-11T13:42:44Z",
+    "open_position": true,
+    "open_entry": 23.739999771118164,
+    "open_time": "2026-06-11T17:37:44Z",
     "NAVN_VOL_SPIKE": {
-      "last_fired": "2026-06-11T16:32:52Z"
+      "last_fired": "2026-06-11T17:37:43Z"
     },
     "NAVN_VOL_3X": {
       "last_fired": "2026-06-11T17:22:41Z"
@@ -517,7 +517,7 @@
       "last_fired": "2026-06-11T17:23:36Z"
     },
     "OPTX_PCT_UP_5": {
-      "last_fired": "2026-06-11T13:48:44Z"
+      "last_fired": "2026-06-11T17:38:35Z"
     },
     "OPTX_PCT_DROP": {
       "last_fired": "2026-06-09T15:38:35Z"
@@ -807,7 +807,7 @@
       "last_fired": "2026-06-09T13:53:05Z"
     },
     "INOD_MTF_BULL": {
-      "last_fired": "2026-06-10T14:28:19Z"
+      "last_fired": "2026-06-11T17:38:17Z"
     },
     "INOD_POS_SIZE": {
       "last_fired": "2026-06-10T14:28:20Z"
@@ -938,7 +938,7 @@
   },
   "WYFI": {
     "WYFI_PCT_UP_5": {
-      "last_fired": "2026-06-11T14:03:55Z"
+      "last_fired": "2026-06-11T17:38:50Z"
     },
     "WYFI_MTF_BULL": {
       "last_fired": "2026-06-03T11:08:40Z"
@@ -1193,6 +1193,9 @@
     },
     "GLD_RSI_OS_1D": {
       "last_fired": "2026-06-11T15:55:15Z"
+    },
+    "GLD_CP_BULL": {
+      "last_fired": "2026-06-11T17:39:38Z"
     }
   }
 }
