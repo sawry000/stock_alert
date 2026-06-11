@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:49:15Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_POS_SIZE",
-    "type": "position_size",
-    "price": 60.70000076293945,
-    "change_pct": 1.335560539130976,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-09T13:52:34Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 330.86,
     "change_pct": -2.9593782079483724,
     "value": 100.0
+  },
+  {
+    "timestamp": "2026-06-11T04:08:30Z",
+    "symbol": "ANNA",
+    "alert_id": "ANNA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.57,
+    "change_pct": 12.264150943396215,
+    "value": 12.264150943396215
   }
 ]
