@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:34:44Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 13.789999961853027,
-    "change_pct": 6.899224510488581,
-    "value": 6.899224510488581
-  },
-  {
-    "timestamp": "2026-06-09T13:35:26Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_CP_BULL",
-    "type": "candle_pattern",
-    "price": 6.300000190734863,
-    "change_pct": -2.1739100817567873,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-09T13:35:31Z",
     "symbol": "VELO",
     "alert_id": "VELO_MA_DEATH",
@@ -4498,5 +4480,23 @@
     "price": 22.68000030517578,
     "change_pct": 16.067820377250005,
     "value": 3.187595137084964
+  },
+  {
+    "timestamp": "2026-06-11T02:37:49Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 175.1300048828125,
+    "change_pct": 4.91224158797849,
+    "value": 4
+  },
+  {
+    "timestamp": "2026-06-11T02:38:10Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_PCT_DROP",
+    "type": "percent_change",
+    "price": 21.6200008392334,
+    "change_pct": -6.487885643454162,
+    "value": -6.487885643454162
   }
 ]
