@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:34:41Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 95.65499877929688,
-    "change_pct": -2.2931575288081008,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-09T13:34:44Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 12.800000190734863,
     "change_pct": 8.199494427175512,
     "value": 8.199494427175512
+  },
+  {
+    "timestamp": "2026-06-11T02:34:21Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.68000030517578,
+    "change_pct": 16.067820377250005,
+    "value": 3.187595137084964
   }
 ]
