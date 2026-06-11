@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T13:53:05Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 108.72899627685547,
-    "change_pct": 5.154378339579793,
-    "value": 5.154378339579793
-  },
-  {
     "timestamp": "2026-06-09T13:53:10Z",
     "symbol": "DDD",
     "alert_id": "DDD_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 7.6,
     "change_pct": 8.108108108108098,
     "value": 4.3995568877795295
+  },
+  {
+    "timestamp": "2026-06-11T04:28:16Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 12.8,
+    "change_pct": 8.199492814877436,
+    "value": 8.199492814877436
   }
 ]
