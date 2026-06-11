@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-09T11:32:40Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 196.63999938964844,
-    "change_pct": -0.11682867392267336,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-09T11:33:21Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 22.68000030517578,
     "change_pct": 16.067820377250005,
     "value": 3.187595137084964
+  },
+  {
+    "timestamp": "2026-06-11T00:33:03Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.9700000286102295,
+    "change_pct": -7.427608745746047,
+    "value": -7.427608745746047
   }
 ]
