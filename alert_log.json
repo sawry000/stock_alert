@@ -1,86 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T03:09:27Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 7.599999904632568,
-    "change_pct": 8.10810675153013,
-    "value": 4.721232987133328
-  },
-  {
-    "timestamp": "2026-06-11T03:12:28Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 354.7699890136719,
-    "change_pct": -0.0619766715479687,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-11T03:29:04Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_DROP",
-    "type": "percent_change",
-    "price": 16.43000030517578,
-    "change_pct": -5.193304644109736,
-    "value": -5.193304644109736
-  },
-  {
-    "timestamp": "2026-06-11T03:34:04Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 16.43000030517578,
-    "change_pct": -5.193304644109736,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-11T03:39:46Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.68000030517578,
-    "change_pct": 16.067820377250005,
-    "value": 3.187595137084964
-  },
-  {
-    "timestamp": "2026-06-11T03:43:40Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_BT_VOL",
-    "type": "backtest_check",
-    "price": 275.510009765625,
-    "change_pct": -1.6035679408482144,
-    "value": 87.5
-  },
-  {
-    "timestamp": "2026-06-11T03:47:22Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 330.8599853515625,
-    "change_pct": -2.959382504307813,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-11T03:49:06Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 22.68000030517578,
-    "change_pct": 16.067820377250005,
-    "value": 3.187595137084964
-  },
-  {
-    "timestamp": "2026-06-11T03:53:52Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.75,
-    "change_pct": 1.102941176470591,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-11T03:53:56Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -4494,6 +4413,87 @@
     "timestamp": "2026-06-12T05:54:18Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": 33.464140441907844,
+    "value": 5.057421548453726
+  },
+  {
+    "timestamp": "2026-06-12T06:02:32Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_UP_5",
+    "type": "percent_change",
+    "price": 54.93000030517578,
+    "change_pct": 9.45676189951376,
+    "value": 9.45676189951376
+  },
+  {
+    "timestamp": "2026-06-12T06:02:40Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_3X",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 3.9009495907715315
+  },
+  {
+    "timestamp": "2026-06-12T06:02:55Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_CP_BULL",
+    "type": "candle_pattern",
+    "price": 14.510000228881836,
+    "change_pct": 7.481483176902488,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-12T06:03:02Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 86.1500015258789,
+    "change_pct": 5.060977470584032,
+    "value": 5.060977470584032
+  },
+  {
+    "timestamp": "2026-06-12T06:03:07Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_UP_5",
+    "type": "percent_change",
+    "price": 17.09000015258789,
+    "change_pct": 17.862070017847522,
+    "value": 17.862070017847522
+  },
+  {
+    "timestamp": "2026-06-12T06:03:36Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.900000095367432,
+    "change_pct": 2.510462246180573,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T06:03:38Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 14.109999656677246,
+    "change_pct": 9.37984229982361,
+    "value": 9.37984229982361
+  },
+  {
+    "timestamp": "2026-06-12T06:03:56Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 24.549999237060547,
+    "change_pct": 9.941778938918713,
+    "value": 9.941778938918713
+  },
+  {
+    "timestamp": "2026-06-12T06:04:51Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
     "type": "volume_spike",
     "price": 30.610000610351562,
     "change_pct": 33.464140441907844,
