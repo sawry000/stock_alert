@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T18:48:19Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.055000066757202,
-    "change_pct": 5.217842836480177,
-    "value": 5.217842836480177
-  },
-  {
     "timestamp": "2026-06-11T18:49:40Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 25.200000762939453,
     "change_pct": -21.737912815604428,
     "value": 2.6776539194141016
+  },
+  {
+    "timestamp": "2026-06-12T18:28:08Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 109.9000015258789,
+    "change_pct": 6.667962269124435,
+    "value": 6.667962269124435
   }
 ]
