@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T19:49:15Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 7.804999828338623,
-    "change_pct": 11.024179634973297,
-    "value": 4.549757960155289
-  },
-  {
-    "timestamp": "2026-06-10T19:53:42Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.65999984741211,
-    "change_pct": 0.44117534861845387,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-10T19:53:46Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 102.30999755859375,
-    "change_pct": -0.6699052829186893,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-10T19:57:30Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 354.8450012207031,
-    "change_pct": -0.040845877150591306,
-    "value": 5
-  },
-  {
-    "timestamp": "2026-06-10T19:58:53Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.565000057220459,
-    "change_pct": 12.106920038379208,
-    "value": 12.106920038379208
-  },
-  {
     "timestamp": "2026-06-10T20:13:27Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP_5",
@@ -4498,5 +4453,50 @@
     "price": 3.380000114440918,
     "change_pct": -7.397257138604985,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T02:22:29Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 26.139999389648438,
+    "change_pct": 10.57529352643163,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T02:22:39Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 8.430000305175781,
+    "change_pct": 5.375003814697266,
+    "value": 5.375003814697266
+  },
+  {
+    "timestamp": "2026-06-12T02:22:58Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 103.02999877929688,
+    "change_pct": 12.601091562073089,
+    "value": 12.601091562073089
+  },
+  {
+    "timestamp": "2026-06-12T02:23:14Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.9600000381469727,
+    "change_pct": 3.9615667256562634,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T02:24:10Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": 33.464140441907844,
+    "value": 5.3489292961973645
   }
 ]
