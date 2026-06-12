@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T18:17:45Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 78.25499725341797,
-    "change_pct": 11.537909426194373,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-11T18:19:25Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 30.645000457763672,
-    "change_pct": 33.616744965178434,
-    "value": 4.271330822886567
-  },
-  {
-    "timestamp": "2026-06-11T18:19:29Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_RSI_OS_4H",
-    "type": "rsi",
-    "price": 381.3900146484375,
-    "change_pct": 2.678767674035511,
-    "value": 29.24
-  },
-  {
     "timestamp": "2026-06-11T18:23:17Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -4498,5 +4471,32 @@
     "price": 25.295000076293945,
     "change_pct": 1.1800003051757812,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T18:07:46Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.5699000358581543,
+    "change_pct": 0.7843458903546899,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T18:07:59Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 109.90499877929688,
+    "change_pct": 6.672812558766256,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T18:09:05Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_MA_DEATH",
+    "type": "ma_crossover",
+    "price": 6.860000133514404,
+    "change_pct": -0.8670500937224802,
+    "value": -0.005
   }
 ]
