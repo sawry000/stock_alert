@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T21:29:12Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 22.68000030517578,
-    "change_pct": 16.067820377250005,
-    "value": 3.187595137084964
-  },
-  {
-    "timestamp": "2026-06-10T21:29:12Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.68000030517578,
-    "change_pct": 16.067820377250005,
-    "value": 3.187595137084964
-  },
-  {
     "timestamp": "2026-06-10T21:38:39Z",
     "symbol": "ANNA",
     "alert_id": "ANNA_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 22.6299991607666,
     "change_pct": -8.876400634738093,
     "value": 4.15436151736004
+  },
+  {
+    "timestamp": "2026-06-12T03:17:30Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_3X",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4.15436151736004
+  },
+  {
+    "timestamp": "2026-06-12T03:18:42Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_PCT_UP_5",
+    "type": "percent_change",
+    "price": 39.5099983215332,
+    "change_pct": 7.627931292279451,
+    "value": 7.627931292279451
   }
 ]
