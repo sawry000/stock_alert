@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T15:37:36Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 357.8999938964844,
-    "change_pct": 0.8197396818176191,
-    "value": 4
-  },
-  {
     "timestamp": "2026-06-10T15:37:43Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_ALIGN",
@@ -4498,5 +4489,14 @@
     "price": 17.100000381469727,
     "change_pct": 5.23077157827524,
     "value": 5.23077157827524
+  },
+  {
+    "timestamp": "2026-06-12T00:14:43Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": 33.464140441907844,
+    "value": 5.3489292961973645
   }
 ]
