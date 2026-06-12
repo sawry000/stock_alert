@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T18:10:23Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 8.470000267028809,
-    "change_pct": 13.205028963229196,
-    "value": 3.8762255962360066
-  },
-  {
     "timestamp": "2026-06-11T18:13:27Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 19.040000915527344,
     "change_pct": 1.8181867140499703,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T17:43:32Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.893199920654297,
+    "change_pct": -1.6605563452604346,
+    "value": 3
   }
 ]
