@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T21:28:19Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.96999979019165,
-    "change_pct": 3.112028842150417,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-10T21:29:12Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 363.5799865722656,
     "change_pct": 4.057607634363802,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T03:02:30Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4.15436151736004
   }
 ]
