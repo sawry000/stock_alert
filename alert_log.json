@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T09:47:33Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_POS_SIZE",
-    "type": "position_size",
-    "price": 330.8599853515625,
-    "change_pct": 1.3353707049196017,
-    "value": 0.3022427
-  },
-  {
     "timestamp": "2026-06-11T09:48:35Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 30.610000610351562,
     "change_pct": -4.9364101605566475,
     "value": 5.057421548453726
+  },
+  {
+    "timestamp": "2026-06-12T08:22:38Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -0.6584760282414379,
+    "value": 3.9009495907715315
   }
 ]
