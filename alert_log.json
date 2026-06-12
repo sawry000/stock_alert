@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T08:29:26Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.68,
-    "change_pct": -1.1118378024852802,
-    "value": 3.0542081546815325
-  },
-  {
-    "timestamp": "2026-06-11T08:33:09Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.97,
-    "change_pct": -7.427609637502719,
-    "value": -7.427609637502719
-  },
-  {
     "timestamp": "2026-06-11T08:59:27Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
@@ -4498,5 +4480,23 @@
     "price": 7.329999923706055,
     "change_pct": 7.794116525089042,
     "value": 7.794116525089042
+  },
+  {
+    "timestamp": "2026-06-12T08:03:04Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_DROP",
+    "type": "percent_change",
+    "price": 17.09000015258789,
+    "change_pct": -9.720020324416847,
+    "value": -9.720020324416847
+  },
+  {
+    "timestamp": "2026-06-12T08:04:16Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": -4.9364101605566475,
+    "value": 5.057421548453726
   }
 ]
