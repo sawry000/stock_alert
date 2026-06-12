@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T17:43:06Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 98.3499984741211,
-    "change_pct": 7.486337130186987,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-11T17:44:27Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 2.680000066757202,
     "change_pct": 5.10216348708585,
     "value": 5.10216348708585
+  },
+  {
+    "timestamp": "2026-06-12T15:42:23Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 381.80999755859375,
+    "change_pct": 2.424262904929736,
+    "value": 3
   }
 ]
