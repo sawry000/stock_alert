@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T13:34:26Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 16.4950008392334,
-    "change_pct": 1.507697472205529,
-    "value": -1.415
-  },
-  {
     "timestamp": "2026-06-11T13:34:28Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_MA_DEATH",
@@ -4498,5 +4489,14 @@
     "price": 8.670000076293945,
     "change_pct": -4.198894184597297,
     "value": 4.24407921275473
+  },
+  {
+    "timestamp": "2026-06-12T11:07:34Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_3X",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -0.6584760282414379,
+    "value": 3.9009495907715315
   }
 ]
