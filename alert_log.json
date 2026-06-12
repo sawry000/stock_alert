@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T02:03:46Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.569999933242798,
-    "change_pct": 12.264148844113135,
-    "value": 12.264148844113135
-  },
-  {
-    "timestamp": "2026-06-11T02:03:52Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 99.26000213623047,
-    "change_pct": -3.621708771501628,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-11T02:04:29Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 105.36000061035156,
     "change_pct": 7.510204704440369,
     "value": 7.510204704440369
+  },
+  {
+    "timestamp": "2026-06-12T05:42:32Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 3.9009495907715315
+  },
+  {
+    "timestamp": "2026-06-12T05:44:11Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 8.670000076293945,
+    "change_pct": 15.878108477598838,
+    "value": 4.24407921275473
   }
 ]
