@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T19:13:49Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_MA_GOLDEN",
-    "type": "ma_crossover",
-    "price": 188.0800018310547,
-    "change_pct": 9.988305164359467,
-    "value": 0.005
-  },
-  {
     "timestamp": "2026-06-11T19:13:50Z",
     "symbol": "VSEC",
     "alert_id": "VSEC_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 3.119999885559082,
     "change_pct": -5.488916589146919,
     "value": -5.488916589146919
+  },
+  {
+    "timestamp": "2026-06-12T18:47:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 26.809999465942383,
+    "change_pct": 2.720304467212189,
+    "value": 3
   }
 ]
