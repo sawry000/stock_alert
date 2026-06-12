@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T20:24:51Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 22.68000030517578,
-    "change_pct": 16.067820377250005,
-    "value": 3.187595137084964
-  },
-  {
-    "timestamp": "2026-06-10T20:37:35Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 175.1300048828125,
-    "change_pct": 4.91224158797849,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-10T20:42:31Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_NEWS_POS",
@@ -4498,5 +4480,23 @@
     "price": 5.28000020980835,
     "change_pct": 5.389225744677641,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T02:37:26Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 26.139999389648438,
+    "change_pct": 10.57529352643163,
+    "value": 10.57529352643163
+  },
+  {
+    "timestamp": "2026-06-12T02:39:06Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 8.670000076293945,
+    "change_pct": 15.878108477598838,
+    "value": 4.545847151500943
   }
 ]
