@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T15:52:32Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_PCT_DROP",
-    "type": "percent_change",
-    "price": 50.80500030517578,
-    "change_pct": -5.143763433204295,
-    "value": -5.143763433204295
-  },
-  {
     "timestamp": "2026-06-10T15:52:57Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_CP_BULL",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-12T00:39:13Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": 33.464140441907844,
+    "value": 5.3489292961973645
+  },
+  {
+    "timestamp": "2026-06-12T00:49:19Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
     "type": "volume_spike",
     "price": 30.610000610351562,
     "change_pct": 33.464140441907844,
