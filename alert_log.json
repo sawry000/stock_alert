@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T15:52:58Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_POS_SIZE",
-    "type": "position_size",
-    "price": 83.62999725341797,
-    "change_pct": 4.4722014408719195,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-10T15:53:29Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.360000133514404,
-    "change_pct": -5.964909938343787,
-    "value": -5.964909938343787
-  },
-  {
-    "timestamp": "2026-06-10T15:53:45Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.3499999046325684,
-    "change_pct": 5.345908950709691,
-    "value": 5.345908950709691
-  },
-  {
     "timestamp": "2026-06-10T15:57:42Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_UP_5",
@@ -4498,5 +4471,32 @@
     "price": 105.36000061035156,
     "change_pct": 7.510204704440369,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-12T00:57:21Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 363.5799865722656,
+    "change_pct": 4.057607634363802,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T00:57:33Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4.15436151736004
+  },
+  {
+    "timestamp": "2026-06-12T00:57:33Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_POS_SIZE",
+    "type": "position_size",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4
   }
 ]
