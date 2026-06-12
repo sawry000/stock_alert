@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T13:52:53Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_POS_KELLY",
-    "type": "position_size",
-    "price": 24.93000030517578,
-    "change_pct": 5.456854082807871,
-    "value": 4
-  },
-  {
     "timestamp": "2026-06-11T13:53:21Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 30.610000610351562,
     "change_pct": -4.9364101605566475,
     "value": 5.057421548453726
+  },
+  {
+    "timestamp": "2026-06-12T12:23:39Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.84000015258789,
+    "change_pct": 0.28767601130330944,
+    "value": 3
   }
 ]
