@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T17:23:36Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.270000457763672,
-    "change_pct": 2.868220602819159,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-11T17:27:49Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 23.34000015258789,
-    "change_pct": -6.017459038318253,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-11T17:32:51Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 23.700000762939453,
-    "change_pct": -4.567854415893057,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-11T17:32:54Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 76.10900115966797,
-    "change_pct": 8.479192074783313,
-    "value": 8.479192074783313
-  },
-  {
-    "timestamp": "2026-06-11T17:33:03Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.350000381469727,
-    "change_pct": 6.296299121997974,
-    "value": 6.296299121997974
-  },
-  {
     "timestamp": "2026-06-11T17:33:05Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP_5",
@@ -4498,5 +4453,50 @@
     "price": 2.924999952316284,
     "change_pct": -2.477246280255916,
     "value": 34
+  },
+  {
+    "timestamp": "2026-06-12T14:37:30Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 373.4800109863281,
+    "change_pct": 0.18966260601709362,
+    "value": 4
+  },
+  {
+    "timestamp": "2026-06-12T14:37:48Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 85.8499984741211,
+    "change_pct": 0.40935494049250726,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T14:38:21Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 5.26170015335083,
+    "change_pct": -0.5349687457310011,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T14:38:25Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.21999979019165,
+    "change_pct": 5.76440576921429,
+    "value": 5.76440576921429
+  },
+  {
+    "timestamp": "2026-06-12T14:38:43Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 26.5,
+    "change_pct": 6.0,
+    "value": 6.0
   }
 ]
