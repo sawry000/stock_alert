@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T15:38:25Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 82.5199966430664,
-    "change_pct": 3.085567324255352,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-10T15:39:34Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 108.30000305175781,
-    "change_pct": 5.145634030832827,
-    "value": 5.145634030832827
-  },
-  {
-    "timestamp": "2026-06-10T15:39:45Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_BT_VOL",
-    "type": "backtest_check",
-    "price": 270.4200134277344,
-    "change_pct": -3.4214237758091515,
-    "value": 87.5
-  },
-  {
     "timestamp": "2026-06-10T15:40:17Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 103.02999877929688,
     "change_pct": 12.601091562073089,
     "value": 12.601091562073089
+  },
+  {
+    "timestamp": "2026-06-12T00:27:35Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 26.139999389648438,
+    "change_pct": 10.57529352643163,
+    "value": 10.57529352643163
+  },
+  {
+    "timestamp": "2026-06-12T00:27:38Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_3X",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4.15436151736004
+  },
+  {
+    "timestamp": "2026-06-12T00:29:23Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 8.670000076293945,
+    "change_pct": 15.878108477598838,
+    "value": 4.545847151500943
   }
 ]
