@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T07:24:18Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 7.6,
-    "change_pct": 8.108108108108098,
-    "value": 4.3995568877795295
-  },
-  {
     "timestamp": "2026-06-11T07:58:23Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_PCT_DROP",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-12T07:12:36Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 3.9009495907715315
+  },
+  {
+    "timestamp": "2026-06-12T07:22:32Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_ALARM",
     "type": "volume_spike",
     "price": 22.6299991607666,
     "change_pct": -8.876400634738093,
