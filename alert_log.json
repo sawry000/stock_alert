@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T18:14:30Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 30.479999542236328,
-    "change_pct": 32.89731651291184,
-    "value": 4.235381185724062
-  },
-  {
     "timestamp": "2026-06-11T18:17:45Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 382.56500244140625,
     "change_pct": 2.626800342676703,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T17:58:28Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 25.295000076293945,
+    "change_pct": 1.1800003051757812,
+    "value": 2
   }
 ]
