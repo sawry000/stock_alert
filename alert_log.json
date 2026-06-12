@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T21:12:48Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -8.876400634738093,
-    "value": 4.15436151736004
-  },
-  {
-    "timestamp": "2026-06-11T21:17:39Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_PCT_5_UP",
-    "type": "percent_change",
-    "price": 26.139999389648438,
-    "change_pct": 10.57529352643163,
-    "value": 10.57529352643163
-  },
-  {
     "timestamp": "2026-06-11T21:17:41Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_VOL_3X",
@@ -4498,5 +4480,23 @@
     "price": 25.5,
     "change_pct": -20.806223699125763,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T22:43:24Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.079999923706055,
+    "change_pct": 2.2556371856154005,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T22:44:25Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 3.0201439251204167
   }
 ]
