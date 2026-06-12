@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T18:07:51Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 25.69499969482422,
-    "change_pct": 8.692892110085525,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-11T18:08:06Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 26.889999389648438,
     "change_pct": 3.026817584859908,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T16:52:36Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 19.795000076293945,
+    "change_pct": -13.103599313898401,
+    "value": 1
   }
 ]
