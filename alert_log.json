@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T10:09:00Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_RSI_OS_4H",
-    "type": "rsi",
-    "price": 36.779998779296875,
-    "change_pct": 0.19122626464016063,
-    "value": 24.31
-  },
-  {
     "timestamp": "2026-06-11T10:09:29Z",
     "symbol": "GLD",
     "alert_id": "GLD_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 54.93000030517578,
     "change_pct": -1.9107137407575334,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-12T09:17:42Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -0.6584760282414379,
+    "value": 3.9009495907715315
   }
 ]
