@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T19:33:48Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_POS_SIZE",
-    "type": "position_size",
-    "price": 7.15500020980835,
-    "change_pct": 5.220591320711026,
-    "value": 13
-  },
-  {
-    "timestamp": "2026-06-11T19:37:39Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.270000457763672,
-    "change_pct": -10.325997576894657,
-    "value": 3.7967624272751936
-  },
-  {
     "timestamp": "2026-06-11T19:37:43Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 25.5,
     "change_pct": -20.806223699125763,
     "value": 3.0201439251204167
+  },
+  {
+    "timestamp": "2026-06-12T20:28:43Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.4399995803833,
+    "change_pct": -2.6108158490518267,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T20:28:43Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_POS_SIZE",
+    "type": "position_size",
+    "price": 13.4399995803833,
+    "change_pct": -2.6108158490518267,
+    "value": 7
   }
 ]
