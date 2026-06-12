@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T17:33:05Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.5199999809265137,
-    "change_pct": 14.545453678477886,
-    "value": 14.545453678477886
-  },
-  {
     "timestamp": "2026-06-11T17:34:18Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 26.5,
     "change_pct": 6.0,
     "value": 6.0
+  },
+  {
+    "timestamp": "2026-06-12T14:42:38Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.239999771118164,
+    "change_pct": 4.367815215012117,
+    "value": 3
   }
 ]
