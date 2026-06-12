@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T16:28:20Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.0399999618530273,
-    "change_pct": -5.245769976217081,
-    "value": -5.245769976217081
-  },
-  {
-    "timestamp": "2026-06-10T16:37:42Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 21.139999389648438,
-    "change_pct": 2.233761272304694,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-10T16:42:25Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 354.8450012207031,
-    "change_pct": -0.040845877150591306,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-10T16:47:41Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_PCT_DROP",
-    "type": "percent_change",
-    "price": 23.844999313354492,
-    "change_pct": -5.376611362130435,
-    "value": -5.376611362130435
-  },
-  {
-    "timestamp": "2026-06-10T17:03:34Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 5.074999809265137,
-    "change_pct": 5.290452474380423,
-    "value": 5.290452474380423
-  },
-  {
     "timestamp": "2026-06-10T17:03:39Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_MTF_BULL",
@@ -4498,5 +4453,50 @@
     "price": 22.6299991607666,
     "change_pct": -8.876400634738093,
     "value": 4.15436151736004
+  },
+  {
+    "timestamp": "2026-06-12T01:42:35Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T01:42:36Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4.15436151736004
+  },
+  {
+    "timestamp": "2026-06-12T01:43:08Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 105.36000061035156,
+    "change_pct": 7.510204704440369,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T01:44:13Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": 33.464140441907844,
+    "value": 5.3489292961973645
+  },
+  {
+    "timestamp": "2026-06-12T01:44:16Z",
+    "symbol": "GLD",
+    "alert_id": "GLD_CP_BULL",
+    "type": "candle_pattern",
+    "price": 386.32000732421875,
+    "change_pct": 4.0060325555187255,
+    "value": 1
   }
 ]
