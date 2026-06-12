@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T17:39:38Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_CP_BULL",
-    "type": "candle_pattern",
-    "price": 380.79998779296875,
-    "change_pct": 2.5199191775168943,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-11T17:43:06Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 27.540000915527344,
     "change_pct": 5.51724488707794,
     "value": 5.51724488707794
+  },
+  {
+    "timestamp": "2026-06-12T15:12:59Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.680000066757202,
+    "change_pct": 5.10216348708585,
+    "value": 5.10216348708585
   }
 ]
