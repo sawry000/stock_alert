@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T17:38:17Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 101.87000274658203,
-    "change_pct": 3.9489823944714604,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-11T17:38:35Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 13.555000305175781,
-    "change_pct": 5.0775217455486885,
-    "value": 5.0775217455486885
-  },
-  {
     "timestamp": "2026-06-11T17:38:50Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 2.690000057220459,
     "change_pct": 6.3241129336149875,
     "value": 37
+  },
+  {
+    "timestamp": "2026-06-12T15:02:45Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 8.920000076293945,
+    "change_pct": 2.411022689941957,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T15:02:45Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_POS_SIZE",
+    "type": "position_size",
+    "price": 8.920000076293945,
+    "change_pct": 2.411022689941957,
+    "value": 11
   }
 ]
