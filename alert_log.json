@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T19:13:50Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_POS_SIZE",
-    "type": "position_size",
-    "price": 188.0800018310547,
-    "change_pct": 9.988305164359467,
-    "value": 0.5316886
-  },
-  {
     "timestamp": "2026-06-11T19:14:25Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 26.809999465942383,
     "change_pct": 2.720304467212189,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T18:52:26Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 374.0450134277344,
+    "change_pct": 0.3412300321467355,
+    "value": 4
   }
 ]
