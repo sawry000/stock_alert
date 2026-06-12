@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T21:37:55Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 84.04000091552734,
-    "change_pct": 19.783353642427805,
-    "value": 19.783353642427805
-  },
-  {
     "timestamp": "2026-06-11T21:38:08Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_PCT_UP_5",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-12T23:19:18Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 3.0201439251204167
+  },
+  {
+    "timestamp": "2026-06-12T23:44:18Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
     "type": "volume_spike",
     "price": 25.5,
     "change_pct": -20.806223699125763,
