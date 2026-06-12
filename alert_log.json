@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T15:57:42Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 73.58000183105469,
-    "change_pct": 5.08231328332192,
-    "value": 5.08231328332192
-  },
-  {
     "timestamp": "2026-06-10T15:57:58Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 22.6299991607666,
     "change_pct": -8.876400634738093,
     "value": 4
+  },
+  {
+    "timestamp": "2026-06-12T01:02:44Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_3X",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4.15436151736004
   }
 ]
