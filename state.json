@@ -601,10 +601,10 @@
   },
   "PSIX": {
     "PSIX_POS_SIZE": {
-      "last_fired": "2026-06-06T00:14:03Z"
+      "last_fired": "2026-06-12T13:58:47Z"
     },
     "PSIX_CP_BULL": {
-      "last_fired": "2026-06-03T13:58:52Z"
+      "last_fired": "2026-06-12T13:58:46Z"
     },
     "PSIX_PCT_DROP": {
       "last_fired": "2026-06-09T16:18:53Z"
@@ -612,7 +612,9 @@
     "PSIX_RSI_OS_4H": {
       "last_fired": "2026-06-05T18:29:18Z"
     },
-    "open_position": false
+    "open_position": true,
+    "open_entry": 40.5099983215332,
+    "open_time": "2026-06-12T13:58:47Z"
   },
   "VICR": {
     "VICR_POS_SIZE": {
@@ -1102,9 +1104,9 @@
       "last_fired": "2026-06-10T13:39:44Z"
     },
     "ISSC_PCT_DROP": {
-      "last_fired": "2026-06-05T19:44:32Z"
+      "last_fired": "2026-06-12T13:59:12Z"
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 17.829999923706055,
     "open_time": "2026-06-10T13:39:45Z"
   },
