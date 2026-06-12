@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T17:38:50Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 23.565000534057617,
-    "change_pct": 5.530678611991129,
-    "value": 5.530678611991129
-  },
-  {
     "timestamp": "2026-06-11T17:39:38Z",
     "symbol": "GLD",
     "alert_id": "GLD_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 8.920000076293945,
     "change_pct": 2.411022689941957,
     "value": 11
+  },
+  {
+    "timestamp": "2026-06-12T15:07:37Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 27.540000915527344,
+    "change_pct": 5.51724488707794,
+    "value": 5.51724488707794
   }
 ]
