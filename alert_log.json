@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T05:54:09Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 374.58,
-    "change_pct": -3.3840598400825392,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-11T05:59:23Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 22.68,
-    "change_pct": 16.067818815473668,
-    "value": 3.0542081546815325
-  },
-  {
-    "timestamp": "2026-06-11T06:07:40Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 72.17,
-    "change_pct": 3.068637685961279,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-11T06:08:37Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.57,
-    "change_pct": 12.264150943396215,
-    "value": 12.264150943396215
-  },
-  {
     "timestamp": "2026-06-11T06:24:07Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
@@ -4498,5 +4462,41 @@
     "price": 3.380000114440918,
     "change_pct": -7.397257138604985,
     "value": 29
+  },
+  {
+    "timestamp": "2026-06-12T06:27:30Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 26.139999389648438,
+    "change_pct": 10.57529352643163,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T06:27:40Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 8.430000305175781,
+    "change_pct": 5.375003814697266,
+    "value": 5.375003814697266
+  },
+  {
+    "timestamp": "2026-06-12T06:27:56Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 103.02999877929688,
+    "change_pct": 12.601091562073089,
+    "value": 12.601091562073089
+  },
+  {
+    "timestamp": "2026-06-12T06:28:13Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.9600000381469727,
+    "change_pct": 3.9615667256562634,
+    "value": 2
   }
 ]
