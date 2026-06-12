@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T17:37:43Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 23.739999771118164,
-    "change_pct": -4.406791502439498,
-    "value": 3.0912361283002254
-  },
-  {
-    "timestamp": "2026-06-11T17:37:44Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_POS_SIZE",
-    "type": "position_size",
-    "price": 23.739999771118164,
-    "change_pct": -4.406791502439498,
-    "value": 4
-  },
-  {
-    "timestamp": "2026-06-11T17:38:03Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_UP_5",
-    "type": "percent_change",
-    "price": 16.450000762939453,
-    "change_pct": 13.448281123720365,
-    "value": 13.448281123720365
-  },
-  {
     "timestamp": "2026-06-11T17:38:17Z",
     "symbol": "INOD",
     "alert_id": "INOD_MTF_BULL",
@@ -4498,5 +4471,32 @@
     "price": 108.83000183105469,
     "change_pct": -5.208603927310613,
     "value": -5.208603927310613
+  },
+  {
+    "timestamp": "2026-06-12T14:53:36Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 14.863499641418457,
+    "change_pct": 5.207460761183316,
+    "value": 5.207460761183316
+  },
+  {
+    "timestamp": "2026-06-12T14:53:44Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.690000057220459,
+    "change_pct": 6.3241129336149875,
+    "value": 6.3241129336149875
+  },
+  {
+    "timestamp": "2026-06-12T14:53:46Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_POS_SIZE",
+    "type": "position_size",
+    "price": 2.690000057220459,
+    "change_pct": 6.3241129336149875,
+    "value": 37
   }
 ]
