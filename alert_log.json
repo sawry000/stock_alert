@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T21:39:20Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_CP_BULL",
-    "type": "candle_pattern",
-    "price": 7.599999904632568,
-    "change_pct": 8.10810675153013,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-10T21:42:26Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_ALIGN",
@@ -4498,5 +4489,14 @@
     "price": 22.6299991607666,
     "change_pct": -8.876400634738093,
     "value": 4.15436151736004
+  },
+  {
+    "timestamp": "2026-06-12T03:29:09Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": 33.464140441907844,
+    "value": 5.3489292961973645
   }
 ]
