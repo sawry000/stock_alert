@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T13:34:28Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 6.494999885559082,
-    "change_pct": 3.7539917820939657,
-    "value": -0.577
-  },
-  {
-    "timestamp": "2026-06-11T13:34:32Z",
-    "symbol": "BOBS",
-    "alert_id": "BOBS_CP_BULL",
-    "type": "candle_pattern",
-    "price": 12.234999656677246,
-    "change_pct": -0.528458075794753,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-11T13:34:32Z",
     "symbol": "BOBS",
     "alert_id": "BOBS_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 22.6299991607666,
     "change_pct": -0.6584760282414379,
     "value": 3.9009495907715315
+  },
+  {
+    "timestamp": "2026-06-12T11:12:35Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -0.6584760282414379,
+    "value": 3.9009495907715315
+  },
+  {
+    "timestamp": "2026-06-12T11:14:13Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": -4.9364101605566475,
+    "value": 5.057421548453726
   }
 ]
