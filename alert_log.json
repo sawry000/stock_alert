@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T19:37:43Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 82.5,
-    "change_pct": 17.588369441277088,
-    "value": 17.588369441277088
-  },
-  {
-    "timestamp": "2026-06-11T19:37:52Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.40999984741211,
-    "change_pct": 6.74073961046007,
-    "value": 6.74073961046007
-  },
-  {
     "timestamp": "2026-06-11T19:37:54Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 13.4399995803833,
     "change_pct": -2.6108158490518267,
     "value": 7
+  },
+  {
+    "timestamp": "2026-06-12T20:33:08Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 108.47000122070312,
+    "change_pct": 5.280016714261015,
+    "value": 5.280016714261015
+  },
+  {
+    "timestamp": "2026-06-12T20:34:38Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 3.0201439251204167
   }
 ]
