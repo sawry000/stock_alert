@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T21:42:26Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 330.8599853515625,
-    "change_pct": -2.959382504307813,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-10T21:54:25Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 30.610000610351562,
     "change_pct": 33.464140441907844,
     "value": 5.3489292961973645
+  },
+  {
+    "timestamp": "2026-06-12T03:33:14Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 105.36000061035156,
+    "change_pct": 7.510204704440369,
+    "value": 7.510204704440369
   }
 ]
