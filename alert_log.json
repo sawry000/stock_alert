@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T16:27:51Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 171.4199981689453,
-    "change_pct": 2.689749097792671,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-10T16:28:20Z",
     "symbol": "TYGO",
     "alert_id": "TYGO_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 8.670000076293945,
     "change_pct": 15.878108477598838,
     "value": 4.545847151500943
+  },
+  {
+    "timestamp": "2026-06-12T01:37:29Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_3X",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -8.876400634738093,
+    "value": 4.15436151736004
   }
 ]
