@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T17:47:35Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_PCT_UP_5",
-    "type": "percent_change",
-    "price": 53.59000015258789,
-    "change_pct": 6.786598476388771,
-    "value": 6.786598476388771
-  },
-  {
     "timestamp": "2026-06-11T17:53:22Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 304.54998779296875,
     "change_pct": 0.7609554319168734,
     "value": 87.5
+  },
+  {
+    "timestamp": "2026-06-12T15:52:44Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 14.90999984741211,
+    "change_pct": 1.8435656000444605,
+    "value": 1
   }
 ]
