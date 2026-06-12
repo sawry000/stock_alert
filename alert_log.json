@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T08:02:40Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_DROP",
-    "type": "percent_change",
-    "price": 20.87,
-    "change_pct": -15.96334117192281,
-    "value": -15.96334117192281
-  },
-  {
     "timestamp": "2026-06-11T08:04:44Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 30.610000610351562,
     "change_pct": 33.464140441907844,
     "value": 5.057421548453726
+  },
+  {
+    "timestamp": "2026-06-12T07:47:32Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_5_UP",
+    "type": "percent_change",
+    "price": 26.139999389648438,
+    "change_pct": 10.57529352643163,
+    "value": 10.57529352643163
   }
 ]
