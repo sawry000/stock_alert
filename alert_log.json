@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T01:07:20Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 354.7699890136719,
-    "change_pct": -0.0619766715479687,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-11T01:13:25Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 8.670000076293945,
     "change_pct": 15.878108477598838,
     "value": 4.24407921275473
+  },
+  {
+    "timestamp": "2026-06-12T04:49:13Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 30.610000610351562,
+    "change_pct": 33.464140441907844,
+    "value": 5.057421548453726
   }
 ]
