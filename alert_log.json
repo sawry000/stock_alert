@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T18:08:06Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 8.527999877929688,
-    "change_pct": 6.599998474121094,
-    "value": 6.599998474121094
-  },
-  {
-    "timestamp": "2026-06-11T18:08:09Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_POS_SIZE",
-    "type": "position_size",
-    "price": 8.527999877929688,
-    "change_pct": 6.599998474121094,
-    "value": 11
-  },
-  {
     "timestamp": "2026-06-11T18:08:31Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 19.795000076293945,
     "change_pct": -13.103599313898401,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-12T17:24:22Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 25.389999389648438,
+    "change_pct": -21.14784580615091,
+    "value": 2.5000747668316303
+  },
+  {
+    "timestamp": "2026-06-12T17:24:23Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_POS_SIZE",
+    "type": "position_size",
+    "price": 25.389999389648438,
+    "change_pct": -21.14784580615091,
+    "value": 3
   }
 ]
