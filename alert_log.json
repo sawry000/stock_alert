@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T07:58:23Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.32,
-    "change_pct": -6.666666666666665,
-    "value": -6.666666666666665
-  },
-  {
     "timestamp": "2026-06-11T07:58:42Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 22.6299991607666,
     "change_pct": -8.876400634738093,
     "value": 3.9009495907715315
+  },
+  {
+    "timestamp": "2026-06-12T07:29:10Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_PCT_UP_5",
+    "type": "percent_change",
+    "price": 39.5099983215332,
+    "change_pct": 7.627931292279451,
+    "value": 7.627931292279451
   }
 ]
