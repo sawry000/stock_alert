@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-10T15:52:57Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 83.62999725341797,
-    "change_pct": 4.4722014408719195,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-10T15:52:58Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 30.610000610351562,
     "change_pct": 33.464140441907844,
     "value": 5.3489292961973645
+  },
+  {
+    "timestamp": "2026-06-12T00:53:05Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 105.36000061035156,
+    "change_pct": 7.510204704440369,
+    "value": 1
   }
 ]
