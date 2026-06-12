@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T18:08:31Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 97.9000015258789,
-    "change_pct": 6.994537186752902,
-    "value": 6.994537186752902
-  },
-  {
-    "timestamp": "2026-06-11T18:09:27Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.3499999046325684,
-    "change_pct": -8.219180694998125,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-11T18:10:23Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 25.389999389648438,
     "change_pct": -21.14784580615091,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-12T17:38:04Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.0199999809265137,
+    "change_pct": -0.12236726770136458,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-12T17:38:52Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 19.040000915527344,
+    "change_pct": 1.8181867140499703,
+    "value": 2
   }
 ]
