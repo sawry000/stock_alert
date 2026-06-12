@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T13:34:32Z",
-    "symbol": "BOBS",
-    "alert_id": "BOBS_POS_SIZE",
-    "type": "position_size",
-    "price": 12.234999656677246,
-    "change_pct": -0.528458075794753,
-    "value": 8
-  },
-  {
     "timestamp": "2026-06-11T13:42:44Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 30.610000610351562,
     "change_pct": -4.9364101605566475,
     "value": 5.057421548453726
+  },
+  {
+    "timestamp": "2026-06-12T11:22:39Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 22.6299991607666,
+    "change_pct": -0.6584760282414379,
+    "value": 3.9009495907715315
   }
 ]
