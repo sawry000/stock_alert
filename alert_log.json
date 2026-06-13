@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T22:28:30Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.28000020980835,
-    "change_pct": 5.389225744677641,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-11T22:34:21Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 25.5,
     "change_pct": -20.806223699125763,
     "value": 3.0201439251204167
+  },
+  {
+    "timestamp": "2026-06-13T04:12:27Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 367.1499938964844,
+    "change_pct": -1.5084263354684082,
+    "value": 3
   }
 ]
