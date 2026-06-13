@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T22:02:54Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_CP_BULL",
-    "type": "candle_pattern",
-    "price": 14.510000228881836,
-    "change_pct": 7.481483176902488,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-11T22:02:56Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 14.510000228881836,
-    "change_pct": 7.481483176902488,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-11T22:03:02Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 13.25,
     "change_pct": -6.213281614971903,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-13T02:07:20Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 385.0299987792969,
+    "change_pct": 2.949197534571357,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-13T02:09:12Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 3.0201439251204167
   }
 ]
