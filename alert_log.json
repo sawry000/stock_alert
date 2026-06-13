@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T21:49:07Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 24.549999237060547,
-    "change_pct": 9.941778938918713,
-    "value": 9.941778938918713
-  },
-  {
     "timestamp": "2026-06-11T21:49:12Z",
     "symbol": "ANNA",
     "alert_id": "ANNA_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 26.610000610351562,
     "change_pct": 1.9540253270174754,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-13T01:04:19Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 3.0201439251204167
   }
 ]
