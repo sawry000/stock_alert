@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T22:13:49Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.380000114440918,
-    "change_pct": -7.397257138604985,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-11T22:13:50Z",
     "symbol": "ANNA",
     "alert_id": "ANNA_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 5.230000019073486,
     "change_pct": -1.1342151403877827,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-13T02:57:37Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 26.610000610351562,
+    "change_pct": 1.9540253270174754,
+    "value": 3
   }
 ]
