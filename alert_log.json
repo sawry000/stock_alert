@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T22:13:50Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_POS_SIZE",
-    "type": "position_size",
-    "price": 3.380000114440918,
-    "change_pct": -7.397257138604985,
-    "value": 29
-  },
-  {
     "timestamp": "2026-06-11T22:18:18Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 26.610000610351562,
     "change_pct": 1.9540253270174754,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-13T03:14:18Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 3.0201439251204167
   }
 ]
