@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T23:53:17Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_UP_5",
-    "type": "percent_change",
-    "price": 17.09000015258789,
-    "change_pct": 17.862070017847522,
-    "value": 17.862070017847522
-  },
-  {
-    "timestamp": "2026-06-11T23:53:48Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.109999656677246,
-    "change_pct": 9.37984229982361,
-    "value": 9.37984229982361
-  },
-  {
     "timestamp": "2026-06-11T23:54:07Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 112.91000366210938,
     "change_pct": -1.654904919336841,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-13T06:48:09Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 108.47000122070312,
+    "change_pct": 5.280016714261015,
+    "value": 5.280016714261015
+  },
+  {
+    "timestamp": "2026-06-13T06:48:33Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.079999923706055,
+    "change_pct": 2.2556371856154005,
+    "value": 2
   }
 ]
