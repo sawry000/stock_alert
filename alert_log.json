@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T23:27:35Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -8.876400634738093,
-    "value": 4.15436151736004
-  },
-  {
     "timestamp": "2026-06-11T23:28:07Z",
     "symbol": "INOD",
     "alert_id": "INOD_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 16.309999465942383,
     "change_pct": -6.109505529566691,
     "value": -6.109505529566691
+  },
+  {
+    "timestamp": "2026-06-13T05:52:42Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.4100000858306885,
+    "change_pct": -5.48648630022007,
+    "value": -5.48648630022007
   }
 ]
