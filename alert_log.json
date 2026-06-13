@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T23:43:44Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 7.329999923706055,
-    "change_pct": 7.794116525089042,
-    "value": 7.794116525089042
-  },
-  {
     "timestamp": "2026-06-11T23:44:34Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 18.479999542236328,
     "change_pct": -5.531134126181745,
     "value": -5.531134126181745
+  },
+  {
+    "timestamp": "2026-06-13T06:17:53Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 108.47000122070312,
+    "change_pct": 5.280016714261015,
+    "value": 3
   }
 ]
