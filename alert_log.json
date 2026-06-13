@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T22:12:38Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 26.139999389648438,
-    "change_pct": 10.57529352643163,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-11T22:12:54Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 4.079999923706055,
     "change_pct": 2.2556371856154005,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-13T02:49:50Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 3.0201439251204167
   }
 ]
