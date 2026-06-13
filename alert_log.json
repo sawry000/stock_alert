@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T21:47:46Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_3X",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -8.876400634738093,
-    "value": 4.15436151736004
-  },
-  {
-    "timestamp": "2026-06-11T21:47:49Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -8.876400634738093,
-    "value": 4.15436151736004
-  },
-  {
     "timestamp": "2026-06-11T21:48:16Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 8.489999771118164,
     "change_pct": -6.187847832948471,
     "value": 2.5587924002597124
+  },
+  {
+    "timestamp": "2026-06-13T00:28:48Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.4399995803833,
+    "change_pct": -2.6108158490518267,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-13T00:29:23Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 3.0201439251204167
   }
 ]
