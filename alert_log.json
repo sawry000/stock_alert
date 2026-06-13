@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T23:28:07Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 105.36000061035156,
-    "change_pct": 7.510204704440369,
-    "value": 7.510204704440369
-  },
-  {
-    "timestamp": "2026-06-11T23:29:21Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 8.670000076293945,
-    "change_pct": 15.878108477598838,
-    "value": 4.545847151500943
-  },
-  {
-    "timestamp": "2026-06-11T23:34:22Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 30.610000610351562,
-    "change_pct": 33.464140441907844,
-    "value": 5.3489292961973645
-  },
-  {
-    "timestamp": "2026-06-11T23:42:40Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 84.04000091552734,
-    "change_pct": 19.783353642427805,
-    "value": 19.783353642427805
-  },
-  {
-    "timestamp": "2026-06-11T23:42:51Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.510000228881836,
-    "change_pct": 7.481483176902488,
-    "value": 7.481483176902488
-  },
-  {
     "timestamp": "2026-06-11T23:42:53Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP_5",
@@ -4498,5 +4453,50 @@
     "price": 2.4100000858306885,
     "change_pct": -5.48648630022007,
     "value": -5.48648630022007
+  },
+  {
+    "timestamp": "2026-06-13T05:58:41Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.25,
+    "change_pct": -6.213281614971903,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-13T05:58:42Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_POS_SIZE",
+    "type": "position_size",
+    "price": 13.25,
+    "change_pct": -6.213281614971903,
+    "value": 7
+  },
+  {
+    "timestamp": "2026-06-13T05:59:55Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 2.9289066101087275
+  },
+  {
+    "timestamp": "2026-06-13T05:59:56Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_POS_SIZE",
+    "type": "position_size",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-13T06:00:00Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_PCT_DROP",
+    "type": "percent_change",
+    "price": 8.489999771118164,
+    "change_pct": -6.187847832948471,
+    "value": -6.187847832948471
   }
 ]
