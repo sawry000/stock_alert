@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T23:42:53Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.5,
-    "change_pct": 13.636363636363628,
-    "value": 13.636363636363628
-  },
-  {
     "timestamp": "2026-06-11T23:43:44Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 8.489999771118164,
     "change_pct": -6.187847832948471,
     "value": -6.187847832948471
+  },
+  {
+    "timestamp": "2026-06-13T06:08:59Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_PCT_DROP",
+    "type": "percent_change",
+    "price": 18.479999542236328,
+    "change_pct": -5.531134126181745,
+    "value": -5.531134126181745
   }
 ]
