@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T21:48:25Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 103.02999877929688,
-    "change_pct": 12.601091562073089,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-11T21:48:48Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 108.47000122070312,
     "change_pct": 5.280016714261015,
     "value": 5.280016714261015
+  },
+  {
+    "timestamp": "2026-06-13T00:49:15Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 3.0201439251204167
   }
 ]
