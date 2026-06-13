@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-11T22:52:43Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -8.876400634738093,
-    "value": 4.15436151736004
-  },
-  {
-    "timestamp": "2026-06-11T23:09:05Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_UP_5",
-    "type": "percent_change",
-    "price": 39.5099983215332,
-    "change_pct": 7.627931292279451,
-    "value": 7.627931292279451
-  },
-  {
-    "timestamp": "2026-06-11T23:14:16Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 30.610000610351562,
-    "change_pct": 33.464140441907844,
-    "value": 5.3489292961973645
-  },
-  {
     "timestamp": "2026-06-11T23:27:29Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_PCT_5_UP",
@@ -4498,5 +4471,32 @@
     "price": 26.610000610351562,
     "change_pct": 1.9540253270174754,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-13T05:37:39Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_PCT_DROP",
+    "type": "percent_change",
+    "price": 19.93000030517578,
+    "change_pct": -12.51097319940395,
+    "value": -12.51097319940395
+  },
+  {
+    "timestamp": "2026-06-13T05:37:51Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 7.860000133514404,
+    "change_pct": -9.758896285712932,
+    "value": -9.758896285712932
+  },
+  {
+    "timestamp": "2026-06-13T05:39:54Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_PCT_DROP",
+    "type": "percent_change",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": -20.806223699125763
   }
 ]
