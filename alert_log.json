@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T02:13:09Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 5.28000020980835,
-    "change_pct": 5.389225744677641,
-    "value": 5.389225744677641
-  },
-  {
     "timestamp": "2026-06-12T02:13:11Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 25.5,
     "change_pct": -20.806223699125763,
     "value": 2.9289066101087275
+  },
+  {
+    "timestamp": "2026-06-14T06:27:37Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 19.93000030517578,
+    "change_pct": -12.51097319940395,
+    "value": 1
   }
 ]
