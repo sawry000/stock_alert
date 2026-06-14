@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T02:08:48Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 99.6500015258789,
-    "change_pct": 2.373126695992298,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-12T02:08:54Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 116.16000366210938,
-    "change_pct": 14.816648870326551,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-12T02:12:53Z",
     "symbol": "RDW",
     "alert_id": "RDW_NEWS_POS",
@@ -4498,5 +4480,23 @@
     "price": 367.1499938964844,
     "change_pct": -1.5084263354684082,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-14T06:12:35Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 26.610000610351562,
+    "change_pct": 1.9540253270174754,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-14T06:13:01Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 108.47000122070312,
+    "change_pct": 5.280016714261015,
+    "value": 5.280016714261015
   }
 ]
