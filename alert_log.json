@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T13:17:36Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -0.6584760282414379,
-    "value": 3.9009495907715315
-  },
-  {
-    "timestamp": "2026-06-12T13:32:27Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 386.7300109863281,
-    "change_pct": 3.744104585452299,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-12T13:32:39Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 23.09000015258789,
     "change_pct": -10.503875377566319,
     "value": -10.503875377566319
+  },
+  {
+    "timestamp": "2026-06-15T22:02:32Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.3799991607666,
+    "change_pct": 2.6640887934404556,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-15T22:02:49Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.609999895095825,
+    "change_pct": 8.298750833851662,
+    "value": 3
   }
 ]
