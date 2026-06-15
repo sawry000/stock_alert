@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T13:17:34Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_3X",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -0.6584760282414379,
-    "value": 3.9009495907715315
-  },
-  {
     "timestamp": "2026-06-12T13:17:36Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 7.5,
     "change_pct": -10.075177151901002,
     "value": -10.075177151901002
+  },
+  {
+    "timestamp": "2026-06-15T21:59:19Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_PCT_DROP",
+    "type": "percent_change",
+    "price": 23.09000015258789,
+    "change_pct": -10.503875377566319,
+    "value": -10.503875377566319
   }
 ]
