@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T03:52:43Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.5,
-    "change_pct": 13.636363636363628,
-    "value": 13.636363636363628
-  },
-  {
     "timestamp": "2026-06-12T03:53:23Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_UP_5",
@@ -4492,6 +4483,15 @@
   },
   {
     "timestamp": "2026-06-15T02:09:38Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -20.806223699125763,
+    "value": 2.9289066101087275
+  },
+  {
+    "timestamp": "2026-06-15T03:14:48Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
     "type": "volume_spike",
