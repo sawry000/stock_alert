@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T13:37:34Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_CP_BULL",
-    "type": "candle_pattern",
-    "price": 20.3799991607666,
-    "change_pct": -10.535561190664616,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-12T13:37:35Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 27.3799991607666,
     "change_pct": 2.6640887934404556,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-15T23:07:36Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 389.20001220703125,
+    "change_pct": 4.908491389803294,
+    "value": 2
   }
 ]
