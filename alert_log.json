@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T13:04:15Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 8.670000076293945,
-    "change_pct": -4.198894184597297,
-    "value": 4.24407921275473
-  },
-  {
-    "timestamp": "2026-06-12T13:09:12Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 30.610000610351562,
-    "change_pct": -4.9364101605566475,
-    "value": 5.057421548453726
-  },
-  {
     "timestamp": "2026-06-12T13:14:32Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 115.87999725341797,
     "change_pct": 5.826481509970748,
     "value": 5.826481509970748
+  },
+  {
+    "timestamp": "2026-06-15T21:48:34Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_UP_5",
+    "type": "percent_change",
+    "price": 30.170000076293945,
+    "change_pct": 12.11445587623168,
+    "value": 12.11445587623168
+  },
+  {
+    "timestamp": "2026-06-15T21:49:03Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 29.979999542236328,
+    "change_pct": 20.160318806558433,
+    "value": 20.160318806558433
   }
 ]
