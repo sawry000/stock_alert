@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T10:28:32Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.9600000381469727,
-    "change_pct": -0.751878743183648,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-12T10:29:45Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 3.984999895095825,
     "change_pct": -1.8472932242407494,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-15T19:32:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.260000228881836,
+    "change_pct": 2.214140605867514,
+    "value": 1
   }
 ]
