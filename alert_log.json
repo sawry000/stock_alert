@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T07:29:10Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_UP_5",
-    "type": "percent_change",
-    "price": 39.5099983215332,
-    "change_pct": 7.627931292279451,
-    "value": 7.627931292279451
-  },
-  {
-    "timestamp": "2026-06-12T07:32:26Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 367.4700012207031,
-    "change_pct": 12.548239271272013,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-12T07:42:35Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_VOL_3X",
@@ -4498,5 +4480,23 @@
     "price": 15.104999542236328,
     "change_pct": -0.6250030116030998,
     "value": -0.009
+  },
+  {
+    "timestamp": "2026-06-15T14:42:47Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 20.850000381469727,
+    "change_pct": 4.250001907348633,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-15T14:42:48Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_POS_SIZE",
+    "type": "position_size",
+    "price": 20.850000381469727,
+    "change_pct": 4.250001907348633,
+    "value": 4
   }
 ]
