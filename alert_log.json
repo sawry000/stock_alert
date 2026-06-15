@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T10:23:43Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.380000114440918,
-    "change_pct": 2.3870142506033516,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-12T10:24:08Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 93.17900085449219,
     "change_pct": -7.789212415148748,
     "value": -7.789212415148748
+  },
+  {
+    "timestamp": "2026-06-15T19:14:44Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_PCT_DROP",
+    "type": "percent_change",
+    "price": 17.649999618530273,
+    "change_pct": -5.107528932632946,
+    "value": -5.107528932632946
   }
 ]
