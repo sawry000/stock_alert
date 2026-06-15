@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T10:24:08Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_RSI_OS_4H",
-    "type": "rsi",
-    "price": 2.9600000381469727,
-    "change_pct": -1.3103044661430066,
-    "value": 31.07
-  },
-  {
     "timestamp": "2026-06-12T10:28:32Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 17.649999618530273,
     "change_pct": -5.107528932632946,
     "value": -5.107528932632946
+  },
+  {
+    "timestamp": "2026-06-15T19:23:28Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.984999895095825,
+    "change_pct": -1.8472932242407494,
+    "value": 2
   }
 ]
