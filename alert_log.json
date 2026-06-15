@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T05:47:29Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_PCT_5_UP",
-    "type": "percent_change",
-    "price": 26.139999389648438,
-    "change_pct": 10.57529352643163,
-    "value": 10.57529352643163
-  },
-  {
     "timestamp": "2026-06-12T05:47:33Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -4492,6 +4483,15 @@
   },
   {
     "timestamp": "2026-06-15T10:39:41Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -1.1627906976744213,
+    "value": 2.9289066101087275
+  },
+  {
+    "timestamp": "2026-06-15T11:44:18Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
     "type": "volume_spike",
