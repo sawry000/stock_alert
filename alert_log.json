@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T07:52:49Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.5,
-    "change_pct": 13.636363636363628,
-    "value": 13.636363636363628
-  },
-  {
     "timestamp": "2026-06-12T07:54:15Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 29.079999923706055,
     "change_pct": 16.553105906637498,
     "value": 16.553105906637498
+  },
+  {
+    "timestamp": "2026-06-15T15:43:26Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 5.010200023651123,
+    "change_pct": 5.035639908828585,
+    "value": 5.035639908828585
   }
 ]
