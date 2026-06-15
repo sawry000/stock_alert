@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T06:03:38Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.109999656677246,
-    "change_pct": 9.37984229982361,
-    "value": 9.37984229982361
-  },
-  {
     "timestamp": "2026-06-12T06:03:56Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 26.610000610351562,
     "change_pct": -0.22309900691215365,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-15T12:49:33Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 25.5,
+    "change_pct": -1.1627906976744213,
+    "value": 2.9289066101087275
   }
 ]
