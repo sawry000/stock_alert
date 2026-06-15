@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T13:37:43Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_DROP",
-    "type": "percent_change",
-    "price": 165.19000244140625,
-    "change_pct": -6.487403090061565,
-    "value": -6.487403090061565
-  },
-  {
     "timestamp": "2026-06-12T13:37:44Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_MA_DEATH",
@@ -4498,5 +4489,14 @@
     "price": 4.03000020980835,
     "change_pct": -0.7389110884642858,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-15T23:37:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.3799991607666,
+    "change_pct": 2.6640887934404556,
+    "value": 1
   }
 ]
