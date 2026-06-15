@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T13:33:18Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.119999885559082,
-    "change_pct": 3.184835981052426,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-12T13:34:09Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 7.480000019073486,
     "change_pct": 5.500705487637327,
     "value": 5.500705487637327
+  },
+  {
+    "timestamp": "2026-06-15T22:32:36Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.3799991607666,
+    "change_pct": 2.6640887934404556,
+    "value": 1
   }
 ]
