@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T07:12:36Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -8.876400634738093,
-    "value": 3.9009495907715315
-  },
-  {
-    "timestamp": "2026-06-12T07:22:32Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -8.876400634738093,
-    "value": 3.9009495907715315
-  },
-  {
     "timestamp": "2026-06-12T07:29:10Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 27.635000228881836,
     "change_pct": 3.6202412076785713,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-15T14:27:28Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 392.9036865234375,
+    "change_pct": 5.906813262739559,
+    "value": 70.41
+  },
+  {
+    "timestamp": "2026-06-15T14:27:59Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_MA_DEATH",
+    "type": "ma_crossover",
+    "price": 15.104999542236328,
+    "change_pct": -0.6250030116030998,
+    "value": -0.009
   }
 ]
