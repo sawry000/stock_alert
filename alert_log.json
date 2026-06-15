@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T08:03:04Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 17.09000015258789,
-    "change_pct": -9.720020324416847,
-    "value": -9.720020324416847
-  },
-  {
-    "timestamp": "2026-06-12T08:04:16Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 30.610000610351562,
-    "change_pct": -4.9364101605566475,
-    "value": 5.057421548453726
-  },
-  {
     "timestamp": "2026-06-12T08:07:50Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 2.734999895095825,
     "change_pct": 13.485472825552906,
     "value": 13.485472825552906
+  },
+  {
+    "timestamp": "2026-06-15T16:03:12Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_CP_BULL",
+    "type": "candle_pattern",
+    "price": 3.1050000190734863,
+    "change_pct": 4.545455187659465,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-15T16:03:19Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 29.899999618530273,
+    "change_pct": 11.111109693535019,
+    "value": 1
   }
 ]
