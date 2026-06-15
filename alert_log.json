@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T09:52:35Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 22.6299991607666,
-    "change_pct": -0.6584760282414379,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-12T09:53:03Z",
     "symbol": "INOD",
     "alert_id": "INOD_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 30.049999237060547,
     "change_pct": 20.440878705653496,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-15T17:38:10Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 118.58000183105469,
+    "change_pct": 8.292239115118436,
+    "value": 8.292239115118436
   }
 ]
