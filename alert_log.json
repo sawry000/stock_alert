@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T10:18:37Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 99.6500015258789,
-    "change_pct": -1.8226585951931957,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-12T10:18:43Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 391.0,
     "change_pct": 5.393676379417232,
     "value": 70.16
+  },
+  {
+    "timestamp": "2026-06-15T18:44:20Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.950000047683716,
+    "change_pct": -5.048075776833757,
+    "value": -5.048075776833757
   }
 ]
