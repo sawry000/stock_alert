@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T08:54:07Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 30.610000610351562,
-    "change_pct": -4.9364101605566475,
-    "value": 5.057421548453726
-  },
-  {
-    "timestamp": "2026-06-12T08:57:44Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -0.6584760282414379,
-    "value": 3.9009495907715315
-  },
-  {
     "timestamp": "2026-06-12T08:59:19Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 3.119999885559082,
     "change_pct": 5.050501197275483,
     "value": 5.050501197275483
+  },
+  {
+    "timestamp": "2026-06-15T16:38:01Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_CP_BULL",
+    "type": "candle_pattern",
+    "price": 24.1299991607666,
+    "change_pct": 0.5416631698608398,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-15T16:38:01Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_POS_SIZE",
+    "type": "position_size",
+    "price": 24.1299991607666,
+    "change_pct": 0.5416631698608398,
+    "value": 4
   }
 ]
