@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T04:14:09Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 17.100000381469727,
-    "change_pct": 5.23077157827524,
-    "value": 5.23077157827524
-  },
-  {
-    "timestamp": "2026-06-12T04:17:35Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_VOL_3X",
-    "type": "volume_spike",
-    "price": 22.6299991607666,
-    "change_pct": -8.876400634738093,
-    "value": 3.9009495907715315
-  },
-  {
     "timestamp": "2026-06-12T04:22:43Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4498,5 +4480,23 @@
     "price": 367.1499938964844,
     "change_pct": -1.5084263354684082,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-15T06:12:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 26.610000610351562,
+    "change_pct": 1.9540253270174754,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-15T06:13:00Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 108.47000122070312,
+    "change_pct": 5.280016714261015,
+    "value": 5.280016714261015
   }
 ]
