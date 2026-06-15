@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T10:37:42Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 84.04000091552734,
-    "change_pct": -1.7076012683890716,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-12T10:38:14Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 30.545000076293945,
     "change_pct": 22.424850005186155,
     "value": 22.424850005186155
+  },
+  {
+    "timestamp": "2026-06-15T19:57:46Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 389.4150085449219,
+    "change_pct": 4.9664434472416685,
+    "value": 2
   }
 ]
