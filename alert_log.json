@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T13:34:09Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 19.530000686645508,
-    "change_pct": 4.438506345697907,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-12T13:34:29Z",
     "symbol": "VELO",
     "alert_id": "VELO_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 27.3799991607666,
     "change_pct": 2.6640887934404556,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-15T22:37:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.3799991607666,
+    "change_pct": 2.6640887934404556,
+    "value": 3
   }
 ]
