@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T13:39:04Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_DROP",
-    "type": "percent_change",
-    "price": 16.420000076293945,
-    "change_pct": -5.476273645070064,
-    "value": -5.476273645070064
-  },
-  {
-    "timestamp": "2026-06-12T13:42:53Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.420300006866455,
-    "change_pct": -5.082551987667946,
-    "value": -5.082551987667946
-  },
-  {
     "timestamp": "2026-06-12T13:42:57Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 30.170000076293945,
     "change_pct": 12.11445587623168,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-15T23:53:11Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_UP_5",
+    "type": "percent_change",
+    "price": 30.170000076293945,
+    "change_pct": 12.11445587623168,
+    "value": 12.11445587623168
+  },
+  {
+    "timestamp": "2026-06-15T23:53:33Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 29.979999542236328,
+    "change_pct": 20.160318806558433,
+    "value": 20.160318806558433
   }
 ]
