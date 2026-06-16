@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T20:57:41Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 54.59000015258789,
-    "change_pct": -2.517856870378767,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-12T20:59:46Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 8.489999771118164,
-    "change_pct": -6.187847832948471,
-    "value": 2.5587924002597124
-  },
-  {
-    "timestamp": "2026-06-12T21:14:14Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 25.5,
-    "change_pct": -20.806223699125763,
-    "value": 3.0201439251204167
-  },
-  {
     "timestamp": "2026-06-12T21:32:41Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_PCT_DROP",
@@ -4497,6 +4470,33 @@
     "type": "news_sentiment",
     "price": 30.170000076293945,
     "change_pct": 0.600200321086852,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-16T12:07:27Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_RSI_OB",
+    "type": "rsi",
+    "price": 413.84,
+    "change_pct": 0.3443091993598659,
+    "value": 100.0
+  },
+  {
+    "timestamp": "2026-06-16T12:07:31Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 389.2,
+    "change_pct": -0.1948917837726923,
+    "value": 100.0
+  },
+  {
+    "timestamp": "2026-06-16T12:08:59Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 18.549999237060547,
+    "change_pct": 0.053933317478682456,
     "value": 1
   }
 ]
