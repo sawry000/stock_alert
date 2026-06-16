@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T14:53:36Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 14.863499641418457,
-    "change_pct": 5.207460761183316,
-    "value": 5.207460761183316
-  },
-  {
-    "timestamp": "2026-06-12T14:53:44Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.690000057220459,
-    "change_pct": 6.3241129336149875,
-    "value": 6.3241129336149875
-  },
-  {
     "timestamp": "2026-06-12T14:53:46Z",
     "symbol": "NLST",
     "alert_id": "NLST_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 7.480000019073486,
     "change_pct": 5.500705487637327,
     "value": 5.500705487637327
+  },
+  {
+    "timestamp": "2026-06-16T02:47:35Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.3799991607666,
+    "change_pct": 2.6640887934404556,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T02:47:44Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 191.5500030517578,
+    "change_pct": 12.411973621923595,
+    "value": 1
   }
 ]
