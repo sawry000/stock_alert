@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T14:38:25Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.21999979019165,
-    "change_pct": 5.76440576921429,
-    "value": 5.76440576921429
-  },
-  {
     "timestamp": "2026-06-12T14:38:43Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 29.979999542236328,
     "change_pct": 20.160318806558433,
     "value": 20.160318806558433
+  },
+  {
+    "timestamp": "2026-06-16T02:07:49Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.609999895095825,
+    "change_pct": 8.298750833851662,
+    "value": 3
   }
 ]
