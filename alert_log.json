@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-14T00:03:30Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_DROP",
-    "type": "percent_change",
-    "price": 26.81999969482422,
-    "change_pct": -6.606169512853944,
-    "value": -6.606169512853944
-  },
-  {
     "timestamp": "2026-06-14T00:03:32Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 3.9649999141693115,
     "change_pct": -0.8799581478598294,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-16T18:59:06Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.0450000762939453,
+    "change_pct": -35.07936265733507,
+    "value": 11.734393547906345
   }
 ]
