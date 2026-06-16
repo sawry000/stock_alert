@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-13T03:53:48Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_BT_VOL",
-    "type": "backtest_check",
-    "price": 303.7699890136719,
-    "change_pct": 0.5028913196598429,
-    "value": 87.5
-  },
-  {
     "timestamp": "2026-06-13T03:54:14Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 2.759999990463257,
     "change_pct": 8.235293743657138,
     "value": 8.235293743657138
+  },
+  {
+    "timestamp": "2026-06-16T16:23:59Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.0392000675201416,
+    "change_pct": -35.26348991999551,
+    "value": 8.500015596487671
   }
 ]
