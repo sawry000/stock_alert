@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-13T02:09:12Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 25.5,
-    "change_pct": -20.806223699125763,
-    "value": 3.0201439251204167
-  },
-  {
-    "timestamp": "2026-06-13T02:13:03Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 108.47000122070312,
-    "change_pct": 5.280016714261015,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-13T02:17:27Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_NEWS_ANY",
@@ -4498,5 +4480,23 @@
     "price": 7.099899768829346,
     "change_pct": -5.081553892655812,
     "value": -5.081553892655812
+  },
+  {
+    "timestamp": "2026-06-16T14:28:03Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 13.225000381469727,
+    "change_pct": -10.460390105147415,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-16T14:28:47Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_PCT_DROP",
+    "type": "percent_change",
+    "price": 99.63500213623047,
+    "change_pct": -5.109521775018601,
+    "value": -5.109521775018601
   }
 ]
