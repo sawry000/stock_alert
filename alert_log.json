@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T14:18:53Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 113.66999816894531,
-    "change_pct": -0.9929464602862901,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-12T14:22:23Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 385.2650146484375,
-    "change_pct": 3.012036002256016,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-12T14:33:05Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 103.90499877929688,
-    "change_pct": -1.6889026593841636,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-12T14:33:10Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_CP_BULL",
-    "type": "candle_pattern",
-    "price": 5.264999866485596,
-    "change_pct": -0.47259231596227474,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-12T14:33:16Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.184999942779541,
-    "change_pct": 4.8872166110160595,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-12T14:33:55Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_RSI_OS_4H",
@@ -4498,5 +4453,50 @@
     "price": 27.3799991607666,
     "change_pct": 2.6640887934404556,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-16T01:42:30Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 20.100000381469727,
+    "change_pct": 0.5000019073486328,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-16T01:42:38Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 191.5500030517578,
+    "change_pct": 12.411973621923595,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T01:43:10Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 30.170000076293945,
+    "change_pct": 12.11445587623168,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T01:43:16Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.909999847412109,
+    "change_pct": 2.9350072832727423,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T01:43:35Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 29.979999542236328,
+    "change_pct": 20.160318806558433,
+    "value": 3
   }
 ]
