@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T19:29:48Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 25.499900817871094,
-    "change_pct": -20.806531722942612,
-    "value": 2.8511426561065663
-  },
-  {
-    "timestamp": "2026-06-12T19:38:44Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_PCT_DROP",
-    "type": "percent_change",
-    "price": 13.109999656677246,
-    "change_pct": -5.00206766028821,
-    "value": -5.00206766028821
-  },
-  {
-    "timestamp": "2026-06-12T19:57:30Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 366.989990234375,
-    "change_pct": -1.5513488813902896,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-12T19:59:22Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 8.515399932861328,
-    "change_pct": -5.907183062305775,
-    "value": 2.5279039568322648
-  },
-  {
     "timestamp": "2026-06-12T19:59:23Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_POS_SIZE",
@@ -4498,5 +4462,41 @@
     "price": 115.88,
     "change_pct": 0.5902777777777714,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-16T08:33:11Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 5.32,
+    "change_pct": 2.3076923076923097,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-16T08:33:44Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 103.95,
+    "change_pct": 1.7123287671232876,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-16T08:33:48Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.520000457763672,
+    "change_pct": 0.5952415012178004,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-16T08:33:53Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 114.33999633789062,
+    "change_pct": 1.9709233371003565,
+    "value": 3
   }
 ]
