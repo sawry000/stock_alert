@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-13T05:52:42Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.4100000858306885,
-    "change_pct": -5.48648630022007,
-    "value": -5.48648630022007
-  },
-  {
-    "timestamp": "2026-06-13T05:58:41Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.25,
-    "change_pct": -6.213281614971903,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-13T05:58:42Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 2.049999952316284,
     "change_pct": -34.920636434403676,
     "value": 9.514433682867951
+  },
+  {
+    "timestamp": "2026-06-16T17:12:45Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.959999084472656,
+    "change_pct": 2.1183312069855997,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T17:14:31Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 2.0097999572753906,
+    "change_pct": -36.1968267531622,
+    "value": 10.070374818257594
   }
 ]
