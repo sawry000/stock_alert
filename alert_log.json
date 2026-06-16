@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T20:57:37Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 367.1499938964844,
-    "change_pct": -1.5084263354684082,
-    "value": 4
-  },
-  {
     "timestamp": "2026-06-12T20:57:41Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 27.3799991607666,
     "change_pct": -3.065132934414683e-06,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T11:23:13Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 30.170000076293945,
+    "change_pct": 0.600200321086852,
+    "value": 1
   }
 ]
