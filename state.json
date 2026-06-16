@@ -834,10 +834,10 @@
   },
   "INOD": {
     "INOD_PCT_UP_5": {
-      "last_fired": "2026-06-16T15:33:17Z"
+      "last_fired": "2026-06-16T17:38:08Z"
     },
     "INOD_MTF_BULL": {
-      "last_fired": "2026-06-16T13:33:17Z"
+      "last_fired": "2026-06-16T17:38:10Z"
     },
     "INOD_POS_SIZE": {
       "last_fired": "2026-06-16T13:33:18Z"
@@ -930,9 +930,9 @@
       ]
     },
     "NLST_PCT_DROP": {
-      "last_fired": "2026-06-11T17:13:33Z"
+      "last_fired": "2026-06-16T17:38:33Z"
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 2.690000057220459,
     "open_time": "2026-06-12T14:53:46Z",
     "NLST_MA_DEATH": {
@@ -986,6 +986,12 @@
     "open_time": "2026-06-10T13:49:02Z",
     "WYFI_MA_DEATH": {
       "last_fired": "2026-06-10T13:33:47Z"
+    },
+    "WYFI_VOL_3X": {
+      "last_fired": "2026-06-16T17:38:40Z"
+    },
+    "WYFI_VOL_ALARM": {
+      "last_fired": "2026-06-16T17:38:40Z"
     }
   },
   "ANNA": {
