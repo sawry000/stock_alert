@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T22:07:28Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 367.1499938964844,
-    "change_pct": -1.5084263354684082,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-12T22:08:12Z",
     "symbol": "RDW",
     "alert_id": "RDW_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 413.84,
     "change_pct": 0.3443091993598659,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-16T13:28:18Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 30.170000076293945,
+    "change_pct": 0.600200321086852,
+    "value": 1
   }
 ]
