@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T04:07:50Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 14.930000305175781,
-    "change_pct": 1.9801798155462114,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-15T04:07:57Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 2.049999952316284,
     "change_pct": -34.920636434403676,
     "value": 13.012738699080272
+  },
+  {
+    "timestamp": "2026-06-16T22:48:19Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 11.380000114440918,
+    "change_pct": -7.177813095914208,
+    "value": -7.177813095914208
   }
 ]
