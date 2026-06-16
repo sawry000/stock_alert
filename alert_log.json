@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T18:33:58Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_RSI_OS_4H",
-    "type": "rsi",
-    "price": 2.875,
-    "change_pct": -4.144300336745236,
-    "value": 29.52
-  },
-  {
     "timestamp": "2026-06-12T18:37:53Z",
     "symbol": "RDW",
     "alert_id": "RDW_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 7.48,
     "change_pct": 5.50070521861778,
     "value": 5.50070521861778
+  },
+  {
+    "timestamp": "2026-06-16T06:57:26Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.3799991607666,
+    "change_pct": 2.6640887934404556,
+    "value": 3
   }
 ]
