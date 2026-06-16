@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T14:48:38Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_DROP",
-    "type": "percent_change",
-    "price": 108.83000183105469,
-    "change_pct": -5.208603927310613,
-    "value": -5.208603927310613
-  },
-  {
     "timestamp": "2026-06-12T14:53:36Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 389.20001220703125,
     "change_pct": 4.908491389803294,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T02:28:49Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_UP_5",
+    "type": "percent_change",
+    "price": 7.480000019073486,
+    "change_pct": 5.500705487637327,
+    "value": 5.500705487637327
   }
 ]
