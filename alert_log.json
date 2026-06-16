@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-14T00:03:42Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 13.25,
-    "change_pct": -6.213281614971903,
-    "value": -6.213281614971903
-  },
-  {
     "timestamp": "2026-06-14T00:04:04Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 36.47999954223633,
     "change_pct": 21.55947864790512,
     "value": 3.3177507628005136
+  },
+  {
+    "timestamp": "2026-06-16T19:24:12Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 2.015000104904175,
+    "change_pct": -36.03174270145477,
+    "value": 12.115512786520476
   }
 ]
