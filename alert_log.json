@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-14T06:02:26Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 385.0299987792969,
-    "change_pct": 2.949197534571357,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-14T06:02:30Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_ALIGN",
@@ -4498,5 +4489,14 @@
     "price": 11.380000114440918,
     "change_pct": -7.177813095914208,
     "value": 3.039991206194137
+  },
+  {
+    "timestamp": "2026-06-16T21:09:08Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.049999952316284,
+    "change_pct": -34.920636434403676,
+    "value": 13.012738699080272
   }
 ]
