@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T18:37:53Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 15.15999984741211,
-    "change_pct": -19.915478883190126,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-12T18:38:19Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.039999961853027,
-    "change_pct": 1.2531318760157175,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-12T18:42:47Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 27.3799991607666,
     "change_pct": 2.6640887934404556,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T07:52:41Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 191.5500030517578,
+    "change_pct": 12.411973621923595,
+    "value": 12.411973621923595
+  },
+  {
+    "timestamp": "2026-06-16T07:53:01Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 115.88,
+    "change_pct": 5.826484018264836,
+    "value": 5.826484018264836
   }
 ]
