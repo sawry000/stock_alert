@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T15:57:29Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_PCT_DROP",
-    "type": "percent_change",
-    "price": 53.13999938964844,
-    "change_pct": -5.107143947056362,
-    "value": -5.107143947056362
-  },
-  {
     "timestamp": "2026-06-12T15:58:04Z",
     "symbol": "INOD",
     "alert_id": "INOD_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 29.98,
     "change_pct": 20.16032064128257,
     "value": 20.16032064128257
+  },
+  {
+    "timestamp": "2026-06-16T04:17:47Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.609999895095825,
+    "change_pct": 8.298750833851662,
+    "value": 8.298750833851662
   }
 ]
