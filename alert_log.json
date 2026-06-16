@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T00:04:56Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "price": 8.489999771118164,
-    "change_pct": -6.187847832948471,
-    "value": -6.187847832948471
-  },
-  {
-    "timestamp": "2026-06-15T01:09:30Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 25.5,
-    "change_pct": -20.806223699125763,
-    "value": 2.9289066101087275
-  },
-  {
-    "timestamp": "2026-06-15T01:09:31Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_POS_SIZE",
-    "type": "position_size",
-    "price": 25.5,
-    "change_pct": -20.806223699125763,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-15T02:07:33Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 26.610000610351562,
-    "change_pct": 1.9540253270174754,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-15T02:08:04Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 108.47000122070312,
-    "change_pct": 5.280016714261015,
-    "value": 5.280016714261015
-  },
-  {
     "timestamp": "2026-06-15T02:09:38Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_SPIKE",
@@ -4498,5 +4453,50 @@
     "price": 2.049999952316284,
     "change_pct": -34.920636434403676,
     "value": 13.012738699080272
+  },
+  {
+    "timestamp": "2026-06-16T22:37:52Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 13.5,
+    "change_pct": -8.598510494245089,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-16T22:38:00Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.6600000858306885,
+    "change_pct": -7.307381056183972,
+    "value": -7.307381056183972
+  },
+  {
+    "timestamp": "2026-06-16T22:38:36Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_3X",
+    "type": "volume_spike",
+    "price": 35.650001525878906,
+    "change_pct": 18.793740506094316,
+    "value": 3.7294758967433803
+  },
+  {
+    "timestamp": "2026-06-16T22:38:36Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 35.650001525878906,
+    "change_pct": 18.793740506094316,
+    "value": 3.7294758967433803
+  },
+  {
+    "timestamp": "2026-06-16T22:39:14Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_PCT_DROP",
+    "type": "percent_change",
+    "price": 16.799999237060547,
+    "change_pct": -6.161507017999406,
+    "value": -6.161507017999406
   }
 ]
