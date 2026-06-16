@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-13T02:07:20Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 385.0299987792969,
-    "change_pct": 2.949197534571357,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-13T02:09:12Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 6.659999847412109,
     "change_pct": -5.145772899433021,
     "value": -5.145772899433021
+  },
+  {
+    "timestamp": "2026-06-16T14:23:26Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_DROP",
+    "type": "percent_change",
+    "price": 7.099899768829346,
+    "change_pct": -5.081553892655812,
+    "value": -5.081553892655812
   }
 ]
