@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-14T00:03:26Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.230000019073486,
-    "change_pct": -1.1342151403877827,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-14T00:03:30Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 36.45000076293945,
     "change_pct": 21.459516037785576,
     "value": 3.1345260412732494
+  },
+  {
+    "timestamp": "2026-06-16T18:53:18Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 3.9649999141693115,
+    "change_pct": -0.8799581478598294,
+    "value": 1
   }
 ]
