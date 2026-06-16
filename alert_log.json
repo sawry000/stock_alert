@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T23:47:34Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 86.80000305175781,
-    "change_pct": 1.5204714055646928,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-12T23:54:18Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 25.5,
-    "change_pct": -20.806223699125763,
-    "value": 3.0201439251204167
-  },
-  {
-    "timestamp": "2026-06-13T00:07:59Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 15.119999885559082,
-    "change_pct": -20.126783488858518,
-    "value": -20.126783488858518
-  },
-  {
     "timestamp": "2026-06-13T00:12:25Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_NEWS_ANY",
@@ -4498,5 +4471,32 @@
     "price": 10.210000038146973,
     "change_pct": -0.19550304841669375,
     "value": 9
+  },
+  {
+    "timestamp": "2026-06-16T13:42:42Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_PCT_DROP",
+    "type": "percent_change",
+    "price": 19.110000610351562,
+    "change_pct": -5.954721405750186,
+    "value": -5.954721405750186
+  },
+  {
+    "timestamp": "2026-06-16T13:43:27Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.0950000286102295,
+    "change_pct": 1.143791784648021,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-16T13:44:28Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 6.090000152587891,
+    "change_pct": -1.1363611592874923,
+    "value": 1
   }
 ]
