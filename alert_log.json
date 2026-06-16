@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T14:33:55Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_RSI_OS_4H",
-    "type": "rsi",
-    "price": 2.924999952316284,
-    "change_pct": -2.477246280255916,
-    "value": 30.55
-  },
-  {
-    "timestamp": "2026-06-12T14:33:56Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_CP_BULL",
-    "type": "candle_pattern",
-    "price": 2.924999952316284,
-    "change_pct": -2.477246280255916,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-12T14:33:56Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_POS_SIZE",
-    "type": "position_size",
-    "price": 2.924999952316284,
-    "change_pct": -2.477246280255916,
-    "value": 34
-  },
-  {
     "timestamp": "2026-06-12T14:37:30Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_NEWS_ANY",
@@ -4498,5 +4471,32 @@
     "price": 29.979999542236328,
     "change_pct": 20.160318806558433,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T01:47:37Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 191.5500030517578,
+    "change_pct": 12.411973621923595,
+    "value": 12.411973621923595
+  },
+  {
+    "timestamp": "2026-06-16T01:47:54Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 115.87999725341797,
+    "change_pct": 5.826481509970748,
+    "value": 5.826481509970748
+  },
+  {
+    "timestamp": "2026-06-16T01:48:09Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 30.170000076293945,
+    "change_pct": 12.11445587623168,
+    "value": 1
   }
 ]
