@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T14:37:30Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 373.4800109863281,
-    "change_pct": 0.18966260601709362,
-    "value": 4
-  },
-  {
     "timestamp": "2026-06-12T14:37:48Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4497,6 +4488,15 @@
     "type": "news_sentiment",
     "price": 30.170000076293945,
     "change_pct": 12.11445587623168,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-16T01:52:29Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 27.3799991607666,
+    "change_pct": 2.6640887934404556,
     "value": 1
   }
 ]
