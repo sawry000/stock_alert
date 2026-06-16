@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-13T05:02:35Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 26.610000610351562,
-    "change_pct": 1.9540253270174754,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-13T05:37:39Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_DROP",
-    "type": "percent_change",
-    "price": 19.93000030517578,
-    "change_pct": -12.51097319940395,
-    "value": -12.51097319940395
-  },
-  {
-    "timestamp": "2026-06-13T05:37:51Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.860000133514404,
-    "change_pct": -9.758896285712932,
-    "value": -9.758896285712932
-  },
-  {
-    "timestamp": "2026-06-13T05:39:54Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_PCT_DROP",
-    "type": "percent_change",
-    "price": 25.5,
-    "change_pct": -20.806223699125763,
-    "value": -20.806223699125763
-  },
-  {
     "timestamp": "2026-06-13T05:48:05Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 112.11000061035156,
     "change_pct": -2.682291136847604,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T16:38:28Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 5.360000133514404,
+    "change_pct": 0.18691838344681594,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-16T16:38:58Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 102.47000122070312,
+    "change_pct": -2.4095226469494047,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T16:38:59Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_POS_SIZE",
+    "type": "position_size",
+    "price": 102.47000122070312,
+    "change_pct": -2.4095226469494047,
+    "value": 0.9758954
+  },
+  {
+    "timestamp": "2026-06-16T16:39:03Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.40999984741211,
+    "change_pct": -2.116789434948102,
+    "value": 2
   }
 ]
