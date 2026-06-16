@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-14T00:04:45Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_PCT_DROP",
-    "type": "percent_change",
-    "price": 25.5,
-    "change_pct": -20.806223699125763,
-    "value": -20.806223699125763
-  },
-  {
-    "timestamp": "2026-06-14T00:04:47Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "price": 8.489999771118164,
-    "change_pct": -6.187847832948471,
-    "value": -6.187847832948471
-  },
-  {
-    "timestamp": "2026-06-14T01:09:19Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 25.5,
-    "change_pct": -20.806223699125763,
-    "value": 2.9289066101087275
-  },
-  {
     "timestamp": "2026-06-14T01:09:20Z",
     "symbol": "VELO",
     "alert_id": "VELO_POS_SIZE",
@@ -4498,5 +4471,32 @@
     "price": 2.0350000858306885,
     "change_pct": -35.39682267204164,
     "value": 25.05
+  },
+  {
+    "timestamp": "2026-06-16T19:58:22Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_VOL_3X",
+    "type": "volume_spike",
+    "price": 11.399999618530273,
+    "change_pct": -7.0146850038313735,
+    "value": 3.016291727639344
+  },
+  {
+    "timestamp": "2026-06-16T19:58:25Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_POS_SIZE",
+    "type": "position_size",
+    "price": 11.399999618530273,
+    "change_pct": -7.0146850038313735,
+    "value": 8
+  },
+  {
+    "timestamp": "2026-06-16T19:58:26Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 11.399999618530273,
+    "change_pct": -7.0146850038313735,
+    "value": 3.016291727639344
   }
 ]
