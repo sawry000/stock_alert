@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-13T03:22:23Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 367.1499938964844,
-    "change_pct": -1.5084263354684082,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-13T03:23:18Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 2.075000047683716,
     "change_pct": -34.12698261321537,
     "value": 24.89
+  },
+  {
+    "timestamp": "2026-06-16T15:43:00Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_DROP",
+    "type": "percent_change",
+    "price": 108.55000305175781,
+    "change_pct": -5.772566795349123,
+    "value": -5.772566795349123
   }
 ]
