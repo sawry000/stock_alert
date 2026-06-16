@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-13T02:28:44Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 112.91000366210938,
-    "change_pct": -1.654904919336841,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-13T02:39:26Z",
     "symbol": "VELO",
     "alert_id": "VELO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 5.802299976348877,
     "change_pct": -5.806818565764987,
     "value": -5.806818565764987
+  },
+  {
+    "timestamp": "2026-06-16T14:57:34Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "price": 370.42999267578125,
+    "change_pct": -5.008207848040499,
+    "value": -5.008207848040499
   }
 ]
