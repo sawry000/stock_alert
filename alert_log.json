@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T14:53:46Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_POS_SIZE",
-    "type": "position_size",
-    "price": 2.690000057220459,
-    "change_pct": 6.3241129336149875,
-    "value": 37
-  },
-  {
     "timestamp": "2026-06-12T15:02:45Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 191.5500030517578,
     "change_pct": 12.411973621923595,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-16T03:33:09Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.03000020980835,
+    "change_pct": -0.7389110884642858,
+    "value": 2
   }
 ]
