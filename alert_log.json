@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T21:32:41Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_DROP",
-    "type": "percent_change",
-    "price": 19.93000030517578,
-    "change_pct": -12.51097319940395,
-    "value": -12.51097319940395
-  },
-  {
     "timestamp": "2026-06-12T21:37:40Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 18.549999237060547,
     "change_pct": 0.053933317478682456,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-16T12:18:53Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_BT_VOL",
+    "type": "backtest_check",
+    "price": 322.41,
+    "change_pct": 3.316669871178627,
+    "value": 87.5
   }
 ]
