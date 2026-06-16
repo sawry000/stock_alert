@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-12T18:28:08Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 109.9000015258789,
-    "change_pct": 6.667962269124435,
-    "value": 6.667962269124435
-  },
-  {
     "timestamp": "2026-06-12T18:33:58Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 2.609999895095825,
     "change_pct": 8.298750833851662,
     "value": 8.298750833851662
+  },
+  {
+    "timestamp": "2026-06-16T06:38:30Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_UP_5",
+    "type": "percent_change",
+    "price": 7.48,
+    "change_pct": 5.50070521861778,
+    "value": 5.50070521861778
   }
 ]
