@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-13T05:48:53Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_DROP",
-    "type": "percent_change",
-    "price": 16.309999465942383,
-    "change_pct": -6.109505529566691,
-    "value": -6.109505529566691
-  },
-  {
     "timestamp": "2026-06-13T05:52:42Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 111.06510162353516,
     "change_pct": -0.9496997917282077,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-16T16:54:01Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.049999952316284,
+    "change_pct": -34.920636434403676,
+    "value": 9.514433682867951
   }
 ]
