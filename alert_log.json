@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T12:13:21Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.230000019073486,
-    "change_pct": -1.1342151403877827,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-15T12:13:28Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.079999923706055,
-    "change_pct": 0.49260895827721873,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-15T12:13:35Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.25,
-    "change_pct": -1.4136904761904725,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-15T12:13:36Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_POS_SIZE",
@@ -4498,5 +4471,32 @@
     "price": 2.049999952316284,
     "change_pct": -34.920636434403676,
     "value": 13.012738699080272
+  },
+  {
+    "timestamp": "2026-06-17T01:22:59Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_CP_BULL",
+    "type": "candle_pattern",
+    "price": 3.190000057220459,
+    "change_pct": 4.248367883021534,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-17T01:23:28Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_3X",
+    "type": "volume_spike",
+    "price": 35.650001525878906,
+    "change_pct": 18.793740506094316,
+    "value": 3.7294758967433803
+  },
+  {
+    "timestamp": "2026-06-17T01:23:29Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 35.650001525878906,
+    "change_pct": 18.793740506094316,
+    "value": 3.7294758967433803
   }
 ]
