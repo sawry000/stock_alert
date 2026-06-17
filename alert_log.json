@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T00:17:31Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_POS_SIZE",
-    "type": "position_size",
-    "price": 389.20001220703125,
-    "change_pct": 4.908491389803294,
-    "value": 0.2569373
-  },
-  {
     "timestamp": "2026-06-16T00:17:47Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 35.650001525878906,
     "change_pct": -0.1400517482383658,
     "value": 3.572037691315579
+  },
+  {
+    "timestamp": "2026-06-17T11:04:11Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.049999952316284,
+    "change_pct": -2.8436041556263363,
+    "value": 11.02629702238057
   }
 ]
