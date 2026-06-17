@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T17:33:50Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 106.37999725341797,
-    "change_pct": 5.2746138084294625,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-15T17:33:55Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.075000047683716,
-    "change_pct": 3.5353551408658457,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-15T17:34:01Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 2.05,
     "change_pct": -34.920634920634924,
     "value": -34.920634920634924
+  },
+  {
+    "timestamp": "2026-06-17T05:47:38Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_PCT_DROP",
+    "type": "percent_change",
+    "price": 19.030000686645508,
+    "change_pct": -6.348421817689431,
+    "value": -6.348421817689431
+  },
+  {
+    "timestamp": "2026-06-17T05:48:11Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 107.41999816894531,
+    "change_pct": 8.209930662783638,
+    "value": 3
   }
 ]
