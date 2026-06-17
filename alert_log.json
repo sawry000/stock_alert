@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T14:27:28Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_RSI_OB",
-    "type": "rsi",
-    "price": 392.9036865234375,
-    "change_pct": 5.906813262739559,
-    "value": 70.41
-  },
-  {
     "timestamp": "2026-06-15T14:27:59Z",
     "symbol": "RDW",
     "alert_id": "RDW_MA_DEATH",
@@ -4498,5 +4489,14 @@
     "price": 35.650001525878906,
     "change_pct": 18.793740506094316,
     "value": 3.7294758967433803
+  },
+  {
+    "timestamp": "2026-06-17T03:37:50Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 13.5,
+    "change_pct": -8.598510494245089,
+    "value": 1
   }
 ]
