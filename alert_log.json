@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T21:38:26Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.909999847412109,
-    "change_pct": 2.9350072832727423,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-15T21:38:46Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 104.83000183105469,
     "change_pct": -0.16190301804315477,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-17T08:49:02Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.05,
+    "change_pct": -2.8436018957346,
+    "value": 11.036240398313922
   }
 ]
