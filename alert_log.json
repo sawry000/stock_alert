@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T16:13:02Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 87.72000122070312,
-    "change_pct": 0.8391783201553399,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-15T16:13:11Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 35.650001525878906,
     "change_pct": 18.793740506094316,
     "value": 3.572037691315579
+  },
+  {
+    "timestamp": "2026-06-17T04:49:02Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.05,
+    "change_pct": -34.920634920634924,
+    "value": 11.036240398313922
   }
 ]
