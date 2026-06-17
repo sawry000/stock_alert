@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T22:02:49Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.609999895095825,
-    "change_pct": 8.298750833851662,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-15T22:07:27Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_NEWS_ANY",
@@ -4498,5 +4489,14 @@
     "price": 2.049999952316284,
     "change_pct": -2.8436041556263363,
     "value": 11.02629702238057
+  },
+  {
+    "timestamp": "2026-06-17T09:23:10Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_CP_BULL",
+    "type": "candle_pattern",
+    "price": 3.190000057220459,
+    "change_pct": -0.3124982118606623,
+    "value": 1
   }
 ]
