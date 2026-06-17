@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T17:43:36Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 5.025000095367432,
-    "change_pct": 5.345913949002769,
-    "value": 5.345913949002769
-  },
-  {
-    "timestamp": "2026-06-15T17:43:52Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 30.09000015258789,
-    "change_pct": 20.601203016384336,
-    "value": 20.601203016384336
-  },
-  {
     "timestamp": "2026-06-15T17:47:33Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_NEWS_ANY",
@@ -4498,5 +4480,23 @@
     "price": 15.489999771118164,
     "change_pct": -8.054302149842627,
     "value": -8.054302149842627
+  },
+  {
+    "timestamp": "2026-06-17T06:13:33Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 35.650001525878906,
+    "change_pct": 18.793740506094316,
+    "value": 18.793740506094316
+  },
+  {
+    "timestamp": "2026-06-17T06:13:58Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_RSI_OS_4H",
+    "type": "rsi",
+    "price": 2.05,
+    "change_pct": -34.920634920634924,
+    "value": 25.34
   }
 ]
