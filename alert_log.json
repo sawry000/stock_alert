@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T15:38:09Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 119.12899780273438,
-    "change_pct": 8.7936052993008,
-    "value": 8.7936052993008
-  },
-  {
-    "timestamp": "2026-06-15T15:38:16Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 107.01000213623047,
-    "change_pct": 5.898072376279536,
-    "value": 5.898072376279536
-  },
-  {
-    "timestamp": "2026-06-15T15:38:24Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 29.545000076293945,
-    "change_pct": 9.791899205848923,
-    "value": 9.791899205848923
-  },
-  {
-    "timestamp": "2026-06-15T15:38:46Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 7.474999904632568,
-    "change_pct": 5.430182011742856,
-    "value": 5.430182011742856
-  },
-  {
     "timestamp": "2026-06-15T15:38:51Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_UP_5",
@@ -4498,5 +4462,41 @@
     "price": 2.049999952316284,
     "change_pct": -34.920636434403676,
     "value": 13.012738699080272
+  },
+  {
+    "timestamp": "2026-06-17T04:08:38Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_3X",
+    "type": "volume_spike",
+    "price": 35.650001525878906,
+    "change_pct": 18.793740506094316,
+    "value": 3.572037691315579
+  },
+  {
+    "timestamp": "2026-06-17T04:08:38Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 35.650001525878906,
+    "change_pct": 18.793740506094316,
+    "value": 18.793740506094316
+  },
+  {
+    "timestamp": "2026-06-17T04:08:39Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 35.650001525878906,
+    "change_pct": 18.793740506094316,
+    "value": 3.572037691315579
+  },
+  {
+    "timestamp": "2026-06-17T04:09:08Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_RSI_OS_4H",
+    "type": "rsi",
+    "price": 2.049999952316284,
+    "change_pct": -34.920636434403676,
+    "value": 25.34
   }
 ]
