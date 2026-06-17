@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T19:48:16Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 30.199899673461914,
-    "change_pct": 12.225565490382436,
-    "value": 12.225565490382436
-  },
-  {
     "timestamp": "2026-06-15T19:48:38Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 35.650001525878906,
     "change_pct": 18.793740506094316,
     "value": 3.572037691315579
+  },
+  {
+    "timestamp": "2026-06-17T06:58:44Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.82,
+    "change_pct": -5.519480519480517,
+    "value": -5.519480519480517
   }
 ]
