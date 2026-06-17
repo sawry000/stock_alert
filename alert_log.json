@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T18:12:38Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_POS_SIZE",
-    "type": "position_size",
-    "price": 389.739990234375,
-    "change_pct": 5.054041951097062,
-    "value": 0.2565813
-  },
-  {
-    "timestamp": "2026-06-15T18:18:53Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 7.445000171661377,
-    "change_pct": 5.007054607353697,
-    "value": 5.007054607353697
-  },
-  {
-    "timestamp": "2026-06-15T18:27:39Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.735000610351562,
-    "change_pct": 3.995202798521019,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-15T18:32:29Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_RSI_OB",
-    "type": "rsi",
-    "price": 391.0,
-    "change_pct": 5.393676379417232,
-    "value": 70.16
-  },
-  {
-    "timestamp": "2026-06-15T18:44:20Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.950000047683716,
-    "change_pct": -5.048075776833757,
-    "value": -5.048075776833757
-  },
-  {
     "timestamp": "2026-06-15T18:52:37Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_NEWS_ANY",
@@ -4498,5 +4453,50 @@
     "price": 35.650001525878906,
     "change_pct": 18.793740506094316,
     "value": 3.572037691315579
+  },
+  {
+    "timestamp": "2026-06-17T06:22:44Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 7.41,
+    "change_pct": 5.536011849657471,
+    "value": 5.536011849657471
+  },
+  {
+    "timestamp": "2026-06-17T06:22:50Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.845,
+    "change_pct": 11.568627450980408,
+    "value": 11.568627450980408
+  },
+  {
+    "timestamp": "2026-06-17T06:22:52Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.845,
+    "change_pct": 11.568627450980408,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-17T06:23:34Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_DROP",
+    "type": "percent_change",
+    "price": 7.090000152587891,
+    "change_pct": -5.213901703370452,
+    "value": -5.213901703370452
+  },
+  {
+    "timestamp": "2026-06-17T06:23:37Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 35.650001525878906,
+    "change_pct": 18.793740506094316,
+    "value": 3
   }
 ]
