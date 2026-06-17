@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T21:48:34Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 30.170000076293945,
-    "change_pct": 12.11445587623168,
-    "value": 12.11445587623168
-  },
-  {
-    "timestamp": "2026-06-15T21:49:03Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 29.979999542236328,
-    "change_pct": 20.160318806558433,
-    "value": 20.160318806558433
-  },
-  {
-    "timestamp": "2026-06-15T21:56:21Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.5,
-    "change_pct": -10.075177151901002,
-    "value": -10.075177151901002
-  },
-  {
-    "timestamp": "2026-06-15T21:59:19Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_PCT_DROP",
-    "type": "percent_change",
-    "price": 23.09000015258789,
-    "change_pct": -10.503875377566319,
-    "value": -10.503875377566319
-  },
-  {
     "timestamp": "2026-06-15T22:02:32Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_NEWS_C",
@@ -4498,5 +4462,41 @@
     "price": 2.05,
     "change_pct": -2.8436018957346,
     "value": 11.036240398313922
+  },
+  {
+    "timestamp": "2026-06-17T09:07:48Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 85.7699966430664,
+    "change_pct": -0.2906339885300974,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-17T09:08:43Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_3X",
+    "type": "volume_spike",
+    "price": 35.650001525878906,
+    "change_pct": -0.1400517482383658,
+    "value": 3.572037691315579
+  },
+  {
+    "timestamp": "2026-06-17T09:08:44Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 35.650001525878906,
+    "change_pct": -0.1400517482383658,
+    "value": 3.572037691315579
+  },
+  {
+    "timestamp": "2026-06-17T09:08:53Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 13.34000015258789,
+    "change_pct": 1.1438372621222531e-06,
+    "value": 2
   }
 ]
