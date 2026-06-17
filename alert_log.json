@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T20:23:48Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.520000457763672,
-    "change_pct": 0.5952415012178004,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-15T20:23:53Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 114.33999633789062,
-    "change_pct": 0.4745134779355254,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-15T20:24:12Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 3.259999990463257,
-    "change_pct": 7.615620455658295,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-15T20:32:38Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.3799991607666,
-    "change_pct": 2.6640887934404556,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-15T20:57:38Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_NEWS_C",
@@ -4498,5 +4462,41 @@
     "price": 2.049999952316284,
     "change_pct": -34.920636434403676,
     "value": 28.26
+  },
+  {
+    "timestamp": "2026-06-17T08:03:03Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.845,
+    "change_pct": -44.714341235911384,
+    "value": -44.714341235911384
+  },
+  {
+    "timestamp": "2026-06-17T08:03:53Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_3X",
+    "type": "volume_spike",
+    "price": 35.650001525878906,
+    "change_pct": -0.1400517482383658,
+    "value": 3.572037691315579
+  },
+  {
+    "timestamp": "2026-06-17T08:03:54Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 35.650001525878906,
+    "change_pct": -0.1400517482383658,
+    "value": 3.572037691315579
+  },
+  {
+    "timestamp": "2026-06-17T08:04:23Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 2.05,
+    "change_pct": -34.920634920634924,
+    "value": 11.036240398313922
   }
 ]
