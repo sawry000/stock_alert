@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T15:43:26Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 5.010200023651123,
-    "change_pct": 5.035639908828585,
-    "value": 5.035639908828585
-  },
-  {
-    "timestamp": "2026-06-15T15:57:40Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 395.9549865722656,
-    "change_pct": 6.72928827522726,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-15T15:58:02Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 2.05,
     "change_pct": -34.920634920634924,
     "value": 11.036240398313922
+  },
+  {
+    "timestamp": "2026-06-17T04:22:42Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 7.41,
+    "change_pct": 5.536011849657471,
+    "value": 5.536011849657471
+  },
+  {
+    "timestamp": "2026-06-17T04:22:47Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.845,
+    "change_pct": 11.568627450980408,
+    "value": 11.568627450980408
   }
 ]
