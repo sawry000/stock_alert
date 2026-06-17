@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T19:14:44Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_PCT_DROP",
-    "type": "percent_change",
-    "price": 17.649999618530273,
-    "change_pct": -5.107528932632946,
-    "value": -5.107528932632946
-  },
-  {
-    "timestamp": "2026-06-15T19:23:28Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.984999895095825,
-    "change_pct": -1.8472932242407494,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-15T19:32:33Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_NEWS_C",
@@ -4498,5 +4480,23 @@
     "price": 361.7099914550781,
     "change_pct": -7.244334943307481,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-17T06:43:01Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.66,
+    "change_pct": -7.307384047112932,
+    "value": -7.307384047112932
+  },
+  {
+    "timestamp": "2026-06-17T06:44:18Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_PCT_DROP",
+    "type": "percent_change",
+    "price": 16.799999237060547,
+    "change_pct": -6.161507017999406,
+    "value": -6.161507017999406
   }
 ]
