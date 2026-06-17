@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-15T12:12:50Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 14.930000305175781,
-    "change_pct": -0.3337763339400479,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-15T12:12:58Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 86.98999786376953,
-    "change_pct": -2.455719581140467e-06,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-15T12:13:07Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 108.47000122070312,
-    "change_pct": -0.9406381546090182,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-15T12:13:21Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -4498,5 +4471,32 @@
     "price": 113.2699966430664,
     "change_pct": 1.0166740774693757,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-17T00:53:19Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_VOL_3X",
+    "type": "volume_spike",
+    "price": 11.380000114440918,
+    "change_pct": -7.177813095914208,
+    "value": 3.039991206194137
+  },
+  {
+    "timestamp": "2026-06-17T00:53:22Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 11.380000114440918,
+    "change_pct": -7.177813095914208,
+    "value": 3.039991206194137
+  },
+  {
+    "timestamp": "2026-06-17T00:54:02Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.049999952316284,
+    "change_pct": -34.920636434403676,
+    "value": 13.012738699080272
   }
 ]
