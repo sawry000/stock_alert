@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T15:07:48Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.989700317382812,
-    "change_pct": 2.226809048147602,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-16T15:09:10Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 161.85000610351562,
     "change_pct": -5.306572605010744,
     "value": -5.306572605010744
+  },
+  {
+    "timestamp": "2026-06-18T22:12:37Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 28.100000381469727,
+    "change_pct": 1.0791380628407403,
+    "value": 3
   }
 ]
