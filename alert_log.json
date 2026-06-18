@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T08:27:51Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 87.02999877929688,
-    "change_pct": 0.8926487123775445,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-16T08:28:00Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 42.81999969482422,
     "change_pct": 5.364172477421797,
     "value": 5.364172477421797
+  },
+  {
+    "timestamp": "2026-06-18T17:23:35Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 39.275001525878906,
+    "change_pct": 13.511565103696258,
+    "value": 13.511565103696258
   }
 ]
