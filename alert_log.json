@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T12:27:27Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 413.84,
-    "change_pct": 0.3443091993598659,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-16T12:27:29Z",
     "symbol": "COHR",
     "alert_id": "COHR_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 28.075000762939453,
     "change_pct": 0.9892113774800447,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-18T18:22:27Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_UP_5",
+    "type": "percent_change",
+    "price": 51.88999938964844,
+    "change_pct": 7.388243769967792,
+    "value": 7.388243769967792
   }
 ]
