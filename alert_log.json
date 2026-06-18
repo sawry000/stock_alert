@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T13:39:10Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_POS_SIZE",
-    "type": "position_size",
-    "price": 10.210000038146973,
-    "change_pct": -0.19550304841669375,
-    "value": 9
-  },
-  {
     "timestamp": "2026-06-16T13:42:42Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.9439623812947646
+  },
+  {
+    "timestamp": "2026-06-18T21:13:32Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 113.80000305175781,
+    "change_pct": 10.905372821126413,
+    "value": 10.905372821126413
   }
 ]
