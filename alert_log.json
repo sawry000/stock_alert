@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T06:57:26Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.3799991607666,
-    "change_pct": 2.6640887934404556,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-16T07:52:41Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 191.5500030517578,
-    "change_pct": 12.411973621923595,
-    "value": 12.411973621923595
-  },
-  {
-    "timestamp": "2026-06-16T07:53:01Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 115.88,
-    "change_pct": 5.826484018264836,
-    "value": 5.826484018264836
-  },
-  {
     "timestamp": "2026-06-16T08:02:32Z",
     "symbol": "COHR",
     "alert_id": "COHR_RSI_OB",
@@ -4498,5 +4471,32 @@
     "price": 2.8399999141693115,
     "change_pct": 12.252961034360148,
     "value": 12.252961034360148
+  },
+  {
+    "timestamp": "2026-06-18T16:22:23Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 419.464599609375,
+    "change_pct": 9.549386160714292,
+    "value": 70.09
+  },
+  {
+    "timestamp": "2026-06-18T16:22:25Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_UP_5",
+    "type": "percent_change",
+    "price": 51.689998626708984,
+    "change_pct": 6.974334906268592,
+    "value": 6.974334906268592
+  },
+  {
+    "timestamp": "2026-06-18T16:23:52Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_RSI_OS_4H",
+    "type": "rsi",
+    "price": 2.2149999141693115,
+    "change_pct": 10.749995708465576,
+    "value": 31.9
   }
 ]
