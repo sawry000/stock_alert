@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T08:02:32Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_RSI_OB",
-    "type": "rsi",
-    "price": 413.84,
-    "change_pct": 0.3443091993598659,
-    "value": 100.0
-  },
-  {
-    "timestamp": "2026-06-16T08:02:35Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_RSI_OB",
-    "type": "rsi",
-    "price": 389.2,
-    "change_pct": -0.1948917837726923,
-    "value": 100.0
-  },
-  {
     "timestamp": "2026-06-16T08:22:43Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 2.2149999141693115,
     "change_pct": 10.749995708465576,
     "value": 31.9
+  },
+  {
+    "timestamp": "2026-06-18T16:47:24Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 51.939998626708984,
+    "change_pct": 7.491719012228858,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-18T16:48:31Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_PCT_UP_5",
+    "type": "percent_change",
+    "price": 103.2300033569336,
+    "change_pct": 5.143617189787723,
+    "value": 5.143617189787723
   }
 ]
