@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T13:34:22Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_DROP",
-    "type": "percent_change",
-    "price": 17.600000381469727,
-    "change_pct": -5.0701166048019015,
-    "value": -5.0701166048019015
-  },
-  {
-    "timestamp": "2026-06-16T13:34:25Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_RSI_OS_4H",
-    "type": "rsi",
-    "price": 2.4000000953674316,
-    "change_pct": -23.809520781986297,
-    "value": 28.39
-  },
-  {
-    "timestamp": "2026-06-16T13:34:26Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_CP_BULL",
-    "type": "candle_pattern",
-    "price": 2.4000000953674316,
-    "change_pct": -23.809520781986297,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-16T13:34:27Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_POS_SIZE",
-    "type": "position_size",
-    "price": 2.4000000953674316,
-    "change_pct": -23.809520781986297,
-    "value": 41
-  },
-  {
     "timestamp": "2026-06-16T13:34:27Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 93.8499984741211,
     "change_pct": 5.048129028566253,
     "value": 5.048129028566253
+  },
+  {
+    "timestamp": "2026-06-18T20:02:32Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 98.61000061035156,
+    "change_pct": 7.652839094270271,
+    "value": 7.652839094270271
+  },
+  {
+    "timestamp": "2026-06-18T20:03:07Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_UP_5",
+    "type": "percent_change",
+    "price": 35.470001220703125,
+    "change_pct": 10.155283294109074,
+    "value": 10.155283294109074
+  },
+  {
+    "timestamp": "2026-06-18T20:03:20Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.7699999809265137,
+    "change_pct": 9.486165254012406,
+    "value": 9.486165254012406
+  },
+  {
+    "timestamp": "2026-06-18T20:03:26Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 7.849999904632568,
+    "change_pct": 1.9480507095138724,
+    "value": 2
   }
 ]
