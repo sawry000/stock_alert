@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T06:03:13Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 30.170000076293945,
-    "change_pct": 12.11445587623168,
-    "value": 12.11445587623168
-  },
-  {
-    "timestamp": "2026-06-16T06:03:34Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 29.98,
-    "change_pct": 20.16032064128257,
-    "value": 20.16032064128257
-  },
-  {
     "timestamp": "2026-06-16T06:04:16Z",
     "symbol": "VELO",
     "alert_id": "VELO_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 6.5,
     "change_pct": -1.9607843137254888,
     "value": 15
+  },
+  {
+    "timestamp": "2026-06-18T15:07:53Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.400000095367432,
+    "change_pct": -6.569341673468146,
+    "value": -6.569341673468146
+  },
+  {
+    "timestamp": "2026-06-18T15:08:47Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 107.8499984741211,
+    "change_pct": 5.106713258085073,
+    "value": 5.106713258085073
   }
 ]
