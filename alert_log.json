@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T13:38:01Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 14.029999732971191,
-    "change_pct": -5.010157528969588,
-    "value": -5.010157528969588
-  },
-  {
     "timestamp": "2026-06-16T13:38:33Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 28.100000381469727,
     "change_pct": 1.0791380628407403,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-18T20:18:53Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.9439623812947646
   }
 ]
