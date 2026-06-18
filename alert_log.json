@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T05:47:49Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 191.5500030517578,
-    "change_pct": 12.411973621923595,
-    "value": 12.411973621923595
-  },
-  {
     "timestamp": "2026-06-16T05:47:52Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_MTF_BULL",
@@ -4497,6 +4488,15 @@
     "type": "candle_pattern",
     "price": 7.670000076293945,
     "change_pct": 4.495913845966559,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-18T14:43:58Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_CP_BULL",
+    "type": "candle_pattern",
+    "price": 2.2950000762939453,
+    "change_pct": 14.750003814697266,
     "value": 1
   }
 ]
