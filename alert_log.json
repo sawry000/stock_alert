@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T13:33:18Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_POS_SIZE",
-    "type": "position_size",
-    "price": 104.44999694824219,
-    "change_pct": 5.218088997927059,
-    "value": 0.9573959
-  },
-  {
-    "timestamp": "2026-06-16T13:33:31Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.079999923706055,
-    "change_pct": 1.9948983477339695,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-16T13:33:38Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 12.610099792480469,
-    "change_pct": 2.855626366072341,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-16T13:33:38Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_POS_SIZE",
-    "type": "position_size",
-    "price": 12.610099792480469,
-    "change_pct": 2.855626366072341,
-    "value": 7
-  },
-  {
     "timestamp": "2026-06-16T13:34:22Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 16.06999969482422,
     "change_pct": 5.515428068445294,
     "value": 6
+  },
+  {
+    "timestamp": "2026-06-18T19:57:24Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 389.94000244140625,
+    "change_pct": 1.3527481715116614,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-18T19:57:30Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 417.5350036621094,
+    "change_pct": 9.04544363074155,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-18T19:57:31Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_POS_SIZE",
+    "type": "position_size",
+    "price": 417.5350036621094,
+    "change_pct": 9.04544363074155,
+    "value": 0.2395009
+  },
+  {
+    "timestamp": "2026-06-18T19:57:53Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 93.8499984741211,
+    "change_pct": 5.048129028566253,
+    "value": 5.048129028566253
   }
 ]
