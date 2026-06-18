@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T12:22:58Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 15.069999694824219,
-    "change_pct": 0.3910367178340213,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-16T12:27:27Z",
     "symbol": "COHR",
     "alert_id": "COHR_MTF_ALIGN",
@@ -4498,5 +4489,14 @@
     "price": 108.77999877929688,
     "change_pct": 6.013057966374501,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-18T18:02:40Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 28.075000762939453,
+    "change_pct": 0.9892113774800447,
+    "value": 3
   }
 ]
