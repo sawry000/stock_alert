@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T13:49:17Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_CP_BULL",
-    "type": "candle_pattern",
-    "price": 17.9606990814209,
-    "change_pct": -3.1246004238354947,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-16T13:49:18Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_POS_SIZE",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-18T21:28:53Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.9439623812947646
+  },
+  {
+    "timestamp": "2026-06-18T21:43:44Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
     "type": "volume_spike",
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
