@@ -601,7 +601,7 @@
       "last_fired": "2026-06-11T19:13:50Z"
     },
     "VSEC_CP_BULL": {
-      "last_fired": "2026-06-01T17:03:01Z"
+      "last_fired": "2026-06-18T14:58:55Z"
     },
     "VSEC_MA_GOLDEN": {
       "last_fired": "2026-06-11T19:13:49Z"
@@ -874,7 +874,7 @@
       "last_fired": "2026-06-18T13:53:35Z"
     },
     "DDD_PCT_UP_5": {
-      "last_fired": "2026-06-16T17:48:17Z"
+      "last_fired": "2026-06-18T14:58:17Z"
     },
     "DDD_NEWS_BAD": {
       "last_fired": "2026-06-03T19:48:07Z"
@@ -964,10 +964,10 @@
   },
   "UAMY": {
     "UAMY_MTF_BULL": {
-      "last_fired": "2026-06-03T11:08:36Z"
+      "last_fired": "2026-06-18T14:58:41Z"
     },
     "UAMY_POS_SIZE": {
-      "last_fired": "2026-06-15T13:33:59Z"
+      "last_fired": "2026-06-18T14:58:42Z"
     },
     "UAMY_PCT_UP_5": {
       "last_fired": "2026-06-16T06:38:30Z"
@@ -975,9 +975,9 @@
     "UAMY_PCT_DROP": {
       "last_fired": "2026-06-17T06:23:34Z"
     },
-    "open_position": false,
-    "open_entry": 7.702099800109863,
-    "open_time": "2026-06-15T13:33:59Z"
+    "open_position": true,
+    "open_entry": 7.875,
+    "open_time": "2026-06-18T14:58:42Z"
   },
   "WYFI": {
     "WYFI_PCT_UP_5": {
@@ -1097,18 +1097,20 @@
   },
   "LTRX": {
     "LTRX_POS_SIZE": {
-      "last_fired": "2026-06-05T06:54:18Z"
+      "last_fired": "2026-06-18T14:59:17Z"
     },
     "LTRX_CP_BULL": {
-      "last_fired": "2026-06-04T13:38:48Z"
+      "last_fired": "2026-06-18T14:59:16Z"
     },
     "LTRX_PCT_DROP": {
       "last_fired": "2026-06-18T14:34:06Z"
     },
-    "open_position": false,
+    "open_position": true,
     "LTRX_MA_DEATH": {
       "last_fired": "2026-06-15T00:04:43Z"
-    }
+    },
+    "open_entry": 6.5,
+    "open_time": "2026-06-18T14:59:17Z"
   },
   "FPS": {
     "FPS_POS_SIZE": {
