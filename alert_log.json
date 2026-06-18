@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T12:33:51Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 13.520000457763672,
-    "change_pct": -1.3138652717980104,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-16T12:39:11Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 114.33999633789062,
-    "change_pct": 1.9709233371003565,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-16T13:07:43Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4498,5 +4480,23 @@
     "price": 105.125,
     "change_pct": 7.073742106335295,
     "value": 7.073742106335295
+  },
+  {
+    "timestamp": "2026-06-18T19:09:05Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 109.7699966430664,
+    "change_pct": 6.977874128317324,
+    "value": 6.977874128317324
+  },
+  {
+    "timestamp": "2026-06-18T19:09:27Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.444999933242798,
+    "change_pct": 22.249996662139893,
+    "value": 3.2976236281614253
   }
 ]
