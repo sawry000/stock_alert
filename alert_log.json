@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T13:32:39Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 52.36600112915039,
-    "change_pct": -0.6903069805606036,
-    "value": -0.07
-  },
-  {
     "timestamp": "2026-06-16T13:33:08Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 2.4549999237060547,
     "change_pct": 22.749996185302734,
     "value": 3.467975100081146
+  },
+  {
+    "timestamp": "2026-06-18T19:43:57Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.5099000930786133,
+    "change_pct": 25.495004653930664,
+    "value": 3.6473779770985035
   }
 ]
