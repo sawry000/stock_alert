@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T13:38:39Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 32.33000183105469,
-    "change_pct": 7.730762516010283,
-    "value": 7.730762516010283
-  },
-  {
     "timestamp": "2026-06-16T13:39:07Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_RSI_OS_1D",
@@ -4498,5 +4489,14 @@
     "price": 52.279998779296875,
     "change_pct": 8.195361712121016,
     "value": 8.195361712121016
+  },
+  {
+    "timestamp": "2026-06-18T20:38:49Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.9439623812947646
   }
 ]
