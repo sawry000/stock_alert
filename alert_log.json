@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T22:54:25Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.820000171661377,
-    "change_pct": -5.519477732769857,
-    "value": -5.519477732769857
-  },
-  {
     "timestamp": "2026-06-16T23:02:33Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 2.42,
     "change_pct": 20.999999999999996,
     "value": 3.78102777523996
+  },
+  {
+    "timestamp": "2026-06-19T09:03:37Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_PCT_UP_5",
+    "type": "percent_change",
+    "price": 105.15,
+    "change_pct": 7.099205540843348,
+    "value": 7.099205540843348
   }
 ]
