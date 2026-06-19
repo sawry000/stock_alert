@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T13:52:26Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 388.1400146484375,
-    "change_pct": 0.884897455118516,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-18T13:52:27Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_POS_SIZE",
-    "type": "position_size",
-    "price": 388.1400146484375,
-    "change_pct": 0.884897455118516,
-    "value": 0.257639
-  },
-  {
     "timestamp": "2026-06-18T13:52:30Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_ALIGN",
@@ -4498,5 +4480,23 @@
     "price": 52.279998779296875,
     "change_pct": 8.195361712121016,
     "value": 8.195361712121016
+  },
+  {
+    "timestamp": "2026-06-19T23:03:50Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_CP_BULL",
+    "type": "candle_pattern",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-19T23:04:04Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_CP_BULL",
+    "type": "candle_pattern",
+    "price": 7.71999979019165,
+    "change_pct": 5.177108858196874,
+    "value": 1
   }
 ]
