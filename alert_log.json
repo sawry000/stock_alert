@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-17T07:07:35Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_PCT_DROP",
-    "type": "percent_change",
-    "price": 361.7099914550781,
-    "change_pct": -7.244334943307481,
-    "value": -7.244334943307481
-  },
-  {
     "timestamp": "2026-06-17T07:09:18Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 113.80000305175781,
     "change_pct": 10.905372821126413,
     "value": 10.905372821126413
+  },
+  {
+    "timestamp": "2026-06-19T19:43:50Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.7778467332044903
   }
 ]
