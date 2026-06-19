@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T23:07:28Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 382.80999755859375,
-    "change_pct": -7.179574812425747,
-    "value": -7.179574812425747
-  },
-  {
     "timestamp": "2026-06-16T23:08:48Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_3X",
@@ -4498,5 +4489,14 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.7785417264270436
+  },
+  {
+    "timestamp": "2026-06-19T09:18:59Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.42,
+    "change_pct": 20.999999999999996,
+    "value": 3.78102777523996
   }
 ]
