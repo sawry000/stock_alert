@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T19:58:22Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_VOL_3X",
-    "type": "volume_spike",
-    "price": 11.399999618530273,
-    "change_pct": -7.0146850038313735,
-    "value": 3.016291727639344
-  },
-  {
-    "timestamp": "2026-06-16T19:58:25Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_POS_SIZE",
-    "type": "position_size",
-    "price": 11.399999618530273,
-    "change_pct": -7.0146850038313735,
-    "value": 8
-  },
-  {
-    "timestamp": "2026-06-16T19:58:26Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 11.399999618530273,
-    "change_pct": -7.0146850038313735,
-    "value": 3.016291727639344
-  },
-  {
     "timestamp": "2026-06-16T20:04:39Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4471,32 @@
     "price": 16.170000076293945,
     "change_pct": 6.172029391293138,
     "value": 6.172029391293138
+  },
+  {
+    "timestamp": "2026-06-19T04:27:22Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_RSI_OB",
+    "type": "rsi",
+    "price": 389.57,
+    "change_pct": 1.2565775708246292,
+    "value": 100.0
+  },
+  {
+    "timestamp": "2026-06-19T04:27:25Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 417.07,
+    "change_pct": 8.924001044659184,
+    "value": 100.0
+  },
+  {
+    "timestamp": "2026-06-19T04:27:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 28.1,
+    "change_pct": 1.0791366906474844,
+    "value": 2
   }
 ]
