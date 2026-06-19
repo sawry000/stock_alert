@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T19:28:23Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 31.489999771118164,
-    "change_pct": 5.001666459213624,
-    "value": 5.001666459213624
-  },
-  {
     "timestamp": "2026-06-16T19:29:13Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 43.400001525878906,
     "change_pct": 6.791342337300457,
     "value": 6.791342337300457
+  },
+  {
+    "timestamp": "2026-06-19T03:48:25Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.8499999046325684,
+    "change_pct": 12.648217574409825,
+    "value": 12.648217574409825
   }
 ]
