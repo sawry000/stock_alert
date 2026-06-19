@@ -1,158 +1,5 @@
 [
   {
-    "timestamp": "2026-06-17T02:22:47Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.8450000286102295,
-    "change_pct": 11.568628572950184,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-17T02:23:32Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 35.650001525878906,
-    "change_pct": 18.793740506094316,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-17T02:28:28Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_3X",
-    "type": "volume_spike",
-    "price": 35.650001525878906,
-    "change_pct": 18.793740506094316,
-    "value": 3.7294758967433803
-  },
-  {
-    "timestamp": "2026-06-17T02:28:28Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 35.650001525878906,
-    "change_pct": 18.793740506094316,
-    "value": 3.7294758967433803
-  },
-  {
-    "timestamp": "2026-06-17T02:33:17Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_VOL_3X",
-    "type": "volume_spike",
-    "price": 11.380000114440918,
-    "change_pct": -7.177813095914208,
-    "value": 3.039991206194137
-  },
-  {
-    "timestamp": "2026-06-17T02:33:21Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 11.380000114440918,
-    "change_pct": -7.177813095914208,
-    "value": 3.039991206194137
-  },
-  {
-    "timestamp": "2026-06-17T02:39:02Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.049999952316284,
-    "change_pct": -34.920636434403676,
-    "value": 13.012738699080272
-  },
-  {
-    "timestamp": "2026-06-17T02:48:53Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 2.049999952316284,
-    "change_pct": -34.920636434403676,
-    "value": 13.012738699080272
-  },
-  {
-    "timestamp": "2026-06-17T02:58:53Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_3X",
-    "type": "volume_spike",
-    "price": 35.650001525878906,
-    "change_pct": 18.793740506094316,
-    "value": 3.7294758967433803
-  },
-  {
-    "timestamp": "2026-06-17T02:58:53Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 35.650001525878906,
-    "change_pct": 18.793740506094316,
-    "value": 3.7294758967433803
-  },
-  {
-    "timestamp": "2026-06-17T03:08:31Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_VOL_3X",
-    "type": "volume_spike",
-    "price": 11.380000114440918,
-    "change_pct": -7.177813095914208,
-    "value": 3.039991206194137
-  },
-  {
-    "timestamp": "2026-06-17T03:08:35Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 11.380000114440918,
-    "change_pct": -7.177813095914208,
-    "value": 3.039991206194137
-  },
-  {
-    "timestamp": "2026-06-17T03:09:26Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.049999952316284,
-    "change_pct": -34.920636434403676,
-    "value": 13.012738699080272
-  },
-  {
-    "timestamp": "2026-06-17T03:32:45Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.420000076293945,
-    "change_pct": 0.14609231663238242,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-17T03:33:59Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_3X",
-    "type": "volume_spike",
-    "price": 35.650001525878906,
-    "change_pct": 18.793740506094316,
-    "value": 3.7294758967433803
-  },
-  {
-    "timestamp": "2026-06-17T03:34:00Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 35.650001525878906,
-    "change_pct": 18.793740506094316,
-    "value": 3.7294758967433803
-  },
-  {
-    "timestamp": "2026-06-17T03:37:50Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 13.5,
-    "change_pct": -8.598510494245089,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-17T03:43:23Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_VOL_3X",
@@ -4498,5 +4345,158 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.7785417264270436
+  },
+  {
+    "timestamp": "2026-06-19T14:17:38Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 21.91,
+    "change_pct": 3.1151020561838436,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:17:41Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_PCT_UP_5",
+    "type": "percent_change",
+    "price": 98.61,
+    "change_pct": 7.6528384279476045,
+    "value": 7.6528384279476045
+  },
+  {
+    "timestamp": "2026-06-19T14:17:43Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 98.61,
+    "change_pct": 7.6528384279476045,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:17:54Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 15.08,
+    "change_pct": 1.1401743796109987,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:17:59Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.78,
+    "change_pct": -7.125307125307137,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:17:59Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_POS_SIZE",
+    "type": "position_size",
+    "price": 3.78,
+    "change_pct": -7.125307125307137,
+    "value": 26
+  },
+  {
+    "timestamp": "2026-06-19T14:18:03Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 93.28,
+    "change_pct": 4.410118647862097,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:18:15Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 115.3,
+    "change_pct": 0.5231037489101955,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:18:28Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.57,
+    "change_pct": 3.1791907514450832,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:18:35Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_UP_5",
+    "type": "percent_change",
+    "price": 35.47,
+    "change_pct": 10.155279503105577,
+    "value": 10.155279503105577
+  },
+  {
+    "timestamp": "2026-06-19T14:18:38Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 35.47,
+    "change_pct": 10.155279503105577,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:18:58Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.85,
+    "change_pct": 12.64822134387353,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:19:05Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 38.49,
+    "change_pct": 11.24277456647399,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:19:13Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 105.15,
+    "change_pct": 7.099205540843348,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:19:17Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 17.77,
+    "change_pct": 2.185163887291541,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:19:21Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 113.8,
+    "change_pct": 10.905369846993468,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-19T14:19:39Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 16.17,
+    "change_pct": 6.172028890348005,
+    "value": 6.172028890348005
   }
 ]
