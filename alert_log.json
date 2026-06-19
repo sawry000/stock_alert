@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-17T09:07:48Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 85.7699966430664,
-    "change_pct": -0.2906339885300974,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-17T09:08:43Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_3X",
@@ -4498,5 +4489,14 @@
     "price": 113.80000305175781,
     "change_pct": 10.905372821126413,
     "value": 10.905372821126413
+  },
+  {
+    "timestamp": "2026-06-19T21:44:03Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.7778467332044903
   }
 ]
