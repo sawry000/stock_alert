@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-17T11:39:30Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.049999952316284,
-    "change_pct": -2.8436041556263363,
-    "value": 11.02629702238057
-  },
-  {
     "timestamp": "2026-06-18T13:52:26Z",
     "symbol": "COHR",
     "alert_id": "COHR_MTF_ALIGN",
@@ -4498,5 +4489,14 @@
     "price": 28.100000381469727,
     "change_pct": 1.0791380628407403,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-19T22:57:26Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_UP_5",
+    "type": "percent_change",
+    "price": 52.279998779296875,
+    "change_pct": 8.195361712121016,
+    "value": 8.195361712121016
   }
 ]
