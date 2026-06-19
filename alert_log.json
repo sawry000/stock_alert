@@ -2,15 +2,6 @@
   {
     "timestamp": "2026-06-16T21:54:09Z",
     "symbol": "DOMO",
-    "alert_id": "DOMO_RSI_OS_4H",
-    "type": "rsi",
-    "price": 2.049999952316284,
-    "change_pct": -34.920636434403676,
-    "value": 25.34
-  },
-  {
-    "timestamp": "2026-06-16T21:54:09Z",
-    "symbol": "DOMO",
     "alert_id": "DOMO_POS_SIZE",
     "type": "position_size",
     "price": 2.049999952316284,
@@ -4498,5 +4489,14 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-19T06:58:50Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.42,
+    "change_pct": 20.999999999999996,
+    "value": 3.78102777523996
   }
 ]
