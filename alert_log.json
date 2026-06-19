@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T19:17:35Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.757099151611328,
-    "change_pct": 1.3772795895227505,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-16T19:18:36Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_3X",
@@ -4498,5 +4489,14 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.9439623812947646
+  },
+  {
+    "timestamp": "2026-06-19T03:18:45Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 113.80000305175781,
+    "change_pct": 10.905372821126413,
+    "value": 10.905372821126413
   }
 ]
