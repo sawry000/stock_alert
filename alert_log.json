@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-17T05:58:02Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 107.41999816894531,
-    "change_pct": 8.209930662783638,
-    "value": 8.209930662783638
-  },
-  {
-    "timestamp": "2026-06-17T05:58:58Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 2.049999952316284,
-    "change_pct": -34.920636434403676,
-    "value": 11.02629702238057
-  },
-  {
-    "timestamp": "2026-06-17T05:58:58Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_POS_SIZE",
-    "type": "position_size",
-    "price": 2.049999952316284,
-    "change_pct": -34.920636434403676,
-    "value": 48
-  },
-  {
-    "timestamp": "2026-06-17T05:58:59Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.049999952316284,
-    "change_pct": -34.920636434403676,
-    "value": 11.02629702238057
-  },
-  {
     "timestamp": "2026-06-17T06:03:06Z",
     "symbol": "DDD",
     "alert_id": "DDD_MTF_BULL",
@@ -4498,5 +4462,41 @@
     "price": 2.42,
     "change_pct": 20.999999999999996,
     "value": 3.78102777523996
+  },
+  {
+    "timestamp": "2026-06-19T18:12:27Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 417.07,
+    "change_pct": 8.924001044659184,
+    "value": 4
+  },
+  {
+    "timestamp": "2026-06-19T18:13:39Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.85,
+    "change_pct": 12.64822134387353,
+    "value": 12.64822134387353
+  },
+  {
+    "timestamp": "2026-06-19T18:13:45Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 38.49,
+    "change_pct": 11.24277456647399,
+    "value": 11.24277456647399
+  },
+  {
+    "timestamp": "2026-06-19T18:14:02Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_PCT_UP_5",
+    "type": "percent_change",
+    "price": 43.4,
+    "change_pct": 6.79133858267716,
+    "value": 6.79133858267716
   }
 ]
