@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T20:32:45Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 85.7699966430664,
-    "change_pct": -4.31727282121106,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-16T20:32:55Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 14.800000190734863,
-    "change_pct": -1.407604999334748,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-16T20:33:01Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 85.9800033569336,
-    "change_pct": -0.3245961547257261,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-16T20:33:06Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 13.5,
-    "change_pct": -8.598510494245089,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-16T20:33:12Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_MTF_BULL",
@@ -4498,5 +4462,41 @@
     "price": 113.80000305175781,
     "change_pct": 10.905372821126413,
     "value": 10.905372821126413
+  },
+  {
+    "timestamp": "2026-06-19T05:48:44Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.8499999046325684,
+    "change_pct": 12.648217574409825,
+    "value": 12.648217574409825
+  },
+  {
+    "timestamp": "2026-06-19T05:48:52Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 38.4900016784668,
+    "change_pct": 11.242779417534091,
+    "value": 11.242779417534091
+  },
+  {
+    "timestamp": "2026-06-19T05:49:15Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_PCT_UP_5",
+    "type": "percent_change",
+    "price": 43.400001525878906,
+    "change_pct": 6.791342337300457,
+    "value": 6.791342337300457
+  },
+  {
+    "timestamp": "2026-06-19T05:49:24Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.7785417264270436
   }
 ]
