@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-17T04:08:38Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 35.650001525878906,
-    "change_pct": 18.793740506094316,
-    "value": 18.793740506094316
-  },
-  {
     "timestamp": "2026-06-17T04:08:39Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_ALARM",
@@ -4497,6 +4488,15 @@
     "type": "candle_pattern",
     "price": 7.71999979019165,
     "change_pct": 5.177108858196874,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-19T15:03:01Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 14.35,
+    "change_pct": -2.1813224267212017,
     "value": 1
   }
 ]
