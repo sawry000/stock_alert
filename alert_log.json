@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-16T19:18:37Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 36.47999954223633,
-    "change_pct": 21.55947864790512,
-    "value": 3.3177507628005136
-  },
-  {
-    "timestamp": "2026-06-16T19:24:12Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 2.015000104904175,
-    "change_pct": -36.03174270145477,
-    "value": 12.115512786520476
-  },
-  {
     "timestamp": "2026-06-16T19:28:23Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.9439623812947646
+  },
+  {
+    "timestamp": "2026-06-19T03:43:47Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 38.4900016784668,
+    "change_pct": 11.242779417534091,
+    "value": 11.242779417534091
+  },
+  {
+    "timestamp": "2026-06-19T03:44:10Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_PCT_UP_5",
+    "type": "percent_change",
+    "price": 43.400001525878906,
+    "change_pct": 6.791342337300457,
+    "value": 6.791342337300457
   }
 ]
