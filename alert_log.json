@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-17T01:48:55Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_RSI_OS_1D",
-    "type": "rsi",
-    "price": 2.049999952316284,
-    "change_pct": -34.920636434403676,
-    "value": 28.26
-  },
-  {
     "timestamp": "2026-06-17T01:53:04Z",
     "symbol": "INOD",
     "alert_id": "INOD_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.7785417264270436
+  },
+  {
+    "timestamp": "2026-06-19T13:47:50Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 93.28,
+    "change_pct": 4.410118647862097,
+    "value": 1
   }
 ]
