@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T13:54:19Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 101.03500366210938,
-    "change_pct": 2.907927950814186,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-18T13:54:22Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-20T02:03:37Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_BT_VOL",
+    "type": "backtest_check",
+    "price": 331.3699951171875,
+    "change_pct": 1.0151186188231556,
+    "value": 87.5
   }
 ]
