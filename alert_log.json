@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T17:58:16Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 113.4000015258789,
-    "change_pct": -1.1333901256504766,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-18T17:58:26Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.5350000858306885,
-    "change_pct": 2.1676325384592054,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-18T17:58:32Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-20T06:13:47Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-20T06:14:07Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_PCT_DROP",
+    "type": "percent_change",
+    "price": 8.989999771118164,
+    "change_pct": -9.191921503856932,
+    "value": -9.191921503856932
   }
 ]
