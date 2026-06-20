@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T13:53:01Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_CP_BULL",
-    "type": "candle_pattern",
-    "price": 15.274999618530273,
-    "change_pct": 2.4480189036235633,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-18T13:53:04Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-20T00:18:27Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 7.849999904632568,
+    "change_pct": 1.9480507095138724,
+    "value": 2
   }
 ]
