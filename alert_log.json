@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T19:23:54Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_UP_5",
-    "type": "percent_change",
-    "price": 42.83409881591797,
-    "change_pct": 5.3988651966485435,
-    "value": 5.3988651966485435
-  },
-  {
     "timestamp": "2026-06-18T19:34:02Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 16.170000076293945,
     "change_pct": 6.172029391293138,
     "value": 6.172029391293138
+  },
+  {
+    "timestamp": "2026-06-20T06:44:32Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.7778467332044903
   }
 ]
