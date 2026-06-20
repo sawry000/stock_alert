@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T17:57:45Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 98.41999816894531,
-    "change_pct": 7.4454128481935795,
-    "value": 7.4454128481935795
-  },
-  {
     "timestamp": "2026-06-18T17:57:47Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4492,6 +4483,15 @@
   },
   {
     "timestamp": "2026-06-20T05:08:52Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-20T05:38:57Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
     "type": "volume_spike",
