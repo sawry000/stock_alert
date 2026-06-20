@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T14:58:55Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_CP_BULL",
-    "type": "candle_pattern",
-    "price": 213.4600067138672,
-    "change_pct": -0.13566937362938597,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-18T14:59:16Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 16.170000076293945,
     "change_pct": 6.172029391293138,
     "value": 6.172029391293138
+  },
+  {
+    "timestamp": "2026-06-20T02:52:20Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 417.07000732421875,
+    "change_pct": 8.924002957487275,
+    "value": 2
   }
 ]
