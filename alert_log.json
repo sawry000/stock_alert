@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T13:53:54Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_POS_SIZE",
-    "type": "position_size",
-    "price": 12.411999702453613,
-    "change_pct": -4.669741148589757,
-    "value": 8
-  },
-  {
     "timestamp": "2026-06-18T13:54:00Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-20T01:33:31Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_PCT_UP_5",
+    "type": "percent_change",
+    "price": 105.1500015258789,
+    "change_pct": 7.099207095008045,
+    "value": 7.099207095008045
   }
 ]
