@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T15:44:24Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_CP_BULL",
-    "type": "candle_pattern",
-    "price": 17.34000015258789,
-    "change_pct": -1.309048647763857,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-18T15:44:25Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 105.15,
     "change_pct": 7.099205540843348,
     "value": 7.099205540843348
+  },
+  {
+    "timestamp": "2026-06-20T03:48:32Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 113.8,
+    "change_pct": 10.905369846993468,
+    "value": 10.905369846993468
   }
 ]
