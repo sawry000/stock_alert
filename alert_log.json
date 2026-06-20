@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T15:23:30Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 37.68000030517578,
-    "change_pct": 8.901734986057166,
-    "value": 8.901734986057166
-  },
-  {
     "timestamp": "2026-06-18T15:44:24Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
     "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-20T03:38:42Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_PCT_UP_5",
+    "type": "percent_change",
+    "price": 105.15,
+    "change_pct": 7.099205540843348,
+    "value": 7.099205540843348
   }
 ]
