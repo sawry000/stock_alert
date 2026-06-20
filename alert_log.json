@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-18T15:44:25Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_POS_SIZE",
-    "type": "position_size",
-    "price": 17.34000015258789,
-    "change_pct": -1.309048647763857,
-    "value": 5
-  },
-  {
     "timestamp": "2026-06-18T15:57:39Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4498,5 +4489,14 @@
     "price": 113.8,
     "change_pct": 10.905369846993468,
     "value": 10.905369846993468
+  },
+  {
+    "timestamp": "2026-06-20T03:59:18Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.7778467332044903
   }
 ]
