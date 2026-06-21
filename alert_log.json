@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T00:03:52Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 7.849999904632568,
-    "change_pct": 1.9480507095138724,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-19T00:04:29Z",
     "symbol": "AMPX",
     "alert_id": "AMPX_PCT_UP_5",
@@ -4492,6 +4483,15 @@
   },
   {
     "timestamp": "2026-06-21T03:28:50Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-21T04:03:48Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
     "type": "volume_spike",
