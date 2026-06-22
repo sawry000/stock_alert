@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T10:14:20Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 38.4900016784668,
-    "change_pct": 11.242779417534091,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-19T10:14:28Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4492,6 +4483,15 @@
   },
   {
     "timestamp": "2026-06-22T05:24:02Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-22T05:58:51Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
     "type": "volume_spike",
