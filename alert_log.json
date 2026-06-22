@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T10:14:38Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 113.80000305175781,
-    "change_pct": 10.905372821126413,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-19T10:14:58Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 417.07000732421875,
     "change_pct": 8.924002957487275,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-22T06:12:24Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_PCT_UP_5",
+    "type": "percent_change",
+    "price": 52.279998779296875,
+    "change_pct": 8.195361712121016,
+    "value": 8.195361712121016
   }
 ]
