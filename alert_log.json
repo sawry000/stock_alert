@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T20:28:14Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 35.470001220703125,
-    "change_pct": 10.155283294109074,
-    "value": 10.155283294109074
-  },
-  {
-    "timestamp": "2026-06-19T20:29:03Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 16.170000076293945,
-    "change_pct": 6.172029391293138,
-    "value": 6.172029391293138
-  },
-  {
     "timestamp": "2026-06-19T20:43:55Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 2.740000009536743,
     "change_pct": -3.8596487881844532,
     "value": 36
+  },
+  {
+    "timestamp": "2026-06-22T17:08:30Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 4.699999809265137,
+    "change_pct": -7.662086261981595,
+    "value": 31.73
+  },
+  {
+    "timestamp": "2026-06-22T17:08:31Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_POS_SIZE",
+    "type": "position_size",
+    "price": 4.699999809265137,
+    "change_pct": -7.662086261981595,
+    "value": 21
   }
 ]
