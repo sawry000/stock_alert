@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T18:42:34Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 28.100000381469727,
-    "change_pct": 1.0791380628407403,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-19T18:57:25Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 16.8799991607666,
     "change_pct": -5.115237994566598,
     "value": -5.115237994566598
+  },
+  {
+    "timestamp": "2026-06-22T14:53:05Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_PCT_DROP",
+    "type": "percent_change",
+    "price": 3.360100030899048,
+    "change_pct": -5.615167671375062,
+    "value": -5.615167671375062
   }
 ]
