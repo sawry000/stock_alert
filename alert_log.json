@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T18:39:02Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 2.42,
-    "change_pct": 20.999999999999996,
-    "value": 3.78102777523996
-  },
-  {
-    "timestamp": "2026-06-19T18:39:03Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.42,
-    "change_pct": 20.999999999999996,
-    "value": 3.78102777523996
-  },
-  {
     "timestamp": "2026-06-19T18:42:34Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4498,5 +4480,23 @@
     "price": 217.55999755859375,
     "change_pct": 1.2660573257278656,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-22T14:48:13Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.609999895095825,
+    "change_pct": -5.564805879737124,
+    "value": -5.564805879737124
+  },
+  {
+    "timestamp": "2026-06-22T14:49:21Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_PCT_DROP",
+    "type": "percent_change",
+    "price": 16.8799991607666,
+    "change_pct": -5.115237994566598,
+    "value": -5.115237994566598
   }
 ]
