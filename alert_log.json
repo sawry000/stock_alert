@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T18:18:38Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.569999933242798,
-    "change_pct": 3.179188822046182,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-19T18:18:49Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 15.989999771118164,
     "change_pct": -2.212003821509916,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-22T14:14:18Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.25,
+    "change_pct": -5.06329113924051,
+    "value": -5.06329113924051
   }
 ]
