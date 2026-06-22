@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-20T01:48:55Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 3.7778467332044903
-  },
-  {
     "timestamp": "2026-06-20T01:58:43Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 25.530000686645508,
     "change_pct": -6.346292418761899,
     "value": -6.346292418761899
+  },
+  {
+    "timestamp": "2026-06-22T22:28:15Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_PCT_DROP",
+    "type": "percent_change",
+    "price": 55.41999816894531,
+    "change_pct": -5.2325612706133455,
+    "value": -5.2325612706133455
   }
 ]
