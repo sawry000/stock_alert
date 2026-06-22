@@ -344,13 +344,13 @@
   },
   "LNAI": {
     "LNAI_POS_SIZE": {
-      "last_fired": "2026-06-22T04:07:53Z"
+      "last_fired": "2026-06-22T13:42:49Z"
     },
     "LNAI_CP_BULL": {
       "last_fired": "2026-05-29T13:37:37Z"
     },
     "LNAI_PCT_UP_5": {
-      "last_fired": "2026-06-17T06:22:50Z"
+      "last_fired": "2026-06-22T13:42:48Z"
     },
     "LNAI_MTF_BULL": {
       "last_fired": "2026-06-22T12:17:50Z"
@@ -361,12 +361,12 @@
     "LNAI_PCT_DROP": {
       "last_fired": "2026-06-22T13:32:57Z"
     },
-    "open_position": false,
+    "open_position": true,
     "LNAI_MA_DEATH": {
       "last_fired": "2026-06-10T13:32:54Z"
     },
-    "open_entry": 3.7799999713897705,
-    "open_time": "2026-06-22T04:07:53Z",
+    "open_entry": 3.869999885559082,
+    "open_time": "2026-06-22T13:42:49Z",
     "LNAI_NEWS_POS": {
       "last_fired": "2026-06-17T10:47:50Z",
       "seen_news": [
@@ -945,13 +945,16 @@
       ]
     },
     "NLST_PCT_DROP": {
-      "last_fired": "2026-06-17T09:43:33Z"
+      "last_fired": "2026-06-22T13:43:31Z"
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 2.75,
     "open_time": "2026-06-18T13:54:02Z",
     "NLST_MA_DEATH": {
       "last_fired": "2026-06-11T13:54:17Z"
+    },
+    "NLST_SL_BREAK": {
+      "last_fired": "2026-06-22T13:43:31Z"
     }
   },
   "MRAM": {
@@ -1175,7 +1178,7 @@
       "last_fired": "2026-06-08T15:10:15Z"
     },
     "BRCB_PCT_DROP": {
-      "last_fired": "2026-06-05T19:09:16Z"
+      "last_fired": "2026-06-22T13:44:21Z"
     },
     "BRCB_RSI_OS_1D": {
       "last_fired": "2026-06-10T13:04:25Z"
@@ -1183,7 +1186,7 @@
     "BRCB_RSI_OS_4H": {
       "last_fired": "2026-06-10T12:44:33Z"
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 6.315000057220459,
     "open_time": "2026-06-08T15:10:15Z",
     "BRCB_CP_BULL": {
