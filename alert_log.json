@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T18:57:25Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_PCT_UP_5",
-    "type": "percent_change",
-    "price": 52.279998779296875,
-    "change_pct": 8.195361712121016,
-    "value": 8.195361712121016
-  },
-  {
     "timestamp": "2026-06-19T19:13:57Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 3.360100030899048,
     "change_pct": -5.615167671375062,
     "value": -5.615167671375062
+  },
+  {
+    "timestamp": "2026-06-22T15:03:01Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 2.630000114440918,
+    "change_pct": -4.841156580037696,
+    "value": 1
   }
 ]
