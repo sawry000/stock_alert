@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-20T01:47:25Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 417.07000732421875,
-    "change_pct": 8.924002957487275,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-20T01:48:55Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 52.40999984741211,
     "change_pct": -0.07626339864231356,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-22T22:18:26Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_PCT_DROP",
+    "type": "percent_change",
+    "price": 25.530000686645508,
+    "change_pct": -6.346292418761899,
+    "value": -6.346292418761899
   }
 ]
