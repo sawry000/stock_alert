@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T14:07:35Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_POS_SIZE",
-    "type": "position_size",
-    "price": 417.07000732421875,
-    "change_pct": 8.924002957487275,
-    "value": 0.2397679
-  },
-  {
     "timestamp": "2026-06-19T14:08:42Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4492,6 +4483,15 @@
   },
   {
     "timestamp": "2026-06-22T08:39:03Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 2.1097078605040167,
+    "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-22T09:13:57Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
     "type": "volume_spike",
