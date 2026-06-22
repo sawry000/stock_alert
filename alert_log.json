@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T21:28:52Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 3.7778467332044903
-  },
-  {
-    "timestamp": "2026-06-19T21:34:05Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 113.80000305175781,
-    "change_pct": 10.905372821126413,
-    "value": 10.905372821126413
-  },
-  {
-    "timestamp": "2026-06-19T21:44:03Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 3.7778467332044903
-  },
-  {
-    "timestamp": "2026-06-19T21:58:56Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 3.7778467332044903
-  },
-  {
     "timestamp": "2026-06-19T22:02:46Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_DROP",
@@ -4498,5 +4462,41 @@
     "price": 45.09619903564453,
     "change_pct": 15.690608095547805,
     "value": 15.690608095547805
+  },
+  {
+    "timestamp": "2026-06-22T17:57:36Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 172.19000244140625,
+    "change_pct": 6.0936552319200485,
+    "value": 6.0936552319200485
+  },
+  {
+    "timestamp": "2026-06-22T17:57:39Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_POS_SIZE",
+    "type": "position_size",
+    "price": 172.19000244140625,
+    "change_pct": 6.0936552319200485,
+    "value": 0.5807538
+  },
+  {
+    "timestamp": "2026-06-22T17:59:21Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_CP_BULL",
+    "type": "candle_pattern",
+    "price": 8.845000267028809,
+    "change_pct": -3.858692749686856,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-22T17:59:22Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_POS_SIZE",
+    "type": "position_size",
+    "price": 8.845000267028809,
+    "change_pct": -3.858692749686856,
+    "value": 11
   }
 ]
