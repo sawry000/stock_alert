@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T14:17:59Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_POS_SIZE",
-    "type": "position_size",
-    "price": 3.78,
-    "change_pct": -7.125307125307137,
-    "value": 26
-  },
-  {
     "timestamp": "2026-06-19T14:18:03Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MTF_BULL",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-22T11:29:09Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 2.1097078605040167,
+    "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-22T11:59:04Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
     "type": "volume_spike",
     "price": 2.4200000762939453,
     "change_pct": 2.1097078605040167,
