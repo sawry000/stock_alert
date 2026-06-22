@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T15:29:02Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 2.42,
-    "change_pct": 20.999999999999996,
-    "value": 3.78102777523996
-  },
-  {
     "timestamp": "2026-06-19T15:54:03Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 2.4200000762939453,
     "change_pct": 2.1097078605040167,
     "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-22T12:53:27Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 38.4900016784668,
+    "change_pct": -1.2570505939794767,
+    "value": 1
   }
 ]
