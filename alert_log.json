@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T19:17:32Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 417.07000732421875,
-    "change_pct": 8.924002957487275,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-19T19:19:07Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 4.59499979019165,
     "change_pct": 27.610525166397753,
     "value": 27.610525166397753
+  },
+  {
+    "timestamp": "2026-06-22T15:53:27Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 43.900001525878906,
+    "change_pct": 12.621861277267598,
+    "value": 12.621861277267598
   }
 ]
