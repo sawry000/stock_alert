@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T20:19:26Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 43.400001525878906,
-    "change_pct": 6.791342337300457,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-19T20:19:35Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 3.7778467332044903
-  },
-  {
     "timestamp": "2026-06-19T20:22:30Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_NEWS_ANY",
@@ -4498,5 +4480,23 @@
     "price": 28.639999389648438,
     "change_pct": 2.027364244282997,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-22T16:48:50Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 100.4749984741211,
+    "change_pct": -4.391475426661823,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-22T16:48:50Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_POS_SIZE",
+    "type": "position_size",
+    "price": 100.4749984741211,
+    "change_pct": -4.391475426661823,
+    "value": 0.9952725
   }
 ]
