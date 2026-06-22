@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T08:07:23Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_POS_SIZE",
-    "type": "position_size",
-    "price": 389.57000732421875,
-    "change_pct": 1.2565794745269798,
-    "value": 0.2566933
-  },
-  {
     "timestamp": "2026-06-19T08:07:28Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_ALIGN",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-22T02:44:22Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 21.000003814697266,
+    "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-22T03:13:43Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
     "type": "volume_spike",
     "price": 2.4200000762939453,
     "change_pct": 21.000003814697266,
