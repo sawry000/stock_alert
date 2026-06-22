@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T14:17:54Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 15.08,
-    "change_pct": 1.1401743796109987,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-19T14:17:59Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_MTF_BULL",
@@ -4492,6 +4483,15 @@
   },
   {
     "timestamp": "2026-06-22T10:53:51Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.4200000762939453,
+    "change_pct": 2.1097078605040167,
+    "value": 3.7778467332044903
+  },
+  {
+    "timestamp": "2026-06-22T11:24:24Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
     "type": "volume_spike",
