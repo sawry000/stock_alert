@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T20:54:02Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 3.7778467332044903
-  },
-  {
-    "timestamp": "2026-06-19T20:57:25Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_PCT_UP_5",
-    "type": "percent_change",
-    "price": 52.279998779296875,
-    "change_pct": 8.195361712121016,
-    "value": 8.195361712121016
-  },
-  {
     "timestamp": "2026-06-19T21:23:36Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 33.470001220703125,
     "change_pct": -5.048564463985055,
     "value": -5.048564463985055
+  },
+  {
+    "timestamp": "2026-06-22T17:37:31Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 425.44000244140625,
+    "change_pct": 1.3434974848514147,
+    "value": 70.87
+  },
+  {
+    "timestamp": "2026-06-22T17:38:21Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.025000095367432,
+    "change_pct": 2.6785738614140744,
+    "value": 3
   }
 ]
