@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-19T21:27:22Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 417.07000732421875,
-    "change_pct": 8.924002957487275,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-19T21:28:52Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 4.480000019073486,
     "change_pct": 24.416796797197467,
     "value": 24.416796797197467
+  },
+  {
+    "timestamp": "2026-06-22T17:53:38Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 45.09619903564453,
+    "change_pct": 15.690608095547805,
+    "value": 15.690608095547805
   }
 ]
