@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-21T06:12:33Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_UP_5",
-    "type": "percent_change",
-    "price": 98.61000061035156,
-    "change_pct": 7.652839094270271,
-    "value": 7.652839094270271
-  },
-  {
-    "timestamp": "2026-06-21T06:13:07Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 35.470001220703125,
-    "change_pct": 10.155283294109074,
-    "value": 10.155283294109074
-  },
-  {
     "timestamp": "2026-06-21T06:13:22Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 100.72000122070312,
     "change_pct": 0.720001220703125,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-23T13:03:55Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_3X",
+    "type": "volume_spike",
+    "price": 44.77000045776367,
+    "change_pct": -2.6758162171529896,
+    "value": 3.4176088833069698
+  },
+  {
+    "timestamp": "2026-06-23T13:03:55Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 44.77000045776367,
+    "change_pct": -2.6758162171529896,
+    "value": 3.4176088833069698
   }
 ]
