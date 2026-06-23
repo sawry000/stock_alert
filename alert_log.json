@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-21T04:08:28Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.569999933242798,
-    "change_pct": 3.179188822046182,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-21T04:08:34Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 44.77000045776367,
     "change_pct": -2.6758162171529896,
     "value": 3.4176088833069698
+  },
+  {
+    "timestamp": "2026-06-23T11:38:00Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 4.679999828338623,
+    "change_pct": -0.42553556726334324,
+    "value": 30.66
   }
 ]
