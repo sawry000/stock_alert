@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T00:02:59Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.7799999713897705,
-    "change_pct": -7.125307828261174,
-    "value": -7.125307828261174
-  },
-  {
-    "timestamp": "2026-06-22T00:03:03Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 93.27999877929688,
-    "change_pct": 4.41011728150534,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-22T00:03:13Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 115.30000305175781,
-    "change_pct": 0.5231064095534522,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-22T00:03:20Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_DROP",
-    "type": "percent_change",
-    "price": 95.5,
-    "change_pct": -8.181905586001351,
-    "value": -8.181905586001351
-  },
-  {
-    "timestamp": "2026-06-22T00:03:24Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.569999933242798,
-    "change_pct": 3.179188822046182,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-22T00:03:30Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_UP_5",
@@ -4498,5 +4453,50 @@
     "price": 22.045000076293945,
     "change_pct": -9.540418234329321,
     "value": -9.540418234329321
+  },
+  {
+    "timestamp": "2026-06-23T13:53:14Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.7249999046325684,
+    "change_pct": 8.134916850498744,
+    "value": 8.134916850498744
+  },
+  {
+    "timestamp": "2026-06-23T13:53:17Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_POS_SIZE",
+    "type": "position_size",
+    "price": 2.7249999046325684,
+    "change_pct": 8.134916850498744,
+    "value": 36
+  },
+  {
+    "timestamp": "2026-06-23T13:53:47Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 6.070000171661377,
+    "change_pct": -2.0967714248165037,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-23T13:53:48Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_POS_SIZE",
+    "type": "position_size",
+    "price": 6.070000171661377,
+    "change_pct": -2.0967714248165037,
+    "value": 16
+  },
+  {
+    "timestamp": "2026-06-23T13:53:54Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.559999942779541,
+    "change_pct": -6.909092989834872,
+    "value": -6.909092989834872
   }
 ]

@@ -576,12 +576,14 @@
       "last_fired": "2026-06-02T06:17:52Z"
     },
     "TGEN_CP_BULL": {
-      "last_fired": "2026-06-04T13:48:12Z"
+      "last_fired": "2026-06-23T13:53:47Z"
     },
     "TGEN_POS_SIZE": {
-      "last_fired": "2026-06-05T06:53:29Z"
+      "last_fired": "2026-06-23T13:53:48Z"
     },
-    "open_position": false
+    "open_position": true,
+    "open_entry": 6.070000171661377,
+    "open_time": "2026-06-23T13:53:48Z"
   },
   "WGS": {
     "WGS_BREAK_ABOVE": {
@@ -840,18 +842,23 @@
   },
   "TYGO": {
     "TYGO_POS_SIZE": {
-      "last_fired": "2026-06-05T06:53:03Z"
+      "last_fired": "2026-06-23T13:53:17Z"
     },
     "TYGO_PCT_DROP": {
       "last_fired": "2026-06-23T06:52:49Z"
     },
-    "open_position": false,
+    "open_position": true,
     "TYGO_NEWS_POS": {
       "last_fired": "2026-06-22T15:03:01Z",
       "seen_news": [
         "a32dcf244a42"
       ]
-    }
+    },
+    "TYGO_PCT_UP_5": {
+      "last_fired": "2026-06-23T13:53:14Z"
+    },
+    "open_entry": 2.7249999046325684,
+    "open_time": "2026-06-23T13:53:17Z"
   },
   "INOD": {
     "INOD_PCT_UP_5": {
@@ -954,9 +961,9 @@
       ]
     },
     "NLST_PCT_DROP": {
-      "last_fired": "2026-06-22T13:43:31Z"
+      "last_fired": "2026-06-23T13:53:54Z"
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 2.740000009536743,
     "open_time": "2026-06-22T16:58:24Z",
     "NLST_MA_DEATH": {
