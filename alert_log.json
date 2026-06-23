@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-21T00:03:48Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 12.109999656677246,
-    "change_pct": -6.9892499487154645,
-    "value": -6.9892499487154645
-  },
-  {
-    "timestamp": "2026-06-21T00:03:53Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.8499999046325684,
-    "change_pct": 12.648217574409825,
-    "value": 12.648217574409825
-  },
-  {
     "timestamp": "2026-06-21T00:03:55Z",
     "symbol": "NLST",
     "alert_id": "NLST_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 44.77000045776367,
     "change_pct": 14.853772339055094,
     "value": 3.4176088833069698
+  },
+  {
+    "timestamp": "2026-06-23T06:52:49Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.5199999809265137,
+    "change_pct": -8.821188909236781,
+    "value": -8.821188909236781
+  },
+  {
+    "timestamp": "2026-06-23T06:52:58Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.679999828338623,
+    "change_pct": -8.055013195704849,
+    "value": -8.055013195704849
   }
 ]
