@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-20T07:18:46Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 3.7778467332044903
-  },
-  {
     "timestamp": "2026-06-20T07:32:47Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 2.7699999809265137,
     "change_pct": -2.8070182131047865,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-23T05:28:02Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 4.679999828338623,
+    "change_pct": -8.055013195704849,
+    "value": 30.66
   }
 ]
