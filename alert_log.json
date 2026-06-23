@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T00:04:00Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 38.4900016784668,
-    "change_pct": 11.242779417534091,
-    "value": 11.242779417534091
-  },
-  {
     "timestamp": "2026-06-22T00:04:02Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 6.130000114440918,
     "change_pct": -5.364722278025196,
     "value": -5.364722278025196
+  },
+  {
+    "timestamp": "2026-06-23T14:58:04Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 88.82679748535156,
+    "change_pct": -1.8593614989867744,
+    "value": 1
   }
 ]
