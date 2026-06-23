@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-21T04:09:06Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 38.4900016784668,
-    "change_pct": 11.242779417534091,
-    "value": 11.242779417534091
-  },
-  {
-    "timestamp": "2026-06-21T04:09:09Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 38.4900016784668,
-    "change_pct": 11.242779417534091,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-21T04:09:15Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 105.15,
-    "change_pct": 7.099205540843348,
-    "value": 7.099205540843348
-  },
-  {
-    "timestamp": "2026-06-21T04:09:18Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 105.15,
-    "change_pct": 7.099205540843348,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-21T04:09:22Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_MTF_BULL",
@@ -4498,5 +4462,41 @@
     "price": 4.150000095367432,
     "change_pct": 5.867349371618156,
     "value": 5.867349371618156
+  },
+  {
+    "timestamp": "2026-06-23T12:17:31Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 425.4800109863281,
+    "change_pct": 0.34905919488870873,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-23T12:17:35Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 439.6600036621094,
+    "change_pct": 0.21885203577875473,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-23T12:17:35Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_POS_SIZE",
+    "type": "position_size",
+    "price": 439.6600036621094,
+    "change_pct": 0.21885203577875473,
+    "value": 0.2274485
+  },
+  {
+    "timestamp": "2026-06-23T12:18:55Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_BT_VOL",
+    "type": "backtest_check",
+    "price": 365.5299987792969,
+    "change_pct": -0.31055315621516816,
+    "value": 87.5
   }
 ]
