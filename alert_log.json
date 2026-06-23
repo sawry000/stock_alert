@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T04:14:02Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 16.170000076293945,
-    "change_pct": 6.172029391293138,
-    "value": 6.172029391293138
-  },
-  {
     "timestamp": "2026-06-22T04:23:40Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4497,6 +4488,15 @@
     "type": "mtf_alignment",
     "price": 104.27999877929688,
     "change_pct": 4.279998779296875,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-23T21:22:29Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 28.690000534057617,
+    "change_pct": 0.5255800072095937,
     "value": 3
   }
 ]
