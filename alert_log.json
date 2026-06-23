@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-21T04:08:55Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.85,
-    "change_pct": 12.64822134387353,
-    "value": 12.64822134387353
-  },
-  {
     "timestamp": "2026-06-21T04:08:57Z",
     "symbol": "NLST",
     "alert_id": "NLST_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 44.77000045776367,
     "change_pct": -2.6758162171529896,
     "value": 3.4176088833069698
+  },
+  {
+    "timestamp": "2026-06-23T12:07:33Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 99.61000061035156,
+    "change_pct": 0.1709579750116299,
+    "value": 1
   }
 ]
