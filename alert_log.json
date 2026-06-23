@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-20T07:04:16Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_CP_BULL",
-    "type": "candle_pattern",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-20T07:08:52Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_CP_BULL",
-    "type": "candle_pattern",
-    "price": 7.71999979019165,
-    "change_pct": 5.177108858196874,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-20T07:13:47Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 100.72000122070312,
     "change_pct": -4.158339308494508,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-23T05:03:21Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_3X",
+    "type": "volume_spike",
+    "price": 44.77000045776367,
+    "change_pct": 14.853772339055094,
+    "value": 3.4176088833069698
+  },
+  {
+    "timestamp": "2026-06-23T05:03:22Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 44.77000045776367,
+    "change_pct": 14.853772339055094,
+    "value": 3.4176088833069698
   }
 ]
