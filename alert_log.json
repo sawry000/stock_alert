@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-21T04:07:55Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 15.079999923706055,
-    "change_pct": 1.1401738679145175,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-21T04:07:59Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.7799999713897705,
-    "change_pct": -7.125307828261174,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-21T04:08:00Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_POS_SIZE",
@@ -4492,6 +4474,24 @@
   },
   {
     "timestamp": "2026-06-23T10:23:42Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 44.77000045776367,
+    "change_pct": -2.6758162171529896,
+    "value": 3.4176088833069698
+  },
+  {
+    "timestamp": "2026-06-23T10:58:30Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_VOL_3X",
+    "type": "volume_spike",
+    "price": 44.77000045776367,
+    "change_pct": -2.6758162171529896,
+    "value": 3.4176088833069698
+  },
+  {
+    "timestamp": "2026-06-23T10:58:31Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_ALARM",
     "type": "volume_spike",
