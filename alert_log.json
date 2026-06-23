@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T00:04:17Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 113.80000305175781,
-    "change_pct": 10.905372821126413,
-    "value": 10.905372821126413
-  },
-  {
     "timestamp": "2026-06-22T00:04:19Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 4.309999942779541,
     "change_pct": 6.055757838026052,
     "value": 6.055757838026052
+  },
+  {
+    "timestamp": "2026-06-23T15:57:59Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.694999933242798,
+    "change_pct": 6.944441795349119,
+    "value": 6.944441795349119
   }
 ]
