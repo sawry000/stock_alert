@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T06:19:07Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 16.170000076293945,
-    "change_pct": 6.172029391293138,
-    "value": 6.172029391293138
-  },
-  {
-    "timestamp": "2026-06-22T06:28:52Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 3.7778467332044903
-  },
-  {
     "timestamp": "2026-06-22T06:59:17Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4480,23 @@
     "price": 381.2200012207031,
     "change_pct": -10.089622353607753,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-23T22:23:15Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_PCT_DROP",
+    "type": "percent_change",
+    "price": 22.549999237060547,
+    "change_pct": -11.568630442899815,
+    "value": -11.568630442899815
+  },
+  {
+    "timestamp": "2026-06-23T22:23:25Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_PCT_UP_5",
+    "type": "percent_change",
+    "price": 18.530000686645508,
+    "change_pct": 7.732562131659934,
+    "value": 7.732562131659934
   }
 ]
