@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T00:02:54Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 15.079999923706055,
-    "change_pct": 1.1401738679145175,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-22T00:02:58Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.7799999713897705,
-    "change_pct": -7.125307828261174,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-22T00:02:59Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 7.862199783325195,
     "change_pct": -6.402383531842918,
     "value": -6.402383531842918
+  },
+  {
+    "timestamp": "2026-06-23T13:48:11Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.300000190734863,
+    "change_pct": 5.809694892464455,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-23T13:49:08Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_PCT_DROP",
+    "type": "percent_change",
+    "price": 22.045000076293945,
+    "change_pct": -9.540418234329321,
+    "value": -9.540418234329321
   }
 ]
