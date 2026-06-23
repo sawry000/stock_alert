@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T03:53:39Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 3.7778467332044903
-  },
-  {
-    "timestamp": "2026-06-22T04:07:31Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 21.90999984741211,
-    "change_pct": 3.115101338058972,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-22T04:07:36Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 2.6649999618530273,
     "change_pct": 5.7539667401994965,
     "value": 5.7539667401994965
+  },
+  {
+    "timestamp": "2026-06-23T18:13:43Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_DROP",
+    "type": "percent_change",
+    "price": 7.34499979019165,
+    "change_pct": -5.469758169991625,
+    "value": -5.469758169991625
+  },
+  {
+    "timestamp": "2026-06-23T18:13:53Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_PCT_UP_5",
+    "type": "percent_change",
+    "price": 18.58009910583496,
+    "change_pct": 8.023832010668382,
+    "value": 8.023832010668382
   }
 ]
