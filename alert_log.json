@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T07:33:46Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 21.000003814697266,
-    "value": 3.7778467332044903
-  },
-  {
     "timestamp": "2026-06-22T08:08:14Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 4.300000190734863,
     "change_pct": 9.693882416705698,
     "value": 9.693882416705698
+  },
+  {
+    "timestamp": "2026-06-23T22:33:25Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.550000190734863,
+    "change_pct": 5.08083581373818,
+    "value": 5.08083581373818
   }
 ]
