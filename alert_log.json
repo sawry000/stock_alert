@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T02:09:50Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 113.80000305175781,
-    "change_pct": 10.905372821126413,
-    "value": 10.905372821126413
-  },
-  {
-    "timestamp": "2026-06-22T02:09:58Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_UP_5",
-    "type": "percent_change",
-    "price": 43.400001525878906,
-    "change_pct": 6.791342337300457,
-    "value": 6.791342337300457
-  },
-  {
     "timestamp": "2026-06-22T02:10:05Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 105.2699966430664,
     "change_pct": 5.269996643066406,
     "value": 5.269996643066406
+  },
+  {
+    "timestamp": "2026-06-23T17:19:29Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 5.070000171661377,
+    "change_pct": -0.9765591472387335,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-23T17:19:30Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_POS_SIZE",
+    "type": "position_size",
+    "price": 5.070000171661377,
+    "change_pct": -0.9765591472387335,
+    "value": 19
   }
 ]

@@ -1211,15 +1211,17 @@
   },
   "BWEN": {
     "BWEN_CP_BULL": {
-      "last_fired": "2026-06-03T13:44:05Z"
+      "last_fired": "2026-06-23T17:19:29Z"
     },
     "BWEN_POS_SIZE": {
-      "last_fired": "2026-06-05T06:54:29Z"
+      "last_fired": "2026-06-23T17:19:30Z"
     },
     "BWEN_PCT_DROP": {
       "last_fired": "2026-06-15T18:44:20Z"
     },
-    "open_position": false
+    "open_position": true,
+    "open_entry": 5.070000171661377,
+    "open_time": "2026-06-23T17:19:30Z"
   },
   "VELO": {
     "VELO_POS_SIZE": {
