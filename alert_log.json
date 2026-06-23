@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T04:08:20Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.569999933242798,
-    "change_pct": 3.179188822046182,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-22T04:08:29Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 4.65500020980835,
     "change_pct": 7.505778517513846,
     "value": 7.505778517513846
+  },
+  {
+    "timestamp": "2026-06-23T18:52:29Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_NEWS_ANY",
+    "type": "news_sentiment",
+    "price": 381.5690002441406,
+    "change_pct": -10.007311263174381,
+    "value": 2
   }
 ]
