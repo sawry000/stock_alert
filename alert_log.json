@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T14:18:21Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "price": 25.598100662231445,
-    "change_pct": -6.096475927250757,
-    "value": -6.096475927250757
-  },
-  {
     "timestamp": "2026-06-22T14:18:55Z",
     "symbol": "AMPX",
     "alert_id": "AMPX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 4.440000057220459,
     "change_pct": -2.2026419114436355,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T10:33:25Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 4.440000057220459,
+    "change_pct": -2.2026419114436355,
+    "value": 1
   }
 ]
