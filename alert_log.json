@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T13:42:49Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_POS_SIZE",
-    "type": "position_size",
-    "price": 3.869999885559082,
-    "change_pct": 7.476113240365531,
-    "value": 25
-  },
-  {
-    "timestamp": "2026-06-22T13:43:31Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_SL_BREAK",
-    "type": "support_resistance",
-    "price": 2.56,
-    "change_pct": -10.17543859649123,
-    "value": 2.56
-  },
-  {
     "timestamp": "2026-06-22T13:43:31Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 28.690000534057617,
     "change_pct": 0.5255800072095937,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T07:58:01Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 4.539999961853027,
+    "change_pct": -3.404256130786656,
+    "value": 28.2
+  },
+  {
+    "timestamp": "2026-06-24T07:58:08Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.440000057220459,
+    "change_pct": 9.254658264732367,
+    "value": 9.254658264732367
   }
 ]
