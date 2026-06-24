@@ -1149,7 +1149,7 @@
   },
   "LTRX": {
     "LTRX_POS_SIZE": {
-      "last_fired": "2026-06-18T14:59:17Z"
+      "last_fired": "2026-06-24T16:54:10Z"
     },
     "LTRX_CP_BULL": {
       "last_fired": "2026-06-18T14:59:16Z"
@@ -1157,12 +1157,15 @@
     "LTRX_PCT_DROP": {
       "last_fired": "2026-06-23T05:48:48Z"
     },
-    "open_position": false,
+    "open_position": true,
     "LTRX_MA_DEATH": {
       "last_fired": "2026-06-15T00:04:43Z"
     },
-    "open_entry": 6.5,
-    "open_time": "2026-06-18T14:59:17Z"
+    "open_entry": 5.75,
+    "open_time": "2026-06-24T16:54:10Z",
+    "LTRX_RSI_OS_4H": {
+      "last_fired": "2026-06-24T16:54:09Z"
+    }
   },
   "FPS": {
     "FPS_POS_SIZE": {
