@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T13:58:22Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_POS_SIZE",
-    "type": "position_size",
-    "price": 12.149999618530273,
-    "change_pct": 1.2499968210856118,
-    "value": 8
-  },
-  {
     "timestamp": "2026-06-22T13:59:06Z",
     "symbol": "AMPX",
     "alert_id": "AMPX_NEWS_POS",
@@ -4498,5 +4489,14 @@
     "price": 32.959999084472656,
     "change_pct": -0.1212148955374053,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-24T09:42:36Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 28.690000534057617,
+    "change_pct": -0.4510737888354722,
+    "value": 3
   }
 ]
