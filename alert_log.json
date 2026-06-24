@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T17:59:21Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_CP_BULL",
-    "type": "candle_pattern",
-    "price": 8.845000267028809,
-    "change_pct": -3.858692749686856,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-22T17:59:22Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_POS_SIZE",
-    "type": "position_size",
-    "price": 8.845000267028809,
-    "change_pct": -3.858692749686856,
-    "value": 11
-  },
-  {
     "timestamp": "2026-06-22T18:07:30Z",
     "symbol": "COHR",
     "alert_id": "COHR_MTF_ALIGN",
@@ -4498,5 +4480,23 @@
     "price": 2.7200000286102295,
     "change_pct": 1.4925358528601556,
     "value": 36
+  },
+  {
+    "timestamp": "2026-06-24T13:52:34Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 91.62999725341797,
+    "change_pct": -2.5109083376763763,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-24T13:52:34Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_POS_SIZE",
+    "type": "position_size",
+    "price": 91.62999725341797,
+    "change_pct": -2.5109083376763763,
+    "value": 1
   }
 ]
