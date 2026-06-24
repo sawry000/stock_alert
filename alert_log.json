@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T14:43:20Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.829999923706055,
-    "change_pct": -5.108056508721909,
-    "value": -5.108056508721909
-  },
-  {
     "timestamp": "2026-06-22T14:43:53Z",
     "symbol": "VSEC",
     "alert_id": "VSEC_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 336.1199951171875,
     "change_pct": 1.8545439749053032,
     "value": 87.5
+  },
+  {
+    "timestamp": "2026-06-24T12:37:54Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.0199999809265137,
+    "change_pct": 7.857142175946924,
+    "value": 7.857142175946924
   }
 ]
