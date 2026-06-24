@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T00:12:26Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 425.4800109863281,
-    "change_pct": 7.9898505041441945,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-23T00:12:30Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 439.6600036621094,
-    "change_pct": 4.730825074347156,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-23T00:12:32Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 107.73999786376953,
     "change_pct": 0.7009980968030062,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T21:27:35Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 21.780000686645508,
+    "change_pct": 1.3023287750953851,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T21:27:40Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 89.37999725341797,
+    "change_pct": -4.904780026153874,
+    "value": 2
   }
 ]
