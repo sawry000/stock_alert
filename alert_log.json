@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T21:42:22Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_RSI_OB",
-    "type": "rsi",
-    "price": 439.6600036621094,
-    "change_pct": 4.730825074347156,
-    "value": 72.46
-  },
-  {
     "timestamp": "2026-06-22T21:42:50Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 365.5799865722656,
     "change_pct": -2.8410485629293745,
     "value": 25.04
+  },
+  {
+    "timestamp": "2026-06-24T17:43:13Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.84499979019165,
+    "change_pct": 5.097609331706075,
+    "value": 5.097609331706075
   }
 ]
