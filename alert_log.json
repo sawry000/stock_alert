@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T13:34:10Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 113.8,
-    "change_pct": 10.905369846993468,
-    "value": 10.905369846993468
-  },
-  {
     "timestamp": "2026-06-22T13:34:58Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 20.65999984741211,
     "change_pct": -15.22363624369262,
     "value": -15.22363624369262
+  },
+  {
+    "timestamp": "2026-06-24T06:23:21Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_PCT_DROP",
+    "type": "percent_change",
+    "price": 22.549999237060547,
+    "change_pct": -11.568630442899815,
+    "value": -11.568630442899815
   }
 ]
