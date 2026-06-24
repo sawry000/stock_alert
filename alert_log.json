@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T00:28:51Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-23T00:29:00Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 365.9200134277344,
     "change_pct": -2.7506807803613382,
     "value": 25.26
+  },
+  {
+    "timestamp": "2026-06-24T21:47:54Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.390000104904175,
+    "change_pct": -14.642853396279465,
+    "value": -14.642853396279465
   }
 ]
