@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T22:03:22Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_3X",
-    "type": "volume_spike",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 3.629435623140803
-  },
-  {
     "timestamp": "2026-06-22T22:03:23Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 2.684999942779541,
     "change_pct": 17.7631553850676,
     "value": 37
+  },
+  {
+    "timestamp": "2026-06-24T18:47:59Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "price": 2.4549999237060547,
+    "change_pct": -5.2123581580673815,
+    "value": -5.2123581580673815
   }
 ]
