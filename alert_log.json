@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T10:03:06Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 35.470001220703125,
-    "change_pct": 0.6252587850730904,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-22T10:18:42Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.8499999046325684,
-    "change_pct": 12.648217574409825,
-    "value": 12.648217574409825
-  },
-  {
     "timestamp": "2026-06-22T10:18:56Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 10.279999732971191,
     "change_pct": -6.370966501469179,
     "value": -6.370966501469179
+  },
+  {
+    "timestamp": "2026-06-24T02:32:33Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.0199999809265137,
+    "change_pct": 5.594404927500483,
+    "value": 5.594404927500483
+  },
+  {
+    "timestamp": "2026-06-24T02:32:41Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.300000190734863,
+    "change_pct": 9.693882416705698,
+    "value": 9.693882416705698
   }
 ]
