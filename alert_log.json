@@ -2,15 +2,6 @@
   {
     "timestamp": "2026-06-23T00:38:34Z",
     "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_3X",
-    "type": "volume_spike",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 3.629435623140803
-  },
-  {
-    "timestamp": "2026-06-23T00:38:34Z",
-    "symbol": "WYFI",
     "alert_id": "WYFI_VOL_ALARM",
     "type": "volume_spike",
     "price": 44.77000045776367,
@@ -4498,5 +4489,14 @@
     "price": 2.75,
     "change_pct": 20.61403508771931,
     "value": 3.9044383701042915
+  },
+  {
+    "timestamp": "2026-06-24T22:12:27Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 47.81999969482422,
+    "change_pct": 0.8860753055363294,
+    "value": 1
   }
 ]
