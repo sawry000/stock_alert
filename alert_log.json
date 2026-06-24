@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T18:07:30Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 437.70001220703125,
-    "change_pct": 11.091373656606915,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-22T18:07:35Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 428.44500732421875,
-    "change_pct": 2.059315703720519,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-22T18:07:37Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_POS_SIZE",
-    "type": "position_size",
-    "price": 428.44500732421875,
-    "change_pct": 2.059315703720519,
-    "value": 0.2334022
-  },
-  {
-    "timestamp": "2026-06-22T18:17:40Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 174.60499572753906,
-    "change_pct": 7.581636307787462,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-22T18:32:31Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4498,5 +4462,41 @@
     "price": 91.62999725341797,
     "change_pct": -2.5109083376763763,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-24T13:57:28Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 48.900001525878906,
+    "change_pct": 3.16456018117913,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-24T13:59:02Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_CP_BULL",
+    "type": "candle_pattern",
+    "price": 16.434999465942383,
+    "change_pct": -0.9939791208290277,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-24T13:59:02Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_POS_SIZE",
+    "type": "position_size",
+    "price": 16.434999465942383,
+    "change_pct": -0.9939791208290277,
+    "value": 6
+  },
+  {
+    "timestamp": "2026-06-24T13:59:23Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_PCT_DROP",
+    "type": "percent_change",
+    "price": 19.065000534057617,
+    "change_pct": -7.675542207953422,
+    "value": -7.675542207953422
   }
 ]
