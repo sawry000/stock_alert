@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T13:48:51Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_POS_SIZE",
-    "type": "position_size",
-    "price": 6.260000228881836,
-    "change_pct": -0.6349170018756173,
-    "value": 15
-  },
-  {
     "timestamp": "2026-06-22T13:49:08Z",
     "symbol": "BOBS",
     "alert_id": "BOBS_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 111.7300033569336,
     "change_pct": 2.0365327460580764,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T08:53:17Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.550000190734863,
+    "change_pct": 5.08083581373818,
+    "value": 5.08083581373818
   }
 ]
