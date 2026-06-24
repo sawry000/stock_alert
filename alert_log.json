@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T22:18:26Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "price": 25.530000686645508,
-    "change_pct": -6.346292418761899,
-    "value": -6.346292418761899
-  },
-  {
     "timestamp": "2026-06-22T22:28:15Z",
     "symbol": "WGS",
     "alert_id": "WGS_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 5.605000019073486,
     "change_pct": -7.149719725118669,
     "value": 17
+  },
+  {
+    "timestamp": "2026-06-24T19:02:40Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 142.32000732421875,
+    "change_pct": -4.547278789927059,
+    "value": 1
   }
 ]
