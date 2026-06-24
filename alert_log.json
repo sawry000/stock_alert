@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T18:32:31Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 29.0,
-    "change_pct": 3.3098333149275523,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-22T18:33:19Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.449900150299072,
-    "change_pct": -5.2325549386857375,
-    "value": -5.2325549386857375
-  },
-  {
     "timestamp": "2026-06-22T18:43:34Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_3X",
@@ -4498,5 +4480,23 @@
     "price": 19.065000534057617,
     "change_pct": -7.675542207953422,
     "value": -7.675542207953422
+  },
+  {
+    "timestamp": "2026-06-24T14:02:42Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_DROP",
+    "type": "percent_change",
+    "price": 141.26499938964844,
+    "change_pct": -5.254862917740817,
+    "value": -5.254862917740817
+  },
+  {
+    "timestamp": "2026-06-24T14:03:34Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.369999885559082,
+    "change_pct": -3.744495912795551,
+    "value": 3
   }
 ]
