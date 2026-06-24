@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T10:18:56Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 105.1500015258789,
-    "change_pct": 7.099207095008045,
-    "value": 7.099207095008045
-  },
-  {
     "timestamp": "2026-06-22T10:19:21Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 4.300000190734863,
     "change_pct": 9.693882416705698,
     "value": 9.693882416705698
+  },
+  {
+    "timestamp": "2026-06-24T02:43:16Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.550000190734863,
+    "change_pct": 5.08083581373818,
+    "value": 5.08083581373818
   }
 ]
