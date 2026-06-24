@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T08:18:37Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.8499999046325684,
-    "change_pct": 12.648217574409825,
-    "value": 12.648217574409825
-  },
-  {
-    "timestamp": "2026-06-22T08:18:49Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 105.1500015258789,
-    "change_pct": 7.099207095008045,
-    "value": 7.099207095008045
-  },
-  {
-    "timestamp": "2026-06-22T08:18:54Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 113.80000305175781,
-    "change_pct": 10.905372821126413,
-    "value": 10.905372821126413
-  },
-  {
-    "timestamp": "2026-06-22T08:23:50Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 2.1097078605040167,
-    "value": 3.7778467332044903
-  },
-  {
     "timestamp": "2026-06-22T08:39:03Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4462,41 @@
     "price": 28.690000534057617,
     "change_pct": 0.5255800072095937,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T01:52:58Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 4.539999961853027,
+    "change_pct": -3.404256130786656,
+    "value": 28.2
+  },
+  {
+    "timestamp": "2026-06-24T01:53:06Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.440000057220459,
+    "change_pct": 9.254658264732367,
+    "value": 9.254658264732367
+  },
+  {
+    "timestamp": "2026-06-24T01:53:08Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.440000057220459,
+    "change_pct": 9.254658264732367,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T01:53:49Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_PCT_DROP",
+    "type": "percent_change",
+    "price": 14.119999885559082,
+    "change_pct": -9.030583727561526,
+    "value": -9.030583727561526
   }
 ]
