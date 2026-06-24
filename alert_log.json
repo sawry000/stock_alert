@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T12:18:05Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 115.30000305175781,
-    "change_pct": -0.3722405342762597,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-22T12:18:15Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.569999933242798,
-    "change_pct": 0.28089700120218536,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-22T12:18:23Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 35.470001220703125,
-    "change_pct": 0.6252587850730904,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-22T12:18:41Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.8499999046325684,
-    "change_pct": 12.648217574409825,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-22T12:18:47Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 7.849999904632568,
-    "change_pct": 0.6565100352947685,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-22T12:18:51Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_MTF_BULL",
@@ -4498,5 +4453,50 @@
     "price": 104.27999877929688,
     "change_pct": 4.279998779296875,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T05:12:31Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 397.0199890136719,
+    "change_pct": -9.50077968705444,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-24T05:12:32Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_POS_SIZE",
+    "type": "position_size",
+    "price": 397.0199890136719,
+    "change_pct": -9.50077968705444,
+    "value": 0.2518765
+  },
+  {
+    "timestamp": "2026-06-24T05:12:43Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 21.280000686645508,
+    "change_pct": -2.963973157111226,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-24T05:12:47Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 92.19999694824219,
+    "change_pct": -7.280775393964009,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-24T05:13:30Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 32.959999084472656,
+    "change_pct": -1.0507382633663944,
+    "value": 2
   }
 ]
