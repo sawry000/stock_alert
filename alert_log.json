@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T22:58:02Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.259999990463257,
-    "change_pct": -8.426966560020876,
-    "value": -8.426966560020876
-  },
-  {
     "timestamp": "2026-06-22T23:03:27Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_3X",
@@ -4498,5 +4489,14 @@
     "price": 365.489990234375,
     "change_pct": -2.8649665840021745,
     "value": 25.0
+  },
+  {
+    "timestamp": "2026-06-24T19:59:05Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.740000009536743,
+    "change_pct": 20.17543901476945,
+    "value": 3.8162468320564775
   }
 ]
