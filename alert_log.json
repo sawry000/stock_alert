@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T18:43:34Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_3X",
-    "type": "volume_spike",
-    "price": 46.13999938964844,
-    "change_pct": 18.368392482422887,
-    "value": 3.047524460517101
-  },
-  {
-    "timestamp": "2026-06-22T18:43:35Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 46.13999938964844,
-    "change_pct": 18.368392482422887,
-    "value": 3.047524460517101
-  },
-  {
     "timestamp": "2026-06-22T18:48:36Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 4.369999885559082,
     "change_pct": -3.744495912795551,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T14:17:55Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_DROP",
+    "type": "percent_change",
+    "price": 11.449999809265137,
+    "change_pct": -5.791558189016393,
+    "value": -5.791558189016393
+  },
+  {
+    "timestamp": "2026-06-24T14:18:08Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_DROP",
+    "type": "percent_change",
+    "price": 82.04540252685547,
+    "change_pct": -5.705778040621235,
+    "value": -5.705778040621235
   }
 ]
