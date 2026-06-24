@@ -889,7 +889,10 @@
     },
     "open_position": false,
     "open_entry": 104.44999694824219,
-    "open_time": "2026-06-16T13:33:18Z"
+    "open_time": "2026-06-16T13:33:18Z",
+    "INOD_MA_DEATH": {
+      "last_fired": "2026-06-24T13:33:10Z"
+    }
   },
   "DDD": {
     "DDD_POS_SIZE": {
@@ -1024,9 +1027,9 @@
       "last_fired": "2026-06-23T16:39:22Z"
     },
     "WYFI_PCT_DROP": {
-      "last_fired": "2026-06-23T13:38:30Z"
+      "last_fired": "2026-06-24T13:33:46Z"
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 41.80009841918945,
     "open_time": "2026-06-23T16:39:22Z",
     "WYFI_MA_DEATH": {
@@ -1278,7 +1281,7 @@
   },
   "GLD": {
     "GLD_RSI_OS_4H": {
-      "last_fired": "2026-06-11T18:19:29Z"
+      "last_fired": "2026-06-24T13:34:37Z"
     },
     "GLD_POS_SIZE": {
       "last_fired": "2026-06-11T08:05:27Z"
@@ -1296,7 +1299,7 @@
       ]
     },
     "GLD_RSI_OS_1D": {
-      "last_fired": "2026-06-11T15:55:15Z"
+      "last_fired": "2026-06-24T13:34:37Z"
     },
     "GLD_CP_BULL": {
       "last_fired": "2026-06-12T09:49:03Z"
