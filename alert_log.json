@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T10:28:54Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 2.4200000762939453,
-    "change_pct": 2.1097078605040167,
-    "value": 3.7778467332044903
-  },
-  {
-    "timestamp": "2026-06-22T10:52:48Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 14.350000381469727,
-    "change_pct": 1.0563407145755443,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-22T10:53:51Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4480,23 @@
     "price": 12.220000267028809,
     "change_pct": -5.197825701871155,
     "value": -5.197825701871155
+  },
+  {
+    "timestamp": "2026-06-24T03:53:12Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 4.539999961853027,
+    "change_pct": -3.404256130786656,
+    "value": 28.2
+  },
+  {
+    "timestamp": "2026-06-24T03:53:20Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.440000057220459,
+    "change_pct": 9.254658264732367,
+    "value": 9.254658264732367
   }
 ]
