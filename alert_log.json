@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T21:39:03Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "price": 8.449999809265137,
-    "change_pct": -8.152175986248507,
-    "value": -8.152175986248507
-  },
-  {
     "timestamp": "2026-06-22T21:42:22Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_RSI_OB",
@@ -4498,5 +4489,14 @@
     "price": 5.440000057220459,
     "change_pct": -6.3683294798544,
     "value": -6.3683294798544
+  },
+  {
+    "timestamp": "2026-06-24T17:39:28Z",
+    "symbol": "GLD",
+    "alert_id": "GLD_RSI_OS_4H",
+    "type": "rsi",
+    "price": 365.5799865722656,
+    "change_pct": -2.8410485629293745,
+    "value": 25.04
   }
 ]
