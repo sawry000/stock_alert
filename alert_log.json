@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T19:52:42Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.360000133514404,
-    "change_pct": 21.08420721824051,
-    "value": 21.08420721824051
-  },
-  {
     "timestamp": "2026-06-22T19:57:34Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 4.769999980926514,
     "change_pct": -4.024145252987648,
     "value": 20
+  },
+  {
+    "timestamp": "2026-06-24T14:57:45Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 14.800000190734863,
+    "change_pct": 1.2887490714236976e-06,
+    "value": 2
   }
 ]
