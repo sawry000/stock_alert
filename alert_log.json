@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T21:43:10Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.059999942779541,
-    "change_pct": 3.571427111722987,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-22T21:43:58Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 364.7099914550781,
     "change_pct": -3.0722642105195357,
     "value": -3.0722642105195357
+  },
+  {
+    "timestamp": "2026-06-24T18:04:10Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.699999809265137,
+    "change_pct": -5.000003178914389,
+    "value": -5.000003178914389
   }
 ]
