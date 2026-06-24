@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T14:23:48Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_PCT_DROP",
-    "type": "percent_change",
-    "price": 54.95000076293945,
-    "change_pct": -6.0362504053702875,
-    "value": -6.0362504053702875
-  },
-  {
     "timestamp": "2026-06-22T14:28:45Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 28.690000534057617,
     "change_pct": -0.4510737888354722,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T12:03:07Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 4.539999961853027,
+    "change_pct": -3.404256130786656,
+    "value": 28.2
   }
 ]
