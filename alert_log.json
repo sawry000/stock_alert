@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T13:39:24Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.429999828338623,
-    "change_pct": -5.022159108735251,
-    "value": -5.022159108735251
-  },
-  {
-    "timestamp": "2026-06-22T13:39:36Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_PCT_DROP",
-    "type": "percent_change",
-    "price": 27.173799514770508,
-    "change_pct": -7.446186938792547,
-    "value": -7.446186938792547
-  },
-  {
     "timestamp": "2026-06-22T13:42:48Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 4.300000190734863,
     "change_pct": 9.693882416705698,
     "value": 9.693882416705698
+  },
+  {
+    "timestamp": "2026-06-24T06:53:08Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.550000190734863,
+    "change_pct": 5.08083581373818,
+    "value": 5.08083581373818
+  },
+  {
+    "timestamp": "2026-06-24T06:53:37Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.900000095367432,
+    "change_pct": -8.915475177654471,
+    "value": -8.915475177654471
   }
 ]
