@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T13:44:21Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.300000190734863,
-    "change_pct": -5.440412037113167,
-    "value": -5.440412037113167
-  },
-  {
     "timestamp": "2026-06-22T13:47:54Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 4.440000057220459,
     "change_pct": -2.2026419114436355,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-24T08:37:44Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_UP_5",
+    "type": "percent_change",
+    "price": 3.0199999809265137,
+    "change_pct": 7.857142175946924,
+    "value": 7.857142175946924
   }
 ]
