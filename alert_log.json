@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T22:03:23Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 14.853772339055094
-  },
-  {
-    "timestamp": "2026-06-22T22:03:24Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 3.629435623140803
-  },
-  {
-    "timestamp": "2026-06-22T22:07:28Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 52.40999984741211,
-    "change_pct": -0.07626339864231356,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-22T22:18:26Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 2.4549999237060547,
     "change_pct": -5.2123581580673815,
     "value": -5.2123581580673815
+  },
+  {
+    "timestamp": "2026-06-24T18:54:32Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.7643001079559326,
+    "change_pct": 21.241232805084774,
+    "value": 3.1150297057355507
+  },
+  {
+    "timestamp": "2026-06-24T18:54:41Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 5.605000019073486,
+    "change_pct": -7.149719725118669,
+    "value": 30.09
+  },
+  {
+    "timestamp": "2026-06-24T18:54:42Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_POS_SIZE",
+    "type": "position_size",
+    "price": 5.605000019073486,
+    "change_pct": -7.149719725118669,
+    "value": 17
   }
 ]
