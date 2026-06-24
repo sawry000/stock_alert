@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-22T23:33:31Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_3X",
-    "type": "volume_spike",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 3.629435623140803
-  },
-  {
-    "timestamp": "2026-06-22T23:33:32Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 3.629435623140803
-  },
-  {
-    "timestamp": "2026-06-22T23:57:39Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.150000095367432,
-    "change_pct": 15.252168833798924,
-    "value": 15.252168833798924
-  },
-  {
-    "timestamp": "2026-06-23T00:02:36Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 171.22999572753906,
-    "change_pct": 5.502153867861399,
-    "value": 5.502153867861399
-  },
-  {
     "timestamp": "2026-06-23T00:03:35Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_3X",
@@ -4498,5 +4462,41 @@
     "price": 5.670000076293945,
     "change_pct": -6.072953710798374,
     "value": 30.86
+  },
+  {
+    "timestamp": "2026-06-24T21:02:54Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 91.68000030517578,
+    "change_pct": 1.866667005750868,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-24T21:03:46Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 38.709999084472656,
+    "change_pct": -13.786193575784727,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-24T21:03:56Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 17.979999542236328,
+    "change_pct": -2.0163512684668845,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-24T21:04:16Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.75,
+    "change_pct": 20.61403508771931,
+    "value": 3.9044383701042915
   }
 ]
