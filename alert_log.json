@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T19:57:26Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 382.19500732421875,
-    "change_pct": -9.859668083910671,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-23T20:04:08Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 407.25,
     "change_pct": -0.30687612055316177,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-25T21:13:26Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.940000057220459,
+    "change_pct": 9.293682424552381,
+    "value": 9.293682424552381
   }
 ]
