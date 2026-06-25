@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T20:43:19Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 44.7599983215332,
-    "change_pct": -2.697559566153702,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-23T20:43:26Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 18.530000686645508,
-    "change_pct": 7.732562131659934,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-23T20:43:31Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 111.7300033569336,
-    "change_pct": -0.16976111782202286,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-23T21:02:20Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 381.2200012207031,
-    "change_pct": -10.089622353607753,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-23T21:08:26Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 104.27999877929688,
-    "change_pct": 4.279998779296875,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-23T21:22:29Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4498,5 +4453,50 @@
     "price": 2.440000057220459,
     "change_pct": -13.148712991369727,
     "value": -13.148712991369727
+  },
+  {
+    "timestamp": "2026-06-25T21:47:30Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 21.59000015258789,
+    "change_pct": -2.7039199973506562,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-25T21:47:34Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 95.02999877929688,
+    "change_pct": 1.031255346902905,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-25T21:47:39Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_DROP",
+    "type": "percent_change",
+    "price": 138.5399932861328,
+    "change_pct": -10.242958674355156,
+    "value": -10.242958674355156
+  },
+  {
+    "timestamp": "2026-06-25T21:48:32Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_DROP",
+    "type": "percent_change",
+    "price": 36.81999969482422,
+    "change_pct": -9.865361824175721,
+    "value": -9.865361824175721
+  },
+  {
+    "timestamp": "2026-06-25T21:49:05Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.320000171661377,
+    "change_pct": -8.882263356602998,
+    "value": -8.882263356602998
   }
 ]
