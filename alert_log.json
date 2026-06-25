@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T15:18:49Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.184999942779541,
-    "change_pct": -5.41125788833156,
-    "value": -5.41125788833156
-  },
-  {
-    "timestamp": "2026-06-23T15:43:08Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 4.550000190734863,
-    "change_pct": -3.1914853035135504,
-    "value": 28.07
-  },
-  {
-    "timestamp": "2026-06-23T15:43:15Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.309999942779541,
-    "change_pct": 6.055757838026052,
-    "value": 6.055757838026052
-  },
-  {
     "timestamp": "2026-06-23T15:57:59Z",
     "symbol": "TYGO",
     "alert_id": "TYGO_PCT_UP_5",
@@ -4498,5 +4471,32 @@
     "price": 398.7300109863281,
     "change_pct": -2.3925343653450986,
     "value": 0.2507963
+  },
+  {
+    "timestamp": "2026-06-25T15:14:13Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 5.264999866485596,
+    "change_pct": -9.824275228897406,
+    "value": 26.08
+  },
+  {
+    "timestamp": "2026-06-25T15:14:14Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_POS_SIZE",
+    "type": "position_size",
+    "price": 5.264999866485596,
+    "change_pct": -9.824275228897406,
+    "value": 18
+  },
+  {
+    "timestamp": "2026-06-25T15:14:16Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_PCT_DROP",
+    "type": "percent_change",
+    "price": 58.45100021362305,
+    "change_pct": -5.185893761966254,
+    "value": -5.185893761966254
   }
 ]
