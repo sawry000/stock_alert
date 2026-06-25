@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T14:12:55Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.329999923706055,
-    "change_pct": 10.459181727195274,
-    "value": 10.459181727195274
-  },
-  {
-    "timestamp": "2026-06-23T14:13:47Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 18.2450008392334,
-    "change_pct": 6.075586274612786,
-    "value": 6.075586274612786
-  },
-  {
-    "timestamp": "2026-06-23T14:19:33Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "price": 23.920000076293945,
-    "change_pct": -6.196078132180607,
-    "value": -6.196078132180607
-  },
-  {
-    "timestamp": "2026-06-23T14:32:28Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_NEWS_ANY",
-    "type": "news_sentiment",
-    "price": 393.0350036621094,
-    "change_pct": -7.303065174030808,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-23T14:43:45Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.130000114440918,
-    "change_pct": -5.364722278025196,
-    "value": -5.364722278025196
-  },
-  {
     "timestamp": "2026-06-23T14:58:04Z",
     "symbol": "INOD",
     "alert_id": "INOD_NEWS_POS",
@@ -4498,5 +4453,50 @@
     "price": 25.979999542236328,
     "change_pct": -7.147964466632138,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-25T14:52:50Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 10.675000190734863,
+    "change_pct": -6.931123010158129,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-25T14:53:06Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_CP_BULL",
+    "type": "candle_pattern",
+    "price": 3.0299999713897705,
+    "change_pct": 0.6644508767365689,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-25T14:53:06Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_POS_SIZE",
+    "type": "position_size",
+    "price": 3.0299999713897705,
+    "change_pct": 0.6644508767365689,
+    "value": 33
+  },
+  {
+    "timestamp": "2026-06-25T14:54:00Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 5.755000114440918,
+    "change_pct": 0.26132603555605843,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-25T14:54:00Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_POS_SIZE",
+    "type": "position_size",
+    "price": 5.755000114440918,
+    "change_pct": 0.26132603555605843,
+    "value": 17
   }
 ]
