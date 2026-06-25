@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T17:43:30Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 2.680000066757202,
-    "change_pct": -2.545452117919922,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-23T17:48:16Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 2.819999933242798,
     "change_pct": 4.832711272966464,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-25T17:59:43Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "price": 7.170000076293945,
+    "change_pct": -5.657893732974399,
+    "value": -5.657893732974399
   }
 ]
