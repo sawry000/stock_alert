@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T16:39:40Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_POS_SIZE",
-    "type": "position_size",
-    "price": 105.73999786376953,
-    "change_pct": -5.52180319534531,
-    "value": 0.9457159
-  },
-  {
-    "timestamp": "2026-06-23T16:42:50Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 14.774999618530273,
-    "change_pct": -0.605451607599911,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-23T17:03:49Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 5.400000095367432,
     "change_pct": -7.512073179059501,
     "value": 27.52
+  },
+  {
+    "timestamp": "2026-06-25T17:27:29Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.485000610351562,
+    "change_pct": -1.7691186191866974,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-25T17:27:30Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_POS_KELLY",
+    "type": "position_size",
+    "price": 27.485000610351562,
+    "change_pct": -1.7691186191866974,
+    "value": 3
   }
 ]
