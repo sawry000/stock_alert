@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T13:53:14Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.7249999046325684,
-    "change_pct": 8.134916850498744,
-    "value": 8.134916850498744
-  },
-  {
     "timestamp": "2026-06-23T13:53:17Z",
     "symbol": "TYGO",
     "alert_id": "TYGO_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 6.75,
     "change_pct": -6.873430644849752,
     "value": -6.873430644849752
+  },
+  {
+    "timestamp": "2026-06-25T14:07:53Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 92.0,
+    "change_pct": 0.3490401396160484,
+    "value": 1
   }
 ]
