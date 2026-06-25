@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T07:13:22Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 3.4176088833069698
-  },
-  {
     "timestamp": "2026-06-23T07:33:03Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 18.049999237060547,
     "change_pct": -12.59080272609904,
     "value": -12.59080272609904
+  },
+  {
+    "timestamp": "2026-06-25T06:13:13Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.25,
+    "change_pct": -6.387665198237887,
+    "value": 2
   }
 ]
