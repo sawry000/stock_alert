@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T18:17:59Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.389999866485596,
-    "change_pct": 11.989792512387648,
-    "value": 11.989792512387648
-  },
-  {
     "timestamp": "2026-06-23T18:19:03Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 107.22000122070312,
     "change_pct": 0.24308266707473006,
     "value": 0.9326618
+  },
+  {
+    "timestamp": "2026-06-25T18:52:55Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 10.725000381469727,
+    "change_pct": -6.4952015564975945,
+    "value": 1
   }
 ]
