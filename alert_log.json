@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T10:07:48Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.150000095367432,
-    "change_pct": 5.867349371618156,
-    "value": 5.867349371618156
-  },
-  {
     "timestamp": "2026-06-23T10:23:41Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_3X",
@@ -4492,6 +4483,15 @@
   },
   {
     "timestamp": "2026-06-25T10:14:02Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.75,
+    "change_pct": -2.1143304620203645,
+    "value": 3.719872251271658
+  },
+  {
+    "timestamp": "2026-06-25T10:44:38Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
     "type": "volume_spike",
