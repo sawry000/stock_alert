@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T11:38:00Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 4.679999828338623,
-    "change_pct": -0.42553556726334324,
-    "value": 30.66
-  },
-  {
     "timestamp": "2026-06-23T12:03:27Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_3X",
@@ -4498,5 +4489,14 @@
     "price": 365.9200134277344,
     "change_pct": -0.6084274696506002,
     "value": 25.26
+  },
+  {
+    "timestamp": "2026-06-25T12:02:22Z",
+    "symbol": "ENPH",
+    "alert_id": "ENPH_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 47.81999969482422,
+    "change_pct": -2.5473819139510527,
+    "value": 1
   }
 ]
