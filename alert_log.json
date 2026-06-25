@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T12:33:50Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 44.77000045776367,
-    "change_pct": -2.6758162171529896,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-23T12:33:51Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 44.77000045776367,
-    "change_pct": -2.6758162171529896,
-    "value": 3.4176088833069698
-  },
-  {
-    "timestamp": "2026-06-23T12:34:00Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 17.059999465942383,
-    "change_pct": -0.8139565933582353,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-23T12:34:04Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 113.11000061035156,
-    "change_pct": 1.0632600163970343,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-23T12:34:14Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 45.33000183105469,
-    "change_pct": 0.2210962437645161,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-23T12:59:00Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4498,5 +4453,50 @@
     "price": 2.615000009536743,
     "change_pct": -6.919626627153733,
     "value": -6.919626627153733
+  },
+  {
+    "timestamp": "2026-06-25T13:37:49Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.6500000953674316,
+    "change_pct": 1.3888915379842097,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-25T13:37:49Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_POS_SIZE",
+    "type": "position_size",
+    "price": 3.6500000953674316,
+    "change_pct": 1.3888915379842097,
+    "value": 27
+  },
+  {
+    "timestamp": "2026-06-25T13:38:56Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_DROP",
+    "type": "percent_change",
+    "price": 100.26000213623047,
+    "change_pct": -6.264021936957298,
+    "value": -6.264021936957298
+  },
+  {
+    "timestamp": "2026-06-25T13:39:15Z",
+    "symbol": "SHLS",
+    "alert_id": "SHLS_MA_GOLDEN",
+    "type": "ma_crossover",
+    "price": 10.395000457763672,
+    "change_pct": -0.8110643343161121,
+    "value": 0.022
+  },
+  {
+    "timestamp": "2026-06-25T13:39:16Z",
+    "symbol": "SHLS",
+    "alert_id": "SHLS_POS_SIZE",
+    "type": "position_size",
+    "price": 10.395000457763672,
+    "change_pct": -0.8110643343161121,
+    "value": 9
   }
 ]
