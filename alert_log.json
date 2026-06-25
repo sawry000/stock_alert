@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T16:38:08Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.429999828338623,
-    "change_pct": 13.010199702515896,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-23T16:38:14Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 4.980000019073486,
     "change_pct": 5.063291541634728,
     "value": 5.063291541634728
+  },
+  {
+    "timestamp": "2026-06-25T16:52:52Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 10.449999809265137,
+    "change_pct": -8.892765394375447,
+    "value": 1
   }
 ]
