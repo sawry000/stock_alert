@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T15:57:59Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.694999933242798,
-    "change_pct": 6.944441795349119,
-    "value": 6.944441795349119
-  },
-  {
     "timestamp": "2026-06-23T16:13:50Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 58.45100021362305,
     "change_pct": -5.185893761966254,
     "value": -5.185893761966254
+  },
+  {
+    "timestamp": "2026-06-25T15:49:40Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_MA_DEATH",
+    "type": "ma_crossover",
+    "price": 16.709999084472656,
+    "change_pct": -12.78706114575858,
+    "value": -0.197
   }
 ]
