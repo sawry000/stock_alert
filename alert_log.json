@@ -2,15 +2,6 @@
   {
     "timestamp": "2026-06-23T12:17:35Z",
     "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 439.6600036621094,
-    "change_pct": 0.21885203577875473,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-23T12:17:35Z",
-    "symbol": "ALAB",
     "alert_id": "ALAB_POS_SIZE",
     "type": "position_size",
     "price": 439.6600036621094,
@@ -4498,5 +4489,14 @@
     "price": 2.75,
     "change_pct": -2.1143304620203645,
     "value": 3.719872251271658
+  },
+  {
+    "timestamp": "2026-06-25T13:14:11Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 5.670000076293945,
+    "change_pct": -2.8876772463613585,
+    "value": 30.86
   }
 ]
