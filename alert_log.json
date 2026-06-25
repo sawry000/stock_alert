@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T22:23:15Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "price": 22.549999237060547,
-    "change_pct": -11.568630442899815,
-    "value": -11.568630442899815
-  },
-  {
     "timestamp": "2026-06-23T22:23:25Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 5.320000171661377,
     "change_pct": -8.882263356602998,
     "value": 18
+  },
+  {
+    "timestamp": "2026-06-25T23:42:30Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 27.760000228881836,
+    "change_pct": -0.7862750933458346,
+    "value": 3
   }
 ]
