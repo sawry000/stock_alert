@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T13:53:47Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_CP_BULL",
-    "type": "candle_pattern",
-    "price": 6.070000171661377,
-    "change_pct": -2.0967714248165037,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-23T13:53:48Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_POS_SIZE",
-    "type": "position_size",
-    "price": 6.070000171661377,
-    "change_pct": -2.0967714248165037,
-    "value": 16
-  },
-  {
     "timestamp": "2026-06-23T13:53:54Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 4.289999961853027,
     "change_pct": 0.9411755730124081,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-25T14:27:52Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_DROP",
+    "type": "percent_change",
+    "price": 10.527199745178223,
+    "change_pct": -8.219705796179406,
+    "value": -8.219705796179406
+  },
+  {
+    "timestamp": "2026-06-25T14:28:04Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_DROP",
+    "type": "percent_change",
+    "price": 77.80999755859375,
+    "change_pct": -7.83459553873263,
+    "value": -7.83459553873263
   }
 ]
