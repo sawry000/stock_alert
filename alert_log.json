@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T21:48:07Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.440000057220459,
-    "change_pct": 9.254658264732367,
-    "value": 9.254658264732367
-  },
-  {
     "timestamp": "2026-06-23T21:53:01Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 73.18000030517578,
     "change_pct": -13.318795293326946,
     "value": -13.318795293326946
+  },
+  {
+    "timestamp": "2026-06-25T23:02:47Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 10.800000190734863,
+    "change_pct": -5.841323533261877,
+    "value": 1
   }
 ]
