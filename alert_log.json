@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T18:23:30Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.65500020980835,
-    "change_pct": 7.505778517513846,
-    "value": 7.505778517513846
-  },
-  {
     "timestamp": "2026-06-23T18:52:29Z",
     "symbol": "COHR",
     "alert_id": "COHR_NEWS_ANY",
@@ -4498,5 +4489,14 @@
     "price": 2.940000057220459,
     "change_pct": 9.293682424552381,
     "value": 9.293682424552381
+  },
+  {
+    "timestamp": "2026-06-25T19:24:08Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_RSI_OS_4H",
+    "type": "rsi",
+    "price": 5.275000095367432,
+    "change_pct": -9.652997373215634,
+    "value": 26.1
   }
 ]
