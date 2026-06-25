@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T13:53:54Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.559999942779541,
-    "change_pct": -6.909092989834872,
-    "value": -6.909092989834872
-  },
-  {
     "timestamp": "2026-06-23T14:12:49Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 77.80999755859375,
     "change_pct": -7.83459553873263,
     "value": -7.83459553873263
+  },
+  {
+    "timestamp": "2026-06-25T14:38:26Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_PCT_DROP",
+    "type": "percent_change",
+    "price": 21.250099182128906,
+    "change_pct": -7.2853756686158855,
+    "value": -7.2853756686158855
   }
 ]
