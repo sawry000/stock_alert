@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T19:48:05Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.434999942779541,
-    "change_pct": 9.131620925208313,
-    "value": 9.131620925208313
-  },
-  {
     "timestamp": "2026-06-23T19:57:26Z",
     "symbol": "COHR",
     "alert_id": "COHR_NEWS_ANY",
@@ -4498,5 +4489,14 @@
     "price": 10.800000190734863,
     "change_pct": -5.841323533261877,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-25T21:07:20Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 407.25,
+    "change_pct": -0.30687612055316177,
+    "value": 3
   }
 ]
