@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T21:38:41Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_PCT_DROP",
-    "type": "percent_change",
-    "price": 336.1199951171875,
-    "change_pct": -8.331418766535705,
-    "value": -8.331418766535705
-  },
-  {
-    "timestamp": "2026-06-23T21:43:47Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_DROP",
-    "type": "percent_change",
-    "price": 41.630001068115234,
-    "change_pct": -7.9593166745186,
-    "value": -7.9593166745186
-  },
-  {
     "timestamp": "2026-06-23T21:44:11Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 369.4599914550781,
     "change_pct": 0.35310502365224355,
     "value": 30.85
+  },
+  {
+    "timestamp": "2026-06-25T22:22:45Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.559999942779541,
+    "change_pct": -1.1111127005683075,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-25T22:23:15Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.210000038146973,
+    "change_pct": -0.9411755730124081,
+    "value": 2
   }
 ]
