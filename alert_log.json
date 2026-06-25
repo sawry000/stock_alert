@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T16:37:50Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 92.44999694824219,
-    "change_pct": -7.0293675098127615,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-23T16:38:08Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 19.809999465942383,
     "change_pct": -4.622053606440138,
     "value": 5
+  },
+  {
+    "timestamp": "2026-06-25T16:38:14Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 4.980000019073486,
+    "change_pct": 5.063291541634728,
+    "value": 5.063291541634728
   }
 ]
