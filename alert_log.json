@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T08:02:40Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.059999942779541,
-    "change_pct": 6.993004992291649,
-    "value": 6.993004992291649
-  },
-  {
     "timestamp": "2026-06-23T08:02:43Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_POS_SIZE",
@@ -4498,5 +4489,14 @@
     "price": 21.399999618530273,
     "change_pct": -5.141845662543109,
     "value": -5.141845662543109
+  },
+  {
+    "timestamp": "2026-06-25T06:48:59Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
+    "type": "volume_spike",
+    "price": 2.75,
+    "change_pct": 20.61403508771931,
+    "value": 3.719872251271658
   }
 ]
