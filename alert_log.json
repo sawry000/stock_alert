@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T13:53:17Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_POS_SIZE",
-    "type": "position_size",
-    "price": 2.7249999046325684,
-    "change_pct": 8.134916850498744,
-    "value": 36
-  },
-  {
     "timestamp": "2026-06-23T13:53:47Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_CP_BULL",
@@ -4498,5 +4489,14 @@
     "price": 92.0,
     "change_pct": 0.3490401396160484,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-25T14:13:28Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.289999961853027,
+    "change_pct": 0.9411755730124081,
+    "value": 3
   }
 ]
