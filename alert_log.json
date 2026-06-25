@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T02:38:27Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.309999942779541,
-    "change_pct": -8.21194431426141,
-    "value": -8.21194431426141
-  },
-  {
     "timestamp": "2026-06-23T02:48:35Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_VOL_3X",
@@ -4494,6 +4485,15 @@
     "timestamp": "2026-06-25T00:24:22Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.75,
+    "change_pct": 20.61403508771931,
+    "value": 3.9044383701042915
+  },
+  {
+    "timestamp": "2026-06-25T00:29:30Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_SPIKE",
     "type": "volume_spike",
     "price": 2.75,
     "change_pct": 20.61403508771931,
