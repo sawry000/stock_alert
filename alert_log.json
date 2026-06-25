@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T10:58:31Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 44.77000045776367,
-    "change_pct": -2.6758162171529896,
-    "value": 3.4176088833069698
-  },
-  {
     "timestamp": "2026-06-23T11:07:33Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4498,5 +4489,14 @@
     "price": 2.75,
     "change_pct": -2.1143304620203645,
     "value": 3.719872251271658
+  },
+  {
+    "timestamp": "2026-06-25T11:37:23Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 399.9200134277344,
+    "change_pct": -4.375684226547189,
+    "value": 2
   }
 ]
