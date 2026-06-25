@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T18:22:48Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 149.21499633789062,
-    "change_pct": -11.915586577396327,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-23T18:23:30Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 2.8199000358581543,
     "change_pct": 5.614233552739864,
     "value": 35
+  },
+  {
+    "timestamp": "2026-06-25T19:08:32Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.940000057220459,
+    "change_pct": 9.293682424552381,
+    "value": 9.293682424552381
   }
 ]
