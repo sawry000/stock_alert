@@ -842,7 +842,7 @@
   },
   "AEHR": {
     "AEHR_POS_SIZE": {
-      "last_fired": "2026-06-22T13:47:55Z"
+      "last_fired": "2026-06-25T16:13:02Z"
     },
     "AEHR_PCT_UP_5": {
       "last_fired": "2026-06-16T07:53:01Z"
@@ -851,14 +851,14 @@
       "last_fired": "2026-06-23T12:33:08Z"
     },
     "AEHR_CP_BULL": {
-      "last_fired": "2026-06-22T13:47:54Z"
+      "last_fired": "2026-06-25T16:13:01Z"
     },
     "AEHR_PCT_DROP": {
       "last_fired": "2026-06-25T13:48:08Z"
     },
-    "open_position": false,
-    "open_entry": 114.88999938964844,
-    "open_time": "2026-06-22T13:47:55Z"
+    "open_position": true,
+    "open_entry": 99.0,
+    "open_time": "2026-06-25T16:13:02Z"
   },
   "TYGO": {
     "TYGO_POS_SIZE": {
@@ -1001,18 +1001,23 @@
   },
   "MRAM": {
     "MRAM_POS_SIZE": {
-      "last_fired": "2026-06-05T06:53:36Z"
+      "last_fired": "2026-06-25T16:13:37Z"
     },
     "MRAM_PCT_DROP": {
       "last_fired": "2026-06-25T14:38:26Z"
     },
-    "open_position": false,
+    "open_position": true,
     "MRAM_MA_DEATH": {
       "last_fired": "2026-06-08T15:09:18Z"
     },
     "MRAM_SL_BREAK": {
       "last_fired": "2026-06-24T13:43:39Z"
-    }
+    },
+    "MRAM_CP_BULL": {
+      "last_fired": "2026-06-25T16:13:37Z"
+    },
+    "open_entry": 22.0,
+    "open_time": "2026-06-25T16:13:37Z"
   },
   "UAMY": {
     "UAMY_MTF_BULL": {

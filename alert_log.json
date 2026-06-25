@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T16:14:25Z",
-    "symbol": "BOBS",
-    "alert_id": "BOBS_CP_BULL",
-    "type": "candle_pattern",
-    "price": 13.390000343322754,
-    "change_pct": 0.45011510369657787,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-23T16:17:50Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.115000009536743,
-    "change_pct": 8.91608424953648,
-    "value": 8.91608424953648
-  },
-  {
-    "timestamp": "2026-06-23T16:17:57Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.420000076293945,
-    "change_pct": 12.755103987090443,
-    "value": 12.755103987090443
-  },
-  {
-    "timestamp": "2026-06-23T16:18:31Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.554999828338623,
-    "change_pct": 5.196300885418545,
-    "value": 5.196300885418545
-  },
-  {
     "timestamp": "2026-06-23T16:18:34Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_POS_SIZE",
@@ -4498,5 +4462,41 @@
     "price": 370.4999084472656,
     "change_pct": 0.6355683526905692,
     "value": 31.94
+  },
+  {
+    "timestamp": "2026-06-25T16:13:01Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 99.0,
+    "change_pct": -2.4630541871921183,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-25T16:13:02Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_POS_SIZE",
+    "type": "position_size",
+    "price": 99.0,
+    "change_pct": -2.4630541871921183,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-25T16:13:37Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_CP_BULL",
+    "type": "candle_pattern",
+    "price": 22.0,
+    "change_pct": -4.013542816504429,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-25T16:13:37Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_POS_SIZE",
+    "type": "position_size",
+    "price": 22.0,
+    "change_pct": -4.013542816504429,
+    "value": 4
   }
 ]
