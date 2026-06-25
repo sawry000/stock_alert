@@ -1,77 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T06:17:39Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 171.22999572753906,
-    "change_pct": 5.502153867861399,
-    "value": 5.502153867861399
-  },
-  {
-    "timestamp": "2026-06-23T06:18:34Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "price": 25.530000686645508,
-    "change_pct": -6.346292418761899,
-    "value": -6.346292418761899
-  },
-  {
-    "timestamp": "2026-06-23T06:18:40Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 14.853772339055094
-  },
-  {
-    "timestamp": "2026-06-23T06:33:10Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_PCT_DROP",
-    "type": "percent_change",
-    "price": 55.41999816894531,
-    "change_pct": -5.2325612706133455,
-    "value": -5.2325612706133455
-  },
-  {
-    "timestamp": "2026-06-23T06:38:21Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_3X",
-    "type": "volume_spike",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 3.4176088833069698
-  },
-  {
-    "timestamp": "2026-06-23T06:38:22Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 44.77000045776367,
-    "change_pct": 14.853772339055094,
-    "value": 3.4176088833069698
-  },
-  {
-    "timestamp": "2026-06-23T06:52:49Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.5199999809265137,
-    "change_pct": -8.821188909236781,
-    "value": -8.821188909236781
-  },
-  {
-    "timestamp": "2026-06-23T06:52:58Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.679999828338623,
-    "change_pct": -8.055013195704849,
-    "value": -8.055013195704849
-  },
-  {
     "timestamp": "2026-06-23T06:57:33Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4498,5 +4426,77 @@
     "price": 2.75,
     "change_pct": 20.61403508771931,
     "value": 3.719872251271658
+  },
+  {
+    "timestamp": "2026-06-25T05:47:57Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_PCT_DROP",
+    "type": "percent_change",
+    "price": 19.75,
+    "change_pct": -8.13953488372093,
+    "value": -8.13953488372093
+  },
+  {
+    "timestamp": "2026-06-25T05:48:07Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_DROP",
+    "type": "percent_change",
+    "price": 95.19999694824219,
+    "change_pct": -8.001193521967439,
+    "value": -8.001193521967439
+  },
+  {
+    "timestamp": "2026-06-25T05:48:35Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "price": 10.329999923706055,
+    "change_pct": -7.506066960002378,
+    "value": -7.506066960002378
+  },
+  {
+    "timestamp": "2026-06-25T05:48:49Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_DROP",
+    "type": "percent_change",
+    "price": 6.570000171661377,
+    "change_pct": -7.381299034885296,
+    "value": -7.381299034885296
+  },
+  {
+    "timestamp": "2026-06-25T05:49:21Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_VOL_ALARM",
+    "type": "volume_spike",
+    "price": 2.75,
+    "change_pct": 20.61403508771931,
+    "value": 3.719872251271658
+  },
+  {
+    "timestamp": "2026-06-25T05:49:27Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_PCT_DROP",
+    "type": "percent_change",
+    "price": 12.520000457763672,
+    "change_pct": -12.447549246407894,
+    "value": -12.447549246407894
+  },
+  {
+    "timestamp": "2026-06-25T05:49:39Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_DROP",
+    "type": "percent_change",
+    "price": 4.53000020980835,
+    "change_pct": -8.853114490777669,
+    "value": -8.853114490777669
+  },
+  {
+    "timestamp": "2026-06-25T05:49:44Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_PCT_DROP",
+    "type": "percent_change",
+    "price": 7.070000171661377,
+    "change_pct": -8.773014211004313,
+    "value": -8.773014211004313
   }
 ]
