@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T14:12:49Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.1094000339508057,
-    "change_pct": 8.720280907370832,
-    "value": 8.720280907370832
-  },
-  {
     "timestamp": "2026-06-23T14:12:55Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 21.250099182128906,
     "change_pct": -7.2853756686158855,
     "value": -7.2853756686158855
+  },
+  {
+    "timestamp": "2026-06-25T14:42:42Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 25.979999542236328,
+    "change_pct": -7.147964466632138,
+    "value": 1
   }
 ]
