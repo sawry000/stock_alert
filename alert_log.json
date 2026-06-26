@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T22:27:39Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.300000190734863,
-    "change_pct": 9.693882416705698,
-    "value": 9.693882416705698
-  },
-  {
     "timestamp": "2026-06-23T22:33:25Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 369.4599914550781,
     "change_pct": 0.35310502365224355,
     "value": 30.85
+  },
+  {
+    "timestamp": "2026-06-26T00:18:00Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 98.79000091552734,
+    "change_pct": -2.669949836918873,
+    "value": 1
   }
 ]
