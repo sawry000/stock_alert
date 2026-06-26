@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T10:33:25Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 4.440000057220459,
-    "change_pct": -2.2026419114436355,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-24T10:37:47Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.0199999809265137,
-    "change_pct": 7.857142175946924,
-    "value": 7.857142175946924
-  },
-  {
-    "timestamp": "2026-06-24T11:17:23Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 397.0199890136719,
-    "change_pct": -1.341884346286999,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-24T11:17:24Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_POS_SIZE",
@@ -4498,5 +4471,32 @@
     "price": 55.654998779296875,
     "change_pct": -5.326422222737864,
     "value": -5.326422222737864
+  },
+  {
+    "timestamp": "2026-06-26T13:38:01Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_CP_BULL",
+    "type": "candle_pattern",
+    "price": 94.81999969482422,
+    "change_pct": -3.244799540791141,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-26T13:38:21Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 5.050000190734863,
+    "change_pct": 4.338846916009575,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-26T13:39:03Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 108.05999755859375,
+    "change_pct": -1.342100284311377,
+    "value": 3
   }
 ]
