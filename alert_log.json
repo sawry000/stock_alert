@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T17:23:57Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.700000047683716,
-    "change_pct": -5.680149246010068,
-    "value": -5.680149246010068
-  },
-  {
     "timestamp": "2026-06-24T17:33:47Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 118.12000274658203,
     "change_pct": 7.842602708465288,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-26T20:17:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 28.56999969482422,
+    "change_pct": 3.5400015033566943,
+    "value": 3
   }
 ]
