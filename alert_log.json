@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T18:54:32Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.7643001079559326,
-    "change_pct": 21.241232805084774,
-    "value": 3.1150297057355507
-  },
-  {
     "timestamp": "2026-06-24T18:54:41Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 22.81999969482422,
     "change_pct": 7.641507994453865,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-26T21:52:33Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_PCT_UP_5",
+    "type": "percent_change",
+    "price": 22.81999969482422,
+    "change_pct": 7.641507994453865,
+    "value": 7.641507994453865
   }
 ]
