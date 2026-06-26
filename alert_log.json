@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T16:59:24Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.724999904632568,
-    "change_pct": -5.161847652112639,
-    "value": -5.161847652112639
-  },
-  {
     "timestamp": "2026-06-24T17:18:26Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_MA_DEATH",
@@ -4498,5 +4489,14 @@
     "price": 33.72999954223633,
     "change_pct": 4.137077932189959,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-26T19:52:29Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_PCT_UP_5",
+    "type": "percent_change",
+    "price": 22.719999313354492,
+    "change_pct": 7.1698080818608165,
+    "value": 7.1698080818608165
   }
 ]
