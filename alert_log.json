@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T21:23:35Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 32.70000076293945,
-    "change_pct": -0.9090885971531724,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-24T21:24:12Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 17.110000610351562,
     "change_pct": 5.162880211134375,
     "value": 1
+  },
+  {
+    "timestamp": "2026-06-26T23:48:25Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 10.5600004196167,
+    "change_pct": 8.418895478610873,
+    "value": 8.418895478610873
   }
 ]
