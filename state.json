@@ -63,7 +63,7 @@
       "last_fired": "2026-06-25T15:02:28Z"
     },
     "COHR_PCT_DROP": {
-      "last_fired": "2026-06-25T13:52:21Z"
+      "last_fired": "2026-06-26T13:32:25Z"
     },
     "COHR_CP_BULL": {
       "last_fired": "2026-05-28T06:52:17Z"
@@ -90,7 +90,7 @@
         "69e2d3d5a591"
       ]
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 398.7300109863281,
     "open_time": "2026-06-25T15:02:28Z"
   },
@@ -248,9 +248,9 @@
       ]
     },
     "ICHR_PCT_DROP": {
-      "last_fired": "2026-06-24T13:42:37Z"
+      "last_fired": "2026-06-26T13:32:43Z"
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 91.62999725341797,
     "open_time": "2026-06-24T13:52:34Z",
     "ICHR_MA_DEATH": {
@@ -387,7 +387,7 @@
       "last_fired": "2026-06-10T15:52:58Z"
     },
     "XMTR_MTF_BULL": {
-      "last_fired": "2026-06-26T09:32:53Z"
+      "last_fired": "2026-06-26T13:33:02Z"
     },
     "XMTR_CP_BULL": {
       "last_fired": "2026-06-25T14:07:53Z"
@@ -668,7 +668,7 @@
       "last_fired": "2026-06-26T12:28:49Z"
     },
     "VICR_PCT_DROP": {
-      "last_fired": "2026-06-24T05:38:45Z"
+      "last_fired": "2026-06-26T13:34:30Z"
     },
     "open_position": false,
     "open_entry": 274.8999938964844,
@@ -695,7 +695,7 @@
       ]
     },
     "AMSC_PCT_DROP": {
-      "last_fired": "2026-06-24T19:14:00Z"
+      "last_fired": "2026-06-26T13:34:33Z"
     },
     "AMSC_MA_DEATH": {
       "last_fired": "2026-06-04T13:33:59Z"
@@ -937,9 +937,12 @@
     "DDD_CP_BULL": {
       "last_fired": "2026-06-25T14:53:06Z"
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 3.0299999713897705,
-    "open_time": "2026-06-25T14:53:06Z"
+    "open_time": "2026-06-25T14:53:06Z",
+    "DDD_MA_DEATH": {
+      "last_fired": "2026-06-26T13:33:28Z"
+    }
   },
   "OPRX": {
     "OPRX_POS_SIZE": {
@@ -972,7 +975,7 @@
   },
   "NLST": {
     "NLST_PCT_UP_5": {
-      "last_fired": "2026-06-26T11:33:28Z"
+      "last_fired": "2026-06-26T13:33:54Z"
     },
     "NLST_MTF_BULL": {
       "last_fired": "2026-06-26T10:03:21Z"
@@ -1110,7 +1113,7 @@
   },
   "CLPT": {
     "CLPT_MTF_BULL": {
-      "last_fired": "2026-06-26T09:34:05Z"
+      "last_fired": "2026-06-26T13:34:17Z"
     },
     "CLPT_POS_SIZE": {
       "last_fired": "2026-06-12T20:28:43Z"
@@ -1185,7 +1188,7 @@
       "last_fired": "2026-06-09T13:49:15Z"
     },
     "FPS_PCT_DROP": {
-      "last_fired": "2026-06-25T15:14:16Z"
+      "last_fired": "2026-06-26T13:34:56Z"
     },
     "FPS_CP_BULL": {
       "last_fired": "2026-06-09T13:49:14Z"
