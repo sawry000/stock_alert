@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T13:48:39Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_POS_SIZE",
-    "type": "position_size",
-    "price": 2.7200000286102295,
-    "change_pct": 1.4925358528601556,
-    "value": 36
-  },
-  {
-    "timestamp": "2026-06-24T13:52:34Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 91.62999725341797,
-    "change_pct": -2.5109083376763763,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-24T13:52:34Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 34.630001068115234,
     "change_pct": 6.915718024437275,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-26T15:53:14Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_UP_5",
+    "type": "percent_change",
+    "price": 34.470001220703125,
+    "change_pct": 6.421738872192419,
+    "value": 6.421738872192419
+  },
+  {
+    "timestamp": "2026-06-26T15:54:20Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_MA_DEATH",
+    "type": "ma_crossover",
+    "price": 16.90999984741211,
+    "change_pct": -1.628854872529912,
+    "value": -2.341
   }
 ]
