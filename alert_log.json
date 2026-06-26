@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T17:33:47Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.440000057220459,
-    "change_pct": -6.3683294798544,
-    "value": -6.3683294798544
-  },
-  {
     "timestamp": "2026-06-24T17:39:28Z",
     "symbol": "GLD",
     "alert_id": "GLD_RSI_OS_4H",
@@ -4498,5 +4489,14 @@
     "price": 28.56999969482422,
     "change_pct": 3.5400015033566943,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-26T20:23:12Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 73.9000015258789,
+    "change_pct": 1.2467482201382538,
+    "value": 1
   }
 ]
