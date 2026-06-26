@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T17:43:13Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.84499979019165,
-    "change_pct": 5.097609331706075,
-    "value": 5.097609331706075
-  },
-  {
     "timestamp": "2026-06-24T17:59:20Z",
     "symbol": "GLD",
     "alert_id": "GLD_PCT_DROP",
@@ -4497,6 +4488,15 @@
     "type": "news_sentiment",
     "price": 22.81999969482422,
     "change_pct": 7.641507994453865,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-26T21:32:56Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 10.930000305175781,
+    "change_pct": 1.2055807068258844,
     "value": 1
   }
 ]
