@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T13:44:13Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 10.229999542236328,
-    "change_pct": 0.2941131591796945,
-    "value": -0.019
-  },
-  {
     "timestamp": "2026-06-24T13:44:16Z",
     "symbol": "AMPX",
     "alert_id": "AMPX_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 375.8399963378906,
     "change_pct": -5.0909100156841856,
     "value": -5.0909100156841856
+  },
+  {
+    "timestamp": "2026-06-26T15:18:29Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_DROP",
+    "type": "percent_change",
+    "price": 5.05210018157959,
+    "change_pct": -5.391382367423408,
+    "value": -5.391382367423408
   }
 ]
