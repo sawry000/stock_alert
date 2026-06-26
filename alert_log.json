@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T06:37:47Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.300000190734863,
-    "change_pct": 9.693882416705698,
-    "value": 9.693882416705698
-  },
-  {
-    "timestamp": "2026-06-24T06:53:08Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.550000190734863,
-    "change_pct": 5.08083581373818,
-    "value": 5.08083581373818
-  },
-  {
     "timestamp": "2026-06-24T06:53:37Z",
     "symbol": "ASPN",
     "alert_id": "ASPN_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 369.4599914550781,
     "change_pct": 0.27684058600535427,
     "value": 30.85
+  },
+  {
+    "timestamp": "2026-06-26T10:27:44Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.559999942779541,
+    "change_pct": 4.398825301452812,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-26T10:28:15Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.210000038146973,
+    "change_pct": -0.6700632751280609,
+    "value": 2
   }
 ]
