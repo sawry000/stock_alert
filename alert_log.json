@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T16:58:46Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_POS_SIZE",
-    "type": "position_size",
-    "price": 42.36000061035156,
-    "change_pct": -5.657014230842843,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-24T16:58:56Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 38.36000061035156,
     "change_pct": 5.095892083154966,
     "value": 5.095892083154966
+  },
+  {
+    "timestamp": "2026-06-26T19:32:53Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 10.880000114440918,
+    "change_pct": 0.7426074042196946,
+    "value": 2
   }
 ]
