@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T05:12:43Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 21.280000686645508,
-    "change_pct": -2.963973157111226,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-24T05:12:47Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 92.19999694824219,
-    "change_pct": -7.280775393964009,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-24T05:13:30Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4498,5 +4480,23 @@
     "price": 369.4599914550781,
     "change_pct": 0.35310502365224355,
     "value": 30.85
+  },
+  {
+    "timestamp": "2026-06-26T06:22:49Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 3.559999942779541,
+    "change_pct": -1.1111127005683075,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-26T06:23:25Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.210000038146973,
+    "change_pct": -0.9411755730124081,
+    "value": 2
   }
 ]
