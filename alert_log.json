@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T13:43:02Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 96.41000366210938,
-    "change_pct": -6.831874435048676,
-    "value": -6.831874435048676
-  },
-  {
-    "timestamp": "2026-06-24T13:43:30Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 10.430000305175781,
-    "change_pct": -6.610672123995766,
-    "value": -6.610672123995766
-  },
-  {
     "timestamp": "2026-06-24T13:43:39Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_SL_BREAK",
@@ -4498,5 +4480,23 @@
     "price": 22.260000228881836,
     "change_pct": 5.000001079631304,
     "value": 5.000001079631304
+  },
+  {
+    "timestamp": "2026-06-26T14:23:54Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 5.474999904632568,
+    "change_pct": -3.609156608581538,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-26T14:23:54Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_POS_SIZE",
+    "type": "position_size",
+    "price": 5.474999904632568,
+    "change_pct": -3.609156608581538,
+    "value": 18
   }
 ]
