@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T13:47:47Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.5999999046325684,
-    "change_pct": -7.142860548836838,
-    "value": -7.142860548836838
-  },
-  {
-    "timestamp": "2026-06-24T13:48:12Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_CP_BULL",
-    "type": "candle_pattern",
-    "price": 3.100100040435791,
-    "change_pct": -2.6778413877129714,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-24T13:48:13Z",
     "symbol": "DDD",
     "alert_id": "DDD_POS_SIZE",
@@ -4498,5 +4480,23 @@
     "price": 5.085000038146973,
     "change_pct": 5.0619842592349755,
     "value": 5.0619842592349755
+  },
+  {
+    "timestamp": "2026-06-26T15:33:25Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 10.229999542236328,
+    "change_pct": 5.030796121522874,
+    "value": 5.030796121522874
+  },
+  {
+    "timestamp": "2026-06-26T15:33:28Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_POS_SIZE",
+    "type": "position_size",
+    "price": 10.229999542236328,
+    "change_pct": 5.030796121522874,
+    "value": 9
   }
 ]
