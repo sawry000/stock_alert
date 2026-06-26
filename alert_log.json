@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T05:13:30Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 32.959999084472656,
-    "change_pct": -1.0507382633663944,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-24T05:37:21Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 381.2200012207031,
-    "change_pct": -10.089622353607753,
-    "value": -10.089622353607753
-  },
-  {
     "timestamp": "2026-06-24T05:37:27Z",
     "symbol": "ENPH",
     "alert_id": "ENPH_PCT_DROP",
@@ -4498,5 +4480,23 @@
     "price": 4.210000038146973,
     "change_pct": -0.9411755730124081,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-26T06:37:44Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_DROP",
+    "type": "percent_change",
+    "price": 10.800000190734863,
+    "change_pct": -5.841323533261877,
+    "value": -5.841323533261877
+  },
+  {
+    "timestamp": "2026-06-26T06:37:55Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_DROP",
+    "type": "percent_change",
+    "price": 73.18000030517578,
+    "change_pct": -13.318795293326946,
+    "value": -13.318795293326946
   }
 ]
