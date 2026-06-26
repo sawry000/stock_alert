@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T02:23:17Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 4.440000057220459,
-    "change_pct": 9.254658264732367,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-24T02:23:44Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_PCT_UP_5",
@@ -4498,5 +4489,14 @@
     "price": 369.4599914550781,
     "change_pct": 0.35310502365224355,
     "value": 30.85
+  },
+  {
+    "timestamp": "2026-06-26T05:23:42Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.940000057220459,
+    "change_pct": 9.293682424552381,
+    "value": 9.293682424552381
   }
 ]
