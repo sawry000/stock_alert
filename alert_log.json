@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T11:17:24Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_POS_SIZE",
-    "type": "position_size",
-    "price": 397.0199890136719,
-    "change_pct": -1.341884346286999,
-    "value": 0.2518765
-  },
-  {
-    "timestamp": "2026-06-24T11:47:32Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 28.690000534057617,
-    "change_pct": -0.4510737888354722,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-24T12:03:07Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 4.539999961853027,
-    "change_pct": -3.404256130786656,
-    "value": 28.2
-  },
-  {
     "timestamp": "2026-06-24T12:24:04Z",
     "symbol": "VICR",
     "alert_id": "VICR_BT_VOL",
@@ -4498,5 +4471,32 @@
     "price": 108.05999755859375,
     "change_pct": -1.342100284311377,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-26T13:42:36Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 22.200000762939453,
+    "change_pct": 4.71698473084648,
+    "value": 1
+  },
+  {
+    "timestamp": "2026-06-26T13:42:37Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_POS_SIZE",
+    "type": "position_size",
+    "price": 22.200000762939453,
+    "change_pct": 4.71698473084648,
+    "value": 4
+  },
+  {
+    "timestamp": "2026-06-26T13:43:10Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_MA_DEATH",
+    "type": "ma_crossover",
+    "price": 93.53800201416016,
+    "change_pct": -4.552961774287362,
+    "value": -0.03
   }
 ]

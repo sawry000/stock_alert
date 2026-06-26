@@ -187,10 +187,10 @@
   },
   "NAVN": {
     "NAVN_POS_SIZE": {
-      "last_fired": "2026-06-15T14:42:48Z"
+      "last_fired": "2026-06-26T13:42:37Z"
     },
     "NAVN_CP_BULL": {
-      "last_fired": "2026-06-15T14:42:47Z"
+      "last_fired": "2026-06-26T13:42:36Z"
     },
     "NAVN_PCT_UP_5": {
       "last_fired": "2026-06-24T16:22:29Z"
@@ -215,9 +215,9 @@
     "NAVN_PCT_DROP": {
       "last_fired": "2026-06-17T05:47:38Z"
     },
-    "open_position": false,
-    "open_entry": 20.850000381469727,
-    "open_time": "2026-06-15T14:42:48Z",
+    "open_position": true,
+    "open_entry": 22.200000762939453,
+    "open_time": "2026-06-26T13:42:37Z",
     "NAVN_VOL_SPIKE": {
       "last_fired": "2026-06-12T12:27:41Z"
     },
@@ -856,9 +856,12 @@
     "AEHR_PCT_DROP": {
       "last_fired": "2026-06-25T13:48:08Z"
     },
-    "open_position": true,
+    "open_position": false,
     "open_entry": 99.0,
-    "open_time": "2026-06-25T16:13:02Z"
+    "open_time": "2026-06-25T16:13:02Z",
+    "AEHR_MA_DEATH": {
+      "last_fired": "2026-06-26T13:43:10Z"
+    }
   },
   "TYGO": {
     "TYGO_POS_SIZE": {
