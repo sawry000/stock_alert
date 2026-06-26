@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T06:33:36Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_PCT_UP_5",
-    "type": "percent_change",
-    "price": 18.530000686645508,
-    "change_pct": 7.732562131659934,
-    "value": 7.732562131659934
-  },
-  {
-    "timestamp": "2026-06-24T06:37:40Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 3.0199999809265137,
-    "change_pct": 5.594404927500483,
-    "value": 5.594404927500483
-  },
-  {
     "timestamp": "2026-06-24T06:37:47Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP_5",
@@ -4498,5 +4480,23 @@
     "price": 27.760000228881836,
     "change_pct": 0.6044975895577043,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-26T10:17:47Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 14.850000381469727,
+    "change_pct": -0.33556790959915295,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-26T10:19:21Z",
+    "symbol": "GLD",
+    "alert_id": "GLD_RSI_OS_4H",
+    "type": "rsi",
+    "price": 369.4599914550781,
+    "change_pct": 0.27684058600535427,
+    "value": 30.85
   }
 ]
