@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T22:49:00Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.900000095367432,
-    "change_pct": -8.915475177654471,
-    "value": -8.915475177654471
-  },
-  {
     "timestamp": "2026-06-23T23:12:23Z",
     "symbol": "COHR",
     "alert_id": "COHR_NEWS_ANY",
@@ -4498,5 +4489,14 @@
     "price": 331.5899963378906,
     "change_pct": -1.8964507876063241,
     "value": 87.5
+  },
+  {
+    "timestamp": "2026-06-26T01:03:02Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 10.800000190734863,
+    "change_pct": -5.841323533261877,
+    "value": 1
   }
 ]
