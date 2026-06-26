@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T06:53:37Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.900000095367432,
-    "change_pct": -8.915475177654471,
-    "value": -8.915475177654471
-  },
-  {
     "timestamp": "2026-06-24T07:42:30Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4498,5 +4489,14 @@
     "price": 4.210000038146973,
     "change_pct": -0.6700632751280609,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-26T10:32:38Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 14.850000381469727,
+    "change_pct": -0.33556790959915295,
+    "value": 1
   }
 ]
