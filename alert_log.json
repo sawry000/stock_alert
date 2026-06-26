@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T16:58:56Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 18.31999969482422,
-    "change_pct": -0.1634894015029028,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-24T16:59:00Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 10.880000114440918,
     "change_pct": 0.7426074042196946,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-26T19:43:21Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 10.489999771118164,
+    "change_pct": 7.700202988892853,
+    "value": 7.700202988892853
   }
 ]
