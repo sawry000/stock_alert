@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T13:43:39Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_SL_BREAK",
-    "type": "support_resistance",
-    "price": 21.094999313354492,
-    "change_pct": -6.493797369882564,
-    "value": 21.094999313354492
-  },
-  {
     "timestamp": "2026-06-24T13:43:43Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 5.474999904632568,
     "change_pct": -3.609156608581538,
     "value": 18
+  },
+  {
+    "timestamp": "2026-06-26T14:28:19Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 4.264999866485596,
+    "change_pct": 0.6275921688749366,
+    "value": 3
   }
 ]
