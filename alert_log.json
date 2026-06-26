@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-23T23:22:38Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 28.690000534057617,
-    "change_pct": 0.5255800072095937,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-23T23:48:40Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 4.539999961853027,
-    "change_pct": -3.404256130786656,
-    "value": 28.2
-  },
-  {
-    "timestamp": "2026-06-23T23:48:48Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.440000057220459,
-    "change_pct": 9.254658264732367,
-    "value": 9.254658264732367
-  },
-  {
-    "timestamp": "2026-06-24T00:08:21Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 4.440000057220459,
-    "change_pct": 9.254658264732367,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-24T00:17:20Z",
     "symbol": "COHR",
     "alert_id": "COHR_NEWS_ANY",
@@ -4498,5 +4462,41 @@
     "price": 2.940000057220459,
     "change_pct": 9.293682424552381,
     "value": 9.293682424552381
+  },
+  {
+    "timestamp": "2026-06-26T01:27:48Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 92.52999877929688,
+    "change_pct": 0.9271365393726746,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-26T01:28:34Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 36.81999969482422,
+    "change_pct": -9.865361824175721,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-26T01:28:34Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_POS_SIZE",
+    "type": "position_size",
+    "price": 36.81999969482422,
+    "change_pct": -9.865361824175721,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-26T01:28:43Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 17.959999084472656,
+    "change_pct": -1.9115287576588886,
+    "value": 3
   }
 ]
