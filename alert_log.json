@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T05:38:23Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.71999979019165,
-    "change_pct": -7.741938867876609,
-    "value": -7.741938867876609
-  },
-  {
     "timestamp": "2026-06-24T05:38:45Z",
     "symbol": "VICR",
     "alert_id": "VICR_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 369.4599914550781,
     "change_pct": 0.27684058600535427,
     "value": 30.85
+  },
+  {
+    "timestamp": "2026-06-26T09:12:22Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 407.25,
+    "change_pct": 0.8044554455445545,
+    "value": 3
   }
 ]
