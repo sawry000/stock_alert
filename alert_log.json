@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T13:48:13Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_POS_SIZE",
-    "type": "position_size",
-    "price": 3.100100040435791,
-    "change_pct": -2.6778413877129714,
-    "value": 32
-  },
-  {
     "timestamp": "2026-06-24T13:48:39Z",
     "symbol": "NLST",
     "alert_id": "NLST_MTF_BULL",
@@ -4498,5 +4489,14 @@
     "price": 10.229999542236328,
     "change_pct": 5.030796121522874,
     "value": 9
+  },
+  {
+    "timestamp": "2026-06-26T15:39:00Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_CP_BULL",
+    "type": "candle_pattern",
+    "price": 16.290000915527344,
+    "change_pct": 0.1229312570826317,
+    "value": 1
   }
 ]
