@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T05:38:45Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_PCT_DROP",
-    "type": "percent_change",
-    "price": 336.1199951171875,
-    "change_pct": -8.331418766535705,
-    "value": -8.331418766535705
-  },
-  {
     "timestamp": "2026-06-24T05:42:25Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 407.25,
     "change_pct": 0.8044554455445545,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-26T09:28:45Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_PCT_UP_5",
+    "type": "percent_change",
+    "price": 2.940000057220459,
+    "change_pct": 9.293682424552381,
+    "value": 9.293682424552381
   }
 ]
