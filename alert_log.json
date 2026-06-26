@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T18:47:59Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.4549999237060547,
-    "change_pct": -5.2123581580673815,
-    "value": -5.2123581580673815
-  },
-  {
     "timestamp": "2026-06-24T18:54:32Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 119.25,
     "change_pct": 8.87428101889893,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-26T21:47:33Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_CP_BULL",
+    "type": "candle_pattern",
+    "price": 22.81999969482422,
+    "change_pct": 7.641507994453865,
+    "value": 1
   }
 ]
