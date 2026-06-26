@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T13:39:18Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_CP_BULL",
-    "type": "candle_pattern",
-    "price": 214.55999755859375,
-    "change_pct": 0.7323932199970657,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-24T13:39:58Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.679999828338623,
-    "change_pct": -5.835013514313415,
-    "value": -5.835013514313415
-  },
-  {
-    "timestamp": "2026-06-24T13:42:37Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 88.94000244140625,
-    "change_pct": -5.372909414399133,
-    "value": -5.372909414399133
-  },
-  {
     "timestamp": "2026-06-24T13:42:54Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_PCT_DROP",
@@ -4498,5 +4471,32 @@
     "price": 4.260000228881836,
     "change_pct": -5.3333282470703125,
     "value": -5.3333282470703125
+  },
+  {
+    "timestamp": "2026-06-26T14:12:32Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 28.290000915527344,
+    "change_pct": 2.5252631645744033,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-26T14:13:02Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_DROP",
+    "type": "percent_change",
+    "price": 92.80500030517578,
+    "change_pct": -5.300923465048654,
+    "value": -5.300923465048654
+  },
+  {
+    "timestamp": "2026-06-26T14:14:28Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_PCT_DROP",
+    "type": "percent_change",
+    "price": 16.19499969482422,
+    "change_pct": -5.788250757276221,
+    "value": -5.788250757276221
   }
 ]
