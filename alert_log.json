@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T21:03:56Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 17.979999542236328,
-    "change_pct": -2.0163512684668845,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-24T21:04:16Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 4.25,
     "change_pct": 0.2736881842204513,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-26T22:52:35Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_NEWS_C",
+    "type": "news_sentiment",
+    "price": 28.56999969482422,
+    "change_pct": 3.5400015033566943,
+    "value": 1
   }
 ]
