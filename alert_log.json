@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T21:44:47Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_PCT_DROP",
-    "type": "percent_change",
-    "price": 12.520000457763672,
-    "change_pct": -12.447549246407894,
-    "value": -12.447549246407894
-  },
-  {
     "timestamp": "2026-06-24T21:45:01Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 326.92999267578125,
     "change_pct": -1.5271106398249248,
     "value": 87.5
+  },
+  {
+    "timestamp": "2026-06-27T01:27:42Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "price": 1.9850000143051147,
+    "change_pct": -5.023922760520819,
+    "value": -5.023922760520819
   }
 ]
