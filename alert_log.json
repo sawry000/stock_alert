@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T21:45:01Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.53000020980835,
-    "change_pct": -8.853114490777669,
-    "value": -8.853114490777669
-  },
-  {
     "timestamp": "2026-06-24T21:45:06Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_PCT_DROP",
@@ -4498,5 +4489,14 @@
     "price": 1.9850000143051147,
     "change_pct": -5.023922760520819,
     "value": -5.023922760520819
+  },
+  {
+    "timestamp": "2026-06-27T01:37:50Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_NEWS_POS",
+    "type": "news_sentiment",
+    "price": 10.930000305175781,
+    "change_pct": 1.2055807068258844,
+    "value": 1
   }
 ]
