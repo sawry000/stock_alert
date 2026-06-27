@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T02:39:06Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 2.75,
-    "change_pct": 20.61403508771931,
-    "value": 3.9044383701042915
-  },
-  {
-    "timestamp": "2026-06-25T02:48:13Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.4000000953674316,
-    "change_pct": -7.335903653767113,
-    "value": -7.335903653767113
-  },
-  {
-    "timestamp": "2026-06-25T02:57:20Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 392.5,
-    "change_pct": 2.7460014135755633,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-25T03:04:06Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.75,
-    "change_pct": 20.61403508771931,
-    "value": 3.9044383701042915
-  },
-  {
     "timestamp": "2026-06-25T03:09:01Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_RSI_OS_4H",
@@ -4498,5 +4462,41 @@
     "price": 9.0,
     "change_pct": -8.814589665653488,
     "value": -8.814589665653488
+  },
+  {
+    "timestamp": "2026-06-27T06:17:39Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 94.0,
+    "change_pct": -1.5706806282722512,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-27T06:18:02Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_DROP",
+    "type": "percent_change",
+    "price": 91.81,
+    "change_pct": -6.3162309349295205,
+    "value": -6.3162309349295205
+  },
+  {
+    "timestamp": "2026-06-27T06:18:14Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 5.12,
+    "change_pct": 5.7851239669421535,
+    "value": 5.7851239669421535
+  },
+  {
+    "timestamp": "2026-06-27T06:18:33Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 2.88,
+    "change_pct": -2.040816326530614,
+    "value": 2
   }
 ]
