@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T03:49:58Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_RSI_OS_4H",
-    "type": "rsi",
-    "price": 365.9200134277344,
-    "change_pct": -2.7506807803613382,
-    "value": 25.26
-  },
-  {
     "timestamp": "2026-06-25T04:09:22Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 4.25,
     "change_pct": 0.2736881842204513,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-27T07:48:55Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_CP_BULL",
+    "type": "candle_pattern",
+    "price": 17.110000610351562,
+    "change_pct": 5.162880211134375,
+    "value": 1
   }
 ]
