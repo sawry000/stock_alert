@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T03:09:01Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 5.670000076293945,
-    "change_pct": -6.072953710798374,
-    "value": 30.86
-  },
-  {
     "timestamp": "2026-06-25T03:09:02Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_POS_SIZE",
@@ -4497,6 +4488,15 @@
     "type": "mtf_alignment",
     "price": 2.88,
     "change_pct": -2.040816326530614,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-27T06:23:32Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 38.27000045776367,
+    "change_pct": 4.849316322640197,
     "value": 2
   }
 ]
