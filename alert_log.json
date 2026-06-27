@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T22:08:28Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.25,
-    "change_pct": -6.387665198237887,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-24T22:09:17Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4489,14 @@
     "price": 119.25,
     "change_pct": 8.87428101889893,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-27T01:53:29Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 10.5600004196167,
+    "change_pct": 8.418895478610873,
+    "value": 8.418895478610873
   }
 ]
