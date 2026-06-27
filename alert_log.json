@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T00:17:27Z",
-    "symbol": "ENPH",
-    "alert_id": "ENPH_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 47.81999969482422,
-    "change_pct": 0.8860753055363294,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-25T00:24:10Z",
     "symbol": "VICR",
     "alert_id": "VICR_BT_VOL",
@@ -4498,5 +4489,14 @@
     "price": 33.939998626708984,
     "change_pct": 4.785423361250336,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-27T03:58:16Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP_5",
+    "type": "percent_change",
+    "price": 10.5600004196167,
+    "change_pct": 8.418895478610873,
+    "value": 8.418895478610873
   }
 ]
