@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T03:09:02Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_POS_SIZE",
-    "type": "position_size",
-    "price": 5.670000076293945,
-    "change_pct": -6.072953710798374,
-    "value": 17
-  },
-  {
     "timestamp": "2026-06-25T03:39:07Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_SPIKE",
@@ -4498,5 +4489,14 @@
     "price": 38.27000045776367,
     "change_pct": 4.849316322640197,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-27T06:27:48Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MTF_BULL",
+    "type": "mtf_alignment",
+    "price": 14.899999618530273,
+    "change_pct": -2.560199509515244e-06,
+    "value": 3
   }
 ]
