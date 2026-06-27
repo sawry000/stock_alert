@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T23:27:33Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 399.9200134277344,
-    "change_pct": -0.621238152245326,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-24T23:49:12Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4497,6 +4488,15 @@
     "type": "mtf_alignment",
     "price": 14.899999618530273,
     "change_pct": -2.560199509515244e-06,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-27T02:32:36Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MTF_C",
+    "type": "mtf_alignment",
+    "price": 28.56999969482422,
+    "change_pct": 3.5400015033566943,
     "value": 3
   }
 ]
