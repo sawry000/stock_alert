@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-24T22:18:09Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 11.380000114440918,
-    "change_pct": -6.367502493513047,
-    "value": -6.367502493513047
-  },
-  {
-    "timestamp": "2026-06-24T22:18:25Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_DROP",
-    "type": "percent_change",
-    "price": 81.55000305175781,
-    "change_pct": -6.275137281050674,
-    "value": -6.275137281050674
-  },
-  {
     "timestamp": "2026-06-24T22:19:40Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_SPIKE",
@@ -4498,5 +4480,23 @@
     "price": 22.81999969482422,
     "change_pct": 7.641507994453865,
     "value": 7.641507994453865
+  },
+  {
+    "timestamp": "2026-06-27T02:08:40Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_UP_5",
+    "type": "percent_change",
+    "price": 119.25,
+    "change_pct": 8.87428101889893,
+    "value": 8.87428101889893
+  },
+  {
+    "timestamp": "2026-06-27T02:08:54Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_PCT_UP_5",
+    "type": "percent_change",
+    "price": 17.110000610351562,
+    "change_pct": 5.162880211134375,
+    "value": 5.162880211134375
   }
 ]
