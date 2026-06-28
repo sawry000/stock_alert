@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T08:02:37Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.390000104904175,
-    "change_pct": 5.752217031158187,
-    "value": 5.752217031158187
-  },
-  {
-    "timestamp": "2026-06-25T08:02:39Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_POS_SIZE",
-    "type": "position_size",
-    "price": 2.390000104904175,
-    "change_pct": 5.752217031158187,
-    "value": 41
-  },
-  {
     "timestamp": "2026-06-25T08:03:59Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_VOL_ALARM",
@@ -4498,5 +4480,23 @@
     "price": 6.550000190734863,
     "change_pct": -6.160455720130904,
     "value": -6.160455720130904
+  },
+  {
+    "timestamp": "2026-06-28T00:07:21Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_RSI_OB",
+    "type": "rsi",
+    "price": 380.56,
+    "change_pct": -5.801980198019802,
+    "value": 100.0
+  },
+  {
+    "timestamp": "2026-06-28T00:07:26Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_RSI_OB",
+    "type": "rsi",
+    "price": 391.74,
+    "change_pct": -1.0757575757575735,
+    "value": 100.0
   }
 ]
