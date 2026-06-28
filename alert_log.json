@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T11:54:10Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_ALARM",
-    "type": "volume_spike",
-    "price": 2.75,
-    "change_pct": -2.1143304620203645,
-    "value": 3.719872251271658
-  },
-  {
-    "timestamp": "2026-06-25T11:59:07Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_VOL_SPIKE",
-    "type": "volume_spike",
-    "price": 2.75,
-    "change_pct": -2.1143304620203645,
-    "value": 3.719872251271658
-  },
-  {
     "timestamp": "2026-06-25T11:59:28Z",
     "symbol": "GLD",
     "alert_id": "GLD_RSI_OS_4H",
@@ -4498,5 +4480,23 @@
     "price": 391.74,
     "change_pct": -1.0757575757575735,
     "value": 100.0
+  },
+  {
+    "timestamp": "2026-06-28T06:02:30Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_ALIGN",
+    "type": "mtf_alignment",
+    "price": 391.739990234375,
+    "change_pct": -1.075760041824495,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-28T06:02:31Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_POS_SIZE",
+    "type": "position_size",
+    "price": 391.739990234375,
+    "change_pct": -1.075760041824495,
+    "value": 0.2552714
   }
 ]
