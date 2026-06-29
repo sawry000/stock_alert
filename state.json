@@ -284,9 +284,9 @@
     "AAOI_PCT_DROP": {
       "last_fired": "2026-06-26T13:52:36Z"
     },
-    "open_position": false,
-    "open_entry": 172.19000244140625,
-    "open_time": "2026-06-22T17:57:39Z",
+    "open_position": true,
+    "open_entry": 142.5749969482422,
+    "open_time": "2026-06-29T13:48:32Z",
     "AAOI_MA_DEATH": {
       "last_fired": "2026-06-12T13:37:44Z"
     },
@@ -295,6 +295,9 @@
       "seen_news": [
         "0ebb0d5f8742"
       ]
+    },
+    "AAOI_PCT_UP": {
+      "last_fired": "2026-06-29T13:48:32Z"
     }
   },
   "AIXI": {
@@ -602,11 +605,14 @@
     "TGEN_POS_SIZE": {
       "last_fired": "2026-06-23T13:53:48Z"
     },
-    "open_position": false,
-    "open_entry": 6.070000171661377,
-    "open_time": "2026-06-23T13:53:48Z",
+    "open_position": true,
+    "open_entry": 5.420000076293945,
+    "open_time": "2026-06-29T13:48:48Z",
     "TGEN_MA_DEATH": {
       "last_fired": "2026-06-24T17:18:26Z"
+    },
+    "TGEN_PCT_UP": {
+      "last_fired": "2026-06-29T13:48:48Z"
     }
   },
   "WGS": {

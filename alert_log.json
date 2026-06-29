@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T15:49:40Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 16.709999084472656,
-    "change_pct": -12.78706114575858,
-    "value": -0.197
-  },
-  {
-    "timestamp": "2026-06-25T16:04:34Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_RSI_OS_4H",
-    "type": "rsi",
-    "price": 370.4999084472656,
-    "change_pct": 0.6355683526905692,
-    "value": 31.94
-  },
-  {
     "timestamp": "2026-06-25T16:13:01Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_CP_BULL",
@@ -4519,5 +4501,25 @@
     "price": 131.764404296875,
     "change_pct": 2.9409408569335938,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-29T13:48:32Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 142.5749969482422,
+    "change_pct": 6.451523918642275,
+    "value": 6.451523918642275
+  },
+  {
+    "timestamp": "2026-06-29T13:48:48Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 5.420000076293945,
+    "change_pct": 6.274511299881288,
+    "value": 6.274511299881288
   }
 ]
