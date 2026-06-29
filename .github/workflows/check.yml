@@ -1,62 +1,152 @@
-name: Stock Alert PRO
+name: "Halal Stock Alert PRO — Autonomous Pipeline"
 
-# ═══════════════════════════════════════════════════════════
-#  Triggered by Google Apps Script via workflow_dispatch
-#  ไม่มี schedule — GAS เป็นตัวเรียก
-# ═══════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════════════════════
+#  ⚠️  ไม่มี schedule cron ที่นี่เลย — GAS เป็นตัวเรียก workflow_dispatch
+#  เหตุผล: GitHub Actions cron ไม่ตรงเวลา delay ได้ 5-30 นาที
+#
+#  GAS Trigger → workflow_dispatch:
+#    alertTrigger()   → run_mode: alert_only   (ทุก 30 นาที ช่วงตลาดเปิด)
+#    screenerTrigger()→ run_mode: screener_only (07:30 BKK ทุกเช้า)
+# ═══════════════════════════════════════════════════════════════════════════
 
 on:
   workflow_dispatch:
+    inputs:
+      run_mode:
+        description: "เลือก mode"
+        required: true
+        default: "alert_only"
+        type: choice
+        options:
+          - alert_only
+          - screener_only
+          - full_pipeline
 
 permissions:
   contents: write
 
+env:
+  PYTHON_VERSION: "3.11"
+
+# ═══════════════════════════════════════════════════════════════════════════
+#  JOB 1: DAILY SCREENER
+#  GAS เรียกตอน: screenerTrigger() หรือ fullPipelineTrigger()
+# ═══════════════════════════════════════════════════════════════════════════
 jobs:
-  check-alerts:
-    name: "Check All Alert Types"
+  daily-screener:
+    name: "🔍 Daily Halal Screener"
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 50
+    if: >
+      github.event.inputs.run_mode == 'screener_only' ||
+      github.event.inputs.run_mode == 'full_pipeline'
 
     steps:
-      # ── 1. Checkout ──────────────────────────────────────
-      - name: "📥 Checkout repository"
+      - name: "📥 Checkout"
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── 2. Setup Python ───────────────────────────────────
-      - name: "🐍 Setup Python 3.11"
+      - name: "🐍 Setup Python ${{ env.PYTHON_VERSION }}"
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-          # ❌ ลบ cache: pip ออก — เพราะไม่มี requirements.txt
-          # cache: pip  ← ตัวนี้ทำให้ error และ skip steps ถัดไป
+          python-version: ${{ env.PYTHON_VERSION }}
 
-      # ── 3. Install dependencies ───────────────────────────
+      - name: "📦 Install dependencies"
+        run: |
+          pip install --upgrade pip --quiet
+          pip install yfinance requests --quiet
+          echo "✅ yfinance: $(pip show yfinance | grep Version)"
+
+      - name: "🔍 Validate universe.json"
+        run: |
+          python3 - << 'PYEOF'
+          import json, sys
+          try:
+              data = json.load(open("universe.json"))
+              n = len(data.get("universe", []))
+              print(f"✅ universe.json: {n} tickers")
+              if n == 0:
+                  print("⚠️ Universe ว่าง — screener จะไม่ทำอะไร")
+          except Exception as e:
+              print(f"❌ universe.json error: {e}")
+              sys.exit(1)
+          PYEOF
+
+      - name: "🔍 Run Daily Screener"
+        env:
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY:         ${{ secrets.GEMINI_API_KEY }}
+          ACCOUNT_SIZE_PER_STOCK: "100"
+        run: |
+          echo "🕐 UTC: $(date -u '+%Y-%m-%d %H:%M:%S')"
+          echo "🕐 ICT: $(TZ='Asia/Bangkok' date '+%Y-%m-%d %H:%M:%S')"
+          python3 daily_screener.py
+
+      - name: "💾 Commit screener results"
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add watchlist.json screener_log.json screener_state.json
+          git diff --staged --quiet || \
+            git commit -m "screener: daily run $(date -u '+%Y-%m-%d') [skip ci]"
+          git push || echo "Nothing to push"
+
+      - name: "📤 Upload screener log"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screener-log-${{ github.run_number }}
+          path: screener_log.json
+          retention-days: 30
+
+# ═══════════════════════════════════════════════════════════════════════════
+#  JOB 2: ALERT ENGINE
+#  GAS เรียกตอน: alertTrigger() หรือ fullPipelineTrigger()
+# ═══════════════════════════════════════════════════════════════════════════
+  alert-engine:
+    name: "🚨 Alert Engine"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: >
+      github.event.inputs.run_mode == 'alert_only' ||
+      github.event.inputs.run_mode == 'full_pipeline'
+
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "🐍 Setup Python ${{ env.PYTHON_VERSION }}"
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
       - name: "📦 Install dependencies"
         run: |
           pip install --upgrade pip --quiet
           pip install yfinance --quiet
-          echo "✅ yfinance: $(pip show yfinance | grep Version)"
 
-      # ── 4. Validate watchlist.json ─────────────────────────
       - name: "🔍 Validate watchlist.json"
         run: |
-          python3 -c "
+          python3 - << 'PYEOF'
           import json, sys
           try:
-              with open('watchlist.json') as f:
-                  data = json.load(f)
-              stocks = data.get('watchlist', [])
-              alerts_count = sum(len(s.get('alerts',[])) for s in stocks)
-              print(f'✅ watchlist.json: {len(stocks)} symbols, {alerts_count} alerts')
+              data = json.load(open("watchlist.json"))
+              stocks = data.get("watchlist", [])
+              alerts_count = sum(len(s.get("alerts", [])) for s in stocks)
+              print(f"✅ watchlist.json: {len(stocks)} symbols, {alerts_count} alerts")
+              if len(stocks) == 0:
+                  print("⚠️ Watchlist ว่าง — รอ screener เพิ่มหุ้น")
           except Exception as e:
-              print(f'❌ watchlist.json error: {e}')
+              print(f"❌ watchlist.json error: {e}")
               sys.exit(1)
-          "
+          PYEOF
 
-      # ── 5. Run Alert Engine ────────────────────────────────
-      - name: "🚨 Run Alert Engine PRO"
+      - name: "🚨 Run Alert Engine"
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -65,17 +155,16 @@ jobs:
           echo "🕐 ICT: $(TZ='Asia/Bangkok' date '+%Y-%m-%d %H:%M:%S')"
           python3 alert_engine.py
 
-      # ── 6. Commit state + log ──────────────────────────────
       - name: "💾 Commit state and log"
         if: always()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add state.json alert_log.json
-          git diff --staged --quiet || git commit -m "chore: update alert state [skip ci]"
+          git diff --staged --quiet || \
+            git commit -m "alert: run $(date -u '+%Y-%m-%dT%H:%M') [skip ci]"
           git push || echo "Nothing to push"
 
-      # ── 7. Upload log artifact ─────────────────────────────
       - name: "📤 Upload alert log"
         if: always()
         uses: actions/upload-artifact@v4
