@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T16:32:51Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_POS_SIZE",
-    "type": "position_size",
-    "price": 19.809999465942383,
-    "change_pct": -4.622053606440138,
-    "value": 5
-  },
-  {
-    "timestamp": "2026-06-25T16:38:14Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 4.980000019073486,
-    "change_pct": 5.063291541634728,
-    "value": 5.063291541634728
-  },
-  {
-    "timestamp": "2026-06-25T16:52:52Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 10.449999809265137,
-    "change_pct": -8.892765394375447,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-25T17:03:41Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_UP_5",
@@ -4526,5 +4499,35 @@
     "price": 6.585100173950195,
     "change_pct": -5.386491753589148,
     "value": -5.386491753589148
+  },
+  {
+    "timestamp": "2026-06-29T14:13:25Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 344.0,
+    "change_pct": -9.208477394494441,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-06-29T14:13:47Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 9.9399995803833,
+    "change_pct": -5.333337329682849,
+    "value": -5.333337329682849
+  },
+  {
+    "timestamp": "2026-06-29T14:13:51Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 20.280799865722656,
+    "change_pct": -6.0203898715354125,
+    "value": -6.0203898715354125
   }
 ]
