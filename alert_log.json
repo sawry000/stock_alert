@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T17:19:03Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_POS_SIZE",
-    "type": "position_size",
-    "price": 37.14500045776367,
-    "change_pct": -9.069766321263964,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-25T17:19:15Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_MTF_BULL",
@@ -4532,5 +4523,15 @@
     "price": 7.052199840545654,
     "change_pct": 6.048117902942164,
     "value": 6.048117902942164
+  },
+  {
+    "timestamp": "2026-06-29T16:09:41Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2014.8907470703125,
+    "change_pct": -4.4627219847078825,
+    "value": 2
   }
 ]
