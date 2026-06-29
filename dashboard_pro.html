@@ -723,7 +723,7 @@ input[type=password]{letter-spacing:2px}
           <div class="ptitle" style="color:var(--purple)">
             <span class="msi" style="font-size:18px;color:var(--purple)">public</span> UNIVERSE MANAGER
           </div>
-          <div class="psub">จัดการหุ้น 1,200+ ตัว — Halal Screener จะ scan ทุกเช้า 07:30 BKK อัตโนมัติ</div>
+          <div class="psub">จัดการหุ้น 1,200+ ตัว — Halal Screener scan ทุกเช้า 07:30 BKK | คอลัมน์ Halal + Purify% จะอัปเดตหลัง screener รัน</div>
         </div>
         <div class="bgrp">
           <button class="btn btn-sm btn-ghost" onclick="uniSyncGH()" id="uni-sync-btn">
@@ -805,6 +805,7 @@ input[type=password]{letter-spacing:2px}
                 <th style="cursor:pointer" onclick="uniSort('purify')">Purify% ↕</th>
                 <th>สถานะ</th>
                 <th>เพิ่มเมื่อ</th>
+                <th style="cursor:pointer" onclick="uniSort('checked')">Checked ↕</th>
                 <th style="width:60px"></th>
               </tr>
             </thead>
@@ -3379,10 +3380,11 @@ function uniRenderTable() {
   const query = (document.getElementById('uni-search')?.value || '').toLowerCase();
   let rows    = (UNI.universe || []).map((r, i) => ({
     idx: i, sym: uniSym(r).toUpperCase(),
-    name: r.name || '-',
-    halal: r.halal_status || 'UNKNOWN',
-    purify: r.purify_pct != null ? r.purify_pct : null,
-    added: r.added_at ? r.added_at.substring(0,10) : '-',
+    name: typeof r === 'string' ? r : (r.name || '-'),
+    halal: typeof r === 'string' ? 'UNKNOWN' : (r.halal_status || 'UNKNOWN'),
+    purify: typeof r === 'string' ? null : (r.purify_pct != null ? r.purify_pct : null),
+    added: typeof r === 'string' ? '-' : (r.added_at ? r.added_at.substring(0,10) : '-'),
+    checked: typeof r === 'string' ? null : (r.last_checked || null),
   }));
 
   // Filter
@@ -3395,8 +3397,14 @@ function uniRenderTable() {
 
   // Sort
   rows.sort((a, b) => {
-    let av = uniSortKey === 'symbol' ? a.sym : uniSortKey === 'halal' ? a.halal : (a.purify ?? 9999);
-    let bv = uniSortKey === 'symbol' ? b.sym : uniSortKey === 'halal' ? b.halal : (b.purify ?? 9999);
+    let av = uniSortKey === 'symbol' ? a.sym
+           : uniSortKey === 'halal'   ? a.halal
+           : uniSortKey === 'checked' ? (a.checked || '')
+           : (a.purify ?? 9999);
+    let bv = uniSortKey === 'symbol' ? b.sym
+           : uniSortKey === 'halal'   ? b.halal
+           : uniSortKey === 'checked' ? (b.checked || '')
+           : (b.purify ?? 9999);
     return uniSortAsc ? (av < bv ? -1 : av > bv ? 1 : 0) : (av > bv ? -1 : av < bv ? 1 : 0);
   });
 
@@ -3412,20 +3420,22 @@ function uniRenderTable() {
       ? '<span style="color:var(--green);font-family:var(--mono);font-size:10px;font-weight:700">✅ HALAL</span>'
       : r.halal === 'NOT_HALAL'
         ? '<span style="color:var(--red);font-family:var(--mono);font-size:10px;font-weight:700">❌ NOT</span>'
-        : '<span style="color:var(--gold);font-family:var(--mono);font-size:10px">⏳ ?</span>';
+        : '<span style="color:var(--gold);font-family:var(--mono);font-size:10px">⏳ ยังไม่ scan</span>';
     const purStr = r.purify != null
       ? `<span style="color:${r.purify > 3 ? 'var(--red)' : 'var(--green)'};font-family:var(--mono);font-size:11px">${r.purify.toFixed(1)}%</span>`
       : '<span style="color:var(--text3)">-</span>';
     const wlTag = inWl ? '<span style="font-size:10px;color:var(--cyan);font-family:var(--mono)">📋 WL</span>' : '';
     const rowBg = inWl ? 'background:rgba(0,229,255,0.03)' : '';
+    const checked = r.checked ? r.checked.substring(0,10) : '<span style="color:var(--text3)">-</span>';
     return `<tr style="${rowBg}" data-sym="${r.sym}">
       <td><input type="checkbox" class="uni-chk" value="${r.sym}" style="accent-color:var(--purple)"></td>
       <td style="font-family:var(--mono);font-size:12px;font-weight:600;color:var(--cyan)">${r.sym}</td>
-      <td style="font-size:11px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.name}</td>
+      <td style="font-size:11px;color:var(--text2);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.name}</td>
       <td>${hTag}</td>
       <td>${purStr}</td>
       <td>${wlTag}</td>
       <td style="font-size:10px;color:var(--text3);font-family:var(--mono)">${r.added}</td>
+      <td style="font-size:10px;color:var(--text3);font-family:var(--mono)">${checked}</td>
       <td><button class="btn btn-xs btn-red" onclick="uniDeleteOne('${r.sym}')"><span class="msi">delete</span></button></td>
     </tr>`;
   }).join('');

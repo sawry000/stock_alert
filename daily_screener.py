@@ -963,6 +963,24 @@ def main():
                     watchlist[i]["screened_at"]  = now_str()
                     break
 
+        # ── อัปเดต universe entry ด้วย (ไม่ว่าจะ remove หรือไม่) ──────
+        for _ui, _ue in enumerate(universe_data["universe"]):
+            _us = (_ue if isinstance(_ue, str) else _ue.get("symbol", "")).upper()
+            if _us == sym:
+                if isinstance(_ue, str):
+                    universe_data["universe"][_ui] = {
+                        "symbol": sym, "name": sym,
+                        "added_at": now_str(),
+                        "halal_status": halal_now["status"],
+                        "purify_pct":   halal_now.get("purify_pct"),
+                        "last_checked": now_str(),
+                    }
+                else:
+                    _ue["halal_status"] = halal_now["status"]
+                    _ue["purify_pct"]   = halal_now.get("purify_pct")
+                    _ue["last_checked"] = now_str()
+                break
+
     # บันทึก watchlist หลัง removal
     save_watchlist(wl_settings, watchlist)
 
@@ -1002,6 +1020,24 @@ def main():
         time.sleep(0.5)
         halal = fetch_halal_data(sym, cfg)
         log_print(f"  Halal: {halal['status']}  Purify: {halal.get('purify_pct')}%")
+
+        # ── Write halal result กลับลง universe entry ──────────────
+        for _ui, _ue in enumerate(universe_data["universe"]):
+            _us = (_ue if isinstance(_ue, str) else _ue.get("symbol", "")).upper()
+            if _us == sym:
+                if isinstance(_ue, str):
+                    universe_data["universe"][_ui] = {
+                        "symbol": sym, "name": sym,
+                        "added_at": now_str(),
+                        "halal_status": halal["status"],
+                        "purify_pct":   halal.get("purify_pct"),
+                        "last_checked": now_str(),
+                    }
+                else:
+                    _ue["halal_status"] = halal["status"]
+                    _ue["purify_pct"]   = halal.get("purify_pct")
+                    _ue["last_checked"] = now_str()
+                break
 
         if halal["status"] == "NOT_HALAL":
             log_print(f"  ❌ Gate 1: NOT HALAL — ข้าม")
@@ -1146,6 +1182,10 @@ def main():
 
     # อัปเดต watchlist จาก halal re-check (screened_at)
     save_watchlist(wl_settings, watchlist)
+
+    # ── บันทึก universe.json (พร้อม halal_status + purify_pct ที่ scan ได้) ──
+    save_json(UNIVERSE_PATH, universe_data)
+    log_print(f"💾 Saved universe.json ({len(universe_data['universe'])} tickers)")
 
     log_print("✅ Screener เสร็จสมบูรณ์")
 
