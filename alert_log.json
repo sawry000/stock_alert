@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T17:27:30Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_POS_KELLY",
-    "type": "position_size",
-    "price": 27.485000610351562,
-    "change_pct": -1.7691186191866974,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-25T17:34:26Z",
     "symbol": "VELO",
     "alert_id": "VELO_NEWS_BAD",
@@ -4536,5 +4527,15 @@
     "price": 388.0,
     "change_pct": 2.4043917759772,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-29T18:48:46Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 2.8450000286102295,
+    "change_pct": -5.16666571299235,
+    "value": -5.16666571299235
   }
 ]
