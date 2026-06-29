@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T14:54:00Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_CP_BULL",
-    "type": "candle_pattern",
-    "price": 5.755000114440918,
-    "change_pct": 0.26132603555605843,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-25T14:54:00Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_POS_SIZE",
-    "type": "position_size",
-    "price": 5.755000114440918,
-    "change_pct": 0.26132603555605843,
-    "value": 17
-  },
-  {
     "timestamp": "2026-06-25T15:02:27Z",
     "symbol": "COHR",
     "alert_id": "COHR_MTF_ALIGN",
@@ -4511,6 +4493,26 @@
     "action": "BUY",
     "price": 21.43000030517578,
     "change_pct": 1.467804475264111,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-29T08:03:36Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 3.2100000381469727,
+    "change_pct": -5.8651015206166415,
+    "value": -5.8651015206166415
+  },
+  {
+    "timestamp": "2026-06-29T08:03:46Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 33.939998626708984,
+    "change_pct": -0.29377606724739946,
     "value": 3
   }
 ]
