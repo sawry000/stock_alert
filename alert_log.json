@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T15:02:27Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 398.7300109863281,
-    "change_pct": -2.3925343653450986,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-25T15:02:28Z",
     "symbol": "COHR",
     "alert_id": "COHR_POS_SIZE",
@@ -4514,5 +4505,15 @@
     "price": 33.939998626708984,
     "change_pct": -0.29377606724739946,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-29T08:09:11Z",
+    "symbol": "SHLS",
+    "alert_id": "SHLS_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 9.0,
+    "change_pct": -8.814589665653488,
+    "value": -8.814589665653488
   }
 ]
