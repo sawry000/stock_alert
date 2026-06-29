@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T17:19:51Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 5.400000095367432,
-    "change_pct": -7.512073179059501,
-    "value": 27.52
-  },
-  {
     "timestamp": "2026-06-25T17:27:29Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4534,5 +4525,15 @@
     "price": 4.375,
     "change_pct": 6.434740299233669,
     "value": 6.434740299233669
+  },
+  {
+    "timestamp": "2026-06-29T16:48:53Z",
+    "symbol": "ANNA",
+    "alert_id": "ANNA_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 2.799999952316284,
+    "change_pct": -5.075093998837706,
+    "value": -5.075093998837706
   }
 ]
