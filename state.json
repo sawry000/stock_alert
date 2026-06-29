@@ -1391,8 +1391,12 @@
     "VPG_PCT_DROP": {
       "last_fired": "2026-06-29T04:39:17Z"
     },
-    "open_position": false,
-    "_confirm_VPG_MTF_BULL": 1
+    "open_position": true,
+    "VPG_MTF_BULL": {
+      "last_fired": "2026-06-29T13:44:20Z"
+    },
+    "open_entry": 131.764404296875,
+    "open_time": "2026-06-29T13:44:20Z"
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
