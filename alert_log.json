@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T17:03:41Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.8299999237060547,
-    "change_pct": 5.204458130336607,
-    "value": 5.204458130336607
-  },
-  {
-    "timestamp": "2026-06-25T17:18:01Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 91.83499908447266,
-    "change_pct": 0.16906531901466998,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-25T17:19:03Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_MTF_BULL",
@@ -4529,5 +4511,25 @@
     "price": 20.280799865722656,
     "change_pct": -6.0203898715354125,
     "value": -6.0203898715354125
+  },
+  {
+    "timestamp": "2026-06-29T14:18:40Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 86.43499755859375,
+    "change_pct": -5.276715004280822,
+    "value": -5.276715004280822
+  },
+  {
+    "timestamp": "2026-06-29T14:19:25Z",
+    "symbol": "VECO",
+    "alert_id": "VECO_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 66.19999694824219,
+    "change_pct": -5.469089035781542,
+    "value": -5.469089035781542
   }
 ]

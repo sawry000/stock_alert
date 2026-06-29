@@ -875,7 +875,7 @@
       "last_fired": "2026-06-26T13:38:01Z"
     },
     "AEHR_PCT_DROP": {
-      "last_fired": "2026-06-29T00:03:16Z"
+      "last_fired": "2026-06-29T14:18:40Z"
     },
     "open_position": false,
     "open_entry": 99.0,
@@ -1449,5 +1449,11 @@
     "open_position": true,
     "open_entry": 12.039899826049805,
     "open_time": "2026-06-29T13:39:27Z"
+  },
+  "VECO": {
+    "VECO_PCT_DROP": {
+      "last_fired": "2026-06-29T14:19:25Z"
+    },
+    "open_position": false
   }
 }
