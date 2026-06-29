@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T15:02:28Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_POS_SIZE",
-    "type": "position_size",
-    "price": 398.7300109863281,
-    "change_pct": -2.3925343653450986,
-    "value": 0.2507963
-  },
-  {
     "timestamp": "2026-06-25T15:14:13Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_RSI_OS_4H",
@@ -4515,5 +4506,15 @@
     "price": 9.0,
     "change_pct": -8.814589665653488,
     "value": -8.814589665653488
+  },
+  {
+    "timestamp": "2026-06-29T13:33:45Z",
+    "symbol": "RDW",
+    "alert_id": "RDW_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 11.729999542236328,
+    "change_pct": 7.218262225316742,
+    "value": 7.218262225316742
   }
 ]

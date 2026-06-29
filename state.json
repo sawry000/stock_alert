@@ -51,11 +51,14 @@
     "RDW_PCT_UP_5": {
       "last_fired": "2026-06-12T06:03:07Z"
     },
-    "open_position": false,
-    "open_entry": 15.270000457763672,
-    "open_time": "2026-06-11T13:33:10Z",
+    "open_position": true,
+    "open_entry": 11.729999542236328,
+    "open_time": "2026-06-29T13:33:45Z",
     "RDW_MA_DEATH": {
       "last_fired": "2026-06-15T14:27:59Z"
+    },
+    "RDW_PCT_UP": {
+      "last_fired": "2026-06-29T13:33:45Z"
     }
   },
   "COHR": {
@@ -1388,7 +1391,8 @@
     "VPG_PCT_DROP": {
       "last_fired": "2026-06-29T04:39:17Z"
     },
-    "open_position": false
+    "open_position": false,
+    "_confirm_VPG_MTF_BULL": 1
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1424,5 +1428,8 @@
     "open_position": true,
     "open_entry": 21.43000030517578,
     "open_time": "2026-06-29T04:45:05Z"
+  },
+  "SVCO": {
+    "_confirm_SVCO_MTF_BULL": 1
   }
 }
