@@ -1367,10 +1367,20 @@
     "open_position": false
   },
   "MXL": {
-    "_confirm_MXL_MTF_BULL": 1
+    "MXL_MTF_BULL": {
+      "last_fired": "2026-06-29T04:44:39Z"
+    },
+    "open_position": true,
+    "open_entry": 96.5999984741211,
+    "open_time": "2026-06-29T04:44:39Z"
   },
   "ZVIA": {
-    "_confirm_ZVIA_MTF_BULL": 1
+    "ZVIA_MTF_BULL": {
+      "last_fired": "2026-06-29T04:44:42Z"
+    },
+    "open_position": true,
+    "open_entry": 1.559999942779541,
+    "open_time": "2026-06-29T04:44:42Z"
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1379,19 +1389,38 @@
     "open_position": false
   },
   "TMCI": {
-    "_confirm_TMCI_MTF_BULL": 1
+    "TMCI_MTF_BULL": {
+      "last_fired": "2026-06-29T04:44:51Z"
+    },
+    "open_position": true,
+    "open_entry": 4.460000038146973,
+    "open_time": "2026-06-29T04:44:51Z"
   },
   "TKNO": {
-    "_confirm_TKNO_MTF_BULL": 1
+    "TKNO_MTF_BULL": {
+      "last_fired": "2026-06-29T04:44:55Z"
+    },
+    "open_position": true,
+    "open_entry": 5.75,
+    "open_time": "2026-06-29T04:44:55Z"
   },
   "SNDK": {
-    "_confirm_SNDK_MTF_BULL": 1,
     "SNDK_PCT_DROP": {
       "last_fired": "2026-06-29T04:39:28Z"
     },
-    "open_position": false
+    "open_position": true,
+    "SNDK_MTF_BULL": {
+      "last_fired": "2026-06-29T04:45:01Z"
+    },
+    "open_entry": 2090.7099609375,
+    "open_time": "2026-06-29T04:45:01Z"
   },
   "RFIL": {
-    "_confirm_RFIL_MTF_BULL": 1
+    "RFIL_MTF_BULL": {
+      "last_fired": "2026-06-29T04:45:05Z"
+    },
+    "open_position": true,
+    "open_entry": 21.43000030517578,
+    "open_time": "2026-06-29T04:45:05Z"
   }
 }
