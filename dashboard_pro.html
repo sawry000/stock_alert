@@ -464,6 +464,7 @@ input[type=password]{letter-spacing:2px}
     <div class="sdiv"></div>
     <div class="slabel">Tools</div>
     <button class="nbtn" onclick="show('portfolio-health')" id="nav-portfolio-health"><span class="msi">monitor_heart</span> Portfolio Health</button>
+    <button class="nbtn" onclick="show('universe')" id="nav-universe"><span class="msi">public</span> Universe Manager <span class="cnt" id="uni-cnt" style="background:var(--purple)">0</span></button>
     <div class="sdiv"></div>
     <div class="slabel">Config</div>
     <button class="nbtn" onclick="show('settings')"><span class="msi">settings</span> Settings</button>
@@ -714,6 +715,196 @@ input[type=password]{letter-spacing:2px}
       </div>
     </div>
 
+
+    <!-- ════ UNIVERSE MANAGER ════ -->
+    <div class="panel" id="panel-universe">
+      <div class="phd">
+        <div>
+          <div class="ptitle" style="color:var(--purple)">
+            <span class="msi" style="font-size:18px;color:var(--purple)">public</span> UNIVERSE MANAGER
+          </div>
+          <div class="psub">จัดการหุ้น 1,200+ ตัว — Halal Screener จะ scan ทุกเช้า 07:30 BKK อัตโนมัติ</div>
+        </div>
+        <div class="bgrp">
+          <button class="btn btn-sm btn-ghost" onclick="uniSyncGH()" id="uni-sync-btn">
+            <span class="msi">sync</span> Sync GitHub
+          </button>
+          <button class="btn btn-sm" style="background:var(--purple);color:#fff" onclick="uniExport()">
+            <span class="msi">download</span> Export JSON
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Bar -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px" id="uni-stats-bar">
+        <div class="stat" style="--sc:var(--purple)">
+          <div class="sv" id="uni-total">0</div><div class="sl">Universe</div>
+        </div>
+        <div class="stat" style="--sc:var(--green)">
+          <div class="sv" id="uni-halal-count">0</div><div class="sl">✅ Halal</div>
+        </div>
+        <div class="stat" style="--sc:var(--cyan)">
+          <div class="sv" id="uni-in-wl">0</div><div class="sl">📋 ใน Watchlist</div>
+        </div>
+        <div class="stat" style="--sc:var(--gold)">
+          <div class="sv" id="uni-unknown">0</div><div class="sl">⏳ ยังไม่ scan</div>
+        </div>
+        <div class="stat" style="--sc:var(--red)">
+          <div class="sv" id="uni-not-halal">0</div><div class="sl">❌ Not Halal</div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div style="display:flex;gap:0;margin-bottom:16px;background:var(--bg2);border:1px solid var(--border);border-radius:7px;padding:4px;width:fit-content">
+        <button id="uni-tab-list" class="btn btn-sm" style="background:var(--purple);color:#fff;border-radius:5px" onclick="uniSwitchTab('list')">
+          <span class="msi">list</span> รายชื่อ
+        </button>
+        <button id="uni-tab-add" class="btn btn-sm btn-ghost" style="border:none" onclick="uniSwitchTab('add')">
+          <span class="msi">add_circle</span> เพิ่มเดี่ยว
+        </button>
+        <button id="uni-tab-bulk" class="btn btn-sm btn-ghost" style="border:none" onclick="uniSwitchTab('bulk')">
+          <span class="msi">playlist_add</span> Bulk Import
+        </button>
+        <button id="uni-tab-cfg" class="btn btn-sm btn-ghost" style="border:none" onclick="uniSwitchTab('cfg')">
+          <span class="msi">tune</span> Filter Config
+        </button>
+      </div>
+
+      <!-- TAB: LIST ──────────────────────────────────────────── -->
+      <div id="uni-panel-list">
+        <!-- Toolbar -->
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
+          <input id="uni-search" placeholder="🔍 ค้นหา Symbol หรือชื่อ..." oninput="uniFilter()"
+            style="max-width:280px;padding:6px 12px">
+          <div style="display:flex;gap:5px;flex-wrap:wrap">
+            <button class="btn btn-xs" id="uf-all" style="background:var(--text2);color:#000;border-radius:20px" onclick="uniSetFilter('all',this)">ทั้งหมด</button>
+            <button class="btn btn-xs btn-ghost" style="border-radius:20px" id="uf-halal" onclick="uniSetFilter('HALAL',this)">✅ Halal</button>
+            <button class="btn btn-xs btn-ghost" style="border-radius:20px" id="uf-nhalal" onclick="uniSetFilter('NOT_HALAL',this)">❌ Not</button>
+            <button class="btn btn-xs btn-ghost" style="border-radius:20px" id="uf-unk" onclick="uniSetFilter('UNKNOWN',this)">⏳ ไม่รู้</button>
+            <button class="btn btn-xs btn-ghost" style="border-radius:20px" id="uf-wl" onclick="uniSetFilter('watchlist',this)">📋 WL</button>
+          </div>
+          <div style="margin-left:auto;display:flex;gap:6px;align-items:center">
+            <label style="display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text2);cursor:pointer">
+              <input type="checkbox" id="uni-chk-all" onchange="uniToggleAll(this.checked)"> เลือกทั้งหมด
+            </label>
+            <button class="btn btn-xs btn-red" onclick="uniDeleteSelected()">
+              <span class="msi">delete</span> ลบที่เลือก
+            </button>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div style="overflow-x:auto;border:1px solid var(--border);border-radius:7px">
+          <table class="ltable" id="uni-table">
+            <thead>
+              <tr>
+                <th style="width:32px"></th>
+                <th style="cursor:pointer" onclick="uniSort('symbol')">Symbol ↕</th>
+                <th>ชื่อ</th>
+                <th style="cursor:pointer" onclick="uniSort('halal')">Halal ↕</th>
+                <th style="cursor:pointer" onclick="uniSort('purify')">Purify% ↕</th>
+                <th>สถานะ</th>
+                <th>เพิ่มเมื่อ</th>
+                <th style="width:60px"></th>
+              </tr>
+            </thead>
+            <tbody id="uni-tbody">
+              <tr><td colspan="8" style="text-align:center;padding:30px;color:var(--text3)">
+                กด "Sync GitHub" เพื่อโหลด universe.json
+              </td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB: ADD SINGLE ───────────────────────────────────── -->
+      <div id="uni-panel-add" style="display:none;max-width:480px">
+        <div class="card">
+          <div class="ctitle" style="margin-bottom:12px"><span class="msi">add_circle</span> เพิ่มหุ้นเดี่ยว</div>
+          <div class="fg">
+            <label>Symbol (Ticker)</label>
+            <input id="uni-sym" placeholder="เช่น AAPL, RIOT, BTC-USD" style="text-transform:uppercase"
+              onkeyup="this.value=this.value.toUpperCase()" onkeypress="if(event.key==='Enter')uniAddSingle()">
+          </div>
+          <div class="fg">
+            <label>ชื่อบริษัท <span style="color:var(--text3)">(optional)</span></label>
+            <input id="uni-name" placeholder="ชื่อจะ auto-fill จาก yfinance ตอน screener รัน">
+          </div>
+          <div class="bgrp" style="margin-top:4px">
+            <button class="btn btn-sm" style="background:var(--purple);color:#fff" onclick="uniAddSingle()">
+              <span class="msi">add</span> เพิ่มเข้า Universe
+            </button>
+            <button class="btn btn-sm btn-ghost" onclick="document.getElementById('uni-sym').value='';document.getElementById('uni-name').value=''">
+              <span class="msi">close</span> ล้าง
+            </button>
+          </div>
+        </div>
+        <div id="uni-add-log" class="card" style="font-family:var(--mono);font-size:11px;color:var(--text2);min-height:60px;max-height:150px;overflow-y:auto;padding:10px 14px"></div>
+      </div>
+
+      <!-- TAB: BULK ─────────────────────────────────────────── -->
+      <div id="uni-panel-bulk" style="display:none;max-width:600px">
+        <div class="card">
+          <div class="ctitle" style="margin-bottom:10px"><span class="msi">playlist_add</span> Bulk Import</div>
+          <div class="fg">
+            <label>วาง Tickers (คั่นด้วย comma, space หรือ newline)</label>
+            <textarea id="uni-bulk-txt" style="min-height:200px;font-family:var(--mono);font-size:12px"
+              placeholder="AAPL, MSFT, GOOG&#10;TSLA NVDA AMD&#10;RIOT&#10;MARA&#10;..."></textarea>
+          </div>
+          <div style="font-size:11px;color:var(--text3);margin-bottom:10px">
+            รองรับ: <code>AAPL,MSFT</code> หรือ <code>AAPL MSFT</code> หรือแต่ละบรรทัด
+          </div>
+          <div class="bgrp">
+            <button class="btn btn-sm btn-ghost" onclick="uniBulkPreview()">
+              <span class="msi">preview</span> Preview
+            </button>
+            <button class="btn btn-sm" style="background:var(--purple);color:#fff" onclick="uniBulkAdd()" id="uni-bulk-add-btn" disabled>
+              <span class="msi">add</span> Add All (<span id="uni-bulk-count">0</span>)
+            </button>
+            <button class="btn btn-sm btn-ghost" onclick="document.getElementById('uni-bulk-txt').value='';document.getElementById('uni-bulk-count').textContent='0';document.getElementById('uni-bulk-add-btn').disabled=true;_uniBulkParsed=[]">
+              <span class="msi">close</span>
+            </button>
+          </div>
+          <div id="uni-bulk-preview" style="margin-top:10px;font-size:11px;color:var(--text2);font-family:var(--mono)"></div>
+        </div>
+        <div id="uni-bulk-log" class="card" style="font-family:var(--mono);font-size:11px;color:var(--text2);min-height:60px;max-height:120px;overflow-y:auto;padding:10px 14px"></div>
+      </div>
+
+      <!-- TAB: CONFIG ───────────────────────────────────────── -->
+      <div id="uni-panel-cfg" style="display:none;max-width:520px">
+        <div class="card">
+          <div class="ctitle" style="margin-bottom:14px"><span class="msi">tune</span> Filter Gates Config <span style="color:var(--text3);font-size:10px;font-weight:400">(บันทึกลง universe.json)</span></div>
+          <div class="g2" style="gap:10px">
+            <div class="fg"><label>Min ADR% (Gate 4)</label><input type="number" id="ucfg-adr" value="8" min="1" max="50" step="0.5"></div>
+            <div class="fg"><label>Max Purify% (Gate 2)</label><input type="number" id="ucfg-purify" value="3" min="0" max="20" step="0.5"></div>
+            <div class="fg"><label>Min Price $ (Gate 3)</label><input type="number" id="ucfg-price" value="1" min="0.01" step="0.1"></div>
+            <div class="fg"><label>Min Avg Volume (Gate 3)</label><input type="number" id="ucfg-vol" value="100000" min="1000" step="10000"></div>
+            <div class="fg"><label>RSI Min (Gate 6)</label><input type="number" id="ucfg-rsi-min" value="35" min="10" max="50"></div>
+            <div class="fg"><label>RSI Max (Gate 6)</label><input type="number" id="ucfg-rsi-max" value="72" min="50" max="90"></div>
+            <div class="fg"><label>Vol Ratio Min (Gate 6)</label><input type="number" id="ucfg-volr" value="1.3" min="0.5" max="5" step="0.1"></div>
+            <div class="fg"><label>Max Watchlist</label><input type="number" id="ucfg-maxwl" value="60" min="10" max="200" step="5"></div>
+            <div class="fg"><label>Remove Purify% (ออกทันที)</label><input type="number" id="ucfg-rem-purify" value="4" min="1" max="20" step="0.5"></div>
+            <div class="fg"><label>Remove ADR% ต่ำกว่า</label><input type="number" id="ucfg-rem-adr" value="5" min="1" max="15" step="0.5"></div>
+          </div>
+          <div class="fg" style="margin-top:4px">
+            <label style="flex-direction:row;gap:8px;cursor:pointer">
+              <input type="checkbox" id="ucfg-ema50" checked> ต้องอยู่เหนือ EMA50 (Gate 5)
+            </label>
+          </div>
+          <div class="bgrp" style="margin-top:10px">
+            <button class="btn btn-sm" style="background:var(--purple);color:#fff" onclick="uniSaveCfg()">
+              <span class="msi">save</span> บันทึก Config
+            </button>
+            <button class="btn btn-sm btn-ghost" onclick="uniLoadCfg()">
+              <span class="msi">refresh</span> โหลดจากไฟล์
+            </button>
+          </div>
+          <div id="ucfg-log" style="margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--text2)"></div>
+        </div>
+      </div>
+
+    </div>
+    <!-- ════ END UNIVERSE MANAGER ════ -->
   </main>
 </div>
 
@@ -3117,6 +3308,297 @@ function phClearAll() {
   document.getElementById('ph-emptyState').style.display = 'none';
   document.getElementById('ph-lastUpdated').textContent = 'ยังไม่มีข้อมูล';
   phAllResults = [];
+}
+
+// ══════════════════════════════════════════════════════════
+//  UNIVERSE MANAGER
+// ══════════════════════════════════════════════════════════
+let UNI = { settings: {}, universe: [] };
+let uniFilterMode = 'all';
+let uniSortKey = 'symbol';
+let uniSortAsc = true;
+let _uniBulkParsed = [];
+let _uniCurrentTab = 'list';
+
+// ── Load/Save universe.json via GitHub API ─────────────────
+async function uniSyncGH() {
+  if (!GH.token) { showToast('เชื่อมต่อ GitHub ก่อน', 'err'); return; }
+  const btn = document.getElementById('uni-sync-btn');
+  btn.disabled = true; btn.innerHTML = '<span class="msi">sync</span> กำลังโหลด...';
+  try {
+    UNI = await ghGetFile('universe.json');
+    if (!UNI.universe) UNI.universe = [];
+    if (!UNI.settings) UNI.settings = {};
+    uniRenderTable();
+    uniUpdateStats();
+    uniLoadCfg();
+    showToast('โหลด universe.json แล้ว (' + UNI.universe.length + ' ตัว)', 'ok');
+  } catch(e) {
+    // ถ้าไม่มีไฟล์ → สร้างใหม่
+    UNI = { settings: {}, universe: [] };
+    showToast('ยังไม่มี universe.json — เพิ่มหุ้นแล้วกด Sync', 'warn');
+  } finally {
+    btn.disabled = false; btn.innerHTML = '<span class="msi">sync</span> Sync GitHub';
+  }
+}
+
+async function uniSaveGH(commitMsg) {
+  if (!GH.token) { showToast('เชื่อมต่อ GitHub ก่อน', 'err'); return false; }
+  try {
+    await ghPutFile('universe.json', UNI, commitMsg || 'universe: update via dashboard');
+    return true;
+  } catch(e) {
+    showToast('บันทึกล้มเหลว: ' + e.message, 'err');
+    return false;
+  }
+}
+
+// ── Stats ─────────────────────────────────────────────────
+function uniUpdateStats() {
+  const u   = UNI.universe || [];
+  const wls = new Set((WL.watchlist || []).map(s => s.symbol.toUpperCase()));
+  const halal    = u.filter(r => uniSym(r) && (r.halal_status||'') === 'HALAL').length;
+  const nhalal   = u.filter(r => (r.halal_status||'') === 'NOT_HALAL').length;
+  const unknown  = u.filter(r => !r.halal_status || r.halal_status === 'UNKNOWN').length;
+  const inWl     = u.filter(r => wls.has(uniSym(r))).length;
+  document.getElementById('uni-total').textContent    = u.length;
+  document.getElementById('uni-halal-count').textContent = halal;
+  document.getElementById('uni-not-halal').textContent   = nhalal;
+  document.getElementById('uni-unknown').textContent      = unknown;
+  document.getElementById('uni-in-wl').textContent        = inWl;
+  document.getElementById('uni-cnt').textContent          = u.length;
+}
+
+function uniSym(r) { return typeof r === 'string' ? r : (r.symbol || ''); }
+
+// ── Render Table ──────────────────────────────────────────
+function uniRenderTable() {
+  const wls   = new Set((WL.watchlist || []).map(s => s.symbol.toUpperCase()));
+  const query = (document.getElementById('uni-search')?.value || '').toLowerCase();
+  let rows    = (UNI.universe || []).map((r, i) => ({
+    idx: i, sym: uniSym(r).toUpperCase(),
+    name: r.name || '-',
+    halal: r.halal_status || 'UNKNOWN',
+    purify: r.purify_pct != null ? r.purify_pct : null,
+    added: r.added_at ? r.added_at.substring(0,10) : '-',
+  }));
+
+  // Filter
+  rows = rows.filter(r => {
+    if (query && !r.sym.toLowerCase().includes(query) && !r.name.toLowerCase().includes(query)) return false;
+    if (uniFilterMode === 'all') return true;
+    if (uniFilterMode === 'watchlist') return wls.has(r.sym);
+    return r.halal === uniFilterMode;
+  });
+
+  // Sort
+  rows.sort((a, b) => {
+    let av = uniSortKey === 'symbol' ? a.sym : uniSortKey === 'halal' ? a.halal : (a.purify ?? 9999);
+    let bv = uniSortKey === 'symbol' ? b.sym : uniSortKey === 'halal' ? b.halal : (b.purify ?? 9999);
+    return uniSortAsc ? (av < bv ? -1 : av > bv ? 1 : 0) : (av > bv ? -1 : av < bv ? 1 : 0);
+  });
+
+  const tbody = document.getElementById('uni-tbody');
+  if (!rows.length) {
+    tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:30px;color:var(--text3)">ไม่พบข้อมูล</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = rows.map(r => {
+    const inWl  = wls.has(r.sym);
+    const hTag  = r.halal === 'HALAL'
+      ? '<span style="color:var(--green);font-family:var(--mono);font-size:10px;font-weight:700">✅ HALAL</span>'
+      : r.halal === 'NOT_HALAL'
+        ? '<span style="color:var(--red);font-family:var(--mono);font-size:10px;font-weight:700">❌ NOT</span>'
+        : '<span style="color:var(--gold);font-family:var(--mono);font-size:10px">⏳ ?</span>';
+    const purStr = r.purify != null
+      ? `<span style="color:${r.purify > 3 ? 'var(--red)' : 'var(--green)'};font-family:var(--mono);font-size:11px">${r.purify.toFixed(1)}%</span>`
+      : '<span style="color:var(--text3)">-</span>';
+    const wlTag = inWl ? '<span style="font-size:10px;color:var(--cyan);font-family:var(--mono)">📋 WL</span>' : '';
+    const rowBg = inWl ? 'background:rgba(0,229,255,0.03)' : '';
+    return `<tr style="${rowBg}" data-sym="${r.sym}">
+      <td><input type="checkbox" class="uni-chk" value="${r.sym}" style="accent-color:var(--purple)"></td>
+      <td style="font-family:var(--mono);font-size:12px;font-weight:600;color:var(--cyan)">${r.sym}</td>
+      <td style="font-size:11px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.name}</td>
+      <td>${hTag}</td>
+      <td>${purStr}</td>
+      <td>${wlTag}</td>
+      <td style="font-size:10px;color:var(--text3);font-family:var(--mono)">${r.added}</td>
+      <td><button class="btn btn-xs btn-red" onclick="uniDeleteOne('${r.sym}')"><span class="msi">delete</span></button></td>
+    </tr>`;
+  }).join('');
+}
+
+// ── Filter / Sort ─────────────────────────────────────────
+function uniFilter() { uniRenderTable(); }
+
+function uniSetFilter(mode, el) {
+  uniFilterMode = mode;
+  document.querySelectorAll('#uni-panel-list .btn').forEach(b => {
+    if (b.id && b.id.startsWith('uf-')) {
+      b.style.background = 'transparent'; b.style.color = 'var(--text2)';
+      b.classList.remove('btn-ghost'); b.classList.add('btn-ghost');
+    }
+  });
+  el.style.background = mode === 'all' ? 'var(--text2)' :
+    mode === 'HALAL' ? 'var(--green)' : mode === 'NOT_HALAL' ? 'var(--red)' :
+    mode === 'UNKNOWN' ? 'var(--gold)' : 'var(--accent2, #1f6feb)';
+  el.style.color = '#000';
+  uniRenderTable();
+}
+
+function uniSort(key) {
+  if (uniSortKey === key) uniSortAsc = !uniSortAsc;
+  else { uniSortKey = key; uniSortAsc = true; }
+  uniRenderTable();
+}
+
+function uniToggleAll(checked) {
+  document.querySelectorAll('.uni-chk').forEach(c => c.checked = checked);
+}
+
+// ── Add / Delete ──────────────────────────────────────────
+async function uniAddSingle() {
+  const sym  = document.getElementById('uni-sym').value.trim().toUpperCase();
+  const name = document.getElementById('uni-name').value.trim();
+  if (!sym) { showToast('กรอก Symbol ก่อน', 'err'); return; }
+  const exists = (UNI.universe || []).some(r => uniSym(r).toUpperCase() === sym);
+  if (exists) { showToast(sym + ' มีอยู่แล้วใน Universe', 'warn'); return; }
+  UNI.universe = UNI.universe || [];
+  UNI.universe.push({ symbol: sym, name: name || sym, added_at: new Date().toISOString(), halal_status: 'UNKNOWN', purify_pct: null });
+  uniRenderTable(); uniUpdateStats();
+  const logEl = document.getElementById('uni-add-log');
+  const ts = new Date().toTimeString().substring(0,8);
+  logEl.innerHTML += `<div style="color:var(--green)">[${ts}] ➕ เพิ่ม ${sym} เข้า Universe</div>`;
+  logEl.scrollTop = logEl.scrollHeight;
+  document.getElementById('uni-sym').value = '';
+  document.getElementById('uni-name').value = '';
+  showToast('เพิ่ม ' + sym + ' แล้ว — อย่าลืมกด Sync GitHub ✅', 'ok');
+  // Auto-save
+  const ok = await uniSaveGH('universe: add ' + sym);
+  if (ok) logEl.innerHTML += `<div style="color:var(--cyan)">[${new Date().toTimeString().substring(0,8)}] 💾 Saved to GitHub</div>`;
+}
+
+async function uniDeleteOne(sym) {
+  if (!confirm('ลบ ' + sym + ' ออกจาก Universe?')) return;
+  UNI.universe = (UNI.universe || []).filter(r => uniSym(r).toUpperCase() !== sym);
+  uniRenderTable(); uniUpdateStats();
+  await uniSaveGH('universe: remove ' + sym);
+  showToast('ลบ ' + sym + ' แล้ว', 'ok');
+}
+
+async function uniDeleteSelected() {
+  const checked = Array.from(document.querySelectorAll('.uni-chk:checked')).map(c => c.value);
+  if (!checked.length) { showToast('เลือกหุ้นก่อน', 'err'); return; }
+  if (!confirm('ลบ ' + checked.length + ' ตัวออกจาก Universe?')) return;
+  UNI.universe = (UNI.universe || []).filter(r => !checked.includes(uniSym(r).toUpperCase()));
+  uniRenderTable(); uniUpdateStats();
+  await uniSaveGH('universe: bulk remove ' + checked.length + ' symbols');
+  showToast('ลบ ' + checked.length + ' ตัวแล้ว', 'ok');
+}
+
+// ── Bulk ──────────────────────────────────────────────────
+function uniBulkPreview() {
+  const raw = document.getElementById('uni-bulk-txt').value;
+  _uniBulkParsed = [...new Set(
+    raw.split(/[\s,\n\r;]+/).map(t => t.trim().toUpperCase())
+       .filter(t => /^[A-Z]{1,8}(-[A-Z]+)?$/.test(t))
+  )];
+  document.getElementById('uni-bulk-count').textContent = _uniBulkParsed.length;
+  document.getElementById('uni-bulk-add-btn').disabled  = _uniBulkParsed.length === 0;
+  document.getElementById('uni-bulk-preview').textContent =
+    'พบ ' + _uniBulkParsed.length + ' tickers: ' + _uniBulkParsed.slice(0,20).join(', ') +
+    (_uniBulkParsed.length > 20 ? ' ...' : '');
+}
+
+async function uniBulkAdd() {
+  if (!_uniBulkParsed.length) { showToast('Preview ก่อน', 'err'); return; }
+  const existing = new Set((UNI.universe || []).map(r => uniSym(r).toUpperCase()));
+  let added = 0, skipped = 0;
+  _uniBulkParsed.forEach(sym => {
+    if (existing.has(sym)) { skipped++; return; }
+    (UNI.universe = UNI.universe || []).push({ symbol: sym, name: sym,
+      added_at: new Date().toISOString(), halal_status: 'UNKNOWN', purify_pct: null });
+    added++;
+  });
+  uniRenderTable(); uniUpdateStats();
+  const logEl = document.getElementById('uni-bulk-log');
+  logEl.innerHTML += `<div style="color:var(--green)">${new Date().toTimeString().substring(0,8)}: เพิ่ม ${added} ตัว | ซ้ำ ${skipped} ตัว</div>`;
+  showToast('เพิ่ม ' + added + ' ตัว (' + skipped + ' ซ้ำ) — กำลังบันทึก...', 'ok');
+  const ok = await uniSaveGH('universe: bulk add ' + added + ' symbols');
+  if (ok) logEl.innerHTML += `<div style="color:var(--cyan)">${new Date().toTimeString().substring(0,8)}: 💾 Saved to GitHub</div>`;
+  logEl.scrollTop = logEl.scrollHeight;
+}
+
+// ── Export ────────────────────────────────────────────────
+function uniExport() {
+  const blob = new Blob([JSON.stringify(UNI, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'universe.json'; a.click();
+  showToast('Export universe.json แล้ว ✅', 'ok');
+}
+
+// ── Config ────────────────────────────────────────────────
+function uniLoadCfg() {
+  const c = UNI.settings || {};
+  const sv = (id, val) => { const el = document.getElementById(id); if(el) el.value = val; };
+  sv('ucfg-adr',       c.min_adr_pct         ?? 8);
+  sv('ucfg-purify',    c.max_purify_pct       ?? 3);
+  sv('ucfg-price',     c.min_price            ?? 1);
+  sv('ucfg-vol',       c.min_avg_volume       ?? 100000);
+  sv('ucfg-rsi-min',   c.rsi_min              ?? 35);
+  sv('ucfg-rsi-max',   c.rsi_max              ?? 72);
+  sv('ucfg-volr',      c.volume_ratio_min     ?? 1.3);
+  sv('ucfg-maxwl',     c.max_watchlist        ?? 60);
+  sv('ucfg-rem-purify',c.remove_purify_pct    ?? 4);
+  sv('ucfg-rem-adr',   c.remove_adr_below     ?? 5);
+  const chk = document.getElementById('ucfg-ema50');
+  if (chk) chk.checked = c.require_above_ema50 !== false;
+}
+
+async function uniSaveCfg() {
+  const gv = (id) => parseFloat(document.getElementById(id)?.value || 0);
+  UNI.settings = {
+    min_adr_pct:          gv('ucfg-adr'),
+    max_purify_pct:       gv('ucfg-purify'),
+    min_price:            gv('ucfg-price'),
+    min_avg_volume:       parseInt(document.getElementById('ucfg-vol')?.value || 100000),
+    rsi_min:              gv('ucfg-rsi-min'),
+    rsi_max:              gv('ucfg-rsi-max'),
+    volume_ratio_min:     gv('ucfg-volr'),
+    max_watchlist:        parseInt(document.getElementById('ucfg-maxwl')?.value || 60),
+    remove_purify_pct:    gv('ucfg-rem-purify'),
+    remove_adr_below:     gv('ucfg-rem-adr'),
+    require_above_ema50:  document.getElementById('ucfg-ema50')?.checked !== false,
+  };
+  const ok = await uniSaveGH('universe: update settings');
+  const log = document.getElementById('ucfg-log');
+  if (log) log.textContent = ok ? '✅ บันทึก Config แล้ว' : '❌ บันทึกล้มเหลว';
+  if (ok) showToast('บันทึก Config ✅', 'ok');
+}
+
+// ── Tab switcher ──────────────────────────────────────────
+function uniSwitchTab(tab) {
+  _uniCurrentTab = tab;
+  ['list','add','bulk','cfg'].forEach(t => {
+    const panel = document.getElementById('uni-panel-' + (t === 'cfg' ? 'cfg' : t));
+    const btn   = document.getElementById('uni-tab-' + (t === 'cfg' ? 'cfg' : t));
+    if (panel) panel.style.display = t === tab ? '' : 'none';
+    if (btn) {
+      btn.style.background = t === tab ? 'var(--purple)' : 'transparent';
+      btn.style.color      = t === tab ? '#fff' : 'var(--text2)';
+    }
+  });
+}
+
+// ── Auto-load universe when show('universe') ──────────────
+// (เพิ่ม hook เข้า show() function เดิม)
+const _origShow = show;
+function show(id) {
+  _origShow(id);
+  if (id === 'universe' && GH.token && UNI.universe.length === 0) {
+    uniSyncGH();
+  }
 }
 
 
