@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T17:34:26Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_NEWS_BAD",
-    "type": "news_sentiment",
-    "price": 16.75,
-    "change_pct": -12.578288100208768,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-25T17:38:42Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4537,5 +4528,15 @@
     "price": 2.8450000286102295,
     "change_pct": -5.16666571299235,
     "value": -5.16666571299235
+  },
+  {
+    "timestamp": "2026-06-29T19:24:04Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 4.715000152587891,
+    "change_pct": 6.193697130357887,
+    "value": 6.193697130357887
   }
 ]
