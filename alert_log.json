@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T17:42:34Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_POS_SIZE",
-    "type": "position_size",
-    "price": 403.3399963378906,
-    "change_pct": -3.5579368901796666,
-    "value": 0.2479298
-  },
-  {
     "timestamp": "2026-06-25T17:42:44Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -4540,5 +4531,15 @@
     "price": 1.9149999618530273,
     "change_pct": -3.768846138038826,
     "value": 25.51
+  },
+  {
+    "timestamp": "2026-06-29T21:58:50Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 36.04499816894531,
+    "change_pct": -6.206093757623439,
+    "value": -6.206093757623439
   }
 ]
