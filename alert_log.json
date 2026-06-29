@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T16:13:01Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 99.0,
-    "change_pct": -2.4630541871921183,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-25T16:13:02Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_POS_SIZE",
@@ -4521,5 +4512,15 @@
     "price": 5.420000076293945,
     "change_pct": 6.274511299881288,
     "value": 6.274511299881288
+  },
+  {
+    "timestamp": "2026-06-29T13:53:51Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 35.56999969482422,
+    "change_pct": -7.442103318177937,
+    "value": -7.442103318177937
   }
 ]
