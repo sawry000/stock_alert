@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T17:19:15Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 17.90999984741211,
-    "change_pct": -2.1845994133691393,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-25T17:19:51Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_RSI_OS_4H",
@@ -4533,5 +4524,15 @@
     "price": 2014.8907470703125,
     "change_pct": -4.4627219847078825,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-29T16:28:47Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 4.375,
+    "change_pct": 6.434740299233669,
+    "value": 6.434740299233669
   }
 ]
