@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T14:07:53Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 92.0,
-    "change_pct": 0.3490401396160484,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-25T14:13:28Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.289999961853027,
-    "change_pct": 0.9411755730124081,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-25T14:27:52Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_DROP",
-    "type": "percent_change",
-    "price": 10.527199745178223,
-    "change_pct": -8.219705796179406,
-    "value": -8.219705796179406
-  },
-  {
     "timestamp": "2026-06-25T14:28:04Z",
     "symbol": "INOD",
     "alert_id": "INOD_PCT_DROP",
@@ -4503,5 +4476,35 @@
     "price": 8.130000114440918,
     "change_pct": 11.522635314690232,
     "value": 11.522635314690232
+  },
+  {
+    "timestamp": "2026-06-29T04:39:10Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 149.75,
+    "change_pct": -6.697819314641744,
+    "value": -6.697819314641744
+  },
+  {
+    "timestamp": "2026-06-29T04:39:17Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 127.81999969482422,
+    "change_pct": -5.318518744574653,
+    "value": -5.318518744574653
+  },
+  {
+    "timestamp": "2026-06-29T04:39:28Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 2090.7099609375,
+    "change_pct": -9.764757583228848,
+    "value": -9.764757583228848
   }
 ]
