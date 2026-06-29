@@ -310,11 +310,14 @@
     "AIXI_PCT_UP_5": {
       "last_fired": "2026-06-25T12:07:53Z"
     },
-    "open_position": false,
-    "open_entry": 2.390000104904175,
-    "open_time": "2026-06-25T08:02:39Z",
+    "open_position": true,
+    "open_entry": 1.9850000143051147,
+    "open_time": "2026-06-29T03:53:41Z",
     "AIXI_MA_DEATH": {
       "last_fired": "2026-06-11T13:32:49Z"
+    },
+    "AIXI_RSI_OS": {
+      "last_fired": "2026-06-29T03:53:41Z"
     }
   },
   "HLIT": {
@@ -606,7 +609,7 @@
       "last_fired": "2026-05-27T09:53:23Z"
     },
     "WGS_MTF_BULL": {
-      "last_fired": "2026-06-02T04:23:21Z"
+      "last_fired": "2026-06-29T03:54:04Z"
     },
     "WGS_PCT_UP_5": {
       "last_fired": "2026-05-28T18:47:54Z"
@@ -620,7 +623,9 @@
     "WGS_PCT_DROP": {
       "last_fired": "2026-06-23T06:33:10Z"
     },
-    "open_position": false
+    "open_position": true,
+    "open_entry": 69.81999969482422,
+    "open_time": "2026-06-29T03:54:04Z"
   },
   "VSEC": {
     "VSEC_POS_SIZE": {
@@ -762,15 +767,15 @@
     "DOMO_PCT_DROP": {
       "last_fired": "2026-06-26T05:44:26Z"
     },
-    "open_position": false,
+    "open_position": true,
     "DOMO_MA_DEATH": {
       "last_fired": "2026-06-08T15:24:13Z"
     },
     "DOMO_RSI_OS_4H": {
       "last_fired": "2026-06-18T16:23:52Z"
     },
-    "open_entry": 2.684999942779541,
-    "open_time": "2026-06-24T18:14:08Z",
+    "open_entry": 2.940000057220459,
+    "open_time": "2026-06-29T03:54:25Z",
     "DOMO_NEWS_BAD": {
       "last_fired": "2026-06-15T20:24:12Z",
       "seen_news": [
@@ -785,6 +790,9 @@
     },
     "DOMO_VOL_ALARM": {
       "last_fired": "2026-06-25T12:59:27Z"
+    },
+    "DOMO_MTF_BULL": {
+      "last_fired": "2026-06-29T03:54:25Z"
     }
   },
   "SHLS": {
@@ -1230,11 +1238,14 @@
     "ISSC_PCT_DROP": {
       "last_fired": "2026-06-22T14:19:03Z"
     },
-    "open_position": false,
-    "open_entry": 18.875,
-    "open_time": "2026-06-15T13:34:50Z",
+    "open_position": true,
+    "open_entry": 17.889999389648438,
+    "open_time": "2026-06-29T03:54:35Z",
     "ISSC_MA_GOLDEN": {
       "last_fired": "2026-06-15T13:34:49Z"
+    },
+    "ISSC_MTF_BULL": {
+      "last_fired": "2026-06-29T03:54:35Z"
     }
   },
   "BRCB": {
@@ -1250,11 +1261,14 @@
     "BRCB_RSI_OS_4H": {
       "last_fired": "2026-06-10T12:44:33Z"
     },
-    "open_position": false,
-    "open_entry": 6.315000057220459,
-    "open_time": "2026-06-08T15:10:15Z",
+    "open_position": true,
+    "open_entry": 8.130000114440918,
+    "open_time": "2026-06-29T03:54:37Z",
     "BRCB_CP_BULL": {
       "last_fired": "2026-06-22T08:09:00Z"
+    },
+    "BRCB_PCT_UP": {
+      "last_fired": "2026-06-29T03:54:37Z"
     }
   },
   "BWEN": {
