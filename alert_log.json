@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T16:13:02Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_POS_SIZE",
-    "type": "position_size",
-    "price": 99.0,
-    "change_pct": -2.4630541871921183,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-25T16:13:37Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_CP_BULL",
@@ -4522,5 +4513,15 @@
     "price": 35.56999969482422,
     "change_pct": -7.442103318177937,
     "value": -7.442103318177937
+  },
+  {
+    "timestamp": "2026-06-29T13:58:31Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 350.0,
+    "change_pct": -7.624904325793763,
+    "value": -7.624904325793763
   }
 ]
