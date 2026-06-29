@@ -1110,6 +1110,8 @@ function show(id) {
   if (id === 'state' && GH.token) loadFileFromGH('state.json', 'state');
   // Auto-sync: reload watchlist ถ้าเปิด auto-sync ไว้
   if (id === 'watchlist' && _autoSync['wl'] && GH.token) loadWatchlist();
+  // Universe Manager: auto-load ครั้งแรก
+  if (id === 'universe' && GH.token && (!UNI.universe || UNI.universe.length === 0)) uniSyncGH();
 }
 
 // ══════════════════════════════════════════════════════════
@@ -3591,15 +3593,7 @@ function uniSwitchTab(tab) {
   });
 }
 
-// ── Auto-load universe when show('universe') ──────────────
-// (เพิ่ม hook เข้า show() function เดิม)
-const _origShow = show;
-function show(id) {
-  _origShow(id);
-  if (id === 'universe' && GH.token && UNI.universe.length === 0) {
-    uniSyncGH();
-  }
-}
+// universe auto-load: handled directly in show()
 
 
 </script>
