@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T16:13:37Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_CP_BULL",
-    "type": "candle_pattern",
-    "price": 22.0,
-    "change_pct": -4.013542816504429,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-25T16:13:37Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_POS_SIZE",
-    "type": "position_size",
-    "price": 22.0,
-    "change_pct": -4.013542816504429,
-    "value": 4
-  },
-  {
-    "timestamp": "2026-06-25T16:32:50Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_CP_BULL",
-    "type": "candle_pattern",
-    "price": 19.809999465942383,
-    "change_pct": -4.622053606440138,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-25T16:32:51Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_POS_SIZE",
@@ -4523,5 +4496,35 @@
     "price": 350.0,
     "change_pct": -7.624904325793763,
     "value": -7.624904325793763
+  },
+  {
+    "timestamp": "2026-06-29T14:08:34Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 26.719999313354492,
+    "change_pct": -5.948612061406223,
+    "value": -5.948612061406223
+  },
+  {
+    "timestamp": "2026-06-29T14:08:42Z",
+    "symbol": "FLNC",
+    "alert_id": "FLNC_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 18.260000228881836,
+    "change_pct": -5.232946192026096,
+    "value": -5.232946192026096
+  },
+  {
+    "timestamp": "2026-06-29T14:08:56Z",
+    "symbol": "UAMY",
+    "alert_id": "UAMY_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 6.585100173950195,
+    "change_pct": -5.386491753589148,
+    "value": -5.386491753589148
   }
 ]
