@@ -1412,9 +1412,9 @@
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
-      "last_fired": "2026-06-29T04:39:28Z"
+      "last_fired": "2026-06-29T13:39:28Z"
     },
-    "open_position": true,
+    "open_position": false,
     "SNDK_MTF_BULL": {
       "last_fired": "2026-06-29T04:45:01Z"
     },
@@ -1430,6 +1430,11 @@
     "open_time": "2026-06-29T04:45:05Z"
   },
   "SVCO": {
-    "_confirm_SVCO_MTF_BULL": 1
+    "SVCO_MTF_BULL": {
+      "last_fired": "2026-06-29T13:39:27Z"
+    },
+    "open_position": true,
+    "open_entry": 12.039899826049805,
+    "open_time": "2026-06-29T13:39:27Z"
   }
 }

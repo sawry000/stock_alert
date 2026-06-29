@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T15:14:13Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 5.264999866485596,
-    "change_pct": -9.824275228897406,
-    "value": 26.08
-  },
-  {
-    "timestamp": "2026-06-25T15:14:14Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_POS_SIZE",
-    "type": "position_size",
-    "price": 5.264999866485596,
-    "change_pct": -9.824275228897406,
-    "value": 18
-  },
-  {
     "timestamp": "2026-06-25T15:14:16Z",
     "symbol": "FPS",
     "alert_id": "FPS_PCT_DROP",
@@ -4516,5 +4498,25 @@
     "price": 11.729999542236328,
     "change_pct": 7.218262225316742,
     "value": 7.218262225316742
+  },
+  {
+    "timestamp": "2026-06-29T13:39:27Z",
+    "symbol": "SVCO",
+    "alert_id": "SVCO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 12.039899826049805,
+    "change_pct": 4.785899269362963,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-06-29T13:39:28Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1978.760009765625,
+    "change_pct": -6.1758830083487135,
+    "value": -6.1758830083487135
   }
 ]
