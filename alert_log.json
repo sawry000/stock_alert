@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T21:39:43Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_PCT_DROP",
-    "type": "percent_change",
-    "price": 2.440000057220459,
-    "change_pct": -13.148712991369727,
-    "value": -13.148712991369727
-  },
-  {
     "timestamp": "2026-06-25T21:47:30Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -4570,5 +4561,15 @@
     "price": 4.269999980926514,
     "change_pct": -6.768559368416733,
     "value": -6.768559368416733
+  },
+  {
+    "timestamp": "2026-06-30T10:23:43Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.199999809265137,
+    "change_pct": -5.191877894692167,
+    "value": -5.191877894692167
   }
 ]
