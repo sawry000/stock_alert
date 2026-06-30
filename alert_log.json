@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T01:43:34Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 112.23999786376953,
-    "change_pct": 2.502281154127426,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T01:47:34Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4606,5 +4597,15 @@
     "price": 18.030000686645508,
     "change_pct": 0.27864830530485235,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-30T15:48:54Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 107.41000366210938,
+    "change_pct": -6.258124270505329,
+    "value": -6.258124270505329
   }
 ]
