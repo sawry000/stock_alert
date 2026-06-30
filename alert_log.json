@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T03:44:05Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 5.320000171661377,
-    "change_pct": -8.882263356602998,
-    "value": 26.37
-  },
-  {
     "timestamp": "2026-06-26T03:52:32Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4620,5 +4611,15 @@
     "price": 12.449999809265137,
     "change_pct": 16.35513840434708,
     "value": 16.35513840434708
+  },
+  {
+    "timestamp": "2026-06-30T22:44:32Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 17.549999237060547,
+    "change_pct": -8.115187240520703,
+    "value": -8.115187240520703
   }
 ]
