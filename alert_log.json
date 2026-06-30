@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T05:58:40Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.199999809265137,
-    "change_pct": -8.496736181587433,
-    "value": -8.496736181587433
-  },
-  {
-    "timestamp": "2026-06-26T05:58:45Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.800000190734863,
-    "change_pct": -8.06754042462605,
-    "value": -8.06754042462605
-  },
-  {
     "timestamp": "2026-06-26T05:58:55Z",
     "symbol": "NLST",
     "alert_id": "NLST_MTF_BULL",
@@ -4640,5 +4622,25 @@
     "price": 21.209999084472656,
     "change_pct": -0.6161746621715609,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-30T23:33:45Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.71999979019165,
+    "change_pct": 3.9999961853027344,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-06-30T23:34:05Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.360000610351562,
+    "change_pct": 2.114030725151763,
+    "value": 2
   }
 ]
