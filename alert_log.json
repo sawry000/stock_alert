@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T21:53:00Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_PCT_DROP",
-    "type": "percent_change",
-    "price": 19.3799991607666,
-    "change_pct": -6.6923487685767835,
-    "value": -6.6923487685767835
-  },
-  {
     "timestamp": "2026-06-25T21:53:36Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_PCT_DROP",
@@ -4576,5 +4567,15 @@
     "price": 6.650100231170654,
     "change_pct": -7.871656329459095,
     "value": -7.871656329459095
+  },
+  {
+    "timestamp": "2026-06-30T13:39:27Z",
+    "symbol": "VECO",
+    "alert_id": "VECO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 71.48999786376953,
+    "change_pct": 3.0115242993797193,
+    "value": 2
   }
 ]
