@@ -40,6 +40,10 @@ jobs:
     if: >
       github.event.inputs.run_mode == 'screener_only' ||
       github.event.inputs.run_mode == 'full_pipeline'
+    concurrency:
+      group: daily-screener
+      cancel-in-progress: false   # ห้ามยกเลิกรอบที่กำลังรัน — ให้คิวรอแทน
+                                   # (cancel จะทำให้ git commit ครึ่งๆ กลางๆ ได้)
 
     steps:
       - name: "📥 Checkout"
@@ -113,6 +117,9 @@ jobs:
     if: >
       github.event.inputs.run_mode == 'alert_only' ||
       github.event.inputs.run_mode == 'full_pipeline'
+    concurrency:
+      group: alert-engine
+      cancel-in-progress: false   # ห้ามยกเลิกรอบที่กำลังรัน — ให้คิวรอแทน
 
     steps:
       - name: "📥 Checkout"
