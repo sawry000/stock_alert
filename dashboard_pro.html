@@ -3436,7 +3436,7 @@ function uniRenderTable() {
         ? '<span style="color:var(--red);font-family:var(--mono);font-size:10px;font-weight:700">❌ NOT</span>'
         : '<span style="color:var(--gold);font-family:var(--mono);font-size:10px">⏳ ยังไม่ scan</span>';
     const purStr = r.purify != null
-      ? `<span style="color:${r.purify > 3 ? 'var(--red)' : 'var(--green)'};font-family:var(--mono);font-size:11px">${r.purify.toFixed(1)}%</span>`
+      ? `<span style="color:${r.purify > 3 ? 'var(--red)' : 'var(--green)'};font-family:var(--mono);font-size:11px">${r.purify.toFixed(2)}%</span>`
       : '<span style="color:var(--text3)">-</span>';
     const wlTag = inWl ? '<span style="font-size:10px;color:var(--cyan);font-family:var(--mono)">📋 WL</span>' : '';
     const rowBg = inWl ? 'background:rgba(0,229,255,0.03)' : '';
