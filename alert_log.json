@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T02:04:27Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "price": 7.21999979019165,
-    "change_pct": -5.000002760636175,
-    "value": -5.000002760636175
-  },
-  {
     "timestamp": "2026-06-26T02:07:52Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_MTF_BULL",
@@ -4612,5 +4603,15 @@
     "price": 4.159999847412109,
     "change_pct": -6.094811570832739,
     "value": -6.094811570832739
+  },
+  {
+    "timestamp": "2026-06-30T19:29:04Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 5.650000095367432,
+    "change_pct": 2.72727446122603,
+    "value": 0.006
   }
 ]
