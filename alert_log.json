@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T21:39:15Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 112.23999786376953,
-    "change_pct": 2.502281154127426,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-25T21:39:43Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_PCT_DROP",
@@ -4569,5 +4560,15 @@
     "price": 21.31999969482422,
     "change_pct": -0.09372214234199207,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-30T08:14:17Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.269999980926514,
+    "change_pct": -6.768559368416733,
+    "value": -6.768559368416733
   }
 ]
