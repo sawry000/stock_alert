@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T01:47:34Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.760000228881836,
-    "change_pct": -0.7862750933458346,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T01:47:38Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -4607,5 +4598,15 @@
     "price": 107.41000366210938,
     "change_pct": -6.258124270505329,
     "value": -6.258124270505329
+  },
+  {
+    "timestamp": "2026-06-30T16:14:19Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 3.924999952316284,
+    "change_pct": -14.301311084797291,
+    "value": -14.301311084797291
   }
 ]
