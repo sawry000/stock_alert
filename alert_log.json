@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T21:49:05Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_PCT_DROP",
-    "type": "percent_change",
-    "price": 5.320000171661377,
-    "change_pct": -8.882263356602998,
-    "value": -8.882263356602998
-  },
-  {
     "timestamp": "2026-06-25T21:53:00Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_PCT_DROP",
@@ -4575,5 +4566,15 @@
     "price": 115.1500015258789,
     "change_pct": 0.4969440951425479,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-30T13:34:18Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 6.650100231170654,
+    "change_pct": -7.871656329459095,
+    "value": -7.871656329459095
   }
 ]

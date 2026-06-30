@@ -1385,7 +1385,7 @@
       "last_fired": "2026-06-22T17:59:22Z"
     },
     "AMPG_PCT_DROP": {
-      "last_fired": "2026-06-29T00:04:58Z"
+      "last_fired": "2026-06-30T13:34:18Z"
     },
     "AMPG_CP_BULL": {
       "last_fired": "2026-06-22T17:59:21Z"
@@ -1395,7 +1395,8 @@
     "open_time": "2026-06-29T15:34:15Z",
     "AMPG_PCT_UP": {
       "last_fired": "2026-06-29T15:34:15Z"
-    }
+    },
+    "last_sell_at": "2026-06-30T13:34:18Z"
   },
   "GLD": {
     "GLD_RSI_OS_4H": {
@@ -1514,6 +1515,7 @@
     "VECO_PCT_DROP": {
       "last_fired": "2026-06-29T14:19:25Z"
     },
-    "open_position": false
+    "open_position": false,
+    "_confirm_VECO_MTF_BULL": 1
   }
 }
