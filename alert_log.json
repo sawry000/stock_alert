@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T21:54:55Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.309999942779541,
-    "change_pct": -8.665156227520368,
-    "value": -8.665156227520368
-  },
-  {
     "timestamp": "2026-06-25T21:57:45Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -4581,5 +4572,15 @@
     "price": 157.4199981689453,
     "change_pct": 2.2207780317826704,
     "value": 2
+  },
+  {
+    "timestamp": "2026-06-30T14:13:49Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 11.375,
+    "change_pct": 6.308411214953279,
+    "value": 6.308411214953279
   }
 ]
