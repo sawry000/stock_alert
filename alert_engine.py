@@ -141,12 +141,25 @@ def fetch_quote(symbol):
 
         change_pct = ((price - prev_close) / prev_close) * 100 if prev_close else 0
 
+        # ADR (Average Daily Range 14 วัน) — คำนวณจาก ticker ที่สร้างไว้แล้ว
+        # ใช้เป็น dynamic threshold สำหรับ percent_change alert
+        # (ไม่ต้องเรียก yfinance เพิ่ม เพราะ ticker object ยังอยู่ใน scope นี้)
+        adr_pct = 0.0
+        try:
+            hist_adr = ticker.history(period="20d", interval="1d")
+            if len(hist_adr) >= 5:
+                ranges  = ((hist_adr["High"] - hist_adr["Low"]) / hist_adr["Close"]) * 100
+                adr_pct = float(ranges.tail(14).mean())
+        except Exception:
+            adr_pct = 0.0
+
         return {
             "price":      price,
             "prev_close": prev_close,
             "change_pct": change_pct,
             "volume":     today_vol,
             "avg_volume": avg_volume,
+            "adr_pct":    adr_pct,
         }
     except Exception as e:
         print(f"  [{symbol}] fetch_quote error: {e}")
@@ -270,14 +283,25 @@ def check_volume_spike(alert, quote):
 
 # ── Tier 1: Percent Change ────────────────────────────────────────────────────
 def check_percent_change(alert, quote):
-    pct       = quote["change_pct"]
-    direction = alert.get("direction", "down")
-    threshold = alert.get("threshold_pct", 5.0)
-    if direction == "down" and pct <= -threshold:
-        return True, pct
-    if direction == "up"   and pct >= threshold:
-        return True, pct
-    return False, pct
+    pct           = quote["change_pct"]
+    direction     = alert.get("direction", "down")
+    base_threshold = alert.get("threshold_pct", 5.0)
+
+    # Dynamic threshold: max(base, 1.5 × ADR) — กัน false positive บนหุ้น high-ADR
+    # หุ้น ADR 8%: threshold จริง = max(5%, 12%) = 12%
+    # หุ้น ADR 5%: threshold จริง = max(5%, 7.5%) = 7.5%
+    # ถ้า adr_pct = 0 (ดึงไม่ได้) → fallback ใช้ base_threshold เดิม
+    adr_pct = quote.get("adr_pct", 0.0)
+    if adr_pct >= 1.0:  # มีค่า ADR จริง
+        dynamic_threshold = max(base_threshold, 1.5 * adr_pct)
+    else:
+        dynamic_threshold = base_threshold
+
+    if direction == "down" and pct <= -dynamic_threshold:
+        return True, pct, dynamic_threshold
+    if direction == "up"   and pct >= dynamic_threshold:
+        return True, pct, dynamic_threshold
+    return False, pct, dynamic_threshold
 
 
 # ── Tier 1: Support / Resistance ─────────────────────────────────────────────
@@ -1031,9 +1055,10 @@ def main():
                         msg = build_info_message(stock, quote, atype, detail)
 
             elif atype == "percent_change":
-                triggered, tval = check_percent_change(alert, quote)
+                triggered, tval, used_threshold = check_percent_change(alert, quote)
                 if triggered:
-                    detail = f"เปลี่ยนแปลง {tval:+.2f}% (เงื่อนไข {alert.get('threshold_pct',5)}%)"
+                    adr_info = f" | ADR {quote.get('adr_pct', 0):.1f}%" if quote.get("adr_pct", 0) >= 1.0 else ""
+                    detail = f"เปลี่ยนแปลง {tval:+.2f}% (threshold {used_threshold:.1f}%{adr_info})"
                     if action == "BUY":
                         pos = calc_position_size(pos_cfg, symbol, price)
                         msg = build_buy_message(stock, quote, atype, detail, pos)
