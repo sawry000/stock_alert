@@ -817,7 +817,7 @@ input[type=password]{letter-spacing:2px}
                 <th>ชื่อ</th>
                 <th style="cursor:pointer" onclick="uniSort('halal')">Halal ↕</th>
                 <th style="cursor:pointer" onclick="uniSort('purify')">Purify% ↕</th>
-                <th>สถานะ</th>
+                <th style="cursor:pointer" onclick="uniSort('status')">สถานะ ↕</th>
                 <th>เพิ่มเมื่อ</th>
                 <th style="cursor:pointer" onclick="uniSort('checked')">Checked ↕</th>
                 <th style="width:60px"></th>
@@ -1618,6 +1618,8 @@ async function loadFileFromGH(filename, type) {
 //  WATCHLIST RENDER
 // ══════════════════════════════════════════════════════════
 function renderWL() {
+  // Auto-sync: คอลัมน์ "สถานะ" (WL) ใน Universe Manager ต้องอัปเดตทุกครั้งที่ watchlist เปลี่ยน
+  if (typeof uniRenderTable === 'function') uniRenderTable();
   const c = document.getElementById('wl-cards');
   if (!WL.watchlist.length) {
     c.innerHTML = '<div style="text-align:center;padding:60px;color:var(--text3);font-size:13px">ยังไม่มีหุ้น — กด <strong style="color:var(--cyan)">+ เพิ่ม Symbol</strong></div>';
@@ -3399,6 +3401,7 @@ function uniRenderTable() {
     purify: typeof r === 'string' ? null : (r.purify_pct != null ? r.purify_pct : null),
     added: typeof r === 'string' ? '-' : (r.added_at ? r.added_at.substring(0,10) : '-'),
     checked: typeof r === 'string' ? null : (r.last_checked || null),
+    inWl: wls.has(uniSym(r).toUpperCase()),
   }));
 
   // Filter
@@ -3414,22 +3417,25 @@ function uniRenderTable() {
     let av = uniSortKey === 'symbol' ? a.sym
            : uniSortKey === 'halal'   ? a.halal
            : uniSortKey === 'checked' ? (a.checked || '')
+           : uniSortKey === 'status'  ? (a.inWl ? 1 : 0)
            : (a.purify ?? 9999);
     let bv = uniSortKey === 'symbol' ? b.sym
            : uniSortKey === 'halal'   ? b.halal
            : uniSortKey === 'checked' ? (b.checked || '')
+           : uniSortKey === 'status'  ? (b.inWl ? 1 : 0)
            : (b.purify ?? 9999);
     return uniSortAsc ? (av < bv ? -1 : av > bv ? 1 : 0) : (av > bv ? -1 : av < bv ? 1 : 0);
   });
 
   const tbody = document.getElementById('uni-tbody');
+  if (!tbody) return; // tab ยังไม่ถูก mount — ข้าม render อย่างปลอดภัย (กัน error ตอนเรียกจาก renderWL)
   if (!rows.length) {
     tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:30px;color:var(--text3)">ไม่พบข้อมูล</td></tr>';
     return;
   }
 
   tbody.innerHTML = rows.map(r => {
-    const inWl  = wls.has(r.sym);
+    const inWl  = r.inWl;
     const hTag  = r.halal === 'HALAL'
       ? '<span style="color:var(--green);font-family:var(--mono);font-size:10px;font-weight:700">✅ HALAL</span>'
       : r.halal === 'NOT_HALAL'
