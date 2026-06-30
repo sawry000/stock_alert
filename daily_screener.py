@@ -81,12 +81,15 @@ DEFAULT_CFG = {
     "rsi_max":           72.0,    # RSI สูงสุด (ไม่รับ overbought)
     "volume_ratio_min":   1.3,    # Volume วันนี้ / avg ขั้นต่ำ
     "require_above_ema50": True,  # ต้องอยู่เหนือ EMA50
-    "max_watchlist":       60,    # จำนวนหุ้นสูงสุดใน watchlist
+    "max_watchlist":      100,    # จำนวนหุ้นสูงสุดใน watchlist
     "account_size_per_stock": 100,
     # Removal thresholds
     "remove_adr_below":   5.0,    # ADR ลงต่ำกว่านี้ = เตือนให้ออก
     "remove_adr_days":    3,      # ต้อง low ADR ติดกัน N วัน
-    "remove_purify_pct":  4.0,    # purify เกินนี้ = ออกทันที
+    "remove_purify_pct":  5.0,    # purify เกินนี้ = ออกทันที
+    # Competitive replacement (เมื่อ watchlist เต็ม) ─────────────────────────
+    "replace_score_margin": 10.0, # ผู้ท้าชิงต้องคะแนนสูงกว่าตัวอ่อนแอสุดอย่างน้อยเท่านี้
+    "min_holding_days":      5,   # หุ้นที่อยู่ใน WL ไม่ถึงเท่านี้วัน ห้ามถูกแทนที่ (กัน churn)
     # Gemini
     # Typesense/Musaffa
     "typesense_base": "https://0bs2hegi5nmtad4op.a1.typesense.net",
@@ -523,6 +526,110 @@ def run_gates(ticker, data, halal, cfg):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+#  QUALITY SCORE & COMPETITIVE REPLACEMENT
+#  เมื่อ watchlist เต็ม ใช้คะแนนนี้เทียบหุ้นใหม่กับตัวอ่อนแอที่สุดใน watchlist
+#  แทนที่จะ "หยุด scan" ทันทีที่เต็ม — ไม่เรียก API เพิ่ม (ไม่กิน Gemini quota)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def calc_quality_score(purify_pct, adr_pct, rsi, vol_ratio, above_ema50, cfg):
+    """
+    คำนวณ Quality Score (0-100) จากข้อมูลที่มีอยู่แล้วจาก gate screening
+
+    น้ำหนัก:
+      35% Purify  — purify ยิ่งต่ำยิ่งดี (0% = 100 คะแนน, max_purify_pct = 0 คะแนน)
+      30% ADR     — โอกาส volatility/กำไรต่อวัน (cap ที่ 20% ADR = เต็ม 100)
+      20% Momentum— RSI ใกล้จุดสมดุล (55) + volume ratio สูง
+      15% Trend   — above_ema50 ผ่าน = 100, ไม่ผ่าน = 40
+    """
+    max_purify = cfg.get("max_purify_pct", DEFAULT_CFG["max_purify_pct"])
+
+    if purify_pct is None:
+        purify_score = 70.0
+    else:
+        purify_score = 100.0 * (1 - purify_pct / max_purify) if max_purify > 0 else 50.0
+        purify_score = max(0.0, min(100.0, purify_score))
+
+    adr_score = max(0.0, min(100.0, (adr_pct / 20.0) * 100.0))
+
+    rsi_dist = abs(rsi - 55)
+    rsi_score = max(0.0, 100.0 - rsi_dist * 2.5)
+    vol_score = max(0.0, min(100.0, (vol_ratio / 3.0) * 100.0))
+    momentum_score = (rsi_score * 0.5) + (vol_score * 0.5)
+
+    trend_score = 100.0 if above_ema50 else 40.0
+
+    total = (
+        purify_score * 0.35 +
+        adr_score * 0.30 +
+        momentum_score * 0.20 +
+        trend_score * 0.15
+    )
+    return round(total, 1)
+
+
+def build_scored_watchlist(watchlist, cfg):
+    """
+    คำนวณ quality score ปัจจุบันของทุกตัวใน watchlist (เรียกครั้งเดียวก่อนเข้า
+    PHASE 2 loop ไม่ใช่ทุก ticker ที่ scan — ประหยัด yfinance calls)
+    """
+    scored = {}
+    for s in watchlist:
+        sym = s["symbol"]
+        data = fetch_stock_data(sym)
+        if data is None:
+            continue
+        scored[sym] = calc_quality_score(
+            purify_pct=s.get("purify_pct"),
+            adr_pct=data["adr_pct"],
+            rsi=data["rsi"],
+            vol_ratio=data["vol_ratio"],
+            above_ema50=data["above_ema50"],
+            cfg=cfg,
+        )
+        time.sleep(0.3)
+    return scored
+
+
+def find_replacement_candidate(watchlist, scored_watchlist, new_score, cfg):
+    """
+    หาตัวที่อ่อนแอที่สุดใน watchlist ที่ "มีสิทธิ์" ถูกแทนที่ (ผ่าน minimum
+    holding period แล้ว) และผู้ท้าชิงต้องคะแนนสูงกว่าตามอย่างน้อย margin
+
+    Returns: (weakest_entry: dict | None, weakest_score: float | None)
+    """
+    margin   = cfg.get("replace_score_margin", DEFAULT_CFG["replace_score_margin"])
+    min_days = cfg.get("min_holding_days", DEFAULT_CFG["min_holding_days"])
+    now = datetime.now(timezone.utc)
+
+    eligible = []
+    for s in watchlist:
+        sym = s["symbol"]
+        added_at_str = s.get("added_at")
+        if not added_at_str:
+            continue
+        try:
+            added_at = datetime.fromisoformat(added_at_str.replace("Z", "+00:00"))
+        except (ValueError, TypeError):
+            continue
+        holding_days = (now - added_at).total_seconds() / 86400.0
+        if holding_days < min_days:
+            continue
+        score = scored_watchlist.get(sym)
+        if score is None:
+            continue
+        eligible.append((s, score))
+
+    if not eligible:
+        return None, None
+
+    weakest_entry, weakest_score = min(eligible, key=lambda x: x[1])
+
+    if new_score >= weakest_score + margin:
+        return weakest_entry, weakest_score
+    return None, None
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 #  REMOVAL CHECK — ตรวจหุ้นใน watchlist ว่าต้องออกหรือไม่
 # ══════════════════════════════════════════════════════════════════════════════
 
@@ -873,10 +980,17 @@ def add_to_watchlist(settings, watchlist, entry, max_wl):
 
 
 def remove_from_watchlist(settings, watchlist, sym, reason):
+    """
+    ลบหุ้นออกจาก watchlist — ใช้ slice assignment (watchlist[:] = kept) เพื่อ
+    mutate list เดิมแบบ in-place ตัวแปร watchlist ที่ main() ถืออยู่จะถูกแก้จริง
+    (เดิมสร้าง list ใหม่ทิ้งไว้เฉยๆ ทำให้ save_watchlist() ท้าย PHASE 1 ที่ใช้
+    ตัวแปร watchlist เดิมเขียนทับค่าที่เพิ่งลบไปกลับเข้ามาใหม่)
+    """
     before = len(watchlist)
-    watchlist_new = [s for s in watchlist if s["symbol"].upper() != sym.upper()]
-    if len(watchlist_new) < before:
-        save_watchlist(settings, watchlist_new)
+    kept = [s for s in watchlist if s["symbol"].upper() != sym.upper()]
+    if len(kept) < before:
+        watchlist[:] = kept
+        save_watchlist(settings, watchlist)
         return True
     return False
 
@@ -996,7 +1110,12 @@ def main():
     log_print(f"   Watchlist ปัจจุบัน: {len(watchlist)}/{max_wl} slots")
 
     added_syms  = []
+    replaced_syms = []
     scan_results = []
+
+    # ถ้า watchlist เต็มอยู่แล้วตั้งแต่ต้น ให้คำนวณคะแนนทุกตัวไว้ล่วงหน้า
+    # ครั้งเดียว (ไม่ใช่ทุก ticker ที่ scan) เพื่อใช้เทียบ competitive replacement
+    scored_watchlist = build_scored_watchlist(watchlist, cfg) if len(watchlist) >= max_wl else {}
 
     for ticker_entry in universe:
         # รองรับทั้ง string และ dict
@@ -1014,10 +1133,9 @@ def main():
         if sym in wl_syms:
             continue
 
-        # ตรวจว่า watchlist เต็มหรือยัง
-        if len(watchlist) >= max_wl:
-            log_print(f"  ⚠️ Watchlist เต็ม {max_wl} ตัว — หยุด scan")
-            break
+        # หมายเหตุ: ไม่ break ทันทีที่เต็มอีกต่อไป — ยัง scan ต่อเพื่อหาตัวที่
+        # คะแนนดีกว่าตัวอ่อนแอที่สุดใน watchlist (competitive replacement
+        # ดูจุด status == "full" ด้านล่างสำหรับ logic เทียบคะแนน)
 
         log_print(f"\n[Scan] {sym} ({name})")
 
@@ -1129,7 +1247,61 @@ def main():
             )
             send_telegram(token, chat_id, msg)
         else:
-            log_print(f"  ℹ️ ไม่ได้เพิ่ม: {status}")
+            if status == "full":
+                # ── Competitive Replacement ────────────────────────
+                new_score = calc_quality_score(
+                    purify_pct=purify, adr_pct=data["adr_pct"], rsi=data["rsi"],
+                    vol_ratio=data["vol_ratio"], above_ema50=data["above_ema50"],
+                    cfg=cfg,
+                )
+                weakest, weakest_score = find_replacement_candidate(
+                    watchlist, scored_watchlist, new_score, cfg
+                )
+                if weakest is not None:
+                    old_sym = weakest["symbol"]
+                    log_print(
+                        f"  🔄 REPLACE: {old_sym} (คะแนน {weakest_score}) "
+                        f"→ {sym} (คะแนน {new_score})"
+                    )
+                    remove_from_watchlist(
+                        wl_settings, watchlist, old_sym,
+                        f"แทนที่ด้วย {sym} (คะแนนดีกว่า {new_score} vs {weakest_score})"
+                    )
+                    wl_syms.discard(old_sym)
+                    scored_watchlist.pop(old_sym, None)
+
+                    ok2, status2 = add_to_watchlist(wl_settings, watchlist, entry, max_wl)
+                    if ok2:
+                        wl_syms.add(sym)
+                        scored_watchlist[sym] = new_score
+                        replaced_syms.append({
+                            "added": sym, "removed": old_sym,
+                            "new_score": new_score, "old_score": weakest_score,
+                            "at": now_str(),
+                        })
+                        log_print(f"  ➕ เพิ่มเข้า watchlist แล้ว ({len(watchlist)}/{max_wl})")
+
+                        purify_str = f"{purify:.1f}%" if purify is not None else "N/A"
+                        msg = (
+                            f"🔄 <b>แทนที่ใน Watchlist</b>\n"
+                            f"ตัด: <b>{old_sym}</b> (คะแนน {weakest_score})\n"
+                            f"เพิ่ม: <b>{sym}</b> ({name}) (คะแนน {new_score})\n"
+                            f"🏷️ Template: <b>{template}</b>  ({reason})\n"
+                            f"📊 ADR: {data['adr_pct']:.1f}%  RSI: {data['rsi']:.0f}"
+                            f"  Vol: {data['vol_ratio']:.1f}x\n"
+                            f"✅ Halal | Purify: {purify_str}\n"
+                            f"🕐 {now_bkk_str()}"
+                        )
+                        send_telegram(token, chat_id, msg)
+                    else:
+                        log_print(f"  ⚠️ Replacement ล้มเหลว: {status2}")
+                else:
+                    log_print(
+                        f"  ℹ️ Watchlist เต็ม — {sym} คะแนน {new_score} "
+                        f"ไม่พอแทนที่ตัวไหน (margin/holding period ไม่ผ่าน) — ข้าม"
+                    )
+            else:
+                log_print(f"  ℹ️ ไม่ได้เพิ่ม: {status}")
 
         scan_results.append({
             "symbol": sym, "passed": True, "template": template,
@@ -1144,11 +1316,12 @@ def main():
     log_print(f"SUMMARY — {now_bkk_str()}")
     log_print(f"  Universe scanned : {len(scan_results)} tickers")
     log_print(f"  ➕ Added to WL   : {len(added_syms)}")
+    log_print(f"  🔄 Replaced in WL: {len(replaced_syms)}")
     log_print(f"  🔴 Removed from WL: {len(removed_syms)}")
     log_print(f"  📋 Watchlist now : {len(watchlist)}/{max_wl}")
     log_print(f"{'='*65}")
 
-    if added_syms or removed_syms:
+    if added_syms or removed_syms or replaced_syms:
         lines = [
             "<b>📊 Screener รายงานประจำวัน</b>",
             f"🕐 {now_bkk_str()}",
@@ -1164,12 +1337,20 @@ def main():
                     f"  • <b>{a['symbol']}</b> [{a['template']}]"
                     f" ADR={a['adr']:.1f}% Purify={pur}"
                 )
+        if replaced_syms:
+            lines.append(f"\n<b>🔄 แทนที่ {len(replaced_syms)} ตัว:</b>")
+            for r in replaced_syms[:10]:
+                lines.append(
+                    f"  • <b>{r['removed']}</b> ({r['old_score']}) → "
+                    f"<b>{r['added']}</b> ({r['new_score']})"
+                )
         if removed_syms:
             lines.append(f"\n<b>🔴 ปลดออก {len(removed_syms)} ตัว:</b>")
             for r in removed_syms[:10]:
                 lines.append(f"  • <b>{r['symbol']}</b> — {r['reason']}")
         lines.append(f"\n🤖 Halal Auto Screener v1.0")
         send_telegram(token, chat_id, "\n".join(lines))
+
 
     # ── บันทึก log + state ────────────────────────────────────────────────────
     today = today_str()
