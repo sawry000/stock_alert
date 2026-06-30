@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T02:09:32Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_RSI_OS_4H",
-    "type": "rsi",
-    "price": 369.4599914550781,
-    "change_pct": 0.35310502365224355,
-    "value": 30.85
-  },
-  {
-    "timestamp": "2026-06-26T02:22:47Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.559999942779541,
-    "change_pct": -1.1111127005683075,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-26T02:23:18Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.210000038146973,
-    "change_pct": -0.9411755730124081,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-26T03:12:20Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 407.25,
-    "change_pct": -0.30687612055316177,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T03:23:27Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_UP_5",
@@ -4614,5 +4578,45 @@
     "price": 55.86000061035156,
     "change_pct": 7.443740354590423,
     "value": 7.443740354590423
+  },
+  {
+    "timestamp": "2026-06-30T21:48:34Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1.840000033378601,
+    "change_pct": -6.122447276601984,
+    "value": -6.122447276601984
+  },
+  {
+    "timestamp": "2026-06-30T21:48:56Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 38.849998474121094,
+    "change_pct": 8.270345556933474,
+    "value": 8.270345556933474
+  },
+  {
+    "timestamp": "2026-06-30T21:49:00Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 17.84000015258789,
+    "change_pct": -7.56476604876741,
+    "value": -7.56476604876741
+  },
+  {
+    "timestamp": "2026-06-30T21:49:29Z",
+    "symbol": "VECO",
+    "alert_id": "VECO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 75.80000305175781,
+    "change_pct": 9.221906414636608,
+    "value": 3
   }
 ]
