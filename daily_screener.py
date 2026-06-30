@@ -819,6 +819,11 @@ def build_stock_entry(ticker, name, template, confirm_hits, halal, account_size=
         "added_by":      "auto_screener",
         "added_at":      now_str(),
         "screened_at":   now_str(),
+        # ── Gate tuning (ใช้ใน alert_engine.py) ───────────────────────
+        # VOLATILE/MOMENTUM หมุนไวกว่า → cooldown สั้นกว่า GROWTH/STABLE
+        "re_entry_cooldown_minutes":    180 if template in ("VOLATILE", "MOMENTUM") else 240,
+        "post_sell_cooldown_minutes":   90  if template in ("VOLATILE", "MOMENTUM") else 120,
+        "buy_suppress_drop_pct":        3.0,
         "position_alert": {
             "account_size": account_size,
             "risk_pct":     2.0,

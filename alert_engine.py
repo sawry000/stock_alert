@@ -867,20 +867,41 @@ def main():
         print(f"  Price=${quote['price']:.4f}  Chg={quote['change_pct']:+.2f}%  Vol={quote['volume']:.0f}")
 
         sym_state    = state.get(symbol, {})
-        has_open_pos = sym_state.get("open_position", False)
         price        = quote["price"]
+
+        # ── Re-entry cooldown (แทน open_position suppress ถาวร) ─────
+        # ไม่ block BUY ตลอดไปแค่เพราะเคย BUY มาก่อน — ให้โอกาส entry ใหม่
+        # ได้ถ้าผ่านไปนานพอ (re_entry_cooldown_minutes ตั้งค่าได้ต่อหุ้น)
+        reentry_cd   = stock.get("re_entry_cooldown_minutes", 240)  # default 4 ชม.
+        last_buy_at  = sym_state.get("last_buy_at", "")
+        in_reentry_cd = bool(last_buy_at) and minutes_since(last_buy_at) < reentry_cd
+
+        # ── Sell cooldown — เพิ่ง SELL ไปไม่นาน ห้าม BUY ซ้ำเร็วเกินไป ──
+        sell_cd      = stock.get("post_sell_cooldown_minutes", 120)  # default 2 ชม.
+        last_sell_at = sym_state.get("last_sell_at", "")
+        in_sell_cd   = bool(last_sell_at) and minutes_since(last_sell_at) < sell_cd
+
+        # ── Price-drop filter — ลงหนักวันนี้ ห้าม BUY แม้ signal ผ่าน ──
+        drop_threshold = stock.get("buy_suppress_drop_pct", 3.0)
+        price_dropping  = quote["change_pct"] <= -drop_threshold
 
         # ── Macro suppress for BUY ──────────────────────────────────
         suppress_buy    = False
         suppress_reason = ""
-        if market_down and not has_open_pos:
+        if market_down and not in_reentry_cd:
             suppress_buy    = True
             suppress_reason = f"SPY ลง {spy_chg:.1f}%"
-        if btc_down and symbol in BTC_LINKED and not has_open_pos:
+        if btc_down and symbol in BTC_LINKED and not in_reentry_cd:
             suppress_buy    = True
             suppress_reason = f"BTC ลง {btc_chg:.1f}%"
+        if in_sell_cd:
+            suppress_buy    = True
+            suppress_reason = f"เพิ่ง SELL ไป {minutes_since(last_sell_at):.0f} นาทีที่แล้ว (cooldown {sell_cd}m)"
+        if price_dropping:
+            suppress_buy    = True
+            suppress_reason = f"ราคาลง {quote['change_pct']:.1f}% วันนี้ (เกิน -{drop_threshold}%)"
         if suppress_buy:
-            print(f"  [Macro Suppress] {suppress_reason}")
+            print(f"  [Suppress BUY] {suppress_reason}")
 
         # ════════════════════════════════════════════════════════════
         #  PROCESS EACH ALERT IN WATCHLIST
@@ -901,12 +922,14 @@ def main():
                 print(f"  [{alert_id}] cooldown {rem:.0f}m")
                 continue
 
-            # ── BUY suppression ────────────────────────────────────
+            # ── BUY suppression (macro / sell-cooldown / price-drop) ─
             if action == "BUY" and suppress_buy:
-                print(f"  [{alert_id}] suppressed (macro)")
+                print(f"  [{alert_id}] suppressed: {suppress_reason}")
                 continue
-            if action == "BUY" and has_open_pos:
-                print(f"  [{alert_id}] suppressed (open position)")
+            # ── Re-entry cooldown เฉพาะ BUY (ไม่บล็อกถาวรเหมือนเดิม) ──
+            if action == "BUY" and in_reentry_cd:
+                rem = reentry_cd - minutes_since(last_buy_at)
+                print(f"  [{alert_id}] re-entry cooldown {rem:.0f}m (BUY ล่าสุด {minutes_since(last_buy_at):.0f}m ที่แล้ว)")
                 continue
 
             triggered = False
@@ -1089,13 +1112,14 @@ def main():
             if success:
                 state.setdefault(symbol, {})[alert_id] = {"last_fired": now_str()}
 
-                # ── Track open position ────────────────────────────
+                # ── Track BUY/SELL timestamps (สำหรับ re-entry + sell cooldown) ──
                 if action == "BUY":
-                    state[symbol]["open_position"] = True
-                    state[symbol]["open_entry"]    = price
-                    state[symbol]["open_time"]     = now_str()
+                    state[symbol]["last_buy_at"]  = now_str()
+                    state[symbol]["open_entry"]   = price
+                    state[symbol]["open_time"]    = now_str()
                 elif action == "SELL":
-                    state[symbol]["open_position"] = False
+                    state[symbol]["last_sell_at"] = now_str()
+
 
                 log.append({
                     "timestamp":  now_str(),

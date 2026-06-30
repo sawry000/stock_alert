@@ -295,6 +295,10 @@ def build_stock_entry(symbol, name, template, confirm_hits=1, account_size=100):
         "confirm_hits": confirm_hits,
         "template": template,
         "added_at": now_str(),
+        # ── Gate tuning (ใช้ใน alert_engine.py) ───────────────────────
+        "re_entry_cooldown_minutes":   180 if template in ("VOLATILE", "MOMENTUM") else 240,
+        "post_sell_cooldown_minutes":  90  if template in ("VOLATILE", "MOMENTUM") else 120,
+        "buy_suppress_drop_pct":       3.0,
         "position_alert": {
             "account_size": account_size,
             "risk_pct":     2.0,

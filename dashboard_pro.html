@@ -729,6 +729,9 @@ input[type=password]{letter-spacing:2px}
           <button class="btn btn-sm btn-ghost" onclick="uniSyncGH()" id="uni-sync-btn">
             <span class="msi">sync</span> Sync GitHub
           </button>
+          <button class="btn btn-sm" style="background:var(--green);color:#000" onclick="uniCheckSelected()" id="uni-check-btn">
+            <span class="msi">verified</span> Check Halal ที่เลือก (<span id="uni-check-count">0</span>)
+          </button>
           <button class="btn btn-sm" style="background:var(--purple);color:#fff" onclick="uniExport()">
             <span class="msi">download</span> Export JSON
           </button>
@@ -790,6 +793,17 @@ input[type=password]{letter-spacing:2px}
             <button class="btn btn-xs btn-red" onclick="uniDeleteSelected()">
               <span class="msi">delete</span> ลบที่เลือก
             </button>
+          </div>
+        </div>
+
+        <!-- Progress bar (แสดงตอน manual halal check) -->
+        <div id="uni-check-progress" style="display:none;margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text2);margin-bottom:4px">
+            <span id="uni-check-progress-txt">กำลังตรวจสอบ...</span>
+            <span id="uni-check-progress-pct">0%</span>
+          </div>
+          <div style="height:5px;background:var(--bg2);border-radius:3px;overflow:hidden">
+            <div id="uni-check-progress-fill" style="height:100%;width:0%;background:linear-gradient(90deg,var(--purple),var(--green));transition:width .2s"></div>
           </div>
         </div>
 
@@ -3428,7 +3442,7 @@ function uniRenderTable() {
     const rowBg = inWl ? 'background:rgba(0,229,255,0.03)' : '';
     const checked = r.checked ? r.checked.substring(0,10) : '<span style="color:var(--text3)">-</span>';
     return `<tr style="${rowBg}" data-sym="${r.sym}">
-      <td><input type="checkbox" class="uni-chk" value="${r.sym}" style="accent-color:var(--purple)"></td>
+      <td><input type="checkbox" class="uni-chk" value="${r.sym}" style="accent-color:var(--purple)" onchange="uniUpdateCheckCount()"></td>
       <td style="font-family:var(--mono);font-size:12px;font-weight:600;color:var(--cyan)">${r.sym}</td>
       <td style="font-size:11px;color:var(--text2);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${r.name}</td>
       <td>${hTag}</td>
@@ -3467,6 +3481,174 @@ function uniSort(key) {
 
 function uniToggleAll(checked) {
   document.querySelectorAll('.uni-chk').forEach(c => c.checked = checked);
+  uniUpdateCheckCount();
+}
+
+// ══════════════════════════════════════════════════════════
+//  MANUAL HALAL CHECK — เรียก Typesense API ตรงจาก browser
+//  (เหมือน fetch_halal_data() ใน daily_screener.py)
+// ══════════════════════════════════════════════════════════
+const TYPESENSE_BASE = 'https://0bs2hegi5nmtad4op.a1.typesense.net';
+const TYPESENSE_KEY  = 'GRhZdTOnzVKId4Ln9G1PIvuIgn1TK0fH';
+
+function uniUpdateCheckCount() {
+  const n = document.querySelectorAll('.uni-chk:checked').length;
+  const el = document.getElementById('uni-check-count');
+  if (el) el.textContent = n;
+}
+
+function _uniParseHalalFields(sd) {
+  let halal = false;
+  if (sd.etf_type === 'ShariahApproved') halal = true;
+  if (!halal && String(sd.isShariahApproved || '0') === '1') halal = true;
+  if (!halal) {
+    const scs = String(sd.shariahCompliantStatus || '').toUpperCase();
+    if (scs === 'COMPLIANT') halal = true;
+  }
+  if (!halal) {
+    const sc = String(sd.sharia_compliance || '').toUpperCase();
+    if (['COMPLIANT','COVERED','HALAL','YES','PERMISSIBLE'].includes(sc)) halal = true;
+  }
+  if (!halal && sd.musaffaHalalRating != null && sd.musaffaHalalRating !== '') {
+    const rNum = parseFloat(sd.musaffaHalalRating);
+    if (!isNaN(rNum)) { if (rNum >= 1) halal = true; }
+    else {
+      const rStr = String(sd.musaffaHalalRating).toUpperCase();
+      if (['COMPLIANT','COVERED','HALAL','YES','PERMISSIBLE'].includes(rStr)) halal = true;
+    }
+  }
+  if (!halal && sd._isETF) {
+    const bcEtf = parseFloat(sd.businessCompliantRatio || 0);
+    if (bcEtf >= 95) halal = true;
+  }
+
+  const hasField = (
+    sd.sharia_compliance != null || sd.shariahCompliantStatus != null ||
+    sd.musaffaHalalRating != null || sd.etf_type === 'ShariahApproved' ||
+    String(sd.isShariahApproved || '0') === '1' ||
+    (sd._isETF && sd.businessCompliantRatio != null)
+  );
+  if (!hasField) return { status: 'UNKNOWN', purify_pct: null };
+
+  let purifyPct = null;
+  if (sd.businessCompliantRatio != null) {
+    const bcNum = parseFloat(sd.businessCompliantRatio);
+    if (!isNaN(bcNum)) purifyPct = Math.round(Math.max(0, 100 - bcNum) * 100) / 100;
+  }
+  return { status: halal ? 'HALAL' : 'NOT_HALAL', purify_pct: purifyPct };
+}
+
+async function uniFetchHalalData(ticker) {
+  const symUpper = ticker.toUpperCase();
+  const fields = ['sharia_compliance','shariahCompliantStatus','musaffaHalalRating',
+    'businessCompliantRatio','interestBearingDebtRatio','interestBearingAssetsRatio',
+    'doubtful_revenue_percent','etf_type','isShariahApproved'].join(',');
+
+  // ── stocks_data collection ─────────────────────────────────
+  try {
+    const idFilter = '`' + symUpper + '`';
+    const filterBy = '$company_profile_collection_new(id:*)&&id:=[' + idFilter + ']';
+    const params = new URLSearchParams({
+      'x-typesense-api-key': TYPESENSE_KEY,
+      'per_page': '1', 'q': '*',
+      'include_fields': '$stocks_data(' + fields + '),',
+      'filter_by': filterBy,
+    });
+    const url = TYPESENSE_BASE + '/collections/stocks_data/documents/search?' + params.toString();
+    const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
+    if (res.ok) {
+      const data = await res.json();
+      const hits = data.hits || [];
+      if (hits.length) {
+        const hit = hits.find(h => ((h.document || {}).id || '').toUpperCase() === symUpper) || hits[0];
+        const doc = hit.document || {};
+        const sd  = doc.stocks_data || doc;
+        const result = _uniParseHalalFields(sd);
+        if (result.status !== 'UNKNOWN') return result;
+      }
+    }
+  } catch (e) { console.warn('[Halal-stocks]', ticker, e); }
+
+  // ── ETF fallback ────────────────────────────────────────────
+  try {
+    const idFilter = '`' + symUpper + '`';
+    const params = new URLSearchParams({
+      'x-typesense-api-key': TYPESENSE_KEY,
+      'per_page': '1', 'q': '*',
+      'filter_by': 'id:=[' + idFilter + ']',
+    });
+    const url = TYPESENSE_BASE + '/collections/etfs_data/documents/search?' + params.toString();
+    const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
+    if (res.ok) {
+      const data = await res.json();
+      const hits = data.hits || [];
+      if (hits.length) {
+        const doc = hits[0].document || {};
+        doc._isETF = true;
+        return _uniParseHalalFields(doc);
+      }
+    }
+  } catch (e) { console.warn('[Halal-etf]', ticker, e); }
+
+  return { status: 'UNKNOWN', purify_pct: null };
+}
+
+async function uniCheckSelected() {
+  const checked = Array.from(document.querySelectorAll('.uni-chk:checked')).map(c => c.value);
+  if (!checked.length) { showToast('เลือกหุ้นที่จะ Check Halal ก่อน', 'err'); return; }
+  if (checked.length > 100 && !confirm(`เลือก ${checked.length} ตัว — Check ทีละตัวอาจใช้เวลานาน ดำเนินการต่อ?`)) return;
+
+  const btn = document.getElementById('uni-check-btn');
+  btn.disabled = true;
+  const progWrap = document.getElementById('uni-check-progress');
+  const progTxt  = document.getElementById('uni-check-progress-txt');
+  const progPct  = document.getElementById('uni-check-progress-pct');
+  const progFill = document.getElementById('uni-check-progress-fill');
+  progWrap.style.display = '';
+
+  let done = 0, halalN = 0, nhalalN = 0, unkN = 0;
+  for (const sym of checked) {
+    progTxt.textContent = `กำลังตรวจ ${sym}... (${done+1}/${checked.length})`;
+    const result = await uniFetchHalalData(sym);
+
+    // อัปเดต UNI.universe entry
+    const idx = (UNI.universe || []).findIndex(r => uniSym(r).toUpperCase() === sym);
+    if (idx !== -1) {
+      const old = UNI.universe[idx];
+      UNI.universe[idx] = {
+        symbol: sym,
+        name: typeof old === 'string' ? sym : (old.name || sym),
+        added_at: typeof old === 'string' ? new Date().toISOString() : (old.added_at || new Date().toISOString()),
+        halal_status: result.status,
+        purify_pct: result.purify_pct,
+        last_checked: new Date().toISOString(),
+      };
+    }
+
+    if (result.status === 'HALAL') halalN++;
+    else if (result.status === 'NOT_HALAL') nhalalN++;
+    else unkN++;
+
+    done++;
+    const pct = Math.round((done / checked.length) * 100);
+    progPct.textContent = pct + '%';
+    progFill.style.width = pct + '%';
+    uniRenderTable();
+    uniUpdateStats();
+
+    // Rate limit กัน Typesense block — เว้นช่วงเล็กน้อย
+    await new Promise(r => setTimeout(r, 350));
+  }
+
+  progTxt.textContent = `เสร็จสิ้น ${done}/${checked.length} — ✅${halalN} ❌${nhalalN} ⏳${unkN}`;
+  showToast(`Check Halal เสร็จ: ✅${halalN} Halal, ❌${nhalalN} Not, ⏳${unkN} ไม่พบข้อมูล`, 'ok');
+  btn.disabled = false;
+
+  // Auto-save ขึ้น GitHub
+  const ok = await uniSaveGH(`universe: manual halal check ${checked.length} symbols`);
+  if (ok) showToast('บันทึกผล Halal Check ขึ้น GitHub แล้ว 💾', 'ok');
+
+  setTimeout(() => { progWrap.style.display = 'none'; }, 4000);
 }
 
 // ── Add / Delete ──────────────────────────────────────────
