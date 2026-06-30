@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T01:39:11Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 5.320000171661377,
-    "change_pct": -8.882263356602998,
-    "value": 26.37
-  },
-  {
     "timestamp": "2026-06-26T01:43:34Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4605,5 +4596,15 @@
     "price": 10.135000228881836,
     "change_pct": 7.023307837272147,
     "value": 7.023307837272147
+  },
+  {
+    "timestamp": "2026-06-30T15:29:06Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.030000686645508,
+    "change_pct": 0.27864830530485235,
+    "value": 2
   }
 ]
