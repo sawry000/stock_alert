@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T21:48:32Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_DROP",
-    "type": "percent_change",
-    "price": 36.81999969482422,
-    "change_pct": -9.865361824175721,
-    "value": -9.865361824175721
-  },
-  {
     "timestamp": "2026-06-25T21:49:05Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_PCT_DROP",
@@ -4574,5 +4565,15 @@
     "price": 4.71999979019165,
     "change_pct": 6.306301580893018,
     "value": 6.306301580893018
+  },
+  {
+    "timestamp": "2026-06-30T11:48:53Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 115.1500015258789,
+    "change_pct": 0.4969440951425479,
+    "value": 3
   }
 ]
