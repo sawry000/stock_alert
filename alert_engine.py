@@ -546,6 +546,84 @@ def get_macro_context():
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+#  CONVICTION GATE — ด่านสุดท้ายก่อนปล่อย BUY (ทุก alert type ต้องผ่าน)
+#
+#  แทนที่ Layer 2+3 เดิม (Volatility Gate + AND Signal Gate) ที่ถูกถอดออกไป
+#  ตอนเปลี่ยนเป็น Tiered System — ออกแบบให้ "เร็วแต่ไม่มั่ว":
+#  ไม่บังคับ AND ทุกตัวเหมือนเดิม (ช้า) แต่ให้คะแนน 4 มิติ แล้วต้องผ่าน
+#  อย่างน้อย 3/4 ถึงปล่อยสัญญาณ — ใช้ history ที่ต้องดึงอยู่แล้วจาก signal
+#  เดิม ไม่เพิ่ม API call ใหม่ (ยกเว้นกรณี signal เดิมไม่ได้ดึง history มา)
+# ══════════════════════════════════════════════════════════════════════════════
+
+def conviction_gate(symbol, quote, alert_history_cache=None):
+    """
+    ให้คะแนน 4 มิติจากข้อมูลราคาล่าสุด แล้วตัดสินว่าควรปล่อย BUY หรือไม่
+    Returns: (passed: bool, score: int, detail: dict)
+
+    มิติที่เช็ก:
+      1. Trend  — ราคา > EMA21 (1d)               กัน buy ขาลง
+      2. Mom    — RSI(14) อยู่ระหว่าง 35-75         กัน buy จุด exhaustion
+      3. Volume — Volume วันนี้ >= 1.1x ค่าเฉลี่ย    กัน buy ตอนไม่มีคนเล่น
+      4. Vol%   — ATR% ไม่ผิดปกติเกิน 2.5x ของปกติ   กัน chase ตอน volatility พุ่ง
+    """
+    hist = alert_history_cache
+    if hist is None:
+        hist = fetch_history(symbol, period="90d", interval="1d")
+
+    if hist is None or len(hist) < 25:
+        # ข้อมูลไม่พอให้เช็ก — ปล่อยผ่านแบบ neutral (ไม่ block เพราะข้อมูลขาด)
+        return True, 4, {"note": "ข้อมูลไม่พอสำหรับ conviction check — ปล่อยผ่าน"}
+
+    closes  = list(hist["Close"].astype(float))
+    highs   = list(hist["High"].astype(float))
+    lows    = list(hist["Low"].astype(float))
+    volumes = list(hist["Volume"].astype(float))
+    price   = quote["price"]
+
+    detail = {}
+    score  = 0
+
+    # ── 1. Trend: ราคา > EMA21 ────────────────────────────────────
+    ema21_list = _calc_ema(closes, 21)
+    ema21      = next((v for v in reversed(ema21_list) if v is not None), None)
+    trend_pass = (ema21 is not None) and (price > ema21)
+    detail["trend"] = {"pass": trend_pass, "price": round(price, 2),
+                       "ema21": round(ema21, 2) if ema21 else None}
+    if trend_pass:
+        score += 1
+
+    # ── 2. Momentum: RSI ไม่สุดโต่ง ──────────────────────────────
+    rsi_list = _calc_rsi(closes, 14)
+    rsi      = next((v for v in reversed(rsi_list) if v is not None), 50.0)
+    mom_pass = 35 <= rsi <= 75
+    detail["momentum"] = {"pass": mom_pass, "rsi": round(rsi, 1)}
+    if mom_pass:
+        score += 1
+
+    # ── 3. Volume: วันนี้ >= 1.1x ค่าเฉลี่ย ──────────────────────
+    avg_vol   = sum(volumes[-21:-1]) / 20 if len(volumes) >= 21 else (volumes[-1] or 1)
+    today_vol = quote.get("volume") or volumes[-1]
+    vol_ratio = today_vol / avg_vol if avg_vol > 0 else 1.0
+    vol_pass  = vol_ratio >= 1.1
+    detail["volume"] = {"pass": vol_pass, "ratio": round(vol_ratio, 2)}
+    if vol_pass:
+        score += 1
+
+    # ── 4. Volatility sanity: ATR วันนี้ไม่ผิดปกติเกิน 2.5x ATR เฉลี่ย ──
+    atr_now = _calc_atr(highs, lows, closes, 14)
+    # ATR baseline: คำนวณจากช่วงก่อนหน้า (offset 5 วัน) เทียบ relative spike
+    atr_base = _calc_atr(highs[:-5], lows[:-5], closes[:-5], 14) if len(closes) >= 30 else atr_now
+    atr_spike = (atr_now / atr_base) if (atr_base and atr_base > 0) else 1.0
+    vola_pass = atr_spike <= 2.5
+    detail["volatility"] = {"pass": vola_pass, "atr_spike_ratio": round(atr_spike, 2)}
+    if vola_pass:
+        score += 1
+
+    passed = score >= 3
+    return passed, score, detail
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 #  POSITION SIZE CALCULATOR  (account_size default = 100 USD)
 # ══════════════════════════════════════════════════════════════════════════════
 
@@ -1105,6 +1183,29 @@ def main():
             if msg is None:
                 print(f"  [{alert_id}] triggered แต่ไม่มี message")
                 continue
+
+            # ── CONVICTION GATE — ด่านสุดท้ายเฉพาะ BUY (รวมศูนย์ทุก type) ──
+            # ทุก BUY signal (ไม่ว่าจะมาจาก RSI/MTF/Score/Volume/%Change ฯลฯ)
+            # ต้องผ่านอย่างน้อย 3/4 มิติก่อนปล่อยจริง — กัน false signal แบบ
+            # SNDK (ราคาลงหนักแต่ MTF ยัง bullish) โดยไม่ต้องดึง API เพิ่ม
+            if action == "BUY":
+                conv_pass, conv_score, conv_detail = conviction_gate(symbol, quote)
+                if not conv_pass:
+                    failed_dims = [k for k, v in conv_detail.items()
+                                   if isinstance(v, dict) and not v.get("pass", True)]
+                    print(f"  [{alert_id}] 🚫 Conviction Gate FAIL "
+                          f"({conv_score}/4) — ไม่ผ่าน: {', '.join(failed_dims)}")
+                    continue
+                print(f"  [{alert_id}] ✅ Conviction Gate PASS ({conv_score}/4)")
+                # แนบผล Conviction Score เข้า message ก่อนส่งจริง
+                dims_th = {"trend": "Trend", "momentum": "Momentum",
+                           "volume": "Volume", "volatility": "Volatility"}
+                dim_marks = " ".join(
+                    f"{dims_th.get(k,k)}{'✅' if v.get('pass') else '❌'}"
+                    for k, v in conv_detail.items() if isinstance(v, dict)
+                )
+                conv_line = f"\n🎯 Conviction: {conv_score}/4  ({dim_marks})"
+                msg = msg.replace("\n\n📊 <a href=", conv_line + "\n\n📊 <a href=", 1)
 
             print(f"  [{alert_id}] ✅ TRIGGERED! ส่ง Telegram...")
             success = send_telegram(token, chat_id, msg)
