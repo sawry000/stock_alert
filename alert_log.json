@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T01:47:42Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 95.02999877929688,
-    "change_pct": 1.031255346902905,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T01:48:08Z",
     "symbol": "INOD",
     "alert_id": "INOD_NEWS_POS",
@@ -4609,5 +4600,15 @@
     "price": 38.15999984741211,
     "change_pct": 6.3474010863602,
     "value": 6.3474010863602
+  },
+  {
+    "timestamp": "2026-06-30T17:59:14Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 17.829999923706055,
+    "change_pct": -1.2735330913285938,
+    "value": 3
   }
 ]
