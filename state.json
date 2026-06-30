@@ -481,7 +481,7 @@
       "last_fired": "2026-05-27T09:52:59Z"
     },
     "HIMS_MTF_BULL": {
-      "last_fired": "2026-06-30T06:53:57Z"
+      "last_fired": "2026-06-30T14:58:54Z"
     },
     "HIMS_PCT_UP_5": {
       "last_fired": "2026-06-26T19:28:13Z"
@@ -509,9 +509,9 @@
       "last_fired": "2026-06-25T13:48:29Z"
     },
     "open_position": true,
-    "open_entry": 33.38999938964844,
-    "open_time": "2026-06-30T06:53:57Z",
-    "last_buy_at": "2026-06-30T06:53:57Z"
+    "open_entry": 33.029998779296875,
+    "open_time": "2026-06-30T14:58:54Z",
+    "last_buy_at": "2026-06-30T14:58:54Z"
   },
   "IOVA": {
     "IOVA_BREAK_ABOVE": {
@@ -648,7 +648,7 @@
       "last_fired": "2026-05-27T09:53:23Z"
     },
     "WGS_MTF_BULL": {
-      "last_fired": "2026-06-30T06:54:04Z"
+      "last_fired": "2026-06-30T14:59:01Z"
     },
     "WGS_PCT_UP_5": {
       "last_fired": "2026-05-28T18:47:54Z"
@@ -663,9 +663,9 @@
       "last_fired": "2026-06-23T06:33:10Z"
     },
     "open_position": true,
-    "open_entry": 69.12000274658203,
-    "open_time": "2026-06-30T06:54:04Z",
-    "last_buy_at": "2026-06-30T06:54:04Z"
+    "open_entry": 68.68000030517578,
+    "open_time": "2026-06-30T14:59:01Z",
+    "last_buy_at": "2026-06-30T14:59:01Z"
   },
   "VSEC": {
     "VSEC_POS_SIZE": {
@@ -681,12 +681,12 @@
       "last_fired": "2026-06-08T17:33:57Z"
     },
     "open_position": true,
-    "open_entry": 224.22999572753906,
-    "open_time": "2026-06-30T06:54:17Z",
+    "open_entry": 225.32000732421875,
+    "open_time": "2026-06-30T14:59:15Z",
     "VSEC_MTF_BULL": {
-      "last_fired": "2026-06-30T06:54:17Z"
+      "last_fired": "2026-06-30T14:59:15Z"
     },
-    "last_buy_at": "2026-06-30T06:54:17Z"
+    "last_buy_at": "2026-06-30T14:59:15Z"
   },
   "PSIX": {
     "PSIX_POS_SIZE": {
@@ -719,12 +719,12 @@
       "last_fired": "2026-06-26T13:34:30Z"
     },
     "open_position": true,
-    "open_entry": 366.7900085449219,
-    "open_time": "2026-06-30T06:54:21Z",
+    "open_entry": 371.0409851074219,
+    "open_time": "2026-06-30T14:59:19Z",
     "VICR_MTF_BULL": {
-      "last_fired": "2026-06-30T06:54:21Z"
+      "last_fired": "2026-06-30T14:59:19Z"
     },
-    "last_buy_at": "2026-06-30T06:54:21Z"
+    "last_buy_at": "2026-06-30T14:59:19Z"
   },
   "AMSC": {
     "AMSC_CP_BULL": {
@@ -772,12 +772,12 @@
       "last_fired": "2026-06-26T13:49:26Z"
     },
     "open_position": true,
-    "open_entry": 5.980000019073486,
-    "open_time": "2026-06-30T06:54:25Z",
+    "open_entry": 6.130000114440918,
+    "open_time": "2026-06-30T14:59:24Z",
     "ASPN_MTF_BULL": {
-      "last_fired": "2026-06-30T06:54:25Z"
+      "last_fired": "2026-06-30T14:59:24Z"
     },
-    "last_buy_at": "2026-06-30T06:54:25Z"
+    "last_buy_at": "2026-06-30T14:59:24Z"
   },
   "FSLY": {
     "FSLY_POS_SIZE": {
@@ -1023,7 +1023,7 @@
       "last_fired": "2026-06-23T07:33:04Z"
     },
     "OPRX_MTF_BULL": {
-      "last_fired": "2026-06-30T06:53:54Z"
+      "last_fired": "2026-06-30T14:58:50Z"
     },
     "OPRX_CP_BULL": {
       "last_fired": "2026-06-24T13:38:28Z"
@@ -1041,12 +1041,12 @@
       ]
     },
     "open_position": true,
-    "open_entry": 5.429999828338623,
-    "open_time": "2026-06-30T06:53:54Z",
+    "open_entry": 5.385000228881836,
+    "open_time": "2026-06-30T14:58:50Z",
     "OPRX_RSI_OS_4H": {
       "last_fired": "2026-06-24T12:03:07Z"
     },
-    "last_buy_at": "2026-06-30T06:53:54Z"
+    "last_buy_at": "2026-06-30T14:58:50Z"
   },
   "NLST": {
     "NLST_PCT_UP_5": {
@@ -1453,7 +1453,8 @@
     "open_position": true,
     "open_entry": 108.47000122070312,
     "open_time": "2026-06-30T06:59:21Z",
-    "last_buy_at": "2026-06-30T06:59:21Z"
+    "last_buy_at": "2026-06-30T06:59:21Z",
+    "_confirm_MXL_MTF_BULL": 1
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1462,7 +1463,8 @@
     "open_position": true,
     "open_entry": 1.5700000524520874,
     "open_time": "2026-06-30T06:59:24Z",
-    "last_buy_at": "2026-06-30T06:59:24Z"
+    "last_buy_at": "2026-06-30T06:59:24Z",
+    "_confirm_ZVIA_MTF_BULL": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1474,7 +1476,8 @@
     },
     "open_entry": 142.08999633789062,
     "open_time": "2026-06-30T06:59:27Z",
-    "last_buy_at": "2026-06-30T06:59:27Z"
+    "last_buy_at": "2026-06-30T06:59:27Z",
+    "_confirm_VPG_MTF_BULL": 1
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1495,7 +1498,8 @@
     "open_position": true,
     "open_entry": 5.670000076293945,
     "open_time": "2026-06-30T06:59:33Z",
-    "last_buy_at": "2026-06-30T06:59:33Z"
+    "last_buy_at": "2026-06-30T06:59:33Z",
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1507,7 +1511,8 @@
     },
     "open_entry": 2050.389892578125,
     "open_time": "2026-06-30T06:59:39Z",
-    "last_buy_at": "2026-06-30T06:59:39Z"
+    "last_buy_at": "2026-06-30T06:59:39Z",
+    "_confirm_SNDK_MTF_BULL": 1
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -1516,7 +1521,8 @@
     "open_position": true,
     "open_entry": 21.31999969482422,
     "open_time": "2026-06-30T06:59:42Z",
-    "last_buy_at": "2026-06-30T06:59:42Z"
+    "last_buy_at": "2026-06-30T06:59:42Z",
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1525,7 +1531,8 @@
     "open_position": true,
     "open_entry": 12.399999618530273,
     "open_time": "2026-06-30T06:59:36Z",
-    "last_buy_at": "2026-06-30T06:59:36Z"
+    "last_buy_at": "2026-06-30T06:59:36Z",
+    "_confirm_SVCO_MTF_BULL": 1
   },
   "VECO": {
     "VECO_PCT_DROP": {
