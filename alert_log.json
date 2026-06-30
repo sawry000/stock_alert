@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T21:53:50Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.940000057220459,
-    "change_pct": 9.293682424552381,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-25T21:54:36Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_PCT_DROP",
@@ -4579,5 +4570,15 @@
     "price": 18.25,
     "change_pct": -5.440414507772024,
     "value": -5.440414507772024
+  },
+  {
+    "timestamp": "2026-06-30T13:54:07Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 18.515899658203125,
+    "change_pct": 2.524361341102582,
+    "value": 0.013
   }
 ]
