@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T01:58:31Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.940000057220459,
-    "change_pct": 9.293682424552381,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T02:04:27Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_DROP",
@@ -4611,5 +4602,15 @@
     "price": 11.859999656677246,
     "change_pct": 10.84111828670324,
     "value": 10.84111828670324
+  },
+  {
+    "timestamp": "2026-06-30T18:23:46Z",
+    "symbol": "LFMD",
+    "alert_id": "LFMD_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.159999847412109,
+    "change_pct": -6.094811570832739,
+    "value": -6.094811570832739
   }
 ]
