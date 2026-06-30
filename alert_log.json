@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T01:47:38Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 21.59000015258789,
-    "change_pct": -2.7039199973506562,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-26T01:47:42Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4608,5 +4599,15 @@
     "price": 3.924999952316284,
     "change_pct": -14.301311084797291,
     "value": -14.301311084797291
+  },
+  {
+    "timestamp": "2026-06-30T17:43:57Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 38.15999984741211,
+    "change_pct": 6.3474010863602,
+    "value": 6.3474010863602
   }
 ]
