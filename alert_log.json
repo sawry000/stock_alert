@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-25T21:47:30Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 21.59000015258789,
-    "change_pct": -2.7039199973506562,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-25T21:47:34Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 95.02999877929688,
-    "change_pct": 1.031255346902905,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-25T21:47:39Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_DROP",
-    "type": "percent_change",
-    "price": 138.5399932861328,
-    "change_pct": -10.242958674355156,
-    "value": -10.242958674355156
-  },
-  {
     "timestamp": "2026-06-25T21:48:32Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_DROP",
@@ -4571,5 +4544,35 @@
     "price": 4.199999809265137,
     "change_pct": -5.191877894692167,
     "value": -5.191877894692167
+  },
+  {
+    "timestamp": "2026-06-30T10:58:33Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_RSI_OS",
+    "type": "rsi",
+    "action": "BUY",
+    "price": 1.9500000476837158,
+    "change_pct": -0.5102016487900074,
+    "value": 23.32
+  },
+  {
+    "timestamp": "2026-06-30T10:58:40Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_RSI_OS",
+    "type": "rsi",
+    "action": "BUY",
+    "price": 2.3299999237060547,
+    "change_pct": 5.215620849223506,
+    "value": 27.97
+  },
+  {
+    "timestamp": "2026-06-30T10:59:12Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 4.71999979019165,
+    "change_pct": 6.306301580893018,
+    "value": 6.306301580893018
   }
 ]
