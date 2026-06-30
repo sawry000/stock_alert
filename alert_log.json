@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T03:38:06Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 32.709999084472656,
-    "change_pct": -0.6379128661219485,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T03:44:05Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_RSI_OS_4H",
@@ -4619,5 +4610,15 @@
     "price": 161.85000610351562,
     "change_pct": 5.097406560724432,
     "value": 3
+  },
+  {
+    "timestamp": "2026-06-30T22:13:59Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 12.449999809265137,
+    "change_pct": 16.35513840434708,
+    "value": 16.35513840434708
   }
 ]
