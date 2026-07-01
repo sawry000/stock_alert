@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T08:14:37Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_RSI_OS_4H",
-    "type": "rsi",
-    "price": 369.4599914550781,
-    "change_pct": 0.27684058600535427,
-    "value": 30.85
-  },
-  {
     "timestamp": "2026-06-26T09:12:22Z",
     "symbol": "COHR",
     "alert_id": "COHR_MTF_ALIGN",
@@ -4657,6 +4648,16 @@
     "action": "BUY",
     "price": 128.02999877929688,
     "change_pct": 16.51801854686647,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T07:23:59Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.130000114440918,
+    "change_pct": 8.304502229789543,
     "value": 3
   }
 ]
