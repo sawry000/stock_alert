@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T13:38:01Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 94.81999969482422,
-    "change_pct": -3.244799540791141,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-26T13:38:21Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -4694,6 +4685,16 @@
     "action": "BUY",
     "price": 110.08000183105469,
     "change_pct": -1.7756742829885837,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T16:34:15Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 150.50999450683594,
+    "change_pct": -2.7964385773469815,
     "value": 3
   }
 ]
