@@ -1400,20 +1400,24 @@ async function ghGetFile(filename) {
   return JSON.parse(content);
 }
 
-async function ghPutFile(filename, content, commitMessage) {
+async function ghPutFile(filename, content, commitMessage, _isRetry) {
   const url = `https://api.github.com/repos/${GH.owner}/${GH.repo}/contents/${filename}`;
 
-  // ถ้ายังไม่มี SHA → ดึงจาก GitHub ก่อน (ไฟล์อาจมีอยู่แล้ว)
-  if (!fileSHAs[filename]) {
-    try {
-      const getRes = await fetch(`${url}?ref=${GH.branch}`, { headers: ghHeaders() });
-      if (getRes.ok) {
-        const getJson = await getRes.json();
-        fileSHAs[filename] = getJson.sha;
-      }
-      // ถ้า 404 = ไฟล์ยังไม่มี → สร้างใหม่ได้เลย ไม่ต้องใส่ sha
-    } catch(e) { /* ignore */ }
-  }
+  // เช็ค SHA ล่าสุดจาก GitHub "ทุกครั้ง" ก่อนบันทึก (ไม่ใช่แค่ตอนที่ยังไม่มี cache)
+  // เหตุผล: universe.json ถูกเขียนทับจาก daily_screener.py (GitHub Actions, รัน
+  // 07:30 BKK ทุกวัน) ได้ตลอดเวลา ถ้า dashboard เปิดค้างไว้ SHA ที่ cache ไว้ตอน
+  // sync ครั้งแรกจะเก่ากว่าของจริงบน GitHub ทำให้ PUT โดน 409 (sha does not match)
+  try {
+    const getRes = await fetch(`${url}?ref=${GH.branch}`, { headers: ghHeaders() });
+    if (getRes.ok) {
+      const getJson = await getRes.json();
+      fileSHAs[filename] = getJson.sha;
+    } else if (getRes.status === 404) {
+      delete fileSHAs[filename]; // ไฟล์ยังไม่มีจริง → สร้างใหม่ได้เลย ไม่ต้องใส่ sha
+    }
+    // status อื่น (401/403/5xx/network) → ปล่อยผ่าน ใช้ sha เดิมที่ cache ไว้ (ถ้ามี)
+    // ไปก่อน แทนที่จะทำให้การบันทึกล้มเหลวไปเลยเพราะ get ล้มเหลว
+  } catch (e) { /* network error ตอน refresh sha — ใช้ sha เดิมที่มีไปก่อน */ }
 
   const body = {
     message: commitMessage,
@@ -1430,6 +1434,13 @@ async function ghPutFile(filename, content, commitMessage) {
 
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
+    // 409 = SHA ไม่ตรง (ไฟล์เพิ่งถูกแก้จากที่อื่น เช่น screener commit ใหม่เข้ามา
+    // ระหว่าง get sha กับ put ของเรา) → รีเฟรช sha แล้วลองใหม่อัตโนมัติ 1 ครั้ง
+    // ก่อนที่จะโยน error ออกไปให้ user เห็น
+    if (res.status === 409 && !_isRetry) {
+      delete fileSHAs[filename];
+      return ghPutFile(filename, content, commitMessage, true);
+    }
     throw new Error(`Save failed ${res.status}: ${err.message || res.statusText}`);
   }
   const data = await res.json();
