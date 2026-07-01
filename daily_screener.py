@@ -10,7 +10,7 @@
 ║  │       ↓                                                         │        ║
 ║  │  [GATE 1] Halal Check — Typesense/Musaffa API                  │        ║
 ║  │       ↓ ✅ HALAL only                                           │        ║
-║  │  [GATE 2] Purify% Filter — max_purify_pct (default 3%)         │        ║
+║  │  [GATE 2] Purify% Filter — max_purify_pct (default 5%)         │        ║
 ║  │       ↓ ✅ purify ต่ำพอ                                         │        ║
 ║  │  [GATE 3] Liquidity — Volume + Price > $1                      │        ║
 ║  │       ↓ ✅                                                       │        ║
@@ -73,7 +73,7 @@ SCREENER_STATE    = BASE_DIR / "screener_state.json"
 
 # ─── Config defaults (override via universe.json settings) ───────────────────
 DEFAULT_CFG = {
-    "max_purify_pct":     3.0,    # % purify สูงสุดที่ยอมรับ (> นี้ = ข้าม)
+    "max_purify_pct":     5.0,    # % purify สูงสุดที่ยอมรับ (> นี้ = ข้าม)
     "min_adr_pct":        8.0,    # ADR ขั้นต่ำ (%)
     "min_price":          1.0,    # ราคาขั้นต่ำ ($)
     "min_avg_volume":  100000,    # Volume เฉลี่ยขั้นต่ำ (หุ้น/วัน)

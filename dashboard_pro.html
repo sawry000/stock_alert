@@ -896,7 +896,7 @@ input[type=password]{letter-spacing:2px}
           <div class="ctitle" style="margin-bottom:14px"><span class="msi">tune</span> Filter Gates Config <span style="color:var(--text3);font-size:10px;font-weight:400">(บันทึกลง universe.json)</span></div>
           <div class="g2" style="gap:10px">
             <div class="fg"><label>Min ADR% (Gate 4)</label><input type="number" id="ucfg-adr" value="8" min="1" max="50" step="0.5"></div>
-            <div class="fg"><label>Max Purify% (Gate 2)</label><input type="number" id="ucfg-purify" value="3" min="0" max="20" step="0.5"></div>
+            <div class="fg"><label>Max Purify% (Gate 2)</label><input type="number" id="ucfg-purify" value="5" min="0" max="20" step="0.5"></div>
             <div class="fg"><label>Min Price $ (Gate 3)</label><input type="number" id="ucfg-price" value="1" min="0.01" step="0.1"></div>
             <div class="fg"><label>Min Avg Volume (Gate 3)</label><input type="number" id="ucfg-vol" value="100000" min="1000" step="10000"></div>
             <div class="fg"><label>RSI Min (Gate 6)</label><input type="number" id="ucfg-rsi-min" value="35" min="10" max="50"></div>
@@ -1365,12 +1365,33 @@ async function ghGetFile(filename) {
   const res = await fetch(url, { headers: ghHeaders() });
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
-    throw new Error(`GitHub API ${res.status}: ${err.message || res.statusText}`);
+    const e = new Error(`GitHub API ${res.status}: ${err.message || res.statusText}`);
+    e.status = res.status; // เก็บ status code จริงไว้แยกแยะ 404 (ไม่มีไฟล์) ออกจาก error อื่นๆ (401/403/5xx)
+    throw e;
   }
   const data = await res.json();
   fileSHAs[filename] = data.sha; // เก็บ SHA สำหรับ update
+
+  let base64;
+  if (data.content) {
+    // ไฟล์ปกติ (< 1MB) — Contents API ส่ง content กลับมาตรงๆ
+    base64 = data.content.replace(/\n/g, '');
+  } else {
+    // ไฟล์ใหญ่เกิน 1MB — Contents API ไม่ส่ง content มาให้ ต้องดึงผ่าน
+    // Git Blob API แทน (รองรับได้ถึง 100MB) โดยใช้ sha ที่ได้จาก response ก่อนหน้า
+    const blobUrl = `https://api.github.com/repos/${GH.owner}/${GH.repo}/git/blobs/${data.sha}`;
+    const blobRes = await fetch(blobUrl, { headers: ghHeaders() });
+    if (!blobRes.ok) {
+      const err = await blobRes.json().catch(() => ({}));
+      const e = new Error(`GitHub Blob API ${blobRes.status}: ${err.message || blobRes.statusText}`);
+      e.status = blobRes.status;
+      throw e;
+    }
+    const blobData = await blobRes.json();
+    base64 = blobData.content.replace(/\n/g, '');
+  }
+
   // ใช้ TextDecoder แทน atob เพื่อรองรับ UTF-8 (emoji และภาษาไทย)
-  const base64 = data.content.replace(/\n/g, '');
   const binary = atob(base64);
   const bytes = new Uint8Array(binary.length);
   for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
@@ -3358,9 +3379,16 @@ async function uniSyncGH() {
     uniLoadCfg();
     showToast('โหลด universe.json แล้ว (' + UNI.universe.length + ' ตัว)', 'ok');
   } catch(e) {
-    // ถ้าไม่มีไฟล์ → สร้างใหม่
-    UNI = { settings: {}, universe: [] };
-    showToast('ยังไม่มี universe.json — เพิ่มหุ้นแล้วกด Sync', 'warn');
+    // เดิม: จับทุก error รวมกันเป็น "ยังไม่มีไฟล์" ทำให้ error จริง (401 token
+    // หมดอายุ / 403 rate limit / network fail / ไฟล์ใหญ่เกิน 1MB) ถูกซ่อนไป
+    // ตอนนี้แยก 404 (ไฟล์ไม่มีจริง) ออกจาก error อื่นๆ ให้เห็นสาเหตุจริงชัดเจน
+    if (e.status === 404) {
+      UNI = { settings: {}, universe: [] };
+      showToast('ยังไม่มี universe.json — เพิ่มหุ้นแล้วกด Sync', 'warn');
+    } else {
+      showToast('Sync ล้มเหลว: ' + e.message, 'err');
+      console.error('uniSyncGH error:', e);
+    }
   } finally {
     btn.disabled = false; btn.innerHTML = '<span class="msi">sync</span> Sync GitHub';
   }
@@ -3785,7 +3813,7 @@ function uniLoadCfg() {
   const c = UNI.settings || {};
   const sv = (id, val) => { const el = document.getElementById(id); if(el) el.value = val; };
   sv('ucfg-adr',       c.min_adr_pct         ?? 8);
-  sv('ucfg-purify',    c.max_purify_pct       ?? 3);
+  sv('ucfg-purify',    c.max_purify_pct       ?? 5);
   sv('ucfg-price',     c.min_price            ?? 1);
   sv('ucfg-vol',       c.min_avg_volume       ?? 100000);
   sv('ucfg-rsi-min',   c.rsi_min              ?? 35);
