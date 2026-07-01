@@ -3701,26 +3701,33 @@ async function uniFetchHalalData(ticker) {
 //  เพื่อไม่ให้คอลัมน์ Price/ADR/RSI/Vol/Gate ค้างว่างจนกว่า screener จะรันรอบถัดไป
 // ══════════════════════════════════════════════════════════
 async function uniFetchOHLCV(symbol, _isRetry) {
-  const urls = [
+  const directUrls = [
     `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?range=90d&interval=1d&includePrePost=false`,
     `https://query2.finance.yahoo.com/v8/finance/chart/${symbol}?range=90d&interval=1d&includePrePost=false`,
   ];
+  // Yahoo query1/query2 ไม่เคยส่ง Access-Control-Allow-Origin header เลย — ยืนยันจาก
+  // browser console จริง: ERR_FAILED ทุกครั้งจาก origin sawry000.github.io (ไม่ใช่
+  // แค่บางที) แปลว่าเป็นการบล็อคถาวรระดับ browser policy ไม่ใช่ rate-limit ชั่วคราว
+  // "retry เรียกตรง" (แบบที่แก้รอบก่อน) จึงแก้ปัญหานี้ไม่ได้เลย ไม่ว่าจะลองกี่รอบ
+  // ต้องอ้อมผ่าน CORS proxy ที่แนบ Access-Control-Allow-Origin ให้แทน
+  const urls = [
+    ...directUrls,
+    ...directUrls.map(u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`),
+    ...directUrls.map(u => `https://corsproxy.io/?url=${encodeURIComponent(u)}`),
+  ];
   for (const url of urls) {
-    const host = url.includes('query1') ? 'query1' : 'query2';
+    const label = url.includes('allorigins') ? 'allorigins-proxy'
+                : url.includes('corsproxy')  ? 'corsproxy-proxy'
+                : url.includes('query1')     ? 'query1-direct'
+                : 'query2-direct';
     try {
       const res = await fetch(url, { mode: 'cors' });
-      if (!res.ok) {
-        // เดิม: swallow เงียบๆ ทำให้แยกไม่ออกว่า "ไม่มีข้อมูลจริง" กับ "โดน Yahoo
-        // rate-limit/บล็อค CORS ชั่วคราว" (Yahoo query1/query2 ไม่มี CORS header
-        // แบบเป็นทางการ — บาง symbol ผ่านบางทีไม่ผ่าน โดยเฉพาะยิงรัวติดกันหลายตัว)
-        console.warn(`[OHLCV] ${symbol} (${host}) HTTP ${res.status}`);
-        continue;
-      }
+      if (!res.ok) { console.warn(`[OHLCV] ${symbol} (${label}) HTTP ${res.status}`); continue; }
       const data = await res.json();
       const apiErr = data?.chart?.error;
-      if (apiErr) { console.warn(`[OHLCV] ${symbol} (${host}) API error:`, apiErr.description || apiErr); continue; }
+      if (apiErr) { console.warn(`[OHLCV] ${symbol} (${label}) API error:`, apiErr.description || apiErr); continue; }
       const q = data?.chart?.result?.[0]?.indicators?.quote?.[0];
-      if (!q || !q.close) { console.warn(`[OHLCV] ${symbol} (${host}) response missing quote data`); continue; }
+      if (!q || !q.close) { console.warn(`[OHLCV] ${symbol} (${label}) response missing quote data`); continue; }
       // เก็บเฉพาะแท่งที่ high/low/close ไม่เป็น null ครบ — filter(Boolean) แบบ
       // แยก array อิสระ (เหมือน fetchOHLC เดิม) จะทำให้ index เพี้ยนถ้า null
       // อยู่คนละตำแหน่งกันในแต่ละ field
@@ -3733,20 +3740,21 @@ async function uniFetchOHLCV(symbol, _isRetry) {
         closes.push(Number(q.close[i]));
         volumes.push(Number(q.volume?.[i] ?? 0));
       }
-      if (closes.length < 20) { console.warn(`[OHLCV] ${symbol} (${host}) only ${closes.length} valid bars (<20 needed)`); continue; }
+      if (closes.length < 20) { console.warn(`[OHLCV] ${symbol} (${label}) only ${closes.length} valid bars (<20 needed)`); continue; }
       return { highs, lows, closes, volumes };
     } catch (e) {
-      console.warn(`[OHLCV] ${symbol} (${host}) fetch threw (likely CORS/network):`, e.message);
+      console.warn(`[OHLCV] ${symbol} (${label}) fetch threw:`, e.message);
       continue;
     }
   }
-  // ลองใหม่อีก 1 รอบหลัง delay สั้นๆ ก่อนยอมแพ้จริง — เพราะ Yahoo มักบล็อค
-  // เฉพาะตอนยิงรัวติดกันหลายสัญลักษณ์ ไม่ใช่ตัวนั้นไม่มีข้อมูลจริง
+  // proxy สาธารณะบางตัว down/rate-limit เป็นครั้งคราว (ต่างจาก Yahoo ตรงที่นี่
+  // เป็นปัญหาชั่วคราวจริง) — ลองทั้งชุด (direct + proxy ทั้งหมด) ใหม่อีก 1 รอบ
+  // ก่อนยอมแพ้จริง
   if (!_isRetry) {
     await new Promise(r => setTimeout(r, 900));
     return uniFetchOHLCV(symbol, true);
   }
-  return null; // ลอง 2 รอบ ทั้ง 2 host แล้วยังไม่ได้ — ดู console.warn ด้านบนเพื่อสาเหตุจริง
+  return null; // ลองทุก host/proxy ครบ 2 รอบแล้วยังไม่ได้ — ดู console.warn ด้านบนเพื่อสาเหตุจริง
 }
 
 function uniCalcADR(highs, lows, n = 20) {
