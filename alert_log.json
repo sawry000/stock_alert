@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T10:28:15Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.210000038146973,
-    "change_pct": -0.6700632751280609,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-26T10:32:38Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 14.850000381469727,
-    "change_pct": -0.33556790959915295,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-26T10:59:09Z",
     "symbol": "AGL",
     "alert_id": "AGL_NEWS_POS",
@@ -4674,5 +4656,25 @@
     "price": 144.4199981689453,
     "change_pct": -10.29813778326378,
     "value": -10.29813778326378
+  },
+  {
+    "timestamp": "2026-07-01T13:59:35Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 89.26000213623047,
+    "change_pct": 0.47106604034203886,
+    "value": 2.688
+  },
+  {
+    "timestamp": "2026-07-01T13:59:37Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 89.26000213623047,
+    "change_pct": 0.47106604034203886,
+    "value": 3
   }
 ]
