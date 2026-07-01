@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T13:59:18Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 5.25,
-    "change_pct": -2.7777777777777843,
-    "value": 25.79
-  },
-  {
-    "timestamp": "2026-06-26T13:59:28Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_CP_BULL",
-    "type": "candle_pattern",
-    "price": 16.3799991607666,
-    "change_pct": -4.712046766919137,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-26T13:59:29Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_POS_SIZE",
-    "type": "position_size",
-    "price": 16.3799991607666,
-    "change_pct": -4.712046766919137,
-    "value": 6
-  },
-  {
     "timestamp": "2026-06-26T14:03:37Z",
     "symbol": "NLST",
     "alert_id": "NLST_MTF_BULL",
@@ -4710,5 +4683,35 @@
     "price": 18.559999465942383,
     "change_pct": 3.0281132750971773,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T23:49:16Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7999999523162842,
+    "change_pct": 13.92404761495469,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T23:49:22Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.880000114440918,
+    "change_pct": 3.3391935754115565,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T23:49:25Z",
+    "symbol": "SVCO",
+    "alert_id": "SVCO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 12.789999961853027,
+    "change_pct": -2.0673816090886152,
+    "value": 2
   }
 ]
