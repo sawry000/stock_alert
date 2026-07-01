@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T13:38:21Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.050000190734863,
-    "change_pct": 4.338846916009575,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-26T13:39:03Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -4696,5 +4687,15 @@
     "price": 150.50999450683594,
     "change_pct": -2.7964385773469815,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T18:14:10Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 17.920000076293945,
+    "change_pct": -0.4444440205891927,
+    "value": 2
   }
 ]
