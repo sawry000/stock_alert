@@ -92,7 +92,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add watchlist.json screener_log.json screener_state.json
+          git add universe.json watchlist.json screener_log.json screener_state.json
 
           if git diff --staged --quiet; then
             echo "ℹ️ ไม่มีอะไรเปลี่ยน — ข้าม commit"
