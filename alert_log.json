@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T13:42:37Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_POS_SIZE",
-    "type": "position_size",
-    "price": 22.200000762939453,
-    "change_pct": 4.71698473084648,
-    "value": 4
-  },
-  {
     "timestamp": "2026-06-26T13:43:10Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_MA_DEATH",
@@ -4699,5 +4690,15 @@
     "price": 88.33999633789062,
     "change_pct": -0.5644925649717434,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T22:24:44Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.230000019073486,
+    "change_pct": 6.549118868349776,
+    "value": 2
   }
 ]
