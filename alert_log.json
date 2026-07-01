@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T11:43:15Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 32.709999084472656,
-    "change_pct": 0.9879564201069949,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T11:52:20Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_ALIGN",
@@ -4679,5 +4670,15 @@
     "price": 225.26499938964844,
     "change_pct": -11.132703713617257,
     "value": -11.132703713617257
+  },
+  {
+    "timestamp": "2026-07-01T14:38:33Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 24.135000228881836,
+    "change_pct": -11.658125077299283,
+    "value": -11.658125077299283
   }
 ]
