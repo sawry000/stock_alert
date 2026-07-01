@@ -1565,10 +1565,22 @@
     "open_time": "2026-07-01T02:19:28Z"
   },
   "ALGM": {
-    "_confirm_ALGM_MTF_BULL": 1
+    "ALGM_MTF_BULL": {
+      "last_fired": "2026-07-01T09:34:37Z"
+    },
+    "last_buy_at": "2026-07-01T09:34:37Z",
+    "open_entry": 69.62000274658203,
+    "open_time": "2026-07-01T09:34:37Z"
   },
   "NEOV": {
-    "_confirm_NEOV_MA_GOLD": 1,
-    "_confirm_NEOV_MTF_BULL": 1
+    "NEOV_MA_GOLD": {
+      "last_fired": "2026-07-01T09:34:39Z"
+    },
+    "last_buy_at": "2026-07-01T09:34:41Z",
+    "open_entry": 3.1500000953674316,
+    "open_time": "2026-07-01T09:34:41Z",
+    "NEOV_MTF_BULL": {
+      "last_fired": "2026-07-01T09:34:41Z"
+    }
   }
 }

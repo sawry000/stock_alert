@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T09:52:40Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 95.02999877929688,
-    "change_pct": -0.4921478750818063,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-26T09:54:14Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 5.320000171661377,
-    "change_pct": -8.882263356602998,
-    "value": 26.37
-  },
-  {
-    "timestamp": "2026-06-26T10:03:21Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.940000057220459,
-    "change_pct": 9.293682424552381,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T10:07:32Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4667,5 +4640,35 @@
     "price": 18.360000610351562,
     "change_pct": 2.114030725151763,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-01T09:34:37Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 69.62000274658203,
+    "change_pct": 0.2592205451930207,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T09:34:39Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 3.1500000953674316,
+    "change_pct": 0.7935522644128908,
+    "value": 4.201
+  },
+  {
+    "timestamp": "2026-07-01T09:34:41Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.1500000953674316,
+    "change_pct": 0.7935522644128908,
+    "value": 3
   }
 ]
