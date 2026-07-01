@@ -1,14 +1,5 @@
 name: "Halal Stock Alert PRO — Autonomous Pipeline"
 
-# ═══════════════════════════════════════════════════════════════════════════
-#  ⚠️  ไม่มี schedule cron ที่นี่เลย — GAS เป็นตัวเรียก workflow_dispatch
-#  เหตุผล: GitHub Actions cron ไม่ตรงเวลา delay ได้ 5-30 นาที
-#
-#  GAS Trigger → workflow_dispatch:
-#    alertTrigger()   → run_mode: alert_only   (ทุก 30 นาที ช่วงตลาดเปิด)
-#    screenerTrigger()→ run_mode: screener_only (07:30 BKK ทุกเช้า)
-# ═══════════════════════════════════════════════════════════════════════════
-
 on:
   workflow_dispatch:
     inputs:
@@ -28,10 +19,6 @@ permissions:
 env:
   PYTHON_VERSION: "3.11"
 
-# ═══════════════════════════════════════════════════════════════════════════
-#  JOB 1: DAILY SCREENER
-#  GAS เรียกตอน: screenerTrigger() หรือ fullPipelineTrigger()
-# ═══════════════════════════════════════════════════════════════════════════
 jobs:
   daily-screener:
     name: "🔍 Daily Halal Screener"
@@ -42,8 +29,7 @@ jobs:
       github.event.inputs.run_mode == 'full_pipeline'
     concurrency:
       group: daily-screener
-      cancel-in-progress: false   # ห้ามยกเลิกรอบที่กำลังรัน — ให้คิวรอแทน
-                                   # (cancel จะทำให้ git commit ครึ่งๆ กลางๆ ได้)
+      cancel-in-progress: false
 
     steps:
       - name: "📥 Checkout"
@@ -88,15 +74,45 @@ jobs:
           echo "🕐 ICT: $(TZ='Asia/Bangkok' date '+%Y-%m-%d %H:%M:%S')"
           python3 daily_screener.py
 
+      # ─────────────────────────────────────────────────────────────
+      # แก้บั๊ก: เดิม "git push || echo Nothing to push" จะกลืน error
+      # ทุกชนิดแบบเงียบๆ รวมถึงกรณี push ถูก reject เพราะ remote
+      # ถูก alert-engine job push แซงไประหว่างที่ screener กำลังรันอยู่
+      # (screener ใช้เวลานาน หลาย ticker + sleep ต่อตัว)
+      # ตอนนี้เปลี่ยนเป็น pull --rebase + retry แทน ถ้ายัง fail จริง
+      # ให้ job แดง (exit 1) จะได้เห็นใน Actions tab แทนที่จะเงียบหาย
+      # ─────────────────────────────────────────────────────────────
       - name: "💾 Commit screener results"
         if: always()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add watchlist.json screener_log.json screener_state.json
-          git diff --staged --quiet || \
-            git commit -m "screener: daily run $(date -u '+%Y-%m-%d') [skip ci]"
-          git push || echo "Nothing to push"
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ ไม่มีอะไรเปลี่ยน — ข้าม commit"
+            exit 0
+          fi
+
+          git commit -m "screener: daily run $(date -u '+%Y-%m-%d') [skip ci]"
+
+          success=false
+          for attempt in 1 2 3 4 5; do
+            echo "🔄 Push attempt $attempt/5"
+            if git push; then
+              success=true
+              break
+            fi
+            echo "⚠️ Push ถูก reject — pull --rebase แล้วลองใหม่"
+            git fetch origin main
+            git rebase origin/main
+            sleep $(( (RANDOM % 8) + 3 ))
+          done
+
+          if [ "$success" != "true" ]; then
+            echo "❌ Push ไม่สำเร็จหลังลอง 5 ครั้ง — ผลลัพธ์ screener รอบนี้จะหายไป!"
+            exit 1
+          fi
 
       - name: "📤 Upload screener log"
         if: always()
@@ -106,10 +122,6 @@ jobs:
           path: screener_log.json
           retention-days: 30
 
-# ═══════════════════════════════════════════════════════════════════════════
-#  JOB 2: ALERT ENGINE
-#  GAS เรียกตอน: alertTrigger() หรือ fullPipelineTrigger()
-# ═══════════════════════════════════════════════════════════════════════════
   alert-engine:
     name: "🚨 Alert Engine"
     runs-on: ubuntu-latest
@@ -119,7 +131,7 @@ jobs:
       github.event.inputs.run_mode == 'full_pipeline'
     concurrency:
       group: alert-engine
-      cancel-in-progress: false   # ห้ามยกเลิกรอบที่กำลังรัน — ให้คิวรอแทน
+      cancel-in-progress: false
 
     steps:
       - name: "📥 Checkout"
@@ -168,9 +180,30 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add state.json alert_log.json
-          git diff --staged --quiet || \
-            git commit -m "alert: run $(date -u '+%Y-%m-%dT%H:%M') [skip ci]"
-          git push || echo "Nothing to push"
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ ไม่มีอะไรเปลี่ยน — ข้าม commit"
+            exit 0
+          fi
+
+          git commit -m "alert: run $(date -u '+%Y-%m-%dT%H:%M') [skip ci]"
+
+          success=false
+          for attempt in 1 2 3; do
+            if git push; then
+              success=true
+              break
+            fi
+            echo "⚠️ Push ถูก reject — pull --rebase แล้วลองใหม่"
+            git fetch origin main
+            git rebase origin/main
+            sleep $(( (RANDOM % 5) + 2 ))
+          done
+
+          if [ "$success" != "true" ]; then
+            echo "❌ Push ไม่สำเร็จหลังลอง 3 ครั้ง"
+            exit 1
+          fi
 
       - name: "📤 Upload alert log"
         if: always()
