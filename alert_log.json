@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T05:59:39Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.859999656677246,
-    "change_pct": -5.9160338103316255,
-    "value": -5.9160338103316255
-  },
-  {
     "timestamp": "2026-06-26T05:59:56Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_PCT_DROP",
@@ -4642,6 +4633,16 @@
     "action": "BUY",
     "price": 18.0,
     "change_pct": -0.3322259136212554,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T02:19:28Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 85.80000305175781,
+    "change_pct": 27.583647660606413,
     "value": 3
   }
 ]
