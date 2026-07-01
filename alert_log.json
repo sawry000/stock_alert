@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T10:19:21Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_RSI_OS_4H",
-    "type": "rsi",
-    "price": 369.4599914550781,
-    "change_pct": 0.27684058600535427,
-    "value": 30.85
-  },
-  {
-    "timestamp": "2026-06-26T10:27:44Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 3.559999942779541,
-    "change_pct": 4.398825301452812,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-26T10:28:15Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4672,5 +4654,25 @@
     "price": 255.42999267578125,
     "change_pct": 0.7674201542662127,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T13:33:55Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 110.06500244140625,
+    "change_pct": 0.9770664600057339,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-01T13:34:13Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 144.4199981689453,
+    "change_pct": -10.29813778326378,
+    "value": -10.29813778326378
   }
 ]
