@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T12:12:30Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.760000228881836,
-    "change_pct": 0.6044975895577043,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-26T12:19:34Z",
-    "symbol": "GLD",
-    "alert_id": "GLD_RSI_OS_4H",
-    "type": "rsi",
-    "price": 369.4599914550781,
-    "change_pct": 0.27684058600535427,
-    "value": 30.85
-  },
-  {
-    "timestamp": "2026-06-26T12:28:49Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_BT_VOL",
-    "type": "backtest_check",
-    "price": 331.5899963378906,
-    "change_pct": -0.12349507894860692,
-    "value": 87.5
-  },
-  {
-    "timestamp": "2026-06-26T13:32:25Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 378.42999267578125,
-    "change_pct": -6.329209733717513,
-    "value": -6.329209733717513
-  },
-  {
     "timestamp": "2026-06-26T13:32:43Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_DROP",
@@ -4683,5 +4647,45 @@
     "price": 95.41999816894531,
     "change_pct": 0.28376055590678595,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-01T15:13:46Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 38.0099983215332,
+    "change_pct": 9.60207128469782,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T15:13:53Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 70.11750030517578,
+    "change_pct": 2.4286031775265253,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T15:14:03Z",
+    "symbol": "VSEC",
+    "alert_id": "VSEC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 232.17999267578125,
+    "change_pct": 1.141310627191692,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T15:14:09Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.179999828338623,
+    "change_pct": -2.5236620135863848,
+    "value": 3
   }
 ]
