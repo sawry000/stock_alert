@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T13:34:56Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "price": 55.654998779296875,
-    "change_pct": -5.326422222737864,
-    "value": -5.326422222737864
-  },
-  {
     "timestamp": "2026-06-26T13:38:01Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_CP_BULL",
@@ -4694,5 +4685,15 @@
     "price": 20.959999084472656,
     "change_pct": -2.5116321652434594,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-01T16:08:30Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 110.08000183105469,
+    "change_pct": -1.7756742829885837,
+    "value": 3
   }
 ]
