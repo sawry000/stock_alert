@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T05:59:56Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.309999942779541,
-    "change_pct": -8.665156227520368,
-    "value": -8.665156227520368
-  },
-  {
     "timestamp": "2026-06-26T06:09:30Z",
     "symbol": "VELO",
     "alert_id": "VELO_PCT_DROP",
@@ -4643,6 +4634,16 @@
     "action": "BUY",
     "price": 85.80000305175781,
     "change_pct": 27.583647660606413,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T05:54:27Z",
+    "symbol": "VECO",
+    "alert_id": "VECO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 75.80000305175781,
+    "change_pct": 9.221906414636608,
     "value": 3
   }
 ]
