@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T13:42:36Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_CP_BULL",
-    "type": "candle_pattern",
-    "price": 22.200000762939453,
-    "change_pct": 4.71698473084648,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-26T13:42:37Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_POS_SIZE",
@@ -4698,5 +4689,15 @@
     "price": 111.73999786376953,
     "change_pct": 2.5137595080454416,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-01T22:09:52Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 88.33999633789062,
+    "change_pct": -0.5644925649717434,
+    "value": 3
   }
 ]
