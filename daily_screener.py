@@ -136,6 +136,30 @@ def log_print(msg):
     print(f"[{now_str()}] {msg}")
 
 
+def update_universe_entry(universe_data, sym, **fields):
+    """
+    หา entry ของ sym ใน universe_data["universe"] แล้ว update field ที่ส่งมา
+    (merge ไม่ทับทั้ง dict) รองรับทั้ง entry แบบ string (ticker เปล่าๆ) และ dict
+    ใช้ร่วมกันทั้ง halal write-back และ technical write-back (price/adr/rsi/vol/gate)
+    เพื่อไม่ต้องเขียน loop ค้นหาซ้ำหลายจุด
+    """
+    for _ui, _ue in enumerate(universe_data.get("universe", [])):
+        _us = (_ue if isinstance(_ue, str) else _ue.get("symbol", "")).upper()
+        if _us != sym.upper():
+            continue
+        if isinstance(_ue, str):
+            base = {
+                "symbol": sym.upper(), "name": sym.upper(),
+                "added_at": now_str(),
+            }
+            base.update(fields)
+            universe_data["universe"][_ui] = base
+        else:
+            _ue.update(fields)
+        return True
+    return False
+
+
 # ══════════════════════════════════════════════════════════════════════════════
 #  TELEGRAM
 # ══════════════════════════════════════════════════════════════════════════════
@@ -1145,25 +1169,16 @@ def main():
         log_print(f"  Halal: {halal['status']}  Purify: {halal.get('purify_pct')}%")
 
         # ── Write halal result กลับลง universe entry ──────────────
-        for _ui, _ue in enumerate(universe_data["universe"]):
-            _us = (_ue if isinstance(_ue, str) else _ue.get("symbol", "")).upper()
-            if _us == sym:
-                if isinstance(_ue, str):
-                    universe_data["universe"][_ui] = {
-                        "symbol": sym, "name": sym,
-                        "added_at": now_str(),
-                        "halal_status": halal["status"],
-                        "purify_pct":   halal.get("purify_pct"),
-                        "last_checked": now_str(),
-                    }
-                else:
-                    _ue["halal_status"] = halal["status"]
-                    _ue["purify_pct"]   = halal.get("purify_pct")
-                    _ue["last_checked"] = now_str()
-                break
+        update_universe_entry(
+            universe_data, sym,
+            halal_status=halal["status"],
+            purify_pct=halal.get("purify_pct"),
+            last_checked=now_str(),
+        )
 
         if halal["status"] == "NOT_HALAL":
             log_print(f"  ❌ Gate 1: NOT HALAL — ข้าม")
+            update_universe_entry(universe_data, sym, last_gate="halal")
             scan_results.append({
                 "symbol": sym, "gate_fail": "halal",
                 "halal": halal["status"], "at": now_str()
@@ -1175,6 +1190,7 @@ def main():
         max_pur = cfg.get("max_purify_pct", DEFAULT_CFG["max_purify_pct"])
         if purify is not None and purify > max_pur:
             log_print(f"  ❌ Gate 2: Purify {purify:.1f}% > {max_pur}% — ข้าม")
+            update_universe_entry(universe_data, sym, last_gate="purify")
             scan_results.append({
                 "symbol": sym, "gate_fail": "purify",
                 "purify_pct": purify, "at": now_str()
@@ -1187,12 +1203,26 @@ def main():
         data = fetch_stock_data(sym)
         if data is None:
             log_print(f"  ❌ ไม่มีข้อมูลตลาด — ข้าม")
+            update_universe_entry(universe_data, sym, last_gate="no_data")
             continue
 
         log_print(
             f"  Price=${data['price']}  ADR={data['adr_pct']}%  "
             f"RSI={data['rsi']}  Vol={data['vol_ratio']}x  "
             f"EMA50={'✅' if data['above_ema50'] else '❌'}"
+        )
+
+        # ── Write ผลสแกน technical (Price/ADR/RSI/Vol) กลับลง universe
+        #    entry ทุกครั้งที่ screener รัน — dashboard จะได้เห็นข้อมูลล่าสุด
+        #    ไม่ใช่แค่ halal/purify เหมือนเดิม ─────────────────────────
+        update_universe_entry(
+            universe_data, sym,
+            last_price=data["price"],
+            last_adr_pct=data["adr_pct"],
+            last_rsi=data["rsi"],
+            last_vol_ratio=data["vol_ratio"],
+            last_above_ema50=data["above_ema50"],
+            last_scanned=now_str(),
         )
 
         passed, gates = run_gates(sym, data, halal, cfg)
@@ -1202,6 +1232,7 @@ def main():
                 (k for k, v in gates.items() if not v.get("pass", True)), "unknown"
             )
             log_print(f"  ❌ Gate fail: {fail_gate}")
+            update_universe_entry(universe_data, sym, last_gate=fail_gate)
             scan_results.append({
                 "symbol": sym, "gate_fail": fail_gate,
                 "adr": data["adr_pct"], "rsi": data["rsi"], "at": now_str()
@@ -1210,6 +1241,7 @@ def main():
             continue
 
         log_print(f"  ✅ ผ่านทุก Gate!")
+        update_universe_entry(universe_data, sym, last_gate="PASSED")
 
         # ── AI Template Selection ─────────────────────────────────
         time.sleep(0.5)
