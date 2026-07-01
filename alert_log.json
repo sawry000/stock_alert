@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T13:58:05Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.390000104904175,
-    "change_pct": 6.2222268846299915,
-    "value": 6.2222268846299915
-  },
-  {
-    "timestamp": "2026-06-26T13:58:07Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_POS_SIZE",
-    "type": "position_size",
-    "price": 2.390000104904175,
-    "change_pct": 6.2222268846299915,
-    "value": 41
-  },
-  {
     "timestamp": "2026-06-26T13:59:18Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_RSI_OS_4H",
@@ -4707,6 +4689,26 @@
     "action": "BUY",
     "price": 3.4200000762939453,
     "change_pct": 11.764708375619126,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T23:43:52Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.079999923706055,
+    "change_pct": 5.739129107931386,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T23:44:19Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.559999465942383,
+    "change_pct": 3.0281132750971773,
     "value": 3
   }
 ]
