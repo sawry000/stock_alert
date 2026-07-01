@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T11:52:20Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_ALIGN",
-    "type": "mtf_alignment",
-    "price": 398.0,
-    "change_pct": 0.5050505050505051,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-26T11:59:00Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 5.320000171661377,
-    "change_pct": -1.4814783025671,
-    "value": 26.37
-  },
-  {
-    "timestamp": "2026-06-26T12:02:42Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 95.02999877929688,
-    "change_pct": -0.4921478750818063,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-26T12:12:30Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4680,5 +4653,35 @@
     "price": 24.135000228881836,
     "change_pct": -11.658125077299283,
     "value": -11.658125077299283
+  },
+  {
+    "timestamp": "2026-07-01T14:58:35Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 24.204999923706055,
+    "change_pct": 4.421915115211626,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T14:58:42Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 15.914999961853027,
+    "change_pct": -2.4780325143508604,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T14:58:46Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 95.41999816894531,
+    "change_pct": 0.28376055590678595,
+    "value": 2
   }
 ]
