@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T13:43:10Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 93.53800201416016,
-    "change_pct": -4.552961774287362,
-    "value": -0.03
-  },
-  {
     "timestamp": "2026-06-26T13:48:24Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_UP_5",
@@ -4700,5 +4691,15 @@
     "price": 4.230000019073486,
     "change_pct": 6.549118868349776,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-01T22:34:24Z",
+    "symbol": "GLW",
+    "alert_id": "GLW_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 220.6300048828125,
+    "change_pct": -12.96121427336147,
+    "value": -12.96121427336147
   }
 ]
