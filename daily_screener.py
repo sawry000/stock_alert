@@ -110,9 +110,32 @@ def load_json(path, default):
     return default
 
 
+def _sanitize_for_json(obj):
+    """
+    เดินผ่านทุก dict/list แล้วแปลง float NaN/Infinity/-Infinity เป็น None
+    (JSON spec ไม่รองรับ NaN/Infinity ทั้งที่ Python's json module ยอมให้เขียน
+    เป็น literal token แบบ non-standard ได้ — พอ browser JSON.parse() มาอ่าน
+    จะ throw "Unexpected token 'N'" ทำให้ไฟล์ทั้งไฟล์ parse ไม่ผ่าน ทั้งที่
+    ข้อมูลอื่นๆ ถูกต้องหมด นี่คือ defense-in-depth ชั้นสุดท้ายกันพลาด เผื่อมี
+    จุดอื่นในโค้ดที่ยังไม่ได้ sanitize ตั้งแต่ต้นทาง
+    """
+    if isinstance(obj, float):
+        return None if (math.isnan(obj) or math.isinf(obj)) else obj
+    if isinstance(obj, dict):
+        return {k: _sanitize_for_json(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_sanitize_for_json(v) for v in obj]
+    return obj
+
+
 def save_json(path, data):
+    clean = _sanitize_for_json(data)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        # allow_nan=False: ถ้า sanitize ข้างบนพลาดจุดไหนไป (ไม่ควรเกิด แต่กันไว้)
+        # ให้ json.dump() throw ValueError ทันทีตอนรัน CI จะได้เห็น error ชัดเจน
+        # ใน Actions log แทนที่จะเขียนไฟล์เสียออกไปแบบเงียบๆ เหมือนที่เกิดกับ
+        # CRWD.last_price = NaN ที่ทำให้ dashboard sync พังไปทั้งไฟล์
+        json.dump(clean, f, ensure_ascii=False, indent=2, allow_nan=False)
 
 
 def now_utc():
@@ -401,8 +424,24 @@ def fetch_stock_data(ticker):
 
         price      = closes[-1]
         prev_close = closes[-2] if len(closes) >= 2 else price
+
+        # ── ป้องกัน NaN หลุดเข้าไปในระบบ ──────────────────────────
+        # บางครั้ง yfinance คืนแท่งล่าสุดที่มี Close เป็น NaN (เช่น หุ้นถูก
+        # halt/delist ชั่วคราว หรือ data glitch จากฝั่ง provider) ถ้าปล่อยผ่าน
+        # price=NaN จะไหลไปจนถึง universe.json แล้ว json.dump() ของ Python
+        # จะเขียนเป็น literal "NaN" ซึ่งไม่ใช่ JSON ที่ถูกต้องตามสเปก (Python
+        # อ่านกลับได้เพราะ json module ของ Python permissive แต่ JSON.parse()
+        # ของเบราว์เซอร์จะ throw "Unexpected token 'N'" ทำให้ทั้งไฟล์พังไปด้วย
+        # ตัวเดียว) ดังนั้นต้องเช็คตรงนี้แล้ว "return None" เหมือนไม่มีข้อมูล
+        # แทนที่จะปล่อยให้ NaN ไหลต่อไป
+        if math.isnan(price) or (prev_close is not None and math.isnan(prev_close)):
+            return None
+
         change_pct = ((price - prev_close) / prev_close * 100) if prev_close > 0 else 0.0
         adr_pct    = _calc_adr(highs, lows, 20)
+
+        if math.isnan(adr_pct):
+            return None
 
         # Volume
         today_vol = volumes[-1]
