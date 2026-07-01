@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T13:48:24Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 34.5,
-    "change_pct": 6.514356282803332,
-    "value": 6.514356282803332
-  },
-  {
     "timestamp": "2026-06-26T13:49:04Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4701,5 +4692,15 @@
     "price": 220.6300048828125,
     "change_pct": -12.96121427336147,
     "value": -12.96121427336147
+  },
+  {
+    "timestamp": "2026-07-01T22:43:32Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 23.959999084472656,
+    "change_pct": -12.298685635165974,
+    "value": -12.298685635165974
   }
 ]
