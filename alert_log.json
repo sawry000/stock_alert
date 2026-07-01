@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T10:07:32Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.760000228881836,
-    "change_pct": 0.6044975895577043,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T10:17:47Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_MTF_BULL",
@@ -4669,6 +4660,16 @@
     "action": "BUY",
     "price": 3.1500000953674316,
     "change_pct": 0.7935522644128908,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T10:04:30Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.0,
+    "change_pct": 0.0,
     "value": 3
   }
 ]
