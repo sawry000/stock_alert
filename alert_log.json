@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T06:09:30Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_PCT_DROP",
-    "type": "percent_change",
-    "price": 17.3799991607666,
-    "change_pct": -9.290192271573062,
-    "value": -9.290192271573062
-  },
-  {
     "timestamp": "2026-06-26T06:12:44Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_MTF_BULL",
@@ -4644,6 +4635,16 @@
     "action": "BUY",
     "price": 75.80000305175781,
     "change_pct": 9.221906414636608,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T06:14:21Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 161.85000610351562,
+    "change_pct": 5.097406560724432,
     "value": 3
   }
 ]
