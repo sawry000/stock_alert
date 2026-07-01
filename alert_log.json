@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T09:48:32Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 112.23999786376953,
-    "change_pct": -1.543861523009183,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-26T09:52:36Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 21.59000015258789,
-    "change_pct": 1.8396233612636383,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-26T09:52:40Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4665,5 +4647,25 @@
     "price": 21.209999084472656,
     "change_pct": -0.6161746621715609,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T07:38:44Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.71999979019165,
+    "change_pct": 3.9999961853027344,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-01T07:39:08Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.360000610351562,
+    "change_pct": 2.114030725151763,
+    "value": 2
   }
 ]
