@@ -105,9 +105,10 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--border2);border-radius:5px;color:var(--text);
   font-family:var(--mono);font-size:12px;padding:7px 10px;transition:border-color 0.2s,box-shadow 0.2s;outline:none}
 input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 2px rgba(0,229,255,0.1)}
+input[type=checkbox]:focus{box-shadow:none;border-color:inherit}
 select option{background:var(--bg2)}
 textarea{resize:vertical;min-height:70px;font-size:11px}
-input[type=checkbox]{width:auto;accent-color:var(--cyan);transform:scale(1.15);cursor:pointer}
+input[type=checkbox]{width:auto;accent-color:var(--cyan);cursor:pointer}
 input[type=number]{-moz-appearance:textfield}
 input[type=password]{letter-spacing:2px}
 .fr{display:flex;gap:10px;flex-wrap:wrap}
@@ -3423,6 +3424,18 @@ function uniUpdateStats() {
 
 function uniSym(r) { return typeof r === 'string' ? r : (r.symbol || ''); }
 
+// เดิม: คอลัมน์ Checked แสดงแค่วันที่ (substring(0,10)) มองไม่รู้ว่า check
+// ตอนไหนของวัน — ตอนนี้แปลง UTC (last_checked เก็บเป็น UTC ISO จาก daily_screener.py
+// now_str()) เป็นเวลาไทย (ICT = UTC+7) แล้วแสดง วัน/เดือน ชม:นาที
+function uniFmtChecked(iso) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return null;
+  const ict = new Date(d.getTime() + 7 * 3600000);
+  const p = n => String(n).padStart(2, '0');
+  return `${p(ict.getUTCDate())}/${p(ict.getUTCMonth()+1)} ${p(ict.getUTCHours())}:${p(ict.getUTCMinutes())}`;
+}
+
 // ── Render Table ──────────────────────────────────────────
 function uniRenderTable() {
   const wls   = new Set((WL.watchlist || []).map(s => s.symbol.toUpperCase()));
@@ -3511,7 +3524,8 @@ function uniRenderTable() {
         : '<span style="color:var(--text3)">-</span>';
     const wlTag = inWl ? '<span style="font-size:10px;color:var(--cyan);font-family:var(--mono)">📋 WL</span>' : '';
     const rowBg = inWl ? 'background:rgba(0,229,255,0.03)' : '';
-    const checked = r.checked ? r.checked.substring(0,10) : '<span style="color:var(--text3)">-</span>';
+    const checkedFmt = uniFmtChecked(r.checked);
+    const checked = checkedFmt ? `${checkedFmt} <span style="color:var(--text3)">ICT</span>` : '<span style="color:var(--text3)">-</span>';
     return `<tr style="${rowBg}" data-sym="${r.sym}">
       <td><input type="checkbox" class="uni-chk" value="${r.sym}" style="accent-color:var(--purple)" onchange="uniUpdateCheckCount()"></td>
       <td style="font-family:var(--mono);font-size:12px;font-weight:600;color:var(--cyan)">${r.sym}</td>
@@ -3669,9 +3683,128 @@ async function uniFetchHalalData(ticker) {
   return { status: 'UNKNOWN', purify_pct: null };
 }
 
+// ══════════════════════════════════════════════════════════
+//  TECHNICAL DATA (Price/ADR/RSI/Vol/Gate) — client-side ported
+//  จาก daily_screener.py fetch_stock_data()/_calc_adr()/_calc_rsi()/
+//  _calc_ema()/run_gates() ให้สูตรตรงกันเป๊ะ ใช้ตอนกด "Check Halal ที่เลือก"
+//  เพื่อไม่ให้คอลัมน์ Price/ADR/RSI/Vol/Gate ค้างว่างจนกว่า screener จะรันรอบถัดไป
+// ══════════════════════════════════════════════════════════
+async function uniFetchOHLCV(symbol) {
+  const urls = [
+    `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?range=90d&interval=1d&includePrePost=false`,
+    `https://query2.finance.yahoo.com/v8/finance/chart/${symbol}?range=90d&interval=1d&includePrePost=false`,
+  ];
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, { mode: 'cors' });
+      if (!res.ok) continue;
+      const data = await res.json();
+      const q = data?.chart?.result?.[0]?.indicators?.quote?.[0];
+      if (!q || !q.close) continue;
+      // เก็บเฉพาะแท่งที่ high/low/close ไม่เป็น null ครบ — filter(Boolean) แบบ
+      // แยก array อิสระ (เหมือน fetchOHLC เดิม) จะทำให้ index เพี้ยนถ้า null
+      // อยู่คนละตำแหน่งกันในแต่ละ field
+      const n = q.close.length;
+      const highs = [], lows = [], closes = [], volumes = [];
+      for (let i = 0; i < n; i++) {
+        if (q.high[i] == null || q.low[i] == null || q.close[i] == null) continue;
+        highs.push(Number(q.high[i]));
+        lows.push(Number(q.low[i]));
+        closes.push(Number(q.close[i]));
+        volumes.push(Number(q.volume?.[i] ?? 0));
+      }
+      if (closes.length < 20) continue;
+      return { highs, lows, closes, volumes };
+    } catch { continue; }
+  }
+  return null; // CORS block หรือไม่มีข้อมูล
+}
+
+function uniCalcADR(highs, lows, n = 20) {
+  const hh = highs.slice(-n), ll = lows.slice(-n);
+  const ranges = [];
+  for (let i = 0; i < hh.length; i++) if (ll[i] > 0) ranges.push((hh[i] - ll[i]) / ll[i] * 100);
+  return ranges.length ? ranges.reduce((a, b) => a + b, 0) / ranges.length : 0;
+}
+
+function uniCalcEMA(prices, period) {
+  if (prices.length < period) return null;
+  let ema = prices.slice(0, period).reduce((a, b) => a + b, 0) / period;
+  const k = 2 / (period + 1);
+  for (let i = period; i < prices.length; i++) ema = prices[i] * k + ema * (1 - k);
+  return ema;
+}
+
+function uniCalcRSI(closes, period = 14) {
+  if (closes.length <= period) return 50.0;
+  const gains = [], losses = [];
+  for (let i = 1; i < closes.length; i++) {
+    const diff = closes[i] - closes[i - 1];
+    gains.push(Math.max(diff, 0));
+    losses.push(Math.max(-diff, 0));
+  }
+  let avgG = gains.slice(0, period).reduce((a, b) => a + b, 0) / period;
+  let avgL = losses.slice(0, period).reduce((a, b) => a + b, 0) / period;
+  let rsi = avgL > 0 ? 100 - 100 / (1 + avgG / avgL) : 100;
+  for (let i = period; i < gains.length; i++) {
+    avgG = (avgG * (period - 1) + gains[i]) / period;
+    avgL = (avgL * (period - 1) + losses[i]) / period;
+    rsi = avgL > 0 ? 100 - 100 / (1 + avgG / avgL) : 100;
+  }
+  return rsi;
+}
+
+async function uniFetchTechnicalData(symbol) {
+  const d = await uniFetchOHLCV(symbol);
+  if (!d) return null;
+  const { highs, lows, closes, volumes } = d;
+  const price = closes[closes.length - 1];
+  if (isNaN(price)) return null;
+
+  const adrPct    = uniCalcADR(highs, lows, 20);
+  const todayVol  = volumes[volumes.length - 1] || 0;
+  const last20Vol = volumes.slice(-21, -1);
+  const avgVol    = last20Vol.length ? last20Vol.reduce((a, b) => a + b, 0) / last20Vol.length : todayVol;
+  const volRatio  = avgVol > 0 ? todayVol / avgVol : 1.0;
+  const ema50     = uniCalcEMA(closes, 50);
+  const rsi       = uniCalcRSI(closes, 14);
+
+  return {
+    price:       Math.round(price * 10000) / 10000,
+    adr_pct:     Math.round(adrPct * 100) / 100,
+    avg_volume:  Math.round(avgVol),
+    vol_ratio:   Math.round(volRatio * 100) / 100,
+    rsi:         Math.round(rsi * 10) / 10,
+    above_ema50: ema50 != null ? price > ema50 : false,
+  };
+}
+
+// ประเมิน Gate 1-6 ฝั่ง client ให้ตรงกับ run_gates() ใน daily_screener.py
+// ใช้ threshold จาก UNI.settings (Filter Config tab) เกณฑ์เดียวกับ server
+function uniEvalGate(halal, tech) {
+  const cfg       = UNI.settings || {};
+  const maxPurify = cfg.max_purify_pct       ?? 5.0;
+  const minPrice  = cfg.min_price            ?? 1.0;
+  const minAvgVol = cfg.min_avg_volume       ?? 100000;
+  const minAdr    = cfg.min_adr_pct          ?? 8.0;
+  const reqEma50  = cfg.require_above_ema50  !== false;
+  const rsiMin    = cfg.rsi_min              ?? 35.0;
+  const rsiMax    = cfg.rsi_max              ?? 72.0;
+  const volRMin   = cfg.volume_ratio_min     ?? 1.3;
+
+  if (halal.status !== 'HALAL') return 'halal';
+  if (halal.purify_pct != null && halal.purify_pct > maxPurify) return 'purify';
+  if (!tech) return 'no_data';
+  if (tech.price < minPrice || tech.avg_volume < minAvgVol) return 'liquidity';
+  if (tech.adr_pct < minAdr) return 'adr';
+  if (reqEma50 && !tech.above_ema50) return 'trend';
+  if (!(tech.rsi >= rsiMin && tech.rsi <= rsiMax) || tech.vol_ratio < volRMin) return 'momentum';
+  return 'PASSED';
+}
+
 async function uniCheckSelected() {
   const checked = Array.from(document.querySelectorAll('.uni-chk:checked')).map(c => c.value);
-  if (!checked.length) { showToast('เลือกหุ้นที่จะ Check Halal ก่อน', 'err'); return; }
+  if (!checked.length) { showToast('เลือกหุ้นที่จะ Check ก่อน', 'err'); return; }
   if (checked.length > 100 && !confirm(`เลือก ${checked.length} ตัว — Check ทีละตัวอาจใช้เวลานาน ดำเนินการต่อ?`)) return;
 
   const btn = document.getElementById('uni-check-btn');
@@ -3682,28 +3815,45 @@ async function uniCheckSelected() {
   const progFill = document.getElementById('uni-check-progress-fill');
   progWrap.style.display = '';
 
-  let done = 0, halalN = 0, nhalalN = 0, unkN = 0;
+  let done = 0, halalN = 0, nhalalN = 0, unkN = 0, passN = 0;
   for (const sym of checked) {
-    progTxt.textContent = `กำลังตรวจ ${sym}... (${done+1}/${checked.length})`;
-    const result = await uniFetchHalalData(sym);
+    progTxt.textContent = `กำลังตรวจ ${sym} (Halal + ราคา/ADR/RSI/Vol)... (${done+1}/${checked.length})`;
+    const halal = await uniFetchHalalData(sym);
+    const tech  = await uniFetchTechnicalData(sym);
+    const gate  = uniEvalGate(halal, tech);
+    const nowIso = new Date().toISOString();
 
-    // อัปเดต UNI.universe entry
+    // อัปเดต UNI.universe entry — merge เข้ากับของเดิม (ไม่ทับทั้ง object)
+    // เดิม: สร้าง object ใหม่ทับของเก่าทั้งก้อน ทำให้ last_price/last_adr_pct/
+    // last_rsi/last_vol_ratio/last_gate ที่ daily_screener.py เคย scan ไว้
+    // หายไปทุกครั้งที่กด "Check Halal ที่เลือก" จากหน้านี้
     const idx = (UNI.universe || []).findIndex(r => uniSym(r).toUpperCase() === sym);
     if (idx !== -1) {
-      const old = UNI.universe[idx];
+      const old  = UNI.universe[idx];
+      const base = typeof old === 'string'
+        ? { symbol: sym, name: sym, added_at: nowIso }
+        : { ...old, symbol: old.symbol || sym };
       UNI.universe[idx] = {
-        symbol: sym,
-        name: typeof old === 'string' ? sym : (old.name || sym),
-        added_at: typeof old === 'string' ? new Date().toISOString() : (old.added_at || new Date().toISOString()),
-        halal_status: result.status,
-        purify_pct: result.purify_pct,
-        last_checked: new Date().toISOString(),
+        ...base,
+        halal_status: halal.status,
+        purify_pct:   halal.purify_pct,
+        last_checked: nowIso,
+        last_gate:    gate,
+        ...(tech ? {
+          last_price:       tech.price,
+          last_adr_pct:     tech.adr_pct,
+          last_rsi:         tech.rsi,
+          last_vol_ratio:   tech.vol_ratio,
+          last_above_ema50: tech.above_ema50,
+          last_scanned:     nowIso,
+        } : {}),
       };
     }
 
-    if (result.status === 'HALAL') halalN++;
-    else if (result.status === 'NOT_HALAL') nhalalN++;
+    if (halal.status === 'HALAL') halalN++;
+    else if (halal.status === 'NOT_HALAL') nhalalN++;
     else unkN++;
+    if (gate === 'PASSED') passN++;
 
     done++;
     const pct = Math.round((done / checked.length) * 100);
@@ -3712,17 +3862,17 @@ async function uniCheckSelected() {
     uniRenderTable();
     uniUpdateStats();
 
-    // Rate limit กัน Typesense block — เว้นช่วงเล็กน้อย
+    // Rate limit กัน Typesense/Yahoo block — เว้นช่วงเล็กน้อย
     await new Promise(r => setTimeout(r, 350));
   }
 
-  progTxt.textContent = `เสร็จสิ้น ${done}/${checked.length} — ✅${halalN} ❌${nhalalN} ⏳${unkN}`;
-  showToast(`Check Halal เสร็จ: ✅${halalN} Halal, ❌${nhalalN} Not, ⏳${unkN} ไม่พบข้อมูล`, 'ok');
+  progTxt.textContent = `เสร็จสิ้น ${done}/${checked.length} — ✅${halalN} ❌${nhalalN} ⏳${unkN} | Gate ผ่าน ${passN}`;
+  showToast(`Check เสร็จ: ✅${halalN} Halal, ❌${nhalalN} Not, ⏳${unkN} ไม่พบข้อมูล — Gate ผ่าน ${passN}/${checked.length}`, 'ok');
   btn.disabled = false;
 
   // Auto-save ขึ้น GitHub
-  const ok = await uniSaveGH(`universe: manual halal check ${checked.length} symbols`);
-  if (ok) showToast('บันทึกผล Halal Check ขึ้น GitHub แล้ว 💾', 'ok');
+  const ok = await uniSaveGH(`universe: manual check (halal+technical) ${checked.length} symbols`);
+  if (ok) showToast('บันทึกผล Check ขึ้น GitHub แล้ว 💾', 'ok');
 
   setTimeout(() => { progWrap.style.display = 'none'; }, 4000);
 }

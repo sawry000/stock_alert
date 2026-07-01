@@ -1145,23 +1145,36 @@ def main():
                     watchlist[i]["screened_at"]  = now_str()
                     break
 
-        # ── อัปเดต universe entry ด้วย (ไม่ว่าจะ remove หรือไม่) ──────
-        for _ui, _ue in enumerate(universe_data["universe"]):
-            _us = (_ue if isinstance(_ue, str) else _ue.get("symbol", "")).upper()
-            if _us == sym:
-                if isinstance(_ue, str):
-                    universe_data["universe"][_ui] = {
-                        "symbol": sym, "name": sym,
-                        "added_at": now_str(),
-                        "halal_status": halal_now["status"],
-                        "purify_pct":   halal_now.get("purify_pct"),
-                        "last_checked": now_str(),
-                    }
-                else:
-                    _ue["halal_status"] = halal_now["status"]
-                    _ue["purify_pct"]   = halal_now.get("purify_pct")
-                    _ue["last_checked"] = now_str()
-                break
+        # ── อัปเดต universe entry ด้วย: halal + technical (Price/ADR/RSI/Vol/Gate)
+        #    เดิม: บล็อกนี้เขียนกลับแค่ halal_status/purify_pct/last_checked —
+        #    ส่วน data_now (Price/ADR/RSI/Vol/EMA50) ที่ fetch มาแล้วข้างบนเพื่อ
+        #    ใช้ตรวจ removal ถูกทิ้งไปเฉยๆ ไม่เคยเขียนกลับ universe.json เลย
+        #    รวมกับ PHASE 2 ที่ "ข้าม" หุ้นที่อยู่ใน watchlist แล้ว (sym in wl_syms)
+        #    ทำให้หุ้นกลุ่ม 📋 WL ในหน้า Universe Manager เห็นคอลัมน์
+        #    Price/ADR/RSI/Vol/Gate ว่างเปล่าค้างตลอด — ตอนนี้เขียนกลับด้วย
+        #    ผลลัพธ์เดิมที่ fetch ไปแล้ว ไม่ต้องยิง API ซ้ำ ─────────────────
+        update_fields = {
+            "halal_status": halal_now["status"],
+            "purify_pct":   halal_now.get("purify_pct"),
+            "last_checked": now_str(),
+        }
+        if data_now is not None:
+            gates_passed, gates_detail = run_gates(sym, data_now, halal_now, cfg)
+            gate_val = "PASSED" if gates_passed else next(
+                (k for k, v in gates_detail.items() if not v.get("pass", True)), "unknown"
+            )
+            update_fields.update({
+                "last_price":       data_now["price"],
+                "last_adr_pct":     data_now["adr_pct"],
+                "last_rsi":         data_now["rsi"],
+                "last_vol_ratio":   data_now["vol_ratio"],
+                "last_above_ema50": data_now["above_ema50"],
+                "last_scanned":     now_str(),
+                "last_gate":        gate_val,
+            })
+        else:
+            update_fields["last_gate"] = "no_data"
+        update_universe_entry(universe_data, sym, **update_fields)
 
     # บันทึก watchlist หลัง removal
     save_watchlist(wl_settings, watchlist)
