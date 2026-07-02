@@ -97,12 +97,13 @@
     "open_entry": 394.4700012207031,
     "open_time": "2026-07-01T06:58:25Z",
     "COHR_MA_DEATH": {
-      "last_fired": "2026-06-29T14:13:25Z"
+      "last_fired": "2026-07-02T13:33:31Z"
     },
     "COHR_MTF_BULL": {
       "last_fired": "2026-07-01T06:58:25Z"
     },
-    "last_buy_at": "2026-07-01T06:58:25Z"
+    "last_buy_at": "2026-07-01T06:58:25Z",
+    "last_sell_at": "2026-07-02T13:33:31Z"
   },
   "ALAB": {
     "ALAB_POS_SIZE": {
@@ -198,7 +199,10 @@
     },
     "open_entry": 27.485000610351562,
     "open_time": "2026-06-25T17:27:30Z",
-    "last_sell_at": "2026-07-02T06:48:28Z"
+    "last_sell_at": "2026-07-02T13:33:35Z",
+    "RIOT_MA_DEATH": {
+      "last_fired": "2026-07-02T13:33:35Z"
+    }
   },
   "NAVN": {
     "NAVN_POS_SIZE": {
@@ -1290,7 +1294,11 @@
     "FPS_PCT_UP": {
       "last_fired": "2026-06-30T20:04:13Z"
     },
-    "last_buy_at": "2026-06-30T20:04:13Z"
+    "last_buy_at": "2026-06-30T20:04:13Z",
+    "FPS_MA_DEATH": {
+      "last_fired": "2026-07-02T13:34:15Z"
+    },
+    "last_sell_at": "2026-07-02T13:34:15Z"
   },
   "BOBS": {
     "BOBS_POS_SIZE": {
@@ -1317,15 +1325,15 @@
       "last_fired": "2026-06-22T14:19:03Z"
     },
     "open_position": true,
-    "open_entry": 17.920000076293945,
-    "open_time": "2026-07-01T18:14:10Z",
+    "open_entry": 18.190000534057617,
+    "open_time": "2026-07-02T13:34:19Z",
     "ISSC_MA_GOLDEN": {
       "last_fired": "2026-06-15T13:34:49Z"
     },
     "ISSC_MTF_BULL": {
-      "last_fired": "2026-07-01T18:14:10Z"
+      "last_fired": "2026-07-02T13:34:19Z"
     },
-    "last_buy_at": "2026-07-01T18:14:10Z",
+    "last_buy_at": "2026-07-02T13:34:19Z",
     "ISSC_MA_GOLD": {
       "last_fired": "2026-07-01T14:09:13Z"
     }
@@ -1463,7 +1471,10 @@
     "last_buy_at": "2026-07-01T06:14:21Z",
     "open_entry": 161.85000610351562,
     "open_time": "2026-07-01T06:14:21Z",
-    "last_sell_at": "2026-07-01T13:34:13Z"
+    "last_sell_at": "2026-07-02T13:34:27Z",
+    "SMTC_MA_DEATH": {
+      "last_fired": "2026-07-02T13:34:27Z"
+    }
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1536,7 +1547,8 @@
     "open_position": true,
     "open_entry": 20.959999084472656,
     "open_time": "2026-07-01T15:39:50Z",
-    "last_buy_at": "2026-07-01T15:39:50Z"
+    "last_buy_at": "2026-07-01T15:39:50Z",
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {

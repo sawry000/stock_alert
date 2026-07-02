@@ -1,50 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T16:12:36Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 27.889999389648438,
-    "change_pct": 1.0756251165085529,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-26T17:08:35Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 39.27000045776367,
-    "change_pct": 7.589042350037458,
-    "value": 7.589042350037458
-  },
-  {
-    "timestamp": "2026-06-26T17:14:03Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_CP_BULL",
-    "type": "candle_pattern",
-    "price": 9.399999618530273,
-    "change_pct": -4.761908626846259,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-26T17:14:03Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_POS_SIZE",
-    "type": "position_size",
-    "price": 9.399999618530273,
-    "change_pct": -4.761908626846259,
-    "value": 10
-  },
-  {
-    "timestamp": "2026-06-26T17:22:45Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "price": 1.9800000190734863,
-    "change_pct": -5.263156982129835,
-    "value": -5.263156982129835
-  },
-  {
     "timestamp": "2026-06-26T17:27:53Z",
     "symbol": "RDW",
     "alert_id": "RDW_NEWS_POS",
@@ -4741,5 +4696,55 @@
     "price": 220.6300048828125,
     "change_pct": 0.28636585582386365,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-02T13:33:31Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 356.6400146484375,
+    "change_pct": -2.896968348824459,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-02T13:33:35Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 23.479999542236328,
+    "change_pct": -2.4309181706364975,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-02T13:34:15Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 47.7599983215332,
+    "change_pct": -4.4605133016471346,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-02T13:34:19Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.190000534057617,
+    "change_pct": 4.180988167569395,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T13:34:27Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 145.5800018310547,
+    "change_pct": -1.4753642182899995,
+    "value": 0
   }
 ]
