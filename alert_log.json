@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T14:04:08Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 313.80499267578125,
-    "change_pct": -5.480423892836972,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-26T14:04:08Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_POS_SIZE",
-    "type": "position_size",
-    "price": 313.80499267578125,
-    "change_pct": -5.480423892836972,
-    "value": 0.3186692
-  },
-  {
     "timestamp": "2026-06-26T14:04:22Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_PCT_DROP",
@@ -4716,5 +4698,25 @@
     "price": 88.33999633789062,
     "change_pct": -0.5644925649717434,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T06:34:23Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.230000019073486,
+    "change_pct": 6.549118868349776,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-02T06:34:32Z",
+    "symbol": "GLW",
+    "alert_id": "GLW_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 220.6300048828125,
+    "change_pct": -12.96121427336147,
+    "value": -12.96121427336147
   }
 ]
