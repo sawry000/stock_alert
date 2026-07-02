@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T15:23:25Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 74.70999908447266,
-    "change_pct": 2.3564859357071675,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-26T15:28:11Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 5.085000038146973,
-    "change_pct": 5.0619842592349755,
-    "value": 5.0619842592349755
-  },
-  {
     "timestamp": "2026-06-26T15:33:25Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP_5",
@@ -4729,6 +4711,26 @@
     "action": "BUY",
     "price": 12.789999961853027,
     "change_pct": -2.0673816090886152,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-02T08:03:31Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 430.8599853515625,
+    "change_pct": -0.8377479052790564,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-02T08:04:03Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 350.2099914550781,
+    "change_pct": -1.1264846258955008,
     "value": 2
   }
 ]

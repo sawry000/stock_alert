@@ -128,12 +128,12 @@
       ]
     },
     "open_position": true,
-    "open_entry": 483.0199890136719,
-    "open_time": "2026-07-01T06:58:28Z",
+    "open_entry": 430.8599853515625,
+    "open_time": "2026-07-02T08:03:31Z",
     "ALAB_MTF_BULL": {
-      "last_fired": "2026-07-01T06:58:28Z"
+      "last_fired": "2026-07-02T08:03:31Z"
     },
-    "last_buy_at": "2026-07-01T06:58:28Z"
+    "last_buy_at": "2026-07-02T08:03:31Z"
   },
   "ENPH": {
     "ENPH_POS_SIZE": {
@@ -720,12 +720,12 @@
       "last_fired": "2026-06-26T13:34:30Z"
     },
     "open_position": true,
-    "open_entry": 379.7799987792969,
-    "open_time": "2026-07-01T07:09:10Z",
+    "open_entry": 350.2099914550781,
+    "open_time": "2026-07-02T08:04:03Z",
     "VICR_MTF_BULL": {
-      "last_fired": "2026-07-01T07:09:10Z"
+      "last_fired": "2026-07-02T08:04:03Z"
     },
-    "last_buy_at": "2026-07-01T07:09:10Z"
+    "last_buy_at": "2026-07-02T08:04:03Z"
   },
   "AMSC": {
     "AMSC_CP_BULL": {
@@ -1472,7 +1472,8 @@
     "open_position": true,
     "open_entry": 128.02999877929688,
     "open_time": "2026-07-01T07:19:25Z",
-    "last_buy_at": "2026-07-01T07:19:25Z"
+    "last_buy_at": "2026-07-01T07:19:25Z",
+    "_confirm_MXL_MTF_BULL": 1
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1493,7 +1494,8 @@
     },
     "open_entry": 150.50999450683594,
     "open_time": "2026-07-01T16:34:15Z",
-    "last_buy_at": "2026-07-01T16:34:15Z"
+    "last_buy_at": "2026-07-01T16:34:15Z",
+    "_confirm_VPG_MTF_BULL": 1
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1576,7 +1578,8 @@
     },
     "last_buy_at": "2026-07-01T09:34:37Z",
     "open_entry": 69.62000274658203,
-    "open_time": "2026-07-01T09:34:37Z"
+    "open_time": "2026-07-01T09:34:37Z",
+    "_confirm_ALGM_MTF_BULL": 1
   },
   "NEOV": {
     "NEOV_MA_GOLD": {
@@ -1587,7 +1590,8 @@
     "open_time": "2026-07-01T09:34:41Z",
     "NEOV_MTF_BULL": {
       "last_fired": "2026-07-01T09:34:41Z"
-    }
+    },
+    "_confirm_NEOV_MTF_BULL": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {
