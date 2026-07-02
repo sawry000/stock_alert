@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T19:28:13Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_PCT_UP_5",
-    "type": "percent_change",
-    "price": 34.16999816894531,
-    "change_pct": 5.495517656515319,
-    "value": 5.495517656515319
-  },
-  {
-    "timestamp": "2026-06-26T19:28:36Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP_5",
-    "type": "percent_change",
-    "price": 38.36000061035156,
-    "change_pct": 5.095892083154966,
-    "value": 5.095892083154966
-  },
-  {
     "timestamp": "2026-06-26T19:32:53Z",
     "symbol": "RDW",
     "alert_id": "RDW_NEWS_POS",
@@ -4768,5 +4750,25 @@
     "price": 116.18000030517578,
     "change_pct": -16.64514255619473,
     "value": -16.64514255619473
+  },
+  {
+    "timestamp": "2026-07-02T16:34:33Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1762.0201416015625,
+    "change_pct": -12.520100208441939,
+    "value": -12.520100208441939
+  },
+  {
+    "timestamp": "2026-07-02T16:34:37Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 55.439998626708984,
+    "change_pct": -12.305818239078988,
+    "value": -12.305818239078988
   }
 ]
