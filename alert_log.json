@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T14:04:37Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_DROP",
-    "type": "percent_change",
-    "price": 4.260000228881836,
-    "change_pct": -5.3333282470703125,
-    "value": -5.3333282470703125
-  },
-  {
-    "timestamp": "2026-06-26T14:12:32Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 28.290000915527344,
-    "change_pct": 2.5252631645744033,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T14:13:02Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_PCT_DROP",
@@ -4719,5 +4701,25 @@
     "price": 23.959999084472656,
     "change_pct": -12.298685635165974,
     "value": -12.298685635165974
+  },
+  {
+    "timestamp": "2026-07-02T07:08:32Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 24.25,
+    "change_pct": 4.616048317515101,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T07:08:40Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 95.77999877929688,
+    "change_pct": 0.6621111710949756,
+    "value": 2
   }
 ]
