@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T14:23:54Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_POS_SIZE",
-    "type": "position_size",
-    "price": 5.474999904632568,
-    "change_pct": -3.609156608581538,
-    "value": 18
-  },
-  {
-    "timestamp": "2026-06-26T14:28:19Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.264999866485596,
-    "change_pct": 0.6275921688749366,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T15:07:25Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_PCT_DROP",
@@ -4724,6 +4706,26 @@
     "action": "BUY",
     "price": 3.4200000762939453,
     "change_pct": 11.764708375619126,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T07:48:39Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.079999923706055,
+    "change_pct": 5.739129107931386,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T07:48:57Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.559999465942383,
+    "change_pct": 3.0281132750971773,
     "value": 3
   }
 ]
