@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T14:03:57Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 109.58000183105469,
-    "change_pct": 0.04565126545666608,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-26T14:04:08Z",
     "symbol": "VICR",
     "alert_id": "VICR_CP_BULL",
@@ -4715,5 +4706,15 @@
     "price": 111.73999786376953,
     "change_pct": 2.5137595080454416,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-02T06:19:16Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 88.33999633789062,
+    "change_pct": -0.5644925649717434,
+    "value": 3
   }
 ]
