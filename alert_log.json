@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T16:03:38Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.384999990463257,
-    "change_pct": 5.999999576144748,
-    "value": 5.999999576144748
-  },
-  {
     "timestamp": "2026-06-26T16:04:23Z",
     "symbol": "AGL",
     "alert_id": "AGL_NEWS_POS",
@@ -4737,6 +4728,16 @@
     "action": "BUY",
     "price": 5.929999828338623,
     "change_pct": -1.658377639492159,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-02T08:24:40Z",
+    "symbol": "CDNL",
+    "alert_id": "CDNL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 86.0,
+    "change_pct": -0.5090236001850968,
     "value": 2
   }
 ]
