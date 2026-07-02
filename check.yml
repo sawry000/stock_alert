@@ -1,0 +1,252 @@
+name: "Halal Stock Alert PRO — Autonomous Pipeline"
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_mode:
+        description: "เลือก mode"
+        required: true
+        default: "alert_only"
+        type: choice
+        options:
+          - alert_only
+          - screener_only
+          - full_pipeline
+
+permissions:
+  contents: write
+
+env:
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  daily-screener:
+    name: "🔍 Daily Halal Screener"
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    if: >
+      github.event.inputs.run_mode == 'screener_only' ||
+      github.event.inputs.run_mode == 'full_pipeline'
+    concurrency:
+      group: daily-screener
+      cancel-in-progress: false
+
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "🐍 Setup Python ${{ env.PYTHON_VERSION }}"
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: "📦 Install dependencies"
+        run: |
+          pip install --upgrade pip --quiet
+          pip install yfinance requests --quiet
+          echo "✅ yfinance: $(pip show yfinance | grep Version)"
+
+      - name: "🔍 Validate universe.json"
+        run: |
+          python3 - << 'PYEOF'
+          import json, sys
+          try:
+              data = json.load(open("universe.json"))
+              n = len(data.get("universe", []))
+              print(f"✅ universe.json: {n} tickers")
+              if n == 0:
+                  print("⚠️ Universe ว่าง — screener จะไม่ทำอะไร")
+          except Exception as e:
+              print(f"❌ universe.json error: {e}")
+              sys.exit(1)
+          PYEOF
+
+      - name: "🔍 Run Daily Screener"
+        env:
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY:         ${{ secrets.GEMINI_API_KEY }}
+          ACCOUNT_SIZE_PER_STOCK: "100"
+        run: |
+          echo "🕐 UTC: $(date -u '+%Y-%m-%d %H:%M:%S')"
+          echo "🕐 ICT: $(TZ='Asia/Bangkok' date '+%Y-%m-%d %H:%M:%S')"
+          python3 daily_screener.py
+
+      # ─────────────────────────────────────────────────────────────
+      # แก้บั๊ก: เดิม "git push || echo Nothing to push" จะกลืน error
+      # ทุกชนิดแบบเงียบๆ รวมถึงกรณี push ถูก reject เพราะ remote
+      # ถูก alert-engine job push แซงไประหว่างที่ screener กำลังรันอยู่
+      # (screener ใช้เวลานาน หลาย ticker + sleep ต่อตัว)
+      #
+      # อัปเดต 2: run #9867 พิสูจน์ว่า retry 5 ครั้ง (backoff 3-10s รวม
+      # ไม่ถึง 1 นาที) ไม่พอสู้กับความถี่ของ alert-engine ที่ push แซง
+      # ได้ 10+ ครั้งตลอด 47 นาทีที่ screener รัน จึงเพิ่ม retry เป็น
+      # 20 ครั้ง (backoff 8-20s สุ่ม ≈ รวมได้สูงสุด ~7 นาที) และเพิ่ม
+      # timeout-minutes ให้มีพื้นที่พอ + print diagnostics เมื่อ fail
+      # จริงเพื่อ debug ง่ายขึ้น (เดิมเห็นแค่ "exit code 1" เฉยๆ)
+      # ─────────────────────────────────────────────────────────────
+      - name: "💾 Commit screener results"
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add universe.json watchlist.json screener_log.json screener_state.json
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ ไม่มีอะไรเปลี่ยน — ข้าม commit"
+            exit 0
+          fi
+
+          git commit -m "screener: daily run $(date -u '+%Y-%m-%d') [skip ci]"
+
+          MAX_ATTEMPTS=20
+          success=false
+          for attempt in $(seq 1 $MAX_ATTEMPTS); do
+            echo "🔄 Push attempt $attempt/$MAX_ATTEMPTS"
+            if git push; then
+              success=true
+              echo "✅ Push สำเร็จในรอบที่ $attempt"
+              break
+            fi
+
+            echo "⚠️ Push ถูก reject — fetch + rebase แล้วลองใหม่"
+            git fetch origin main
+
+            if ! git rebase origin/main; then
+              echo "⚠️ Rebase ชนกัน (conflict) — ยกเลิก rebase แล้วลองแบบ fetch สดใหม่รอบถัดไป"
+              git rebase --abort || true
+            fi
+
+            sleep $(( (RANDOM % 13) + 8 ))
+          done
+
+          if [ "$success" != "true" ]; then
+            echo "❌ Push ไม่สำเร็จหลังลอง $MAX_ATTEMPTS ครั้ง — ผลลัพธ์ screener รอบนี้จะหายไป!"
+            echo "── Diagnostics ──────────────────────────"
+            echo "Local HEAD:"
+            git log -1 --oneline
+            echo "Remote HEAD:"
+            git log -1 --oneline origin/main
+            echo "Status:"
+            git status
+            echo "──────────────────────────────────────────"
+            exit 1
+          fi
+
+      - name: "📤 Upload screener log"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screener-log-${{ github.run_number }}
+          path: screener_log.json
+          retention-days: 30
+
+  alert-engine:
+    name: "🚨 Alert Engine"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: >
+      github.event.inputs.run_mode == 'alert_only' ||
+      github.event.inputs.run_mode == 'full_pipeline'
+    concurrency:
+      group: alert-engine
+      cancel-in-progress: false
+
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "🐍 Setup Python ${{ env.PYTHON_VERSION }}"
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: "📦 Install dependencies"
+        run: |
+          pip install --upgrade pip --quiet
+          pip install yfinance --quiet
+
+      - name: "🔍 Validate watchlist.json"
+        run: |
+          python3 - << 'PYEOF'
+          import json, sys
+          try:
+              data = json.load(open("watchlist.json"))
+              stocks = data.get("watchlist", [])
+              alerts_count = sum(len(s.get("alerts", [])) for s in stocks)
+              print(f"✅ watchlist.json: {len(stocks)} symbols, {alerts_count} alerts")
+              if len(stocks) == 0:
+                  print("⚠️ Watchlist ว่าง — รอ screener เพิ่มหุ้น")
+          except Exception as e:
+              print(f"❌ watchlist.json error: {e}")
+              sys.exit(1)
+          PYEOF
+
+      - name: "🚨 Run Alert Engine"
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "🕐 UTC: $(date -u '+%Y-%m-%d %H:%M:%S')"
+          echo "🕐 ICT: $(TZ='Asia/Bangkok' date '+%Y-%m-%d %H:%M:%S')"
+          python3 alert_engine.py
+
+      - name: "💾 Commit state and log"
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # เพิ่ม universe.json เข้ามาด้วย — alert_engine.py ตอนนี้เขียน
+          # last_price/last_adr_pct/last_rsi/last_vol_ratio/last_gate/
+          # last_scanned ให้ symbol ใน watchlist ทุกรอบที่รัน (ดู
+          # sync_universe_tech() ใน alert_engine.py) ถ้าไม่ git add ตรงนี้
+          # การเปลี่ยนแปลงจะหายไปเงียบๆ ตอนจบ job (แก้ใน working dir แต่ไม่เคย
+          # ถูก commit เลย)
+          git add state.json alert_log.json universe.json
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ ไม่มีอะไรเปลี่ยน — ข้าม commit"
+            exit 0
+          fi
+
+          git commit -m "alert: run $(date -u '+%Y-%m-%dT%H:%M') [skip ci]"
+
+          MAX_ATTEMPTS=8
+          success=false
+          for attempt in $(seq 1 $MAX_ATTEMPTS); do
+            echo "🔄 Push attempt $attempt/$MAX_ATTEMPTS"
+            if git push; then
+              success=true
+              echo "✅ Push สำเร็จในรอบที่ $attempt"
+              break
+            fi
+            echo "⚠️ Push ถูก reject — fetch + rebase แล้วลองใหม่"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo "⚠️ Rebase ชนกัน (conflict) — ยกเลิก rebase แล้วลองรอบถัดไป"
+              git rebase --abort || true
+            fi
+            sleep $(( (RANDOM % 5) + 2 ))
+          done
+
+          if [ "$success" != "true" ]; then
+            echo "❌ Push ไม่สำเร็จหลังลอง $MAX_ATTEMPTS ครั้ง"
+            echo "── Diagnostics ──────────────────────────"
+            git log -1 --oneline
+            git log -1 --oneline origin/main
+            git status
+            echo "──────────────────────────────────────────"
+            exit 1
+          fi
+
+      - name: "📤 Upload alert log"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alert-log-${{ github.run_number }}
+          path: alert_log.json
+          retention-days: 7

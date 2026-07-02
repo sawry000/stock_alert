@@ -41,6 +41,7 @@ BASE_DIR       = Path(__file__).parent
 WATCHLIST_PATH = BASE_DIR / "watchlist.json"
 STATE_PATH     = BASE_DIR / "state.json"
 LOG_PATH       = BASE_DIR / "alert_log.json"
+UNIVERSE_PATH  = BASE_DIR / "universe.json"
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  UTILITIES
@@ -225,6 +226,176 @@ def _calc_atr(highs, lows, closes, period=14):
     for tr in trs[period:]:
         atr = (atr * (period - 1) + tr) / period
     return atr
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  UNIVERSE.JSON SYNC — เติม Purify/Price/ADR/RSI/Vol/Gate ล่าสุดให้เฉพาะ symbol
+#  ที่อยู่ใน watchlist ทุกครั้งที่ alert-engine รัน (ทุก 5 นาที) จะได้มีข้อมูล
+#  สดใหม่ตลอดในหน้า Watchlist Manager โดยไม่ต้องรอ daily_screener.py รอบเช้า
+#  หรือกด "Check Halal ที่เลือก" เอง
+#
+#  หมายเหตุ: ตัวที่ "ไม่ได้" อยู่ใน watchlist (universe อีก ~1800 ตัว) จะไม่ถูก
+#  แตะเลยจากฟังก์ชันนี้ — เพื่อไม่ให้ alert-engine ที่ต้องรันเร็วทุก 5 นาที
+#  ช้าลงจากการ scan universe ทั้งก้อน (นั่นเป็นหน้าที่ของ daily_screener.py)
+# ══════════════════════════════════════════════════════════════════════════════
+
+DEFAULT_UNI_CFG = {
+    "max_purify_pct":      5.0,
+    "min_adr_pct":         8.0,
+    "min_price":           1.0,
+    "min_avg_volume":  100000,
+    "rsi_min":            35.0,
+    "rsi_max":            72.0,
+    "volume_ratio_min":    1.3,
+    "require_above_ema50": True,
+}
+
+
+def _calc_adr(highs, lows, n=20):
+    """สูตร Average Daily Range % เดียวกับ daily_screener.py/manual_check.py:
+    (High-Low)/Low*100 เฉลี่ย n วันล่าสุด — ตั้งใจแยกจาก adr_pct ที่คำนวณใน
+    fetch_quote() (ใช้ Close เป็นตัวหารและ lookback ต่างกัน) เพราะค่าที่จะโชว์
+    ในคอลัมน์ ADR ของ Universe Manager/Watchlist ต้องเทียบกับ threshold
+    min_adr_pct เดียวกับที่ daily_screener.py ใช้ ถ้าสูตรไม่ตรงกัน gate จะ
+    ตัดสินผิดเพี้ยนไปจากที่ scan อัตโนมัติเห็น"""
+    pairs = list(zip(highs[-n:], lows[-n:]))
+    if not pairs:
+        return 0.0
+    ranges = [(h - l) / l * 100 for h, l in pairs if l > 0]
+    return sum(ranges) / len(ranges) if ranges else 0.0
+
+
+def _clean_num(v):
+    """กัน NaN/Infinity หลุดเข้า JSON — json.dump ปกติจะ dump เป็น literal
+    `NaN` ซึ่งไม่ใช่ JSON มาตรฐาน ทำให้ JSON.parse() ฝั่ง browser (dashboard)
+    throw ตอนโหลดไฟล์ทั้งไฟล์ (ไม่ใช่แค่ field นั้น)"""
+    if v is None:
+        return None
+    if isinstance(v, float) and (math.isnan(v) or math.isinf(v)):
+        return None
+    return v
+
+
+def _uni_find_entry(universe_data, symbol):
+    sym_u = symbol.upper()
+    for e in universe_data.get("universe", []):
+        s = (e if isinstance(e, str) else e.get("symbol", "")).upper()
+        if s == sym_u:
+            return None if isinstance(e, str) else e
+    return None
+
+
+def _uni_symbol_exists(universe_data, symbol):
+    sym_u = symbol.upper()
+    return any(
+        (e if isinstance(e, str) else e.get("symbol", "")).upper() == sym_u
+        for e in universe_data.get("universe", [])
+    )
+
+
+def _uni_update_entry(universe_data, symbol, **fields):
+    """merge field เข้า entry เดิม ไม่ทับทั้ง object — เหมือน update_universe_entry()
+    ใน daily_screener.py/manual_check.py ทุกประการ (คนละไฟล์แต่ต้อง behavior
+    ตรงกัน กันข้อมูลที่ scan ไว้ก่อนหน้าหายเวลามาจากอีก process หนึ่งเขียนทับ)"""
+    sym_u = symbol.upper()
+    for i, e in enumerate(universe_data.get("universe", [])):
+        s = (e if isinstance(e, str) else e.get("symbol", "")).upper()
+        if s != sym_u:
+            continue
+        if isinstance(e, str):
+            base = {"symbol": symbol.upper(), "name": symbol.upper(), "added_at": now_str()}
+            base.update(fields)
+            universe_data["universe"][i] = base
+        else:
+            e.update(fields)
+        return True
+    return False
+
+
+def _uni_eval_gate(entry, price, adr_pct, avg_volume, rsi, vol_ratio, above_ema50, cfg):
+    """ตรรกะเดียวกับ eval_gate() ใน manual_check.py / run_gates() ใน
+    daily_screener.py / uniEvalGate() ใน dashboard_pro.html — คัดลอกมาแบบย่อ
+    เพื่อไม่ต้อง import ข้ามไฟล์ (alert_engine.py ต้องรันแบบ standalone เร็วๆ
+    ทุก 5 นาที ไม่อยากผูก dependency เพิ่ม)"""
+    halal_status = (entry or {}).get("halal_status") or "UNKNOWN"
+    purify       = (entry or {}).get("purify_pct")
+
+    if halal_status != "HALAL":
+        return "halal"
+    if purify is not None and purify > cfg["max_purify_pct"]:
+        return "purify"
+    if price is None or adr_pct is None or avg_volume is None:
+        return "no_data"
+    if price < cfg["min_price"] or avg_volume < cfg["min_avg_volume"]:
+        return "liquidity"
+    if adr_pct < cfg["min_adr_pct"]:
+        return "adr"
+    if cfg["require_above_ema50"] and not above_ema50:
+        return "trend"
+    if not (cfg["rsi_min"] <= rsi <= cfg["rsi_max"]) or vol_ratio < cfg["volume_ratio_min"]:
+        return "momentum"
+    return "PASSED"
+
+
+def sync_universe_tech(universe_data, uni_cfg, symbol, quote):
+    """อัปเดต last_price/last_adr_pct/last_rsi/last_vol_ratio/last_above_ema50/
+    last_gate/last_scanned ของ symbol นี้ใน universe.json (ในหน่วยความจำ —
+    ตัวเรียกต้อง save_json(UNIVERSE_PATH, universe_data) เองตอนจบ main())
+
+    ตั้งใจไม่ throw ออกไปนอกฟังก์ชันนี้เลย — ถ้า sync พลาดของตัวใดตัวหนึ่ง
+    (เช่น history ว่าง/network แว้บ) ให้ log แล้วข้าม ไม่ทำให้ alert-engine
+    ทั้ง run ล้มเพราะ universe.json sync ซึ่งเป็นแค่ "bonus feature" ไม่ใช่
+    งานหลัก (งานหลักคือเช็ค alert ยิง Telegram)"""
+    if not _uni_symbol_exists(universe_data, symbol):
+        # symbol อยู่ใน watchlist แต่ไม่เคยผ่าน screener มาก่อนเลย (เพิ่มเอง
+        # ผ่าน "เพิ่มหุ้น" โดยไม่ผ่าน universe) — ข้าม ไม่สร้าง entry ใหม่ที่นี่
+        # เพราะไม่รู้ halal_status/purify_pct จริง จะทำให้ gate เพี้ยน
+        return
+
+    try:
+        hist = fetch_history(symbol, period="90d", interval="1d")
+        if hist is None or hist.empty:
+            _uni_update_entry(universe_data, symbol, last_gate="no_data", last_scanned=now_str())
+            return
+
+        hist = hist.dropna(subset=["Close", "High", "Low"])
+        if len(hist) < 20:
+            _uni_update_entry(universe_data, symbol, last_gate="no_data", last_scanned=now_str())
+            return
+
+        closes = hist["Close"].tolist()
+        highs  = hist["High"].tolist()
+        lows   = hist["Low"].tolist()
+
+        price   = quote["price"]
+        adr_pct = _calc_adr(highs, lows, 20)
+
+        ema50_list  = _calc_ema(closes, 50)
+        ema50       = next((v for v in reversed(ema50_list) if v is not None), None)
+        above_ema50 = (price > ema50) if ema50 else False
+
+        rsi_list = _calc_rsi(closes, 14)
+        rsi      = next((v for v in reversed(rsi_list) if v is not None), 50.0)
+
+        avg_volume = quote.get("avg_volume") or 0
+        today_vol  = quote.get("volume") or 0
+        vol_ratio  = (today_vol / avg_volume) if avg_volume > 0 else 1.0
+
+        entry = _uni_find_entry(universe_data, symbol)
+        gate  = _uni_eval_gate(entry, price, adr_pct, avg_volume, rsi, vol_ratio, above_ema50, uni_cfg)
+
+        _uni_update_entry(
+            universe_data, symbol,
+            last_price       = _clean_num(round(price, 4)),
+            last_adr_pct     = _clean_num(round(adr_pct, 2)),
+            last_rsi         = _clean_num(round(rsi, 1)),
+            last_vol_ratio   = _clean_num(round(vol_ratio, 2)),
+            last_above_ema50 = bool(above_ema50),
+            last_gate        = gate,
+            last_scanned     = now_str(),
+        )
+    except Exception as e:
+        print(f"  [{symbol}] universe.json sync error (ข้าม ไม่กระทบ alert check): {e}")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -942,6 +1113,12 @@ def main():
     quotes_cache     = {}
     fired_count      = 0
 
+    # ── Universe.json sync setup (ดูรายละเอียดที่ sync_universe_tech()) ──────
+    universe_data = load_json(UNIVERSE_PATH, {"settings": {}, "universe": []})
+    if not isinstance(universe_data.get("universe"), list):
+        universe_data["universe"] = []
+    uni_cfg = {**DEFAULT_UNI_CFG, **(universe_data.get("settings") or {})}
+
     # ── Macro Gate ────────────────────────────────────────────────────
     print(f"\n[{now_str()}] ── MACRO CONTEXT CHECK ──")
     market_down, btc_down, spy_chg, btc_chg = get_macro_context()
@@ -967,6 +1144,11 @@ def main():
 
         quotes_cache[symbol] = quote
         print(f"  Price=${quote['price']:.4f}  Chg={quote['change_pct']:+.2f}%  Vol={quote['volume']:.0f}")
+
+        # เติมข้อมูล Purify/Price/ADR/RSI/Vol/Gate ล่าสุดเข้า universe.json
+        # ให้ symbol นี้ (ใช้ quote ที่เพิ่งดึงมา ไม่ fetch price ซ้ำ — แค่เพิ่ม
+        # history call เดียวสำหรับ RSI/EMA50 ที่ quote เดิมไม่มี)
+        sync_universe_tech(universe_data, uni_cfg, symbol, quote)
 
         sym_state    = state.get(symbol, {})
         price        = quote["price"]
@@ -1283,6 +1465,7 @@ def main():
 
     save_json(STATE_PATH, state)
     save_json(LOG_PATH, log[-500:])
+    save_json(UNIVERSE_PATH, universe_data)
     print(f"\n[{now_str()}] เสร็จสิ้น — fire {fired_count} alert(s)")
 
 
