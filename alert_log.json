@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T17:38:47Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.615599632263184,
-    "change_pct": 8.989729284016256,
-    "value": 8.989729284016256
-  },
-  {
     "timestamp": "2026-06-26T17:39:16Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_MTF_BULL",
@@ -4749,6 +4740,16 @@
     "action": "BUY",
     "price": 88.04000091552734,
     "change_pct": -0.20120620565381853,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T14:44:28Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.25,
+    "change_pct": 0.47281323877067544,
     "value": 3
   }
 ]
