@@ -1455,6 +1455,77 @@ async function ghTestConnection() {
   return await res.json();
 }
 
+// ══════════════════════════════════════════════════════════════════════════
+// GITHUB ACTIONS RELAY — "Check Halal ที่เลือก" ฝั่งราคา/ADR/RSI/Vol ทำผ่าน
+// manual_check.yml (workflow_dispatch) แทนการยิง Yahoo ตรงจาก browser
+// เหตุผล: Yahoo ไม่ส่ง Access-Control-Allow-Origin header ให้ browser เรียก
+// ตรงได้ (ยืนยันจาก error จริงที่เจอ) ต้องมี server คั่นกลาง — ใช้ GitHub
+// Actions เป็น server คั่นกลางนั้น (รัน manual_check.py ซึ่งใช้ yfinance ดึง
+// Yahoo server-side เหมือน daily_screener.py เป๊ะ ไม่มี CORS เกี่ยวข้องเลย
+// และไม่ต้องใช้ API key ใดๆ)
+// ══════════════════════════════════════════════════════════════════════════
+
+const GH_MANUAL_CHECK_WORKFLOW = 'manual_check.yml';
+
+async function ghDispatchManualCheck(symbolsCsv) {
+  const nonce = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  const url = `https://api.github.com/repos/${GH.owner}/${GH.repo}/actions/workflows/${GH_MANUAL_CHECK_WORKFLOW}/dispatches`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: ghHeaders(),
+    body: JSON.stringify({ ref: GH.branch, inputs: { symbols: symbolsCsv, nonce } })
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(`Dispatch failed ${res.status}: ${err.message || res.statusText}`);
+  }
+  return nonce;
+}
+
+// GitHub เพิ่ง dispatch เสร็จไม่ได้แปลว่า run ปรากฏใน list ทันที (มี delay
+// สั้นๆ) — รอ 2 วิแรกก่อนเริ่ม poll แล้วค่อย poll ทุก 4 วิ หา run ที่ run-name
+// มี nonce ของเราอยู่ (workflow_dispatch inputs ไม่โผล่ใน run-list API ตรงๆ
+// จึงต้องพึ่ง run-name แทน — เจอข้อจำกัดนี้มาแล้วกับ TV screenshot tool)
+async function ghPollManualCheckRun(nonce, { timeoutMs = 180000, intervalMs = 4000 } = {}) {
+  await new Promise(r => setTimeout(r, 2000));
+  const url = `https://api.github.com/repos/${GH.owner}/${GH.repo}/actions/workflows/${GH_MANUAL_CHECK_WORKFLOW}/runs?event=workflow_dispatch&per_page=10`;
+  const startedAt = Date.now();
+
+  while (Date.now() - startedAt < timeoutMs) {
+    const res = await fetch(url, { headers: ghHeaders() });
+    if (res.ok) {
+      const data = await res.json();
+      const run = (data.workflow_runs || []).find(r => (r.name || '').includes(nonce));
+      if (run) {
+        if (run.status === 'completed') {
+          return run; // .conclusion = 'success' | 'failure' | 'cancelled' ฯลฯ
+        }
+        // in_progress/queued — เก็บไว้แล้ว poll ต่อ
+      }
+    } else {
+      console.warn(`[ManualCheck] poll runs list HTTP ${res.status}`);
+    }
+    await new Promise(r => setTimeout(r, intervalMs));
+  }
+  throw new Error(`Timeout รอ run เสร็จเกิน ${Math.round(timeoutMs / 1000)}s (nonce=${nonce})`);
+}
+
+// Dispatch + poll ครบชุด สำหรับ symbol หลายตัวพร้อมกันใน 1 run (เร็วกว่ายิงทีละ
+// ตัวมาก) คืนค่า true ถ้าสำเร็จและ universe.json บน GitHub มีผลลัพธ์ใหม่แล้ว
+// (ต้อง ghGetFile ใหม่หลังเรียกฟังก์ชันนี้เพื่อดึงผลมาแสดง — ฟังก์ชันนี้ไม่
+// แก้ UNI ในหน่วยความจำให้เอง)
+async function uniServerCheckBatch(symbols, onProgress) {
+  const csv = symbols.join(',');
+  if (onProgress) onProgress('กำลังส่งงานไปที่ GitHub Actions (Yahoo/yfinance)...');
+  const nonce = await ghDispatchManualCheck(csv);
+  if (onProgress) onProgress(`ส่งงานแล้ว (nonce ${nonce}) — กำลังรอผล... (อาจใช้เวลา 30-90 วิ)`);
+  const run = await ghPollManualCheckRun(nonce);
+  if (run.conclusion !== 'success') {
+    throw new Error(`Action run จบแบบ '${run.conclusion}' — ดู log ที่ ${run.html_url}`);
+  }
+  return true;
+}
+
 // ══════════════════════════════════════════════════════════
 //  CONNECT
 // ══════════════════════════════════════════════════════════
@@ -3852,18 +3923,14 @@ async function uniCheckSelected() {
   const progFill = document.getElementById('uni-check-progress-fill');
   progWrap.style.display = '';
 
+  // ── STEP 1/2: Halal check — client-side เหมือนเดิม (Typesense/Musaffa
+  // รองรับ CORS จาก browser ปกติอยู่แล้ว ไม่มีปัญหา ไม่ต้องย้ายไป server) ──
   let done = 0, halalN = 0, nhalalN = 0, unkN = 0, passN = 0;
   for (const sym of checked) {
-    progTxt.textContent = `กำลังตรวจ ${sym} (Halal + ราคา/ADR/RSI/Vol)... (${done+1}/${checked.length})`;
-    const halal = await uniFetchHalalData(sym);
-    const tech  = await uniFetchTechnicalData(sym);
-    const gate  = uniEvalGate(halal, tech);
+    progTxt.textContent = `[1/2] กำลังตรวจ Halal ${sym}... (${done + 1}/${checked.length})`;
+    const halal  = await uniFetchHalalData(sym);
     const nowIso = new Date().toISOString();
 
-    // อัปเดต UNI.universe entry — merge เข้ากับของเดิม (ไม่ทับทั้ง object)
-    // เดิม: สร้าง object ใหม่ทับของเก่าทั้งก้อน ทำให้ last_price/last_adr_pct/
-    // last_rsi/last_vol_ratio/last_gate ที่ daily_screener.py เคย scan ไว้
-    // หายไปทุกครั้งที่กด "Check Halal ที่เลือก" จากหน้านี้
     const idx = (UNI.universe || []).findIndex(r => uniSym(r).toUpperCase() === sym);
     if (idx !== -1) {
       const old  = UNI.universe[idx];
@@ -3875,41 +3942,106 @@ async function uniCheckSelected() {
         halal_status: halal.status,
         purify_pct:   halal.purify_pct,
         last_checked: nowIso,
-        last_gate:    gate,
-        ...(tech ? {
-          last_price:       tech.price,
-          last_adr_pct:     tech.adr_pct,
-          last_rsi:         tech.rsi,
-          last_vol_ratio:   tech.vol_ratio,
-          last_above_ema50: tech.above_ema50,
-          last_scanned:     nowIso,
-        } : {}),
       };
     }
 
     if (halal.status === 'HALAL') halalN++;
     else if (halal.status === 'NOT_HALAL') nhalalN++;
     else unkN++;
-    if (gate === 'PASSED') passN++;
 
     done++;
-    const pct = Math.round((done / checked.length) * 100);
+    const pct = Math.round((done / checked.length) * 50); // ครึ่งแรกของ progress
     progPct.textContent = pct + '%';
     progFill.style.width = pct + '%';
     uniRenderTable();
     uniUpdateStats();
-
-    // Rate limit กัน Typesense/Yahoo block — เว้นช่วงเล็กน้อย
-    await new Promise(r => setTimeout(r, 350));
+    await new Promise(r => setTimeout(r, 350)); // กัน Typesense rate-limit
   }
 
-  progTxt.textContent = `เสร็จสิ้น ${done}/${checked.length} — ✅${halalN} ❌${nhalalN} ⏳${unkN} | Gate ผ่าน ${passN}`;
-  showToast(`Check เสร็จ: ✅${halalN} Halal, ❌${nhalalN} Not, ⏳${unkN} ไม่พบข้อมูล — Gate ผ่าน ${passN}/${checked.length}`, 'ok');
-  btn.disabled = false;
+  // ต้อง save halal ผลลัพธ์ขึ้น GitHub "ก่อน" dispatch Action เสมอ — ไม่งั้น
+  // manual_check.py จะอ่าน halal_status เก่าจาก commit ก่อนหน้าไปคำนวณ gate ผิด
+  progTxt.textContent = 'กำลังบันทึกผล Halal ขึ้น GitHub ก่อนเช็คราคา...';
+  const savedHalal = await uniSaveGH(`universe: halal check ${checked.length} symbols`);
+  if (!savedHalal) {
+    showToast('บันทึกผล Halal ไม่สำเร็จ — หยุดก่อนเช็คราคา', 'err');
+    btn.disabled = false;
+    return;
+  }
 
-  // Auto-save ขึ้น GitHub
-  const ok = await uniSaveGH(`universe: manual check (halal+technical) ${checked.length} symbols`);
-  if (ok) showToast('บันทึกผล Check ขึ้น GitHub แล้ว 💾', 'ok');
+  // ── STEP 2/2: Technical check — ลอง GitHub Actions + yfinance (server-side,
+  // ไม่มีปัญหา CORS) เป็นทางหลักก่อน ถ้า dispatch/poll ล้มเหลว (workflow ยังไม่
+  // ได้ตั้ง secret, token ไม่มีสิทธิ์ actions, timeout ฯลฯ) ค่อย fallback ไป
+  // วิธีเดิม (ยิง Yahoo ตรง + CORS proxy chain จาก client) ──
+  let usedServer = false;
+  progTxt.textContent = '[2/2] กำลังส่งเช็คราคา/ADR/RSI/Vol ผ่าน GitHub Actions (Yahoo/yfinance)...';
+  try {
+    await uniServerCheckBatch(checked, (msg) => { progTxt.textContent = '[2/2] ' + msg; });
+    usedServer = true;
+
+    // โหลด universe.json ใหม่จาก GitHub แทนของในหน่วยความจำ — Action commit
+    // ผลลัพธ์จากอีก process หนึ่ง (ไม่ใช่ browser นี้) จึงต้องดึงมาใหม่ ไม่ใช่
+    // เดาแล้ว merge เอง
+    UNI = await ghGetFile('universe.json');
+    if (!UNI.universe) UNI.universe = [];
+    if (!UNI.settings) UNI.settings = {};
+    for (const sym of checked) {
+      const e = (UNI.universe || []).find(r => uniSym(r).toUpperCase() === sym);
+      if (e && e.last_gate === 'PASSED') passN++;
+    }
+    progPct.textContent = '100%';
+    progFill.style.width = '100%';
+    uniRenderTable();
+    uniUpdateStats();
+  } catch (e) {
+    console.warn('[ManualCheck] GitHub Actions ล้มเหลว, fallback ไป client-side (Yahoo + CORS proxy):', e.message);
+    showToast('เช็คผ่าน server ไม่สำเร็จ (' + e.message + ') — ใช้วิธีสำรองแทน', 'warn');
+
+    done = 0;
+    for (const sym of checked) {
+      progTxt.textContent = `[fallback] กำลังตรวจราคา ${sym}... (${done + 1}/${checked.length})`;
+      const tech  = await uniFetchTechnicalData(sym);
+      const entry = (UNI.universe || []).find(r => uniSym(r).toUpperCase() === sym);
+      const halalForGate = entry
+        ? { status: entry.halal_status, purify_pct: entry.purify_pct }
+        : { status: 'UNKNOWN', purify_pct: null };
+      const gate  = uniEvalGate(halalForGate, tech);
+      const nowIso = new Date().toISOString();
+
+      const idx = (UNI.universe || []).findIndex(r => uniSym(r).toUpperCase() === sym);
+      if (idx !== -1) {
+        const old = UNI.universe[idx];
+        UNI.universe[idx] = {
+          ...old,
+          last_gate: gate,
+          ...(tech ? {
+            last_price:       tech.price,
+            last_adr_pct:     tech.adr_pct,
+            last_rsi:         tech.rsi,
+            last_vol_ratio:   tech.vol_ratio,
+            last_above_ema50: tech.above_ema50,
+            last_scanned:     nowIso,
+          } : {}),
+        };
+      }
+      if (gate === 'PASSED') passN++;
+
+      done++;
+      const pct = 50 + Math.round((done / checked.length) * 50);
+      progPct.textContent = pct + '%';
+      progFill.style.width = pct + '%';
+      uniRenderTable();
+      uniUpdateStats();
+      await new Promise(r => setTimeout(r, 350));
+    }
+
+    const okFallback = await uniSaveGH(`universe: manual check fallback (client) ${checked.length} symbols`);
+    if (!okFallback) showToast('บันทึกผล fallback ไม่สำเร็จ', 'err');
+  }
+
+  const label = usedServer ? 'ผ่าน GitHub Actions/yfinance' : 'ผ่าน client fallback';
+  progTxt.textContent = `เสร็จสิ้น (${label}) — ✅${halalN} ❌${nhalalN} ⏳${unkN} | Gate ผ่าน ${passN}/${checked.length}`;
+  showToast(`Check เสร็จ (${label}): ✅${halalN} Halal, ❌${nhalalN} Not — Gate ผ่าน ${passN}/${checked.length}`, 'ok');
+  btn.disabled = false;
 
   setTimeout(() => { progWrap.style.display = 'none'; }, 4000);
 }
