@@ -1131,6 +1131,13 @@ function show(id) {
   if (id === 'state' && GH.token) loadFileFromGH('state.json', 'state');
   // Auto-sync: reload watchlist ถ้าเปิด auto-sync ไว้
   if (id === 'watchlist' && _autoSync['wl'] && GH.token) loadWatchlist();
+  // Watchlist ต้องใช้ UNI.universe (Purify/Price/ADR/RSI/Vol/Gate/Checked ต่อ
+  // ท้าย "X alerts") แต่ Watchlist เป็นหน้า default ตอนเปิดแอป ซึ่งมาก่อน
+  // Universe Manager เสมอ — โหลด UNI ที่นี่ด้วยถ้ายังไม่เคยโหลด แล้ว renderWL()
+  // ซ้ำอีกครั้งหลังโหลดเสร็จเพื่อเติมข้อมูลที่หายไปตอน render รอบแรก
+  if (id === 'watchlist' && GH.token && (!UNI.universe || UNI.universe.length === 0)) {
+    uniSyncGH().then(renderWL);
+  }
   // Universe Manager: auto-load ครั้งแรก
   if (id === 'universe' && GH.token && (!UNI.universe || UNI.universe.length === 0)) uniSyncGH();
 }
@@ -1726,6 +1733,56 @@ async function loadFileFromGH(filename, type) {
 // ══════════════════════════════════════════════════════════
 //  WATCHLIST RENDER
 // ══════════════════════════════════════════════════════════
+
+// ดึงข้อมูล Purify%/Price/ADR/RSI/Vol/Gate/Checked ล่าสุดของ symbol จาก
+// UNI.universe (มาจาก daily_screener.py scan ทุกเช้า หรือ manual_check.py ที่
+// trigger เอง — ไม่ fetch เพิ่มในฟังก์ชันนี้ แค่ lookup ของที่โหลดไว้แล้ว)
+// ใช้ threshold สี/เกณฑ์เดียวกับตาราง Universe Manager (uniRenderTable) เป๊ะ
+// เพื่อให้สีเขียว/แดง/เหลืองสื่อความหมายตรงกันทั้ง 2 หน้า
+function wlUniStats(symbol) {
+  const upper = (symbol || '').toUpperCase();
+  const r = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === upper);
+  if (!r || typeof r === 'string') {
+    return '<span style="font-size:10px;color:var(--text3);font-family:var(--mono)">— ยังไม่มีข้อมูล scan (ไปที่ Universe Manager แล้วกด Sync)</span>';
+  }
+
+  const purify = r.purify_pct;
+  const price  = r.last_price;
+  const adr    = r.last_adr_pct;
+  const rsi    = r.last_rsi;
+  const vol    = r.last_vol_ratio;
+  const gate   = r.last_gate;
+  const checkedFmt = uniFmtChecked(r.last_scanned || r.last_checked);
+
+  const purStr = purify != null
+    ? `<span style="color:${purify > 3 ? 'var(--red)' : 'var(--green)'}">P:${purify.toFixed(2)}%</span>`
+    : '<span style="color:var(--text3)">P:-</span>';
+  const priceStr = price != null
+    ? `<span>$${price.toFixed(2)}</span>`
+    : '<span style="color:var(--text3)">$-</span>';
+  const adrStr = adr != null
+    ? `<span style="color:${adr >= 8 ? 'var(--green)' : 'var(--text2)'}">ADR:${adr.toFixed(1)}%</span>`
+    : '<span style="color:var(--text3)">ADR:-</span>';
+  const rsiStr = rsi != null
+    ? `<span style="color:${rsi < 35 || rsi > 72 ? 'var(--gold)' : 'var(--text2)'}">RSI:${rsi.toFixed(1)}</span>`
+    : '<span style="color:var(--text3)">RSI:-</span>';
+  const volStr = vol != null
+    ? `<span style="color:${vol >= 1.3 ? 'var(--green)' : 'var(--text2)'}">Vol:${vol.toFixed(2)}x</span>`
+    : '<span style="color:var(--text3)">Vol:-</span>';
+  const gateStr = gate === 'PASSED'
+    ? '<span style="color:var(--green);font-weight:700">✅PASSED</span>'
+    : gate
+      ? `<span style="color:var(--red)">❌${gate}</span>`
+      : '<span style="color:var(--text3)">-</span>';
+  const checkedStr = checkedFmt
+    ? `<span style="color:var(--text3)">${checkedFmt} ICT</span>`
+    : '<span style="color:var(--text3)">ยังไม่เช็ค</span>';
+
+  return `<span style="display:inline-flex;gap:7px;align-items:center;font-size:10px;font-family:var(--mono);white-space:nowrap">
+    ${purStr}<span style="color:var(--text3)">·</span>${priceStr}<span style="color:var(--text3)">·</span>${adrStr}<span style="color:var(--text3)">·</span>${rsiStr}<span style="color:var(--text3)">·</span>${volStr}<span style="color:var(--text3)">·</span>${gateStr}<span style="color:var(--text3)">·</span>${checkedStr}
+  </span>`;
+}
+
 function renderWL() {
   // Auto-sync: คอลัมน์ "สถานะ" (WL) ใน Universe Manager ต้องอัปเดตทุกครั้งที่ watchlist เปลี่ยน
   if (typeof uniRenderTable === 'function') uniRenderTable();
@@ -1742,6 +1799,7 @@ function renderWL() {
         <span class="sfull">${s.name}</span>
         <span class="smkt">${s.market}</span>
         <span style="font-size:11px;color:var(--text3);font-family:var(--mono)">${s.alerts.length} alerts</span>
+        ${wlUniStats(s.symbol)}
         <label onclick="event.stopPropagation()" style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);margin-left:auto;cursor:pointer">
           <input type="checkbox" ${s.enabled!==false?'checked':''} onchange="WL.watchlist[${si}].enabled=this.checked;markUnsaved()"> Active
         </label>
