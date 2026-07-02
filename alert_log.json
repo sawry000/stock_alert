@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T17:39:16Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 18.03499984741211,
-    "change_pct": 0.2813541036237436,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-26T17:39:21Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 108.47000122070312,
-    "change_pct": -0.967770272342624,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T17:47:26Z",
     "symbol": "COHR",
     "alert_id": "COHR_NEWS_ANY",
@@ -4751,5 +4733,25 @@
     "price": 4.25,
     "change_pct": 0.47281323877067544,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T15:08:34Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 24.40999984741211,
+    "change_pct": 1.2023210920900016,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T15:08:42Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 93.55999755859375,
+    "change_pct": -0.8320551607464612,
+    "value": 2
   }
 ]
