@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T18:08:39Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 38.65869903564453,
-    "change_pct": 5.914243933272688,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-26T18:08:50Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 110.0,
-    "change_pct": 0.4291061809549884,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-26T18:09:15Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_RSI_OS_4H",
@@ -4760,5 +4742,25 @@
     "price": 3.4049999713897705,
     "change_pct": -1.589596202607788,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T15:48:45Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.230000019073486,
+    "change_pct": 1.3008133182680646,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T15:49:07Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.280000686645508,
+    "change_pct": -1.6675595123964069,
+    "value": 2
   }
 ]
