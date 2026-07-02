@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T17:38:33Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.144999980926514,
-    "change_pct": 6.3016524984816895,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-26T17:38:47Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP_5",
@@ -4749,5 +4740,15 @@
     "price": 111.11499786376953,
     "change_pct": -1.9111953886215307,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-02T14:24:47Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 88.04000091552734,
+    "change_pct": -0.20120620565381853,
+    "value": 3
   }
 ]
