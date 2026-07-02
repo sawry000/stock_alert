@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T19:13:55Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP_5",
-    "type": "percent_change",
-    "price": 2.94,
-    "change_pct": 9.29368029739777,
-    "value": 9.29368029739777
-  },
-  {
     "timestamp": "2026-06-26T19:28:13Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_UP_5",
@@ -4767,5 +4758,15 @@
     "price": 14.229999542236328,
     "change_pct": -8.193551340410785,
     "value": -8.193551340410785
+  },
+  {
+    "timestamp": "2026-07-02T16:28:37Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 116.18000030517578,
+    "change_pct": -16.64514255619473,
+    "value": -16.64514255619473
   }
 ]
