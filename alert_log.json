@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T14:04:22Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.234999656677246,
-    "change_pct": -6.433640763148461,
-    "value": -6.433640763148461
-  },
-  {
     "timestamp": "2026-06-26T14:04:37Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_PCT_DROP",
@@ -4718,5 +4709,15 @@
     "price": 220.6300048828125,
     "change_pct": -12.96121427336147,
     "value": -12.96121427336147
+  },
+  {
+    "timestamp": "2026-07-02T06:48:28Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 23.959999084472656,
+    "change_pct": -12.298685635165974,
+    "value": -12.298685635165974
   }
 ]
