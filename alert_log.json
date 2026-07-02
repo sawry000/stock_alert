@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T19:58:59Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 17.15999984741211,
-    "change_pct": 5.470189596878364,
-    "value": 5.470189596878364
-  },
-  {
     "timestamp": "2026-06-26T20:03:11Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_PCT_UP_5",
@@ -4775,5 +4766,15 @@
     "price": 131.3699951171875,
     "change_pct": -11.092315161621881,
     "value": -11.092315161621881
+  },
+  {
+    "timestamp": "2026-07-02T17:48:52Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 18.854999542236328,
+    "change_pct": -15.93210567793222,
+    "value": -15.93210567793222
   }
 ]
