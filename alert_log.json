@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T18:09:15Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 5.420000076293945,
-    "change_pct": 0.3703717832212029,
-    "value": 30.33
-  },
-  {
     "timestamp": "2026-06-26T18:12:44Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_MTF_BULL",
@@ -4762,5 +4753,15 @@
     "price": 18.280000686645508,
     "change_pct": -1.6675595123964069,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-02T15:53:44Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 71.62999725341797,
+    "change_pct": -15.460878964454189,
+    "value": -15.460878964454189
   }
 ]
