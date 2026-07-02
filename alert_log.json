@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T18:02:39Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 90.875,
-    "change_pct": -4.842931937172775,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-26T18:08:29Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.880000114440918,
-    "change_pct": -2.04081243398238,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T18:08:39Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_MTF_BULL",
@@ -4758,5 +4740,25 @@
     "price": 61.369998931884766,
     "change_pct": -12.578349099879254,
     "value": -12.578349099879254
+  },
+  {
+    "timestamp": "2026-07-02T15:29:20Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 311.55499267578125,
+    "change_pct": -12.039810085888972,
+    "value": -12.039810085888972
+  },
+  {
+    "timestamp": "2026-07-02T15:29:29Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.4049999713897705,
+    "change_pct": -1.589596202607788,
+    "value": 3
   }
 ]
