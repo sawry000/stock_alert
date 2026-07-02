@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T16:04:47Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_RSI_OS_4H",
-    "type": "rsi",
-    "price": 5.420000076293945,
-    "change_pct": 0.3703717832212029,
-    "value": 30.17
-  },
-  {
     "timestamp": "2026-06-26T16:12:36Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4739,6 +4730,16 @@
     "action": "BUY",
     "price": 15.779999732971191,
     "change_pct": 1.8064498901367188,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-02T08:39:26Z",
+    "symbol": "GLW",
+    "alert_id": "GLW_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 220.6300048828125,
+    "change_pct": 0.28636585582386365,
     "value": 2
   }
 ]
