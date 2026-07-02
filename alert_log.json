@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T21:37:24Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 380.55999755859375,
-    "change_pct": -5.80198080232828,
-    "value": -5.80198080232828
-  },
-  {
-    "timestamp": "2026-06-26T21:39:26Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "price": 55.130001068115234,
-    "change_pct": -6.219485069429163,
-    "value": -6.219485069429163
-  },
-  {
     "timestamp": "2026-06-26T21:42:58Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MTF_BULL",
@@ -4784,5 +4766,25 @@
     "price": 57.4900016784668,
     "change_pct": -18.10541071443477,
     "value": -18.10541071443477
+  },
+  {
+    "timestamp": "2026-07-02T23:33:58Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 282.95001220703125,
+    "change_pct": -20.11575036503917,
+    "value": -20.11575036503917
+  },
+  {
+    "timestamp": "2026-07-02T23:34:04Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.5399999618530273,
+    "change_pct": 2.3121376258100397,
+    "value": 3
   }
 ]
