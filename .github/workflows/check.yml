@@ -200,7 +200,13 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add state.json alert_log.json
+          # เพิ่ม universe.json เข้ามาด้วย — alert_engine.py ตอนนี้เขียน
+          # last_price/last_adr_pct/last_rsi/last_vol_ratio/last_gate/
+          # last_scanned ให้ symbol ใน watchlist ทุกรอบที่รัน (ดู
+          # sync_universe_tech() ใน alert_engine.py) ถ้าไม่ git add ตรงนี้
+          # การเปลี่ยนแปลงจะหายไปเงียบๆ ตอนจบ job (แก้ใน working dir แต่ไม่เคย
+          # ถูก commit เลย)
+          git add state.json alert_log.json universe.json
 
           if git diff --staged --quiet; then
             echo "ℹ️ ไม่มีอะไรเปลี่ยน — ข้าม commit"
