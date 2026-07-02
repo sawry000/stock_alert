@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T18:33:22Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.144999980926514,
-    "change_pct": -2.2036622091706,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-26T19:13:55Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_UP_5",
@@ -4766,5 +4757,15 @@
     "price": 5.84499979019165,
     "change_pct": -0.5952416634073044,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T16:18:33Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 14.229999542236328,
+    "change_pct": -8.193551340410785,
+    "value": -8.193551340410785
   }
 ]
