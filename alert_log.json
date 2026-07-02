@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T19:48:22Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 33.72999954223633,
-    "change_pct": 4.137077932189959,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-26T19:52:29Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 22.719999313354492,
-    "change_pct": 7.1698080818608165,
-    "value": 7.1698080818608165
-  },
-  {
     "timestamp": "2026-06-26T19:58:44Z",
     "symbol": "AGL",
     "alert_id": "AGL_PCT_UP_5",
@@ -4772,5 +4754,25 @@
     "price": 94.08000183105469,
     "change_pct": -16.59574305757563,
     "value": -16.59574305757563
+  },
+  {
+    "timestamp": "2026-07-02T17:39:11Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 18.174999237060547,
+    "change_pct": 4.095070086257422,
+    "value": 0.344
+  },
+  {
+    "timestamp": "2026-07-02T17:39:23Z",
+    "symbol": "SVCO",
+    "alert_id": "SVCO_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 10.425000190734863,
+    "change_pct": -18.363350111708193,
+    "value": -18.363350111708193
   }
 ]
