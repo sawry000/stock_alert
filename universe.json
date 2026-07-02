@@ -629,15 +629,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "PSTG",
-      "name": "PSTG",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 1.65,
-      "last_checked": "2026-07-02T06:33:08.634Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "HYFT",
       "name": "HYFT",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -681,15 +672,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T00:34:07Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "CDZI",
-      "name": "CDZI",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 29.26,
-      "last_checked": "2026-07-02T06:33:55.945Z",
-      "last_gate": "purify"
     },
     {
       "symbol": "CNM",
@@ -840,15 +822,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T00:34:33Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "SEMR",
-      "name": "SEMR",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 2.51,
-      "last_checked": "2026-07-02T06:33:13.697Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "ONTO",
@@ -1104,15 +1077,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T00:35:17Z",
       "last_gate": "momentum"
-    },
-    {
-      "symbol": "USEG",
-      "name": "USEG",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 2.95,
-      "last_checked": "2026-07-02T06:33:16.644Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "XMTR",
@@ -1910,15 +1874,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "EXAS",
-      "name": "EXAS",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 2.55,
-      "last_checked": "2026-07-02T06:33:14.661Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "REKR",
       "name": "REKR",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -2069,15 +2024,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "FGNX",
-      "name": "FGNX",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 65.4,
-      "last_checked": "2026-07-02T06:34:02.565Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "FLOC",
       "name": "FLOC",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -2213,24 +2159,6 @@
       "last_scanned": "2026-07-02T00:38:02Z"
     },
     {
-      "symbol": "APXT",
-      "name": "APXT",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 100,
-      "last_checked": "2026-07-02T06:34:07.640Z",
-      "last_gate": "purify"
-    },
-    {
-      "symbol": "TDWD",
-      "name": "TDWD",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 100,
-      "last_checked": "2026-07-02T06:34:08.628Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "AGPU",
       "name": "AGPU",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -2255,7 +2183,7 @@
       "last_gate": "purify",
       "last_price": 5.77,
       "last_adr_pct": 8.57,
-      "last_rsi": 43.0,
+      "last_rsi": 43,
       "last_vol_ratio": 0.8,
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T06:35:40Z"
@@ -2544,15 +2472,6 @@
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T00:38:44Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "CMBM",
-      "name": "CMBM",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.92,
-      "last_checked": "2026-07-02T06:32:57.140Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "RAL",
@@ -3185,24 +3104,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "NAVB",
-      "name": "NAVB",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 3.6,
-      "last_checked": "2026-07-02T06:33:18.628Z",
-      "last_gate": "no_data"
-    },
-    {
-      "symbol": "ORBS",
-      "name": "ORBS",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 18,
-      "last_checked": "2026-07-02T06:33:50.574Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "IBEX",
       "name": "IBEX",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -3261,15 +3162,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T00:40:32Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "PMI",
-      "name": "PMI",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 72.74,
-      "last_checked": "2026-07-02T06:34:03.634Z",
-      "last_gate": "purify"
     },
     {
       "symbol": "GWW",
@@ -4037,24 +3929,6 @@
       "last_scanned": "2026-07-02T00:42:35Z"
     },
     {
-      "symbol": "DPSI",
-      "name": "DPSI",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.26,
-      "last_checked": "2026-07-02T06:32:44.163Z",
-      "last_gate": "no_data"
-    },
-    {
-      "symbol": "EVBG",
-      "name": "EVBG",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.96,
-      "last_checked": "2026-07-02T06:32:59.756Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "AEHR",
       "name": "AEHR",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -4130,15 +4004,6 @@
       "last_scanned": "2026-07-02T06:35:35Z"
     },
     {
-      "symbol": "VBIV",
-      "name": "VBIV",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 4,
-      "last_checked": "2026-07-02T06:33:21.187Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "ISRG",
       "name": "ISRG",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -4154,24 +4019,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "OS",
-      "name": "OS",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 4.24,
-      "last_checked": "2026-07-02T06:33:22.659Z",
-      "last_gate": "no_data"
-    },
-    {
-      "symbol": "DAIC",
-      "name": "DAIC",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 39.04,
-      "last_checked": "2026-07-02T06:34:00.010Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "OCC",
       "name": "OCC",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -4185,15 +4032,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T00:42:56Z",
       "last_gate": "momentum"
-    },
-    {
-      "symbol": "FGEN",
-      "name": "FGEN",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 1.51,
-      "last_checked": "2026-07-02T06:33:05.641Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "PXLW",
@@ -4464,15 +4302,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T00:43:43Z",
       "last_gate": "liquidity"
-    },
-    {
-      "symbol": "MCRB",
-      "name": "MCRB",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 73.52,
-      "last_checked": "2026-07-02T06:34:04.645Z",
-      "last_gate": "purify"
     },
     {
       "symbol": "LHAI",
@@ -5780,15 +5609,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "HOLX",
-      "name": "HOLX",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 1.84,
-      "last_checked": "2026-07-02T06:33:12.659Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "INSP",
       "name": "INSP",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -6509,15 +6329,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "ZYXI",
-      "name": "ZYXI",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 1.34,
-      "last_checked": "2026-07-02T06:33:02.646Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "ZVIA",
       "name": "ZVIA",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -6953,15 +6764,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "WGRX",
-      "name": "WGRX",
-      "added_at": "2026-06-29T03:58:52.747Z",
-      "halal_status": "HALAL",
-      "purify_pct": 13.57,
-      "last_checked": "2026-07-02T06:33:48.124Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "WEAV",
       "name": "WEAV",
       "added_at": "2026-06-29T03:58:52.747Z",
@@ -7110,15 +6912,6 @@
       "last_vol_ratio": 0.74,
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T00:50:40Z"
-    },
-    {
-      "symbol": "VRAR",
-      "name": "VRAR",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 3.29,
-      "last_checked": "2026-07-02T06:33:17.651Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "VRA",
@@ -7314,15 +7107,6 @@
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T00:51:05Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "VAPO",
-      "name": "VAPO",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 3.65,
-      "last_checked": "2026-07-02T06:33:19.617Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "VADP",
@@ -8450,15 +8234,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "SPCO",
-      "name": "SPCO",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.38,
-      "last_checked": "2026-07-02T06:32:48.069Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "SONO",
       "name": "SONO",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -8757,24 +8532,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T00:31:44Z",
       "last_gate": "momentum"
-    },
-    {
-      "symbol": "SGN",
-      "name": "SGN",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 1.55,
-      "last_checked": "2026-07-02T06:33:06.684Z",
-      "last_gate": "no_data"
-    },
-    {
-      "symbol": "SGMO",
-      "name": "SGMO",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 12.54,
-      "last_checked": "2026-07-02T06:33:46.699Z",
-      "last_gate": "purify"
     },
     {
       "symbol": "SDCH",
@@ -9302,15 +9059,6 @@
       "last_gate": "momentum"
     },
     {
-      "symbol": "REVG",
-      "name": "REVG",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.05,
-      "last_checked": "2026-07-02T06:32:41.692Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "REFR",
       "name": "REFR",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -9324,15 +9072,6 @@
       "last_vol_ratio": 1.62,
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T06:35:36Z"
-    },
-    {
-      "symbol": "REGX",
-      "name": "REGX",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.63,
-      "last_checked": "2026-07-02T06:32:55.912Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "RELL",
@@ -9425,15 +9164,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "RAIN",
-      "name": "RAIN",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 95.13,
-      "last_checked": "2026-07-02T06:34:06.632Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "DORM",
       "name": "DORM",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -9447,15 +9177,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T00:56:34Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "QTIH",
-      "name": "QTIH",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 4.41,
-      "last_checked": "2026-07-02T06:33:25.179Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "QMEI",
@@ -9638,15 +9359,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "PTCO",
-      "name": "PTCO",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 100,
-      "last_checked": "2026-07-02T06:34:09.628Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "PRVA",
       "name": "PRVA",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -9701,7 +9413,7 @@
       "last_gate": "purify",
       "last_price": 0.08,
       "last_adr_pct": 18.08,
-      "last_rsi": 42.0,
+      "last_rsi": 42,
       "last_vol_ratio": 17.9,
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T06:35:43Z"
@@ -9962,15 +9674,6 @@
       "last_scanned": "2026-07-02T00:57:57Z"
     },
     {
-      "symbol": "PCH",
-      "name": "PCH",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.48,
-      "last_checked": "2026-07-02T06:32:53.310Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "PBT",
       "name": "PBT",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -10226,15 +9929,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "OLB",
-      "name": "OLB",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 10.92,
-      "last_checked": "2026-07-02T06:33:43.028Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "OIS",
       "name": "OIS",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -10248,15 +9942,6 @@
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T00:58:40Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "OILY",
-      "name": "OILY",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.01,
-      "last_checked": "2026-07-02T06:32:37.329Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "ODC",
@@ -10574,15 +10259,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "NOTR",
-      "name": "NOTR",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.27,
-      "last_checked": "2026-07-02T06:32:45.603Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "NOBH",
       "name": "NOBH",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -10626,15 +10302,6 @@
       "last_vol_ratio": 0.33,
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T06:35:36Z"
-    },
-    {
-      "symbol": "NHIQ",
-      "name": "NHIQ",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 1.74,
-      "last_checked": "2026-07-02T06:33:11.630Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "NHC",
@@ -10742,15 +10409,6 @@
       "last_gate": "liquidity"
     },
     {
-      "symbol": "NBY",
-      "name": "NBY",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 1.66,
-      "last_checked": "2026-07-02T06:33:10.631Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "NATKY",
       "name": "NATKY",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -10764,15 +10422,6 @@
       "last_vol_ratio": 0,
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T01:00:02Z"
-    },
-    {
-      "symbol": "NANX",
-      "name": "NANX",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.23,
-      "last_checked": "2026-07-02T06:32:42.942Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "NABL",
@@ -10820,15 +10469,6 @@
       "last_gate": "liquidity"
     },
     {
-      "symbol": "MYO",
-      "name": "MYO",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 9.03,
-      "last_checked": "2026-07-02T06:33:40.561Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "MDXG",
       "name": "MDXG",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -10842,15 +10482,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:00:15Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "MVXM",
-      "name": "MVXM",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": null,
-      "last_checked": "2026-07-02T06:34:16.633Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "MU",
@@ -10883,15 +10514,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "MVO",
-      "name": "MVO",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 11.77,
-      "last_checked": "2026-07-02T06:33:45.530Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "MTRN",
       "name": "MTRN",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -10920,15 +10542,6 @@
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T01:00:29Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "MSTR",
-      "name": "MSTR",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 11.71,
-      "last_checked": "2026-07-02T06:33:44.348Z",
-      "last_gate": "purify"
     },
     {
       "symbol": "MRTN",
@@ -11139,24 +10752,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:01:02Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "MGRX",
-      "name": "MGRX",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 10.02,
-      "last_checked": "2026-07-02T06:33:41.735Z",
-      "last_gate": "purify"
-    },
-    {
-      "symbol": "MGON",
-      "name": "MGON",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.93,
-      "last_checked": "2026-07-02T06:32:58.495Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "BCHT",
@@ -11414,15 +11009,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "LVPA",
-      "name": "LVPA",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": null,
-      "last_checked": "2026-07-02T06:34:19.628Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "LEVI",
       "name": "LEVI",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -11466,15 +11052,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:01:57Z",
       "last_gate": "momentum"
-    },
-    {
-      "symbol": "LUXH",
-      "name": "LUXH",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.04,
-      "last_checked": "2026-07-02T06:32:40.141Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "LTRX",
@@ -11597,15 +11174,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "LNSR",
-      "name": "LNSR",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 50.7,
-      "last_checked": "2026-07-02T06:34:01.269Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "LMNR",
       "name": "LMNR",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -11709,15 +11277,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:02:36Z",
       "last_gate": "liquidity"
-    },
-    {
-      "symbol": "LIF",
-      "name": "LIF",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 15.98,
-      "last_checked": "2026-07-02T06:33:49.298Z",
-      "last_gate": "purify"
     },
     {
       "symbol": "LINC",
@@ -11870,15 +11429,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "LASE",
-      "name": "LASE",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 19.73,
-      "last_checked": "2026-07-02T06:33:51.773Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "GYRE",
       "name": "GYRE",
       "added_at": "2026-06-29T03:58:52.748Z",
@@ -12027,15 +11577,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:03:25Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "KIDZ",
-      "name": "KIDZ",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 20.23,
-      "last_checked": "2026-07-02T06:33:54.550Z",
-      "last_gate": "purify"
     },
     {
       "symbol": "KIDS",
@@ -12561,15 +12102,6 @@
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T01:04:49Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "IAS",
-      "name": "IAS",
-      "added_at": "2026-06-29T03:58:52.748Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.47,
-      "last_checked": "2026-07-02T06:32:52.035Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "HWKN",
@@ -13187,15 +12719,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "GEVI",
-      "name": "GEVI",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 1.36,
-      "last_checked": "2026-07-02T06:33:03.644Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "GEOS",
       "name": "GEOS",
       "added_at": "2026-06-29T03:58:52.749Z",
@@ -13346,15 +12869,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "FTCI",
-      "name": "FTCI",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 73.84,
-      "last_checked": "2026-07-02T06:34:05.625Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "FSS",
       "name": "FSS",
       "added_at": "2026-06-29T03:58:52.749Z",
@@ -13398,15 +12912,6 @@
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T01:06:59Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "FOLD",
-      "name": "FOLD",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.51,
-      "last_checked": "2026-07-02T06:32:54.567Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "FLYW",
@@ -13587,15 +13092,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:07:31Z",
       "last_gate": "liquidity"
-    },
-    {
-      "symbol": "FBGI",
-      "name": "FBGI",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 100,
-      "last_checked": "2026-07-02T06:34:10.618Z",
-      "last_gate": "purify"
     },
     {
       "symbol": "FATN",
@@ -13868,15 +13364,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "ENGC",
-      "name": "ENGC",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 1.44,
-      "last_checked": "2026-07-02T06:33:04.653Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "EMAX",
       "name": "EMAX",
       "added_at": "2026-06-29T03:58:52.749Z",
@@ -14057,15 +13544,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "DZSI",
-      "name": "DZSI",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.27,
-      "last_checked": "2026-07-02T06:32:46.840Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "CVSA",
       "name": "CVSA",
       "added_at": "2026-06-29T03:58:52.749Z",
@@ -14096,15 +13574,6 @@
       "last_gate": "liquidity"
     },
     {
-      "symbol": "ATGE",
-      "name": "ATGE",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.43,
-      "last_checked": "2026-07-02T06:32:50.803Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "DV",
       "name": "DV",
       "added_at": "2026-06-29T03:58:52.749Z",
@@ -14118,15 +13587,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:08:58Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "DTST",
-      "name": "DTST",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 32.4,
-      "last_checked": "2026-07-02T06:33:58.530Z",
-      "last_gate": "purify"
     },
     {
       "symbol": "DROP",
@@ -14399,15 +13859,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "CYBR",
-      "name": "CYBR",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 4.36,
-      "last_checked": "2026-07-02T06:33:23.970Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "CXDO",
       "name": "CXDO",
       "added_at": "2026-06-29T03:58:52.749Z",
@@ -14528,15 +13979,6 @@
       "last_gate": "liquidity"
     },
     {
-      "symbol": "CRIS",
-      "name": "CRIS",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 100,
-      "last_checked": "2026-07-02T06:34:11.614Z",
-      "last_gate": "purify"
-    },
-    {
       "symbol": "CVGW",
       "name": "CVGW",
       "added_at": "2026-06-29T03:58:52.749Z",
@@ -14640,15 +14082,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:10:20Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "CSSI",
-      "name": "CSSI",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.02,
-      "last_checked": "2026-07-02T06:32:38.730Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "CRT",
@@ -14829,24 +14262,6 @@
       "last_above_ema50": false,
       "last_scanned": "2026-07-02T01:10:51Z",
       "last_gate": "liquidity"
-    },
-    {
-      "symbol": "CNBX",
-      "name": "CNBX",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 100,
-      "last_checked": "2026-07-02T06:34:12.629Z",
-      "last_gate": "purify"
-    },
-    {
-      "symbol": "CMPO",
-      "name": "CMPO",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 2.79,
-      "last_checked": "2026-07-02T06:33:15.616Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "CLRI",
@@ -15089,15 +14504,6 @@
       "last_gate": "adr"
     },
     {
-      "symbol": "CBDS",
-      "name": "CBDS",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0.42,
-      "last_checked": "2026-07-02T06:32:49.380Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "CATV",
       "name": "CATV",
       "added_at": "2026-06-29T03:58:52.749Z",
@@ -15126,15 +14532,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:11:38Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "BWTX",
-      "name": "BWTX",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 0,
-      "last_checked": "2026-07-02T01:11:39Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "BWEN",
@@ -15242,15 +14639,6 @@
       "last_gate": "liquidity"
     },
     {
-      "symbol": "BRGC",
-      "name": "BRGC",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": null,
-      "last_checked": "2026-07-02T06:34:24.647Z",
-      "last_gate": "no_data"
-    },
-    {
       "symbol": "BRCC",
       "name": "BRCC",
       "added_at": "2026-06-29T03:58:52.749Z",
@@ -15354,15 +14742,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:12:14Z",
       "last_gate": "momentum"
-    },
-    {
-      "symbol": "BLPH",
-      "name": "BLPH",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": null,
-      "last_checked": "2026-07-02T06:34:25.634Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "BLGO",
@@ -15558,15 +14937,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:12:47Z",
       "last_gate": "adr"
-    },
-    {
-      "symbol": "BFXXQ",
-      "name": "BFXXQ",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 1.19,
-      "last_checked": "2026-07-02T06:33:01.026Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "BELFA",
@@ -15852,15 +15222,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:13:36Z",
       "last_gate": "momentum"
-    },
-    {
-      "symbol": "ATER",
-      "name": "ATER",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": 30.77,
-      "last_checked": "2026-07-02T06:33:57.229Z",
-      "last_gate": "purify"
     },
     {
       "symbol": "AIT",
@@ -16326,15 +15687,6 @@
       "last_above_ema50": true,
       "last_scanned": "2026-07-02T01:14:45Z",
       "last_gate": "momentum"
-    },
-    {
-      "symbol": "AHNR",
-      "name": "AHNR",
-      "added_at": "2026-06-29T03:58:52.749Z",
-      "halal_status": "HALAL",
-      "purify_pct": null,
-      "last_checked": "2026-07-02T06:34:29.095Z",
-      "last_gate": "no_data"
     },
     {
       "symbol": "AGL",
