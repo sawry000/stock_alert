@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T21:43:28Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.119999885559082,
-    "change_pct": 5.785121602460375,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-26T21:43:40Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP_5",
@@ -4787,5 +4778,15 @@
     "price": 6.190000057220459,
     "change_pct": 0.6504074344790021,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T23:58:43Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 69.95999908447266,
+    "change_pct": -17.431843403195263,
+    "value": -17.431843403195263
   }
 ]
