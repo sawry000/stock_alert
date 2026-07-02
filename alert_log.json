@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T18:12:44Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 14.65999984741211,
-    "change_pct": -1.6107392791133621,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-26T18:12:47Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_DROP",
@@ -4763,5 +4754,15 @@
     "price": 71.62999725341797,
     "change_pct": -15.460878964454189,
     "value": -15.460878964454189
+  },
+  {
+    "timestamp": "2026-07-02T16:04:21Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 126.61499786376953,
+    "change_pct": -12.637136642676102,
+    "value": -12.637136642676102
   }
 ]
