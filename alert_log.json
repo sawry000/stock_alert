@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T15:54:20Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 16.90999984741211,
-    "change_pct": -1.628854872529912,
-    "value": -2.341
-  },
-  {
     "timestamp": "2026-06-26T16:03:38Z",
     "symbol": "TYGO",
     "alert_id": "TYGO_PCT_UP_5",
@@ -4737,5 +4728,15 @@
     "price": 2.7799999713897705,
     "change_pct": -0.7178325277750625,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T08:14:02Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.929999828338623,
+    "change_pct": -1.658377639492159,
+    "value": 2
   }
 ]
