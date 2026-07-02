@@ -1,0 +1,56 @@
+name: Manual Halal Check (Yahoo/yfinance)
+
+# หมายเหตุ: key "on" ต้องใส่ quote เสมอ ("on": ไม่ใช่ on:) — YAML 1.1 แปลง
+# "on" (ไม่มี quote) เป็น boolean `true` โดยอัตโนมัติ ทำให้ workflow ไม่ trigger
+# เลย (เจอปัญหานี้มาแล้วกับ workflow อื่นในโปรเจกต์นี้)
+"on":
+  workflow_dispatch:
+    inputs:
+      symbols:
+        description: "รายชื่อ symbol คั่นด้วย comma เช่น AEHR,ADVB,AEIS"
+        required: true
+        type: string
+      nonce:
+        description: "ค่าสุ่มจาก dashboard ใช้จับคู่ run นี้ตอน poll ผลกลับ (GitHub run-list API ไม่ส่ง inputs กลับมาให้ตรงๆ)"
+        required: false
+        type: string
+        default: ""
+
+# ระบุชื่อ run ให้ระบุ symbols/nonce ได้ทันทีจากหน้า Actions list — จำเป็นเพราะ
+# GitHub run-list API ไม่ expose workflow inputs ตรงๆ ต้องพึ่ง run-name แทน
+run-name: "Manual Check: ${{ inputs.symbols }} [${{ inputs.nonce }}]"
+
+# กันชนกับ workflow อื่นที่เขียน universe.json พร้อมกัน (เช่น daily-screener/
+# alert-engine) — ถ้า workflow เหล่านั้นตั้ง concurrency group ชื่อเดียวกันนี้
+# ด้วย จะ queue ให้รันทีละตัวแทนที่จะแข่งกัน push จนดับ state กัน (บั๊กเดิมที่
+# เคยเจอกับ daily-screener/alert-engine ที่รันคู่กันไม่มี needs: dependency)
+concurrency:
+  group: universe-json-writer
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  manual-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # ติดตั้งไว้ล่วงหน้าตรงนี้แทนการปล่อยให้ manual_check.py ติดตั้งเองตอน
+      # import (เร็วกว่าเล็กน้อยเพราะ pip cache ของ setup-python ช่วยได้ และ
+      # เห็น log การติดตั้งแยกจาก log การรันจริง อ่านง่ายกว่าเวลา debug)
+      - name: Install yfinance
+        run: pip install yfinance --quiet --break-system-packages
+
+      - name: Run manual check
+        run: python3 manual_check.py "${{ inputs.symbols }}"
