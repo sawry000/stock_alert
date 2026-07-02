@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T18:12:47Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.2249999046325684,
-    "change_pct": -5.425222738047852,
-    "value": -5.425222738047852
-  },
-  {
-    "timestamp": "2026-06-26T18:17:30Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 28.680500030517578,
-    "change_pct": 3.9404637030774925,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T18:33:22Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4764,5 +4746,25 @@
     "price": 126.61499786376953,
     "change_pct": -12.637136642676102,
     "value": -12.637136642676102
+  },
+  {
+    "timestamp": "2026-07-02T16:09:24Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.815000057220459,
+    "change_pct": -0.8196690043465075,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T16:09:31Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.84499979019165,
+    "change_pct": -0.5952416634073044,
+    "value": 3
   }
 ]
