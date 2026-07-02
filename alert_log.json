@@ -2,15 +2,6 @@
   {
     "timestamp": "2026-06-26T14:23:54Z",
     "symbol": "ASPN",
-    "alert_id": "ASPN_CP_BULL",
-    "type": "candle_pattern",
-    "price": 5.474999904632568,
-    "change_pct": -3.609156608581538,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-26T14:23:54Z",
-    "symbol": "ASPN",
     "alert_id": "ASPN_POS_SIZE",
     "type": "position_size",
     "price": 5.474999904632568,
@@ -4723,6 +4714,16 @@
     "action": "BUY",
     "price": 228.75,
     "change_pct": -0.352848928384737,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-02T07:29:00Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.4200000762939453,
+    "change_pct": 11.764708375619126,
     "value": 3
   }
 ]
