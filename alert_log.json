@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T21:52:33Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 22.81999969482422,
-    "change_pct": 7.641507994453865,
-    "value": 7.641507994453865
-  },
-  {
     "timestamp": "2026-06-26T21:58:39Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_MTF_BULL",
@@ -4792,5 +4783,15 @@
     "price": 1745.0,
     "change_pct": -13.365107735080928,
     "value": -13.365107735080928
+  },
+  {
+    "timestamp": "2026-07-03T01:04:16Z",
+    "symbol": "MXL",
+    "alert_id": "MXL_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 93.12000274658203,
+    "change_pct": -17.446806075725146,
+    "value": -17.446806075725146
   }
 ]
