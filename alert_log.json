@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-27T02:12:36Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 94.0,
-    "change_pct": -1.5706806282722512,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-27T02:12:49Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_DROP",
@@ -4835,5 +4826,15 @@
     "price": 17.0,
     "change_pct": -7.608695652173907,
     "value": -7.608695652173907
+  },
+  {
+    "timestamp": "2026-07-03T23:13:36Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 25.670000076293945,
+    "change_pct": 6.426202638034595,
+    "value": 3
   }
 ]
