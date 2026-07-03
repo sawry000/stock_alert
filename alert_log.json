@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T21:44:14Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 119.25,
-    "change_pct": 8.87428101889893,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T21:47:33Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_CP_BULL",
@@ -4790,5 +4781,15 @@
     "price": 5.789999961853027,
     "change_pct": -1.530612893655996,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-03T00:23:40Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 14.069999694824219,
+    "change_pct": -9.22580842048891,
+    "value": -9.22580842048891
   }
 ]
