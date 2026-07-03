@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T22:52:35Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_NEWS_C",
-    "type": "news_sentiment",
-    "price": 28.56999969482422,
-    "change_pct": 3.5400015033566943,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-26T23:33:05Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 10.930000305175781,
-    "change_pct": 1.2055807068258844,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-26T23:43:51Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_CP_BULL",
-    "type": "candle_pattern",
-    "price": 17.110000610351562,
-    "change_pct": 5.162880211134375,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-26T23:48:25Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.5600004196167,
-    "change_pct": 8.418895478610873,
-    "value": 8.418895478610873
-  },
-  {
     "timestamp": "2026-06-26T23:53:09Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4810,5 +4774,45 @@
     "price": 93.12000274658203,
     "change_pct": -17.446806075725146,
     "value": -17.446806075725146
+  },
+  {
+    "timestamp": "2026-07-03T13:38:23Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 333.3599853515625,
+    "change_pct": -9.235464672303822,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-03T13:38:26Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 22.110000610351562,
+    "change_pct": -8.123828753993097,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-03T13:39:03Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 46.86000061035156,
+    "change_pct": -6.260875998000472,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-03T13:39:10Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 135.27000427246094,
+    "change_pct": -8.452893697576512,
+    "value": 0
   }
 ]
