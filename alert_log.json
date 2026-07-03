@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-27T00:29:03Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_BT_VOL",
-    "type": "backtest_check",
-    "price": 326.92999267578125,
-    "change_pct": -1.5271106398249248,
-    "value": 87.5
-  },
-  {
-    "timestamp": "2026-06-27T01:27:42Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "price": 1.9850000143051147,
-    "change_pct": -5.023922760520819,
-    "value": -5.023922760520819
-  },
-  {
     "timestamp": "2026-06-27T01:37:50Z",
     "symbol": "RDW",
     "alert_id": "RDW_NEWS_POS",
@@ -4822,5 +4804,25 @@
     "price": 57.4900016784668,
     "change_pct": -18.10541071443477,
     "value": -18.10541071443477
+  },
+  {
+    "timestamp": "2026-07-03T15:38:59Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 282.95001220703125,
+    "change_pct": -20.11575036503917,
+    "value": -20.11575036503917
+  },
+  {
+    "timestamp": "2026-07-03T15:39:06Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.5399999618530273,
+    "change_pct": 2.3121376258100397,
+    "value": 3
   }
 ]
