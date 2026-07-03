@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T21:47:33Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_CP_BULL",
-    "type": "candle_pattern",
-    "price": 22.81999969482422,
-    "change_pct": 7.641507994453865,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-26T21:52:33Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_PCT_UP_5",
@@ -4791,5 +4782,15 @@
     "price": 14.069999694824219,
     "change_pct": -9.22580842048891,
     "value": -9.22580842048891
+  },
+  {
+    "timestamp": "2026-07-03T00:39:22Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1745.0,
+    "change_pct": -13.365107735080928,
+    "value": -13.365107735080928
   }
 ]
