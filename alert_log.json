@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-27T02:12:49Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_DROP",
-    "type": "percent_change",
-    "price": 3.2100000381469727,
-    "change_pct": -5.8651015206166415,
-    "value": -5.8651015206166415
-  },
-  {
     "timestamp": "2026-06-27T02:13:12Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_PCT_UP_5",
@@ -4835,6 +4826,16 @@
     "action": "BUY",
     "price": 25.670000076293945,
     "change_pct": 6.426202638034595,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-03T23:19:16Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.210000038146973,
+    "change_pct": -0.4728123369510111,
     "value": 3
   }
 ]
