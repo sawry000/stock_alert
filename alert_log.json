@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T21:59:17Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.550000190734863,
-    "change_pct": -6.160455720130904,
-    "value": -6.160455720130904
-  },
-  {
     "timestamp": "2026-06-26T22:03:38Z",
     "symbol": "AGL",
     "alert_id": "AGL_PCT_UP_5",
@@ -4794,5 +4785,15 @@
     "price": 18.389999389648438,
     "change_pct": 5.326456985386234,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-03T06:09:04Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 111.01000213623047,
+    "change_pct": -2.0038822949942907,
+    "value": 2
   }
 ]
