@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T22:17:45Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 14.899999618530273,
-    "change_pct": -2.560199509515244e-06,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T22:18:01Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_PCT_DROP",
@@ -4802,6 +4793,16 @@
     "action": "BUY",
     "price": 3.5399999618530273,
     "change_pct": 2.3121376258100397,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-03T07:53:51Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.190000057220459,
+    "change_pct": 0.6504074344790021,
     "value": 3
   }
 ]
