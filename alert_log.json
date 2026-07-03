@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T22:18:01Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 91.80999755859375,
-    "change_pct": -6.316233426162931,
-    "value": -6.316233426162931
-  },
-  {
     "timestamp": "2026-06-26T22:18:48Z",
     "symbol": "AGL",
     "alert_id": "AGL_NEWS_POS",
@@ -4804,5 +4795,15 @@
     "price": 6.190000057220459,
     "change_pct": 0.6504074344790021,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-03T07:58:48Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 69.95999908447266,
+    "change_pct": -17.431843403195263,
+    "value": -17.431843403195263
   }
 ]
