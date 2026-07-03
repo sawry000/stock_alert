@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T23:57:32Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 22.81999969482422,
-    "change_pct": 7.641507994453865,
-    "value": 7.641507994453865
-  },
-  {
     "timestamp": "2026-06-27T00:04:05Z",
     "symbol": "AGL",
     "alert_id": "AGL_PCT_UP_5",
@@ -4816,5 +4807,15 @@
     "price": 111.01000213623047,
     "change_pct": -2.0038822949942907,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-03T15:09:36Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.210000038146973,
+    "change_pct": -0.4728123369510111,
+    "value": 3
   }
 ]
