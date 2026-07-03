@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T22:22:40Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 135.69000244140625,
-    "change_pct": -1.2445397078557174,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-26T22:28:03Z",
     "symbol": "INOD",
     "alert_id": "INOD_NEWS_POS",
@@ -4807,5 +4798,15 @@
     "price": 5.789999961853027,
     "change_pct": -1.530612893655996,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-03T08:28:33Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 14.069999694824219,
+    "change_pct": -9.22580842048891,
+    "value": -9.22580842048891
   }
 ]
