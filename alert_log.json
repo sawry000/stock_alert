@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T22:28:03Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 73.9000015258789,
-    "change_pct": 1.2467482201382538,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-26T22:33:33Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MTF_BULL",
@@ -4808,5 +4799,15 @@
     "price": 14.069999694824219,
     "change_pct": -9.22580842048891,
     "value": -9.22580842048891
+  },
+  {
+    "timestamp": "2026-07-03T08:44:18Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1745.0,
+    "change_pct": -13.365107735080928,
+    "value": -13.365107735080928
   }
 ]
