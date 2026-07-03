@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-27T02:08:54Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 17.110000610351562,
-    "change_pct": 5.162880211134375,
-    "value": 5.162880211134375
-  },
-  {
     "timestamp": "2026-06-27T02:12:31Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -4833,5 +4824,15 @@
     "price": 18.389999389648438,
     "change_pct": 5.326456985386234,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-03T22:19:08Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 111.01000213623047,
+    "change_pct": -2.0038822949942907,
+    "value": 2
   }
 ]
