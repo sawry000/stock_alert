@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T21:43:40Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.5600004196167,
-    "change_pct": 8.418895478610873,
-    "value": 8.418895478610873
-  },
-  {
     "timestamp": "2026-06-26T21:44:09Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_MTF_BULL",
@@ -4788,5 +4779,15 @@
     "price": 69.95999908447266,
     "change_pct": -17.431843403195263,
     "value": -17.431843403195263
+  },
+  {
+    "timestamp": "2026-07-03T00:09:09Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 121.58999633789062,
+    "change_pct": -16.104328753266667,
+    "value": -16.104328753266667
   }
 ]
