@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-27T02:32:36Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 28.56999969482422,
-    "change_pct": 3.5400015033566943,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-27T02:38:12Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.25,
-    "change_pct": 0.2736881842204513,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-27T03:38:03Z",
     "symbol": "RDW",
     "alert_id": "RDW_NEWS_POS",
@@ -4841,5 +4823,25 @@
     "price": 57.4900016784668,
     "change_pct": -18.10541071443477,
     "value": -18.10541071443477
+  },
+  {
+    "timestamp": "2026-07-03T23:39:06Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 282.95001220703125,
+    "change_pct": -20.11575036503917,
+    "value": -20.11575036503917
+  },
+  {
+    "timestamp": "2026-07-03T23:39:15Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.5399999618530273,
+    "change_pct": 2.3121376258100397,
+    "value": 3
   }
 ]
