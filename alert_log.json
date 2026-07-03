@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T22:08:53Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 38.27000045776367,
-    "change_pct": 4.849316322640197,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-26T22:09:25Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.0,
-    "change_pct": -8.814589665653488,
-    "value": -8.814589665653488
-  },
-  {
     "timestamp": "2026-06-26T22:17:45Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_MTF_BULL",
@@ -4801,5 +4783,25 @@
     "price": 57.4900016784668,
     "change_pct": -18.10541071443477,
     "value": -18.10541071443477
+  },
+  {
+    "timestamp": "2026-07-03T07:34:09Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 282.95001220703125,
+    "change_pct": -20.11575036503917,
+    "value": -20.11575036503917
+  },
+  {
+    "timestamp": "2026-07-03T07:34:16Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.5399999618530273,
+    "change_pct": 2.3121376258100397,
+    "value": 3
   }
 ]
