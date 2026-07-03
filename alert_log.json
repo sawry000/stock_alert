@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T22:22:31Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 28.56999969482422,
-    "change_pct": 3.5400015033566943,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-26T22:22:40Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_NEWS_POS",
@@ -4806,5 +4797,15 @@
     "price": 121.58999633789062,
     "change_pct": -16.104328753266667,
     "value": -16.104328753266667
+  },
+  {
+    "timestamp": "2026-07-03T08:24:16Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.789999961853027,
+    "change_pct": -1.530612893655996,
+    "value": 2
   }
 ]
