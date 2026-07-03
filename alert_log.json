@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-26T22:18:48Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 119.25,
-    "change_pct": 8.87428101889893,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-26T22:22:31Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4805,5 +4796,15 @@
     "price": 69.95999908447266,
     "change_pct": -17.431843403195263,
     "value": -17.431843403195263
+  },
+  {
+    "timestamp": "2026-07-03T08:09:16Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 121.58999633789062,
+    "change_pct": -16.104328753266667,
+    "value": -16.104328753266667
   }
 ]
