@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-27T04:02:19Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_RSI_OB",
-    "type": "rsi",
-    "price": 380.56,
-    "change_pct": -5.801980198019802,
-    "value": 100.0
-  },
-  {
     "timestamp": "2026-06-27T04:02:24Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_RSI_OB",
@@ -4846,5 +4837,15 @@
     "price": 121.58999633789062,
     "change_pct": -16.104328753266667,
     "value": -16.104328753266667
+  },
+  {
+    "timestamp": "2026-07-04T00:33:34Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 14.069999694824219,
+    "change_pct": -9.22580842048891,
+    "value": -9.22580842048891
   }
 ]
