@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-27T03:58:16Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.5600004196167,
-    "change_pct": 8.418895478610873,
-    "value": 8.418895478610873
-  },
-  {
     "timestamp": "2026-06-27T04:02:19Z",
     "symbol": "COHR",
     "alert_id": "COHR_RSI_OB",
@@ -4845,5 +4836,15 @@
     "price": 69.95999908447266,
     "change_pct": -17.431843403195263,
     "value": -17.431843403195263
+  },
+  {
+    "timestamp": "2026-07-04T00:14:44Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 121.58999633789062,
+    "change_pct": -16.104328753266667,
+    "value": -16.104328753266667
   }
 ]
