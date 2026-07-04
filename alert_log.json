@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-27T04:02:24Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_RSI_OB",
-    "type": "rsi",
-    "price": 391.74,
-    "change_pct": -1.0757575757575735,
-    "value": 100.0
-  },
-  {
     "timestamp": "2026-06-27T04:02:35Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_PCT_UP_5",
@@ -4847,5 +4838,15 @@
     "price": 14.069999694824219,
     "change_pct": -9.22580842048891,
     "value": -9.22580842048891
+  },
+  {
+    "timestamp": "2026-07-04T00:39:26Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.789999961853027,
+    "change_pct": -1.530612893655996,
+    "value": 2
   }
 ]
