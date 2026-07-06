@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T02:08:16Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 5.12,
-    "change_pct": 5.7851239669421535,
-    "value": 5.7851239669421535
-  },
-  {
     "timestamp": "2026-06-28T02:08:25Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP_5",
@@ -4926,5 +4917,15 @@
     "price": 18.395000457763672,
     "change_pct": 2.0566704824246806,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T13:48:49Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 93.99500274658203,
+    "change_pct": 2.391070530045789,
+    "value": 2
   }
 ]
