@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T04:09:03Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.88,
-    "change_pct": -2.040816326530614,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-28T04:09:14Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_MTF_BULL",
@@ -4940,5 +4931,15 @@
     "price": 2.609999895095825,
     "change_pct": 2.3529370625813875,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T16:34:34Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7300000190734863,
+    "change_pct": -1.1428560529436385,
+    "value": 2
   }
 ]
