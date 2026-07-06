@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T00:05:19Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.0,
-    "change_pct": -8.814589665653488,
-    "value": -8.814589665653488
-  },
-  {
-    "timestamp": "2026-06-28T00:05:23Z",
-    "symbol": "AMPX",
-    "alert_id": "AMPX_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 12.90999984741211,
-    "change_pct": 1.7336473397329382,
-    "value": 1
-  },
-  {
     "timestamp": "2026-06-28T00:05:29Z",
     "symbol": "FPS",
     "alert_id": "FPS_PCT_DROP",
@@ -4916,6 +4898,26 @@
     "action": "BUY",
     "price": 2.490000009536743,
     "change_pct": -2.3529408024806533,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-06T08:14:30Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.210000038146973,
+    "change_pct": -0.4728123369510111,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T08:14:33Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.789999961853027,
+    "change_pct": -1.530612893655996,
     "value": 2
   }
 ]
