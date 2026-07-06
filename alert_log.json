@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T02:08:25Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.56,
-    "change_pct": 8.418891170431214,
-    "value": 8.418891170431214
-  },
-  {
-    "timestamp": "2026-06-28T02:08:49Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 119.25,
-    "change_pct": 8.87428101889893,
-    "value": 8.87428101889893
-  },
-  {
     "timestamp": "2026-06-28T02:09:02Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_PCT_UP_5",
@@ -4926,6 +4908,26 @@
     "action": "BUY",
     "price": 93.99500274658203,
     "change_pct": 2.391070530045789,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-06T14:05:03Z",
+    "symbol": "MXL",
+    "alert_id": "MXL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 100.8290023803711,
+    "change_pct": 8.418282129431285,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-06T14:05:27Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 60.15999984741211,
+    "change_pct": 7.512277143297473,
     "value": 2
   }
 ]
