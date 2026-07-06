@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T04:08:35Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.119999885559082,
-    "change_pct": 5.785121602460375,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-28T04:08:40Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 33.939998626708984,
-    "change_pct": 4.785423361250336,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-28T04:08:51Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.5600004196167,
-    "change_pct": 8.418895478610873,
-    "value": 8.418895478610873
-  },
-  {
     "timestamp": "2026-06-28T04:09:03Z",
     "symbol": "NLST",
     "alert_id": "NLST_MTF_BULL",
@@ -4936,6 +4909,36 @@
     "action": "BUY",
     "price": 18.735000610351562,
     "change_pct": 2.6575375909674657,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T16:19:49Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.519999980926514,
+    "change_pct": 9.70873740112897,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T16:20:01Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 83.4800033569336,
+    "change_pct": 5.285863919077697,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T16:20:06Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.609999895095825,
+    "change_pct": 2.3529370625813875,
     "value": 3
   }
 ]
