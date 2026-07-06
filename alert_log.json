@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T00:05:09Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_CP_BULL",
-    "type": "candle_pattern",
-    "price": 17.110000610351562,
-    "change_pct": 5.162880211134375,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-28T00:05:10Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 17.110000610351562,
-    "change_pct": 5.162880211134375,
-    "value": 5.162880211134375
-  },
-  {
-    "timestamp": "2026-06-28T00:05:12Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 17.110000610351562,
-    "change_pct": 5.162880211134375,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-28T00:05:19Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_PCT_DROP",
@@ -4914,5 +4887,35 @@
     "price": 57.4900016784668,
     "change_pct": -18.10541071443477,
     "value": -18.10541071443477
+  },
+  {
+    "timestamp": "2026-07-06T08:09:29Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.389999389648438,
+    "change_pct": 5.326456985386234,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T08:10:01Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 78.36000061035156,
+    "change_pct": -1.171537743175193,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-06T08:10:07Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.490000009536743,
+    "change_pct": -2.3529408024806533,
+    "value": 2
   }
 ]

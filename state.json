@@ -1337,14 +1337,14 @@
     },
     "open_position": true,
     "open_entry": 18.389999389648438,
-    "open_time": "2026-07-06T04:09:15Z",
+    "open_time": "2026-07-06T08:09:29Z",
     "ISSC_MA_GOLDEN": {
       "last_fired": "2026-06-15T13:34:49Z"
     },
     "ISSC_MTF_BULL": {
-      "last_fired": "2026-07-06T00:04:18Z"
+      "last_fired": "2026-07-06T08:09:29Z"
     },
-    "last_buy_at": "2026-07-06T04:09:15Z",
+    "last_buy_at": "2026-07-06T08:09:29Z",
     "ISSC_MA_GOLD": {
       "last_fired": "2026-07-06T04:09:15Z"
     }
@@ -1533,7 +1533,8 @@
       "last_fired": "2026-06-30T16:14:19Z"
     },
     "last_sell_at": "2026-06-30T16:14:19Z",
-    "last_buy_at": "2026-07-06T00:09:46Z"
+    "last_buy_at": "2026-07-06T00:09:46Z",
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1542,7 +1543,8 @@
     "open_position": true,
     "open_entry": 5.789999961853027,
     "open_time": "2026-07-06T00:09:49Z",
-    "last_buy_at": "2026-07-06T00:09:49Z"
+    "last_buy_at": "2026-07-06T00:09:49Z",
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1594,15 +1596,14 @@
   },
   "AMBA": {
     "AMBA_MTF_BULL": {
-      "last_fired": "2026-07-02T14:24:47Z"
+      "last_fired": "2026-07-06T08:10:01Z"
     },
-    "last_buy_at": "2026-07-02T14:24:47Z",
-    "open_entry": 88.04000091552734,
-    "open_time": "2026-07-02T14:24:47Z",
+    "last_buy_at": "2026-07-06T08:10:01Z",
+    "open_entry": 78.36000061035156,
+    "open_time": "2026-07-06T08:10:01Z",
     "AMBA_MA_GOLD": {
       "last_fired": "2026-07-01T13:59:35Z"
-    },
-    "_confirm_AMBA_MTF_BULL": 1
+    }
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
@@ -1620,13 +1621,12 @@
     "NEOV_MA_GOLD": {
       "last_fired": "2026-07-01T09:34:39Z"
     },
-    "last_buy_at": "2026-07-02T08:10:17Z",
-    "open_entry": 2.7799999713897705,
-    "open_time": "2026-07-02T08:10:17Z",
+    "last_buy_at": "2026-07-06T08:10:07Z",
+    "open_entry": 2.490000009536743,
+    "open_time": "2026-07-06T08:10:07Z",
     "NEOV_MTF_BULL": {
-      "last_fired": "2026-07-02T08:10:17Z"
-    },
-    "_confirm_NEOV_MTF_BULL": 1
+      "last_fired": "2026-07-06T08:10:07Z"
+    }
   },
   "GLW": {
     "GLW_MTF_BULL": {
