@@ -1,32 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T00:05:44Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.550000190734863,
-    "change_pct": -6.160455720130904,
-    "value": -6.160455720130904
-  },
-  {
-    "timestamp": "2026-06-28T00:07:21Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_RSI_OB",
-    "type": "rsi",
-    "price": 380.56,
-    "change_pct": -5.801980198019802,
-    "value": 100.0
-  },
-  {
-    "timestamp": "2026-06-28T00:07:26Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_RSI_OB",
-    "type": "rsi",
-    "price": 391.74,
-    "change_pct": -1.0757575757575735,
-    "value": 100.0
-  },
-  {
     "timestamp": "2026-06-28T02:07:30Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MTF_C",
@@ -4921,5 +4894,35 @@
     "price": 46.86000061035156,
     "change_pct": -1.1183781170045117,
     "value": 4.692460779481527
+  },
+  {
+    "timestamp": "2026-07-06T13:33:38Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 433.0,
+    "change_pct": 5.712890624999995,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T13:34:43Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 3.484999895095825,
+    "change_pct": -0.9943211620504211,
+    "value": 1.339
+  },
+  {
+    "timestamp": "2026-07-06T13:35:16Z",
+    "symbol": "VECO",
+    "alert_id": "VECO_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 59.22999954223633,
+    "change_pct": 3.008694856063179,
+    "value": 0
   }
 ]
