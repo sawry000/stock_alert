@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T04:09:23Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 118.16999816894531,
-    "change_pct": 3.6578931306537834,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-28T04:09:27Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_MTF_BULL",
@@ -4942,5 +4933,15 @@
     "price": 3.549999952316284,
     "change_pct": 0.8522713726217092,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T19:09:06Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 5.440000057220459,
+    "change_pct": -2.3006042057351928,
+    "value": 0
   }
 ]
