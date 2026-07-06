@@ -1,59 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T00:03:28Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 91.81,
-    "change_pct": -6.3162309349295205,
-    "value": -6.3162309349295205
-  },
-  {
-    "timestamp": "2026-06-28T00:03:29Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 91.81,
-    "change_pct": -6.3162309349295205,
-    "value": -0.216
-  },
-  {
-    "timestamp": "2026-06-28T00:03:33Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_NEWS_POS",
-    "type": "news_sentiment",
-    "price": 2.2300000190734863,
-    "change_pct": -0.8888880411783854,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-28T00:03:44Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 3.0399999618530273,
-    "change_pct": 3.06132697742236,
-    "value": -0.058
-  },
-  {
-    "timestamp": "2026-06-28T00:03:48Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 5.119999885559082,
-    "change_pct": 5.785121602460375,
-    "value": 5.785121602460375
-  },
-  {
-    "timestamp": "2026-06-28T00:03:51Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 5.119999885559082,
-    "change_pct": 5.785121602460375,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-28T00:03:56Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4897,5 +4843,65 @@
     "price": 1745.0,
     "change_pct": -13.365107735080928,
     "value": -13.365107735080928
+  },
+  {
+    "timestamp": "2026-07-06T00:08:27Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 333.3599853515625,
+    "change_pct": -9.235464672303822,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-06T00:08:31Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 22.110000610351562,
+    "change_pct": -8.123828753993097,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-06T00:09:26Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 46.86000061035156,
+    "change_pct": -6.260875998000472,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-06T00:09:37Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 135.27000427246094,
+    "change_pct": -8.452893697576512,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-06T00:09:46Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.210000038146973,
+    "change_pct": -0.4728123369510111,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T00:09:49Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.789999961853027,
+    "change_pct": -1.530612893655996,
+    "value": 2
   }
 ]
