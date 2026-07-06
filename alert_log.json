@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T00:05:29Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "price": 55.130001068115234,
-    "change_pct": -6.219485069429163,
-    "value": -6.219485069429163
-  },
-  {
     "timestamp": "2026-06-28T00:05:41Z",
     "symbol": "VELO",
     "alert_id": "VELO_MA_DEATH",
@@ -4919,5 +4910,15 @@
     "price": 5.789999961853027,
     "change_pct": -1.530612893655996,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-06T08:24:28Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.75,
+    "change_pct": 0.0,
+    "value": 3
   }
 ]
