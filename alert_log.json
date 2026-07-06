@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T02:07:30Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 28.57,
-    "change_pct": 3.5400026093385355,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-28T02:07:33Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 22.82,
-    "change_pct": 7.64150943396227,
-    "value": 7.64150943396227
-  },
-  {
     "timestamp": "2026-06-28T02:08:16Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_PCT_UP_5",
@@ -4924,5 +4906,25 @@
     "price": 59.22999954223633,
     "change_pct": 3.008694856063179,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-06T13:38:55Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 10.854999542236328,
+    "change_pct": -2.207211331204248,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-06T13:39:15Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.395000457763672,
+    "change_pct": 2.0566704824246806,
+    "value": 3
   }
 ]
