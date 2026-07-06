@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T00:05:41Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_MA_DEATH",
-    "type": "ma_crossover",
-    "price": 16.639999389648438,
-    "change_pct": -3.1995381637670954,
-    "value": -2.482
-  },
-  {
     "timestamp": "2026-06-28T00:05:44Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_PCT_DROP",
@@ -4920,5 +4911,15 @@
     "price": 1.75,
     "change_pct": 0.0,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-06T12:09:46Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 46.86000061035156,
+    "change_pct": -1.1183781170045117,
+    "value": 4.692460779481527
   }
 ]
