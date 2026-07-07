@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T03:53:41Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_RSI_OS",
-    "type": "rsi",
-    "action": "BUY",
-    "price": 1.9850000143051147,
-    "change_pct": -5.023922760520819,
-    "value": 25.7
-  },
-  {
     "timestamp": "2026-06-29T03:54:04Z",
     "symbol": "WGS",
     "alert_id": "WGS_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 109.88500213623047,
     "change_pct": 2.7250650988412355,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T19:14:05Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 5.175000190734863,
+    "change_pct": -5.565689950093743,
+    "value": 0
   }
 ]
