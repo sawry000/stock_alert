@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T03:54:04Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 69.81999969482422,
-    "change_pct": 1.9270068537579836,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-29T03:54:25Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 5.175000190734863,
     "change_pct": -5.565689950093743,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-07T20:04:34Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.909999966621399,
+    "change_pct": -2.9668783468096427,
+    "value": 3
   }
 ]
