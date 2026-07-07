@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T03:54:35Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 17.889999389648438,
-    "change_pct": 5.297230074446375,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-29T03:54:37Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_UP",
@@ -4998,5 +4988,15 @@
     "price": 18.59000015258789,
     "change_pct": 2.086766351388741,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T22:03:44Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 93.0999984741211,
+    "change_pct": 1.195650515349015,
+    "value": 2
   }
 ]
