@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T00:02:35Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 28.56999969482422,
-    "change_pct": 3.5400015033566943,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-29T00:02:38Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_CP_BULL",
@@ -4959,6 +4950,16 @@
     "action": "BUY",
     "price": 432.739990234375,
     "change_pct": 5.649411678314204,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-07T05:58:35Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 94.29499816894531,
+    "change_pct": 2.7178629291343306,
     "value": 2
   }
 ]
