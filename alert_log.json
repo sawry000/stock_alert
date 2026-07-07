@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T03:54:25Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 2.940000057220459,
-    "change_pct": 20.00000233552893,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-29T03:54:35Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 1.909999966621399,
     "change_pct": -2.9668783468096427,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T21:39:02Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.59000015258789,
+    "change_pct": 2.086766351388741,
     "value": 3
   }
 ]
