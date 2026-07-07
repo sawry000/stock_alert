@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T00:04:58Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "price": 6.550000190734863,
-    "change_pct": -6.160455720130904,
-    "value": -6.160455720130904
-  },
-  {
     "timestamp": "2026-06-29T00:08:00Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_MA_DEATH",
@@ -4988,5 +4979,15 @@
     "price": 4.199999809265137,
     "change_pct": -15.54563935442406,
     "value": -15.54563935442406
+  },
+  {
+    "timestamp": "2026-07-07T15:14:13Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 6.4029998779296875,
+    "change_pct": 7.073576554008144,
+    "value": 0
   }
 ]
