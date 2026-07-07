@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T00:04:48Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "price": 55.130001068115234,
-    "change_pct": -6.219485069429163,
-    "value": -6.219485069429163
-  },
-  {
     "timestamp": "2026-06-29T00:04:58Z",
     "symbol": "AMPG",
     "alert_id": "AMPG_PCT_DROP",
@@ -4987,5 +4978,15 @@
     "price": 1.9149999618530273,
     "change_pct": -2.7128651771475605,
     "value": 0.899
+  },
+  {
+    "timestamp": "2026-07-07T14:54:11Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.199999809265137,
+    "change_pct": -15.54563935442406,
+    "value": -15.54563935442406
   }
 ]
