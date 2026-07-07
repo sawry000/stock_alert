@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T04:39:17Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 127.81999969482422,
-    "change_pct": -5.318518744574653,
-    "value": -5.318518744574653
-  },
-  {
     "timestamp": "2026-06-29T04:39:28Z",
     "symbol": "SNDK",
     "alert_id": "SNDK_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 108.44999694824219,
     "change_pct": -13.79173533526058,
     "value": -13.79173533526058
+  },
+  {
+    "timestamp": "2026-07-07T22:59:12Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.159999847412109,
+    "change_pct": -16.349965868128336,
+    "value": -16.349965868128336
   }
 ]
