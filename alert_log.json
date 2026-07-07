@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T02:09:25Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 17.110000610351562,
-    "change_pct": 5.162880211134375,
-    "value": 5.162880211134375
-  },
-  {
     "timestamp": "2026-06-29T03:53:41Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_RSI_OS",
@@ -4996,6 +4987,16 @@
     "action": "BUY",
     "price": 4.585000038146973,
     "change_pct": -1.3978486420005956,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T18:58:55Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 109.88500213623047,
+    "change_pct": 2.7250650988412355,
     "value": 3
   }
 ]
