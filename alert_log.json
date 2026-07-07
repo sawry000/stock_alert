@@ -1,68 +1,5 @@
 [
   {
-    "timestamp": "2026-06-28T06:12:36Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MTF_C",
-    "type": "mtf_alignment",
-    "price": 28.56999969482422,
-    "change_pct": 3.5400015033566943,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-28T06:12:39Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 22.81999969482422,
-    "change_pct": 7.641507994453865,
-    "value": 7.641507994453865
-  },
-  {
-    "timestamp": "2026-06-28T06:13:16Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 5.119999885559082,
-    "change_pct": 5.785121602460375,
-    "value": 5.785121602460375
-  },
-  {
-    "timestamp": "2026-06-28T06:13:25Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.5600004196167,
-    "change_pct": 8.418895478610873,
-    "value": 8.418895478610873
-  },
-  {
-    "timestamp": "2026-06-28T06:13:49Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 119.25,
-    "change_pct": 8.87428101889893,
-    "value": 8.87428101889893
-  },
-  {
-    "timestamp": "2026-06-28T06:14:03Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 17.110000610351562,
-    "change_pct": 5.162880211134375,
-    "value": 5.162880211134375
-  },
-  {
-    "timestamp": "2026-06-29T00:02:24Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "price": 380.55999755859375,
-    "change_pct": -5.80198080232828,
-    "value": -5.80198080232828
-  },
-  {
     "timestamp": "2026-06-29T00:02:28Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_ALIGN",
@@ -4951,6 +4888,76 @@
     "action": "BUY",
     "price": 18.850000381469727,
     "change_pct": 3.2876733231217896,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T02:09:33Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7100000381469727,
+    "change_pct": -2.285712105887277,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-07T02:09:39Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.559999942779541,
+    "change_pct": 10.679610261639343,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T02:09:50Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 79.7300033569336,
+    "change_pct": 0.5563242231051201,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-07T02:09:55Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.7200000286102295,
+    "change_pct": 6.666667788636459,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T02:10:04Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.9700000286102295,
+    "change_pct": 12.571430206298828,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T02:10:07Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.3600000143051147,
+    "change_pct": 14.276112453164844,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T02:10:09Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 14.279999732971191,
+    "change_pct": 7.611150964364671,
     "value": 3
   }
 ]
