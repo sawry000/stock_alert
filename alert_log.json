@@ -1,41 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T00:03:45Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.5600004196167,
-    "change_pct": 8.418895478610873,
-    "value": 8.418895478610873
-  },
-  {
-    "timestamp": "2026-06-29T00:03:55Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 2.880000114440918,
-    "change_pct": -2.04081243398238,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-29T00:04:04Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 38.27000045776367,
-    "change_pct": 4.849316322640197,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-29T00:04:11Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 118.16999816894531,
-    "change_pct": 3.6578931306537834,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-29T00:04:15Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_MTF_BULL",
@@ -4976,5 +4940,45 @@
     "price": 5.53000020980835,
     "change_pct": -0.3603565800297336,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-07T13:33:34Z",
+    "symbol": "HLIT",
+    "alert_id": "HLIT_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 13.579999923706055,
+    "change_pct": -3.8243631465576815,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-07T13:33:59Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 265.3599853515625,
+    "change_pct": -5.22857666015625,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-07T13:34:06Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.850000381469727,
+    "change_pct": 3.5145545385487407,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T13:34:24Z",
+    "symbol": "SVCO",
+    "alert_id": "SVCO_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 10.710000038146973,
+    "change_pct": -5.305039450513067,
+    "value": 0
   }
 ]
