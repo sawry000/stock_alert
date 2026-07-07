@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T00:04:18Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 119.25,
-    "change_pct": 8.87428101889893,
-    "value": 8.87428101889893
-  },
-  {
-    "timestamp": "2026-06-29T00:04:20Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 119.25,
-    "change_pct": 8.87428101889893,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-29T00:04:27Z",
     "symbol": "VICR",
     "alert_id": "VICR_BT_VOL",
@@ -4981,5 +4963,25 @@
     "price": 93.80000305175781,
     "change_pct": 1.956525056258492,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-07T14:13:36Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 85.1500015258789,
+    "change_pct": -13.169834777057149,
+    "value": -13.169834777057149
+  },
+  {
+    "timestamp": "2026-07-07T14:14:26Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 1547.239990234375,
+    "change_pct": -8.423630955683793,
+    "value": 0
   }
 ]
