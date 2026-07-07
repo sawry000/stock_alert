@@ -1275,6 +1275,13 @@ def main():
             last_vol_ratio=data["vol_ratio"],
             last_above_ema50=data["above_ema50"],
             last_scanned=now_str(),
+            # เพิ่ม 3 field นี้เพื่อให้ dashboard ทำ "Sector Flow" (จัดกลุ่มหุ้น
+            # ตาม sector/industry จริงจาก yfinance แล้วดูว่าเงินไหลเข้ากลุ่มไหน
+            # จาก % เปลี่ยนแปลงราคาเฉลี่ยของกลุ่ม) — ค่าเหล่านี้ถูกคำนวณอยู่แล้ว
+            # ใน fetch_stock_data() เดิม แค่ยังไม่เคยเขียนกลับลง universe entry
+            last_sector=data["sector"],
+            last_industry=data["industry"],
+            last_change_pct=data["change_pct"],
         )
 
         passed, gates = run_gates(sym, data, halal, cfg)

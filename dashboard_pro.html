@@ -148,6 +148,37 @@ input[type=password]{letter-spacing:2px}
 .t-alert_score{background:rgba(244,143,177,0.12);color:var(--c-score)}
 .t-backtest_check{background:rgba(255,204,2,0.12);color:var(--c-bt)}
 
+/* WATCHLIST SUB-TABS */
+.wl-subtabs{display:flex;gap:6px;margin-bottom:14px;border-bottom:1px solid var(--border)}
+.wl-subtab{display:flex;align-items:center;gap:6px;padding:9px 14px;font-size:12px;font-family:var(--ui);
+  color:var(--text2);background:transparent;border:none;border-bottom:2px solid transparent;cursor:pointer;
+  transition:all 0.15s;margin-bottom:-1px}
+.wl-subtab:hover{color:var(--text)}
+.wl-subtab.active{color:var(--green);border-bottom-color:var(--green)}
+.wl-subview{display:none}
+.wl-subview.active{display:block}
+
+/* SECTOR FLOW */
+.sflow-note{font-size:11.5px;color:var(--text3);line-height:1.7;padding:9px 12px;background:rgba(255,255,255,0.02);
+  border:1px solid var(--border);border-radius:6px;margin-bottom:14px}
+.sflow-row{background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:9px;
+  padding:11px 14px;transition:border-color 0.2s}
+.sflow-row:hover{border-color:var(--border2)}
+.sflow-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.sflow-rank{font-family:var(--mono);font-size:11px;color:var(--text3);min-width:20px}
+.sflow-name{font-family:var(--ui);font-size:13.5px;font-weight:700;color:var(--text)}
+.sflow-cnt{font-size:10px;color:var(--text3);font-family:var(--mono)}
+.sflow-chg{font-family:var(--mono);font-size:13.5px;font-weight:700;margin-left:auto}
+.sflow-bar-wrap{height:7px;background:var(--bg3);border-radius:4px;overflow:hidden;position:relative;margin-bottom:8px}
+.sflow-bar{height:100%;border-radius:4px;transition:width 0.4s ease}
+.sflow-syms{display:flex;flex-wrap:wrap;gap:6px}
+.sflow-sym-chip{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-family:var(--mono);
+  padding:3px 8px;border-radius:11px;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--text2);
+  cursor:pointer}
+.sflow-sym-chip:hover{border-color:var(--cyan);color:var(--cyan)}
+.sflow-edit-sel{font-size:10px;font-family:var(--mono);background:var(--bg);color:var(--text2);
+  border:1px solid var(--border2);border-radius:4px;padding:1px 3px}
+
 /* SYMBOL CARD */
 .symcard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;transition:border-color 0.2s}
 .symcard:hover{border-color:var(--border2)}
@@ -574,7 +605,29 @@ input[type=password]{letter-spacing:2px}
         <button class="btn btn-gold btn-sm" onclick="saveWatchlist()" style="margin-left:auto"><span class="msi" style="font-size:12px">save</span> Save → GitHub</button>
       </div>
 
-      <div id="wl-cards"></div>
+      <!-- Sub-tabs: รายชื่อหุ้น vs กลุ่มหุ้น/Sector Flow -->
+      <div class="wl-subtabs">
+        <button class="wl-subtab active" id="wl-subtab-list" onclick="wlShowSubView('list')">
+          <span class="msi" style="font-size:15px">format_list_bulleted</span> รายชื่อหุ้น
+        </button>
+        <button class="wl-subtab" id="wl-subtab-sector" onclick="wlShowSubView('sector')">
+          <span class="msi" style="font-size:15px">bubble_chart</span> กลุ่มหุ้น (Sector Flow)
+        </button>
+      </div>
+
+      <div class="wl-subview active" id="wl-subview-list">
+        <div id="wl-cards"></div>
+      </div>
+
+      <div class="wl-subview" id="wl-subview-sector">
+        <div class="sflow-note">
+          <span class="msi" style="font-size:13px;vertical-align:middle;color:var(--cyan)">info</span>
+          จัดกลุ่มหุ้นใน Watchlist ตาม Sector/Industry จริง (จาก daily_screener.py) — ถ้าหุ้นตัวไหนยังไม่เคยถูก scan
+          จะใช้การจัดกลุ่มสำรองแบบ preset แทนชั่วคราว แล้วเรียงจาก <strong style="color:var(--text)">% เปลี่ยนแปลงราคาเฉลี่ยของกลุ่มวันนี้ (มากไปน้อย)</strong>
+          เป็นตัวชี้วัดคร่าวๆ ว่าวันนี้เงินไหลเข้ากลุ่มไหน — กด <span class="msi" style="font-size:12px;vertical-align:middle">sync</span> Sync ที่ Universe Manager ก่อน เพื่อให้ข้อมูลล่าสุด
+        </div>
+        <div id="sflow-cards"></div>
+      </div>
     </div>
 
     <!-- ════ ADD SYMBOL ════ -->
@@ -1783,9 +1836,170 @@ function wlUniStats(symbol) {
   </span>`;
 }
 
+// ══════════════════════════════════════════════════════════
+//  WATCHLIST SUB-TABS (รายชื่อหุ้น / กลุ่มหุ้น Sector Flow)
+// ══════════════════════════════════════════════════════════
+let _wlSubView = 'list';
+
+function wlShowSubView(view) {
+  _wlSubView = view;
+  document.getElementById('wl-subtab-list').classList.toggle('active', view === 'list');
+  document.getElementById('wl-subtab-sector').classList.toggle('active', view === 'sector');
+  document.getElementById('wl-subview-list').classList.toggle('active', view === 'list');
+  document.getElementById('wl-subview-sector').classList.toggle('active', view === 'sector');
+  if (view === 'sector') renderSectorFlow();
+}
+
+// ── PRESET SECTOR MAP (fallback) ────────────────────────────
+// ใช้เฉพาะตอนที่หุ้นยังไม่เคยถูก daily_screener.py scan (ยังไม่มี
+// r.last_sector จริงจาก yfinance) กันหน้า Sector Flow โล่งว่างเปล่า
+// ตอนเพิ่งเพิ่มหุ้นใหม่เข้า watchlist — พอ screener scan รอบถัดไป
+// ค่าจริงจาก UNI.universe (last_sector) จะ override ตัวนี้ทันที
+const SECTOR_PRESET_MAP = {
+  'NVDA':'AI & Semiconductor','AMD':'AI & Semiconductor','AVGO':'AI & Semiconductor','TSM':'AI & Semiconductor',
+  'SMCI':'AI & Semiconductor','ARM':'AI & Semiconductor','MU':'AI & Semiconductor','QCOM':'AI & Semiconductor',
+  'INTC':'AI & Semiconductor','ASML':'AI & Semiconductor','MRVL':'AI & Semiconductor','PLTR':'AI & Semiconductor',
+  'AI':'AI & Semiconductor','SOUN':'AI & Semiconductor','APP':'AI & Semiconductor',
+  'MSFT':'Big Tech / Cloud','GOOGL':'Big Tech / Cloud','GOOG':'Big Tech / Cloud','AMZN':'Big Tech / Cloud',
+  'META':'Big Tech / Cloud','ORCL':'Big Tech / Cloud','CRM':'Big Tech / Cloud','ADBE':'Big Tech / Cloud',
+  'NOW':'Big Tech / Cloud','SNOW':'Big Tech / Cloud','AAPL':'Big Tech / Cloud',
+  'TSLA':'EV & Clean Energy','RIVN':'EV & Clean Energy','LCID':'EV & Clean Energy','NIO':'EV & Clean Energy',
+  'ENPH':'EV & Clean Energy','FSLR':'EV & Clean Energy','PLUG':'EV & Clean Energy','RUN':'EV & Clean Energy',
+  'XOM':'Oil & Gas Energy','CVX':'Oil & Gas Energy','COP':'Oil & Gas Energy','SLB':'Oil & Gas Energy',
+  'OXY':'Oil & Gas Energy','MPC':'Oil & Gas Energy','PSX':'Oil & Gas Energy','EOG':'Oil & Gas Energy',
+  'JPM':'Banking & Finance','BAC':'Banking & Finance','WFC':'Banking & Finance','GS':'Banking & Finance',
+  'MS':'Banking & Finance','C':'Banking & Finance','V':'Banking & Finance','MA':'Banking & Finance',
+  'JNJ':'Healthcare & Biotech','PFE':'Healthcare & Biotech','LLY':'Healthcare & Biotech','UNH':'Healthcare & Biotech',
+  'MRK':'Healthcare & Biotech','ABBV':'Healthcare & Biotech','MRNA':'Healthcare & Biotech','GILD':'Healthcare & Biotech',
+  'WMT':'Consumer & Retail','COST':'Consumer & Retail','TGT':'Consumer & Retail','HD':'Consumer & Retail',
+  'NKE':'Consumer & Retail','SBUX':'Consumer & Retail','MCD':'Consumer & Retail','PG':'Consumer & Retail','KO':'Consumer & Retail',
+  'BA':'Industrial & Defense','LMT':'Industrial & Defense','RTX':'Industrial & Defense','CAT':'Industrial & Defense',
+  'GE':'Industrial & Defense','NOC':'Industrial & Defense','DE':'Industrial & Defense',
+  'PLD':'Real Estate REIT','AMT':'Real Estate REIT','O':'Real Estate REIT','SPG':'Real Estate REIT',
+  'T':'Telecom','VZ':'Telecom','TMUS':'Telecom',
+  'COIN':'Crypto-related','MSTR':'Crypto-related','MARA':'Crypto-related','RIOT':'Crypto-related',
+};
+
+const SFLOW_OVERRIDE_KEY = 'sflow_sector_overrides_v1';
+function _sflowLoadOverrides() {
+  try { return JSON.parse(localStorage.getItem(SFLOW_OVERRIDE_KEY) || '{}'); }
+  catch (e) { return {}; }
+}
+function _sflowSaveOverrides(obj) {
+  try { localStorage.setItem(SFLOW_OVERRIDE_KEY, JSON.stringify(obj)); }
+  catch (e) { /* localStorage เต็มหรือถูกปิด — ข้ามไปเงียบๆ ไม่ต้อง block UI */ }
+}
+
+const SFLOW_GROUP_LIST = [
+  'AI & Semiconductor','Big Tech / Cloud','EV & Clean Energy','Oil & Gas Energy','Banking & Finance',
+  'Healthcare & Biotech','Consumer & Retail','Industrial & Defense','Real Estate REIT','Telecom',
+  'Crypto-related','อื่นๆ / ยังไม่จัดกลุ่ม',
+];
+
+// เลือก sector ให้ symbol หนึ่งตัว ตามลำดับความน่าเชื่อถือ:
+// 1) ผู้ใช้กำหนดเองใน Sector Flow (แก้ทับได้ทุกเมื่อ)
+// 2) last_sector จริงจาก UNI.universe (มาจาก daily_screener.py scan)
+// 3) preset map สำรอง (เดาจาก ticker ที่รู้จักทั่วไป)
+// 4) 'อื่นๆ / ยังไม่จัดกลุ่ม' ถ้าไม่เข้าเงื่อนไขไหนเลย
+function getSymbolSector(symbol, uniEntry, overrides) {
+  const upper = (symbol || '').toUpperCase();
+  if (overrides && overrides[upper]) return overrides[upper];
+  if (uniEntry && uniEntry.last_sector && uniEntry.last_sector !== 'Unknown') return uniEntry.last_sector;
+  if (SECTOR_PRESET_MAP[upper]) return SECTOR_PRESET_MAP[upper];
+  return 'อื่นๆ / ยังไม่จัดกลุ่ม';
+}
+
+function sflowChangeUser(symbol, newSector) {
+  const overrides = _sflowLoadOverrides();
+  overrides[(symbol || '').toUpperCase()] = newSector;
+  _sflowSaveOverrides(overrides);
+  renderSectorFlow();
+}
+
+function renderSectorFlow() {
+  const wrap = document.getElementById('sflow-cards');
+  if (!wrap) return;
+  if (!WL.watchlist.length) {
+    wrap.innerHTML = '<div style="text-align:center;padding:60px;color:var(--text3);font-size:13px">ยังไม่มีหุ้นใน Watchlist — เพิ่มหุ้นก่อนเพื่อดู Sector Flow</div>';
+    return;
+  }
+
+  const overrides = _sflowLoadOverrides();
+  const groups = {}; // sectorName -> { symbols:[], changes:[], vols:[] }
+
+  WL.watchlist.forEach(s => {
+    const upper = (s.symbol || '').toUpperCase();
+    const uniEntry = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === upper) || null;
+    const sector = getSymbolSector(upper, uniEntry, overrides);
+    if (!groups[sector]) groups[sector] = { symbols: [], changes: [], vols: [] };
+    groups[sector].symbols.push(upper);
+    const chg = uniEntry && typeof uniEntry.last_change_pct === 'number' ? uniEntry.last_change_pct : null;
+    const vol = uniEntry && typeof uniEntry.last_vol_ratio === 'number' ? uniEntry.last_vol_ratio : null;
+    if (chg !== null) groups[sector].changes.push(chg);
+    if (vol !== null) groups[sector].vols.push(vol);
+  });
+
+  const rows = Object.keys(groups).map(name => {
+    const g = groups[name];
+    const hasData = g.changes.length > 0;
+    const avgChange = hasData ? g.changes.reduce((a, b) => a + b, 0) / g.changes.length : null;
+    const avgVol = g.vols.length ? g.vols.reduce((a, b) => a + b, 0) / g.vols.length : null;
+    const gainers = g.changes.filter(c => c > 0).length;
+    const losers  = g.changes.filter(c => c < 0).length;
+    return { name, count: g.symbols.length, symbols: g.symbols, avgChange, avgVol, gainers, losers, hasData };
+  });
+
+  // เรียงกลุ่มที่มีข้อมูล % เปลี่ยนแปลงจริงไว้บนสุด (มากไปน้อย = เงินไหลเข้ามากสุดก่อน)
+  // กลุ่มที่ยังไม่มีข้อมูล (รอ screener scan รอบถัดไป) ไปอยู่ท้ายสุด
+  rows.sort((a, b) => {
+    if (a.hasData && b.hasData) return b.avgChange - a.avgChange;
+    if (a.hasData) return -1;
+    if (b.hasData) return 1;
+    return b.count - a.count;
+  });
+
+  const maxAbsChange = Math.max(1, ...rows.filter(r => r.hasData).map(r => Math.abs(r.avgChange)));
+
+  wrap.innerHTML = rows.map((r, idx) => {
+    const chgColor = !r.hasData ? 'var(--text3)' : (r.avgChange >= 0 ? 'var(--green)' : 'var(--red)');
+    const chgLabel = r.hasData
+      ? `${r.avgChange >= 0 ? '+' : ''}${r.avgChange.toFixed(2)}%`
+      : 'รอข้อมูล';
+    const barPct = r.hasData ? Math.min(100, (Math.abs(r.avgChange) / maxAbsChange) * 100) : 0;
+    const barColor = !r.hasData ? 'var(--text3)' : (r.avgChange >= 0 ? 'var(--green)' : 'var(--red)');
+    const volLabel = r.avgVol != null ? `Vol เฉลี่ย ${r.avgVol.toFixed(2)}x` : 'Vol: -';
+    const flowLabel = r.hasData
+      ? `📈${r.gainers} 📉${r.losers}`
+      : '';
+    const chips = r.symbols.map(sym => {
+      const optsHtml = SFLOW_GROUP_LIST.map(g =>
+        `<option value="${g}" ${g === r.name ? 'selected' : ''}>${g}</option>`
+      ).join('');
+      return `<span class="sflow-sym-chip" title="เปลี่ยนกลุ่มของ ${sym}">
+        ${sym}
+        <select class="sflow-edit-sel" onclick="event.stopPropagation()" onchange="sflowChangeUser('${sym}', this.value)">${optsHtml}</select>
+      </span>`;
+    }).join('');
+
+    return `<div class="sflow-row">
+      <div class="sflow-top">
+        <span class="sflow-rank">#${idx + 1}</span>
+        <span class="sflow-name">${r.name}</span>
+        <span class="sflow-cnt">${r.count} ตัว · ${volLabel} ${flowLabel ? '· ' + flowLabel : ''}</span>
+        <span class="sflow-chg" style="color:${chgColor}">${chgLabel}</span>
+      </div>
+      <div class="sflow-bar-wrap">
+        <div class="sflow-bar" style="width:${barPct}%;background:${barColor}"></div>
+      </div>
+      <div class="sflow-syms">${chips}</div>
+    </div>`;
+  }).join('');
+}
+
 function renderWL() {
   // Auto-sync: คอลัมน์ "สถานะ" (WL) ใน Universe Manager ต้องอัปเดตทุกครั้งที่ watchlist เปลี่ยน
   if (typeof uniRenderTable === 'function') uniRenderTable();
+  if (_wlSubView === 'sector') renderSectorFlow();
   const c = document.getElementById('wl-cards');
   if (!WL.watchlist.length) {
     c.innerHTML = '<div style="text-align:center;padding:60px;color:var(--text3);font-size:13px">ยังไม่มีหุ้น — กด <strong style="color:var(--cyan)">+ เพิ่ม Symbol</strong></div>';
