@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T03:54:37Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 8.130000114440918,
-    "change_pct": 11.522635314690232,
-    "value": 11.522635314690232
-  },
-  {
     "timestamp": "2026-06-29T04:39:10Z",
     "symbol": "SMTC",
     "alert_id": "SMTC_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 93.0999984741211,
     "change_pct": 1.195650515349015,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-07T22:18:32Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 85.01000213623047,
+    "change_pct": -13.312596608136982,
+    "value": -13.312596608136982
   }
 ]
