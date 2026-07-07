@@ -1526,7 +1526,7 @@
   },
   "VPG": {
     "VPG_PCT_DROP": {
-      "last_fired": "2026-07-06T00:04:26Z"
+      "last_fired": "2026-07-07T14:24:25Z"
     },
     "open_position": true,
     "VPG_MTF_BULL": {
@@ -1535,7 +1535,10 @@
     "open_entry": 144.00999450683594,
     "open_time": "2026-07-02T08:09:55Z",
     "last_buy_at": "2026-07-02T08:09:55Z",
-    "last_sell_at": "2026-07-06T00:04:26Z"
+    "last_sell_at": "2026-07-07T14:24:26Z",
+    "VPG_MA_DEATH": {
+      "last_fired": "2026-07-07T14:24:26Z"
+    }
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1680,7 +1683,8 @@
     },
     "last_buy_at": "2026-07-07T10:15:01Z",
     "open_entry": 1.9700000286102295,
-    "open_time": "2026-07-07T10:15:01Z"
+    "open_time": "2026-07-07T10:15:01Z",
+    "_confirm_EVTV_MA_GOLD": 1
   },
   "BLIN": {
     "BLIN_MTF_BULL": {

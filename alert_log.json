@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T00:04:34Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_CP_BULL",
-    "type": "candle_pattern",
-    "price": 17.110000610351562,
-    "change_pct": 5.162880211134375,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-29T00:04:35Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_PCT_UP_5",
-    "type": "percent_change",
-    "price": 17.110000610351562,
-    "change_pct": 5.162880211134375,
-    "value": 5.162880211134375
-  },
-  {
     "timestamp": "2026-06-29T00:04:41Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_PCT_DROP",
@@ -4984,5 +4966,25 @@
     "price": 220.60000610351562,
     "change_pct": -7.481963553298261,
     "value": -7.481963553298261
+  },
+  {
+    "timestamp": "2026-07-07T14:24:25Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 107.9000015258789,
+    "change_pct": -14.228933604229802,
+    "value": -14.228933604229802
+  },
+  {
+    "timestamp": "2026-07-07T14:24:26Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 107.9000015258789,
+    "change_pct": -14.228933604229802,
+    "value": 0
   }
 ]
