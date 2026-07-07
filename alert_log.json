@@ -1,68 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T00:02:38Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_CP_BULL",
-    "type": "candle_pattern",
-    "price": 22.81999969482422,
-    "change_pct": 7.641507994453865,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-29T00:02:38Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_UP_5",
-    "type": "percent_change",
-    "price": 22.81999969482422,
-    "change_pct": 7.641507994453865,
-    "value": 7.641507994453865
-  },
-  {
-    "timestamp": "2026-06-29T00:02:41Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 22.81999969482422,
-    "change_pct": 7.641507994453865,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-29T00:02:43Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_CP_BULL",
-    "type": "candle_pattern",
-    "price": 94.0,
-    "change_pct": -1.5706806282722512,
-    "value": 1
-  },
-  {
-    "timestamp": "2026-06-29T00:02:46Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 94.0,
-    "change_pct": -1.5706806282722512,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-29T00:02:53Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "price": 1.9850000143051147,
-    "change_pct": -5.023922760520819,
-    "value": -5.023922760520819
-  },
-  {
-    "timestamp": "2026-06-29T00:02:57Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 14.899999618530273,
-    "change_pct": -2.560199509515244e-06,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-29T00:03:01Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_DROP",
@@ -4961,5 +4898,75 @@
     "price": 94.29499816894531,
     "change_pct": 2.7178629291343306,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-07T10:08:32Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 26.299999237060547,
+    "change_pct": 0.2366776192475278,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T10:08:48Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.349999904632568,
+    "change_pct": 2.5848126758088523,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T10:08:51Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 38.279998779296875,
+    "change_pct": 0.5735392252497212,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T10:08:57Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 68.88999938964844,
+    "change_pct": 1.622657308819046,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T10:09:08Z",
+    "symbol": "VSEC",
+    "alert_id": "VSEC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 238.00999450683594,
+    "change_pct": -0.18034117311024167,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T10:09:20Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.490000009536743,
+    "change_pct": -0.8522724563425242,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T10:09:27Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.850000381469727,
+    "change_pct": 2.2201033668629364,
+    "value": 3
   }
 ]
