@@ -1088,6 +1088,157 @@ def build_daily_summary(watchlist, quotes_cache):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+#  POSITION STATUS REPORT — สรุป P&L ของ position ที่ยังเปิดอยู่ (ยังไม่มี SELL)
+#
+#  อ่านจาก state[symbol]["open_entry"/"open_time"/"open_stop"/"open_target"/
+#  "open_peak"/"open_conviction"] ที่ถูกบันทึกไว้ตอน BUY fire แล้วเทียบกับ
+#  ราคาปัจจุบันใน quotes_cache เพื่อสรุปว่าตอนนี้ +/- กี่% และให้คำแนะนำ
+#  เชิงกฎ risk-management ทั่วไป (ไม่ใช่คำแนะนำการลงทุนเฉพาะบุคคล)
+# ══════════════════════════════════════════════════════════════════════════════
+
+TELEGRAM_MSG_BUDGET = 3500   # เผื่อ buffer จากลิมิตจริง 4096 ตัวอักษรของ Telegram
+
+
+def _position_next_step(pnl_pct, dist_to_stop_pct, dist_to_target_pct,
+                         drawdown_from_peak_pct, days_held):
+    """
+    ให้คำแนะนำ "ทำอย่างไรต่อ" แบบ rule-based ตามหลัก risk-management ทั่วไป
+    เรียงตามความสำคัญ (เช็กเงื่อนไขที่อันตราย/เร่งด่วนที่สุดก่อน)
+    """
+    if dist_to_stop_pct is not None and dist_to_stop_pct <= 3:
+        return "⚠️ ใกล้ชน Stop Loss มาก — เตรียมใจทำตามแผนเดิมถ้าหลุด อย่าย้าย SL หนี"
+    if dist_to_target_pct is not None and dist_to_target_pct <= 3:
+        return "🎯 ใกล้ถึง Target แล้ว — พิจารณาล็อกกำไรบางส่วน หรือเลื่อน SL ขึ้นมาที่ทุน"
+    if pnl_pct > 0 and drawdown_from_peak_pct is not None and drawdown_from_peak_pct >= 5:
+        return (f"📉 ราคาลงจากจุดสูงสุด {drawdown_from_peak_pct:.1f}% แล้ว "
+                f"— พิจารณาเลื่อน Stop ตามราคาขึ้นมา (trailing stop) เพื่อล็อกกำไรที่มีอยู่")
+    if pnl_pct <= -8:
+        return "🔴 ขาดทุนหนักใกล้โซนเสี่ยง — ห้าม average down, รอ SL เดิมทำงานตามแผน"
+    if days_held is not None and days_held >= 10 and -3 <= pnl_pct <= 3:
+        return f"⏳ ถือมา {days_held:.0f} วันแล้วราคายังไม่ไปไหน — ทบทวนว่าเหตุผลตอนเข้าซื้อยังจริงอยู่มั้ย"
+    if pnl_pct > 0:
+        return "👀 กำไรอยู่ — ถือต่อตามแผน รอ Target หรือเลื่อน SL ตามราคาเป็นระยะ"
+    return "👀 ถือต่อตามแผนเดิม รอ Target หรือ Stop ทำงาน — ยังไม่ถึงจุดต้องตัดสินใจ"
+
+
+def build_position_status_messages(state, watchlist, quotes_cache):
+    """
+    สร้างรายการข้อความ (list of str) สรุปสถานะ position ที่เปิดอยู่ทั้งหมด
+    แบ่งเป็นหลายข้อความถ้ายาวเกิน budget ของ Telegram
+    คืนค่า [] ถ้าไม่มี position เปิดอยู่เลย
+    """
+    watch_syms = {s["symbol"] for s in watchlist}
+    rows = []
+
+    for symbol, sym_state in state.items():
+        if symbol.startswith("__") or not isinstance(sym_state, dict):
+            continue
+        entry = sym_state.get("open_entry")
+        if not entry:
+            continue
+        # กันข้อมูลค้าง: ถ้ามี last_sell_at ใหม่กว่า open_time ให้ถือว่าปิดไปแล้ว
+        open_time  = sym_state.get("open_time")
+        sell_at    = sym_state.get("last_sell_at")
+        if open_time and sell_at and minutes_since(sell_at) < minutes_since(open_time):
+            continue
+        if symbol not in watch_syms:
+            continue
+
+        quote = quotes_cache.get(symbol)
+        if not quote:
+            continue
+        current = quote["price"]
+
+        # ── อัปเดต peak (ราคาสูงสุดตั้งแต่เข้าซื้อ) เพื่อคำนวณ drawdown ──
+        peak = max(sym_state.get("open_peak", entry) or entry, current)
+        state[symbol]["open_peak"] = peak
+
+        pnl_pct        = (current - entry) / entry * 100
+        drawdown_pct   = (peak - current) / peak * 100 if peak > 0 else 0
+        stop           = sym_state.get("open_stop")
+        target         = sym_state.get("open_target")
+        dist_to_stop   = ((current - stop) / current * 100) if stop else None
+        dist_to_target = ((target - current) / current * 100) if target else None
+        days_held      = (minutes_since(open_time) / 1440) if open_time else None
+        conviction     = sym_state.get("open_conviction")
+
+        rows.append({
+            "symbol": symbol, "entry": entry, "current": current,
+            "pnl_pct": pnl_pct, "drawdown_pct": drawdown_pct,
+            "stop": stop, "target": target,
+            "dist_to_stop": dist_to_stop, "dist_to_target": dist_to_target,
+            "days_held": days_held, "conviction": conviction,
+        })
+
+    if not rows:
+        return []
+
+    # เรียงจากขาดทุนมากสุดไปกำไรมากสุด — ให้ตัวที่ต้องระวังก่อนขึ้นก่อน
+    rows.sort(key=lambda r: r["pnl_pct"])
+
+    winners = sum(1 for r in rows if r["pnl_pct"] >= 0)
+    losers  = len(rows) - winners
+    avg_pnl = sum(r["pnl_pct"] for r in rows) / len(rows)
+
+    header = (
+        "<b>📦 สรุปสถานะ Position ที่เปิดอยู่</b>\n"
+        f"🕐 {now_bkk_str()}\n\n"
+        f"เปิดอยู่ทั้งหมด: <b>{len(rows)}</b> ตัว  |  "
+        f"🟢 กำไร {winners}  |  🔴 ขาดทุน {losers}  |  "
+        f"เฉลี่ย {avg_pnl:+.2f}%\n"
+        "━━━━━━━━━━━━━━━━━━━━━━━━━"
+    )
+
+    blocks = []
+    for r in rows:
+        icon = "🟢" if r["pnl_pct"] >= 0 else "🔴"
+        conv_txt = f"  •  Conviction เดิม {r['conviction']}/4" if r["conviction"] else ""
+        days_txt = f"{r['days_held']:.1f} วัน" if r["days_held"] is not None else "ไม่ทราบ"
+        stop_txt = f"${r['stop']:.4f}" if r["stop"] else "—"
+        tgt_txt  = f"${r['target']:.4f}" if r["target"] else "—"
+        next_step = _position_next_step(
+            r["pnl_pct"], r["dist_to_stop"], r["dist_to_target"],
+            r["drawdown_pct"], r["days_held"]
+        )
+        block = (
+            f"{icon} <b>{r['symbol']}</b>  <b>{r['pnl_pct']:+.2f}%</b>{conv_txt}\n"
+            f"  • เข้าซื้อ ${r['entry']:.4f} → ปัจจุบัน ${r['current']:.4f}"
+            f"  (ถือมา {days_txt})\n"
+            f"  • 🛑 Stop {stop_txt}  •  🎯 Target {tgt_txt}\n"
+            f"  • ➡️ {next_step}"
+        )
+        blocks.append(block)
+
+    # ── แบ่งเป็นหลายข้อความถ้ายาวเกิน budget ──
+    messages  = []
+    current_parts = [header]
+    current_len   = len(header)
+    for block in blocks:
+        if current_len + len(block) + 2 > TELEGRAM_MSG_BUDGET:
+            messages.append("\n\n".join(current_parts))
+            current_parts = [block]
+            current_len   = len(block)
+        else:
+            current_parts.append(block)
+            current_len += len(block) + 2
+
+    if current_parts:
+        messages.append("\n\n".join(current_parts))
+
+    footer = ("\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+              "ℹ️ คำแนะนำเป็นแนวทางทั่วไปจากกฎ Risk Management "
+              "ไม่ใช่คำแนะนำการลงทุนเฉพาะบุคคล")
+    messages[-1] += footer
+
+    total = len(messages)
+    if total > 1:
+        for i in range(total):
+            messages[i] += f"\n\n📄 หน้า {i + 1}/{total}"
+
+    return messages
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 #  MAIN — Tiered Alert Orchestration
 #
 #  SELL alerts  → Tier 1, ตรวจทุกรอบ (fast response)
@@ -1418,8 +1569,33 @@ def main():
                     f"{dims_th.get(k,k)}{'✅' if v.get('pass') else '❌'}"
                     for k, v in conv_detail.items() if isinstance(v, dict)
                 )
-                conv_line = f"\n🎯 Conviction: {conv_score}/4  ({dim_marks})"
+                if conv_score >= 4:
+                    # ── สัญญาณเต็มพลัง 4/4 — ทำให้เด่นขึ้นมาเพื่อให้สังเกตง่าย ──
+                    conv_line = (f"\n⭐⭐⭐ <b>Conviction: 4/4 — สัญญาณเต็มพลัง</b> ⭐⭐⭐"
+                                 f"\n🎯 ({dim_marks})")
+                    msg = "🔥🌟 <b>TOP SIGNAL (4/4)</b> 🌟🔥\n" + msg
+                else:
+                    conv_line = f"\n🎯 Conviction: {conv_score}/4  ({dim_marks})"
                 msg = msg.replace("\n\n📊 <a href=", conv_line + "\n\n📊 <a href=", 1)
+
+            # ── SELL: แนบผลลัพธ์ P&L ของ position ที่กำลังจะปิด (ถ้ามี open_entry) ──
+            if action == "SELL":
+                prior_state = state.get(symbol, {})
+                entry_price = prior_state.get("open_entry")
+                if entry_price:
+                    pnl_pct = (price - entry_price) / entry_price * 100
+                    days_held_txt = ""
+                    if prior_state.get("open_time"):
+                        days_held = minutes_since(prior_state["open_time"]) / 1440
+                        days_held_txt = f"  •  ถือมา {days_held:.1f} วัน"
+                    result_icon = "🟢 กำไร" if pnl_pct >= 0 else "🔴 ขาดทุน"
+                    pnl_line = (
+                        f"\n━━━━━━━━━━━━━━━━━━━━━━━━━"
+                        f"\n📊 <b>ผลลัพธ์ position นี้:</b> {result_icon}  "
+                        f"<b>{pnl_pct:+.2f}%</b>"
+                        f"\n  • เข้าซื้อ ${entry_price:.4f} → ปิดที่ ${price:.4f}{days_held_txt}"
+                    )
+                    msg = msg.replace("\n\n📊 <a href=", pnl_line + "\n\n📊 <a href=", 1)
 
             print(f"  [{alert_id}] ✅ TRIGGERED! ส่ง Telegram...")
             success = send_telegram(token, chat_id, msg)
@@ -1429,11 +1605,20 @@ def main():
 
                 # ── Track BUY/SELL timestamps (สำหรับ re-entry + sell cooldown) ──
                 if action == "BUY":
-                    state[symbol]["last_buy_at"]  = now_str()
-                    state[symbol]["open_entry"]   = price
-                    state[symbol]["open_time"]    = now_str()
+                    state[symbol]["last_buy_at"]     = now_str()
+                    state[symbol]["open_entry"]      = price
+                    state[symbol]["open_time"]       = now_str()
+                    state[symbol]["open_peak"]       = price
+                    state[symbol]["open_stop"]       = pos["stop"] if pos else None
+                    state[symbol]["open_target"]     = pos.get("target") if pos else None
+                    state[symbol]["open_conviction"] = conv_score
+                    state[symbol]["open_alert_type"] = atype
                 elif action == "SELL":
                     state[symbol]["last_sell_at"] = now_str()
+                    # ── ปิด position: เคลียร์ open_* ทั้งหมดไม่ให้ P&L ค้าง ──
+                    for _k in ("open_entry", "open_time", "open_peak", "open_stop",
+                               "open_target", "open_conviction", "open_alert_type"):
+                        state[symbol].pop(_k, None)
 
 
                 log.append({
@@ -1469,6 +1654,32 @@ def main():
         if success:
             state["__daily_summary__"] = {"last_sent": now_str()}
             print("[Daily Summary] ✅ ส่งสำเร็จ")
+
+    # ── Position Status Report — สรุป P&L ของ position ที่เปิดอยู่ ──────
+    status_hour  = settings.get("position_status_hour_utc", summary_hour)
+    status_state = state.get("__position_status__", {})
+    last_status  = status_state.get("last_sent", "")
+
+    if (current_hour == status_hour
+            and (not last_status or not last_status.startswith(today_str))
+            and quotes_cache):
+        print("\n[Position Status] กำลังสรุป...")
+        status_msgs = build_position_status_messages(state, watchlist, quotes_cache)
+        if status_msgs:
+            all_ok = True
+            for i, smsg in enumerate(status_msgs):
+                ok = send_telegram(token, chat_id, smsg)
+                all_ok = all_ok and ok
+                if i < len(status_msgs) - 1:
+                    time.sleep(0.5)
+            if all_ok:
+                state["__position_status__"] = {"last_sent": now_str()}
+                print(f"[Position Status] ✅ ส่งสำเร็จ ({len(status_msgs)} ข้อความ)")
+            else:
+                print("[Position Status] ❌ ส่งไม่สำเร็จบางข้อความ")
+        else:
+            print("[Position Status] ไม่มี position เปิดอยู่ — ข้าม")
+            state["__position_status__"] = {"last_sent": now_str()}
 
     save_json(STATE_PATH, state)
     save_json(LOG_PATH, log[-500:])
