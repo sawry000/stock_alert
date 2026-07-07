@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T00:04:41Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_DROP",
-    "type": "percent_change",
-    "price": 9.0,
-    "change_pct": -8.814589665653488,
-    "value": -8.814589665653488
-  },
-  {
     "timestamp": "2026-06-29T00:04:48Z",
     "symbol": "FPS",
     "alert_id": "FPS_PCT_DROP",
@@ -4986,5 +4977,15 @@
     "price": 107.9000015258789,
     "change_pct": -14.228933604229802,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-07T14:29:37Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 1.9149999618530273,
+    "change_pct": -2.7128651771475605,
+    "value": 0.899
   }
 ]
