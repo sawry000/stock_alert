@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T00:03:40Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MTF_BULL",
-    "type": "mtf_alignment",
-    "price": 4.25,
-    "change_pct": 0.2736881842204513,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-29T00:03:45Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP_5",
@@ -4975,5 +4966,15 @@
     "price": 14.279999732971191,
     "change_pct": -2.85714467366536,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T12:29:33Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.53000020980835,
+    "change_pct": -0.3603565800297336,
+    "value": 2
   }
 ]
