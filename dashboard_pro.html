@@ -188,6 +188,7 @@ input[type=password]{letter-spacing:2px}
 .sname{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--cyan)}
 .sfull{font-size:12px;color:var(--text2)}
 .smkt{font-size:10px;padding:2px 7px;border-radius:3px;background:rgba(255,255,255,0.06);color:var(--text2);font-family:var(--mono)}
+.ssector{font-size:10px;padding:2px 7px;border-radius:3px;background:rgba(224,64,251,0.1);border:1px solid rgba(224,64,251,0.25);color:var(--purple);font-family:var(--mono);white-space:nowrap;cursor:default}
 .symbody{display:none;padding:12px 14px;border-top:1px solid var(--border)}
 .symbody.open{display:block}
 
@@ -1909,6 +1910,17 @@ function getSymbolSector(symbol, uniEntry, overrides) {
   return 'อื่นๆ / ยังไม่จัดกลุ่ม';
 }
 
+// Badge เล็กๆ แสดง Sector ต่อท้าย Market (US/CRYPTO/TH) ในหน้า "รายชื่อหุ้น"
+// ใช้ logic เดียวกับ tab Sector Flow เป๊ะ (override -> last_sector จริง -> preset
+// -> อื่นๆ) เพื่อให้สีและชื่อ sector ตรงกันทั้ง 2 มุมมอง ไม่ขัดแย้งกันเอง
+function wlSectorBadge(symbol) {
+  const upper = (symbol || '').toUpperCase();
+  const uniEntry = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === upper) || null;
+  const overrides = _sflowLoadOverrides();
+  const sector = getSymbolSector(upper, uniEntry, overrides);
+  return `<span class="ssector" title="Sector/Industry — แก้ไขได้ที่ tab กลุ่มหุ้น (Sector Flow)">${sector}</span>`;
+}
+
 function sflowChangeUser(symbol, newSector) {
   const overrides = _sflowLoadOverrides();
   overrides[(symbol || '').toUpperCase()] = newSector;
@@ -2012,6 +2024,7 @@ function renderWL() {
         <span class="sname">${s.symbol}</span>
         <span class="sfull">${s.name}</span>
         <span class="smkt">${s.market}</span>
+        ${wlSectorBadge(s.symbol)}
         <span style="font-size:11px;color:var(--text3);font-family:var(--mono)">${s.alerts.length} alerts</span>
         ${wlUniStats(s.symbol)}
         <label onclick="event.stopPropagation()" style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);margin-left:auto;cursor:pointer">
