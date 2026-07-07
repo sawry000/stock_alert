@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T00:04:27Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_BT_VOL",
-    "type": "backtest_check",
-    "price": 326.92999267578125,
-    "change_pct": -1.5271106398249248,
-    "value": 87.5
-  },
-  {
     "timestamp": "2026-06-29T00:04:34Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_CP_BULL",
@@ -4983,5 +4974,15 @@
     "price": 1547.239990234375,
     "change_pct": -8.423630955683793,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-07T14:19:02Z",
+    "symbol": "VSEC",
+    "alert_id": "VSEC_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 220.60000610351562,
+    "change_pct": -7.481963553298261,
+    "value": -7.481963553298261
   }
 ]
