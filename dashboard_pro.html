@@ -624,8 +624,10 @@ input[type=password]{letter-spacing:2px}
         <div class="sflow-note">
           <span class="msi" style="font-size:13px;vertical-align:middle;color:var(--cyan)">info</span>
           จัดกลุ่มหุ้นใน Watchlist ตาม Sector/Industry จริง (จาก daily_screener.py) — ถ้าหุ้นตัวไหนยังไม่เคยถูก scan
-          จะใช้การจัดกลุ่มสำรองแบบ preset แทนชั่วคราว แล้วเรียงจาก <strong style="color:var(--text)">% เปลี่ยนแปลงราคาเฉลี่ยของกลุ่มวันนี้ (มากไปน้อย)</strong>
-          เป็นตัวชี้วัดคร่าวๆ ว่าวันนี้เงินไหลเข้ากลุ่มไหน — กด <span class="msi" style="font-size:12px;vertical-align:middle">sync</span> Sync ที่ Universe Manager ก่อน เพื่อให้ข้อมูลล่าสุด
+          จะใช้การจัดกลุ่มสำรองแบบ preset แทนชั่วคราว แล้วเรียงจาก <strong style="color:var(--text)">% เปลี่ยนแปลงราคาถ่วงน้ำหนักด้วยมูลค่าซื้อขายจริง (dollar volume)</strong>
+          ของกลุ่มวันนี้ (มากไปน้อย) — ป้าย <strong style="color:var(--gold)">$-weighted</strong> แปลว่ากลุ่มนั้นคำนวณด้วยมูลค่าเงินจริงแล้ว ไม่ใช่แค่ % เฉลี่ยเปล่าๆ
+          ข้อมูลนี้ยังไม่ real-time — อัปเดตทุกครั้งที่ <strong>alert-engine</strong> หรือ <strong>daily-screener</strong> รันรอบล่าสุด (ไม่ใช่ตอนนี้เป๊ะๆ)
+          และเป็นแค่ตัวชี้วัดโมเมนตัม/มูลค่าซื้อขาย ไม่ใช่ order flow ของสถาบันจริง — กด <span class="msi" style="font-size:12px;vertical-align:middle">sync</span> Sync ที่ Universe Manager ก่อน เพื่อให้ข้อมูลล่าสุด
         </div>
         <div id="sflow-cards"></div>
       </div>
@@ -1928,6 +1930,16 @@ function sflowChangeUser(symbol, newSector) {
   renderSectorFlow();
 }
 
+// จัดรูปตัวเลขเงินให้อ่านง่าย เช่น 303750000 -> "$303.8M", 1250000000 -> "$1.25B"
+function fmtUsdCompact(n) {
+  if (n == null || isNaN(n)) return '-';
+  const abs = Math.abs(n);
+  if (abs >= 1e9) return '$' + (n / 1e9).toFixed(2) + 'B';
+  if (abs >= 1e6) return '$' + (n / 1e6).toFixed(1) + 'M';
+  if (abs >= 1e3) return '$' + (n / 1e3).toFixed(0) + 'K';
+  return '$' + n.toFixed(0);
+}
+
 function renderSectorFlow() {
   const wrap = document.getElementById('sflow-cards');
   if (!wrap) return;
@@ -1937,32 +1949,52 @@ function renderSectorFlow() {
   }
 
   const overrides = _sflowLoadOverrides();
-  const groups = {}; // sectorName -> { symbols:[], changes:[], vols:[] }
+  const groups = {}; // sectorName -> { symbols:[], records:[{chg, dv, vol}] }
 
   WL.watchlist.forEach(s => {
     const upper = (s.symbol || '').toUpperCase();
     const uniEntry = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === upper) || null;
     const sector = getSymbolSector(upper, uniEntry, overrides);
-    if (!groups[sector]) groups[sector] = { symbols: [], changes: [], vols: [] };
+    if (!groups[sector]) groups[sector] = { symbols: [], records: [] };
     groups[sector].symbols.push(upper);
     const chg = uniEntry && typeof uniEntry.last_change_pct === 'number' ? uniEntry.last_change_pct : null;
     const vol = uniEntry && typeof uniEntry.last_vol_ratio === 'number' ? uniEntry.last_vol_ratio : null;
-    if (chg !== null) groups[sector].changes.push(chg);
-    if (vol !== null) groups[sector].vols.push(vol);
+    // last_dollar_volume = ราคา x ปริมาณซื้อขายวันนี้ (เขียนจาก daily_screener.py
+    // และ alert_engine.py) ใช้เป็นน้ำหนักถ่วง (weight) ตอนเฉลี่ย % เปลี่ยนแปลง
+    // กัน sector ที่มีหุ้นเล็กปริมาณน้อยแต่ % ขึ้นแรง ไปแซงหน้า sector ที่เงิน
+    // หมุนจริงเยอะกว่ามากแต่ % ขึ้นน้อยกว่า — นี่คือส่วนที่ทำให้ใกล้เคียง
+    // "เงินไหลเข้ากลุ่มไหนจริง" มากกว่าดูแค่ % เฉลี่ยเปล่าๆ
+    const dv = uniEntry && typeof uniEntry.last_dollar_volume === 'number' ? uniEntry.last_dollar_volume : null;
+    groups[sector].records.push({ chg, dv, vol });
   });
 
   const rows = Object.keys(groups).map(name => {
     const g = groups[name];
-    const hasData = g.changes.length > 0;
-    const avgChange = hasData ? g.changes.reduce((a, b) => a + b, 0) / g.changes.length : null;
-    const avgVol = g.vols.length ? g.vols.reduce((a, b) => a + b, 0) / g.vols.length : null;
-    const gainers = g.changes.filter(c => c > 0).length;
-    const losers  = g.changes.filter(c => c < 0).length;
-    return { name, count: g.symbols.length, symbols: g.symbols, avgChange, avgVol, gainers, losers, hasData };
+    const withChange = g.records.filter(r => r.chg !== null);
+    const hasData = withChange.length > 0;
+
+    const weightable = withChange.filter(r => r.dv !== null && r.dv > 0);
+    let avgChange = null;
+    let weighted = false;
+    if (weightable.length > 0) {
+      const sumDv = weightable.reduce((a, r) => a + r.dv, 0);
+      avgChange = weightable.reduce((a, r) => a + r.chg * r.dv, 0) / sumDv;
+      weighted = true;
+    } else if (hasData) {
+      avgChange = withChange.reduce((a, r) => a + r.chg, 0) / withChange.length;
+    }
+
+    const totalDollarVol = g.records.reduce((a, r) => a + (r.dv || 0), 0);
+    const vols = g.records.filter(r => r.vol !== null).map(r => r.vol);
+    const avgVol = vols.length ? vols.reduce((a, b) => a + b, 0) / vols.length : null;
+    const gainers = withChange.filter(r => r.chg > 0).length;
+    const losers  = withChange.filter(r => r.chg < 0).length;
+    return { name, count: g.symbols.length, symbols: g.symbols, avgChange, avgVol, totalDollarVol, gainers, losers, hasData, weighted };
   });
 
   // เรียงกลุ่มที่มีข้อมูล % เปลี่ยนแปลงจริงไว้บนสุด (มากไปน้อย = เงินไหลเข้ามากสุดก่อน)
-  // กลุ่มที่ยังไม่มีข้อมูล (รอ screener scan รอบถัดไป) ไปอยู่ท้ายสุด
+  // ถ้ามี dollar volume ครบ จะเรียงตามค่าถ่วงน้ำหนักด้วยเงินจริง (แม่นกว่า)
+  // กลุ่มที่ยังไม่มีข้อมูล (รอ screener/alert-engine scan รอบถัดไป) ไปอยู่ท้ายสุด
   rows.sort((a, b) => {
     if (a.hasData && b.hasData) return b.avgChange - a.avgChange;
     if (a.hasData) return -1;
@@ -1980,6 +2012,8 @@ function renderSectorFlow() {
     const barPct = r.hasData ? Math.min(100, (Math.abs(r.avgChange) / maxAbsChange) * 100) : 0;
     const barColor = !r.hasData ? 'var(--text3)' : (r.avgChange >= 0 ? 'var(--green)' : 'var(--red)');
     const volLabel = r.avgVol != null ? `Vol เฉลี่ย ${r.avgVol.toFixed(2)}x` : 'Vol: -';
+    const dvLabel = r.totalDollarVol > 0 ? `มูลค่าซื้อขายรวม ${fmtUsdCompact(r.totalDollarVol)}` : '';
+    const weightTag = r.weighted ? '<span title="เฉลี่ยถ่วงน้ำหนักด้วยมูลค่าซื้อขายจริง (dollar volume)" style="color:var(--gold);font-size:9px;border:1px solid rgba(255,213,79,0.3);border-radius:3px;padding:0 4px;margin-left:4px">$-weighted</span>' : '';
     const flowLabel = r.hasData
       ? `📈${r.gainers} 📉${r.losers}`
       : '';
@@ -1996,8 +2030,8 @@ function renderSectorFlow() {
     return `<div class="sflow-row">
       <div class="sflow-top">
         <span class="sflow-rank">#${idx + 1}</span>
-        <span class="sflow-name">${r.name}</span>
-        <span class="sflow-cnt">${r.count} ตัว · ${volLabel} ${flowLabel ? '· ' + flowLabel : ''}</span>
+        <span class="sflow-name">${r.name}${weightTag}</span>
+        <span class="sflow-cnt">${r.count} ตัว · ${volLabel}${dvLabel ? ' · ' + dvLabel : ''} ${flowLabel ? '· ' + flowLabel : ''}</span>
         <span class="sflow-chg" style="color:${chgColor}">${chgLabel}</span>
       </div>
       <div class="sflow-bar-wrap">

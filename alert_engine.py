@@ -380,6 +380,11 @@ def sync_universe_tech(universe_data, uni_cfg, symbol, quote):
         avg_volume = quote.get("avg_volume") or 0
         today_vol  = quote.get("volume") or 0
         vol_ratio  = (today_vol / avg_volume) if avg_volume > 0 else 1.0
+        # change_pct มีอยู่แล้วใน quote (คำนวณตอน fetch_quote() ไม่ต้องยิง
+        # yfinance เพิ่ม) — ใช้ต่อเพื่อเขียนกลับ last_change_pct/last_dollar_volume
+        # ทำให้ Sector Flow ใน dashboard อัปเดตทุกครั้งที่ alert-engine รัน
+        # (ถี่กว่า daily-screener มาก) แทนที่จะรอ scan รอบใหญ่วันละ 1-2 ครั้ง
+        change_pct = quote.get("change_pct") or 0.0
 
         entry = _uni_find_entry(universe_data, symbol)
         gate  = _uni_eval_gate(entry, price, adr_pct, avg_volume, rsi, vol_ratio, above_ema50, uni_cfg)
@@ -393,6 +398,8 @@ def sync_universe_tech(universe_data, uni_cfg, symbol, quote):
             last_above_ema50 = bool(above_ema50),
             last_gate        = gate,
             last_scanned     = now_str(),
+            last_change_pct     = _clean_num(round(change_pct, 2)),
+            last_dollar_volume   = _clean_num(round(price * today_vol, 2)),
         )
     except Exception as e:
         print(f"  [{symbol}] universe.json sync error (ข้าม ไม่กระทบ alert check): {e}")

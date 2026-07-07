@@ -1282,6 +1282,12 @@ def main():
             last_sector=data["sector"],
             last_industry=data["industry"],
             last_change_pct=data["change_pct"],
+            # Dollar volume (ราคา x ปริมาณซื้อขายวันนี้) = มูลค่าเงินที่หมุนจริง
+            # ใช้เป็นตัวถ่วงน้ำหนัก (weight) ตอนเฉลี่ย % เปลี่ยนแปลงของแต่ละ sector
+            # กัน sector ที่มีแค่หุ้นเล็กๆ ปริมาณน้อยแต่ % ขึ้นแรง ไปแซงหน้า sector
+            # ที่มีเงินหมุนจริงเยอะกว่ามาก แต่ % ขึ้นน้อยกว่า — ไม่ใช้ yfinance
+            # เพิ่ม เพราะ price/volume มีอยู่แล้วใน data ของฟังก์ชันนี้
+            last_dollar_volume=round(data["price"] * data["volume"], 2),
         )
 
         passed, gates = run_gates(sym, data, halal, cfg)
