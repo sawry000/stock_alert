@@ -1,23 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T02:08:39Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP_5",
-    "type": "percent_change",
-    "price": 10.5600004196167,
-    "change_pct": 8.418895478610873,
-    "value": 8.418895478610873
-  },
-  {
-    "timestamp": "2026-06-29T02:09:08Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_UP_5",
-    "type": "percent_change",
-    "price": 119.25,
-    "change_pct": 8.87428101889893,
-    "value": 8.87428101889893
-  },
-  {
     "timestamp": "2026-06-29T02:09:25Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_PCT_UP_5",
@@ -4995,5 +4977,25 @@
     "price": 18.260000228881836,
     "change_pct": -0.9793595171424138,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-07T18:24:41Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7400000095367432,
+    "change_pct": 1.162791252136232,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-07T18:24:47Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.585000038146973,
+    "change_pct": -1.3978486420005956,
+    "value": 3
   }
 ]
