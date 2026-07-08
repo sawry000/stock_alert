@@ -1733,12 +1733,16 @@
   },
   "BLIN": {
     "BLIN_MTF_BULL": {
-      "last_fired": "2026-07-07T10:15:04Z"
+      "last_fired": "2026-07-08T08:19:49Z"
     },
-    "last_buy_at": "2026-07-07T10:15:04Z",
-    "open_entry": 1.3600000143051147,
-    "open_time": "2026-07-07T10:15:04Z",
-    "_confirm_BLIN_MTF_BULL": 1
+    "last_buy_at": "2026-07-08T08:19:49Z",
+    "open_entry": 1.2899999618530273,
+    "open_time": "2026-07-08T08:19:49Z",
+    "open_peak": 1.2899999618530273,
+    "open_stop": 1.0965,
+    "open_target": 1.3932,
+    "open_conviction": 4,
+    "open_alert_type": "mtf_alignment"
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
