@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T13:48:48Z",
-    "symbol": "TGEN",
-    "alert_id": "TGEN_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 5.420000076293945,
-    "change_pct": 6.274511299881288,
-    "value": 6.274511299881288
-  },
-  {
-    "timestamp": "2026-06-29T13:53:51Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 35.56999969482422,
-    "change_pct": -7.442103318177937,
-    "value": -7.442103318177937
-  },
-  {
     "timestamp": "2026-06-29T13:58:31Z",
     "symbol": "COHR",
     "alert_id": "COHR_PCT_DROP",
@@ -4998,5 +4978,25 @@
     "price": 6.289999961853027,
     "change_pct": 0.963081249647302,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-08T10:19:11Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.609999895095825,
+    "change_pct": 3.142854145595005,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-08T10:19:18Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.290000915527344,
+    "change_pct": -0.816671282239494,
+    "value": 2
   }
 ]
