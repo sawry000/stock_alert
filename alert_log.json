@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T21:58:50Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 36.04499816894531,
-    "change_pct": -6.206093757623439,
-    "value": -6.206093757623439
-  },
-  {
     "timestamp": "2026-06-30T06:03:46Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_DROP",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 18.34000015258789,
     "change_pct": 1.8888897365993924,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-08T18:24:18Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.5450000762939453,
+    "change_pct": -2.876710238522044,
     "value": 3
   }
 ]
