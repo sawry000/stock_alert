@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T14:08:42Z",
-    "symbol": "FLNC",
-    "alert_id": "FLNC_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 18.260000228881836,
-    "change_pct": -5.232946192026096,
-    "value": -5.232946192026096
-  },
-  {
     "timestamp": "2026-06-29T14:08:56Z",
     "symbol": "UAMY",
     "alert_id": "UAMY_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 13.920000076293945,
     "change_pct": 5.480886881002462e-07,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-08T13:36:08Z",
+    "symbol": "RFIL",
+    "alert_id": "RFIL_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 17.049999237060547,
+    "change_pct": -3.943666270081426,
+    "value": 0
   }
 ]
