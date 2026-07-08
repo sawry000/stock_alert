@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T18:48:46Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 2.8450000286102295,
-    "change_pct": -5.16666571299235,
-    "value": -5.16666571299235
-  },
-  {
-    "timestamp": "2026-06-29T19:24:04Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 4.715000152587891,
-    "change_pct": 6.193697130357887,
-    "value": 6.193697130357887
-  },
-  {
     "timestamp": "2026-06-29T19:38:31Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -4997,6 +4977,26 @@
     "action": "BUY",
     "price": 75.47589874267578,
     "change_pct": 4.104687920932112,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-08T18:04:14Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 19.43000030517578,
+    "change_pct": 4.91360855926448,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-08T18:04:41Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.40500020980835,
+    "change_pct": -0.4604012926639063,
     "value": 2
   }
 ]
