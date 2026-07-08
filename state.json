@@ -501,7 +501,7 @@
       "last_fired": "2026-05-27T09:52:59Z"
     },
     "HIMS_MTF_BULL": {
-      "last_fired": "2026-07-07T18:13:49Z"
+      "last_fired": "2026-07-08T08:04:00Z"
     },
     "HIMS_PCT_UP_5": {
       "last_fired": "2026-06-26T19:28:13Z"
@@ -529,9 +529,14 @@
       "last_fired": "2026-06-25T13:48:29Z"
     },
     "open_position": true,
-    "open_entry": 37.15999984741211,
-    "open_time": "2026-07-07T18:13:49Z",
-    "last_buy_at": "2026-07-07T18:13:49Z"
+    "open_entry": 36.16999816894531,
+    "open_time": "2026-07-08T08:04:00Z",
+    "last_buy_at": "2026-07-08T08:04:00Z",
+    "open_peak": 36.16999816894531,
+    "open_stop": 30.9796,
+    "open_target": 39.0636,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "IOVA": {
     "IOVA_BREAK_ABOVE": {
