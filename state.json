@@ -1559,18 +1559,17 @@
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
-      "last_fired": "2026-07-08T06:39:51Z"
+      "last_fired": "2026-07-08T14:49:27Z"
     },
     "open_position": true,
-    "open_entry": 1.7100000381469727,
-    "open_time": "2026-07-08T06:39:51Z",
-    "last_buy_at": "2026-07-08T06:39:51Z",
-    "open_peak": 1.7100000381469727,
-    "open_stop": 1.4535,
-    "open_target": 1.8468,
+    "open_entry": 1.7050000429153442,
+    "open_time": "2026-07-08T14:49:27Z",
+    "last_buy_at": "2026-07-08T14:49:27Z",
+    "open_peak": 1.7050000429153442,
+    "open_stop": 1.4493,
+    "open_target": 1.8414,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_ZVIA_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1730,20 +1729,19 @@
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
-      "last_fired": "2026-07-08T06:44:37Z"
+      "last_fired": "2026-07-08T14:49:51Z"
     },
-    "last_buy_at": "2026-07-08T06:44:37Z",
-    "open_entry": 1.909999966621399,
-    "open_time": "2026-07-08T06:44:37Z",
+    "last_buy_at": "2026-07-08T14:49:51Z",
+    "open_entry": 1.850000023841858,
+    "open_time": "2026-07-08T14:49:51Z",
     "EVTV_MA_GOLD": {
       "last_fired": "2026-07-07T14:29:37Z"
     },
-    "open_peak": 1.909999966621399,
-    "open_stop": 1.6235,
-    "open_target": 2.0628,
-    "open_conviction": 4,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_EVTV_MTF_BULL": 1
+    "open_peak": 1.850000023841858,
+    "open_stop": 1.5725,
+    "open_target": 1.998,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "BLIN": {
     "BLIN_MTF_BULL": {

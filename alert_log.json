@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T15:34:15Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 7.052199840545654,
-    "change_pct": 6.048117902942164,
-    "value": 6.048117902942164
-  },
-  {
-    "timestamp": "2026-06-29T16:09:41Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 2014.8907470703125,
-    "change_pct": -4.4627219847078825,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-29T16:28:47Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_PCT_UP",
@@ -4998,5 +4978,25 @@
     "price": 92.66500091552734,
     "change_pct": 1.4208672247767744,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-08T14:49:27Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7050000429153442,
+    "change_pct": -0.1990141117218263,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-08T14:49:51Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.850000023841858,
+    "change_pct": 0.5434795566227082,
+    "value": 3
   }
 ]
