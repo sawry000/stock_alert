@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T13:44:20Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 131.764404296875,
-    "change_pct": 2.9409408569335938,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-29T13:48:32Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_PCT_UP",
@@ -4998,5 +4988,15 @@
     "price": 1.2899999618530273,
     "change_pct": 1.5748001459076635,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-08T08:44:56Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.409999847412109,
+    "change_pct": -3.4600428745376086e-06,
+    "value": 2
   }
 ]
