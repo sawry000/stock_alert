@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T19:38:31Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 1.8600000143051147,
-    "change_pct": -6.532662597732927,
-    "value": -6.532662597732927
-  },
-  {
     "timestamp": "2026-06-29T19:43:29Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_RSI_OS",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 5.40500020980835,
     "change_pct": -0.4604012926639063,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-08T18:13:58Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.159999847412109,
+    "change_pct": -1.9108337322794828,
     "value": 2
   }
 ]
