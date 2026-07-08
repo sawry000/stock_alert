@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T14:13:51Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 20.280799865722656,
-    "change_pct": -6.0203898715354125,
-    "value": -6.0203898715354125
-  },
-  {
     "timestamp": "2026-06-29T14:18:40Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 18.8799991607666,
     "change_pct": 1.9438399609427752,
     "value": 0.01
+  },
+  {
+    "timestamp": "2026-07-08T14:14:46Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 1668.6650390625,
+    "change_pct": 5.6785965207409745,
+    "value": 0
   }
 ]
