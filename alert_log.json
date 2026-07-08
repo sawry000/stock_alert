@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T16:28:47Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 4.375,
-    "change_pct": 6.434740299233669,
-    "value": 6.434740299233669
-  },
-  {
     "timestamp": "2026-06-29T16:48:53Z",
     "symbol": "ANNA",
     "alert_id": "ANNA_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 1.850000023841858,
     "change_pct": 0.5434795566227082,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-08T15:24:18Z",
+    "symbol": "BOBS",
+    "alert_id": "BOBS_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 14.600000381469727,
+    "change_pct": -10.703361581224922,
+    "value": -10.703361581224922
   }
 ]
