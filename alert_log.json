@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T14:13:25Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 344.0,
-    "change_pct": -9.208477394494441,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-06-29T14:13:47Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 9.9399995803833,
-    "change_pct": -5.333337329682849,
-    "value": -5.333337329682849
-  },
-  {
     "timestamp": "2026-06-29T14:13:51Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_PCT_DROP",
@@ -4998,5 +4978,25 @@
     "price": 109.88300323486328,
     "change_pct": 2.4072723530878695,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-08T13:59:14Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 2.734999895095825,
+    "change_pct": -5.689658789799128,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-08T13:59:54Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 18.8799991607666,
+    "change_pct": 1.9438399609427752,
+    "value": 0.01
   }
 ]

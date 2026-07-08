@@ -411,16 +411,15 @@
     },
     "open_position": false,
     "LNAI_MA_DEATH": {
-      "last_fired": "2026-06-10T13:32:54Z"
+      "last_fired": "2026-07-08T13:59:14Z"
     },
-    "open_entry": 3.6500000953674316,
-    "open_time": "2026-06-25T13:37:49Z",
     "LNAI_NEWS_POS": {
       "last_fired": "2026-06-17T10:47:50Z",
       "seen_news": [
         "37fed1e025f8"
       ]
-    }
+    },
+    "last_sell_at": "2026-07-08T13:59:14Z"
   },
   "XMTR": {
     "XMTR_POS_SIZE": {
@@ -839,14 +838,17 @@
       "last_fired": "2026-06-22T14:49:21Z"
     },
     "open_position": true,
-    "open_entry": 18.59000015258789,
-    "open_time": "2026-07-08T06:39:28Z",
-    "last_buy_at": "2026-07-08T06:39:28Z",
-    "open_peak": 18.59000015258789,
-    "open_stop": 15.914,
-    "open_target": 20.0772,
+    "open_entry": 18.8799991607666,
+    "open_time": "2026-07-08T13:59:54Z",
+    "last_buy_at": "2026-07-08T13:59:54Z",
+    "open_peak": 18.8799991607666,
+    "open_stop": 16.2664,
+    "open_target": 20.3904,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "ma_crossover",
+    "FSLY_MA_GOLD": {
+      "last_fired": "2026-07-08T13:59:54Z"
+    }
   },
   "DOMO": {
     "DOMO_MA_GOLDEN": {
