@@ -426,7 +426,7 @@
       "last_fired": "2026-06-10T15:52:58Z"
     },
     "XMTR_MTF_BULL": {
-      "last_fired": "2026-07-08T06:38:47Z"
+      "last_fired": "2026-07-08T14:43:51Z"
     },
     "XMTR_CP_BULL": {
       "last_fired": "2026-06-25T14:07:53Z"
@@ -453,12 +453,12 @@
       ]
     },
     "open_position": true,
-    "open_entry": 93.0999984741211,
-    "open_time": "2026-07-08T06:38:47Z",
-    "last_buy_at": "2026-07-08T06:38:47Z",
-    "open_peak": 93.0999984741211,
-    "open_stop": 82.944,
-    "open_target": 100.548,
+    "open_entry": 92.66500091552734,
+    "open_time": "2026-07-08T14:43:51Z",
+    "last_buy_at": "2026-07-08T14:43:51Z",
+    "open_peak": 92.66500091552734,
+    "open_stop": 82.684,
+    "open_target": 100.0782,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment"
   },
@@ -1569,7 +1569,8 @@
     "open_stop": 1.4535,
     "open_target": 1.8468,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_ZVIA_MTF_BULL": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1741,7 +1742,8 @@
     "open_stop": 1.6235,
     "open_target": 2.0628,
     "open_conviction": 4,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_EVTV_MTF_BULL": 1
   },
   "BLIN": {
     "BLIN_MTF_BULL": {
