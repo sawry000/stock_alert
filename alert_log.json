@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T19:43:29Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_RSI_OS",
-    "type": "rsi",
-    "action": "BUY",
-    "price": 1.9149999618530273,
-    "change_pct": -3.768846138038826,
-    "value": 25.51
-  },
-  {
     "timestamp": "2026-06-29T21:58:50Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 6.159999847412109,
     "change_pct": -1.9108337322794828,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-08T18:19:36Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.34000015258789,
+    "change_pct": 1.8888897365993924,
+    "value": 3
   }
 ]
