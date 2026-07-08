@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T14:18:40Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 86.43499755859375,
-    "change_pct": -5.276715004280822,
-    "value": -5.276715004280822
-  },
-  {
     "timestamp": "2026-06-29T14:19:25Z",
     "symbol": "VECO",
     "alert_id": "VECO_PCT_DROP",
@@ -4997,6 +4987,16 @@
     "action": "SELL",
     "price": 1668.6650390625,
     "change_pct": 5.6785965207409745,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-08T14:24:47Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 110.05999755859375,
+    "change_pct": 4.164298276162932,
     "value": 0
   }
 ]
