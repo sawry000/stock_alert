@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T14:08:34Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 26.719999313354492,
-    "change_pct": -5.948612061406223,
-    "value": -5.948612061406223
-  },
-  {
     "timestamp": "2026-06-29T14:08:42Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_PCT_DROP",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 27.25,
     "change_pct": 1.0082289272740694,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-08T12:10:05Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 13.920000076293945,
+    "change_pct": 5.480886881002462e-07,
     "value": 3
   }
 ]
