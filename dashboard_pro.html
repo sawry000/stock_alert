@@ -180,12 +180,17 @@ input[type=password]{letter-spacing:2px}
 .sflow-bar-wrap{height:7px;background:var(--bg3);border-radius:4px;overflow:hidden;position:relative;margin-bottom:8px}
 .sflow-bar{height:100%;border-radius:4px;transition:width 0.4s ease}
 .sflow-syms{display:flex;flex-wrap:wrap;gap:6px}
-.sflow-sym-chip{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-family:var(--mono);
-  padding:3px 8px;border-radius:11px;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--text2);
-  cursor:pointer}
-.sflow-sym-chip:hover{border-color:var(--cyan);color:var(--cyan)}
+.sflow-sym-chip{display:flex;flex-direction:column;gap:4px;font-size:10.5px;font-family:var(--mono);
+  padding:6px 9px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--text2);
+  cursor:pointer;min-width:128px}
+.sflow-sym-chip:hover{border-color:var(--cyan)}
+.sflow-sym-top{display:flex;align-items:center;gap:6px}
+.sflow-sym-top strong{color:var(--text);font-size:11px;letter-spacing:0.2px}
+.sflow-sym-price{color:var(--text2)}
+.sflow-sym-chgv{margin-left:auto;font-weight:700}
+.sflow-sym-updated{font-size:9px;color:var(--text3);display:flex;align-items:center;gap:3px}
 .sflow-edit-sel{font-size:10px;font-family:var(--mono);background:var(--bg);color:var(--text2);
-  border:1px solid var(--border2);border-radius:4px;padding:1px 3px}
+  border:1px solid var(--border2);border-radius:4px;padding:1px 3px;width:100%}
 
 /* SYMBOL CARD */
 .symcard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;transition:border-color 0.2s}
@@ -1984,13 +1989,13 @@ function renderSectorFlow() {
   }
 
   const overrides = _sflowLoadOverrides();
-  const groups = {}; // sectorName -> { symbols:[], records:[{chg, dv, vol}] }
+  const groups = {}; // sectorName -> { symbols:[], symbolInfo:[{symbol,price,chg,updatedAt}], records:[{chg, dv, vol}] }
 
   WL.watchlist.forEach(s => {
     const upper = (s.symbol || '').toUpperCase();
     const uniEntry = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === upper) || null;
     const sector = getSymbolSector(upper, uniEntry, overrides);
-    if (!groups[sector]) groups[sector] = { symbols: [], records: [] };
+    if (!groups[sector]) groups[sector] = { symbols: [], symbolInfo: [], records: [] };
     groups[sector].symbols.push(upper);
     const chg = uniEntry && typeof uniEntry.last_change_pct === 'number' ? uniEntry.last_change_pct : null;
     const vol = uniEntry && typeof uniEntry.last_vol_ratio === 'number' ? uniEntry.last_vol_ratio : null;
@@ -2001,12 +2006,19 @@ function renderSectorFlow() {
     // "เงินไหลเข้ากลุ่มไหนจริง" มากกว่าดูแค่ % เฉลี่ยเปล่าๆ
     const dv = uniEntry && typeof uniEntry.last_dollar_volume === 'number' ? uniEntry.last_dollar_volume : null;
     groups[sector].records.push({ chg, dv, vol });
+    // เก็บราคา/%เปลี่ยนแปลง/เวลาอัปเดตล่าสุด รายตัว เพื่อแสดงใน chip แต่ละหุ้น
+    // ใน tab Sector Flow (last_scanned = ตอน daily_screener.py scan รอบล่าสุด,
+    // fallback ไป last_checked ถ้ายังไม่เคยมี last_scanned)
+    const price = uniEntry && typeof uniEntry.last_price === 'number' ? uniEntry.last_price : null;
+    const updatedAt = (uniEntry && (uniEntry.last_scanned || uniEntry.last_checked)) || null;
+    groups[sector].symbolInfo.push({ symbol: upper, price, chg, updatedAt });
   });
 
   const rows = Object.keys(groups).map(name => {
     const g = groups[name];
     const withChange = g.records.filter(r => r.chg !== null);
     const hasData = withChange.length > 0;
+
 
     const weightable = withChange.filter(r => r.dv !== null && r.dv > 0);
     let avgChange = null;
@@ -2024,7 +2036,7 @@ function renderSectorFlow() {
     const avgVol = vols.length ? vols.reduce((a, b) => a + b, 0) / vols.length : null;
     const gainers = withChange.filter(r => r.chg > 0).length;
     const losers  = withChange.filter(r => r.chg < 0).length;
-    return { name, count: g.symbols.length, symbols: g.symbols, avgChange, avgVol, totalDollarVol, gainers, losers, hasData, weighted };
+    return { name, count: g.symbols.length, symbols: g.symbols, symbolInfo: g.symbolInfo, avgChange, avgVol, totalDollarVol, gainers, losers, hasData, weighted };
   });
 
   // เรียงกลุ่มที่มีข้อมูล % เปลี่ยนแปลงจริงไว้บนสุด (มากไปน้อย = เงินไหลเข้ามากสุดก่อน)
@@ -2068,12 +2080,26 @@ function renderSectorFlow() {
     const flowLabel = r.hasData
       ? `📈${r.gainers} 📉${r.losers}`
       : '';
-    const chips = r.symbols.map(sym => {
+    const chips = r.symbolInfo.map(info => {
+      const sym = info.symbol;
       const optsHtml = ALL_GROUP_OPTIONS.map(g =>
         `<option value="${g}" ${g === r.name ? 'selected' : ''}>${g}</option>`
       ).join('');
-      return `<span class="sflow-sym-chip" title="เปลี่ยนกลุ่มของ ${sym}">
-        ${sym}
+      // ราคา/% เปลี่ยนแปลง/เวลาอัปเดตล่าสุด รายตัว — มาจาก last_price/
+      // last_change_pct/last_scanned (หรือ last_checked) ใน universe.json
+      // ซึ่งเขียนจาก daily_screener.py ทุกเช้า (ดู FIX ด้านบนที่เพิ่ง
+      // เติม field พวกนี้ให้ครบทุกตัวใน watchlist แล้ว)
+      const symChgColor = info.chg == null ? 'var(--text3)' : (info.chg >= 0 ? 'var(--green)' : 'var(--red)');
+      const symChgStr   = info.chg != null ? `${info.chg >= 0 ? '+' : ''}${info.chg.toFixed(2)}%` : '-';
+      const symPriceStr = info.price != null ? `$${info.price.toFixed(2)}` : '-';
+      const symUpdatedStr = uniFmtChecked(info.updatedAt) || 'ยังไม่เคย scan';
+      return `<span class="sflow-sym-chip" title="เปลี่ยนกลุ่มของ ${sym} · อัปเดตล่าสุด ${symUpdatedStr}">
+        <span class="sflow-sym-top">
+          <strong>${sym}</strong>
+          <span class="sflow-sym-price">${symPriceStr}</span>
+          <span class="sflow-sym-chgv" style="color:${symChgColor}">${symChgStr}</span>
+        </span>
+        <span class="sflow-sym-updated"><span class="msi" style="font-size:9px;vertical-align:-1px">schedule</span> ${symUpdatedStr}</span>
         <select class="sflow-edit-sel" onclick="event.stopPropagation()" onchange="sflowChangeUser('${sym}', this.value)">${optsHtml}</select>
       </span>`;
     }).join('');
