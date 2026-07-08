@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:53:35Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 105.45999908447266,
-    "change_pct": 12.550692726224815,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T06:53:37Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 150.10000610351562,
-    "change_pct": 12.069961297051552,
-    "value": 12.069961297051552
-  },
-  {
     "timestamp": "2026-06-30T06:53:38Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_RSI_OS",
@@ -4998,5 +4978,25 @@
     "price": 111.79000091552734,
     "change_pct": 4.184530210183921,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-08T22:54:28Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7000000476837158,
+    "change_pct": -0.4916853381107527,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-08T22:54:52Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.8600000143051147,
+    "change_pct": 1.0869572991910144,
+    "value": 2
   }
 ]
