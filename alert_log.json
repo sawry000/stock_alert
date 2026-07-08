@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T13:48:32Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 142.5749969482422,
-    "change_pct": 6.451523918642275,
-    "value": 6.451523918642275
-  },
-  {
     "timestamp": "2026-06-29T13:48:48Z",
     "symbol": "TGEN",
     "alert_id": "TGEN_PCT_UP",
@@ -4998,5 +4988,15 @@
     "price": 4.409999847412109,
     "change_pct": -3.4600428745376086e-06,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-08T10:13:50Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.289999961853027,
+    "change_pct": 0.963081249647302,
+    "value": 3
   }
 ]
