@@ -215,7 +215,7 @@
       "last_fired": "2026-06-29T02:07:41Z"
     },
     "NAVN_MTF_BULL": {
-      "last_fired": "2026-07-07T18:13:32Z"
+      "last_fired": "2026-07-08T02:18:31Z"
     },
     "NAVN_NEWS_POS": {
       "last_fired": "2026-06-28T00:02:45Z",
@@ -235,8 +235,8 @@
       "last_fired": "2026-06-17T05:47:38Z"
     },
     "open_position": true,
-    "open_entry": 27.719999313354492,
-    "open_time": "2026-07-07T18:13:32Z",
+    "open_entry": 27.25,
+    "open_time": "2026-07-08T02:18:31Z",
     "NAVN_VOL_SPIKE": {
       "last_fired": "2026-06-12T12:27:41Z"
     },
@@ -246,7 +246,12 @@
     "NAVN_VOL_ALARM": {
       "last_fired": "2026-06-12T13:17:36Z"
     },
-    "last_buy_at": "2026-07-07T18:13:32Z"
+    "last_buy_at": "2026-07-08T02:18:31Z",
+    "open_peak": 27.25,
+    "open_stop": 24.0049,
+    "open_target": 29.43,
+    "open_conviction": 4,
+    "open_alert_type": "mtf_alignment"
   },
   "ICHR": {
     "ICHR_POS_SIZE": {
@@ -850,8 +855,8 @@
     "DOMO_RSI_OS_4H": {
       "last_fired": "2026-06-18T16:23:52Z"
     },
-    "open_entry": 3.565000057220459,
-    "open_time": "2026-07-07T18:14:12Z",
+    "open_entry": 3.609999895095825,
+    "open_time": "2026-07-08T02:19:03Z",
     "DOMO_NEWS_BAD": {
       "last_fired": "2026-06-15T20:24:12Z",
       "seen_news": [
@@ -868,12 +873,17 @@
       "last_fired": "2026-06-25T12:59:27Z"
     },
     "DOMO_MTF_BULL": {
-      "last_fired": "2026-07-07T18:14:12Z"
+      "last_fired": "2026-07-08T02:19:03Z"
     },
-    "last_buy_at": "2026-07-07T18:14:12Z",
+    "last_buy_at": "2026-07-08T02:19:03Z",
     "DOMO_MA_GOLD": {
       "last_fired": "2026-07-06T13:34:43Z"
-    }
+    },
+    "open_peak": 3.609999895095825,
+    "open_stop": 3.0685,
+    "open_target": 3.8988,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "SHLS": {
     "SHLS_POS_SIZE": {
@@ -1356,18 +1366,23 @@
       "last_fired": "2026-06-22T14:19:03Z"
     },
     "open_position": true,
-    "open_entry": 18.260000228881836,
-    "open_time": "2026-07-07T18:14:20Z",
+    "open_entry": 18.290000915527344,
+    "open_time": "2026-07-08T02:19:10Z",
     "ISSC_MA_GOLDEN": {
       "last_fired": "2026-06-15T13:34:49Z"
     },
     "ISSC_MTF_BULL": {
-      "last_fired": "2026-07-07T18:14:20Z"
+      "last_fired": "2026-07-08T02:19:10Z"
     },
-    "last_buy_at": "2026-07-07T18:14:20Z",
+    "last_buy_at": "2026-07-08T02:19:10Z",
     "ISSC_MA_GOLD": {
       "last_fired": "2026-07-06T04:09:15Z"
-    }
+    },
+    "open_peak": 18.290000915527344,
+    "open_stop": 16.1718,
+    "open_target": 19.7532,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "BRCB": {
     "BRCB_POS_SIZE": {
