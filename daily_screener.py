@@ -1171,6 +1171,18 @@ def main():
                 "last_above_ema50": data_now["above_ema50"],
                 "last_scanned":     now_str(),
                 "last_gate":        gate_val,
+                # FIX: data_now (จาก fetch_stock_data) มี sector/industry/
+                # change_pct อยู่แล้ว แต่ก่อนหน้านี้ไม่เคยเขียนกลับ universe
+                # ในลูป PHASE 1 (Removal Check) ซึ่งเป็นลูปเดียวที่วิ่งครบ
+                # ทุกตัวใน watchlist จริง — ทำให้ Sector Flow จัดกลุ่มได้แค่
+                # หุ้นที่เพิ่งผ่าน PHASE 2 (candidate ใหม่) หรืออยู่ใน preset
+                # map ของ dashboard เท่านั้น หุ้นเก่าที่เหลือเลยตกไปกอง
+                # "อื่นๆ / ยังไม่จัดกลุ่ม" ทั้งหมด — ไม่ต้องยิง API เพิ่ม
+                # เพราะข้อมูลถูก fetch มาแล้วตอนเช็ค removal ด้านบน
+                "last_sector":        data_now["sector"],
+                "last_industry":      data_now["industry"],
+                "last_change_pct":    data_now["change_pct"],
+                "last_dollar_volume": round(data_now["price"] * data_now["volume"], 2),
             })
         else:
             update_fields["last_gate"] = "no_data"
