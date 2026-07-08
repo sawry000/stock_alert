@@ -1712,15 +1712,19 @@
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
-      "last_fired": "2026-07-07T20:04:34Z"
+      "last_fired": "2026-07-08T06:44:37Z"
     },
-    "last_buy_at": "2026-07-07T20:04:34Z",
+    "last_buy_at": "2026-07-08T06:44:37Z",
     "open_entry": 1.909999966621399,
-    "open_time": "2026-07-07T20:04:34Z",
+    "open_time": "2026-07-08T06:44:37Z",
     "EVTV_MA_GOLD": {
       "last_fired": "2026-07-07T14:29:37Z"
     },
-    "_confirm_EVTV_MTF_BULL": 1
+    "open_peak": 1.909999966621399,
+    "open_stop": 1.6235,
+    "open_target": 2.0628,
+    "open_conviction": 4,
+    "open_alert_type": "mtf_alignment"
   },
   "BLIN": {
     "BLIN_MTF_BULL": {

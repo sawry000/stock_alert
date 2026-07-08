@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T08:09:11Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 9.0,
-    "change_pct": -8.814589665653488,
-    "value": -8.814589665653488
-  },
-  {
     "timestamp": "2026-06-29T13:33:45Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_UP",
@@ -4998,5 +4988,15 @@
     "price": 108.44999694824219,
     "change_pct": -13.79173533526058,
     "value": -13.79173533526058
+  },
+  {
+    "timestamp": "2026-07-08T06:44:37Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.909999966621399,
+    "change_pct": -2.9668783468096427,
+    "value": 3
   }
 ]
