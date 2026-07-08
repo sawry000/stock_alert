@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T16:53:27Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 388.0,
-    "change_pct": 2.4043917759772,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-29T18:48:46Z",
     "symbol": "DDD",
     "alert_id": "DDD_PCT_DROP",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 35.27949905395508,
     "change_pct": -0.9002835563059643,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-08T16:59:46Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 75.47589874267578,
+    "change_pct": 4.104687920932112,
     "value": 2
   }
 ]

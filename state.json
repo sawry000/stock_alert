@@ -1670,15 +1670,19 @@
   },
   "AMBA": {
     "AMBA_MTF_BULL": {
-      "last_fired": "2026-07-07T10:14:46Z"
+      "last_fired": "2026-07-08T16:59:46Z"
     },
-    "last_buy_at": "2026-07-07T10:14:46Z",
-    "open_entry": 79.7300033569336,
-    "open_time": "2026-07-07T10:14:46Z",
+    "last_buy_at": "2026-07-08T16:59:46Z",
+    "open_entry": 75.47589874267578,
+    "open_time": "2026-07-08T16:59:46Z",
     "AMBA_MA_GOLD": {
       "last_fired": "2026-07-01T13:59:35Z"
     },
-    "_confirm_AMBA_MTF_BULL": 1
+    "open_peak": 75.47589874267578,
+    "open_stop": 64.1545,
+    "open_target": 81.514,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
