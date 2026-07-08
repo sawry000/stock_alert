@@ -161,6 +161,14 @@ input[type=password]{letter-spacing:2px}
 /* SECTOR FLOW */
 .sflow-note{font-size:11.5px;color:var(--text3);line-height:1.7;padding:9px 12px;background:rgba(255,255,255,0.02);
   border:1px solid var(--border);border-radius:6px;margin-bottom:14px}
+.sflow-legend{font-size:11.5px;color:var(--text2);margin-bottom:14px;border:1px solid var(--border);
+  border-radius:6px;background:rgba(255,255,255,0.015);overflow:hidden}
+.sflow-legend summary{cursor:pointer;padding:9px 12px;user-select:none;font-weight:600;color:var(--text)}
+.sflow-legend summary:hover{color:var(--gold)}
+.sflow-legend-body{padding:2px 14px 12px;display:flex;flex-direction:column;gap:10px}
+.sflow-legend-item{display:flex;align-items:flex-start;gap:10px;line-height:1.6}
+.sflow-legend-icon{flex-shrink:0;min-width:52px;text-align:center;font-family:var(--mono);font-weight:700;
+  font-size:11px;padding-top:1px}
 .sflow-row{background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:9px;
   padding:11px 14px;transition:border-color 0.2s}
 .sflow-row:hover{border-color:var(--border2)}
@@ -629,6 +637,33 @@ input[type=password]{letter-spacing:2px}
           ข้อมูลนี้ยังไม่ real-time — อัปเดตทุกครั้งที่ <strong>alert-engine</strong> หรือ <strong>daily-screener</strong> รันรอบล่าสุด (ไม่ใช่ตอนนี้เป๊ะๆ)
           และเป็นแค่ตัวชี้วัดโมเมนตัม/มูลค่าซื้อขาย ไม่ใช่ order flow ของสถาบันจริง — กด <span class="msi" style="font-size:12px;vertical-align:middle">sync</span> Sync ที่ Universe Manager ก่อน เพื่อให้ข้อมูลล่าสุด
         </div>
+
+        <details class="sflow-legend">
+          <summary><span class="msi" style="font-size:13px;vertical-align:middle;color:var(--gold)">help</span> ตัวเลข % และแถบสี อ่านยังไง? (กดเพื่อดู)</summary>
+          <div class="sflow-legend-body">
+            <div class="sflow-legend-item">
+              <span class="sflow-legend-icon" style="color:var(--green)">+2.15%</span>
+              <div><strong>ตัวเลข % คือ</strong> วันนี้หุ้นในกลุ่มนี้ "โดยเฉลี่ย" ราคาขึ้นหรือลงกี่เปอร์เซ็นต์จากเมื่อวาน — <strong style="color:var(--green)">สีเขียว/บวก = กลุ่มนี้โดยรวมราคาขึ้น (เงินไหลเข้า)</strong>, <strong style="color:var(--red)">สีแดง/ลบ = กลุ่มนี้โดยรวมราคาลง (เงินไหลออก)</strong></div>
+            </div>
+            <div class="sflow-legend-item">
+              <span class="sflow-legend-icon" style="color:var(--gold);font-size:9px;border:1px solid rgba(255,213,79,0.3);border-radius:3px;padding:1px 4px">$-weighted</span>
+              <div><strong>ทำไมไม่ใช่ค่าเฉลี่ยธรรมดา:</strong> หุ้นที่มีคนซื้อขายเยอะ (มูลค่าซื้อขาย/dollar volume สูง) จะมีน้ำหนักในการคำนวณเฉลี่ยมากกว่าหุ้นเล็กที่แทบไม่มีคนเทรด — เช่น กลุ่มมีหุ้น A ขึ้น 10% แต่มีคนซื้อขายน้อยมาก กับหุ้น B ลง 1% แต่มีคนซื้อขายเยอะกว่ามาก ค่าเฉลี่ยกลุ่มจะออกมาติดลบใกล้เคียงหุ้น B มากกว่า เพราะเงินจริงส่วนใหญ่อยู่ที่หุ้น B</div>
+            </div>
+            <div class="sflow-legend-item">
+              <span class="sflow-legend-icon">▬▬▬</span>
+              <div><strong>แถบสียาว/สั้น</strong> ไม่ได้บอกว่าหุ้นขึ้น/ลงเยอะแค่ไหนแบบตรงๆ แต่บอกว่ากลุ่มนี้ <strong>เคลื่อนไหวแรงแค่ไหนเมื่อเทียบกับกลุ่มอื่นในหน้านี้ ณ ตอนนี้</strong> — กลุ่มที่ % แรงที่สุด (ไม่ว่าบวกหรือลบ) จะได้แถบเต็ม 100% กลุ่มอื่นจะสั้นลงตามสัดส่วน</div>
+            </div>
+            <div class="sflow-legend-item">
+              <span class="sflow-legend-icon">📈3 📉12</span>
+              <div><strong>ไอคอนนี้</strong> คือจำนวนหุ้นในกลุ่มที่วันนี้ราคา<strong style="color:var(--green)">ขึ้น (📈)</strong> เทียบกับที่ราคา<strong style="color:var(--red)">ลง (📉)</strong> — ช่วยดูว่ากลุ่มแดงเป็นเพราะหุ้นส่วนใหญ่ลงจริง หรือแค่ตัวใหญ่ๆ ไม่กี่ตัวลากค่าเฉลี่ยลง</div>
+            </div>
+            <div class="sflow-legend-item">
+              <span class="sflow-legend-icon">💡</span>
+              <div><strong>สรุปสั้นๆ:</strong> กลุ่มไหนขึ้นบนสุด + สีเขียว + แถบยาว = กลุ่มนั้นเงินไหลเข้าแรงสุดวันนี้ ส่วนกลุ่มท้ายๆ + สีแดง + แถบยาว = กลุ่มนั้นโดนเทขายแรงสุด — ใช้ดูภาพรวมว่าเงินหมุนไปทางไหน ไม่ใช่สัญญาณซื้อ/ขายโดยตรง</div>
+            </div>
+          </div>
+        </details>
+
         <div id="sflow-cards"></div>
       </div>
     </div>
@@ -2004,6 +2039,22 @@ function renderSectorFlow() {
 
   const maxAbsChange = Math.max(1, ...rows.filter(r => r.hasData).map(r => Math.abs(r.avgChange)));
 
+  // FIX: SFLOW_GROUP_LIST เป็นแค่ preset 12 กลุ่มธีมตายตัว (AI & Semiconductor,
+  // Big Tech / Cloud, ...) แต่ตอนนี้ last_sector เป็นชื่อ sector จริงจาก
+  // yfinance (เช่น "Healthcare", "Technology", "Consumer Cyclical",
+  // "Industrials") ซึ่งไม่ตรงกับ preset ตัวไหนเลย — พอ <option> ไม่มีตัวไหน
+  // ตรงกับ r.name เลย browser จะ default ไปเลือก option ตัวแรกสุดในลิสต์
+  // (AI & Semiconductor) ให้ทุกแถวเหมือนกันหมด ทั้งที่ label หัวข้อกลุ่ม
+  // (ตัวหนา) ยังถูกต้องอยู่ — แก้โดยรวมชื่อกลุ่มจริงที่กำลังใช้อยู่ (จาก
+  // Object.keys(groups)) เข้ากับ preset เดิม ให้ dropdown มีตัวเลือกที่ตรง
+  // กับกลุ่มปัจจุบันเสมอ ไม่ว่าจะเป็น preset หรือ sector จริงจาก yfinance
+  const dynamicGroupNames = Object.keys(groups).filter(n => n !== 'อื่นๆ / ยังไม่จัดกลุ่ม');
+  const ALL_GROUP_OPTIONS = Array.from(new Set([
+    ...SFLOW_GROUP_LIST.filter(g => g !== 'อื่นๆ / ยังไม่จัดกลุ่ม'),
+    ...dynamicGroupNames,
+  ])).sort((a, b) => a.localeCompare(b, 'th'));
+  ALL_GROUP_OPTIONS.push('อื่นๆ / ยังไม่จัดกลุ่ม'); // เก็บกลุ่ม catch-all ไว้ท้ายสุดเสมอ
+
   wrap.innerHTML = rows.map((r, idx) => {
     const chgColor = !r.hasData ? 'var(--text3)' : (r.avgChange >= 0 ? 'var(--green)' : 'var(--red)');
     const chgLabel = r.hasData
@@ -2018,7 +2069,7 @@ function renderSectorFlow() {
       ? `📈${r.gainers} 📉${r.losers}`
       : '';
     const chips = r.symbols.map(sym => {
-      const optsHtml = SFLOW_GROUP_LIST.map(g =>
+      const optsHtml = ALL_GROUP_OPTIONS.map(g =>
         `<option value="${g}" ${g === r.name ? 'selected' : ''}>${g}</option>`
       ).join('');
       return `<span class="sflow-sym-chip" title="เปลี่ยนกลุ่มของ ${sym}">
