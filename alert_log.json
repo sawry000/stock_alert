@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T16:48:53Z",
-    "symbol": "ANNA",
-    "alert_id": "ANNA_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 2.799999952316284,
-    "change_pct": -5.075093998837706,
-    "value": -5.075093998837706
-  },
-  {
     "timestamp": "2026-06-29T16:53:27Z",
     "symbol": "COHR",
     "alert_id": "COHR_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 14.600000381469727,
     "change_pct": -10.703361581224922,
     "value": -10.703361581224922
+  },
+  {
+    "timestamp": "2026-07-08T16:53:51Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 35.27949905395508,
+    "change_pct": -0.9002835563059643,
+    "value": 2
   }
 ]
