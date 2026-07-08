@@ -1054,7 +1054,7 @@
       "last_fired": "2026-06-23T07:33:04Z"
     },
     "OPRX_MTF_BULL": {
-      "last_fired": "2026-07-07T18:13:46Z"
+      "last_fired": "2026-07-08T02:13:48Z"
     },
     "OPRX_CP_BULL": {
       "last_fired": "2026-06-24T13:38:28Z"
@@ -1072,15 +1072,20 @@
       ]
     },
     "open_position": true,
-    "open_entry": 6.385000228881836,
-    "open_time": "2026-07-07T18:13:46Z",
+    "open_entry": 6.289999961853027,
+    "open_time": "2026-07-08T02:13:48Z",
     "OPRX_RSI_OS_4H": {
       "last_fired": "2026-06-24T12:03:07Z"
     },
-    "last_buy_at": "2026-07-07T18:13:46Z",
+    "last_buy_at": "2026-07-08T02:13:48Z",
     "OPRX_MA_GOLD": {
       "last_fired": "2026-06-30T19:29:04Z"
-    }
+    },
+    "open_peak": 6.289999961853027,
+    "open_stop": 5.5699,
+    "open_target": 6.7932,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "NLST": {
     "NLST_PCT_UP_5": {
