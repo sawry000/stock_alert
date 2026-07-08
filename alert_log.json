@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:53:24Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 391.2200012207031,
-    "change_pct": 3.254242978358663,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T06:53:27Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 1.2400000095367432,
     "change_pct": -2.3622039734847915,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-08T20:04:38Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.28000020980835,
+    "change_pct": -2.947841047429717,
     "value": 2
   }
 ]
