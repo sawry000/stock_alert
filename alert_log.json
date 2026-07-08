@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T13:58:31Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 350.0,
-    "change_pct": -7.624904325793763,
-    "value": -7.624904325793763
-  },
-  {
     "timestamp": "2026-06-29T14:08:34Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 18.290000915527344,
     "change_pct": -0.816671282239494,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-08T10:23:31Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 27.25,
+    "change_pct": 1.0082289272740694,
+    "value": 3
   }
 ]
