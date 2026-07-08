@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-29T14:08:56Z",
-    "symbol": "UAMY",
-    "alert_id": "UAMY_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 6.585100173950195,
-    "change_pct": -5.386491753589148,
-    "value": -5.386491753589148
-  },
-  {
     "timestamp": "2026-06-29T14:13:25Z",
     "symbol": "COHR",
     "alert_id": "COHR_MA_DEATH",
@@ -4998,5 +4988,15 @@
     "price": 17.049999237060547,
     "change_pct": -3.943666270081426,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-08T13:54:02Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 109.88300323486328,
+    "change_pct": 2.4072723530878695,
+    "value": 3
   }
 ]
