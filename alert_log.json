@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:54:28Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.0,
-    "change_pct": 5.263157894736834,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-30T06:54:31Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 1.4600000381469727,
     "change_pct": 17.74193856023973,
     "value": 4.0665909818037305
+  },
+  {
+    "timestamp": "2026-07-09T06:02:23Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 111.79000091552734,
+    "change_pct": 4.184530210183921,
+    "value": 3
   }
 ]
