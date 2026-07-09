@@ -1605,20 +1605,39 @@ def main():
 
                 # ── Track BUY/SELL timestamps (สำหรับ re-entry + sell cooldown) ──
                 if action == "BUY":
-                    state[symbol]["last_buy_at"]     = now_str()
-                    state[symbol]["open_entry"]      = price
-                    state[symbol]["open_time"]       = now_str()
-                    state[symbol]["open_peak"]       = price
-                    state[symbol]["open_stop"]       = pos["stop"] if pos else None
-                    state[symbol]["open_target"]     = pos.get("target") if pos else None
-                    state[symbol]["open_conviction"] = conv_score
-                    state[symbol]["open_alert_type"] = atype
+                    state[symbol]["last_buy_at"] = now_str()
+                    # FIX: gate ที่ comment ด้านบนตั้งใจไว้ตั้งแต่แรก ("2. ไม่มี
+                    # open position สำหรับหุ้นตัวนั้น") แต่ไม่เคยถูกเขียนโค้ดจริง
+                    # — ก่อนหน้านี้ทุกครั้งที่ BUY ยิงซ้ำขณะ position เดิมยัง
+                    # เปิดอยู่ (ไม่ว่าจะเพราะ re-entry cooldown หมดตามปกติ หรือ
+                    # เพราะ state.json หลุดจาก push fail แล้วทำให้ cooldown
+                    # เข้าใจผิดว่ายังไม่เคยยิง) จะเขียนทับ open_entry/open_time/
+                    # open_peak ด้วยราคา/เวลาล่าสุดทันที ทำให้ % กำไร-ขาดทุน
+                    # และจำนวนวันที่ถือ ในรายงาน "สรุปสถานะ position"
+                    # (build_position_status_messages) ผิดเพี้ยนจากความเป็นจริง
+                    # — แก้โดยบันทึกค่าพวกนี้แค่ตอน "เปิด position ใหม่จริงๆ"
+                    # (ยังไม่มี open_entry ค้างอยู่) เท่านั้น ถ้ามี position
+                    # เปิดอยู่แล้ว ยังส่ง Telegram แจ้งเตือนตามปกติ (เผื่ออยากรู้
+                    # ว่ามีสัญญาณ BUY อีกรอบ) แค่ไม่ไปยุ่งกับตัวเลข entry เดิม
+                    if not state[symbol].get("open_entry"):
+                        state[symbol]["open_entry"]      = price
+                        state[symbol]["open_time"]       = now_str()
+                        state[symbol]["open_peak"]       = price
+                        state[symbol]["open_stop"]       = pos["stop"] if pos else None
+                        state[symbol]["open_target"]     = pos.get("target") if pos else None
+                        state[symbol]["open_conviction"] = conv_score
+                        state[symbol]["open_alert_type"] = atype
+                    else:
+                        print(f"  [{alert_id}] ℹ️ มี position เปิดอยู่แล้ว "
+                              f"(entry เดิม ${state[symbol]['open_entry']:.4f}) "
+                              f"— ส่ง alert ตามปกติแต่ไม่เขียนทับ entry เดิม")
                 elif action == "SELL":
                     state[symbol]["last_sell_at"] = now_str()
                     # ── ปิด position: เคลียร์ open_* ทั้งหมดไม่ให้ P&L ค้าง ──
                     for _k in ("open_entry", "open_time", "open_peak", "open_stop",
                                "open_target", "open_conviction", "open_alert_type"):
                         state[symbol].pop(_k, None)
+
 
 
                 log.append({
