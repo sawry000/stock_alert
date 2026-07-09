@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T14:58:54Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 33.029998779296875,
-    "change_pct": -0.09074779402034867,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-30T14:59:01Z",
     "symbol": "WGS",
     "alert_id": "WGS_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 1.2400000095367432,
     "change_pct": -2.277562492178797,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T21:26:44Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.659999847412109,
+    "change_pct": 8.878501107759558,
+    "value": 3
   }
 ]
