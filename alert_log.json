@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T14:59:19Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 371.0409851074219,
-    "change_pct": 0.558562823844614,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T14:59:24Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.130000114440918,
-    "change_pct": 2.508363117741096,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T15:04:49Z",
     "symbol": "MXL",
     "alert_id": "MXL_MTF_BULL",
@@ -4997,6 +4977,26 @@
     "action": "BUY",
     "price": 14.270000457763672,
     "change_pct": 2.4407785912682853,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T21:55:43Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 96.44000244140625,
+    "change_pct": 4.826089610224185,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T21:56:08Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 69.38999938964844,
+    "change_pct": 5.7774380939762855,
     "value": 3
   }
 ]
