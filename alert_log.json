@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T13:43:30Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 1.8600000143051147,
-    "change_pct": -5.102040086473735,
-    "value": -5.102040086473735
-  },
-  {
-    "timestamp": "2026-06-30T13:43:55Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 18.25,
-    "change_pct": -5.440414507772024,
-    "value": -5.440414507772024
-  },
-  {
     "timestamp": "2026-06-30T13:54:07Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MA_GOLD",
@@ -4998,5 +4978,25 @@
     "price": 2.5350000858306885,
     "change_pct": 1.5421624606724738,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T14:11:16Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 110.75,
+    "change_pct": -1.4328942684229258,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T14:11:50Z",
+    "symbol": "MXL",
+    "alert_id": "MXL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 95.20500183105469,
+    "change_pct": 10.06358593185513,
+    "value": 3
   }
 ]
