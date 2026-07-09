@@ -132,9 +132,9 @@
     "open_entry": 432.739990234375,
     "open_time": "2026-07-07T05:43:28Z",
     "ALAB_MTF_BULL": {
-      "last_fired": "2026-07-07T05:43:28Z"
+      "last_fired": "2026-07-09T13:40:40Z"
     },
-    "last_buy_at": "2026-07-07T05:43:28Z"
+    "last_buy_at": "2026-07-09T13:40:40Z"
   },
   "ENPH": {
     "ENPH_POS_SIZE": {
@@ -258,7 +258,7 @@
       "last_fired": "2026-06-26T20:07:32Z"
     },
     "ICHR_MTF_BULL": {
-      "last_fired": "2026-07-06T16:08:35Z"
+      "last_fired": "2026-07-09T13:40:49Z"
     },
     "ICHR_CP_BULL": {
       "last_fired": "2026-06-29T00:02:43Z"
@@ -282,8 +282,15 @@
     "ICHR_MA_GOLDEN": {
       "last_fired": "2026-06-09T13:37:34Z"
     },
-    "last_buy_at": "2026-07-06T16:08:35Z",
-    "last_sell_at": "2026-07-08T06:38:38Z"
+    "last_buy_at": "2026-07-09T13:40:49Z",
+    "last_sell_at": "2026-07-08T06:38:38Z",
+    "open_entry": 99.1500015258789,
+    "open_time": "2026-07-09T13:40:49Z",
+    "open_peak": 99.1500015258789,
+    "open_stop": 84.2775,
+    "open_target": 107.082,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "AAOI": {
     "AAOI_POS_SIZE": {
@@ -674,7 +681,7 @@
       "last_fired": "2026-05-27T09:53:23Z"
     },
     "WGS_MTF_BULL": {
-      "last_fired": "2026-07-07T18:13:56Z"
+      "last_fired": "2026-07-09T13:41:17Z"
     },
     "WGS_PCT_UP_5": {
       "last_fired": "2026-05-28T18:47:54Z"
@@ -691,7 +698,7 @@
     "open_position": true,
     "open_entry": 66.41000366210938,
     "open_time": "2026-07-07T18:13:56Z",
-    "last_buy_at": "2026-07-07T18:13:56Z"
+    "last_buy_at": "2026-07-09T13:41:17Z"
   },
   "VSEC": {
     "VSEC_POS_SIZE": {
@@ -1554,7 +1561,8 @@
     "MXL_PCT_DROP": {
       "last_fired": "2026-07-06T00:04:24Z"
     },
-    "last_sell_at": "2026-07-06T00:04:24Z"
+    "last_sell_at": "2026-07-06T00:04:24Z",
+    "_confirm_MXL_MTF_BULL": 1
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1687,7 +1695,8 @@
     "open_stop": 64.1545,
     "open_target": 81.514,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_AMBA_MTF_BULL": 1
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
@@ -1699,7 +1708,8 @@
     "ALGM_PCT_DROP": {
       "last_fired": "2026-07-02T16:34:37Z"
     },
-    "last_sell_at": "2026-07-02T16:34:37Z"
+    "last_sell_at": "2026-07-02T16:34:37Z",
+    "_confirm_ALGM_MTF_BULL": 1
   },
   "NEOV": {
     "NEOV_MA_GOLD": {
@@ -1710,7 +1720,8 @@
     "open_time": "2026-07-07T10:14:52Z",
     "NEOV_MTF_BULL": {
       "last_fired": "2026-07-07T10:14:52Z"
-    }
+    },
+    "_confirm_NEOV_MTF_BULL": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {

@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T10:23:43Z",
-    "symbol": "LFMD",
-    "alert_id": "LFMD_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 4.199999809265137,
-    "change_pct": -5.191877894692167,
-    "value": -5.191877894692167
-  },
-  {
-    "timestamp": "2026-06-30T10:58:33Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_RSI_OS",
-    "type": "rsi",
-    "action": "BUY",
-    "price": 1.9500000476837158,
-    "change_pct": -0.5102016487900074,
-    "value": 23.32
-  },
-  {
-    "timestamp": "2026-06-30T10:58:40Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_RSI_OS",
-    "type": "rsi",
-    "action": "BUY",
-    "price": 2.3299999237060547,
-    "change_pct": 5.215620849223506,
-    "value": 27.97
-  },
-  {
     "timestamp": "2026-06-30T10:59:12Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_PCT_UP",
@@ -4997,6 +4967,36 @@
     "action": "BUY",
     "price": 13.930000305175781,
     "change_pct": 2.1907809155363753e-06,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T13:40:40Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 430.5350036621094,
+    "change_pct": 8.72096052073469,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T13:40:49Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 99.1500015258789,
+    "change_pct": 7.7717407889988115,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T13:41:17Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 68.26000213623047,
+    "change_pct": 4.054881305229382,
     "value": 3
   }
 ]
