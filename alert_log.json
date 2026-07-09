@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T14:04:17Z",
-    "symbol": "SMTC",
-    "alert_id": "SMTC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 157.4199981689453,
-    "change_pct": 2.2207780317826704,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-30T14:13:49Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 11.375,
-    "change_pct": 6.308411214953279,
-    "value": 6.308411214953279
-  },
-  {
     "timestamp": "2026-06-30T14:39:38Z",
     "symbol": "VELO",
     "alert_id": "VELO_PCT_DROP",
@@ -4997,6 +4977,26 @@
     "action": "BUY",
     "price": 5.5,
     "change_pct": 6.387094278308631,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T15:26:45Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7649999856948853,
+    "change_pct": 6.325300343065382,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T15:26:57Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1883.9949951171875,
+    "change_pct": 7.903493420228378,
     "value": 3
   }
 ]
