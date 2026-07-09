@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T15:04:54Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.6549999713897705,
-    "change_pct": 5.414010916545888,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T15:04:58Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 146.5,
-    "change_pct": 1.0344827586206897,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T15:05:04Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.514999866485596,
-    "change_pct": -2.7336884217707977,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-30T15:05:08Z",
     "symbol": "SVCO",
     "alert_id": "SVCO_MTF_BULL",
@@ -4998,5 +4968,35 @@
     "price": 93.6500015258789,
     "change_pct": 6.420456279407848,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T22:26:15Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 115.66999816894531,
+    "change_pct": 2.9458865868149813,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T22:27:07Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 78.37999725341797,
+    "change_pct": 4.576380591618367,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T22:27:11Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 57.380001068115234,
+    "change_pct": 9.92337369370734,
+    "value": 2
   }
 ]
