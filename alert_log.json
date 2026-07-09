@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:59:33Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.670000076293945,
-    "change_pct": -1.5624986754523347,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T06:59:36Z",
-    "symbol": "SVCO",
-    "alert_id": "SVCO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 12.399999618530273,
-    "change_pct": 7.9199270542234395,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T06:59:39Z",
     "symbol": "SNDK",
     "alert_id": "SNDK_MTF_BULL",
@@ -4997,6 +4977,26 @@
     "action": "BUY",
     "price": 19.739999771118164,
     "change_pct": 0.45801410238252155,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T10:26:33Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.569999933242798,
+    "change_pct": -1.8699496355340446e-06,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T10:26:44Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.309999465942383,
+    "change_pct": 1.72221925523546,
     "value": 3
   }
 ]
