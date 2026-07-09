@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T15:04:49Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 113.43499755859375,
-    "change_pct": 3.235345430099886,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T15:04:54Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 69.38999938964844,
     "change_pct": 5.7774380939762855,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T22:10:51Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 93.6500015258789,
+    "change_pct": 6.420456279407848,
     "value": 3
   }
 ]
