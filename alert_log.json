@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:54:31Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 2.8499999046325684,
-    "change_pct": -1.0416699780358172,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-06-30T06:54:39Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.059999465942383,
-    "change_pct": 0.53775713919627,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T06:54:42Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_PCT_UP",
@@ -4998,5 +4978,25 @@
     "price": 111.79000091552734,
     "change_pct": 4.184530210183921,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T07:04:43Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7000000476837158,
+    "change_pct": -0.4916853381107527,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T07:05:12Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.8600000143051147,
+    "change_pct": 1.0869572991910144,
+    "value": 2
   }
 ]
