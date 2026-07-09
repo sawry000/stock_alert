@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:54:42Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 4.71999979019165,
-    "change_pct": 6.306301580893018,
-    "value": 6.306301580893018
-  },
-  {
     "timestamp": "2026-06-30T06:59:21Z",
     "symbol": "MXL",
     "alert_id": "MXL_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 1.8600000143051147,
     "change_pct": 1.0869572991910144,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T08:15:51Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 25.520000457763672,
+    "change_pct": -1.2383883213480185,
     "value": 2
   }
 ]
