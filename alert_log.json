@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:54:17Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 224.22999572753906,
-    "change_pct": 2.154895547853787,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T06:54:21Z",
     "symbol": "VICR",
     "alert_id": "VICR_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 1.25,
     "change_pct": -1.5748031496063006,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T04:34:42Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.28000020980835,
+    "change_pct": -2.947841047429717,
     "value": 2
   }
 ]
