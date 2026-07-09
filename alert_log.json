@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:53:54Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.429999828338623,
-    "change_pct": 6.262227560442714,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T06:53:57Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 33.38999938964844,
-    "change_pct": -1.9095200069082305,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T06:54:04Z",
     "symbol": "WGS",
     "alert_id": "WGS_MTF_BULL",
@@ -4997,6 +4977,26 @@
     "action": "BUY",
     "price": 6.150000095367432,
     "change_pct": -2.2257536507562543,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T02:24:38Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.569999933242798,
+    "change_pct": -2.191782650882248,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T02:24:52Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.309999465942383,
+    "change_pct": 1.72221925523546,
     "value": 3
   }
 ]
