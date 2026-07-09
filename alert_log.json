@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T15:05:12Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 2186.9599609375,
-    "change_pct": 6.075268398502823,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T15:05:16Z",
     "symbol": "RFIL",
     "alert_id": "RFIL_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 95.80000305175781,
     "change_pct": 10.751448614748917,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T23:26:47Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.420000076293945,
+    "change_pct": 4.839647110022533,
     "value": 2
   }
 ]
