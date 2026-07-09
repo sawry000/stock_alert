@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:53:47Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 11.6899995803833,
-    "change_pct": 6.85264188718134,
-    "value": 6.85264188718134
-  },
-  {
     "timestamp": "2026-06-30T06:53:49Z",
     "symbol": "TYGO",
     "alert_id": "TYGO_RSI_OS",
@@ -4998,5 +4988,15 @@
     "price": 1.4600000381469727,
     "change_pct": 17.74193856023973,
     "value": 4.356017947686915
+  },
+  {
+    "timestamp": "2026-07-09T02:09:23Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 19.739999771118164,
+    "change_pct": 6.587471766296785,
+    "value": 3
   }
 ]
