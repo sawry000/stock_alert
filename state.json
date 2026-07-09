@@ -500,7 +500,7 @@
       "last_fired": "2026-05-27T09:52:59Z"
     },
     "HIMS_MTF_BULL": {
-      "last_fired": "2026-07-08T16:53:51Z"
+      "last_fired": "2026-07-09T02:03:49Z"
     },
     "HIMS_PCT_UP_5": {
       "last_fired": "2026-06-26T19:28:13Z"
@@ -528,12 +528,12 @@
       "last_fired": "2026-06-25T13:48:29Z"
     },
     "open_position": true,
-    "open_entry": 35.27949905395508,
-    "open_time": "2026-07-08T16:53:51Z",
-    "last_buy_at": "2026-07-08T16:53:51Z",
-    "open_peak": 35.27949905395508,
-    "open_stop": 30.1719,
-    "open_target": 38.1019,
+    "open_entry": 36.06999969482422,
+    "open_time": "2026-07-09T02:03:49Z",
+    "last_buy_at": "2026-07-09T02:03:49Z",
+    "open_peak": 36.06999969482422,
+    "open_stop": 30.9317,
+    "open_target": 38.9556,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment"
   },
@@ -1777,5 +1777,24 @@
     "open_target": 15.0444,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment"
+  },
+  "OFRM": {
+    "OFRM_PCT_DROP": {
+      "last_fired": "2026-07-09T02:04:57Z"
+    },
+    "last_sell_at": "2026-07-09T02:04:57Z"
+  },
+  "LHAI": {
+    "LHAI_VOL_3X": {
+      "last_fired": "2026-07-09T02:04:59Z"
+    },
+    "last_buy_at": "2026-07-09T02:04:59Z",
+    "open_entry": 1.4600000381469727,
+    "open_time": "2026-07-09T02:04:59Z",
+    "open_peak": 1.4600000381469727,
+    "open_stop": 1.241,
+    "open_target": 1.5768,
+    "open_conviction": 3,
+    "open_alert_type": "volume_spike"
   }
 }

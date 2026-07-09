@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:53:38Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_RSI_OS",
-    "type": "rsi",
-    "action": "BUY",
-    "price": 1.9500000476837158,
-    "change_pct": -2.010047855089657,
-    "value": 25.6
-  },
-  {
-    "timestamp": "2026-06-30T06:53:41Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 15.760000228881836,
-    "change_pct": 5.136759365455875,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T06:53:45Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 94.25,
-    "change_pct": 0.22330923011483808,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T06:53:47Z",
     "symbol": "RDW",
     "alert_id": "RDW_PCT_UP",
@@ -4998,5 +4968,35 @@
     "price": 1.8600000143051147,
     "change_pct": 1.0869572991910144,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T02:03:49Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 36.06999969482422,
+    "change_pct": 1.320223861865779,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T02:04:57Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 18.3700008392334,
+    "change_pct": -15.464824536674554,
+    "value": -15.464824536674554
+  },
+  {
+    "timestamp": "2026-07-09T02:04:59Z",
+    "symbol": "LHAI",
+    "alert_id": "LHAI_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 1.4600000381469727,
+    "change_pct": 17.74193856023973,
+    "value": 4.356017947686915
   }
 ]
