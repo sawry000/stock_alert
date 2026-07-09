@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T08:14:17Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 4.269999980926514,
-    "change_pct": -6.768559368416733,
-    "value": -6.768559368416733
-  },
-  {
     "timestamp": "2026-06-30T10:23:43Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 4.28000020980835,
     "change_pct": 4.902064237399183e-06,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T13:13:27Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 13.930000305175781,
+    "change_pct": 2.1907809155363753e-06,
+    "value": 3
   }
 ]
