@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:53:49Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_RSI_OS",
-    "type": "rsi",
-    "action": "BUY",
-    "price": 2.3299999237060547,
-    "change_pct": 5.215620849223506,
-    "value": 27.97
-  },
-  {
     "timestamp": "2026-06-30T06:53:54Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 19.739999771118164,
     "change_pct": 6.587471766296785,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T02:18:53Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.150000095367432,
+    "change_pct": -2.2257536507562543,
     "value": 3
   }
 ]
