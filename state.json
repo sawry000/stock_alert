@@ -433,7 +433,7 @@
       "last_fired": "2026-06-10T15:52:58Z"
     },
     "XMTR_MTF_BULL": {
-      "last_fired": "2026-07-08T14:43:51Z"
+      "last_fired": "2026-07-09T13:55:53Z"
     },
     "XMTR_CP_BULL": {
       "last_fired": "2026-06-25T14:07:53Z"
@@ -462,7 +462,7 @@
     "open_position": true,
     "open_entry": 92.66500091552734,
     "open_time": "2026-07-08T14:43:51Z",
-    "last_buy_at": "2026-07-08T14:43:51Z",
+    "last_buy_at": "2026-07-09T13:55:53Z",
     "open_peak": 92.66500091552734,
     "open_stop": 82.684,
     "open_target": 100.0782,
@@ -1683,9 +1683,9 @@
   },
   "AMBA": {
     "AMBA_MTF_BULL": {
-      "last_fired": "2026-07-08T16:59:46Z"
+      "last_fired": "2026-07-09T13:57:08Z"
     },
-    "last_buy_at": "2026-07-08T16:59:46Z",
+    "last_buy_at": "2026-07-09T13:57:08Z",
     "open_entry": 75.47589874267578,
     "open_time": "2026-07-08T16:59:46Z",
     "AMBA_MA_GOLD": {
@@ -1695,33 +1695,30 @@
     "open_stop": 64.1545,
     "open_target": 81.514,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_AMBA_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
-      "last_fired": "2026-07-06T14:05:27Z"
+      "last_fired": "2026-07-09T13:57:11Z"
     },
-    "last_buy_at": "2026-07-06T14:05:27Z",
+    "last_buy_at": "2026-07-09T13:57:11Z",
     "open_entry": 60.15999984741211,
     "open_time": "2026-07-06T14:05:27Z",
     "ALGM_PCT_DROP": {
       "last_fired": "2026-07-02T16:34:37Z"
     },
-    "last_sell_at": "2026-07-02T16:34:37Z",
-    "_confirm_ALGM_MTF_BULL": 1
+    "last_sell_at": "2026-07-02T16:34:37Z"
   },
   "NEOV": {
     "NEOV_MA_GOLD": {
       "last_fired": "2026-07-01T09:34:39Z"
     },
-    "last_buy_at": "2026-07-07T10:14:52Z",
+    "last_buy_at": "2026-07-09T13:57:14Z",
     "open_entry": 2.7200000286102295,
     "open_time": "2026-07-07T10:14:52Z",
     "NEOV_MTF_BULL": {
-      "last_fired": "2026-07-07T10:14:52Z"
-    },
-    "_confirm_NEOV_MTF_BULL": 1
+      "last_fired": "2026-07-09T13:57:14Z"
+    }
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -1733,7 +1730,8 @@
     "GLW_PCT_DROP": {
       "last_fired": "2026-07-02T06:34:32Z"
     },
-    "last_sell_at": "2026-07-02T06:34:32Z"
+    "last_sell_at": "2026-07-02T06:34:32Z",
+    "_confirm_GLW_MTF_BULL": 1
   },
   "CDNL": {
     "CDNL_MTF_BULL": {

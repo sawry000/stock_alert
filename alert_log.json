@@ -1,45 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T10:59:12Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 4.71999979019165,
-    "change_pct": 6.306301580893018,
-    "value": 6.306301580893018
-  },
-  {
-    "timestamp": "2026-06-30T11:48:53Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 115.1500015258789,
-    "change_pct": 0.4969440951425479,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T13:34:18Z",
-    "symbol": "AMPG",
-    "alert_id": "AMPG_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 6.650100231170654,
-    "change_pct": -7.871656329459095,
-    "value": -7.871656329459095
-  },
-  {
-    "timestamp": "2026-06-30T13:39:27Z",
-    "symbol": "VECO",
-    "alert_id": "VECO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 71.48999786376953,
-    "change_pct": 3.0115242993797193,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-30T13:43:30Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -4998,5 +4958,45 @@
     "price": 68.26000213623047,
     "change_pct": 4.054881305229382,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T13:55:53Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 92.72000122070312,
+    "change_pct": 5.363637750799006,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T13:57:08Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 75.83999633789062,
+    "change_pct": 1.1874534194671411,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T13:57:11Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 56.52000045776367,
+    "change_pct": 8.275862945907411,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-09T13:57:14Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.5350000858306885,
+    "change_pct": 1.5421624606724738,
+    "value": 2
   }
 ]
