@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T06:54:25Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.980000019073486,
-    "change_pct": 6.595365758885668,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T06:54:28Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 13.930000305175781,
     "change_pct": 0.07184127281452098,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-09T05:05:39Z",
+    "symbol": "LHAI",
+    "alert_id": "LHAI_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 1.4600000381469727,
+    "change_pct": 17.74193856023973,
+    "value": 4.0665909818037305
   }
 ]
