@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-01T01:59:27Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.0,
-    "change_pct": -0.3322259136212554,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-01T02:19:28Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 85.80000305175781,
-    "change_pct": 27.583647660606413,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-01T05:54:27Z",
-    "symbol": "VECO",
-    "alert_id": "VECO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 75.80000305175781,
-    "change_pct": 9.221906414636608,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-01T06:14:21Z",
     "symbol": "SMTC",
     "alert_id": "SMTC_MTF_BULL",
@@ -4998,5 +4968,35 @@
     "price": 25.875,
     "change_pct": 1.870078740157486,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T18:41:29Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.360000133514404,
+    "change_pct": 1.2738874763440136,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T18:42:15Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.899999618530273,
+    "change_pct": 2.2727252084971483,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T18:42:38Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.375,
+    "change_pct": -0.8302583025830245,
+    "value": 2
   }
 ]
