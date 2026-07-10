@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T21:49:29Z",
-    "symbol": "VECO",
-    "alert_id": "VECO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 75.80000305175781,
-    "change_pct": 9.221906414636608,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T22:09:19Z",
     "symbol": "SMTC",
     "alert_id": "SMTC_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 14.270000457763672,
     "change_pct": 2.4407785912682853,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T06:41:06Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 115.66999816894531,
+    "change_pct": 2.9458865868149813,
     "value": 3
   }
 ]
