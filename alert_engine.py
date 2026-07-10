@@ -1284,203 +1284,222 @@ def main():
     print(f"\n[{now_str()}] เริ่ม alert check — {len(watchlist)} symbols")
 
     for stock in watchlist:
-        if not stock.get("enabled", True):
-            continue
-
-        symbol    = stock["symbol"]
-        name      = stock.get("name", symbol)
-        pos_cfg   = stock.get("position_alert", {"account_size": 100, "risk_pct": 2.0})
-        confirm_n = stock.get("confirm_hits", 1)
-
-        print(f"\n{'─'*60}")
-        print(f"[{symbol}] {name}")
-
-        quote = fetch_quote(symbol)
-        if quote is None:
-            print(f"  [{symbol}] ข้ามเนื่องจากไม่มีข้อมูล")
-            continue
-
-        quotes_cache[symbol] = quote
-        print(f"  Price=${quote['price']:.4f}  Chg={quote['change_pct']:+.2f}%  Vol={quote['volume']:.0f}")
-
-        # เติมข้อมูล Purify/Price/ADR/RSI/Vol/Gate ล่าสุดเข้า universe.json
-        # ให้ symbol นี้ (ใช้ quote ที่เพิ่งดึงมา ไม่ fetch price ซ้ำ — แค่เพิ่ม
-        # history call เดียวสำหรับ RSI/EMA50 ที่ quote เดิมไม่มี)
-        sync_universe_tech(universe_data, uni_cfg, symbol, quote)
-
-        sym_state    = state.get(symbol, {})
-        price        = quote["price"]
-
-        # ── Re-entry cooldown (แทน open_position suppress ถาวร) ─────
-        # ไม่ block BUY ตลอดไปแค่เพราะเคย BUY มาก่อน — ให้โอกาส entry ใหม่
-        # ได้ถ้าผ่านไปนานพอ (re_entry_cooldown_minutes ตั้งค่าได้ต่อหุ้น)
-        reentry_cd   = stock.get("re_entry_cooldown_minutes", 240)  # default 4 ชม.
-        last_buy_at  = sym_state.get("last_buy_at", "")
-        in_reentry_cd = bool(last_buy_at) and minutes_since(last_buy_at) < reentry_cd
-
-        # ── Sell cooldown — เพิ่ง SELL ไปไม่นาน ห้าม BUY ซ้ำเร็วเกินไป ──
-        sell_cd      = stock.get("post_sell_cooldown_minutes", 120)  # default 2 ชม.
-        last_sell_at = sym_state.get("last_sell_at", "")
-        in_sell_cd   = bool(last_sell_at) and minutes_since(last_sell_at) < sell_cd
-
-        # ── Price-drop filter — ลงหนักวันนี้ ห้าม BUY แม้ signal ผ่าน ──
-        drop_threshold = stock.get("buy_suppress_drop_pct", 3.0)
-        price_dropping  = quote["change_pct"] <= -drop_threshold
-
-        # ── Macro suppress for BUY ──────────────────────────────────
-        suppress_buy    = False
-        suppress_reason = ""
-        if market_down and not in_reentry_cd:
-            suppress_buy    = True
-            suppress_reason = f"SPY ลง {spy_chg:.1f}%"
-        if btc_down and symbol in BTC_LINKED and not in_reentry_cd:
-            suppress_buy    = True
-            suppress_reason = f"BTC ลง {btc_chg:.1f}%"
-        if in_sell_cd:
-            suppress_buy    = True
-            suppress_reason = f"เพิ่ง SELL ไป {minutes_since(last_sell_at):.0f} นาทีที่แล้ว (cooldown {sell_cd}m)"
-        if price_dropping:
-            suppress_buy    = True
-            suppress_reason = f"ราคาลง {quote['change_pct']:.1f}% วันนี้ (เกิน -{drop_threshold}%)"
-        if suppress_buy:
-            print(f"  [Suppress BUY] {suppress_reason}")
-
-        # ════════════════════════════════════════════════════════════
-        #  PROCESS EACH ALERT IN WATCHLIST
-        # ════════════════════════════════════════════════════════════
-        for alert in stock.get("alerts", []):
-            if not alert.get("enabled", True):
+        try:
+            if not stock.get("enabled", True):
                 continue
 
-            alert_id = alert["id"]
-            atype    = alert["type"]
-            action   = alert.get("action", "")
-            cooldown = alert.get("cooldown_minutes", default_cooldown)
+            symbol    = stock["symbol"]
+            name      = stock.get("name", symbol)
+            pos_cfg   = stock.get("position_alert", {"account_size": 100, "risk_pct": 2.0})
+            confirm_n = stock.get("confirm_hits", 1)
 
-            # ── Cooldown check ─────────────────────────────────────
-            last_fired = sym_state.get(alert_id, {}).get("last_fired", "")
-            if last_fired and minutes_since(last_fired) < cooldown:
-                rem = cooldown - minutes_since(last_fired)
-                print(f"  [{alert_id}] cooldown {rem:.0f}m")
+            print(f"\n{'─'*60}")
+            print(f"[{symbol}] {name}")
+
+            quote = fetch_quote(symbol)
+            if quote is None:
+                print(f"  [{symbol}] ข้ามเนื่องจากไม่มีข้อมูล")
                 continue
 
-            # ── BUY suppression (macro / sell-cooldown / price-drop) ─
-            if action == "BUY" and suppress_buy:
-                print(f"  [{alert_id}] suppressed: {suppress_reason}")
-                continue
-            # ── Re-entry cooldown เฉพาะ BUY (ไม่บล็อกถาวรเหมือนเดิม) ──
-            if action == "BUY" and in_reentry_cd:
-                rem = reentry_cd - minutes_since(last_buy_at)
-                print(f"  [{alert_id}] re-entry cooldown {rem:.0f}m (BUY ล่าสุด {minutes_since(last_buy_at):.0f}m ที่แล้ว)")
-                continue
+            quotes_cache[symbol] = quote
+            print(f"  Price=${quote['price']:.4f}  Chg={quote['change_pct']:+.2f}%  Vol={quote['volume']:.0f}")
 
-            triggered = False
-            msg       = None
-            tval      = 0
+            # เติมข้อมูล Purify/Price/ADR/RSI/Vol/Gate ล่าสุดเข้า universe.json
+            # ให้ symbol นี้ (ใช้ quote ที่เพิ่งดึงมา ไม่ fetch price ซ้ำ — แค่เพิ่ม
+            # history call เดียวสำหรับ RSI/EMA50 ที่ quote เดิมไม่มี)
+            sync_universe_tech(universe_data, uni_cfg, symbol, quote)
 
-            # ════════════════════════════════════════════════════════
-            #  TIER 1 — FAST CHECKS (ไม่ต้องดึง history เพิ่ม)
-            # ════════════════════════════════════════════════════════
+            sym_state    = state.get(symbol, {})
+            price        = quote["price"]
 
-            if atype == "volume_spike":
-                triggered, tval = check_volume_spike(alert, quote)
-                if triggered:
-                    detail = f"Volume {tval:.1f}x ค่าเฉลี่ย (เงื่อนไข {alert.get('multiplier',2)}x)"
-                    if action == "BUY":
-                        pos = calc_position_size(pos_cfg, symbol, price)
-                        msg = build_buy_message(stock, quote, atype, detail, pos)
-                    elif action == "SELL":
-                        msg = build_sell_message(stock, quote, "vol_alarm", detail)
-                    else:
-                        msg = build_info_message(stock, quote, atype, detail)
+            # ── Re-entry cooldown (แทน open_position suppress ถาวร) ─────
+            # ไม่ block BUY ตลอดไปแค่เพราะเคย BUY มาก่อน — ให้โอกาส entry ใหม่
+            # ได้ถ้าผ่านไปนานพอ (re_entry_cooldown_minutes ตั้งค่าได้ต่อหุ้น)
+            reentry_cd   = stock.get("re_entry_cooldown_minutes", 240)  # default 4 ชม.
+            last_buy_at  = sym_state.get("last_buy_at", "")
+            in_reentry_cd = bool(last_buy_at) and minutes_since(last_buy_at) < reentry_cd
 
-            elif atype == "percent_change":
-                triggered, tval, used_threshold = check_percent_change(alert, quote)
-                if triggered:
-                    adr_info = f" | ADR {quote.get('adr_pct', 0):.1f}%" if quote.get("adr_pct", 0) >= 1.0 else ""
-                    detail = f"เปลี่ยนแปลง {tval:+.2f}% (threshold {used_threshold:.1f}%{adr_info})"
-                    if action == "BUY":
-                        pos = calc_position_size(pos_cfg, symbol, price)
-                        msg = build_buy_message(stock, quote, atype, detail, pos)
-                    elif action == "SELL":
-                        msg = build_sell_message(stock, quote, "pct_drop", detail)
-                    else:
-                        msg = build_info_message(stock, quote, atype, detail)
+            # ── Sell cooldown — เพิ่ง SELL ไปไม่นาน ห้าม BUY ซ้ำเร็วเกินไป ──
+            sell_cd      = stock.get("post_sell_cooldown_minutes", 120)  # default 2 ชม.
+            last_sell_at = sym_state.get("last_sell_at", "")
+            in_sell_cd   = bool(last_sell_at) and minutes_since(last_sell_at) < sell_cd
 
-            elif atype == "support_resistance":
-                triggered, tval, level = check_support_resistance(alert, quote, symbol)
-                if triggered:
-                    lvl_str = f"${level:.4f}" if level else "auto"
-                    detail  = f"ราคา {alert.get('direction','').replace('_',' ')} แนวระดับ {lvl_str}"
-                    if action == "BUY":
-                        pos = calc_position_size(pos_cfg, symbol, price)
-                        msg = build_buy_message(stock, quote, atype, detail, pos)
-                    elif action == "SELL":
-                        msg = build_sell_message(stock, quote, "sl_break", detail)
-                    else:
-                        msg = build_info_message(stock, quote, atype, detail)
+            # ── Price-drop filter — ลงหนักวันนี้ ห้าม BUY แม้ signal ผ่าน ──
+            drop_threshold = stock.get("buy_suppress_drop_pct", 3.0)
+            price_dropping  = quote["change_pct"] <= -drop_threshold
 
-            elif atype == "price_target":
-                triggered, tval = check_price_target(alert, quote)
-                if triggered:
-                    detail = f"ราคา ${price:.4f} ถึงเป้า ${alert.get('target_price',0):.4f}"
-                    if action == "BUY":
-                        pos = calc_position_size(pos_cfg, symbol, price)
-                        msg = build_buy_message(stock, quote, atype, detail, pos)
-                    elif action == "SELL":
-                        msg = build_sell_message(stock, quote, "target_hit", detail)
-                    else:
-                        msg = build_info_message(stock, quote, atype, detail)
+            # ── Macro suppress for BUY ──────────────────────────────────
+            suppress_buy    = False
+            suppress_reason = ""
+            if market_down and not in_reentry_cd:
+                suppress_buy    = True
+                suppress_reason = f"SPY ลง {spy_chg:.1f}%"
+            if btc_down and symbol in BTC_LINKED and not in_reentry_cd:
+                suppress_buy    = True
+                suppress_reason = f"BTC ลง {btc_chg:.1f}%"
+            if in_sell_cd:
+                suppress_buy    = True
+                suppress_reason = f"เพิ่ง SELL ไป {minutes_since(last_sell_at):.0f} นาทีที่แล้ว (cooldown {sell_cd}m)"
+            if price_dropping:
+                suppress_buy    = True
+                suppress_reason = f"ราคาลง {quote['change_pct']:.1f}% วันนี้ (เกิน -{drop_threshold}%)"
+            if suppress_buy:
+                print(f"  [Suppress BUY] {suppress_reason}")
 
-            # ════════════════════════════════════════════════════════
-            #  TIER 1 — RSI (ดึง history แต่เร็ว — 1 API call)
-            # ════════════════════════════════════════════════════════
+            # ════════════════════════════════════════════════════════════
+            #  PROCESS EACH ALERT IN WATCHLIST
+            # ════════════════════════════════════════════════════════════
+            for alert in stock.get("alerts", []):
+                if not alert.get("enabled", True):
+                    continue
 
-            elif atype == "rsi":
-                triggered, rsi, prev_rsi, rsi_price = check_rsi(alert, symbol)
-                if triggered and rsi is not None:
-                    tval   = rsi
-                    cond   = alert.get("condition", "oversold")
-                    detail = f"RSI({alert.get('period',14)}) = {rsi:.1f}  (ก่อนหน้า {prev_rsi:.1f})  [{cond}]"
-                    if action == "BUY":
-                        # BUY confirmation window
-                        ready, hit = check_confirmation_window(sym_state, alert_id, confirm_n)
-                        save_confirmation_hit(state, symbol, alert_id, hit)
-                        if ready:
+                alert_id = alert["id"]
+                atype    = alert["type"]
+                action   = alert.get("action", "")
+                cooldown = alert.get("cooldown_minutes", default_cooldown)
+
+                # ── Cooldown check ─────────────────────────────────────
+                last_fired = sym_state.get(alert_id, {}).get("last_fired", "")
+                if last_fired and minutes_since(last_fired) < cooldown:
+                    rem = cooldown - minutes_since(last_fired)
+                    print(f"  [{alert_id}] cooldown {rem:.0f}m")
+                    continue
+
+                # ── BUY suppression (macro / sell-cooldown / price-drop) ─
+                if action == "BUY" and suppress_buy:
+                    print(f"  [{alert_id}] suppressed: {suppress_reason}")
+                    continue
+                # ── Re-entry cooldown เฉพาะ BUY (ไม่บล็อกถาวรเหมือนเดิม) ──
+                if action == "BUY" and in_reentry_cd:
+                    rem = reentry_cd - minutes_since(last_buy_at)
+                    print(f"  [{alert_id}] re-entry cooldown {rem:.0f}m (BUY ล่าสุด {minutes_since(last_buy_at):.0f}m ที่แล้ว)")
+                    continue
+
+                triggered = False
+                msg       = None
+                tval      = 0
+
+                # ════════════════════════════════════════════════════════
+                #  TIER 1 — FAST CHECKS (ไม่ต้องดึง history เพิ่ม)
+                # ════════════════════════════════════════════════════════
+
+                if atype == "volume_spike":
+                    triggered, tval = check_volume_spike(alert, quote)
+                    if triggered:
+                        detail = f"Volume {tval:.1f}x ค่าเฉลี่ย (เงื่อนไข {alert.get('multiplier',2)}x)"
+                        if action == "BUY":
                             pos = calc_position_size(pos_cfg, symbol, price)
                             msg = build_buy_message(stock, quote, atype, detail, pos)
-                            reset_confirmation(state, symbol, alert_id)
+                        elif action == "SELL":
+                            msg = build_sell_message(stock, quote, "vol_alarm", detail)
                         else:
-                            print(f"  [{alert_id}] RSI confirm {hit}/{confirm_n} รอบ")
-                            triggered = False
-                    elif action == "SELL":
-                        msg = build_sell_message(stock, quote, "score_bear", detail)
-                    else:
-                        msg = build_info_message(stock, quote, atype, detail)
+                            msg = build_info_message(stock, quote, atype, detail)
 
-            # ════════════════════════════════════════════════════════
-            #  TIER 2 — MEDIUM (2-3 API calls)
-            # ════════════════════════════════════════════════════════
-
-            elif atype == "ma_crossover":
-                cond = alert.get("condition", "golden_cross")
-                if cond == "death_cross":
-                    triggered, fast_ma, slow_ma = check_ma_death_cross(
-                        symbol,
-                        alert.get("fast_period", 9),
-                        alert.get("slow_period", 21)
-                    )
+                elif atype == "percent_change":
+                    triggered, tval, used_threshold = check_percent_change(alert, quote)
                     if triggered:
-                        detail = f"EMA{alert.get('fast_period',9)}={fast_ma}  ตัดลงใต้  EMA{alert.get('slow_period',21)}={slow_ma}"
-                        msg = build_sell_message(stock, quote, "death_cross", detail)
-                else:
-                    triggered, fast_ma, slow_ma, ma_price, gap_pct = check_ma_crossover(alert, symbol)
-                    if triggered and fast_ma is not None:
-                        tval   = gap_pct or 0
-                        fast_p = alert.get("fast_period", 9)
-                        slow_p = alert.get("slow_period", 21)
-                        mtype  = alert.get("ma_type", "EMA")
-                        detail = f"{mtype}{fast_p}={fast_ma:.4f}  ตัดขึ้นเหนือ  {mtype}{slow_p}={slow_ma:.4f}  gap={gap_pct:+.2f}%"
+                        adr_info = f" | ADR {quote.get('adr_pct', 0):.1f}%" if quote.get("adr_pct", 0) >= 1.0 else ""
+                        detail = f"เปลี่ยนแปลง {tval:+.2f}% (threshold {used_threshold:.1f}%{adr_info})"
+                        if action == "BUY":
+                            pos = calc_position_size(pos_cfg, symbol, price)
+                            msg = build_buy_message(stock, quote, atype, detail, pos)
+                        elif action == "SELL":
+                            msg = build_sell_message(stock, quote, "pct_drop", detail)
+                        else:
+                            msg = build_info_message(stock, quote, atype, detail)
+
+                elif atype == "support_resistance":
+                    triggered, tval, level = check_support_resistance(alert, quote, symbol)
+                    if triggered:
+                        lvl_str = f"${level:.4f}" if level else "auto"
+                        detail  = f"ราคา {alert.get('direction','').replace('_',' ')} แนวระดับ {lvl_str}"
+                        if action == "BUY":
+                            pos = calc_position_size(pos_cfg, symbol, price)
+                            msg = build_buy_message(stock, quote, atype, detail, pos)
+                        elif action == "SELL":
+                            msg = build_sell_message(stock, quote, "sl_break", detail)
+                        else:
+                            msg = build_info_message(stock, quote, atype, detail)
+
+                elif atype == "price_target":
+                    triggered, tval = check_price_target(alert, quote)
+                    if triggered:
+                        detail = f"ราคา ${price:.4f} ถึงเป้า ${alert.get('target_price',0):.4f}"
+                        if action == "BUY":
+                            pos = calc_position_size(pos_cfg, symbol, price)
+                            msg = build_buy_message(stock, quote, atype, detail, pos)
+                        elif action == "SELL":
+                            msg = build_sell_message(stock, quote, "target_hit", detail)
+                        else:
+                            msg = build_info_message(stock, quote, atype, detail)
+
+                # ════════════════════════════════════════════════════════
+                #  TIER 1 — RSI (ดึง history แต่เร็ว — 1 API call)
+                # ════════════════════════════════════════════════════════
+
+                elif atype == "rsi":
+                    triggered, rsi, prev_rsi, rsi_price = check_rsi(alert, symbol)
+                    if triggered and rsi is not None:
+                        tval   = rsi
+                        cond   = alert.get("condition", "oversold")
+                        detail = f"RSI({alert.get('period',14)}) = {rsi:.1f}  (ก่อนหน้า {prev_rsi:.1f})  [{cond}]"
+                        if action == "BUY":
+                            # BUY confirmation window
+                            ready, hit = check_confirmation_window(sym_state, alert_id, confirm_n)
+                            save_confirmation_hit(state, symbol, alert_id, hit)
+                            if ready:
+                                pos = calc_position_size(pos_cfg, symbol, price)
+                                msg = build_buy_message(stock, quote, atype, detail, pos)
+                                reset_confirmation(state, symbol, alert_id)
+                            else:
+                                print(f"  [{alert_id}] RSI confirm {hit}/{confirm_n} รอบ")
+                                triggered = False
+                        elif action == "SELL":
+                            msg = build_sell_message(stock, quote, "score_bear", detail)
+                        else:
+                            msg = build_info_message(stock, quote, atype, detail)
+
+                # ════════════════════════════════════════════════════════
+                #  TIER 2 — MEDIUM (2-3 API calls)
+                # ════════════════════════════════════════════════════════
+
+                elif atype == "ma_crossover":
+                    cond = alert.get("condition", "golden_cross")
+                    if cond == "death_cross":
+                        triggered, fast_ma, slow_ma = check_ma_death_cross(
+                            symbol,
+                            alert.get("fast_period", 9),
+                            alert.get("slow_period", 21)
+                        )
+                        if triggered:
+                            detail = f"EMA{alert.get('fast_period',9)}={fast_ma}  ตัดลงใต้  EMA{alert.get('slow_period',21)}={slow_ma}"
+                            msg = build_sell_message(stock, quote, "death_cross", detail)
+                    else:
+                        triggered, fast_ma, slow_ma, ma_price, gap_pct = check_ma_crossover(alert, symbol)
+                        if triggered and fast_ma is not None:
+                            tval   = gap_pct or 0
+                            fast_p = alert.get("fast_period", 9)
+                            slow_p = alert.get("slow_period", 21)
+                            mtype  = alert.get("ma_type", "EMA")
+                            detail = f"{mtype}{fast_p}={fast_ma:.4f}  ตัดขึ้นเหนือ  {mtype}{slow_p}={slow_ma:.4f}  gap={gap_pct:+.2f}%"
+                            if action == "BUY":
+                                ready, hit = check_confirmation_window(sym_state, alert_id, confirm_n)
+                                save_confirmation_hit(state, symbol, alert_id, hit)
+                                if ready:
+                                    pos = calc_position_size(pos_cfg, symbol, price)
+                                    msg = build_buy_message(stock, quote, atype, detail, pos)
+                                    reset_confirmation(state, symbol, alert_id)
+                                else:
+                                    print(f"  [{alert_id}] MA confirm {hit}/{confirm_n} รอบ")
+                                    triggered = False
+                            else:
+                                msg = build_info_message(stock, quote, atype, detail)
+
+                elif atype == "alert_score":
+                    triggered, score, grade, bd = check_alert_score(alert, symbol)
+                    if triggered:
+                        tval   = score
+                        detail = f"Score {score}/100 เกรด {grade}  ({alert.get('direction','bullish')})"
                         if action == "BUY":
                             ready, hit = check_confirmation_window(sym_state, alert_id, confirm_n)
                             save_confirmation_hit(state, symbol, alert_id, hit)
@@ -1489,173 +1508,168 @@ def main():
                                 msg = build_buy_message(stock, quote, atype, detail, pos)
                                 reset_confirmation(state, symbol, alert_id)
                             else:
-                                print(f"  [{alert_id}] MA confirm {hit}/{confirm_n} รอบ")
+                                print(f"  [{alert_id}] Score confirm {hit}/{confirm_n} รอบ")
+                                triggered = False
+                        elif action == "SELL":
+                            msg = build_sell_message(stock, quote, "score_bear", detail)
+                        else:
+                            msg = build_info_message(stock, quote, atype, detail)
+
+                # ════════════════════════════════════════════════════════
+                #  TIER 3 — SLOW (MTF — 3+ API calls, cooldown ยาว)
+                # ════════════════════════════════════════════════════════
+
+                elif atype == "mtf_alignment":
+                    triggered, mtf_result = check_mtf_alignment(alert, symbol)
+                    if triggered:
+                        tval    = mtf_result.get("bull_count", 0)
+                        overall = mtf_result.get("overall", "")
+                        detail  = f"MTF: {overall}  bull={tval}/{mtf_result.get('total',3)}"
+                        if action == "BUY":
+                            ready, hit = check_confirmation_window(sym_state, alert_id, confirm_n)
+                            save_confirmation_hit(state, symbol, alert_id, hit)
+                            if ready:
+                                pos = calc_position_size(pos_cfg, symbol, price)
+                                msg = build_buy_message(stock, quote, atype, detail, pos)
+                                reset_confirmation(state, symbol, alert_id)
+                            else:
+                                print(f"  [{alert_id}] MTF confirm {hit}/{confirm_n} รอบ")
                                 triggered = False
                         else:
                             msg = build_info_message(stock, quote, atype, detail)
 
-            elif atype == "alert_score":
-                triggered, score, grade, bd = check_alert_score(alert, symbol)
-                if triggered:
-                    tval   = score
-                    detail = f"Score {score}/100 เกรด {grade}  ({alert.get('direction','bullish')})"
-                    if action == "BUY":
-                        ready, hit = check_confirmation_window(sym_state, alert_id, confirm_n)
-                        save_confirmation_hit(state, symbol, alert_id, hit)
-                        if ready:
-                            pos = calc_position_size(pos_cfg, symbol, price)
-                            msg = build_buy_message(stock, quote, atype, detail, pos)
-                            reset_confirmation(state, symbol, alert_id)
-                        else:
-                            print(f"  [{alert_id}] Score confirm {hit}/{confirm_n} รอบ")
-                            triggered = False
-                    elif action == "SELL":
-                        msg = build_sell_message(stock, quote, "score_bear", detail)
-                    else:
-                        msg = build_info_message(stock, quote, atype, detail)
-
-            # ════════════════════════════════════════════════════════
-            #  TIER 3 — SLOW (MTF — 3+ API calls, cooldown ยาว)
-            # ════════════════════════════════════════════════════════
-
-            elif atype == "mtf_alignment":
-                triggered, mtf_result = check_mtf_alignment(alert, symbol)
-                if triggered:
-                    tval    = mtf_result.get("bull_count", 0)
-                    overall = mtf_result.get("overall", "")
-                    detail  = f"MTF: {overall}  bull={tval}/{mtf_result.get('total',3)}"
-                    if action == "BUY":
-                        ready, hit = check_confirmation_window(sym_state, alert_id, confirm_n)
-                        save_confirmation_hit(state, symbol, alert_id, hit)
-                        if ready:
-                            pos = calc_position_size(pos_cfg, symbol, price)
-                            msg = build_buy_message(stock, quote, atype, detail, pos)
-                            reset_confirmation(state, symbol, alert_id)
-                        else:
-                            print(f"  [{alert_id}] MTF confirm {hit}/{confirm_n} รอบ")
-                            triggered = False
-                    else:
-                        msg = build_info_message(stock, quote, atype, detail)
-
-            # ── Skip unknown types ──────────────────────────────────
-            else:
-                print(f"  [{alert_id}] ❓ type ไม่รู้จัก: {atype}")
-                continue
-
-            if not triggered:
-                print(f"  [{alert_id}] ไม่ trigger ({atype})")
-                continue
-            if msg is None:
-                print(f"  [{alert_id}] triggered แต่ไม่มี message")
-                continue
-
-            # ── CONVICTION GATE — ด่านสุดท้ายเฉพาะ BUY (รวมศูนย์ทุก type) ──
-            # ทุก BUY signal (ไม่ว่าจะมาจาก RSI/MTF/Score/Volume/%Change ฯลฯ)
-            # ต้องผ่านอย่างน้อย 3/4 มิติก่อนปล่อยจริง — กัน false signal แบบ
-            # SNDK (ราคาลงหนักแต่ MTF ยัง bullish) โดยไม่ต้องดึง API เพิ่ม
-            if action == "BUY":
-                conv_pass, conv_score, conv_detail = conviction_gate(symbol, quote)
-                if not conv_pass:
-                    failed_dims = [k for k, v in conv_detail.items()
-                                   if isinstance(v, dict) and not v.get("pass", True)]
-                    print(f"  [{alert_id}] 🚫 Conviction Gate FAIL "
-                          f"({conv_score}/4) — ไม่ผ่าน: {', '.join(failed_dims)}")
-                    continue
-                print(f"  [{alert_id}] ✅ Conviction Gate PASS ({conv_score}/4)")
-                # แนบผล Conviction Score เข้า message ก่อนส่งจริง
-                dims_th = {"trend": "Trend", "momentum": "Momentum",
-                           "volume": "Volume", "volatility": "Volatility"}
-                dim_marks = " ".join(
-                    f"{dims_th.get(k,k)}{'✅' if v.get('pass') else '❌'}"
-                    for k, v in conv_detail.items() if isinstance(v, dict)
-                )
-                if conv_score >= 4:
-                    # ── สัญญาณเต็มพลัง 4/4 — ทำให้เด่นขึ้นมาเพื่อให้สังเกตง่าย ──
-                    conv_line = (f"\n⭐⭐⭐ <b>Conviction: 4/4 — สัญญาณเต็มพลัง</b> ⭐⭐⭐"
-                                 f"\n🎯 ({dim_marks})")
-                    msg = "🔥🌟 <b>TOP SIGNAL (4/4)</b> 🌟🔥\n" + msg
+                # ── Skip unknown types ──────────────────────────────────
                 else:
-                    conv_line = f"\n🎯 Conviction: {conv_score}/4  ({dim_marks})"
-                msg = msg.replace("\n\n📊 <a href=", conv_line + "\n\n📊 <a href=", 1)
+                    print(f"  [{alert_id}] ❓ type ไม่รู้จัก: {atype}")
+                    continue
 
-            # ── SELL: แนบผลลัพธ์ P&L ของ position ที่กำลังจะปิด (ถ้ามี open_entry) ──
-            if action == "SELL":
-                prior_state = state.get(symbol, {})
-                entry_price = prior_state.get("open_entry")
-                if entry_price:
-                    pnl_pct = (price - entry_price) / entry_price * 100
-                    days_held_txt = ""
-                    if prior_state.get("open_time"):
-                        days_held = minutes_since(prior_state["open_time"]) / 1440
-                        days_held_txt = f"  •  ถือมา {days_held:.1f} วัน"
-                    result_icon = "🟢 กำไร" if pnl_pct >= 0 else "🔴 ขาดทุน"
-                    pnl_line = (
-                        f"\n━━━━━━━━━━━━━━━━━━━━━━━━━"
-                        f"\n📊 <b>ผลลัพธ์ position นี้:</b> {result_icon}  "
-                        f"<b>{pnl_pct:+.2f}%</b>"
-                        f"\n  • เข้าซื้อ ${entry_price:.4f} → ปิดที่ ${price:.4f}{days_held_txt}"
-                    )
-                    msg = msg.replace("\n\n📊 <a href=", pnl_line + "\n\n📊 <a href=", 1)
+                if not triggered:
+                    print(f"  [{alert_id}] ไม่ trigger ({atype})")
+                    continue
+                if msg is None:
+                    print(f"  [{alert_id}] triggered แต่ไม่มี message")
+                    continue
 
-            print(f"  [{alert_id}] ✅ TRIGGERED! ส่ง Telegram...")
-            success = send_telegram(token, chat_id, msg)
-
-            if success:
-                state.setdefault(symbol, {})[alert_id] = {"last_fired": now_str()}
-
-                # ── Track BUY/SELL timestamps (สำหรับ re-entry + sell cooldown) ──
+                # ── CONVICTION GATE — ด่านสุดท้ายเฉพาะ BUY (รวมศูนย์ทุก type) ──
+                # ทุก BUY signal (ไม่ว่าจะมาจาก RSI/MTF/Score/Volume/%Change ฯลฯ)
+                # ต้องผ่านอย่างน้อย 3/4 มิติก่อนปล่อยจริง — กัน false signal แบบ
+                # SNDK (ราคาลงหนักแต่ MTF ยัง bullish) โดยไม่ต้องดึง API เพิ่ม
                 if action == "BUY":
-                    state[symbol]["last_buy_at"] = now_str()
-                    # FIX: gate ที่ comment ด้านบนตั้งใจไว้ตั้งแต่แรก ("2. ไม่มี
-                    # open position สำหรับหุ้นตัวนั้น") แต่ไม่เคยถูกเขียนโค้ดจริง
-                    # — ก่อนหน้านี้ทุกครั้งที่ BUY ยิงซ้ำขณะ position เดิมยัง
-                    # เปิดอยู่ (ไม่ว่าจะเพราะ re-entry cooldown หมดตามปกติ หรือ
-                    # เพราะ state.json หลุดจาก push fail แล้วทำให้ cooldown
-                    # เข้าใจผิดว่ายังไม่เคยยิง) จะเขียนทับ open_entry/open_time/
-                    # open_peak ด้วยราคา/เวลาล่าสุดทันที ทำให้ % กำไร-ขาดทุน
-                    # และจำนวนวันที่ถือ ในรายงาน "สรุปสถานะ position"
-                    # (build_position_status_messages) ผิดเพี้ยนจากความเป็นจริง
-                    # — แก้โดยบันทึกค่าพวกนี้แค่ตอน "เปิด position ใหม่จริงๆ"
-                    # (ยังไม่มี open_entry ค้างอยู่) เท่านั้น ถ้ามี position
-                    # เปิดอยู่แล้ว ยังส่ง Telegram แจ้งเตือนตามปกติ (เผื่ออยากรู้
-                    # ว่ามีสัญญาณ BUY อีกรอบ) แค่ไม่ไปยุ่งกับตัวเลข entry เดิม
-                    if not state[symbol].get("open_entry"):
-                        state[symbol]["open_entry"]      = price
-                        state[symbol]["open_time"]       = now_str()
-                        state[symbol]["open_peak"]       = price
-                        state[symbol]["open_stop"]       = pos["stop"] if pos else None
-                        state[symbol]["open_target"]     = pos.get("target") if pos else None
-                        state[symbol]["open_conviction"] = conv_score
-                        state[symbol]["open_alert_type"] = atype
+                    conv_pass, conv_score, conv_detail = conviction_gate(symbol, quote)
+                    if not conv_pass:
+                        failed_dims = [k for k, v in conv_detail.items()
+                                       if isinstance(v, dict) and not v.get("pass", True)]
+                        print(f"  [{alert_id}] 🚫 Conviction Gate FAIL "
+                              f"({conv_score}/4) — ไม่ผ่าน: {', '.join(failed_dims)}")
+                        continue
+                    print(f"  [{alert_id}] ✅ Conviction Gate PASS ({conv_score}/4)")
+                    # แนบผล Conviction Score เข้า message ก่อนส่งจริง
+                    dims_th = {"trend": "Trend", "momentum": "Momentum",
+                               "volume": "Volume", "volatility": "Volatility"}
+                    dim_marks = " ".join(
+                        f"{dims_th.get(k,k)}{'✅' if v.get('pass') else '❌'}"
+                        for k, v in conv_detail.items() if isinstance(v, dict)
+                    )
+                    if conv_score >= 4:
+                        # ── สัญญาณเต็มพลัง 4/4 — ทำให้เด่นขึ้นมาเพื่อให้สังเกตง่าย ──
+                        conv_line = (f"\n⭐⭐⭐ <b>Conviction: 4/4 — สัญญาณเต็มพลัง</b> ⭐⭐⭐"
+                                     f"\n🎯 ({dim_marks})")
+                        msg = "🔥🌟 <b>TOP SIGNAL (4/4)</b> 🌟🔥\n" + msg
                     else:
-                        print(f"  [{alert_id}] ℹ️ มี position เปิดอยู่แล้ว "
-                              f"(entry เดิม ${state[symbol]['open_entry']:.4f}) "
-                              f"— ส่ง alert ตามปกติแต่ไม่เขียนทับ entry เดิม")
-                elif action == "SELL":
-                    state[symbol]["last_sell_at"] = now_str()
-                    # ── ปิด position: เคลียร์ open_* ทั้งหมดไม่ให้ P&L ค้าง ──
-                    for _k in ("open_entry", "open_time", "open_peak", "open_stop",
-                               "open_target", "open_conviction", "open_alert_type"):
-                        state[symbol].pop(_k, None)
+                        conv_line = f"\n🎯 Conviction: {conv_score}/4  ({dim_marks})"
+                    msg = msg.replace("\n\n📊 <a href=", conv_line + "\n\n📊 <a href=", 1)
+
+                # ── SELL: แนบผลลัพธ์ P&L ของ position ที่กำลังจะปิด (ถ้ามี open_entry) ──
+                if action == "SELL":
+                    prior_state = state.get(symbol, {})
+                    entry_price = prior_state.get("open_entry")
+                    if entry_price:
+                        pnl_pct = (price - entry_price) / entry_price * 100
+                        days_held_txt = ""
+                        if prior_state.get("open_time"):
+                            days_held = minutes_since(prior_state["open_time"]) / 1440
+                            days_held_txt = f"  •  ถือมา {days_held:.1f} วัน"
+                        result_icon = "🟢 กำไร" if pnl_pct >= 0 else "🔴 ขาดทุน"
+                        pnl_line = (
+                            f"\n━━━━━━━━━━━━━━━━━━━━━━━━━"
+                            f"\n📊 <b>ผลลัพธ์ position นี้:</b> {result_icon}  "
+                            f"<b>{pnl_pct:+.2f}%</b>"
+                            f"\n  • เข้าซื้อ ${entry_price:.4f} → ปิดที่ ${price:.4f}{days_held_txt}"
+                        )
+                        msg = msg.replace("\n\n📊 <a href=", pnl_line + "\n\n📊 <a href=", 1)
+
+                print(f"  [{alert_id}] ✅ TRIGGERED! ส่ง Telegram...")
+                success = send_telegram(token, chat_id, msg)
+
+                if success:
+                    state.setdefault(symbol, {})[alert_id] = {"last_fired": now_str()}
+
+                    # ── Track BUY/SELL timestamps (สำหรับ re-entry + sell cooldown) ──
+                    if action == "BUY":
+                        state[symbol]["last_buy_at"] = now_str()
+                        # FIX: gate ที่ comment ด้านบนตั้งใจไว้ตั้งแต่แรก ("2. ไม่มี
+                        # open position สำหรับหุ้นตัวนั้น") แต่ไม่เคยถูกเขียนโค้ดจริง
+                        # — ก่อนหน้านี้ทุกครั้งที่ BUY ยิงซ้ำขณะ position เดิมยัง
+                        # เปิดอยู่ (ไม่ว่าจะเพราะ re-entry cooldown หมดตามปกติ หรือ
+                        # เพราะ state.json หลุดจาก push fail แล้วทำให้ cooldown
+                        # เข้าใจผิดว่ายังไม่เคยยิง) จะเขียนทับ open_entry/open_time/
+                        # open_peak ด้วยราคา/เวลาล่าสุดทันที ทำให้ % กำไร-ขาดทุน
+                        # และจำนวนวันที่ถือ ในรายงาน "สรุปสถานะ position"
+                        # (build_position_status_messages) ผิดเพี้ยนจากความเป็นจริง
+                        # — แก้โดยบันทึกค่าพวกนี้แค่ตอน "เปิด position ใหม่จริงๆ"
+                        # (ยังไม่มี open_entry ค้างอยู่) เท่านั้น ถ้ามี position
+                        # เปิดอยู่แล้ว ยังส่ง Telegram แจ้งเตือนตามปกติ (เผื่ออยากรู้
+                        # ว่ามีสัญญาณ BUY อีกรอบ) แค่ไม่ไปยุ่งกับตัวเลข entry เดิม
+                        if not state[symbol].get("open_entry"):
+                            state[symbol]["open_entry"]      = price
+                            state[symbol]["open_time"]       = now_str()
+                            state[symbol]["open_peak"]       = price
+                            state[symbol]["open_stop"]       = pos["stop"] if pos else None
+                            state[symbol]["open_target"]     = pos.get("target") if pos else None
+                            state[symbol]["open_conviction"] = conv_score
+                            state[symbol]["open_alert_type"] = atype
+                        else:
+                            print(f"  [{alert_id}] ℹ️ มี position เปิดอยู่แล้ว "
+                                  f"(entry เดิม ${state[symbol]['open_entry']:.4f}) "
+                                  f"— ส่ง alert ตามปกติแต่ไม่เขียนทับ entry เดิม")
+                    elif action == "SELL":
+                        state[symbol]["last_sell_at"] = now_str()
+                        # ── ปิด position: เคลียร์ open_* ทั้งหมดไม่ให้ P&L ค้าง ──
+                        for _k in ("open_entry", "open_time", "open_peak", "open_stop",
+                                   "open_target", "open_conviction", "open_alert_type"):
+                            state[symbol].pop(_k, None)
 
 
 
-                log.append({
-                    "timestamp":  now_str(),
-                    "symbol":     symbol,
-                    "alert_id":   alert_id,
-                    "type":       atype,
-                    "action":     action,
-                    "price":      price,
-                    "change_pct": quote["change_pct"],
-                    "value":      tval,
-                })
-                fired_count += 1
-                print(f"  [{alert_id}] ✅ ส่งสำเร็จ")
-            else:
-                print(f"  [{alert_id}] ❌ ส่งไม่สำเร็จ")
+                    log.append({
+                        "timestamp":  now_str(),
+                        "symbol":     symbol,
+                        "alert_id":   alert_id,
+                        "type":       atype,
+                        "action":     action,
+                        "price":      price,
+                        "change_pct": quote["change_pct"],
+                        "value":      tval,
+                    })
+                    fired_count += 1
+                    print(f"  [{alert_id}] ✅ ส่งสำเร็จ")
+                else:
+                    print(f"  [{alert_id}] ❌ ส่งไม่สำเร็จ")
 
-        time.sleep(0.5)
+            time.sleep(0.5)
+        except Exception as e:
+            # FIX: ก่อนหน้านี้ loop นี้ไม่มี try/except เลย — ถ้าหุ้นตัวไหน
+            # ตัวหนึ่ง throw exception ไม่ว่าจะจุดไหนก็ตาม (เช่น field ที่
+            # ขาดหาย, ข้อมูลราคาผิดปกติ, bug ใน check_* ฟังก์ชันใดก็ได้)
+            # ทั้ง run จะ crash ทันที ทำให้ save_json(state) ไม่ถูกเรียก
+            # (state ของหุ้นที่ผ่านไปแล้วก่อนหน้าในลูปเดียวกันหายหมด แม้จะ
+            # ยิง Telegram ไปแล้วก็ตาม) และโค้ด Daily Summary / Position
+            # Status ที่อยู่ท้ายฟังก์ชัน main() หลังลูปนี้ก็ไม่ถูกรันเลย —
+            # แก้โดยดัก exception ต่อหุ้นแต่ละตัว บันทึก log แล้วข้ามไป
+            # หุ้นตัวถัดไปแทน ไม่ให้ 1 ตัวที่มีปัญหาทำให้ทั้ง run ล่ม
+            _err_sym = stock.get("symbol", "?")
+            print(f"  [{_err_sym}] ⚠️ ERROR ไม่คาดคิดระหว่างประมวลผล — ข้ามไปหุ้นตัวถัดไป: {e}")
+            continue
 
     # ── Daily Summary ─────────────────────────────────────────────────
     summary_hour  = settings.get("daily_summary_hour_utc", 1)
@@ -1667,12 +1681,19 @@ def main():
     if (current_hour == summary_hour
             and (not last_summary or not last_summary.startswith(today_str))
             and quotes_cache):
-        print("\n[Daily Summary] กำลังส่ง...")
-        msg     = build_daily_summary(watchlist, quotes_cache)
-        success = send_telegram(token, chat_id, msg)
-        if success:
-            state["__daily_summary__"] = {"last_sent": now_str()}
-            print("[Daily Summary] ✅ ส่งสำเร็จ")
+        try:
+            print("\n[Daily Summary] กำลังส่ง...")
+            msg     = build_daily_summary(watchlist, quotes_cache)
+            success = send_telegram(token, chat_id, msg)
+            if success:
+                state["__daily_summary__"] = {"last_sent": now_str()}
+                print("[Daily Summary] ✅ ส่งสำเร็จ")
+        except Exception as e:
+            # FIX: กันเหตุการณ์แบบเดียวกับ per-stock loop ด้านบน — ถ้า
+            # build_daily_summary()/send_telegram() พังด้วยเหตุผลอะไรก็ตาม
+            # (เช่น ข้อมูลราคาผิดรูปแบบ) จะไม่ทำให้ save_json() ท้ายฟังก์ชัน
+            # ไม่ถูกเรียก และจะได้ log ไว้เห็นสาเหตุ แทนที่จะ silent fail
+            print(f"[Daily Summary] ⚠️ ERROR ไม่คาดคิด — ข้ามรอบนี้ไป: {e}")
 
     # ── Position Status Report — สรุป P&L ของ position ที่เปิดอยู่ ──────
     status_hour  = settings.get("position_status_hour_utc", summary_hour)
@@ -1682,23 +1703,30 @@ def main():
     if (current_hour == status_hour
             and (not last_status or not last_status.startswith(today_str))
             and quotes_cache):
-        print("\n[Position Status] กำลังสรุป...")
-        status_msgs = build_position_status_messages(state, watchlist, quotes_cache)
-        if status_msgs:
-            all_ok = True
-            for i, smsg in enumerate(status_msgs):
-                ok = send_telegram(token, chat_id, smsg)
-                all_ok = all_ok and ok
-                if i < len(status_msgs) - 1:
-                    time.sleep(0.5)
-            if all_ok:
-                state["__position_status__"] = {"last_sent": now_str()}
-                print(f"[Position Status] ✅ ส่งสำเร็จ ({len(status_msgs)} ข้อความ)")
+        try:
+            print("\n[Position Status] กำลังสรุป...")
+            status_msgs = build_position_status_messages(state, watchlist, quotes_cache)
+            if status_msgs:
+                all_ok = True
+                for i, smsg in enumerate(status_msgs):
+                    ok = send_telegram(token, chat_id, smsg)
+                    all_ok = all_ok and ok
+                    if i < len(status_msgs) - 1:
+                        time.sleep(0.5)
+                if all_ok:
+                    state["__position_status__"] = {"last_sent": now_str()}
+                    print(f"[Position Status] ✅ ส่งสำเร็จ ({len(status_msgs)} ข้อความ)")
+                else:
+                    print("[Position Status] ❌ ส่งไม่สำเร็จบางข้อความ")
             else:
-                print("[Position Status] ❌ ส่งไม่สำเร็จบางข้อความ")
-        else:
-            print("[Position Status] ไม่มี position เปิดอยู่ — ข้าม")
-            state["__position_status__"] = {"last_sent": now_str()}
+                print("[Position Status] ไม่มี position เปิดอยู่ — ข้าม")
+                state["__position_status__"] = {"last_sent": now_str()}
+        except Exception as e:
+            # FIX: เหตุผลเดียวกับ Daily Summary ด้านบน — กัน exception จาก
+            # build_position_status_messages() (เช่น ถ้าหุ้นตัวไหนมี
+            # open_entry ค้างแต่ไม่มีราคาปัจจุบันใน quotes_cache) ไม่ให้ทำ
+            # save_json() ท้ายฟังก์ชันไม่ถูกเรียก
+            print(f"[Position Status] ⚠️ ERROR ไม่คาดคิด — ข้ามรอบนี้ไป: {e}")
 
     save_json(STATE_PATH, state)
     save_json(LOG_PATH, log[-500:])
