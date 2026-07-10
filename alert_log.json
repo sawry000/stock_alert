@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-01T06:58:43Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 96.5199966430664,
-    "change_pct": 4.913039829420007,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-01T07:08:49Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 34.66999816894531,
-    "change_pct": 4.8699279157450395,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-01T07:08:56Z",
     "symbol": "WGS",
     "alert_id": "WGS_MTF_BULL",
@@ -4997,6 +4977,26 @@
     "action": "BUY",
     "price": 14.34000015258789,
     "change_pct": 0.34989609928545473,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T23:57:23Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1915.9200439453125,
+    "change_pct": 1.4793533835090487,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T23:57:30Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 77.30000305175781,
+    "change_pct": -1.9035494267032802,
     "value": 3
   }
 ]
