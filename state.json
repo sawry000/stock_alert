@@ -433,7 +433,7 @@
       "last_fired": "2026-06-10T15:52:58Z"
     },
     "XMTR_MTF_BULL": {
-      "last_fired": "2026-07-09T22:10:51Z"
+      "last_fired": "2026-07-10T06:11:28Z"
     },
     "XMTR_CP_BULL": {
       "last_fired": "2026-06-25T14:07:53Z"
@@ -462,7 +462,7 @@
     "open_position": true,
     "open_entry": 92.66500091552734,
     "open_time": "2026-07-08T14:43:51Z",
-    "last_buy_at": "2026-07-09T22:10:51Z",
+    "last_buy_at": "2026-07-10T06:11:28Z",
     "open_peak": 92.66500091552734,
     "open_stop": 82.684,
     "open_target": 100.0782,
@@ -1782,17 +1782,16 @@
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
-      "last_fired": "2026-07-09T21:42:23Z"
+      "last_fired": "2026-07-10T06:12:53Z"
     },
-    "last_buy_at": "2026-07-09T21:42:23Z",
+    "last_buy_at": "2026-07-10T06:12:53Z",
     "open_entry": 13.930000305175781,
     "open_time": "2026-07-09T04:50:43Z",
     "open_peak": 13.930000305175781,
     "open_stop": 12.0881,
     "open_target": 15.0444,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_AOUT_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "OFRM": {
     "OFRM_PCT_DROP": {

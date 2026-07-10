@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T21:48:56Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 38.849998474121094,
-    "change_pct": 8.270345556933474,
-    "value": 8.270345556933474
-  },
-  {
-    "timestamp": "2026-06-30T21:49:00Z",
-    "symbol": "CLPT",
-    "alert_id": "CLPT_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 17.84000015258789,
-    "change_pct": -7.56476604876741,
-    "value": -7.56476604876741
-  },
-  {
     "timestamp": "2026-06-30T21:49:29Z",
     "symbol": "VECO",
     "alert_id": "VECO_MTF_BULL",
@@ -4997,6 +4977,26 @@
     "action": "BUY",
     "price": 4.659999847412109,
     "change_pct": 8.878501107759558,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T06:11:28Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 93.6500015258789,
+    "change_pct": 6.420456279407848,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T06:12:53Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 14.270000457763672,
+    "change_pct": 2.4407785912682853,
     "value": 3
   }
 ]
