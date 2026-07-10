@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T23:19:11Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.130000114440918,
-    "change_pct": 8.304502229789543,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T23:19:27Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.6299999952316284,
-    "change_pct": 3.821655747237475,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T23:19:30Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 149.91000366210938,
-    "change_pct": 3.3862094221443964,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T23:19:35Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MTF_BULL",
@@ -4998,5 +4968,35 @@
     "price": 187.3300018310547,
     "change_pct": -4.208426144889198,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-10T14:10:43Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 411.0,
+    "change_pct": -1.5804597701149479,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-10T14:10:49Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 95.93499755859375,
+    "change_pct": 0.35041585626961896,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-10T14:11:13Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 67.62999725341797,
+    "change_pct": -2.550436234268065,
+    "value": 2
   }
 ]
