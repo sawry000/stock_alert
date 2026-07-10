@@ -1,55 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T22:53:45Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 16.329999923706055,
-    "change_pct": 5.016076679781698,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T22:53:49Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 96.5199966430664,
-    "change_pct": 4.913039829420007,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T23:03:54Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 34.66999816894531,
-    "change_pct": 4.8699279157450395,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T23:04:02Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 68.6500015258789,
-    "change_pct": 1.328415536352629,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T23:04:18Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 228.5,
-    "change_pct": 1.9042946974089152,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T23:04:23Z",
     "symbol": "VICR",
     "alert_id": "VICR_MTF_BULL",
@@ -4998,5 +4948,55 @@
     "price": 25.6299991607666,
     "change_pct": 0.90550850695513,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-10T10:41:05Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.28000020980835,
+    "change_pct": 2.9508231116122947,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T10:41:09Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 35.45000076293945,
+    "change_pct": -0.14084292129731513,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-10T10:41:36Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 20.329999923706055,
+    "change_pct": 0.6435639787428485,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T10:41:40Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.5899999141693115,
+    "change_pct": 0.5602216854148931,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T10:41:50Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.479999542236328,
+    "change_pct": 1.6507216334321322,
+    "value": 3
   }
 ]
