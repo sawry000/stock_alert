@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-01T06:14:21Z",
-    "symbol": "SMTC",
-    "alert_id": "SMTC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 161.85000610351562,
-    "change_pct": 5.097406560724432,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-01T06:58:25Z",
     "symbol": "COHR",
     "alert_id": "COHR_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 5.375,
     "change_pct": -0.8302583025830245,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-10T19:56:20Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 115.45999908447266,
+    "change_pct": -2.1525431487519864,
+    "value": 3
   }
 ]
