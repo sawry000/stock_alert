@@ -868,6 +868,9 @@ input[type=password]{letter-spacing:2px}
         <button id="uni-tab-cfg" class="btn btn-sm btn-ghost" style="border:none" onclick="uniSwitchTab('cfg')">
           <span class="msi">tune</span> Filter Config
         </button>
+        <button id="uni-tab-sflow" class="btn btn-sm btn-ghost" style="border:none" onclick="uniSwitchTab('sflow')">
+          <span class="msi">bubble_chart</span> กลุ่มหุ้น (Sector Flow)
+        </button>
       </div>
 
       <!-- TAB: LIST ──────────────────────────────────────────── -->
@@ -1018,6 +1021,48 @@ input[type=password]{letter-spacing:2px}
           </div>
           <div id="ucfg-log" style="margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--text2)"></div>
         </div>
+      </div>
+
+      <!-- TAB: SECTOR FLOW (Universe ทั้งหมด — เหมือน Watchlist Manager แต่ scope
+           กว้างกว่า ครอบคลุมหุ้นทุกตัวใน universe.json ~1000+ ตัว ไม่ใช่แค่ 68
+           ตัวใน watchlist) ──────────────────────────────────────────── -->
+      <div id="uni-panel-sflow" style="display:none">
+        <div class="sflow-note">
+          <span class="msi" style="font-size:13px;vertical-align:middle;color:var(--cyan)">info</span>
+          จัดกลุ่มหุ้นทั้งหมดใน <strong style="color:var(--text)">Universe</strong> (ไม่ใช่แค่ Watchlist) ตาม Sector/Industry จริง (จาก daily_screener.py) —
+          หุ้นที่ยังไม่เคยถูก scan จะใช้การจัดกลุ่มสำรองแบบ preset แทนชั่วคราว แล้วเรียงจาก <strong style="color:var(--text)">% เปลี่ยนแปลงราคาถ่วงน้ำหนักด้วยมูลค่าซื้อขายจริง (dollar volume)</strong>
+          ของกลุ่มวันนี้ (มากไปน้อย) — ป้าย <strong style="color:var(--gold)">$-weighted</strong> แปลว่ากลุ่มนั้นคำนวณด้วยมูลค่าเงินจริงแล้ว ไม่ใช่แค่ % เฉลี่ยเปล่าๆ
+          เนื่องจากมีจำนวนหุ้นเยอะกว่า Watchlist มาก การโหลดหน้านี้อาจใช้เวลานานกว่าเล็กน้อย
+          และหุ้นส่วนใหญ่ในนี้ยังไม่เคยถูก scan (จะไปกอง "อื่นๆ / ยังไม่จัดกลุ่ม") จนกว่า daily-screener จะ scan ผ่านครบ
+        </div>
+
+        <details class="sflow-legend">
+          <summary><span class="msi" style="font-size:13px;vertical-align:middle;color:var(--gold)">help</span> ตัวเลข % และแถบสี อ่านยังไง? (กดเพื่อดู)</summary>
+          <div class="sflow-legend-body">
+            <div class="sflow-legend-item">
+              <span class="sflow-legend-icon" style="color:var(--green)">+2.15%</span>
+              <div><strong>ตัวเลข % คือ</strong> วันนี้หุ้นในกลุ่มนี้ "โดยเฉลี่ย" ราคาขึ้นหรือลงกี่เปอร์เซ็นต์จากเมื่อวาน — <strong style="color:var(--green)">สีเขียว/บวก = กลุ่มนี้โดยรวมราคาขึ้น (เงินไหลเข้า)</strong>, <strong style="color:var(--red)">สีแดง/ลบ = กลุ่มนี้โดยรวมราคาลง (เงินไหลออก)</strong></div>
+            </div>
+            <div class="sflow-legend-item">
+              <span class="sflow-legend-icon" style="color:var(--gold);font-size:9px;border:1px solid rgba(255,213,79,0.3);border-radius:3px;padding:1px 4px">$-weighted</span>
+              <div><strong>ทำไมไม่ใช่ค่าเฉลี่ยธรรมดา:</strong> หุ้นที่มีคนซื้อขายเยอะ (มูลค่าซื้อขาย/dollar volume สูง) จะมีน้ำหนักในการคำนวณเฉลี่ยมากกว่าหุ้นเล็กที่แทบไม่มีคนเทรด — เช่น กลุ่มมีหุ้น A ขึ้น 10% แต่มีคนซื้อขายน้อยมาก กับหุ้น B ลง 1% แต่มีคนซื้อขายเยอะกว่ามาก ค่าเฉลี่ยกลุ่มจะออกมาติดลบใกล้เคียงหุ้น B มากกว่า เพราะเงินจริงส่วนใหญ่อยู่ที่หุ้น B</div>
+            </div>
+            <div class="sflow-legend-item">
+              <span class="sflow-legend-icon">▬▬▬</span>
+              <div><strong>แถบสียาว/สั้น</strong> ไม่ได้บอกว่าหุ้นขึ้น/ลงเยอะแค่ไหนแบบตรงๆ แต่บอกว่ากลุ่มนี้ <strong>เคลื่อนไหวแรงแค่ไหนเมื่อเทียบกับกลุ่มอื่นในหน้านี้ ณ ตอนนี้</strong> — กลุ่มที่ % แรงที่สุด (ไม่ว่าบวกหรือลบ) จะได้แถบเต็ม 100% กลุ่มอื่นจะสั้นลงตามสัดส่วน</div>
+            </div>
+            <div class="sflow-legend-item">
+              <span class="sflow-legend-icon">📈3 📉12</span>
+              <div><strong>ไอคอนนี้</strong> คือจำนวนหุ้นในกลุ่มที่วันนี้ราคา<strong style="color:var(--green)">ขึ้น (📈)</strong> เทียบกับที่ราคา<strong style="color:var(--red)">ลง (📉)</strong> — ช่วยดูว่ากลุ่มแดงเป็นเพราะหุ้นส่วนใหญ่ลงจริง หรือแค่ตัวใหญ่ๆ ไม่กี่ตัวลากค่าเฉลี่ยลง</div>
+            </div>
+            <div class="sflow-legend-item">
+              <span class="sflow-legend-icon">💡</span>
+              <div><strong>สรุปสั้นๆ:</strong> กลุ่มไหนขึ้นบนสุด + สีเขียว + แถบยาว = กลุ่มนั้นเงินไหลเข้าแรงสุดวันนี้ ส่วนกลุ่มท้ายๆ + สีแดง + แถบยาว = กลุ่มนั้นโดนเทขายแรงสุด — ใช้ดูภาพรวมว่าเงินหมุนไปทางไหน ไม่ใช่สัญญาณซื้อ/ขายโดยตรง</div>
+            </div>
+          </div>
+        </details>
+
+        <div id="uni-sflow-cards"></div>
       </div>
 
     </div>
@@ -1890,7 +1935,11 @@ function wlShowSubView(view) {
   document.getElementById('wl-subtab-sector').classList.toggle('active', view === 'sector');
   document.getElementById('wl-subview-list').classList.toggle('active', view === 'list');
   document.getElementById('wl-subview-sector').classList.toggle('active', view === 'sector');
-  if (view === 'sector') renderSectorFlow();
+  if (view === 'sector') {
+    renderSectorFlow('sflow-cards',
+      () => WL.watchlist.map(s => (s.symbol || '').toUpperCase()).filter(Boolean),
+      'ยังไม่มีหุ้นใน Watchlist — เพิ่มหุ้นก่อนเพื่อดู Sector Flow');
+  }
 }
 
 // ── PRESET SECTOR MAP (fallback) ────────────────────────────
@@ -1980,20 +2029,37 @@ function fmtUsdCompact(n) {
   return '$' + n.toFixed(0);
 }
 
-function renderSectorFlow() {
-  const wrap = document.getElementById('sflow-cards');
+// เก็บ target ล่าสุดที่ render ไว้ (Watchlist sflow-cards หรือ Universe
+// uni-sflow-cards) เพื่อให้ sflowChangeUser() และ auto-refresh เรียก
+// renderSectorFlow() แบบไม่ต้องส่ง parameter ซ้ำทุกครั้งได้ — re-render
+// เฉพาะ view ที่เปิดอยู่ล่าสุดเท่านั้น
+let _sflowActiveTarget = null;
+
+function renderSectorFlow(elId, getSymbolsFn, emptyMsg) {
+  if (elId) {
+    _sflowActiveTarget = { elId, getSymbolsFn, emptyMsg };
+  }
+  if (!_sflowActiveTarget) return; // ยังไม่เคยเปิด Sector Flow view ไหนเลย ไม่มีอะไรให้ render
+  const { elId: targetElId, getSymbolsFn: getSyms, emptyMsg: msg } = _sflowActiveTarget;
+
+  const wrap = document.getElementById(targetElId);
   if (!wrap) return;
-  if (!WL.watchlist.length) {
-    wrap.innerHTML = '<div style="text-align:center;padding:60px;color:var(--text3);font-size:13px">ยังไม่มีหุ้นใน Watchlist — เพิ่มหุ้นก่อนเพื่อดู Sector Flow</div>';
+  const symbolList = getSyms();
+  if (!symbolList.length) {
+    wrap.innerHTML = `<div style="text-align:center;padding:60px;color:var(--text3);font-size:13px">${msg}</div>`;
     return;
   }
 
   const overrides = _sflowLoadOverrides();
   const groups = {}; // sectorName -> { symbols:[], symbolInfo:[{symbol,price,chg,updatedAt}], records:[{chg, dv, vol}] }
 
-  WL.watchlist.forEach(s => {
-    const upper = (s.symbol || '').toUpperCase();
-    const uniEntry = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === upper) || null;
+  // ทำ lookup map ของ universe ล่วงหน้าครั้งเดียว (เร็วกว่าใช้ .find() วนซ้ำ
+  // ในลูปด้านล่างมาก โดยเฉพาะตอน render Universe ที่มีหุ้นเป็นพันตัว)
+  const uniMap = new Map();
+  (UNI.universe || []).forEach(e => uniMap.set(uniSym(e).toUpperCase(), e));
+
+  symbolList.forEach(upper => {
+    const uniEntry = uniMap.get(upper) || null;
     const sector = getSymbolSector(upper, uniEntry, overrides);
     if (!groups[sector]) groups[sector] = { symbols: [], symbolInfo: [], records: [] };
     groups[sector].symbols.push(upper);
@@ -2122,7 +2188,9 @@ function renderSectorFlow() {
 function renderWL() {
   // Auto-sync: คอลัมน์ "สถานะ" (WL) ใน Universe Manager ต้องอัปเดตทุกครั้งที่ watchlist เปลี่ยน
   if (typeof uniRenderTable === 'function') uniRenderTable();
-  if (_wlSubView === 'sector') renderSectorFlow();
+  // รีเฟรช Sector Flow เฉพาะ view ที่กำลังเปิดดูอยู่จริงตอนนี้ (ของ Watchlist
+  // หรือของ Universe ก็ได้) กันไม่ให้ข้อมูลค้างเก่าเวลา watchlist เปลี่ยน
+  if (_wlSubView === 'sector' || _uniCurrentTab === 'sflow') renderSectorFlow();
   const c = document.getElementById('wl-cards');
   if (!WL.watchlist.length) {
     c.innerHTML = '<div style="text-align:center;padding:60px;color:var(--text3);font-size:13px">ยังไม่มีหุ้น — กด <strong style="color:var(--cyan)">+ เพิ่ม Symbol</strong></div>';
@@ -4565,15 +4633,22 @@ async function uniSaveCfg() {
 // ── Tab switcher ──────────────────────────────────────────
 function uniSwitchTab(tab) {
   _uniCurrentTab = tab;
-  ['list','add','bulk','cfg'].forEach(t => {
-    const panel = document.getElementById('uni-panel-' + (t === 'cfg' ? 'cfg' : t));
-    const btn   = document.getElementById('uni-tab-' + (t === 'cfg' ? 'cfg' : t));
+  ['list','add','bulk','cfg','sflow'].forEach(t => {
+    const panel = document.getElementById('uni-panel-' + t);
+    const btn   = document.getElementById('uni-tab-' + t);
     if (panel) panel.style.display = t === tab ? '' : 'none';
     if (btn) {
       btn.style.background = t === tab ? 'var(--purple)' : 'transparent';
       btn.style.color      = t === tab ? '#fff' : 'var(--text2)';
     }
   });
+  // Sector Flow ของ Universe คำนวณหนักกว่า watchlist มาก (หุ้นเป็นพันตัว)
+  // เลยค่อย render ตอนเปิดแท็บนี้จริงๆ เท่านั้น ไม่ render ทิ้งไว้เปล่าๆ ทุกครั้ง
+  if (tab === 'sflow') {
+    renderSectorFlow('uni-sflow-cards',
+      () => (UNI.universe || []).map(r => uniSym(r).toUpperCase()).filter(Boolean),
+      'Universe ยังไม่มีหุ้นเลย — ไปที่แท็บ "รายชื่อ" เพื่อ Sync จาก GitHub ก่อน');
+  }
 }
 
 // universe auto-load: handled directly in show()
