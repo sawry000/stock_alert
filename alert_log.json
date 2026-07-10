@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T23:19:43Z",
-    "symbol": "RFIL",
-    "alert_id": "RFIL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 21.209999084472656,
-    "change_pct": -0.6161746621715609,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T23:33:45Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 77.16000366210938,
     "change_pct": -2.081213626764749,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-10T16:42:03Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7350000143051147,
+    "change_pct": 1.4619891406499874,
     "value": 2
   }
 ]
