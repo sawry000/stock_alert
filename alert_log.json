@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T23:14:14Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 128.02999877929688,
-    "change_pct": 16.51801854686647,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T23:19:11Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 1.2400000095367432,
     "change_pct": 1.6393450439953434,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-10T13:42:24Z",
+    "symbol": "GLW",
+    "alert_id": "GLW_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 187.3300018310547,
+    "change_pct": -4.208426144889198,
+    "value": 0
   }
 ]
