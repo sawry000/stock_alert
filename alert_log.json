@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T18:13:50Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 11.859999656677246,
-    "change_pct": 10.84111828670324,
-    "value": 10.84111828670324
-  },
-  {
     "timestamp": "2026-06-30T18:23:46Z",
     "symbol": "LFMD",
     "alert_id": "LFMD_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 1.8300000429153442,
     "change_pct": 0.8153395171520667,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T04:56:56Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.2400000095367432,
+    "change_pct": -2.277562492178797,
+    "value": 2
   }
 ]
