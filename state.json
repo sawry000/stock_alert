@@ -1817,6 +1817,16 @@
       "last_fired": "2026-07-10T02:12:26Z"
     },
     "last_sell_at": "2026-07-10T02:12:26Z",
-    "_confirm_CCTC_MTF_BULL": 1
+    "CCTC_MTF_BULL": {
+      "last_fired": "2026-07-10T08:42:09Z"
+    },
+    "last_buy_at": "2026-07-10T08:42:09Z",
+    "open_entry": 3.950000047683716,
+    "open_time": "2026-07-10T08:42:09Z",
+    "open_peak": 3.950000047683716,
+    "open_stop": 3.3575,
+    "open_target": 4.266,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   }
 }

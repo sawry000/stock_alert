@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T22:53:37Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 22.8700008392334,
-    "change_pct": -2.3067029507330274,
-    "value": 2
-  },
-  {
     "timestamp": "2026-06-30T22:53:40Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 1.7699999809265137,
     "change_pct": 6.6265048750911895,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T08:42:09Z",
+    "symbol": "CCTC",
+    "alert_id": "CCTC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.950000047683716,
+    "change_pct": 30.7947043917492,
+    "value": 2
   }
 ]
