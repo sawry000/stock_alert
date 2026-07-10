@@ -1753,9 +1753,9 @@
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
-      "last_fired": "2026-07-10T04:42:21Z"
+      "last_fired": "2026-07-10T12:57:38Z"
     },
-    "last_buy_at": "2026-07-10T04:42:21Z",
+    "last_buy_at": "2026-07-10T12:57:38Z",
     "open_entry": 1.8600000143051147,
     "open_time": "2026-07-09T07:05:12Z",
     "EVTV_MA_GOLD": {
@@ -1765,8 +1765,7 @@
     "open_stop": 1.581,
     "open_target": 2.0088,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_EVTV_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "BLIN": {
     "BLIN_MTF_BULL": {
@@ -1779,7 +1778,8 @@
     "open_stop": 1.0625,
     "open_target": 1.35,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_BLIN_MTF_BULL": 1
   },
   "AOUT": {
     "AOUT_MTF_BULL": {

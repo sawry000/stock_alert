@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T23:04:23Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 379.7799987792969,
-    "change_pct": 2.9269875817921993,
-    "value": 3
-  },
-  {
     "timestamp": "2026-06-30T23:04:28Z",
     "symbol": "ASPN",
     "alert_id": "ASPN_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 18.479999542236328,
     "change_pct": 1.6507216334321322,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T12:57:38Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.8300000429153442,
+    "change_pct": 1.1049747467040987,
     "value": 3
   }
 ]
