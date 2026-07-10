@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-06-30T22:09:19Z",
-    "symbol": "SMTC",
-    "alert_id": "SMTC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 161.85000610351562,
-    "change_pct": 5.097406560724432,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-06-30T22:13:59Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 12.449999809265137,
-    "change_pct": 16.35513840434708,
-    "value": 16.35513840434708
-  },
-  {
     "timestamp": "2026-06-30T22:44:32Z",
     "symbol": "VELO",
     "alert_id": "VELO_PCT_DROP",
@@ -4998,5 +4978,25 @@
     "price": 115.66999816894531,
     "change_pct": 2.9458865868149813,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T06:57:01Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 78.37999725341797,
+    "change_pct": 4.576380591618367,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-10T06:57:04Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 57.380001068115234,
+    "change_pct": 9.92337369370734,
+    "value": 2
   }
 ]
