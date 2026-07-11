@@ -3,7 +3,8 @@
     "telegram_bot_token_env": "TELEGRAM_BOT_TOKEN",
     "telegram_chat_id_env": "TELEGRAM_CHAT_ID",
     "cooldown_minutes": 60,
-    "daily_summary_hour_utc": 1
+    "daily_summary_hour_utc": 2,
+    "position_status_hour_utc": 2
   },
   "watchlist": [
     {
