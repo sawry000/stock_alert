@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-01T07:08:56Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 68.6500015258789,
-    "change_pct": 1.328415536352629,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-01T07:09:06Z",
     "symbol": "VSEC",
     "alert_id": "VSEC_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 77.30000305175781,
     "change_pct": -1.9035494267032802,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-11T02:10:54Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 96.06999969482422,
+    "change_pct": 4.039419206004132,
     "value": 3
   }
 ]
