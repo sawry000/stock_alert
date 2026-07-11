@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-01T07:29:34Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.679999828338623,
-    "change_pct": 0.17636381549599855,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-01T07:29:38Z",
-    "symbol": "SVCO",
-    "alert_id": "SVCO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 13.789999961853027,
-    "change_pct": 13.497942072864419,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-01T07:29:41Z",
     "symbol": "SNDK",
     "alert_id": "SNDK_MTF_BULL",
@@ -4998,5 +4978,25 @@
     "price": 1.2400000095367432,
     "change_pct": 1.6393450439953434,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-11T06:40:42Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 412.9700012207031,
+    "change_pct": -1.1087161827818242,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-11T06:40:50Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 100.30000305175781,
+    "change_pct": 4.91632118384709,
+    "value": 3
   }
 ]
