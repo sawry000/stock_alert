@@ -1,65 +1,5 @@
 [
   {
-    "timestamp": "2026-07-01T13:33:55Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 110.06500244140625,
-    "change_pct": 0.9770664600057339,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-01T13:34:13Z",
-    "symbol": "SMTC",
-    "alert_id": "SMTC_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 144.4199981689453,
-    "change_pct": -10.29813778326378,
-    "value": -10.29813778326378
-  },
-  {
-    "timestamp": "2026-07-01T13:59:35Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MA_GOLD",
-    "type": "ma_crossover",
-    "action": "BUY",
-    "price": 89.26000213623047,
-    "change_pct": 0.47106604034203886,
-    "value": 2.688
-  },
-  {
-    "timestamp": "2026-07-01T13:59:37Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 89.26000213623047,
-    "change_pct": 0.47106604034203886,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-01T14:09:13Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MA_GOLD",
-    "type": "ma_crossover",
-    "action": "BUY",
-    "price": 18.264999389648438,
-    "change_pct": 1.4722188313802085,
-    "value": 0.216
-  },
-  {
-    "timestamp": "2026-07-01T14:19:22Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.210000038146973,
-    "change_pct": 6.045341011258752,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-01T14:29:25Z",
     "symbol": "GLW",
     "alert_id": "GLW_PCT_DROP",
@@ -4998,5 +4938,65 @@
     "price": 190.88999938964844,
     "change_pct": -2.388014220879303,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-12T02:26:42Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7200000286102295,
+    "change_pct": 0.5847969947502648,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-12T02:26:57Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1915.9200439453125,
+    "change_pct": 1.4793533835090487,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-12T02:27:03Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 77.30000305175781,
+    "change_pct": -1.9035494267032802,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-12T02:27:12Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.940000057220459,
+    "change_pct": 7.182323603340272,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-12T02:27:15Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.2400000095367432,
+    "change_pct": 1.6393450439953434,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-12T02:27:19Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 14.34000015258789,
+    "change_pct": 0.34989609928545473,
+    "value": 3
   }
 ]
