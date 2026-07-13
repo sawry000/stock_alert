@@ -1,55 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T06:34:23Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.230000019073486,
-    "change_pct": 6.549118868349776,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-02T06:34:32Z",
-    "symbol": "GLW",
-    "alert_id": "GLW_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 220.6300048828125,
-    "change_pct": -12.96121427336147,
-    "value": -12.96121427336147
-  },
-  {
-    "timestamp": "2026-07-02T06:48:28Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 23.959999084472656,
-    "change_pct": -12.298685635165974,
-    "value": -12.298685635165974
-  },
-  {
-    "timestamp": "2026-07-02T07:08:32Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 24.25,
-    "change_pct": 4.616048317515101,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-02T07:08:40Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 95.77999877929688,
-    "change_pct": 0.6621111710949756,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-02T07:18:45Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4997,6 +4947,56 @@
     "action": "BUY",
     "price": 113.0,
     "change_pct": -1.7134904757762888,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-13T19:12:04Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7350000143051147,
+    "change_pct": 0.8662295392776458,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-13T19:12:13Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1661.02001953125,
+    "change_pct": -14.159172117248062,
+    "value": -14.159172117248062
+  },
+  {
+    "timestamp": "2026-07-13T19:12:19Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 50.3650016784668,
+    "change_pct": -6.558438444402971,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-13T19:12:29Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.94,
+    "change_pct": 7.182320441988945,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-13T19:12:34Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 14.329999923706055,
+    "change_pct": 0.35014139824819107,
     "value": 3
   }
 ]
