@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-01T23:43:52Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.079999923706055,
-    "change_pct": 5.739129107931386,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-01T23:44:19Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 67.8499984741211,
     "change_pct": -1.3090931285511362,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-13T13:56:54Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.40500020980835,
+    "change_pct": 0.839556153140845,
+    "value": 3
   }
 ]
