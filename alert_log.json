@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-01T23:49:25Z",
-    "symbol": "SVCO",
-    "alert_id": "SVCO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 12.789999961853027,
-    "change_pct": -2.0673816090886152,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-02T00:08:33Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 4.698599815368652,
     "change_pct": 10.555289773380055,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-13T18:10:45Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 25.860000610351562,
+    "change_pct": -0.2314791267300895,
     "value": 3
   }
 ]
