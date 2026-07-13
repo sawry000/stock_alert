@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-01T23:18:55Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 228.75,
-    "change_pct": -0.352848928384737,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-01T23:24:07Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.4200000762939453,
-    "change_pct": 11.764708375619126,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-01T23:43:52Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -4998,5 +4978,25 @@
     "price": 14.34000015258789,
     "change_pct": 0.34989609928545473,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-13T13:41:36Z",
+    "symbol": "MXL",
+    "alert_id": "MXL_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 84.05999755859375,
+    "change_pct": -8.739553187934263,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-13T13:41:52Z",
+    "symbol": "CDNL",
+    "alert_id": "CDNL_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 67.8499984741211,
+    "change_pct": -1.3090931285511362,
+    "value": 0
   }
 ]
