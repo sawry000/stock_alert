@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-01T15:39:46Z",
-    "symbol": "SVCO",
-    "alert_id": "SVCO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 13.680000305175781,
-    "change_pct": 4.747322397976881,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-01T15:39:50Z",
     "symbol": "RFIL",
     "alert_id": "RFIL_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 14.34000015258789,
     "change_pct": 0.34989609928545473,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-13T08:26:36Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 19.59000015258789,
+    "change_pct": -0.15290442106070523,
     "value": 3
   }
 ]
