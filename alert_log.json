@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T14:24:47Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 88.04000091552734,
-    "change_pct": -0.20120620565381853,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-02T14:44:28Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 2.690000057220459,
     "change_pct": -3.2374070178252197,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-14T16:11:33Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 5.010000228881836,
+    "change_pct": 15.97222752041286,
+    "value": 15.97222752041286
   }
 ]
