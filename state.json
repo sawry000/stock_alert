@@ -510,7 +510,7 @@
       "last_fired": "2026-05-27T09:52:59Z"
     },
     "HIMS_MTF_BULL": {
-      "last_fired": "2026-07-10T10:41:09Z"
+      "last_fired": "2026-07-14T13:56:22Z"
     },
     "HIMS_PCT_UP_5": {
       "last_fired": "2026-06-26T19:28:13Z"
@@ -540,7 +540,7 @@
     "open_position": true,
     "open_entry": 36.06999969482422,
     "open_time": "2026-07-09T02:03:49Z",
-    "last_buy_at": "2026-07-10T10:41:09Z",
+    "last_buy_at": "2026-07-14T13:56:22Z",
     "open_peak": 36.06999969482422,
     "open_stop": 30.9317,
     "open_target": 38.9556,
@@ -1567,15 +1567,14 @@
     "last_sell_at": "2026-07-06T00:09:37Z",
     "SMTC_MA_DEATH": {
       "last_fired": "2026-07-06T00:09:37Z"
-    },
-    "_confirm_SMTC_MTF_BULL": 1
+    }
   },
   "MXL": {
     "MXL_MTF_BULL": {
-      "last_fired": "2026-07-10T07:11:31Z"
+      "last_fired": "2026-07-14T13:57:35Z"
     },
     "open_position": true,
-    "last_buy_at": "2026-07-10T07:11:31Z",
+    "last_buy_at": "2026-07-14T13:57:35Z",
     "MXL_PCT_DROP": {
       "last_fired": "2026-07-06T00:04:24Z"
     },
@@ -1583,7 +1582,13 @@
     "MXL_MA_DEATH": {
       "last_fired": "2026-07-13T13:41:36Z"
     },
-    "_confirm_MXL_MTF_BULL": 1
+    "open_entry": 93.1050033569336,
+    "open_time": "2026-07-14T13:57:35Z",
+    "open_peak": 93.1050033569336,
+    "open_stop": 79.1393,
+    "open_target": 100.5534,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1633,18 +1638,17 @@
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
-      "last_fired": "2026-07-13T13:56:54Z"
+      "last_fired": "2026-07-14T13:57:51Z"
     },
     "open_position": true,
     "open_entry": 5.40500020980835,
     "open_time": "2026-07-08T18:04:41Z",
-    "last_buy_at": "2026-07-13T13:56:54Z",
+    "last_buy_at": "2026-07-14T13:57:51Z",
     "open_peak": 5.409999847412109,
     "open_stop": 4.5943,
     "open_target": 5.8374,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_TKNO_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
