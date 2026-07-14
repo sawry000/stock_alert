@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T07:19:02Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 228.75,
-    "change_pct": -0.352848928384737,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-02T07:29:00Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 20.030000686645508,
     "change_pct": 2.089707883004622,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T02:26:29Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.579999923706055,
+    "change_pct": 7.764704087201286,
     "value": 3
   }
 ]
