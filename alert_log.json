@@ -1,45 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T08:08:40Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 111.7699966430664,
-    "change_pct": -1.6542044495676194,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-02T08:09:50Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 112.38999938964844,
-    "change_pct": -0.36347571839677273,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-02T08:09:55Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 144.00999450683594,
-    "change_pct": -0.6347929988022282,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-02T08:10:13Z",
-    "symbol": "ALGM",
-    "alert_id": "ALGM_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 63.20000076293945,
-    "change_pct": -0.031159966055754752,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-02T08:10:17Z",
     "symbol": "NEOV",
     "alert_id": "NEOV_MTF_BULL",
@@ -4997,6 +4957,46 @@
     "action": "BUY",
     "price": 26.1299991607666,
     "change_pct": 2.070309221744532,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T10:40:51Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 96.66999816894531,
+    "change_pct": -1.347078100882419,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T10:40:59Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.550000190734863,
+    "change_pct": 1.5503905540288854,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T10:41:16Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 115.8499984741211,
+    "change_pct": -0.12931166024043642,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T10:41:51Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.579999923706055,
+    "change_pct": -1.6658066677631938e-06,
     "value": 3
   }
 ]
