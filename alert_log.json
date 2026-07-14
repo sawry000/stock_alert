@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T07:18:45Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 37.56999969482422,
-    "change_pct": 8.333332453357032,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-02T07:18:53Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 71.70999908447266,
-    "change_pct": 4.7549471689031595,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-02T07:19:02Z",
     "symbol": "VSEC",
     "alert_id": "VSEC_MTF_BULL",
@@ -4997,6 +4977,26 @@
     "action": "BUY",
     "price": 14.329999923706055,
     "change_pct": 0.35014139824819107,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T02:10:49Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 26.1299991607666,
+    "change_pct": 0.8101819474020056,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T02:11:26Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 20.030000686645508,
+    "change_pct": 2.089707883004622,
     "value": 3
   }
 ]
