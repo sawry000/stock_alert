@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T08:39:26Z",
-    "symbol": "GLW",
-    "alert_id": "GLW_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 220.6300048828125,
-    "change_pct": 0.28636585582386365,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-02T13:33:31Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 356.6400146484375,
-    "change_pct": -2.896968348824459,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-07-02T13:33:35Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 23.479999542236328,
-    "change_pct": -2.4309181706364975,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-02T13:34:15Z",
     "symbol": "FPS",
     "alert_id": "FPS_MA_DEATH",
@@ -4998,5 +4968,35 @@
     "price": 1.2999999523162842,
     "change_pct": 0.03847266766326127,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T13:40:46Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 96.3499984741211,
+    "change_pct": 6.4523240239985515,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T13:41:40Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.549999237060547,
+    "change_pct": 2.4148892873499466,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T13:42:27Z",
+    "symbol": "LHAI",
+    "alert_id": "LHAI_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 1.3202999830245972,
+    "change_pct": 34.72448806373441,
+    "value": 7.7052721611654285
   }
 ]
