@@ -936,9 +936,9 @@
       "last_fired": "2026-06-24T13:44:13Z"
     },
     "SHLS_PCT_UP": {
-      "last_fired": "2026-06-30T15:24:04Z"
+      "last_fired": "2026-07-14T14:11:25Z"
     },
-    "last_buy_at": "2026-06-30T15:24:04Z",
+    "last_buy_at": "2026-07-14T14:11:25Z",
     "open_peak": 10.135000228881836
   },
   "AMPX": {
@@ -1821,8 +1821,11 @@
     "OFRM_PCT_DROP": {
       "last_fired": "2026-07-09T02:04:57Z"
     },
-    "last_sell_at": "2026-07-09T02:04:57Z",
-    "_confirm_OFRM_MTF_BULL": 1
+    "last_sell_at": "2026-07-14T14:12:14Z",
+    "_confirm_OFRM_MTF_BULL": 1,
+    "OFRM_MA_DEATH": {
+      "last_fired": "2026-07-14T14:12:14Z"
+    }
   },
   "LHAI": {
     "LHAI_VOL_3X": {
