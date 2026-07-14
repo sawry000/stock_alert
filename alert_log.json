@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T14:44:28Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.25,
-    "change_pct": 0.47281323877067544,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-02T15:08:34Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 5.010000228881836,
     "change_pct": 15.97222752041286,
     "value": 15.97222752041286
+  },
+  {
+    "timestamp": "2026-07-14T16:43:09Z",
+    "symbol": "LHAI",
+    "alert_id": "LHAI_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 1.2899999618530273,
+    "change_pct": 31.632649168676263,
+    "value": 11.855916529388066
   }
 ]
