@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T14:04:10Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 111.11499786376953,
-    "change_pct": -1.9111953886215307,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-02T14:24:47Z",
     "symbol": "AMBA",
     "alert_id": "AMBA_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "SELL",
     "price": 17.90999984741211,
     "change_pct": -3.709678239719849,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-14T14:41:32Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 2.690000057220459,
+    "change_pct": -3.2374070178252197,
     "value": 0
   }
 ]
