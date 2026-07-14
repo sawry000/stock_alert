@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T16:34:33Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 1762.0201416015625,
-    "change_pct": -12.520100208441939,
-    "value": -12.520100208441939
-  },
-  {
     "timestamp": "2026-07-02T16:34:37Z",
     "symbol": "ALGM",
     "alert_id": "ALGM_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 5.409999847412109,
     "change_pct": -2.8204785724049636e-06,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-14T23:12:20Z",
+    "symbol": "LHAI",
+    "alert_id": "LHAI_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 1.2200000286102295,
+    "change_pct": 24.489798837778523,
+    "value": 13.933821209695134
   }
 ]
