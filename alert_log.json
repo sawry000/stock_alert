@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T08:04:03Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 350.2099914550781,
-    "change_pct": -1.1264846258955008,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-02T08:08:40Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 20.030000686645508,
     "change_pct": 0.9068044667279918,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T10:25:40Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 26.1299991607666,
+    "change_pct": 2.070309221744532,
     "value": 3
   }
 ]

@@ -218,7 +218,7 @@
       "last_fired": "2026-06-29T02:07:41Z"
     },
     "NAVN_MTF_BULL": {
-      "last_fired": "2026-07-14T02:10:49Z"
+      "last_fired": "2026-07-14T10:25:40Z"
     },
     "NAVN_NEWS_POS": {
       "last_fired": "2026-06-28T00:02:45Z",
@@ -249,7 +249,7 @@
     "NAVN_VOL_ALARM": {
       "last_fired": "2026-06-12T13:17:36Z"
     },
-    "last_buy_at": "2026-07-14T02:10:49Z",
+    "last_buy_at": "2026-07-14T10:25:40Z",
     "open_peak": 27.25,
     "open_stop": 24.0049,
     "open_target": 29.43,
@@ -1627,7 +1627,8 @@
     "open_stop": 3.638,
     "open_target": 4.6224,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
