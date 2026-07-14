@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T08:03:31Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 430.8599853515625,
-    "change_pct": -0.8377479052790564,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-02T08:04:03Z",
     "symbol": "VICR",
     "alert_id": "VICR_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 14.210000038146973,
     "change_pct": -0.9065548246375676,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T10:11:28Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 20.030000686645508,
+    "change_pct": 0.9068044667279918,
     "value": 3
   }
 ]
