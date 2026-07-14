@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T15:19:29Z",
-    "symbol": "VECO",
-    "alert_id": "VECO_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 61.369998931884766,
-    "change_pct": -12.578349099879254,
-    "value": -12.578349099879254
-  },
-  {
     "timestamp": "2026-07-02T15:29:20Z",
     "symbol": "VICR",
     "alert_id": "VICR_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 121.11000061035156,
     "change_pct": 4.405172939958243,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T19:27:05Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 52.02000045776367,
+    "change_pct": 3.234769711775494,
+    "value": 0
   }
 ]
