@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T15:49:07Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.280000686645508,
-    "change_pct": -1.6675595123964069,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-02T15:53:44Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 71.62999725341797,
-    "change_pct": -15.460878964454189,
-    "value": -15.460878964454189
-  },
-  {
-    "timestamp": "2026-07-02T16:04:21Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 126.61499786376953,
-    "change_pct": -12.637136642676102,
-    "value": -12.637136642676102
-  },
-  {
     "timestamp": "2026-07-02T16:09:24Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_MTF_BULL",
@@ -4998,5 +4968,35 @@
     "price": 5.090000152587891,
     "change_pct": 17.824077606201165,
     "value": 17.824077606201165
+  },
+  {
+    "timestamp": "2026-07-14T20:26:52Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7300000190734863,
+    "change_pct": 1.7647070043227278,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-14T20:27:24Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.94,
+    "change_pct": 7.182320441988945,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-14T20:27:29Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 14.09000015258789,
+    "change_pct": 1.1486012389654767,
+    "value": 2
   }
 ]
