@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T16:09:24Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.815000057220459,
-    "change_pct": -0.8196690043465075,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-02T16:09:31Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 14.09000015258789,
     "change_pct": 1.1486012389654767,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-14T21:42:05Z",
+    "symbol": "ISSC",
+    "alert_id": "ISSC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.3700008392334,
+    "change_pct": 1.4211147998266287,
     "value": 2
   }
 ]
