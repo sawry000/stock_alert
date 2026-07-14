@@ -510,7 +510,7 @@
       "last_fired": "2026-05-27T09:52:59Z"
     },
     "HIMS_MTF_BULL": {
-      "last_fired": "2026-07-14T13:56:22Z"
+      "last_fired": "2026-07-14T22:10:58Z"
     },
     "HIMS_PCT_UP_5": {
       "last_fired": "2026-06-26T19:28:13Z"
@@ -540,7 +540,7 @@
     "open_position": true,
     "open_entry": 36.06999969482422,
     "open_time": "2026-07-09T02:03:49Z",
-    "last_buy_at": "2026-07-14T13:56:22Z",
+    "last_buy_at": "2026-07-14T22:10:58Z",
     "open_peak": 36.06999969482422,
     "open_stop": 30.9317,
     "open_target": 38.9556,
@@ -1653,7 +1653,8 @@
     "open_stop": 4.5943,
     "open_target": 5.8374,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
