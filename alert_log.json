@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T16:34:37Z",
-    "symbol": "ALGM",
-    "alert_id": "ALGM_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 55.439998626708984,
-    "change_pct": -12.305818239078988,
-    "value": -12.305818239078988
-  },
-  {
-    "timestamp": "2026-07-02T16:54:41Z",
-    "symbol": "CDNL",
-    "alert_id": "CDNL_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 73.73999786376953,
-    "change_pct": -14.692274567596561,
-    "value": -14.692274567596561
-  },
-  {
-    "timestamp": "2026-07-02T17:04:14Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 94.08000183105469,
-    "change_pct": -16.59574305757563,
-    "value": -16.59574305757563
-  },
-  {
     "timestamp": "2026-07-02T17:39:11Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MA_GOLD",
@@ -4991,6 +4961,36 @@
   },
   {
     "timestamp": "2026-07-14T23:12:20Z",
+    "symbol": "LHAI",
+    "alert_id": "LHAI_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 1.2200000286102295,
+    "change_pct": 24.489798837778523,
+    "value": 13.933821209695134
+  },
+  {
+    "timestamp": "2026-07-15T02:12:03Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 20.899999618530273,
+    "change_pct": 5.28967062231875,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-15T02:12:24Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 5.090000152587891,
+    "change_pct": 17.824077606201165,
+    "value": 17.824077606201165
+  },
+  {
+    "timestamp": "2026-07-15T02:13:26Z",
     "symbol": "LHAI",
     "alert_id": "LHAI_VOL_3X",
     "type": "volume_spike",
