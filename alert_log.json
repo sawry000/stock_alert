@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T23:53:40Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.190000057220459,
-    "change_pct": 0.6504074344790021,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-02T23:58:43Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 72.01,
     "change_pct": -23.313422440701284,
     "value": -23.313422440701284
+  },
+  {
+    "timestamp": "2026-07-15T09:11:46Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.440000057220459,
+    "change_pct": 1.288749067422894e-06,
+    "value": 3
   }
 ]
