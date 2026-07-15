@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T08:28:33Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 14.069999694824219,
-    "change_pct": -9.22580842048891,
-    "value": -9.22580842048891
-  },
-  {
-    "timestamp": "2026-07-03T08:44:18Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 1745.0,
-    "change_pct": -13.365107735080928,
-    "value": -13.365107735080928
-  },
-  {
     "timestamp": "2026-07-03T09:04:21Z",
     "symbol": "MXL",
     "alert_id": "MXL_PCT_DROP",
@@ -4998,5 +4978,25 @@
     "price": 65.9552993774414,
     "change_pct": -9.05351639188455,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-15T17:25:54Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 4.371399879455566,
+    "change_pct": 11.231549095561482,
+    "value": 11.231549095561482
+  },
+  {
+    "timestamp": "2026-07-15T17:26:19Z",
+    "symbol": "BOBS",
+    "alert_id": "BOBS_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 16.789899826049805,
+    "change_pct": 9.523156073384245,
+    "value": 9.523156073384245
   }
 ]

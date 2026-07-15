@@ -580,7 +580,12 @@
     "open_position": true,
     "open_entry": 4.25,
     "open_time": "2026-06-25T10:13:16Z",
-    "open_peak": 4.25
+    "open_peak": 4.25,
+    "IOVA_PCT_UP": {
+      "last_fired": "2026-07-15T17:25:54Z"
+    },
+    "last_buy_at": "2026-07-15T17:25:54Z",
+    "last_buy_reminder_at": "2026-07-15T17:25:54Z"
   },
   "LFMD": {
     "LFMD_BREAK_ABOVE": {
@@ -1420,7 +1425,19 @@
       "last_fired": "2026-07-08T15:24:18Z"
     },
     "open_position": true,
-    "last_sell_at": "2026-07-08T15:24:18Z"
+    "last_sell_at": "2026-07-08T15:24:18Z",
+    "BOBS_PCT_UP": {
+      "last_fired": "2026-07-15T17:26:19Z"
+    },
+    "last_buy_at": "2026-07-15T17:26:19Z",
+    "last_buy_reminder_at": "2026-07-15T17:26:19Z",
+    "open_entry": 16.789899826049805,
+    "open_time": "2026-07-15T17:26:19Z",
+    "open_peak": 16.789899826049805,
+    "open_stop": 14.8128,
+    "open_target": 18.1331,
+    "open_conviction": 3,
+    "open_alert_type": "percent_change"
   },
   "ISSC": {
     "ISSC_POS_SIZE": {
