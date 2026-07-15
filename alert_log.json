@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T07:34:09Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 282.95001220703125,
-    "change_pct": -20.11575036503917,
-    "value": -20.11575036503917
-  },
-  {
     "timestamp": "2026-07-03T07:34:16Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 2.619999885559082,
     "change_pct": 1.945523486967363,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-15T15:12:51Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.225000023841858,
+    "change_pct": 0.385153146099973,
+    "value": 2
   }
 ]
