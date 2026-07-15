@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T23:24:17Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 232.3300018310547,
-    "change_pct": 1.5650281228654372,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-02T23:24:47Z",
     "symbol": "VECO",
     "alert_id": "VECO_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 1.2200000286102295,
     "change_pct": 24.489798837778523,
     "value": 11.36299843841571
+  },
+  {
+    "timestamp": "2026-07-15T06:26:26Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 35.150001525878906,
+    "change_pct": 3.2002393595974863,
+    "value": 3
   }
 ]
