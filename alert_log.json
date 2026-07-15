@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T23:58:43Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 69.95999908447266,
-    "change_pct": -17.431843403195263,
-    "value": -17.431843403195263
-  },
-  {
     "timestamp": "2026-07-03T00:09:09Z",
     "symbol": "VPG",
     "alert_id": "VPG_PCT_DROP",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 4.440000057220459,
     "change_pct": 1.288749067422894e-06,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-15T10:26:28Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 20.899999618530273,
+    "change_pct": 0.19175272545673064,
     "value": 3
   }
 ]
