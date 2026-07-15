@@ -1678,14 +1678,14 @@
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
-      "last_fired": "2026-07-13T19:12:13Z"
+      "last_fired": "2026-07-15T16:27:36Z"
     },
     "open_position": true,
     "SNDK_MTF_BULL": {
       "last_fired": "2026-07-13T10:42:22Z"
     },
     "last_buy_at": "2026-07-13T10:42:22Z",
-    "last_sell_at": "2026-07-13T19:12:13Z",
+    "last_sell_at": "2026-07-15T16:27:36Z",
     "SNDK_MA_DEATH": {
       "last_fired": "2026-07-08T14:14:46Z"
     }
@@ -1738,16 +1738,13 @@
       "last_fired": "2026-07-13T10:42:28Z"
     },
     "last_buy_at": "2026-07-13T10:42:28Z",
-    "open_entry": 75.47589874267578,
-    "open_time": "2026-07-08T16:59:46Z",
     "AMBA_MA_GOLD": {
       "last_fired": "2026-07-01T13:59:35Z"
     },
-    "open_peak": 77.30000305175781,
-    "open_stop": 64.1545,
-    "open_target": 81.514,
-    "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "AMBA_MA_DEATH": {
+      "last_fired": "2026-07-15T16:27:41Z"
+    },
+    "last_sell_at": "2026-07-15T16:27:41Z"
   },
   "ALGM": {
     "ALGM_MTF_BULL": {

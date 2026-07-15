@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T08:09:16Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 121.58999633789062,
-    "change_pct": -16.104328753266667,
-    "value": -16.104328753266667
-  },
-  {
-    "timestamp": "2026-07-03T08:24:16Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.789999961853027,
-    "change_pct": -1.530612893655996,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-03T08:28:33Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_PCT_DROP",
@@ -4997,6 +4977,26 @@
     "action": "SELL",
     "price": 2.170099973678589,
     "change_pct": -2.2477489333969065,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-15T16:27:36Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1487.3399658203125,
+    "change_pct": -15.826827061668789,
+    "value": -15.826827061668789
+  },
+  {
+    "timestamp": "2026-07-15T16:27:41Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 65.9552993774414,
+    "change_pct": -9.05351639188455,
     "value": 0
   }
 ]
