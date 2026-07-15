@@ -483,10 +483,21 @@ def check_percent_change(alert, quote):
 
 
 # ── Tier 1: Support / Resistance ─────────────────────────────────────────────
-def check_support_resistance(alert, quote, symbol=None):
+def check_support_resistance(alert, quote, symbol=None, dynamic_stop=None):
     price     = quote["price"]
     level     = alert.get("level", 0)
     direction = alert.get("direction", "break_below")
+    # FIX: ก่อนหน้านี้ level ต้องตั้งค่าเองใน watchlist.json เท่านั้น (ปกติเป็น 0
+    # ตลอด เพราะไม่มีจุดไหนในโค้ดเขียนค่ากลับไปที่ watchlist.json เลย) ทำให้
+    # ตัวเลข "🛑 Stop: $X" ที่โชว์ในข้อความ BUY เป็นแค่คำแนะนำให้ผู้ใช้ไปตั้งเอง
+    # ไม่เคยเป็น auto-sell จริง — บางหุ้นเลยถือขาดทุนได้นานเป็นเดือนโดยไม่มีอะไร
+    # มาห้าม (มีแค่ Death Cross / percent_change ที่ยังทำงานอยู่จริง)
+    # แก้โดยถ้า level ไม่ได้ตั้งไว้ (0) แต่มี dynamic_stop จาก open_stop ที่
+    # คำนวณไว้ตอน BUY (เก็บใน state.json) ให้ใช้ค่านั้นแทนโดยอัตโนมัติ — ถ้า
+    # ผู้ใช้ตั้ง level เองไว้ใน watchlist.json ค่านั้นยังชนะเสมอ (ไม่ทับ)
+    if level <= 0 and dynamic_stop:
+        level     = dynamic_stop
+        direction = "break_below"  # open_stop เป็น stop-loss เสมอ ทิศทางเดียว
     if level > 0:
         triggered = (
             (direction == "break_below" and price < level) or
@@ -1324,6 +1335,18 @@ def main():
             last_sell_at = sym_state.get("last_sell_at", "")
             in_sell_cd   = bool(last_sell_at) and minutes_since(last_sell_at) < sell_cd
 
+            # ── Reminder cooldown สำหรับ position ที่เปิดอยู่แล้ว ───────
+            # ลด noise: ถ้ามี position เปิดอยู่แล้ว (open_entry มีค่า) ไม่ต้องส่ง
+            # Telegram แจ้ง BUY ซ้ำถี่ๆ — cooldown ปกติของแต่ละ alert (15-240
+            # นาที) สั้นกว่าที่ควร ทำให้หุ้นที่ถืออยู่แล้วได้แจ้งเตือนซ้ำได้
+            # หลายรอบต่อวัน จำกัดไว้ที่ประมาณวันละ 1 ครั้งแทน (ปรับได้ต่อหุ้น
+            # ผ่าน position_reminder_cooldown_minutes) — ไม่กระทบ BUY ครั้งแรก
+            # ที่ยังไม่มี position เปิดอยู่ ยิงได้ตามปกติทันที
+            has_open_position = bool(sym_state.get("open_entry"))
+            reminder_cd       = stock.get("position_reminder_cooldown_minutes", 1200)  # ~20 ชม.
+            last_reminder_at  = sym_state.get("last_buy_reminder_at", "")
+            in_reminder_cd    = bool(last_reminder_at) and minutes_since(last_reminder_at) < reminder_cd
+
             # ── Price-drop filter — ลงหนักวันนี้ ห้าม BUY แม้ signal ผ่าน ──
             drop_threshold = stock.get("buy_suppress_drop_pct", 3.0)
             price_dropping  = quote["change_pct"] <= -drop_threshold
@@ -1374,6 +1397,11 @@ def main():
                     rem = reentry_cd - minutes_since(last_buy_at)
                     print(f"  [{alert_id}] re-entry cooldown {rem:.0f}m (BUY ล่าสุด {minutes_since(last_buy_at):.0f}m ที่แล้ว)")
                     continue
+                # ── Reminder cooldown (มี position เปิดอยู่แล้ว — ลด noise) ──
+                if action == "BUY" and has_open_position and in_reminder_cd:
+                    rem = reminder_cd - minutes_since(last_reminder_at)
+                    print(f"  [{alert_id}] มี position เปิดอยู่แล้ว — เตือนซ้ำอีกใน {rem/60:.1f} ชม.")
+                    continue
 
                 triggered = False
                 msg       = None
@@ -1409,7 +1437,8 @@ def main():
                             msg = build_info_message(stock, quote, atype, detail)
 
                 elif atype == "support_resistance":
-                    triggered, tval, level = check_support_resistance(alert, quote, symbol)
+                    triggered, tval, level = check_support_resistance(
+                        alert, quote, symbol, dynamic_stop=sym_state.get("open_stop"))
                     if triggered:
                         lvl_str = f"${level:.4f}" if level else "auto"
                         detail  = f"ราคา {alert.get('direction','').replace('_',' ')} แนวระดับ {lvl_str}"
@@ -1607,6 +1636,9 @@ def main():
                     # ── Track BUY/SELL timestamps (สำหรับ re-entry + sell cooldown) ──
                     if action == "BUY":
                         state[symbol]["last_buy_at"] = now_str()
+                        # เก็บเวลาที่เพิ่งแจ้ง BUY ไปล่าสุด ไม่ว่าจะเป็นครั้งแรก
+                        # หรือแจ้งซ้ำ — ให้ reminder cooldown ด้านบนใช้เทียบรอบถัดไป
+                        state[symbol]["last_buy_reminder_at"] = now_str()
                         # FIX: gate ที่ comment ด้านบนตั้งใจไว้ตั้งแต่แรก ("2. ไม่มี
                         # open position สำหรับหุ้นตัวนั้น") แต่ไม่เคยถูกเขียนโค้ดจริง
                         # — ก่อนหน้านี้ทุกครั้งที่ BUY ยิงซ้ำขณะ position เดิมยัง
@@ -1636,7 +1668,8 @@ def main():
                         state[symbol]["last_sell_at"] = now_str()
                         # ── ปิด position: เคลียร์ open_* ทั้งหมดไม่ให้ P&L ค้าง ──
                         for _k in ("open_entry", "open_time", "open_peak", "open_stop",
-                                   "open_target", "open_conviction", "open_alert_type"):
+                                   "open_target", "open_conviction", "open_alert_type",
+                                   "last_buy_reminder_at"):
                             state[symbol].pop(_k, None)
 
 
