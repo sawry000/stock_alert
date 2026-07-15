@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T22:08:51Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 111.01000213623047,
-    "change_pct": -2.0038822949942907,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-02T22:54:33Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 10.760000228881836,
     "change_pct": 15.450646232637721,
     "value": 15.450646232637721
+  },
+  {
+    "timestamp": "2026-07-15T03:27:17Z",
+    "symbol": "LHAI",
+    "alert_id": "LHAI_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 1.2200000286102295,
+    "change_pct": 24.489798837778523,
+    "value": 1.2200000286102295
   }
 ]
