@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T07:53:51Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.190000057220459,
-    "change_pct": 0.6504074344790021,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-03T07:58:48Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 69.95999908447266,
-    "change_pct": -17.431843403195263,
-    "value": -17.431843403195263
-  },
-  {
     "timestamp": "2026-07-03T08:09:16Z",
     "symbol": "VPG",
     "alert_id": "VPG_PCT_DROP",
@@ -4998,5 +4978,25 @@
     "price": 64.38500213623047,
     "change_pct": 3.01600341796875,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-15T16:11:08Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 27.747499465942383,
+    "change_pct": -13.613015361325079,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-15T16:11:49Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 2.170099973678589,
+    "change_pct": -2.2477489333969065,
+    "value": 0
   }
 ]
