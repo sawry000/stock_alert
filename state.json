@@ -1837,13 +1837,21 @@
   },
   "LHAI": {
     "LHAI_VOL_3X": {
-      "last_fired": "2026-07-15T02:13:26Z"
+      "last_fired": "2026-07-15T05:27:04Z"
     },
-    "last_buy_at": "2026-07-15T02:13:26Z",
+    "last_buy_at": "2026-07-15T05:27:04Z",
     "LHAI_SL_BREAK": {
       "last_fired": "2026-07-15T03:27:17Z"
     },
-    "last_sell_at": "2026-07-15T03:27:17Z"
+    "last_sell_at": "2026-07-15T03:27:17Z",
+    "last_buy_reminder_at": "2026-07-15T05:27:04Z",
+    "open_entry": 1.2200000286102295,
+    "open_time": "2026-07-15T05:27:04Z",
+    "open_peak": 1.2200000286102295,
+    "open_stop": 1.037,
+    "open_target": 1.3176,
+    "open_conviction": 4,
+    "open_alert_type": "volume_spike"
   },
   "CCTC": {
     "CCTC_PCT_DROP": {
