@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-02T23:34:04Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.5399999618530273,
-    "change_pct": 2.3121376258100397,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-02T23:53:40Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 10.760000228881836,
     "change_pct": 15.450646232637721,
     "value": 15.450646232637721
+  },
+  {
+    "timestamp": "2026-07-15T08:11:03Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 72.01,
+    "change_pct": -23.313422440701284,
+    "value": -23.313422440701284
   }
 ]
