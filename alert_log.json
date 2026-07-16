@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T21:59:11Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.389999389648438,
-    "change_pct": 5.326456985386234,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-03T22:19:08Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 111.01000213623047,
-    "change_pct": -2.0038822949942907,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-03T22:33:44Z",
     "symbol": "FLNC",
     "alert_id": "FLNC_PCT_DROP",
@@ -4998,5 +4978,25 @@
     "price": 64.18499755859375,
     "change_pct": -5.693509317376216,
     "value": 0
+  },
+  {
+    "timestamp": "2026-07-16T17:25:46Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 84.26000213623047,
+    "change_pct": -9.192798646157492,
+    "value": 84.26000213623047
+  },
+  {
+    "timestamp": "2026-07-16T17:26:32Z",
+    "symbol": "AMSC",
+    "alert_id": "AMSC_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 32.54999923706055,
+    "change_pct": -9.280938581213643,
+    "value": -9.280938581213643
   }
 ]
