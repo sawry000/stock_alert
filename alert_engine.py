@@ -293,6 +293,52 @@ def _uni_symbol_exists(universe_data, symbol):
     )
 
 
+def build_earnings_alert_message(watchlist, universe_data, threshold_days):
+    """
+    สร้างข้อความแจ้งเตือนหุ้นใน watchlist ที่จะประกาศผลประกอบการภายใน
+    threshold_days วันข้างหน้า (อ่าน next_earnings_date จาก universe.json ซึ่ง
+    daily_screener.py เป็นคนดึงมาเก็บไว้) — คืนค่า None ถ้าไม่มีตัวไหนใกล้เลย
+    """
+    today    = now_utc().date()
+    upcoming = []
+    for stock in watchlist:
+        sym   = stock.get("symbol", "")
+        entry = _uni_find_entry(universe_data, sym)
+        if not entry:
+            continue
+        earn_str = entry.get("next_earnings_date")
+        if not earn_str:
+            continue
+        try:
+            earn_date = datetime.fromisoformat(earn_str).date()
+        except (ValueError, TypeError):
+            continue
+        days_left = (earn_date - today).days
+        if 0 <= days_left <= threshold_days:
+            upcoming.append((days_left, sym, earn_date))
+
+    if not upcoming:
+        return None
+
+    upcoming.sort(key=lambda x: x[0])
+    lines = [
+        "📅 <b>ใกล้ประกาศผลประกอบการ</b>",
+        f"🕐 {now_bkk_str()}",
+        "",
+        f"หุ้นใน Watchlist ที่จะประกาศผลภายใน {threshold_days} วัน:",
+        "",
+    ]
+    for days_left, sym, earn_date in upcoming:
+        when = "วันนี้!" if days_left == 0 else ("พรุ่งนี้" if days_left == 1 else f"อีก {days_left} วัน")
+        lines.append(f"  📊 <b>{sym}</b> — {earn_date.strftime('%d/%m/%Y')} ({when})")
+    lines += [
+        "",
+        "━━━━━━━━━━━━━━━━━━━━━━━━━",
+        "⚠️ ผลประกอบการมักทำให้ราคาผันผวนแรง — พิจารณาความเสี่ยงก่อนถือข้ามวันประกาศ",
+    ]
+    return "\n".join(lines)
+
+
 def _uni_update_entry(universe_data, symbol, **fields):
     """merge field เข้า entry เดิม ไม่ทับทั้ง object — เหมือน update_universe_entry()
     ใน daily_screener.py/manual_check.py ทุกประการ (คนละไฟล์แต่ต้อง behavior
@@ -1760,6 +1806,32 @@ def main():
             # open_entry ค้างแต่ไม่มีราคาปัจจุบันใน quotes_cache) ไม่ให้ทำ
             # save_json() ท้ายฟังก์ชันไม่ถูกเรียก
             print(f"[Position Status] ⚠️ ERROR ไม่คาดคิด — ข้ามรอบนี้ไป: {e}")
+
+    # ── Earnings Alert — เตือนหุ้นใน watchlist ที่ใกล้ประกาศผลประกอบการ ──
+    earn_hour    = settings.get("earnings_alert_hour_utc", summary_hour)
+    earn_days    = settings.get("earnings_alert_threshold_days", 3)
+    earn_state   = state.get("__earnings_alert__", {})
+    last_earn    = earn_state.get("last_sent", "")
+
+    if (current_hour == earn_hour
+            and (not last_earn or not last_earn.startswith(today_str))):
+        try:
+            print("\n[Earnings Alert] กำลังเช็ค...")
+            earn_msg = build_earnings_alert_message(watchlist, universe_data, earn_days)
+            if earn_msg:
+                if send_telegram(token, chat_id, earn_msg):
+                    state["__earnings_alert__"] = {"last_sent": now_str()}
+                    print("[Earnings Alert] ✅ ส่งสำเร็จ")
+                else:
+                    print("[Earnings Alert] ❌ ส่งไม่สำเร็จ")
+            else:
+                print("[Earnings Alert] ไม่มีหุ้นใกล้ประกาศผล — ข้าม")
+                state["__earnings_alert__"] = {"last_sent": now_str()}
+        except Exception as e:
+            # FIX: เหตุผลเดียวกับ Daily Summary/Position Status ด้านบน — กัน
+            # exception จาก build_earnings_alert_message() (เช่น next_earnings_date
+            # ที่เก็บไว้ผิดรูปแบบ) ไม่ให้ทำ save_json() ท้ายฟังก์ชันไม่ถูกเรียก
+            print(f"[Earnings Alert] ⚠️ ERROR ไม่คาดคิด — ข้ามรอบนี้ไป: {e}")
 
     save_json(STATE_PATH, state)
     save_json(LOG_PATH, log[-500:])

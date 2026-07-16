@@ -183,6 +183,19 @@ def update_universe_entry(universe_data, sym, **fields):
     return False
 
 
+def get_universe_field(universe_data, sym, field, default=None):
+    """
+    อ่านค่า field เดียวจาก universe entry ของ sym (ไม่ต้องวน loop ซ้ำเองทุกจุด)
+    ใช้เช็คว่ามีค่าแคชไว้แล้วหรือยัง ก่อนจะตัดสินใจยิง API เพิ่ม (เช่น earnings
+    date ที่ไม่ต้อง refresh ทุกวัน เพราะเปลี่ยนแค่ไตรมาสละครั้ง)
+    """
+    for _ue in universe_data.get("universe", []):
+        _us = (_ue if isinstance(_ue, str) else _ue.get("symbol", "")).upper()
+        if _us == sym.upper():
+            return default if isinstance(_ue, str) else _ue.get(field, default)
+    return default
+
+
 # ══════════════════════════════════════════════════════════════════════════════
 #  TELEGRAM
 # ══════════════════════════════════════════════════════════════════════════════
@@ -499,6 +512,27 @@ def fetch_stock_data(ticker):
         }
     except Exception as e:
         print(f"  [Data] {ticker}: {e}")
+        return None
+
+
+def fetch_next_earnings_date(ticker):
+    """
+    ดึงวันที่ประกาศผลประกอบการ (earnings) ครั้งถัดไปของหุ้นจาก yfinance
+    Returns ISO date string ("YYYY-MM-DD") ของวันที่ในอนาคตที่ใกล้ที่สุด
+    หรือ None ถ้าไม่มีข้อมูล/ดึงไม่ได้/ไม่มีวันในอนาคตเลย (เช่นหุ้นเพิ่งประกาศ
+    ไปและ yfinance ยังไม่มีวันถัดไปให้)
+    """
+    try:
+        t   = yf.Ticker(ticker)
+        edf = t.get_earnings_dates(limit=8)
+        if edf is None or edf.empty:
+            return None
+        today = datetime.now(timezone.utc).date()
+        future = [idx.date() for idx in edf.index if idx.date() >= today]
+        if not future:
+            return None
+        return min(future).isoformat()
+    except Exception:
         return None
 
 
@@ -1116,6 +1150,23 @@ def main():
         time.sleep(0.8)
         data_now = fetch_stock_data(sym)
 
+        # ── Earnings date: ยิง API เพิ่มเฉพาะตอนที่ยังไม่มีวันในอนาคตแคชไว้ ──
+        # (earnings เปลี่ยนแค่ไตรมาสละครั้ง ไม่ต้อง refetch ทุกวัน — เช็คว่า
+        # ค่าที่มีอยู่ใน universe.json ยังเป็นวันในอนาคตอยู่มั้ยก่อน ถ้าใช่ก็
+        # ใช้ของเดิมได้เลย ประหยัด API call ไปมากในระยะยาว)
+        cached_earn = get_universe_field(universe_data, sym, "next_earnings_date")
+        needs_earn_refresh = True
+        if cached_earn:
+            try:
+                if datetime.fromisoformat(cached_earn).date() >= datetime.now(timezone.utc).date():
+                    needs_earn_refresh = False
+            except (ValueError, TypeError):
+                pass
+        next_earnings = cached_earn
+        if needs_earn_refresh:
+            time.sleep(0.5)
+            next_earnings = fetch_next_earnings_date(sym)
+
         should_remove, rm_reason = check_removal(sym, data_now, halal_now, scr_state, cfg)
 
         if should_remove:
@@ -1157,6 +1208,7 @@ def main():
             "halal_status": halal_now["status"],
             "purify_pct":   halal_now.get("purify_pct"),
             "last_checked": now_str(),
+            "next_earnings_date": next_earnings,
         }
         if data_now is not None:
             gates_passed, gates_detail = run_gates(sym, data_now, halal_now, cfg)

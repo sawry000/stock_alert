@@ -922,6 +922,7 @@ input[type=password]{letter-spacing:2px}
                 <th style="cursor:pointer" onclick="uniSort('rsi')">RSI ↕</th>
                 <th style="cursor:pointer" onclick="uniSort('vol')">Vol ↕</th>
                 <th style="cursor:pointer" onclick="uniSort('gate')">Gate ↕</th>
+                <th style="cursor:pointer" onclick="uniSort('earn')">📅 Earnings ↕</th>
                 <th style="cursor:pointer" onclick="uniSort('status')">สถานะ ↕</th>
                 <th>เพิ่มเมื่อ</th>
                 <th style="cursor:pointer" onclick="uniSort('checked')">Checked ↕</th>
@@ -929,7 +930,7 @@ input[type=password]{letter-spacing:2px}
               </tr>
             </thead>
             <tbody id="uni-tbody">
-              <tr><td colspan="14" style="text-align:center;padding:30px;color:var(--text3)">
+              <tr><td colspan="15" style="text-align:center;padding:30px;color:var(--text3)">
                 กด "Sync GitHub" เพื่อโหลด universe.json
               </td></tr>
             </tbody>
@@ -1880,6 +1881,28 @@ async function loadFileFromGH(filename, type) {
 // trigger เอง — ไม่ fetch เพิ่มในฟังก์ชันนี้ แค่ lookup ของที่โหลดไว้แล้ว)
 // ใช้ threshold สี/เกณฑ์เดียวกับตาราง Universe Manager (uniRenderTable) เป๊ะ
 // เพื่อให้สีเขียว/แดง/เหลืองสื่อความหมายตรงกันทั้ง 2 หน้า
+function wlEarningsBadge(symbol) {
+  const upper = (symbol || '').toUpperCase();
+  const r = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === upper);
+  const earnStr = (r && typeof r !== 'string') ? r.next_earnings_date : null;
+  if (!earnStr) return '';
+  const earnDate = new Date(earnStr + 'T00:00:00Z');
+  if (isNaN(earnDate.getTime())) return '';
+  const now = new Date();
+  const todayUTC = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const daysLeft = Math.round((earnDate.getTime() - todayUTC) / 86400000);
+  if (daysLeft < 0) return ''; // วันประกาศผ่านไปแล้ว (ยังไม่ทัน sync วันใหม่) ไม่ต้องโชว์
+  // สี: แดง = วันนี้/พรุ่งนี้ (ด่วน), เหลือง = ภายใน 3 วัน, ฟ้า = ภายใน 7 วัน, เทา = ไกลกว่านั้น
+  let color = 'var(--text3)';
+  if (daysLeft <= 1)      color = 'var(--red)';
+  else if (daysLeft <= 3) color = 'var(--gold)';
+  else if (daysLeft <= 7) color = 'var(--cyan)';
+  const dateStr = earnDate.toLocaleDateString('th-TH', { day: '2-digit', month: 'short', timeZone: 'UTC' });
+  const whenStr = daysLeft === 0 ? 'วันนี้' : (daysLeft === 1 ? 'พรุ่งนี้' : `อีก ${daysLeft} วัน`);
+  const urgentIcon = daysLeft <= 1 ? ' ⚠️' : '';
+  return `<span class="earnbadge" style="font-size:10px;font-family:var(--mono);color:${color};border:1px solid ${color};border-radius:4px;padding:1px 5px;white-space:nowrap" title="ประกาศผลประกอบการ ${dateStr} (${whenStr})">📅 ${dateStr}${urgentIcon}</span>`;
+}
+
 function wlUniStats(symbol) {
   const upper = (symbol || '').toUpperCase();
   const r = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === upper);
@@ -2204,6 +2227,7 @@ function renderWL() {
         <span class="sfull">${s.name}</span>
         <span class="smkt">${s.market}</span>
         ${wlSectorBadge(s.symbol)}
+        ${wlEarningsBadge(s.symbol)}
         <span style="font-size:11px;color:var(--text3);font-family:var(--mono)">${s.alerts.length} alerts</span>
         ${wlUniStats(s.symbol)}
         <label onclick="event.stopPropagation()" style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);margin-left:auto;cursor:pointer">
@@ -3996,6 +4020,7 @@ function uniRenderTable() {
     rsi: typeof r === 'string' ? null : (r.last_rsi != null ? r.last_rsi : null),
     vol: typeof r === 'string' ? null : (r.last_vol_ratio != null ? r.last_vol_ratio : null),
     gate: typeof r === 'string' ? null : (r.last_gate || null),
+    earn: typeof r === 'string' ? null : (r.next_earnings_date || null),
     added: typeof r === 'string' ? '-' : (r.added_at ? r.added_at.substring(0,10) : '-'),
     checked: typeof r === 'string' ? null : (r.last_checked || null),
     inWl: wls.has(uniSym(r).toUpperCase()),
@@ -4020,6 +4045,7 @@ function uniRenderTable() {
            : uniSortKey === 'rsi'     ? (a.rsi ?? -1)
            : uniSortKey === 'vol'     ? (a.vol ?? -1)
            : uniSortKey === 'gate'    ? (a.gate || '')
+           : uniSortKey === 'earn'    ? (a.earn || '9999-99-99')
            : (a.purify ?? 9999);
     let bv = uniSortKey === 'symbol'  ? b.sym
            : uniSortKey === 'halal'   ? b.halal
@@ -4030,6 +4056,7 @@ function uniRenderTable() {
            : uniSortKey === 'rsi'     ? (b.rsi ?? -1)
            : uniSortKey === 'vol'     ? (b.vol ?? -1)
            : uniSortKey === 'gate'    ? (b.gate || '')
+           : uniSortKey === 'earn'    ? (b.earn || '9999-99-99')
            : (b.purify ?? 9999);
     return uniSortAsc ? (av < bv ? -1 : av > bv ? 1 : 0) : (av > bv ? -1 : av < bv ? 1 : 0);
   });
@@ -4037,7 +4064,7 @@ function uniRenderTable() {
   const tbody = document.getElementById('uni-tbody');
   if (!tbody) return; // tab ยังไม่ถูก mount — ข้าม render อย่างปลอดภัย (กัน error ตอนเรียกจาก renderWL)
   if (!rows.length) {
-    tbody.innerHTML = '<tr><td colspan="14" style="text-align:center;padding:30px;color:var(--text3)">ไม่พบข้อมูล</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="15" style="text-align:center;padding:30px;color:var(--text3)">ไม่พบข้อมูล</td></tr>';
     return;
   }
 
@@ -4083,6 +4110,7 @@ function uniRenderTable() {
       <td>${rsiStr}</td>
       <td>${volStr}</td>
       <td>${gateStr}</td>
+      <td>${wlEarningsBadge(r.sym) || '<span style="color:var(--text3);font-size:10px">-</span>'}</td>
       <td>${wlTag}</td>
       <td style="font-size:10px;color:var(--text3);font-family:var(--mono)">${r.added}</td>
       <td style="font-size:10px;color:var(--text3);font-family:var(--mono)">${checked}</td>
