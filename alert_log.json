@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T15:38:59Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 282.95001220703125,
-    "change_pct": -20.11575036503917,
-    "value": -20.11575036503917
-  },
-  {
     "timestamp": "2026-07-03T15:39:06Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 66.13999938964844,
     "change_pct": 1.7538452148437502,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-16T13:26:14Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_SCORE_60",
+    "type": "alert_score",
+    "action": "BUY",
+    "price": 4.739999771118164,
+    "change_pct": 1.0660932008137243,
+    "value": 60
   }
 ]
