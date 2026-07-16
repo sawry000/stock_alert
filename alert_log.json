@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T17:54:30Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MA_GOLD",
-    "type": "ma_crossover",
-    "action": "BUY",
-    "price": 18.389999389648438,
-    "change_pct": 5.326456985386234,
-    "value": 0.477
-  },
-  {
     "timestamp": "2026-07-03T21:59:11Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 9.9399995803833,
     "change_pct": -12.268317913651362,
     "value": -12.268317913651362
+  },
+  {
+    "timestamp": "2026-07-16T16:42:09Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 64.18499755859375,
+    "change_pct": -5.693509317376216,
+    "value": 0
   }
 ]
