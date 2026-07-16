@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-07-15T02:13:29Z"
+    "last_sent": "2026-07-16T02:12:39Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -469,7 +469,7 @@
     "open_entry": 92.66500091552734,
     "open_time": "2026-07-08T14:43:51Z",
     "last_buy_at": "2026-07-15T10:56:11Z",
-    "open_peak": 97.1500015258789,
+    "open_peak": 98.68000030517578,
     "open_stop": 82.684,
     "open_target": 100.0782,
     "open_conviction": 3,
@@ -545,7 +545,7 @@
     "open_entry": 36.06999969482422,
     "open_time": "2026-07-09T02:03:49Z",
     "last_buy_at": "2026-07-15T06:26:26Z",
-    "open_peak": 36.06999969482422,
+    "open_peak": 37.16999816894531,
     "open_stop": 30.9317,
     "open_target": 38.9556,
     "open_conviction": 3,
@@ -580,7 +580,7 @@
     "open_position": true,
     "open_entry": 4.25,
     "open_time": "2026-06-25T10:13:16Z",
-    "open_peak": 4.25,
+    "open_peak": 4.739999771118164,
     "IOVA_PCT_UP": {
       "last_fired": "2026-07-15T17:25:54Z"
     },
@@ -952,7 +952,7 @@
       "last_fired": "2026-07-15T06:56:56Z"
     },
     "last_buy_at": "2026-07-15T06:56:56Z",
-    "open_peak": 10.760000228881836,
+    "open_peak": 11.5,
     "last_buy_reminder_at": "2026-07-15T06:56:56Z"
   },
   "AMPX": {
@@ -1151,7 +1151,7 @@
     "OPRX_MA_GOLD": {
       "last_fired": "2026-06-30T19:29:04Z"
     },
-    "open_peak": 6.550000190734863,
+    "open_peak": 6.650000095367432,
     "open_stop": 5.4098,
     "open_target": 6.642,
     "open_conviction": 3,
@@ -1298,7 +1298,7 @@
     "open_position": true,
     "open_entry": 100.4749984741211,
     "open_time": "2026-06-22T16:48:50Z",
-    "open_peak": 126.7699966430664
+    "open_peak": 129.8800048828125
   },
   "CLPT": {
     "CLPT_MTF_BULL": {
@@ -1355,7 +1355,7 @@
     },
     "last_buy_at": "2026-07-15T10:56:52Z",
     "last_sell_at": "2026-06-30T15:48:54Z",
-    "open_peak": 122.61000061035156,
+    "open_peak": 124.29000091552734,
     "open_stop": 95.0215,
     "open_target": 120.7332,
     "open_conviction": 4,
@@ -1638,12 +1638,13 @@
     "open_entry": 1.7000000476837158,
     "open_time": "2026-07-09T07:04:43Z",
     "last_buy_at": "2026-07-15T04:56:36Z",
-    "open_peak": 1.7300000190734863,
+    "open_peak": 1.7599999904632568,
     "open_stop": 1.445,
     "open_target": 1.836,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-15T04:56:36Z"
+    "last_buy_reminder_at": "2026-07-15T04:56:36Z",
+    "_confirm_ZVIA_MTF_BULL": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1827,12 +1828,13 @@
     "EVTV_MA_GOLD": {
       "last_fired": "2026-07-07T14:29:37Z"
     },
-    "open_peak": 1.940000057220459,
+    "open_peak": 1.9700000286102295,
     "open_stop": 1.581,
     "open_target": 2.0088,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-15T04:57:04Z"
+    "last_buy_reminder_at": "2026-07-15T04:57:04Z",
+    "_confirm_EVTV_MTF_BULL": 1
   },
   "BLIN": {
     "BLIN_MTF_BULL": {
@@ -1855,12 +1857,13 @@
     "last_buy_at": "2026-07-15T04:57:07Z",
     "open_entry": 13.930000305175781,
     "open_time": "2026-07-09T04:50:43Z",
-    "open_peak": 14.34000015258789,
+    "open_peak": 14.489999771118164,
     "open_stop": 12.0881,
     "open_target": 15.0444,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-15T04:57:07Z"
+    "last_buy_reminder_at": "2026-07-15T04:57:07Z",
+    "_confirm_AOUT_MTF_BULL": 1
   },
   "OFRM": {
     "OFRM_PCT_DROP": {
@@ -1908,6 +1911,9 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-07-15T02:13:33Z"
+    "last_sent": "2026-07-16T02:12:42Z"
+  },
+  "PESI": {
+    "_confirm_PESI_MTF_BULL": 1
   }
 }
