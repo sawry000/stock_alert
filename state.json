@@ -1659,7 +1659,7 @@
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
-      "last_fired": "2026-07-15T09:11:46Z"
+      "last_fired": "2026-07-16T13:57:31Z"
     },
     "open_position": true,
     "open_entry": 4.28000020980835,
@@ -1668,14 +1668,13 @@
       "last_fired": "2026-06-30T16:14:19Z"
     },
     "last_sell_at": "2026-06-30T16:14:19Z",
-    "last_buy_at": "2026-07-15T09:11:46Z",
+    "last_buy_at": "2026-07-16T13:57:31Z",
     "open_peak": 4.579999923706055,
     "open_stop": 3.638,
     "open_target": 4.6224,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-15T09:11:46Z",
-    "_confirm_TMCI_MTF_BULL": 1
+    "last_buy_reminder_at": "2026-07-16T13:57:31Z"
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1845,7 +1844,8 @@
     "open_target": 1.35,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-15T15:12:51Z"
+    "last_buy_reminder_at": "2026-07-15T15:12:51Z",
+    "_confirm_BLIN_MTF_BULL": 1
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
