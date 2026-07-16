@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T15:29:21Z",
-    "symbol": "VECO",
-    "alert_id": "VECO_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 57.4900016784668,
-    "change_pct": -18.10541071443477,
-    "value": -18.10541071443477
-  },
-  {
     "timestamp": "2026-07-03T15:38:59Z",
     "symbol": "VICR",
     "alert_id": "VICR_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 87.79000091552734,
     "change_pct": -0.07387076244200028,
     "value": 4.681598090470873
+  },
+  {
+    "timestamp": "2026-07-16T11:41:20Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 66.13999938964844,
+    "change_pct": 1.7538452148437502,
+    "value": 3
   }
 ]
