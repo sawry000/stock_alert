@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T16:29:20Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.789999961853027,
-    "change_pct": -1.530612893655996,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-03T16:33:32Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 4.599999904632568,
     "change_pct": 1.7699093945258582,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-16T15:56:51Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.2200000286102295,
+    "change_pct": 2.345100780232201e-06,
+    "value": 2
   }
 ]
