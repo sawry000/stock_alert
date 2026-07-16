@@ -1,45 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T09:04:21Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 93.12000274658203,
-    "change_pct": -17.446806075725146,
-    "value": -17.446806075725146
-  },
-  {
-    "timestamp": "2026-07-03T13:38:23Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 333.3599853515625,
-    "change_pct": -9.235464672303822,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-07-03T13:38:26Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 22.110000610351562,
-    "change_pct": -8.123828753993097,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-07-03T13:39:03Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 46.86000061035156,
-    "change_pct": -6.260875998000472,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-03T13:39:10Z",
     "symbol": "SMTC",
     "alert_id": "SMTC_MA_DEATH",
@@ -4998,5 +4958,45 @@
     "price": 16.789899826049805,
     "change_pct": 9.523156073384245,
     "value": 9.523156073384245
+  },
+  {
+    "timestamp": "2026-07-16T02:26:56Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7599999904632568,
+    "change_pct": 2.923976050482858,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-16T02:27:25Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.9700000286102295,
+    "change_pct": 8.839780586200522,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-16T02:27:31Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 14.489999771118164,
+    "change_pct": 2.8388912073680923,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-16T02:27:41Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 14.829999923706055,
+    "change_pct": 3.417014809665654,
+    "value": 3
   }
 ]
