@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-03T16:33:32Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 14.069999694824219,
-    "change_pct": -9.22580842048891,
-    "value": -9.22580842048891
-  },
-  {
-    "timestamp": "2026-07-03T16:49:14Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 1745.0,
-    "change_pct": -13.365107735080928,
-    "value": -13.365107735080928
-  },
-  {
     "timestamp": "2026-07-03T17:09:18Z",
     "symbol": "MXL",
     "alert_id": "MXL_PCT_DROP",
@@ -4998,5 +4978,25 @@
     "price": 1.2200000286102295,
     "change_pct": 2.345100780232201e-06,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-16T16:11:30Z",
+    "symbol": "WYFI",
+    "alert_id": "WYFI_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 26.030000686645508,
+    "change_pct": -9.649424898835443,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-16T16:12:35Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 2.1600000858306885,
+    "change_pct": -6.771976096046937,
+    "value": 0
   }
 ]
