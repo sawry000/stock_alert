@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-04T06:04:09Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.389999389648438,
-    "change_pct": 5.326456985386234,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-04T06:23:55Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -4997,6 +4987,16 @@
     "action": "BUY",
     "price": 18.799999237060547,
     "change_pct": 2.5081746840815,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-17T16:12:09Z",
+    "symbol": "CDNL",
+    "alert_id": "CDNL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 73.2249984741211,
+    "change_pct": 2.84409898050715,
     "value": 3
   }
 ]
