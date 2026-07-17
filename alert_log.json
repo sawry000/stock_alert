@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-04T00:08:36Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 69.95999908447266,
-    "change_pct": -17.431843403195263,
-    "value": -17.431843403195263
-  },
-  {
-    "timestamp": "2026-07-04T00:14:44Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 121.58999633789062,
-    "change_pct": -16.104328753266667,
-    "value": -16.104328753266667
-  },
-  {
-    "timestamp": "2026-07-04T00:33:34Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 14.069999694824219,
-    "change_pct": -9.22580842048891,
-    "value": -9.22580842048891
-  },
-  {
     "timestamp": "2026-07-04T00:39:26Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MTF_BULL",
@@ -4998,5 +4968,35 @@
     "price": 4.429999828338623,
     "change_pct": -3.874974642639005e-06,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-17T13:40:44Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 80.19000244140625,
+    "change_pct": -3.5598286934380705,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-17T13:41:22Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 14.734999656677246,
+    "change_pct": -7.327046184419837,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-17T13:42:28Z",
+    "symbol": "LHAI",
+    "alert_id": "LHAI_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 1.0299999713897705,
+    "change_pct": -3.738320430862575,
+    "value": 1.0299999713897705
   }
 ]
