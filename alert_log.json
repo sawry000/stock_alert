@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-04T06:23:55Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 111.01000213623047,
-    "change_pct": -2.0038822949942907,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-04T07:18:30Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 73.2249984741211,
     "change_pct": 2.84409898050715,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-17T18:26:51Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.3299999237060547,
+    "change_pct": -2.291109470977606e-06,
+    "value": 2
   }
 ]
