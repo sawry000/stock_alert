@@ -519,20 +519,42 @@ def fetch_next_earnings_date(ticker):
     """
     ดึงวันที่ประกาศผลประกอบการ (earnings) ครั้งถัดไปของหุ้นจาก yfinance
     Returns ISO date string ("YYYY-MM-DD") ของวันที่ในอนาคตที่ใกล้ที่สุด
-    หรือ None ถ้าไม่มีข้อมูล/ดึงไม่ได้/ไม่มีวันในอนาคตเลย (เช่นหุ้นเพิ่งประกาศ
-    ไปและ yfinance ยังไม่มีวันถัดไปให้)
+    หรือ None ถ้าไม่มีข้อมูล/ดึงไม่ได้/ไม่มีวันในอนาคตเลย
+
+    FIX: เดิมใช้ get_earnings_dates() ซึ่งเป็นจุดที่รู้กันว่าพังบ่อยมากในหลาย
+    เวอร์ชันของ yfinance (KeyError: 'Earnings Date' — Yahoo เปลี่ยนโครงสร้าง
+    endpoint ฝั่ง parsing ที่เปราะบางอยู่บ่อยๆ) เปลี่ยนมาใช้ Ticker.calendar
+    แทน ซึ่งดึงจากคนละ endpoint (quoteSummary calendarEvents) ที่เสถียรกว่า
+    มาก และไม่ต้อง parse string วันที่ซับซ้อนแบบเดิม — ค่าที่ได้จาก .calendar
+    เป็น dict ธรรมดา คีย์ "Earnings Date" เป็น list ของ datetime.date (บางครั้ง
+    มี 2 ค่าเป็นช่วงวันที่ ถ้า Yahoo ยังไม่ยืนยันวันแน่นอน ใช้ตัวแรกสุด/ใกล้สุด)
+
+    อีกจุดที่แก้: เดิม except Exception เฉยๆ (ไม่ print อะไรเลย) ทำให้ debug
+    ไม่ได้เลยว่าทำไมได้ None ทุกตัว — ตอนนี้ print ข้อความ error ออกมาด้วย
+    เพื่อให้เห็นสาเหตุจริงใน log ของ GitHub Actions รอบถัดไป ถ้ายังพังอยู่
     """
     try:
         t   = yf.Ticker(ticker)
-        edf = t.get_earnings_dates(limit=8)
-        if edf is None or edf.empty:
+        cal = t.calendar
+        if not cal:
             return None
-        today = datetime.now(timezone.utc).date()
-        future = [idx.date() for idx in edf.index if idx.date() >= today]
+        dates = cal.get("Earnings Date")
+        if not dates:
+            return None
+        today  = datetime.now(timezone.utc).date()
+        future = []
+        for d in dates:
+            if isinstance(d, str):
+                d = datetime.fromisoformat(d).date()
+            elif hasattr(d, "date") and callable(d.date):
+                d = d.date()
+            future.append(d)
+        future = [d for d in future if d >= today]
         if not future:
             return None
         return min(future).isoformat()
-    except Exception:
+    except Exception as e:
+        print(f"  [Earnings] {ticker}: ดึงวันประกาศผลไม่สำเร็จ — {e}")
         return None
 
 
