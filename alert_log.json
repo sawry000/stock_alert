@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-04T07:34:22Z",
-    "symbol": "VECO",
-    "alert_id": "VECO_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 57.4900016784668,
-    "change_pct": -18.10541071443477,
-    "value": -18.10541071443477
-  },
-  {
-    "timestamp": "2026-07-04T07:43:53Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 282.95001220703125,
-    "change_pct": -20.11575036503917,
-    "value": -20.11575036503917
-  },
-  {
     "timestamp": "2026-07-04T07:44:00Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MTF_BULL",
@@ -4997,6 +4977,26 @@
     "action": "BUY",
     "price": 25.959999084472656,
     "change_pct": 0.5422117911411928,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-18T02:11:13Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.690000057220459,
+    "change_pct": 0.6015046198565207,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-18T02:11:49Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 20.719999313354492,
+    "change_pct": 3.5999965667724605,
     "value": 3
   }
 ]
