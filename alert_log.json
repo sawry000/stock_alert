@@ -1,45 +1,5 @@
 [
   {
-    "timestamp": "2026-07-05T00:04:02Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 111.01000213623047,
-    "change_pct": -2.0038822949942907,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-05T00:04:05Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 232.3300018310547,
-    "change_pct": 1.5650281228654372,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-05T00:04:08Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 282.95001220703125,
-    "change_pct": -20.11575036503917,
-    "value": -20.11575036503917
-  },
-  {
-    "timestamp": "2026-07-05T00:04:14Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.5399999618530273,
-    "change_pct": 2.3121376258100397,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-05T00:04:18Z",
     "symbol": "FPS",
     "alert_id": "FPS_MA_DEATH",
@@ -4997,6 +4957,46 @@
     "action": "BUY",
     "price": 3.4800000190734863,
     "change_pct": 4.50450507728187,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-19T02:27:34Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.420000076293945,
+    "change_pct": 1.879700682217012,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-19T02:28:09Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.2200000286102295,
+    "change_pct": 2.5210108075823148,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-19T02:28:13Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 13.890000343322754,
+    "change_pct": -1.7680315182266382,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-19T02:28:23Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 17.459999084472656,
+    "change_pct": 10.857137044270832,
     "value": 3
   }
 ]
