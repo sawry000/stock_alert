@@ -195,7 +195,21 @@ input[type=password]{letter-spacing:2px}
 /* SYMBOL CARD */
 .symcard{background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;transition:border-color 0.2s}
 .symcard:hover{border-color:var(--border2)}
-.symhdr{display:flex;align-items:center;gap:10px;padding:11px 15px;background:var(--bg3);cursor:pointer;user-select:none;flex-wrap:wrap}
+.symhdr{display:flex;align-items:center;gap:10px;padding:11px 15px;background:var(--bg3);cursor:pointer;user-select:none;flex-wrap:nowrap;overflow:hidden}
+.symhdr-left{display:flex;align-items:center;gap:8px;flex-shrink:0;min-width:0}
+.symhdr-left .sfull{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:170px;display:inline-block;vertical-align:middle}
+.symhdr-mid{display:flex;align-items:center;gap:8px;flex:1 1 auto;min-width:0;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:thin;padding-bottom:2px}
+.symhdr-mid::-webkit-scrollbar{height:4px}
+.symhdr-mid::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+.symhdr-mid > *{flex-shrink:0}
+.symhdr-right{display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:4px}
+.wl-toolbar{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.wl-search-wrap{display:flex;align-items:center;gap:6px;background:var(--bg2);border:1px solid var(--border);
+  border-radius:7px;padding:7px 10px;flex:1 1 240px;min-width:180px}
+.wl-search-wrap input{flex:1;background:none;border:none;outline:none;color:var(--text);font-size:12.5px;font-family:var(--ui)}
+.wl-search-wrap input::placeholder{color:var(--text3)}
+#wl-sort{background:var(--bg2);border:1px solid var(--border);border-radius:7px;color:var(--text2);
+  font-size:12px;font-family:var(--ui);padding:7px 10px;cursor:pointer}
 .stoggle{font-size:11px;color:var(--text3);transition:transform 0.2s;min-width:10px}
 .stoggle.open{transform:rotate(90deg)}
 .sname{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--cyan)}
@@ -630,6 +644,24 @@ input[type=password]{letter-spacing:2px}
       </div>
 
       <div class="wl-subview active" id="wl-subview-list">
+        <div class="wl-toolbar">
+          <div class="wl-search-wrap">
+            <span class="msi" style="font-size:16px;color:var(--text3)">search</span>
+            <input type="text" id="wl-search" placeholder="ค้นหาหุ้น (symbol, ชื่อ, sector)..."
+                   oninput="_wlSearchQuery=this.value;renderWL()">
+            <span class="msi" id="wl-search-clear" style="font-size:15px;color:var(--text3);cursor:pointer;display:none"
+                  onclick="document.getElementById('wl-search').value='';_wlSearchQuery='';renderWL()">close</span>
+          </div>
+          <select id="wl-sort" onchange="_wlSortKey=this.value;renderWL()">
+            <option value="default">เรียงตาม: ค่าเริ่มต้น</option>
+            <option value="symbol">Symbol (A-Z)</option>
+            <option value="alerts_desc">จำนวน Alert (มาก→น้อย)</option>
+            <option value="price_desc">ราคา (สูง→ต่ำ)</option>
+            <option value="price_asc">ราคา (ต่ำ→สูง)</option>
+            <option value="earnings">ใกล้ประกาศผลก่อน</option>
+          </select>
+          <span id="wl-search-count" style="font-size:11px;color:var(--text3);font-family:var(--mono);white-space:nowrap"></span>
+        </div>
         <div id="wl-cards"></div>
       </div>
 
@@ -2208,34 +2240,91 @@ function renderSectorFlow(elId, getSymbolsFn, emptyMsg) {
   }).join('');
 }
 
+let _wlSearchQuery = '';
+let _wlSortKey     = 'default';
+
+function _wlMatchesSearch(s, q) {
+  if (!q) return true;
+  const upper = (s.symbol || '').toUpperCase();
+  const uniE  = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === upper);
+  const sector = (uniE && typeof uniE !== 'string') ? (uniE.last_sector || '') : '';
+  const hay = `${s.symbol} ${s.name} ${sector}`.toLowerCase();
+  return hay.includes(q.toLowerCase().trim());
+}
+
+function _wlSortedFiltered() {
+  let list = WL.watchlist
+    .map((s, originalIndex) => ({ s, originalIndex }))
+    .filter(({ s }) => _wlMatchesSearch(s, _wlSearchQuery));
+
+  if (_wlSortKey === 'default') return list;
+
+  const uniOf = (sym) => (UNI.universe || []).find(e => uniSym(e).toUpperCase() === (sym || '').toUpperCase());
+  const cmp = {
+    symbol:      (a, b) => a.s.symbol.localeCompare(b.s.symbol),
+    alerts_desc: (a, b) => (b.s.alerts?.length || 0) - (a.s.alerts?.length || 0),
+    price_desc:  (a, b) => ((uniOf(b.s.symbol)?.last_price) ?? -1) - ((uniOf(a.s.symbol)?.last_price) ?? -1),
+    price_asc:   (a, b) => ((uniOf(a.s.symbol)?.last_price) ?? 1e18) - ((uniOf(b.s.symbol)?.last_price) ?? 1e18),
+    earnings:    (a, b) => {
+      const ea = uniOf(a.s.symbol)?.next_earnings_date || '9999-99-99';
+      const eb = uniOf(b.s.symbol)?.next_earnings_date || '9999-99-99';
+      return ea.localeCompare(eb);
+    },
+  }[_wlSortKey];
+  if (cmp) list = [...list].sort(cmp);
+  return list;
+}
+
 function renderWL() {
   // Auto-sync: คอลัมน์ "สถานะ" (WL) ใน Universe Manager ต้องอัปเดตทุกครั้งที่ watchlist เปลี่ยน
   if (typeof uniRenderTable === 'function') uniRenderTable();
   // รีเฟรช Sector Flow เฉพาะ view ที่กำลังเปิดดูอยู่จริงตอนนี้ (ของ Watchlist
   // หรือของ Universe ก็ได้) กันไม่ให้ข้อมูลค้างเก่าเวลา watchlist เปลี่ยน
   if (_wlSubView === 'sector' || _uniCurrentTab === 'sflow') renderSectorFlow();
+
+  const clearBtn = document.getElementById('wl-search-clear');
+  if (clearBtn) clearBtn.style.display = _wlSearchQuery ? '' : 'none';
+
   const c = document.getElementById('wl-cards');
   if (!WL.watchlist.length) {
     c.innerHTML = '<div style="text-align:center;padding:60px;color:var(--text3);font-size:13px">ยังไม่มีหุ้น — กด <strong style="color:var(--cyan)">+ เพิ่ม Symbol</strong></div>';
+    const cnt = document.getElementById('wl-search-count');
+    if (cnt) cnt.textContent = '';
     return;
   }
-  c.innerHTML = WL.watchlist.map((s,si) => `
+
+  const filtered = _wlSortedFiltered();
+  const cnt = document.getElementById('wl-search-count');
+  if (cnt) cnt.textContent = _wlSearchQuery ? `${filtered.length}/${WL.watchlist.length} ตัว` : `${WL.watchlist.length} ตัว`;
+
+  if (!filtered.length) {
+    c.innerHTML = `<div style="text-align:center;padding:60px;color:var(--text3);font-size:13px">ไม่พบหุ้นที่ตรงกับ "${_wlSearchQuery}"</div>`;
+    return;
+  }
+
+  c.innerHTML = filtered.map(({ s, originalIndex: si }) => `
     <div class="symcard">
       <div class="symhdr" onclick="toggleSym(${si})">
-        <span class="stoggle" id="st-${si}">▶</span>
-        <span class="sname">${s.symbol}</span>
-        <span class="sfull">${s.name}</span>
-        <span class="smkt">${s.market}</span>
-        ${wlSectorBadge(s.symbol)}
-        ${wlEarningsBadge(s.symbol)}
-        <span style="font-size:11px;color:var(--text3);font-family:var(--mono)">${s.alerts.length} alerts</span>
-        ${wlUniStats(s.symbol)}
-        <label onclick="event.stopPropagation()" style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);margin-left:auto;cursor:pointer">
-          <input type="checkbox" ${s.enabled!==false?'checked':''} onchange="WL.watchlist[${si}].enabled=this.checked;markUnsaved()"> Active
-        </label>
-        <div style="display:flex;gap:5px;margin-left:4px" onclick="event.stopPropagation()">
-          <button class="btn btn-xs btn-ghost" onclick="openAdd(${si})"><span class="msi" style="font-size:14px">add</span></button>
-          <button class="btn btn-xs btn-red" onclick="delSym(${si})"><span class="msi" style="font-size:14px">delete</span></button>
+        <div class="symhdr-left">
+          <span class="stoggle" id="st-${si}">▶</span>
+          <span class="sname">${s.symbol}</span>
+          <span class="sfull" title="${s.name}">${s.name}</span>
+        </div>
+        <div class="symhdr-mid">
+          <span class="smkt">${s.market}</span>
+          ${wlSectorBadge(s.symbol)}
+          ${wlEarningsBadge(s.symbol)}
+          <span style="font-size:11px;color:var(--text3);font-family:var(--mono)">${s.alerts.length} alerts</span>
+          ${wlUniStats(s.symbol)}
+        </div>
+        <div class="symhdr-right">
+          <label onclick="event.stopPropagation()" style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);cursor:pointer">
+            <input type="checkbox" ${s.enabled!==false?'checked':''} onchange="WL.watchlist[${si}].enabled=this.checked;markUnsaved()"> Active
+          </label>
+          <div style="display:flex;gap:5px" onclick="event.stopPropagation()">
+            <button class="btn btn-xs btn-ghost" onclick="openAdd(${si})"><span class="msi" style="font-size:14px">add</span></button>
+            <button class="btn btn-xs btn-red" onclick="delSym(${si})"><span class="msi" style="font-size:14px">delete</span></button>
+          </div>
         </div>
       </div>
       <div class="symbody" id="sb-${si}">
