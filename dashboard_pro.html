@@ -198,9 +198,12 @@ input[type=password]{letter-spacing:2px}
 .symhdr{display:flex;align-items:center;gap:10px;padding:11px 15px;background:var(--bg3);cursor:pointer;user-select:none;flex-wrap:nowrap;overflow:hidden}
 .symhdr-left{display:flex;align-items:center;gap:8px;flex-shrink:0;min-width:0}
 .symhdr-left .sfull{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:170px;display:inline-block;vertical-align:middle}
-.symhdr-mid{display:flex;align-items:center;gap:8px;flex:1 1 auto;min-width:0;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:thin;padding-bottom:2px}
-.symhdr-mid::-webkit-scrollbar{height:4px}
-.symhdr-mid::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+.symhdr-mid{display:flex;align-items:center;gap:8px;flex:1 1 auto;min-width:0;overflow-x:auto;overflow-y:hidden;white-space:nowrap;padding-bottom:3px;
+  scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.12) transparent}
+.symhdr-mid::-webkit-scrollbar{height:3px}
+.symhdr-mid::-webkit-scrollbar-track{background:transparent}
+.symhdr-mid::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.12);border-radius:99px}
+.symhdr-mid:hover::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.22)}
 .symhdr-mid > *{flex-shrink:0}
 .symhdr-right{display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:4px}
 .wl-toolbar{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
