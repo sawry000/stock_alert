@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T00:03:47Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 36.79999923706055,
-    "change_pct": -1.3933568138784924,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-06T00:03:59Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 1.7050000429153442,
     "change_pct": -0.8720905281776591,
     "value": 2
+  },
+  {
+    "timestamp": "2026-07-20T18:27:09Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 16.049999237060547,
+    "change_pct": -11.958314662311869,
+    "value": 16.049999237060547
   }
 ]
