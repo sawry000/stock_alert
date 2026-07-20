@@ -761,6 +761,9 @@ input[type=password]{letter-spacing:2px}
             <span class="spinner" style="display:none" id="state-spinner"></span> <span class="msi">sync</span> Load จาก GitHub
           </button>
           <button class="btn btn-ghost btn-sm" onclick="document.getElementById('local-state-input').click()" title="โหลดจากไฟล์ในเครื่อง"><span class="msi">folder_open</span> Local</button>
+          <button class="btn btn-sm" style="background:var(--red);color:#fff" onclick="resetAllPositions()">
+            <span class="msi">restart_alt</span> รีเซ็ตทั้งหมด
+          </button>
         </div>
       </div>
       <div class="card">
@@ -2596,25 +2599,94 @@ function renderLog() {
 // ══════════════════════════════════════════════════════════
 //  STATE RENDER
 // ══════════════════════════════════════════════════════════
+// key พวกนี้เป็น field ของ "position" ไม่ใช่ alert cooldown จริง — ต้องแยก
+// ออกจากลูป render alert cooldown ไม่งั้นจะโชว์เป็นแถวขยะปนกัน (เพราะ code
+// เดิมสมมติว่าทุก key ใต้ symbol เป็น alert object ที่มี .last_fired)
+const POSITION_FIELDS = ['open_entry','open_time','open_peak','open_stop','open_target',
+  'open_conviction','open_alert_type','last_buy_at','last_sell_at','last_buy_reminder_at'];
+
+function _clearPositionFields(symObj) {
+  POSITION_FIELDS.forEach(f => delete symObj[f]);
+}
+
 function renderState() {
   const empty = document.getElementById('state-empty'), content = document.getElementById('state-content');
   if (!Object.keys(stateData).length) { empty.style.display=''; content.style.display='none'; return; }
   empty.style.display = 'none'; content.style.display = '';
   const now = Date.now();
   content.innerHTML = Object.entries(stateData).map(([sym, alerts]) => {
-    if (sym === '__daily_summary__') return `<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:12px"><span style="color:var(--text2);font-family:var(--mono)"><span class="msi" style="font-size:13px;vertical-align:middle">bar_chart</span> Daily Summary:</span> <span style="color:var(--text3)">${alerts.last_sent||'-'}</span></div>`;
-    return `<div style="margin-bottom:14px"><div style="font-family:var(--mono);font-weight:700;color:var(--cyan);margin-bottom:7px">${sym}</div>`+
-      Object.entries(alerts).map(([aid, info]) => {
-        const fired   = info.last_fired;
-        const minsAgo = fired ? Math.floor((now - new Date(fired).getTime())/60000) : null;
-        const cd      = WL.watchlist.flatMap(s => s.alerts).find(a => a.id === aid)?.cooldown_minutes || 60;
-        const rem     = minsAgo !== null ? Math.max(0, cd - minsAgo) : 0;
-        const status  = rem > 0
-          ? `<span style="color:var(--orange)"><span class="msi" style="font-size:13px;vertical-align:middle">hourglass_empty</span> ${rem}m เหลือ</span>`
-          : `<span style="color:var(--green)"><span class="msi" style="font-size:13px;vertical-align:middle">check_circle</span> พร้อม</span>`;
-        return `<div style="display:flex;align-items:center;gap:10px;padding:6px 10px;background:var(--bg);border-radius:4px;margin-bottom:4px;font-size:12px"><span style="font-family:var(--mono);color:var(--text2);flex:1">${aid}</span><span style="color:var(--text3)">${fired?fired.slice(0,19).replace('T',' '):'-'}</span>${status}</div>`;
-      }).join('') + '</div>';
+    if (sym.startsWith('__')) {
+      const label = { __daily_summary__: 'Daily Summary', __position_status__: 'Position Status', __earnings_alert__: 'Earnings Alert' }[sym] || sym;
+      return `<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:12px"><span style="color:var(--text2);font-family:var(--mono)"><span class="msi" style="font-size:13px;vertical-align:middle">bar_chart</span> ${label}:</span> <span style="color:var(--text3)">${alerts.last_sent||'-'}</span></div>`;
+    }
+
+    // ── กล่อง position (ถ้ามี) พร้อมปุ่มรีเซ็ตทีละตัว ──
+    let posBox = '';
+    if (alerts.open_entry) {
+      const uniE   = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === sym.toUpperCase());
+      const cur    = (uniE && typeof uniE !== 'string') ? uniE.last_price : null;
+      const pnlPct = cur != null ? ((cur - alerts.open_entry) / alerts.open_entry * 100) : null;
+      const pnlStr = pnlPct != null
+        ? `<span style="color:${pnlPct>=0?'var(--green)':'var(--red)'};font-weight:700">${pnlPct>=0?'+':''}${pnlPct.toFixed(2)}%</span>`
+        : '<span style="color:var(--text3)">-</span>';
+      posBox = `<div style="display:flex;align-items:center;gap:10px;padding:8px 10px;background:rgba(255,109,0,0.06);border:1px solid rgba(255,109,0,0.25);border-radius:6px;margin-bottom:6px;font-size:11.5px;font-family:var(--mono);flex-wrap:wrap">
+        <span style="color:var(--orange)"><span class="msi" style="font-size:13px;vertical-align:middle">work</span> Position</span>
+        <span style="color:var(--text2)">เข้า $${alerts.open_entry.toFixed(4)}</span>
+        ${cur != null ? `<span style="color:var(--text3)">→ ปัจจุบัน $${cur.toFixed(4)}</span>` : ''}
+        ${pnlStr}
+        <button class="btn btn-xs" style="margin-left:auto;background:var(--red);color:#fff" onclick="resetPosition('${sym}')">
+          <span class="msi" style="font-size:12px">restart_alt</span> รีเซ็ต
+        </button>
+      </div>`;
+    }
+
+    const alertEntries = Object.entries(alerts).filter(([k]) => !POSITION_FIELDS.includes(k));
+    const alertRows = alertEntries.map(([aid, info]) => {
+      const fired   = info.last_fired;
+      const minsAgo = fired ? Math.floor((now - new Date(fired).getTime())/60000) : null;
+      const cd      = WL.watchlist.flatMap(s => s.alerts).find(a => a.id === aid)?.cooldown_minutes || 60;
+      const rem     = minsAgo !== null ? Math.max(0, cd - minsAgo) : 0;
+      const status  = rem > 0
+        ? `<span style="color:var(--orange)"><span class="msi" style="font-size:13px;vertical-align:middle">hourglass_empty</span> ${rem}m เหลือ</span>`
+        : `<span style="color:var(--green)"><span class="msi" style="font-size:13px;vertical-align:middle">check_circle</span> พร้อม</span>`;
+      return `<div style="display:flex;align-items:center;gap:10px;padding:6px 10px;background:var(--bg);border-radius:4px;margin-bottom:4px;font-size:12px"><span style="font-family:var(--mono);color:var(--text2);flex:1">${aid}</span><span style="color:var(--text3)">${fired?fired.slice(0,19).replace('T',' '):'-'}</span>${status}</div>`;
+    }).join('');
+
+    return `<div style="margin-bottom:14px"><div style="font-family:var(--mono);font-weight:700;color:var(--cyan);margin-bottom:7px">${sym}</div>${posBox}${alertRows}</div>`;
   }).join('');
+}
+
+async function resetPosition(sym) {
+  if (!stateData[sym] || !stateData[sym].open_entry) {
+    showToast('ไม่พบ position ของ ' + sym, 'warn');
+    return;
+  }
+  if (!confirm(`รีเซ็ต position ของ ${sym}?\n\nจะล้างราคาต้นทุน/Stop/Target ที่ระบบ track ไว้เท่านั้น ไม่ได้ขายหุ้นจริงหรือแตะต้อง watchlist — BUY signal ครั้งถัดไปของ ${sym} จะเริ่มนับ position ใหม่จากราคานั้นแทน`)) return;
+  _clearPositionFields(stateData[sym]);
+  try {
+    await ghPutFile('state.json', stateData, `reset: clear position ${sym}`);
+    showToast(`รีเซ็ต position ${sym} แล้ว`, 'ok');
+    renderState();
+  } catch (e) {
+    showToast('บันทึกไม่สำเร็จ: ' + e.message, 'err');
+  }
+}
+
+async function resetAllPositions() {
+  const symsWithPos = Object.keys(stateData).filter(k => !k.startsWith('__') && stateData[k] && stateData[k].open_entry);
+  if (!symsWithPos.length) {
+    showToast('ไม่มี position เปิดอยู่เลยตอนนี้', 'warn');
+    return;
+  }
+  if (!confirm(`รีเซ็ต position ทั้งหมด ${symsWithPos.length} ตัว?\n\n(${symsWithPos.join(', ')})\n\nจะล้างราคาต้นทุน/Stop/Target ที่ track ไว้ทุกตัว ไม่ได้ขายหุ้นจริง — ทำแล้วย้อนกลับไม่ได้`)) return;
+  symsWithPos.forEach(sym => _clearPositionFields(stateData[sym]));
+  try {
+    await ghPutFile('state.json', stateData, `reset: clear all ${symsWithPos.length} positions`);
+    showToast(`รีเซ็ต position ทั้งหมด ${symsWithPos.length} ตัวแล้ว`, 'ok');
+    renderState();
+  } catch (e) {
+    showToast('บันทึกไม่สำเร็จ: ' + e.message, 'err');
+  }
 }
 
 // ══════════════════════════════════════════════════════════
