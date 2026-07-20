@@ -1,65 +1,5 @@
 [
   {
-    "timestamp": "2026-07-05T00:04:33Z",
-    "symbol": "VECO",
-    "alert_id": "VECO_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 57.4900016784668,
-    "change_pct": -18.10541071443477,
-    "value": -18.10541071443477
-  },
-  {
-    "timestamp": "2026-07-05T00:04:39Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 1745.0,
-    "change_pct": -13.365107735080928,
-    "value": -13.365107735080928
-  },
-  {
-    "timestamp": "2026-07-05T00:09:31Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.210000038146973,
-    "change_pct": -0.4728123369510111,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-05T00:09:34Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.789999961853027,
-    "change_pct": -1.530612893655996,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-06T00:03:28Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.670000076293945,
-    "change_pct": 6.426202638034595,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-06T00:03:29Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 98.22000122070312,
-    "change_pct": -13.576769713415645,
-    "value": -13.576769713415645
-  },
-  {
     "timestamp": "2026-07-06T00:03:33Z",
     "symbol": "HLIT",
     "alert_id": "HLIT_PCT_DROP",
@@ -4997,6 +4937,66 @@
     "action": "BUY",
     "price": 3.4800000190734863,
     "change_pct": 4.50450507728187,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-20T02:25:44Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 82.87000274658203,
+    "change_pct": -0.3367375266602218,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-20T02:26:14Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 15.149999618530273,
+    "change_pct": -4.716983531256144,
+    "value": 0
+  },
+  {
+    "timestamp": "2026-07-20T02:26:55Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.420000076293945,
+    "change_pct": 1.879700682217012,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-20T02:27:20Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.2200000286102295,
+    "change_pct": 2.5210108075823148,
+    "value": 3
+  },
+  {
+    "timestamp": "2026-07-20T02:27:23Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 13.890000343322754,
+    "change_pct": -1.7680315182266382,
+    "value": 2
+  },
+  {
+    "timestamp": "2026-07-20T02:27:29Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 17.459999084472656,
+    "change_pct": 10.857137044270832,
     "value": 3
   }
 ]
