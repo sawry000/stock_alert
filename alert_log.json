@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T00:03:59Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 111.01000213623047,
-    "change_pct": -2.0038822949942907,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-06T00:04:02Z",
     "symbol": "VSEC",
     "alert_id": "VSEC_MTF_BULL",
@@ -4998,5 +4988,15 @@
     "price": 16.049999237060547,
     "change_pct": -11.958314662311869,
     "value": 16.049999237060547
+  },
+  {
+    "timestamp": "2026-07-20T18:42:58Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 15.8149995803833,
+    "change_pct": -13.247396706619307,
+    "value": -13.247396706619307
   }
 ]
