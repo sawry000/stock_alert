@@ -1928,7 +1928,19 @@
     "AGPU_MA_DEATH": {
       "last_fired": "2026-07-16T13:42:25Z"
     },
-    "last_sell_at": "2026-07-16T13:42:25Z"
+    "last_sell_at": "2026-07-16T13:42:25Z",
+    "AGPU_PCT_UP": {
+      "last_fired": "2026-07-20T15:57:18Z"
+    },
+    "last_buy_at": "2026-07-20T15:57:18Z",
+    "last_buy_reminder_at": "2026-07-20T15:57:18Z",
+    "open_entry": 7.889999866485596,
+    "open_time": "2026-07-20T15:57:18Z",
+    "open_peak": 7.889999866485596,
+    "open_stop": 6.7065,
+    "open_target": 8.5212,
+    "open_conviction": 3,
+    "open_alert_type": "percent_change"
   },
   "__earnings_alert__": {
     "last_sent": "2026-07-20T02:12:51Z"

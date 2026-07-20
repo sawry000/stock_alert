@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T00:03:33Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 14.069999694824219,
-    "change_pct": -9.22580842048891,
-    "value": -9.22580842048891
-  },
-  {
     "timestamp": "2026-07-06T00:03:39Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 17.459999084472656,
     "change_pct": 10.857137044270832,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-20T15:57:18Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 7.889999866485596,
+    "change_pct": 14.847159628611289,
+    "value": 14.847159628611289
   }
 ]
