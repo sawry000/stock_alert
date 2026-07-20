@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T00:03:39Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 69.95999908447266,
-    "change_pct": -17.431843403195263,
-    "value": -17.431843403195263
-  },
-  {
-    "timestamp": "2026-07-06T00:03:44Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.190000057220459,
-    "change_pct": 0.6504074344790021,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-06T00:03:47Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -4998,5 +4978,25 @@
     "price": 7.889999866485596,
     "change_pct": 14.847159628611289,
     "value": 14.847159628611289
+  },
+  {
+    "timestamp": "2026-07-20T17:40:54Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1.25,
+    "change_pct": -19.35483870967742,
+    "value": -19.35483870967742
+  },
+  {
+    "timestamp": "2026-07-20T17:42:16Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7050000429153442,
+    "change_pct": -0.8720905281776591,
+    "value": 2
   }
 ]
