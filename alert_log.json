@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T00:04:27Z",
-    "symbol": "VECO",
-    "alert_id": "VECO_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 57.4900016784668,
-    "change_pct": -18.10541071443477,
-    "value": -18.10541071443477
-  },
-  {
     "timestamp": "2026-07-06T00:04:34Z",
     "symbol": "SNDK",
     "alert_id": "SNDK_PCT_DROP",
@@ -4998,5 +4988,15 @@
     "price": 1.2050000429153442,
     "change_pct": 1.413906995063484,
     "value": 3
+  },
+  {
+    "timestamp": "2026-07-20T23:58:12Z",
+    "symbol": "EVTV",
+    "alert_id": "EVTV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.8049999475479126,
+    "change_pct": 3.142854145595005,
+    "value": 2
   }
 ]
