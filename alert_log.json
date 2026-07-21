@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T04:09:15Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MA_GOLD",
-    "type": "ma_crossover",
-    "action": "BUY",
-    "price": 18.389999389648438,
-    "change_pct": 5.326456985386234,
-    "value": 0.477
-  },
-  {
     "timestamp": "2026-07-06T08:03:34Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -5018,6 +5008,20 @@
     "price": 92.91500091552734,
     "change_pct": 19.983213992158248,
     "value": 19.983213992158248,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-21T14:26:11Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 90.98999786376953,
+    "change_pct": 9.626503450324735,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
