@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T08:03:34Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.670000076293945,
-    "change_pct": 0.43036023589180983,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-06T08:03:37Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 98.22000122070312,
-    "change_pct": -2.054246888010447,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-06T08:03:54Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -5022,6 +5002,34 @@
     "price": 90.98999786376953,
     "change_pct": 9.626503450324735,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-21T14:55:56Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 3.015000104904175,
+    "change_pct": 14.204549428188434,
+    "value": 14.204549428188434,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-21T14:56:37Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.730000019073486,
+    "change_pct": 6.390880074891133,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
