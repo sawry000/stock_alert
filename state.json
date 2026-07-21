@@ -1676,8 +1676,7 @@
     "last_sell_at": "2026-07-08T14:24:47Z",
     "VPG_MA_DEATH": {
       "last_fired": "2026-07-08T14:24:47Z"
-    },
-    "_confirm_VPG_MTF_BULL": 1
+    }
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1700,19 +1699,18 @@
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
-      "last_fired": "2026-07-20T02:26:55Z"
+      "last_fired": "2026-07-21T20:12:49Z"
     },
     "open_position": true,
     "open_entry": 5.40500020980835,
     "open_time": "2026-07-08T18:04:41Z",
-    "last_buy_at": "2026-07-20T02:26:55Z",
+    "last_buy_at": "2026-07-21T20:12:49Z",
     "open_peak": 5.420000076293945,
     "open_stop": 4.5943,
     "open_target": 5.8374,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-20T02:26:55Z",
-    "_confirm_TKNO_MTF_BULL": 1
+    "last_buy_reminder_at": "2026-07-21T20:12:49Z"
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1773,9 +1771,9 @@
   },
   "AMBA": {
     "AMBA_MTF_BULL": {
-      "last_fired": "2026-07-13T10:42:28Z"
+      "last_fired": "2026-07-21T20:13:04Z"
     },
-    "last_buy_at": "2026-07-13T10:42:28Z",
+    "last_buy_at": "2026-07-21T20:13:04Z",
     "AMBA_MA_GOLD": {
       "last_fired": "2026-07-01T13:59:35Z"
     },
@@ -1783,7 +1781,14 @@
       "last_fired": "2026-07-16T16:42:09Z"
     },
     "last_sell_at": "2026-07-16T16:42:09Z",
-    "_confirm_AMBA_MTF_BULL": 1
+    "last_buy_reminder_at": "2026-07-21T20:13:04Z",
+    "open_entry": 71.30000305175781,
+    "open_time": "2026-07-21T20:13:04Z",
+    "open_peak": 71.30000305175781,
+    "open_stop": 60.605,
+    "open_target": 77.004,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
