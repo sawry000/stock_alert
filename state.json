@@ -863,7 +863,7 @@
       "last_fired": "2026-06-29T02:09:25Z"
     },
     "FSLY_MTF_BULL": {
-      "last_fired": "2026-07-20T22:11:53Z"
+      "last_fired": "2026-07-21T18:56:33Z"
     },
     "FSLY_NEWS_POS": {
       "last_fired": "2026-06-28T00:05:12Z",
@@ -878,7 +878,7 @@
     "open_position": true,
     "open_entry": 19.739999771118164,
     "open_time": "2026-07-09T02:09:23Z",
-    "last_buy_at": "2026-07-20T22:11:53Z",
+    "last_buy_at": "2026-07-21T18:56:33Z",
     "open_peak": 20.899999618530273,
     "open_stop": 16.9393,
     "open_target": 21.3192,
@@ -887,7 +887,7 @@
     "FSLY_MA_GOLD": {
       "last_fired": "2026-07-08T13:59:54Z"
     },
-    "last_buy_reminder_at": "2026-07-20T22:11:53Z"
+    "last_buy_reminder_at": "2026-07-21T18:56:33Z"
   },
   "DOMO": {
     "DOMO_MA_GOLDEN": {
@@ -1630,7 +1630,8 @@
     "last_sell_at": "2026-07-06T00:09:37Z",
     "SMTC_MA_DEATH": {
       "last_fired": "2026-07-06T00:09:37Z"
-    }
+    },
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1878,7 +1879,8 @@
     "open_target": 1.35,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-20T22:57:01Z"
+    "last_buy_reminder_at": "2026-07-20T22:57:01Z",
+    "_confirm_BLIN_MTF_BULL": 1
   },
   "AOUT": {
     "AOUT_MTF_BULL": {

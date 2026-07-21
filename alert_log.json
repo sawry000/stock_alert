@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T08:04:32Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 46.86000061035156,
-    "change_pct": -1.1183781170045117,
-    "value": 4.692460779481527
-  },
-  {
     "timestamp": "2026-07-06T08:04:51Z",
     "symbol": "VECO",
     "alert_id": "VECO_PCT_DROP",
@@ -5053,6 +5043,20 @@
     "action": "BUY",
     "price": 13.8149995803833,
     "change_pct": 1.6556260513855843,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-21T18:56:33Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 20.614999771118164,
+    "change_pct": 0.5609744932593369,
     "value": 2,
     "entry_price": null,
     "pnl_pct": null,
