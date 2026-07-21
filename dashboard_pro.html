@@ -527,6 +527,7 @@ input[type=password]{letter-spacing:2px}
     <div class="sdiv"></div>
     <div class="slabel">Tools</div>
     <button class="nbtn" onclick="show('portfolio-health')" id="nav-portfolio-health"><span class="msi">monitor_heart</span> Portfolio Health</button>
+    <button class="nbtn" onclick="show('portfolio2')" id="nav-portfolio2"><span class="msi">account_balance_wallet</span> พอร์ตโฟลิโอ</button>
     <button class="nbtn" onclick="show('universe')" id="nav-universe"><span class="msi">public</span> Universe Manager <span class="cnt" id="uni-cnt" style="background:var(--purple)">0</span></button>
     <div class="sdiv"></div>
     <div class="slabel">Config</div>
@@ -847,6 +848,40 @@ input[type=password]{letter-spacing:2px}
       <div id="ph-emptyState" style="display:none;text-align:center;padding:50px 20px;font-family:var(--mono);color:var(--text3);font-size:13px">
         <div style="font-size:36px;margin-bottom:10px;opacity:.35">📭</div>
         ไม่พบข้อมูล Position — ตรวจสอบ format ข้อความ
+      </div>
+    </div>
+
+    <!-- ════ พอร์ตโฟลิโอ (Portfolio P&L + Trade Journal) ════ -->
+    <div class="panel" id="panel-portfolio2">
+      <div class="phd">
+        <div>
+          <div class="ptitle" style="color:var(--gold)">
+            <span class="msi" style="font-size:18px;color:var(--gold)">account_balance_wallet</span> พอร์ตโฟลิโอ
+          </div>
+          <div class="psub">สรุปกำไร-ขาดทุนทั้งพอร์ต + รายละเอียดว่าแต่ละไม้เข้า-ออกด้วยเงื่อนไขอะไร (ดึงจาก state.json + alert_log.json สดๆ)</div>
+        </div>
+        <div class="bgrp">
+          <button class="btn btn-sm btn-ghost" onclick="show('portfolio2')"><span class="msi">refresh</span> รีเฟรช</button>
+        </div>
+      </div>
+
+      <div id="p2-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:18px"></div>
+
+      <div style="display:flex;gap:0;margin-bottom:16px;background:var(--bg2);border:1px solid var(--border);border-radius:7px;padding:4px;width:fit-content">
+        <button id="p2-tab-open"   class="btn btn-sm" style="background:var(--gold);color:#000;border-radius:5px" onclick="p2SwitchTab('open')">
+          <span class="msi">work</span> เปิดอยู่ (<span id="p2-open-count">0</span>)
+        </button>
+        <button id="p2-tab-closed" class="btn btn-sm btn-ghost" style="border:none" onclick="p2SwitchTab('closed')">
+          <span class="msi">history</span> ปิดแล้ว (<span id="p2-closed-count">0</span>)
+        </button>
+      </div>
+
+      <div id="p2-panel-open" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px"></div>
+      <div id="p2-panel-closed" style="display:none"></div>
+
+      <div id="p2-empty" style="display:none;text-align:center;padding:50px 20px;font-family:var(--mono);color:var(--text3);font-size:13px">
+        <div style="font-size:36px;margin-bottom:10px;opacity:.35">📭</div>
+        ยังไม่มีข้อมูล — เปิดหน้านี้ตอนเชื่อมต่อ GitHub แล้วจะโหลดอัตโนมัติ
       </div>
     </div>
 
@@ -1320,6 +1355,18 @@ function show(id) {
   }
   // Universe Manager: auto-load ครั้งแรก
   if (id === 'universe' && GH.token && (!UNI.universe || UNI.universe.length === 0)) uniSyncGH();
+  // หน้าพอร์ตโฟลิโอใหม่: โหลด state.json (position เปิดอยู่) + alert_log.json
+  // (ประวัติเทรดที่ปิดแล้ว) แล้ว render ทันที ต้องมี universe ด้วยเพื่อราคา
+  // ปัจจุบัน — โหลดให้ครบก่อนแล้วค่อย render ทีเดียว กัน render ซ้ำหลายรอบ
+  if (id === 'portfolio2' && GH.token) {
+    Promise.all([
+      loadFileFromGH('state.json', 'state'),
+      loadFileFromGH('alert_log.json', 'log'),
+      (!UNI.universe || UNI.universe.length === 0) ? uniSyncGH() : Promise.resolve(),
+    ]).then(renderPortfolio2).catch(renderPortfolio2);
+  } else if (id === 'portfolio2') {
+    renderPortfolio2();
+  }
 }
 
 // ══════════════════════════════════════════════════════════
@@ -2687,6 +2734,127 @@ async function resetAllPositions() {
   } catch (e) {
     showToast('บันทึกไม่สำเร็จ: ' + e.message, 'err');
   }
+}
+
+// ══════════════════════════════════════════════════════════
+//  PORTFOLIO 2 — สรุปกำไร-ขาดทุนทั้งพอร์ต + Trade Journal
+// ══════════════════════════════════════════════════════════
+let _p2Tab = 'open';
+
+function p2AlertTypeLabel(type) {
+  // แปลชื่อ alert type ในโค้ดให้เป็นภาษาที่อ่านรู้เรื่อง แทนที่จะโชว์ raw
+  // string เช่น "mtf_alignment" ตรงๆ ซึ่งผู้ใช้ทั่วไปไม่คุ้น
+  return {
+    rsi:                 'RSI Oversold',
+    ma_crossover:         'MA Crossover (Golden/Death Cross)',
+    alert_score:          'Confidence Score',
+    mtf_alignment:        'MTF Alignment',
+    volume_spike:         'Volume Spike',
+    percent_change:       'ราคาเปลี่ยนแปลงเกิน threshold',
+    support_resistance:   'หลุด/ทะลุแนวรับ-แนวต้าน (Stop-Loss)',
+  }[type] || (type || 'ไม่ทราบ (position เก่าก่อนมี tracking นี้)');
+}
+
+function p2SwitchTab(tab) {
+  _p2Tab = tab;
+  const openBtn = document.getElementById('p2-tab-open'), closedBtn = document.getElementById('p2-tab-closed');
+  openBtn.style.background   = tab === 'open'   ? 'var(--gold)' : 'transparent';
+  openBtn.style.color        = tab === 'open'   ? '#000' : 'var(--text2)';
+  closedBtn.style.background = tab === 'closed' ? 'var(--gold)' : 'transparent';
+  closedBtn.style.color      = tab === 'closed' ? '#000' : 'var(--text2)';
+  document.getElementById('p2-panel-open').style.display   = tab === 'open'   ? '' : 'none';
+  document.getElementById('p2-panel-closed').style.display = tab === 'closed' ? '' : 'none';
+}
+
+function renderPortfolio2() {
+  const statsEl = document.getElementById('p2-stats');
+  if (!statsEl) return; // ไม่ได้อยู่หน้านี้ ไม่ต้องทำอะไร
+
+  // ── Position ที่เปิดอยู่ (จาก state.json) ──
+  const openPositions = Object.entries(stateData)
+    .filter(([sym, v]) => !sym.startsWith('__') && v && v.open_entry)
+    .map(([sym, v]) => {
+      const uniE = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === sym.toUpperCase());
+      const cur  = (uniE && typeof uniE !== 'string') ? uniE.last_price : null;
+      const pnl  = cur != null ? (cur - v.open_entry) / v.open_entry * 100 : null;
+      const daysHeld = v.open_time ? (Date.now() - new Date(v.open_time).getTime()) / 86400000 : null;
+      return { sym, entry: v.open_entry, cur, pnl, daysHeld,
+               stop: v.open_stop, target: v.open_target,
+               conviction: v.open_conviction, entryType: v.open_alert_type };
+    });
+
+  // ── เทรดที่ปิดแล้ว (จาก alert_log.json — เฉพาะที่มี pnl_pct บันทึกไว้จริง
+  // ตั้งแต่หลังแก้ alert_engine.py ให้บันทึกผลลัพธ์แบบมีโครงสร้าง) ──
+  const closedTrades = (logData || [])
+    .filter(e => e.action === 'SELL' && e.pnl_pct != null)
+    .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+  document.getElementById('p2-open-count').textContent   = openPositions.length;
+  document.getElementById('p2-closed-count').textContent = closedTrades.length;
+  document.getElementById('p2-empty').style.display = (!openPositions.length && !closedTrades.length) ? '' : 'none';
+
+  // ── สรุปสถิติรวม ──
+  const withPnl        = openPositions.filter(p => p.pnl != null);
+  const avgUnrealized  = withPnl.length ? withPnl.reduce((a,p) => a + p.pnl, 0) / withPnl.length : null;
+  const winsOpen       = withPnl.filter(p => p.pnl >= 0).length;
+  const winsClosed     = closedTrades.filter(t => t.pnl_pct >= 0).length;
+  const avgRealized    = closedTrades.length ? closedTrades.reduce((a,t) => a + t.pnl_pct, 0) / closedTrades.length : null;
+  const best  = withPnl.length ? withPnl.reduce((a,b) => (a.pnl > b.pnl ? a : b)) : null;
+  const worst = withPnl.length ? withPnl.reduce((a,b) => (a.pnl < b.pnl ? a : b)) : null;
+
+  const pct = (n) => n == null ? '-' : (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
+
+  statsEl.innerHTML = `
+    <div class="stat" style="--sc:var(--gold)"><div class="sv">${openPositions.length}</div><div class="sl">Position เปิดอยู่</div></div>
+    <div class="stat" style="--sc:${(avgUnrealized??0)>=0?'var(--green)':'var(--red)'}"><div class="sv">${pct(avgUnrealized)}</div><div class="sl">เฉลี่ย Unrealized P&L</div></div>
+    <div class="stat" style="--sc:var(--cyan)"><div class="sv">${withPnl.length?Math.round(winsOpen/withPnl.length*100):0}%</div><div class="sl">Win Rate (เปิดอยู่)</div></div>
+    <div class="stat" style="--sc:var(--purple)"><div class="sv">${closedTrades.length}</div><div class="sl">เทรดที่ปิดแล้ว</div></div>
+    <div class="stat" style="--sc:${(avgRealized??0)>=0?'var(--green)':'var(--red)'}"><div class="sv">${pct(avgRealized)}</div><div class="sl">เฉลี่ย Realized P&L</div></div>
+    <div class="stat" style="--sc:var(--cyan)"><div class="sv">${closedTrades.length?Math.round(winsClosed/closedTrades.length*100):0}%</div><div class="sl">Win Rate (ปิดแล้ว)</div></div>
+    <div class="stat" style="--sc:var(--green)"><div class="sv">${best?best.sym:'-'}</div><div class="sl">ดีที่สุด ${best?'('+pct(best.pnl)+')':''}</div></div>
+    <div class="stat" style="--sc:var(--red)"><div class="sv">${worst?worst.sym:'-'}</div><div class="sl">แย่ที่สุด ${worst?'('+pct(worst.pnl)+')':''}</div></div>
+  `;
+
+  // ── การ์ด Position ที่เปิดอยู่ (เรียงแย่สุดขึ้นก่อน ให้เห็นตัวที่ต้องระวัง) ──
+  const openSorted = [...openPositions].sort((a,b) => (a.pnl ?? 0) - (b.pnl ?? 0));
+  document.getElementById('p2-panel-open').innerHTML = openSorted.length ? openSorted.map(p => {
+    const color   = (p.pnl ?? 0) >= 0 ? 'var(--green)' : 'var(--red)';
+    const convStr = p.conviction ? `<span style="font-size:10px;color:var(--gold);border:1px solid var(--gold);border-radius:4px;padding:1px 5px">Conviction ${p.conviction}/4</span>` : '';
+    return `<div class="card" style="border-left:3px solid ${color};margin-bottom:0">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap">
+        <span style="font-family:var(--mono);font-weight:700;font-size:15px">${p.sym}</span>
+        ${convStr}
+        <span style="margin-left:auto;font-family:var(--mono);font-weight:700;font-size:16px;color:${color}">${pct(p.pnl)}</span>
+      </div>
+      <div style="font-family:var(--mono);font-size:11.5px;color:var(--text2);display:flex;flex-direction:column;gap:4px">
+        <div>เข้าซื้อ <strong style="color:var(--text)">$${p.entry.toFixed(4)}</strong> → ปัจจุบัน <strong style="color:var(--text)">${p.cur!=null?'$'+p.cur.toFixed(4):'-'}</strong>${p.daysHeld!=null?' · ถือมา '+p.daysHeld.toFixed(1)+' วัน':''}</div>
+        <div><span class="msi" style="font-size:12px;vertical-align:middle">login</span> เข้าเพราะ: <strong style="color:var(--cyan)">${p2AlertTypeLabel(p.entryType)}</strong></div>
+        <div>🛑 Stop: ${p.stop?'$'+p.stop.toFixed(4):'<span style="color:var(--red)">ไม่มี</span>'}  •  🎯 Target: ${p.target?'$'+p.target.toFixed(4):'-'}</div>
+      </div>
+    </div>`;
+  }).join('') : '<div style="grid-column:1/-1;text-align:center;padding:30px;color:var(--text3);font-size:12px">ไม่มี position เปิดอยู่ตอนนี้</div>';
+
+  // ── ตารางเทรดที่ปิดแล้ว ──
+  document.getElementById('p2-panel-closed').innerHTML = closedTrades.length ? `
+    <table class="ltable" style="width:100%">
+      <thead><tr><th>วันที่ปิด</th><th>Symbol</th><th>เข้า</th><th>ออก</th><th>P&L</th><th>ถือ</th><th><span class="msi" style="font-size:13px;vertical-align:middle">login</span> เข้าเพราะ</th><th><span class="msi" style="font-size:13px;vertical-align:middle">logout</span> ออกเพราะ</th></tr></thead>
+      <tbody>
+        ${closedTrades.map(t => {
+          const color = t.pnl_pct >= 0 ? 'var(--green)' : 'var(--red)';
+          return `<tr>
+            <td>${(t.timestamp||'').slice(0,16).replace('T',' ')}</td>
+            <td style="font-weight:700">${t.symbol}</td>
+            <td>$${(t.entry_price??0).toFixed(4)}</td>
+            <td>$${(t.price??0).toFixed(4)}</td>
+            <td style="color:${color};font-weight:700">${pct(t.pnl_pct)}</td>
+            <td>${t.days_held!=null?t.days_held.toFixed(1)+'d':'-'}</td>
+            <td>${p2AlertTypeLabel(t.entry_alert_type)}</td>
+            <td>${p2AlertTypeLabel(t.type)}</td>
+          </tr>`;
+        }).join('')}
+      </tbody>
+    </table>
+  ` : '<div style="text-align:center;padding:30px;color:var(--text3);font-size:12px">ยังไม่มีประวัติเทรดที่ปิดแล้ว (จะเริ่มมีข้อมูลหลังจาก SELL เกิดขึ้นครั้งแรกหลังอัปเดต alert_engine.py เวอร์ชันใหม่)</div>';
 }
 
 // ══════════════════════════════════════════════════════════

@@ -1655,12 +1655,22 @@ def main():
                     msg = msg.replace("\n\n📊 <a href=", conv_line + "\n\n📊 <a href=", 1)
 
                 # ── SELL: แนบผลลัพธ์ P&L ของ position ที่กำลังจะปิด (ถ้ามี open_entry) ──
+                # เก็บไว้ในตัวแปรนี้เพื่อใช้ตอน log.append ด้านล่างด้วย (ก่อนหน้านี้
+                # คำนวณแค่สำหรับใส่ในข้อความ Telegram แล้วทิ้ง ไม่เคยถูกบันทึกแบบ
+                # มีโครงสร้างใน alert_log.json เลย — ทำให้สร้างหน้าสรุปกำไร-ขาดทุน/
+                # ประวัติการเทรดย้อนหลังไม่ได้ ต้องแก้ตรงนี้ก่อนถึงจะมีข้อมูลป้อนหน้า
+                # Portfolio ใหม่ได้)
+                closed_entry_price = None
+                closed_pnl_pct     = None
+                closed_days_held   = None
+                closed_entry_type  = None
                 if action == "SELL":
                     prior_state = state.get(symbol, {})
                     entry_price = prior_state.get("open_entry")
                     if entry_price:
                         pnl_pct = (price - entry_price) / entry_price * 100
                         days_held_txt = ""
+                        days_held = None
                         if prior_state.get("open_time"):
                             days_held = minutes_since(prior_state["open_time"]) / 1440
                             days_held_txt = f"  •  ถือมา {days_held:.1f} วัน"
@@ -1672,6 +1682,10 @@ def main():
                             f"\n  • เข้าซื้อ ${entry_price:.4f} → ปิดที่ ${price:.4f}{days_held_txt}"
                         )
                         msg = msg.replace("\n\n📊 <a href=", pnl_line + "\n\n📊 <a href=", 1)
+                        closed_entry_price = entry_price
+                        closed_pnl_pct     = round(pnl_pct, 4)
+                        closed_days_held   = round(days_held, 2) if days_held is not None else None
+                        closed_entry_type  = prior_state.get("open_alert_type")
 
                 print(f"  [{alert_id}] ✅ TRIGGERED! ส่ง Telegram...")
                 success = send_telegram(token, chat_id, msg)
@@ -1729,6 +1743,11 @@ def main():
                         "price":      price,
                         "change_pct": quote["change_pct"],
                         "value":      tval,
+                        # ── ข้อมูลผลลัพธ์เทรด (เฉพาะ SELL ที่มี position จริง) ──
+                        "entry_price":      closed_entry_price,
+                        "pnl_pct":          closed_pnl_pct,
+                        "days_held":        closed_days_held,
+                        "entry_alert_type": closed_entry_type,
                     })
                     fired_count += 1
                     print(f"  [{alert_id}] ✅ ส่งสำเร็จ")
