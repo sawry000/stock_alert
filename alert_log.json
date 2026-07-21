@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T00:09:26Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 46.86000061035156,
-    "change_pct": -6.260875998000472,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-06T00:09:37Z",
     "symbol": "SMTC",
     "alert_id": "SMTC_MA_DEATH",
@@ -5002,6 +4992,20 @@
     "price": 16.469999313354492,
     "change_pct": -4.169068042960726e-06,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-21T11:57:45Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_SCORE_60",
+    "type": "alert_score",
+    "action": "BUY",
+    "price": 8.710000038146973,
+    "change_pct": -1.022726839238955,
+    "value": 60,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
