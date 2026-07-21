@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T00:09:49Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.789999961853027,
-    "change_pct": -1.530612893655996,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-06T04:09:15Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MA_GOLD",
@@ -5017,6 +5007,20 @@
     "entry_price": 10.135000228881836,
     "pnl_pct": -2.6147,
     "days_held": 20.93,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-21T13:56:09Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 92.91500091552734,
+    "change_pct": 19.983213992158248,
+    "value": 19.983213992158248,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
     "entry_alert_type": null
   }
 ]
