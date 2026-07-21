@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T08:09:29Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.389999389648438,
-    "change_pct": 5.326456985386234,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-06T08:10:01Z",
     "symbol": "AMBA",
     "alert_id": "AMBA_MTF_BULL",
@@ -5061,6 +5051,20 @@
     "action": "BUY",
     "price": 1.2487000226974487,
     "change_pct": 4.058335224787398,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-21T19:56:45Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.425000190734863,
+    "change_pct": 10.040571820179789,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
