@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T00:08:31Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 22.110000610351562,
-    "change_pct": -8.123828753993097,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-06T00:09:26Z",
     "symbol": "FPS",
     "alert_id": "FPS_MA_DEATH",
@@ -4998,6 +4988,20 @@
     "price": 122.0999984741211,
     "change_pct": -1.2496960692593434e-06,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-21T09:13:14Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 16.469999313354492,
+    "change_pct": -4.169068042960726e-06,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
