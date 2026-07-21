@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T00:08:27Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 333.3599853515625,
-    "change_pct": -9.235464672303822,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-06T00:08:31Z",
     "symbol": "RIOT",
     "alert_id": "RIOT_MA_DEATH",
@@ -4998,5 +4988,19 @@
     "price": 1.2100000381469727,
     "change_pct": -21.935481409872732,
     "value": -21.935481409872732
+  },
+  {
+    "timestamp": "2026-07-21T08:41:35Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 122.0999984741211,
+    "change_pct": -1.2496960692593434e-06,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]
