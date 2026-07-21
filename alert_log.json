@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T00:09:37Z",
-    "symbol": "SMTC",
-    "alert_id": "SMTC_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 135.27000427246094,
-    "change_pct": -8.452893697576512,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-07-06T00:09:46Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.210000038146973,
-    "change_pct": -0.4728123369510111,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-06T00:09:49Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MTF_BULL",
@@ -5009,6 +4989,34 @@
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-21T13:41:27Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 59.474998474121094,
+    "change_pct": -2.018124424841695,
+    "value": 0,
+    "entry_price": 66.41000366210938,
+    "pnl_pct": -10.4427,
+    "days_held": 13.81,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-21T13:41:51Z",
+    "symbol": "SHLS",
+    "alert_id": "SHLS_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 9.869999885559082,
+    "change_pct": 1.4388477446976526,
+    "value": 0,
+    "entry_price": 10.135000228881836,
+    "pnl_pct": -2.6147,
+    "days_held": 20.93,
     "entry_alert_type": null
   }
 ]
