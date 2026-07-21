@@ -1630,8 +1630,7 @@
     "last_sell_at": "2026-07-06T00:09:37Z",
     "SMTC_MA_DEATH": {
       "last_fired": "2026-07-06T00:09:37Z"
-    },
-    "_confirm_SMTC_MTF_BULL": 1
+    }
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1798,15 +1797,22 @@
     "NEOV_MA_GOLD": {
       "last_fired": "2026-07-01T09:34:39Z"
     },
-    "last_buy_at": "2026-07-09T13:57:14Z",
+    "last_buy_at": "2026-07-21T17:13:00Z",
     "NEOV_MTF_BULL": {
-      "last_fired": "2026-07-09T13:57:14Z"
+      "last_fired": "2026-07-21T17:13:00Z"
     },
     "NEOV_MA_DEATH": {
       "last_fired": "2026-07-16T16:12:35Z"
     },
     "last_sell_at": "2026-07-16T16:12:35Z",
-    "_confirm_NEOV_MTF_BULL": 1
+    "last_buy_reminder_at": "2026-07-21T17:13:00Z",
+    "open_entry": 2.299999952316284,
+    "open_time": "2026-07-21T17:13:00Z",
+    "open_peak": 2.299999952316284,
+    "open_stop": 1.955,
+    "open_target": 2.484,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "GLW": {
     "GLW_MTF_BULL": {
