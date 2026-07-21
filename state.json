@@ -1630,8 +1630,7 @@
     "last_sell_at": "2026-07-06T00:09:37Z",
     "SMTC_MA_DEATH": {
       "last_fired": "2026-07-06T00:09:37Z"
-    },
-    "_confirm_SMTC_MTF_BULL": 1
+    }
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1824,9 +1823,9 @@
   },
   "CDNL": {
     "CDNL_MTF_BULL": {
-      "last_fired": "2026-07-17T16:12:09Z"
+      "last_fired": "2026-07-21T16:42:52Z"
     },
-    "last_buy_at": "2026-07-17T16:12:09Z",
+    "last_buy_at": "2026-07-21T16:42:52Z",
     "CDNL_PCT_DROP": {
       "last_fired": "2026-07-02T16:54:41Z"
     },
@@ -1834,15 +1833,14 @@
     "CDNL_MA_DEATH": {
       "last_fired": "2026-07-13T13:41:52Z"
     },
-    "last_buy_reminder_at": "2026-07-17T16:12:09Z",
+    "last_buy_reminder_at": "2026-07-21T16:42:52Z",
     "open_entry": 73.2249984741211,
     "open_time": "2026-07-17T16:12:09Z",
     "open_peak": 73.2249984741211,
     "open_stop": 62.2412,
     "open_target": 79.083,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_CDNL_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
