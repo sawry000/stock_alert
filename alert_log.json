@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T13:33:38Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 433.0,
-    "change_pct": 5.712890624999995,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-06T13:34:43Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MA_GOLD",
@@ -5090,6 +5080,20 @@
     "price": 9.539999961853027,
     "change_pct": 1.056110100876315,
     "value": 60,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-22T10:40:50Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 95.8499984741211,
+    "change_pct": -1.5919446015291166e-06,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
