@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T08:24:28Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.75,
-    "change_pct": 0.0,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-06T12:09:46Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 46.86000061035156,
-    "change_pct": -1.1183781170045117,
-    "value": 4.692460779481527
-  },
-  {
     "timestamp": "2026-07-06T13:33:38Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_BULL",
@@ -5082,6 +5062,34 @@
     "price": 16.639999389648438,
     "change_pct": 1.0321760148660513,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-22T08:10:43Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 26.6200008392334,
+    "change_pct": 2.345255052800449,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-22T08:11:58Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_SCORE_60",
+    "type": "alert_score",
+    "action": "BUY",
+    "price": 9.539999961853027,
+    "change_pct": 1.056110100876315,
+    "value": 60,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
