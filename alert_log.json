@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T08:14:33Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.789999961853027,
-    "change_pct": -1.530612893655996,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-06T08:24:28Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_MTF_BULL",
@@ -5077,6 +5067,20 @@
     "action": "BUY",
     "price": 125.77999877929688,
     "change_pct": 3.01392201416616,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-22T05:42:01Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 16.639999389648438,
+    "change_pct": 1.0321760148660513,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
