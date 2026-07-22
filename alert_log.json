@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T16:08:54Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 38.689998626708984,
-    "change_pct": 4.567563855970228,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-06T16:09:00Z",
     "symbol": "WGS",
     "alert_id": "WGS_MTF_BULL",
@@ -5134,6 +5124,20 @@
     "price": 20.299999237060547,
     "change_pct": -1.2165487247661988,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-22T15:42:54Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.2491999864578247,
+    "change_pct": 3.239668302299566,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
