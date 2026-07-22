@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T13:35:16Z",
-    "symbol": "VECO",
-    "alert_id": "VECO_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 59.22999954223633,
-    "change_pct": 3.008694856063179,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-06T13:38:55Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_MA_DEATH",
@@ -5098,6 +5088,20 @@
     "price": 5.71999979019165,
     "change_pct": -1.3793139622129211,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-22T13:12:12Z",
+    "symbol": "CDNL",
+    "alert_id": "CDNL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 73.95999908447266,
+    "change_pct": 6.801442721260154,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
