@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T13:34:43Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MA_GOLD",
-    "type": "ma_crossover",
-    "action": "BUY",
-    "price": 3.484999895095825,
-    "change_pct": -0.9943211620504211,
-    "value": 1.339
-  },
-  {
     "timestamp": "2026-07-06T13:35:16Z",
     "symbol": "VECO",
     "alert_id": "VECO_MA_DEATH",
@@ -5094,6 +5084,20 @@
     "price": 95.8499984741211,
     "change_pct": -1.5919446015291166e-06,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-22T11:11:47Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.71999979019165,
+    "change_pct": -1.3793139622129211,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
