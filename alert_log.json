@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T14:05:03Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 100.8290023803711,
-    "change_pct": 8.418282129431285,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-06T14:05:27Z",
-    "symbol": "ALGM",
-    "alert_id": "ALGM_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 60.15999984741211,
-    "change_pct": 7.512277143297473,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-06T16:08:32Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -5118,5 +5098,33 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-22T13:56:51Z",
+    "symbol": "MXL",
+    "alert_id": "MXL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 89.07499694824219,
+    "change_pct": 1.5678414461142356,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-22T13:57:22Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 7.302000045776367,
+    "change_pct": -22.650762732366907,
+    "value": -22.650762732366907,
+    "entry_price": 7.889999866485596,
+    "pnl_pct": -7.4525,
+    "days_held": 1.92,
+    "entry_alert_type": "percent_change"
   }
 ]
