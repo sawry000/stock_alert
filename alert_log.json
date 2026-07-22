@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T16:08:32Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 26.1299991607666,
-    "change_pct": 2.2300436649710598,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-06T16:08:35Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 101.44999694824219,
-    "change_pct": 1.1667301039511233,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-06T16:08:51Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -5126,5 +5106,33 @@
     "pnl_pct": -7.4525,
     "days_held": 1.92,
     "entry_alert_type": "percent_change"
+  },
+  {
+    "timestamp": "2026-07-22T14:26:04Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 102.45999908447266,
+    "change_pct": -2.4283410299279584,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-22T14:26:19Z",
+    "symbol": "OPRX",
+    "alert_id": "OPRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.539999961853027,
+    "change_pct": -1.8018023745791711,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]
