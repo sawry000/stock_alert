@@ -2741,6 +2741,29 @@ async function resetAllPositions() {
 // ══════════════════════════════════════════════════════════
 let _p2Tab = 'open';
 
+function p2AccountSizeFor(sym) {
+  const s = (WL.watchlist || []).find(x => x.symbol === sym);
+  return (s && s.position_alert && s.position_alert.account_size) || 100;
+}
+
+// จำลอง logic เดียวกับ calc_position_size() ใน alert_engine.py — budget
+// $100/หุ้น (ปรับได้ต่อตัว) หารด้วยราคาต้นทุน ถ้าได้ >= 1 หุ้น ใช้จำนวนเต็ม
+// (floor) ถ้าราคาแพงกว่า budget ทั้งหมด ใช้ fractional share แทน (เช่น crypto/
+// หุ้นแพงๆ อย่าง SNDK) — ใช้เลขนี้คูณ (ราคาปัจจุบัน - ราคาต้นทุน) เพื่อได้ P&L
+// เป็นจำนวนเงินจริง ไม่ใช่แค่ % เฉยๆ
+function p2CalcShares(entryPrice, accountSize) {
+  if (!entryPrice || entryPrice <= 0) return 0;
+  const sharesFrac = accountSize / entryPrice;
+  const sharesInt  = Math.floor(sharesFrac);
+  return sharesInt === 0 ? sharesFrac : sharesInt;
+}
+
+function p2FmtUsdSigned(n) {
+  if (n == null || isNaN(n)) return '-';
+  const sign = n >= 0 ? '+' : '-';
+  return sign + '$' + Math.abs(n).toFixed(2);
+}
+
 function p2AlertTypeLabel(type) {
   // แปลชื่อ alert type ในโค้ดให้เป็นภาษาที่อ่านรู้เรื่อง แทนที่จะโชว์ raw
   // string เช่น "mtf_alignment" ตรงๆ ซึ่งผู้ใช้ทั่วไปไม่คุ้น
@@ -2774,11 +2797,15 @@ function renderPortfolio2() {
   const openPositions = Object.entries(stateData)
     .filter(([sym, v]) => !sym.startsWith('__') && v && v.open_entry)
     .map(([sym, v]) => {
-      const uniE = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === sym.toUpperCase());
-      const cur  = (uniE && typeof uniE !== 'string') ? uniE.last_price : null;
-      const pnl  = cur != null ? (cur - v.open_entry) / v.open_entry * 100 : null;
+      const uniE  = (UNI.universe || []).find(e => uniSym(e).toUpperCase() === sym.toUpperCase());
+      const cur   = (uniE && typeof uniE !== 'string') ? uniE.last_price : null;
+      const pnl   = cur != null ? (cur - v.open_entry) / v.open_entry * 100 : null;
+      const acct  = p2AccountSizeFor(sym);
+      const shares = p2CalcShares(v.open_entry, acct);
+      const dollarPnl = (cur != null && shares) ? shares * (cur - v.open_entry) : null;
+      const invested  = shares ? shares * v.open_entry : null;
       const daysHeld = v.open_time ? (Date.now() - new Date(v.open_time).getTime()) / 86400000 : null;
-      return { sym, entry: v.open_entry, cur, pnl, daysHeld,
+      return { sym, entry: v.open_entry, cur, pnl, dollarPnl, invested, daysHeld,
                stop: v.open_stop, target: v.open_target,
                conviction: v.open_conviction, entryType: v.open_alert_type };
     });
@@ -2787,6 +2814,12 @@ function renderPortfolio2() {
   // ตั้งแต่หลังแก้ alert_engine.py ให้บันทึกผลลัพธ์แบบมีโครงสร้าง) ──
   const closedTrades = (logData || [])
     .filter(e => e.action === 'SELL' && e.pnl_pct != null)
+    .map(t => {
+      const acct   = p2AccountSizeFor(t.symbol);
+      const shares = p2CalcShares(t.entry_price, acct);
+      const dollarPnl = shares ? shares * (t.price - t.entry_price) : null;
+      return { ...t, dollarPnl };
+    })
     .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
   document.getElementById('p2-open-count').textContent   = openPositions.length;
@@ -2802,15 +2835,26 @@ function renderPortfolio2() {
   const best  = withPnl.length ? withPnl.reduce((a,b) => (a.pnl > b.pnl ? a : b)) : null;
   const worst = withPnl.length ? withPnl.reduce((a,b) => (a.pnl < b.pnl ? a : b)) : null;
 
+  // ── รวมจำนวนเงิน $ ทั้งพอร์ต (unrealized + realized) ──
+  const withDollar     = withPnl.filter(p => p.dollarPnl != null);
+  const totalUnrealizedUsd = withDollar.length ? withDollar.reduce((a,p) => a + p.dollarPnl, 0) : null;
+  const closedWithDollar   = closedTrades.filter(t => t.dollarPnl != null);
+  const totalRealizedUsd   = closedWithDollar.length ? closedWithDollar.reduce((a,t) => a + t.dollarPnl, 0) : null;
+  const grandTotalUsd = (totalUnrealizedUsd != null || totalRealizedUsd != null)
+    ? (totalUnrealizedUsd || 0) + (totalRealizedUsd || 0) : null;
+
   const pct = (n) => n == null ? '-' : (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
 
   statsEl.innerHTML = `
     <div class="stat" style="--sc:var(--gold)"><div class="sv">${openPositions.length}</div><div class="sl">Position เปิดอยู่</div></div>
     <div class="stat" style="--sc:${(avgUnrealized??0)>=0?'var(--green)':'var(--red)'}"><div class="sv">${pct(avgUnrealized)}</div><div class="sl">เฉลี่ย Unrealized P&L</div></div>
+    <div class="stat" style="--sc:${(totalUnrealizedUsd??0)>=0?'var(--green)':'var(--red)'}"><div class="sv">${p2FmtUsdSigned(totalUnrealizedUsd)}</div><div class="sl">รวม Unrealized ($)</div></div>
     <div class="stat" style="--sc:var(--cyan)"><div class="sv">${withPnl.length?Math.round(winsOpen/withPnl.length*100):0}%</div><div class="sl">Win Rate (เปิดอยู่)</div></div>
     <div class="stat" style="--sc:var(--purple)"><div class="sv">${closedTrades.length}</div><div class="sl">เทรดที่ปิดแล้ว</div></div>
     <div class="stat" style="--sc:${(avgRealized??0)>=0?'var(--green)':'var(--red)'}"><div class="sv">${pct(avgRealized)}</div><div class="sl">เฉลี่ย Realized P&L</div></div>
+    <div class="stat" style="--sc:${(totalRealizedUsd??0)>=0?'var(--green)':'var(--red)'}"><div class="sv">${p2FmtUsdSigned(totalRealizedUsd)}</div><div class="sl">รวม Realized ($)</div></div>
     <div class="stat" style="--sc:var(--cyan)"><div class="sv">${closedTrades.length?Math.round(winsClosed/closedTrades.length*100):0}%</div><div class="sl">Win Rate (ปิดแล้ว)</div></div>
+    <div class="stat" style="--sc:${(grandTotalUsd??0)>=0?'var(--green)':'var(--red)'};grid-column:span 2"><div class="sv" style="font-size:28px">${p2FmtUsdSigned(grandTotalUsd)}</div><div class="sl">💰 ยอดรวมทั้งหมด (Unrealized + Realized)</div></div>
     <div class="stat" style="--sc:var(--green)"><div class="sv">${best?best.sym:'-'}</div><div class="sl">ดีที่สุด ${best?'('+pct(best.pnl)+')':''}</div></div>
     <div class="stat" style="--sc:var(--red)"><div class="sv">${worst?worst.sym:'-'}</div><div class="sl">แย่ที่สุด ${worst?'('+pct(worst.pnl)+')':''}</div></div>
   `;
@@ -2824,7 +2868,10 @@ function renderPortfolio2() {
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap">
         <span style="font-family:var(--mono);font-weight:700;font-size:15px">${p.sym}</span>
         ${convStr}
-        <span style="margin-left:auto;font-family:var(--mono);font-weight:700;font-size:16px;color:${color}">${pct(p.pnl)}</span>
+        <div style="margin-left:auto;text-align:right">
+          <div style="font-family:var(--mono);font-weight:700;font-size:16px;color:${color}">${pct(p.pnl)}</div>
+          <div style="font-family:var(--mono);font-size:11px;color:${color}">${p2FmtUsdSigned(p.dollarPnl)}</div>
+        </div>
       </div>
       <div style="font-family:var(--mono);font-size:11.5px;color:var(--text2);display:flex;flex-direction:column;gap:4px">
         <div>เข้าซื้อ <strong style="color:var(--text)">$${p.entry.toFixed(4)}</strong> → ปัจจุบัน <strong style="color:var(--text)">${p.cur!=null?'$'+p.cur.toFixed(4):'-'}</strong>${p.daysHeld!=null?' · ถือมา '+p.daysHeld.toFixed(1)+' วัน':''}</div>
@@ -2837,7 +2884,7 @@ function renderPortfolio2() {
   // ── ตารางเทรดที่ปิดแล้ว ──
   document.getElementById('p2-panel-closed').innerHTML = closedTrades.length ? `
     <table class="ltable" style="width:100%">
-      <thead><tr><th>วันที่ปิด</th><th>Symbol</th><th>เข้า</th><th>ออก</th><th>P&L</th><th>ถือ</th><th><span class="msi" style="font-size:13px;vertical-align:middle">login</span> เข้าเพราะ</th><th><span class="msi" style="font-size:13px;vertical-align:middle">logout</span> ออกเพราะ</th></tr></thead>
+      <thead><tr><th>วันที่ปิด</th><th>Symbol</th><th>เข้า</th><th>ออก</th><th>P&L</th><th>P&L ($)</th><th>ถือ</th><th><span class="msi" style="font-size:13px;vertical-align:middle">login</span> เข้าเพราะ</th><th><span class="msi" style="font-size:13px;vertical-align:middle">logout</span> ออกเพราะ</th></tr></thead>
       <tbody>
         ${closedTrades.map(t => {
           const color = t.pnl_pct >= 0 ? 'var(--green)' : 'var(--red)';
@@ -2847,6 +2894,7 @@ function renderPortfolio2() {
             <td>$${(t.entry_price??0).toFixed(4)}</td>
             <td>$${(t.price??0).toFixed(4)}</td>
             <td style="color:${color};font-weight:700">${pct(t.pnl_pct)}</td>
+            <td style="color:${color};font-weight:700">${p2FmtUsdSigned(t.dollarPnl)}</td>
             <td>${t.days_held!=null?t.days_held.toFixed(1)+'d':'-'}</td>
             <td>${p2AlertTypeLabel(t.entry_alert_type)}</td>
             <td>${p2AlertTypeLabel(t.type)}</td>
