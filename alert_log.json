@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T19:09:06Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 5.440000057220459,
-    "change_pct": -2.3006042057351928,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-07-06T21:38:31Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 432.739990234375,
-    "change_pct": 5.649411678314204,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-06T21:53:43Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MTF_BULL",
@@ -5174,6 +5154,34 @@
     "price": 7.110000133514404,
     "change_pct": 3.6548938450629676,
     "value": 6.6019194954618605,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-23T10:12:23Z",
+    "symbol": "MXL",
+    "alert_id": "MXL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 86.80000305175781,
+    "change_pct": -2.4938181849496557,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-23T10:12:58Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.3550000190734863,
+    "change_pct": -1.216442152957784,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
