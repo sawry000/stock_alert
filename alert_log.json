@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T02:04:27Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.490000009536743,
-    "change_pct": -0.8522724563425242,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-07T02:04:36Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MTF_BULL",
@@ -5209,6 +5199,20 @@
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-23T14:27:03Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 7.579999923706055,
+    "change_pct": -5.131415222702698,
+    "value": 0,
+    "entry_price": 8.130000114440918,
+    "pnl_pct": -6.7651,
+    "days_held": 24.44,
     "entry_alert_type": null
   }
 ]
