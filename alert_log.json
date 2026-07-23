@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T02:04:36Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.850000381469727,
-    "change_pct": 3.2876733231217896,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-07T02:09:33Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7100000381469727,
-    "change_pct": -2.285712105887277,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-07T02:09:39Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MTF_BULL",
@@ -5214,5 +5194,33 @@
     "pnl_pct": -6.7651,
     "days_held": 24.44,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-23T14:40:57Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 88.69999694824219,
+    "change_pct": -9.48979903240593,
+    "value": -9.48979903240593,
+    "entry_price": 92.66500091552734,
+    "pnl_pct": -4.2789,
+    "days_held": 15.0,
+    "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-23T14:41:21Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 62.91999816894531,
+    "change_pct": 0.5111791836187078,
+    "value": 0,
+    "entry_price": 63.25,
+    "pnl_pct": -0.5217,
+    "days_held": 0.02,
+    "entry_alert_type": "mtf_alignment"
   }
 ]

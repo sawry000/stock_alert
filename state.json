@@ -460,7 +460,7 @@
       "last_fired": "2026-06-24T15:17:47Z"
     },
     "XMTR_PCT_DROP": {
-      "last_fired": "2026-06-05T19:27:59Z"
+      "last_fired": "2026-07-23T14:40:57Z"
     },
     "XMTR_VOL_SPIKE": {
       "last_fired": "2026-06-03T12:52:50Z"
@@ -478,15 +478,8 @@
       ]
     },
     "open_position": true,
-    "open_entry": 92.66500091552734,
-    "open_time": "2026-07-08T14:43:51Z",
     "last_buy_at": "2026-07-22T14:26:04Z",
-    "open_peak": 104.8499984741211,
-    "open_stop": 82.684,
-    "open_target": 100.0782,
-    "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-22T14:26:04Z"
+    "last_sell_at": "2026-07-23T14:40:57Z"
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -722,17 +715,9 @@
     "open_position": true,
     "last_buy_at": "2026-07-23T14:11:22Z",
     "WGS_MA_DEATH": {
-      "last_fired": "2026-07-22T13:41:45Z"
+      "last_fired": "2026-07-23T14:41:21Z"
     },
-    "last_sell_at": "2026-07-22T13:41:45Z",
-    "last_buy_reminder_at": "2026-07-23T14:11:22Z",
-    "open_entry": 63.25,
-    "open_time": "2026-07-23T14:11:22Z",
-    "open_peak": 63.25,
-    "open_stop": 54.9932,
-    "open_target": 68.31,
-    "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "last_sell_at": "2026-07-23T14:41:21Z"
   },
   "VSEC": {
     "VSEC_POS_SIZE": {
@@ -1636,7 +1621,8 @@
     "last_sell_at": "2026-07-06T00:09:37Z",
     "SMTC_MA_DEATH": {
       "last_fired": "2026-07-06T00:09:37Z"
-    }
+    },
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
