@@ -705,7 +705,7 @@
       "last_fired": "2026-05-27T09:53:23Z"
     },
     "WGS_MTF_BULL": {
-      "last_fired": "2026-07-16T11:41:20Z"
+      "last_fired": "2026-07-23T14:11:22Z"
     },
     "WGS_PCT_UP_5": {
       "last_fired": "2026-05-28T18:47:54Z"
@@ -720,11 +720,19 @@
       "last_fired": "2026-06-23T06:33:10Z"
     },
     "open_position": true,
-    "last_buy_at": "2026-07-16T11:41:20Z",
+    "last_buy_at": "2026-07-23T14:11:22Z",
     "WGS_MA_DEATH": {
       "last_fired": "2026-07-22T13:41:45Z"
     },
-    "last_sell_at": "2026-07-22T13:41:45Z"
+    "last_sell_at": "2026-07-22T13:41:45Z",
+    "last_buy_reminder_at": "2026-07-23T14:11:22Z",
+    "open_entry": 63.25,
+    "open_time": "2026-07-23T14:11:22Z",
+    "open_peak": 63.25,
+    "open_stop": 54.9932,
+    "open_target": 68.31,
+    "open_conviction": 3,
+    "open_alert_type": "mtf_alignment"
   },
   "VSEC": {
     "VSEC_POS_SIZE": {
@@ -1627,7 +1635,8 @@
     "last_sell_at": "2026-07-06T00:09:37Z",
     "SMTC_MA_DEATH": {
       "last_fired": "2026-07-06T00:09:37Z"
-    }
+    },
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1800,8 +1809,7 @@
     "last_sell_at": "2026-07-14T19:27:05Z",
     "ALGM_MA_DEATH": {
       "last_fired": "2026-07-14T19:27:05Z"
-    },
-    "_confirm_ALGM_MTF_BULL": 1
+    }
   },
   "NEOV": {
     "NEOV_MA_GOLD": {
