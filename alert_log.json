@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T16:20:01Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 83.4800033569336,
-    "change_pct": 5.285863919077697,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-06T16:20:06Z",
-    "symbol": "NEOV",
-    "alert_id": "NEOV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 2.609999895095825,
-    "change_pct": 2.3529370625813875,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-06T16:34:34Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_MTF_BULL",
@@ -5158,6 +5138,34 @@
     "price": 7.110000133514404,
     "change_pct": -24.684595473508217,
     "value": -24.684595473508217,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-23T06:40:51Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 95.33000183105469,
+    "change_pct": -0.542512434997712,
+    "value": 0.391,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-23T06:40:53Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 95.33000183105469,
+    "change_pct": -0.542512434997712,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
