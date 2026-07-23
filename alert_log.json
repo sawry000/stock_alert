@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T02:09:39Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.559999942779541,
-    "change_pct": 10.679610261639343,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-07T02:09:50Z",
     "symbol": "AMBA",
     "alert_id": "AMBA_MTF_BULL",
@@ -5222,5 +5212,19 @@
     "pnl_pct": -0.5217,
     "days_held": 0.02,
     "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-23T16:56:47Z",
+    "symbol": "BOBS",
+    "alert_id": "BOBS_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 14.760000228881836,
+    "change_pct": -4.7741920717300905,
+    "value": 14.760000228881836,
+    "entry_price": 16.789899826049805,
+    "pnl_pct": -12.09,
+    "days_held": 7.98,
+    "entry_alert_type": "percent_change"
   }
 ]
