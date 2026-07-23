@@ -554,15 +554,11 @@
       "last_fired": "2026-06-25T13:48:29Z"
     },
     "open_position": true,
-    "open_entry": 36.06999969482422,
-    "open_time": "2026-07-09T02:03:49Z",
     "last_buy_at": "2026-07-16T02:41:18Z",
-    "open_peak": 37.16999816894531,
-    "open_stop": 30.9317,
-    "open_target": 38.9556,
-    "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-16T02:41:18Z"
+    "HIMS_MA_DEATH": {
+      "last_fired": "2026-07-23T13:41:31Z"
+    },
+    "last_sell_at": "2026-07-23T13:41:31Z"
   },
   "IOVA": {
     "IOVA_BREAK_ABOVE": {
@@ -925,13 +921,21 @@
       "last_fired": "2026-06-25T12:59:27Z"
     },
     "DOMO_MTF_BULL": {
-      "last_fired": "2026-07-21T18:26:31Z"
+      "last_fired": "2026-07-23T13:42:18Z"
     },
-    "last_buy_at": "2026-07-21T18:26:31Z",
+    "last_buy_at": "2026-07-23T13:42:18Z",
     "DOMO_MA_GOLD": {
       "last_fired": "2026-07-06T13:34:43Z"
     },
-    "last_sell_at": "2026-07-23T08:11:20Z"
+    "last_sell_at": "2026-07-23T08:11:20Z",
+    "last_buy_reminder_at": "2026-07-23T13:42:18Z",
+    "open_entry": 4.099800109863281,
+    "open_time": "2026-07-23T13:42:18Z",
+    "open_peak": 4.099800109863281,
+    "open_stop": 3.4848,
+    "open_target": 4.4278,
+    "open_conviction": 4,
+    "open_alert_type": "mtf_alignment"
   },
   "SHLS": {
     "SHLS_POS_SIZE": {
@@ -1623,7 +1627,8 @@
     "last_sell_at": "2026-07-06T00:09:37Z",
     "SMTC_MA_DEATH": {
       "last_fired": "2026-07-06T00:09:37Z"
-    }
+    },
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1709,7 +1714,8 @@
     "open_target": 5.8374,
     "open_conviction": 3,
     "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-21T20:12:49Z"
+    "last_buy_reminder_at": "2026-07-21T20:12:49Z",
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1856,7 +1862,8 @@
     "open_stop": 62.2412,
     "open_target": 79.083,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_CDNL_MTF_BULL": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
