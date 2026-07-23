@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T16:34:34Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7300000190734863,
-    "change_pct": -1.1428560529436385,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-06T17:39:07Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.549999952316284,
-    "change_pct": 0.8522713726217092,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-06T19:09:06Z",
     "symbol": "ASPN",
     "alert_id": "ASPN_MA_DEATH",
@@ -5166,6 +5146,34 @@
     "price": 95.33000183105469,
     "change_pct": -0.542512434997712,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-23T08:11:20Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 3.1500000953674316,
+    "change_pct": -18.814430531767222,
+    "value": -18.814430531767222,
+    "entry_price": 3.569999933242798,
+    "pnl_pct": -11.7647,
+    "days_held": 14.24,
+    "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-23T08:11:56Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 7.110000133514404,
+    "change_pct": 3.6548938450629676,
+    "value": 6.6019194954618605,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,

@@ -900,7 +900,7 @@
       "last_fired": "2026-06-25T12:24:28Z"
     },
     "DOMO_PCT_DROP": {
-      "last_fired": "2026-06-26T05:44:26Z"
+      "last_fired": "2026-07-23T08:11:20Z"
     },
     "open_position": true,
     "DOMO_MA_DEATH": {
@@ -909,8 +909,6 @@
     "DOMO_RSI_OS_4H": {
       "last_fired": "2026-06-18T16:23:52Z"
     },
-    "open_entry": 3.569999933242798,
-    "open_time": "2026-07-09T02:24:38Z",
     "DOMO_NEWS_BAD": {
       "last_fired": "2026-06-15T20:24:12Z",
       "seen_news": [
@@ -933,12 +931,7 @@
     "DOMO_MA_GOLD": {
       "last_fired": "2026-07-06T13:34:43Z"
     },
-    "open_peak": 3.569999933242798,
-    "open_stop": 3.0345,
-    "open_target": 3.8556,
-    "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-21T18:26:31Z"
+    "last_sell_at": "2026-07-23T08:11:20Z"
   },
   "SHLS": {
     "SHLS_POS_SIZE": {
@@ -1630,7 +1623,8 @@
     "last_sell_at": "2026-07-06T00:09:37Z",
     "SMTC_MA_DEATH": {
       "last_fired": "2026-07-06T00:09:37Z"
-    }
+    },
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1981,13 +1975,24 @@
     "AGPU_PCT_UP": {
       "last_fired": "2026-07-20T15:57:18Z"
     },
-    "last_buy_at": "2026-07-22T08:11:58Z",
+    "last_buy_at": "2026-07-23T08:11:56Z",
     "AGPU_SCORE_60": {
       "last_fired": "2026-07-22T08:11:58Z"
     },
     "AGPU_PCT_DROP": {
       "last_fired": "2026-07-23T06:12:34Z"
-    }
+    },
+    "AGPU_VOL_3X": {
+      "last_fired": "2026-07-23T08:11:56Z"
+    },
+    "last_buy_reminder_at": "2026-07-23T08:11:56Z",
+    "open_entry": 7.110000133514404,
+    "open_time": "2026-07-23T08:11:56Z",
+    "open_peak": 7.110000133514404,
+    "open_stop": 6.0435,
+    "open_target": 7.6788,
+    "open_conviction": 3,
+    "open_alert_type": "volume_spike"
   },
   "__earnings_alert__": {
     "last_sent": "2026-07-23T02:12:09Z"
