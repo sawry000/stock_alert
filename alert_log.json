@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T02:04:03Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 68.88999938964844,
-    "change_pct": 1.622657308819046,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-07T02:04:15Z",
     "symbol": "VSEC",
     "alert_id": "VSEC_MTF_BULL",
@@ -5202,5 +5192,19 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-23T13:57:01Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 3.869999885559082,
+    "change_pct": -2.5188945703002057,
+    "value": 0,
+    "entry_price": 4.28000020980835,
+    "pnl_pct": -9.5794,
+    "days_held": 14.39,
+    "entry_alert_type": "mtf_alignment"
   }
 ]
