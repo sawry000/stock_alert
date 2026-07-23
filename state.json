@@ -432,19 +432,14 @@
         "37fed1e025f8"
       ]
     },
-    "last_sell_at": "2026-07-08T13:59:14Z",
+    "last_sell_at": "2026-07-23T17:25:44Z",
     "LNAI_PCT_UP": {
       "last_fired": "2026-07-21T14:55:56Z"
     },
     "last_buy_at": "2026-07-21T14:55:56Z",
-    "last_buy_reminder_at": "2026-07-21T14:55:56Z",
-    "open_entry": 3.015000104904175,
-    "open_time": "2026-07-21T14:55:56Z",
-    "open_peak": 3.015000104904175,
-    "open_stop": 2.5628,
-    "open_target": 3.2562,
-    "open_conviction": 3,
-    "open_alert_type": "percent_change"
+    "LNAI_SL_BREAK": {
+      "last_fired": "2026-07-23T17:25:44Z"
+    }
   },
   "XMTR": {
     "XMTR_POS_SIZE": {

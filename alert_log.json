@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T02:09:50Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 79.7300033569336,
-    "change_pct": 0.5563242231051201,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-07T02:09:55Z",
     "symbol": "NEOV",
     "alert_id": "NEOV_MTF_BULL",
@@ -5225,6 +5215,20 @@
     "entry_price": 16.789899826049805,
     "pnl_pct": -12.09,
     "days_held": 7.98,
+    "entry_alert_type": "percent_change"
+  },
+  {
+    "timestamp": "2026-07-23T17:25:44Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 2.509999990463257,
+    "change_pct": -3.8792942035286297,
+    "value": 2.509999990463257,
+    "entry_price": 3.015000104904175,
+    "pnl_pct": -16.7496,
+    "days_held": 2.1,
     "entry_alert_type": "percent_change"
   }
 ]
