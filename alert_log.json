@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-06T21:53:43Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 94.29499816894531,
-    "change_pct": 2.7178629291343306,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-07T02:03:37Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -5182,6 +5172,20 @@
     "price": 2.3550000190734863,
     "change_pct": -1.216442152957784,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-23T11:26:21Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 20.459999084472656,
+    "change_pct": 1.7404230953389201,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
