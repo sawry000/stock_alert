@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T10:09:08Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 238.00999450683594,
-    "change_pct": -0.18034117311024167,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-07T10:09:20Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.490000009536743,
-    "change_pct": -0.8522724563425242,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-07T10:09:27Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MTF_BULL",
@@ -5270,5 +5250,33 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-24T13:41:20Z",
+    "symbol": "SHLS",
+    "alert_id": "SHLS_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 9.755000114440918,
+    "change_pct": -1.3650140096974983,
+    "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-24T13:41:33Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 1.5,
+    "change_pct": 0.08674184293054507,
+    "value": 0,
+    "entry_price": 1.7000000476837158,
+    "pnl_pct": -11.7647,
+    "days_held": 15.28,
+    "entry_alert_type": "mtf_alignment"
   }
 ]

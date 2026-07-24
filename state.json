@@ -948,13 +948,13 @@
       "last_fired": "2026-06-25T13:39:15Z"
     },
     "SHLS_MA_DEATH": {
-      "last_fired": "2026-07-21T13:41:51Z"
+      "last_fired": "2026-07-24T13:41:20Z"
     },
     "SHLS_PCT_UP": {
       "last_fired": "2026-07-15T06:56:56Z"
     },
     "last_buy_at": "2026-07-15T06:56:56Z",
-    "last_sell_at": "2026-07-21T13:41:51Z"
+    "last_sell_at": "2026-07-24T13:41:20Z"
   },
   "AMPX": {
     "AMPX_POS_SIZE": {
@@ -1640,15 +1640,11 @@
       "last_fired": "2026-07-20T17:42:16Z"
     },
     "open_position": true,
-    "open_entry": 1.7000000476837158,
-    "open_time": "2026-07-09T07:04:43Z",
     "last_buy_at": "2026-07-20T17:42:16Z",
-    "open_peak": 1.7599999904632568,
-    "open_stop": 1.445,
-    "open_target": 1.836,
-    "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "last_buy_reminder_at": "2026-07-20T17:42:16Z"
+    "ZVIA_MA_DEATH": {
+      "last_fired": "2026-07-24T13:41:33Z"
+    },
+    "last_sell_at": "2026-07-24T13:41:33Z"
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1806,7 +1802,8 @@
     "open_stop": 1.955,
     "open_target": 2.484,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_NEOV_MTF_BULL": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {
