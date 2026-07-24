@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T10:15:04Z",
-    "symbol": "BLIN",
-    "alert_id": "BLIN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.3600000143051147,
-    "change_pct": -0.8023330193205872,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-07T10:15:07Z",
     "symbol": "AOUT",
     "alert_id": "AOUT_MTF_BULL",
@@ -5302,5 +5292,19 @@
     "pnl_pct": -2.5876,
     "days_held": 0.51,
     "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-24T15:56:45Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 20.31999969482422,
+    "change_pct": 4.634395956870324,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]
