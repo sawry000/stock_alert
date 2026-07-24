@@ -1,45 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T10:14:29Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7100000381469727,
-    "change_pct": -0.5813931309899603,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-07T10:14:37Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.559999942779541,
-    "change_pct": -1.9354851015152545,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-07T10:14:46Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 79.7300033569336,
-    "change_pct": -0.3381186905911946,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-07T10:14:52Z",
-    "symbol": "NEOV",
-    "alert_id": "NEOV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 2.7200000286102295,
-    "change_pct": 0.7855353716551663,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-07T10:15:01Z",
     "symbol": "EVTV",
     "alert_id": "EVTV_MTF_BULL",
@@ -5282,5 +5242,61 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-24T14:40:57Z",
+    "symbol": "AEHR",
+    "alert_id": "AEHR_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 78.91390228271484,
+    "change_pct": -10.325111042369496,
+    "value": 78.91390228271484,
+    "entry_price": 92.91500091552734,
+    "pnl_pct": -15.0687,
+    "days_held": 3.03,
+    "entry_alert_type": "percent_change"
+  },
+  {
+    "timestamp": "2026-07-24T14:41:25Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.800000190734863,
+    "change_pct": -8.22179367619765,
+    "value": -8.22179367619765,
+    "entry_price": 5.929999828338623,
+    "pnl_pct": -19.0556,
+    "days_held": 22.27,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-24T14:41:42Z",
+    "symbol": "MXL",
+    "alert_id": "MXL_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 75.61000061035156,
+    "change_pct": -6.654320234133873,
+    "value": 75.61000061035156,
+    "entry_price": 89.07499694824219,
+    "pnl_pct": -15.1165,
+    "days_held": 2.03,
+    "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-24T14:41:49Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 4.880000114440918,
+    "change_pct": -9.158598018597951,
+    "value": 0,
+    "entry_price": 5.40500020980835,
+    "pnl_pct": -9.7132,
+    "days_held": 15.86,
+    "entry_alert_type": "mtf_alignment"
   }
 ]
