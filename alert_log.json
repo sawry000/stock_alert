@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T13:33:59Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 265.3599853515625,
-    "change_pct": -5.22857666015625,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-07-07T13:34:06Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.850000381469727,
-    "change_pct": 3.5145545385487407,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-07T13:34:24Z",
     "symbol": "SVCO",
     "alert_id": "SVCO_MA_DEATH",
@@ -5314,6 +5294,34 @@
     "price": 45.65999984741211,
     "change_pct": -10.47058853448606,
     "value": -10.47058853448606,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-24T19:25:37Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 281.6000061035156,
+    "change_pct": -10.18377365816583,
+    "value": -10.18377365816583,
+    "entry_price": 394.4700012207031,
+    "pnl_pct": -28.6131,
+    "days_held": 23.52,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-24T19:25:54Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 83.83999633789062,
+    "change_pct": -3.354471080241354,
+    "value": 0,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
