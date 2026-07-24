@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T12:29:33Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.53000020980835,
-    "change_pct": -0.3603565800297336,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-07T13:33:34Z",
-    "symbol": "HLIT",
-    "alert_id": "HLIT_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 13.579999923706055,
-    "change_pct": -3.8243631465576815,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-07T13:33:59Z",
     "symbol": "VICR",
     "alert_id": "VICR_MA_DEATH",
@@ -5306,6 +5286,34 @@
     "price": 28.920000076293945,
     "change_pct": -12.138390916428337,
     "value": -12.138390916428337,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-24T19:10:44Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 86.25,
+    "change_pct": -8.73015873015873,
+    "value": 0,
+    "entry_price": 90.98999786376953,
+    "pnl_pct": -5.2094,
+    "days_held": 3.2,
+    "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-24T19:11:56Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 45.65999984741211,
+    "change_pct": -10.47058853448606,
+    "value": -10.47058853448606,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
