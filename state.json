@@ -1611,15 +1611,14 @@
     "last_sell_at": "2026-07-06T00:09:37Z",
     "SMTC_MA_DEATH": {
       "last_fired": "2026-07-06T00:09:37Z"
-    },
-    "_confirm_SMTC_MTF_BULL": 1
+    }
   },
   "MXL": {
     "MXL_MTF_BULL": {
-      "last_fired": "2026-07-23T10:12:23Z"
+      "last_fired": "2026-07-24T08:27:08Z"
     },
     "open_position": true,
-    "last_buy_at": "2026-07-23T10:12:23Z",
+    "last_buy_at": "2026-07-24T08:27:08Z",
     "MXL_PCT_DROP": {
       "last_fired": "2026-07-06T00:04:24Z"
     },
@@ -1627,15 +1626,14 @@
     "MXL_MA_DEATH": {
       "last_fired": "2026-07-15T14:42:08Z"
     },
-    "last_buy_reminder_at": "2026-07-23T10:12:23Z",
+    "last_buy_reminder_at": "2026-07-24T08:27:08Z",
     "open_entry": 89.07499694824219,
     "open_time": "2026-07-22T13:56:51Z",
     "open_peak": 91.23999786376953,
     "open_stop": 75.7137,
     "open_target": 96.201,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_MXL_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1773,7 +1771,8 @@
     "open_stop": 60.605,
     "open_target": 77.004,
     "open_conviction": 3,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_AMBA_MTF_BULL": 1
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
