@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T10:15:01Z",
-    "symbol": "EVTV",
-    "alert_id": "EVTV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.9700000286102295,
-    "change_pct": 0.08128574528701304,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-07T10:15:04Z",
     "symbol": "BLIN",
     "alert_id": "BLIN_MTF_BULL",
@@ -5297,6 +5287,20 @@
     "entry_price": 5.40500020980835,
     "pnl_pct": -9.7132,
     "days_held": 15.86,
+    "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-24T14:56:20Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 61.7400016784668,
+    "change_pct": -2.433625666139703,
+    "value": 0,
+    "entry_price": 63.380001068115234,
+    "pnl_pct": -2.5876,
+    "days_held": 0.51,
     "entry_alert_type": "mtf_alignment"
   }
 ]
