@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T14:24:25Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 107.9000015258789,
-    "change_pct": -14.228933604229802,
-    "value": -14.228933604229802
-  },
-  {
     "timestamp": "2026-07-07T14:24:26Z",
     "symbol": "VPG",
     "alert_id": "VPG_MA_DEATH",
@@ -5345,6 +5335,20 @@
     "entry_price": 161.85000610351562,
     "pnl_pct": -22.1996,
     "days_held": 23.91,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-25T04:41:49Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 15.979999542236328,
+    "change_pct": -0.9913287345952444,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
     "entry_alert_type": null
   }
 ]
