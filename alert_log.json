@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T13:58:37Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 93.80000305175781,
-    "change_pct": 1.956525056258492,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-07T14:13:36Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_DROP",
@@ -5326,6 +5316,20 @@
     "price": 4.670000076293945,
     "change_pct": -10.707455520192259,
     "value": -10.707455520192259,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-25T02:11:02Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 28.09000015258789,
+    "change_pct": -14.660006706320166,
+    "value": -14.660006706320166,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
