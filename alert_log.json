@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T14:13:36Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 85.1500015258789,
-    "change_pct": -13.169834777057149,
-    "value": -13.169834777057149
-  },
-  {
     "timestamp": "2026-07-07T14:14:26Z",
     "symbol": "SNDK",
     "alert_id": "SNDK_MA_DEATH",
@@ -5330,6 +5320,20 @@
     "price": 28.09000015258789,
     "change_pct": -14.660006706320166,
     "value": -14.660006706320166,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-25T03:11:58Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 46.029998779296875,
+    "change_pct": -9.745100432751226,
+    "value": -9.745100432751226,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
