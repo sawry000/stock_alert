@@ -816,14 +816,22 @@ def get_macro_context():
 
 def conviction_gate(symbol, quote, alert_history_cache=None):
     """
-    ให้คะแนน 4 มิติจากข้อมูลราคาล่าสุด แล้วตัดสินว่าควรปล่อย BUY หรือไม่
+    ให้คะแนนหลายมิติจากข้อมูลราคาล่าสุด แล้วตัดสินว่าควรปล่อย BUY หรือไม่
     Returns: (passed: bool, score: int, detail: dict)
 
     มิติที่เช็ก:
-      1. Trend  — ราคา > EMA21 (1d)               กัน buy ขาลง
-      2. Mom    — RSI(14) อยู่ระหว่าง 35-75         กัน buy จุด exhaustion
-      3. Volume — Volume วันนี้ >= 1.1x ค่าเฉลี่ย    กัน buy ตอนไม่มีคนเล่น
-      4. Vol%   — ATR% ไม่ผิดปกติเกิน 2.5x ของปกติ   กัน chase ตอน volatility พุ่ง
+      1. Trend      — ราคา > EMA21 (1d)               กัน buy ขาลง
+      2. Mom        — RSI(14) อยู่ระหว่าง 35-75         กัน buy จุด exhaustion
+      3. Volume     — Volume วันนี้ >= 1.1x ค่าเฉลี่ย    กัน buy ตอนไม่มีคนเล่น
+      4. Vol%       — ATR% ไม่ผิดปกติเกิน 2.5x ของปกติ   กัน chase ตอน volatility พุ่ง
+      5. Long Trend — ราคา > EMA200 (Daily)             กัน buy สวนเทรนด์ใหญ่
+                       (ข้ามมิตินี้ถ้าหุ้นมีประวัติเทรดไม่พอ เช่นเพิ่ง IPO — ไม่ลงโทษ
+                       เพราะข้อมูลขาด ไม่ใช่เพราะเทรนด์จริงไม่ดี — ใช้ EMA200 แทน
+                       EMA800 เพราะ EMA800 ต้องการข้อมูลย้อนหลัง ~3.2 ปี ซึ่งหุ้น
+                       GROWTH/เพิ่ง IPO ในระบบนี้จำนวนมากไม่มีประวัติยาวขนาดนั้น)
+
+    Threshold ปรับตามจำนวนมิติที่เช็กได้จริงในรอบนั้น (4 หรือ 5) — ต้องผ่าน
+    อย่างน้อย "ทั้งหมด - 1" มิติเสมอ (3/4 เดิม หรือ 4/5 ถ้ามี EMA200 ด้วย)
     """
     hist = alert_history_cache
     if hist is None:
@@ -831,7 +839,7 @@ def conviction_gate(symbol, quote, alert_history_cache=None):
 
     if hist is None or len(hist) < 25:
         # ข้อมูลไม่พอให้เช็ก — ปล่อยผ่านแบบ neutral (ไม่ block เพราะข้อมูลขาด)
-        return True, 4, {"note": "ข้อมูลไม่พอสำหรับ conviction check — ปล่อยผ่าน"}
+        return True, 4, {"note": "ข้อมูลไม่พอสำหรับ conviction check — ปล่อยผ่าน", "total_dims": 4}
 
     closes  = list(hist["Close"].astype(float))
     highs   = list(hist["High"].astype(float))
@@ -878,7 +886,31 @@ def conviction_gate(symbol, quote, alert_history_cache=None):
     if vola_pass:
         score += 1
 
-    passed = score >= 3
+    # ── 5. Long Trend: ราคา > EMA200 (Daily) ────────────────────────
+    # ต้อง fetch history แยกยาวกว่าเดิม (90d ไม่พอ) — เรียกเฉพาะตอนใกล้จะยิง
+    # BUY จริงเท่านั้น (conviction_gate ไม่ได้ถูกเรียกทุกหุ้นทุกรอบ) ไม่กระทบ
+    # ภาระ API หนักเกินไป
+    total_dims  = 4
+    long_hist   = fetch_history(symbol, period="2y", interval="1d")
+    if long_hist is not None and len(long_hist) >= 210:
+        long_closes = list(long_hist["Close"].astype(float))
+        ema200_list = _calc_ema(long_closes, 200)
+        ema200      = next((v for v in reversed(ema200_list) if v is not None), None)
+        long_trend_pass = (ema200 is not None) and (price > ema200)
+        detail["long_trend"] = {"pass": long_trend_pass, "price": round(price, 2),
+                                 "ema200": round(ema200, 2) if ema200 else None,
+                                 "bars_available": len(long_closes)}
+        if long_trend_pass:
+            score += 1
+        total_dims = 5
+    else:
+        # ข้อมูลไม่พอ (หุ้นเพิ่ง IPO/ประวัติสั้นกว่า ~210 วันเทรด) — ข้ามมิตินี้
+        # ไปเฉยๆ ไม่ให้คะแนนและไม่หักคะแนน แค่ลดตัวหารกลับไปเป็น 4 มิติเหมือนเดิม
+        bars = len(long_hist) if long_hist is not None else 0
+        detail["long_trend"] = {"pass": None, "note": f"ข้อมูลไม่พอ ({bars} วัน < 210) — ข้ามมิตินี้"}
+
+    detail["total_dims"] = total_dims
+    passed = score >= max(3, total_dims - 1)
     return passed, score, detail
 
 
@@ -1057,10 +1089,12 @@ def build_buy_message(stock, quote, alert_type, detail, pos):
 def build_sell_message(stock, quote, reason, detail=""):
     emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, "🛑")
     reason_th = {
-        "sl_break":    "🛑 หลุด Stop Loss / แนวรับสำคัญ",
-        "death_cross": "💀 Death Cross — EMA9 ตัดลงใต้ EMA21",
-        "pct_drop":    f"📉 ราคาลง {abs(pct):.1f}% วันเดียว",
-        "score_bear":  "🔴 Confidence Score ขาลงสูง",
+        "sl_break":      "🛑 หลุด Stop Loss / แนวรับสำคัญ",
+        "death_cross":   "💀 Death Cross — EMA9 ตัดลงใต้ EMA21",
+        "pct_drop":      f"📉 ราคาลง {abs(pct):.1f}% วันเดียว",
+        "score_bear":    "🔴 Confidence Score ขาลงสูง",
+        "take_profit":   "🎯 ถึงเป้าหมายกำไร (Take Profit) ตามแผน",
+        "trailing_stop": "📉 หลุด Trailing Stop — ป้องกันกำไรที่สะสมมาไว้",
     }.get(reason, reason)
 
     lines = [
@@ -1217,7 +1251,8 @@ def build_position_status_messages(state, watchlist, quotes_cache):
         dist_to_stop   = ((current - stop) / current * 100) if stop else None
         dist_to_target = ((target - current) / current * 100) if target else None
         days_held      = (minutes_since(open_time) / 1440) if open_time else None
-        conviction     = sym_state.get("open_conviction")
+        conviction       = sym_state.get("open_conviction")
+        conviction_total = sym_state.get("open_conviction_total", 4)  # เก่าก่อนมี EMA200 = 4 เสมอ
 
         rows.append({
             "symbol": symbol, "entry": entry, "current": current,
@@ -1225,6 +1260,7 @@ def build_position_status_messages(state, watchlist, quotes_cache):
             "stop": stop, "target": target,
             "dist_to_stop": dist_to_stop, "dist_to_target": dist_to_target,
             "days_held": days_held, "conviction": conviction,
+            "conviction_total": conviction_total,
         })
 
     if not rows:
@@ -1249,7 +1285,7 @@ def build_position_status_messages(state, watchlist, quotes_cache):
     blocks = []
     for r in rows:
         icon = "🟢" if r["pnl_pct"] >= 0 else "🔴"
-        conv_txt = f"  •  Conviction เดิม {r['conviction']}/4" if r["conviction"] else ""
+        conv_txt = f"  •  Conviction เดิม {r['conviction']}/{r['conviction_total']}" if r["conviction"] else ""
         days_txt = f"{r['days_held']:.1f} วัน" if r["days_held"] is not None else "ไม่ทราบ"
         stop_txt = f"${r['stop']:.4f}" if r["stop"] else "—"
         tgt_txt  = f"${r['target']:.4f}" if r["target"] else "—"
@@ -1393,6 +1429,90 @@ def main():
             last_reminder_at  = sym_state.get("last_buy_reminder_at", "")
             in_reminder_cd    = bool(last_reminder_at) and minutes_since(last_reminder_at) < reminder_cd
 
+            # ══════════════════════════════════════════════════════════════
+            #  POSITION MANAGEMENT — Trailing Stop + Take Profit
+            #  ทำงานอัตโนมัติทุกรอบสำหรับหุ้นที่มี position เปิดอยู่ ไม่ขึ้นกับ
+            #  alert ที่ตั้งไว้ใน watchlist.json เลย — เป็น risk management
+            #  ระดับ position (ราคาต้นทุน/peak/stop) ไม่ใช่ signal จาก indicator
+            #  ต้องทำงาน "ก่อน" ลูปเช็ก alert ด้านล่าง เพราะ support_resistance
+            #  alert (ใช้เป็น auto Stop Loss หลัก) จะอ่าน open_stop ที่เพิ่ง
+            #  เลื่อนขึ้นในรอบนี้ทันที ไม่ต้องรอรอบถัดไป
+            # ══════════════════════════════════════════════════════════════
+            if has_open_position:
+                entry     = sym_state.get("open_entry")
+                peak_prev = sym_state.get("open_peak") or entry
+                peak_now  = max(peak_prev, price)
+                if peak_now != peak_prev:
+                    sym_state["open_peak"] = peak_now
+
+                # ── Trailing Stop: เลื่อน stop ขึ้นตามราคาสูงสุดที่เคยขึ้นไป
+                # (ratchet ทางเดียว ไม่มีวันลดลง) เพื่อล็อกกำไรที่มีอยู่ไว้บางส่วน
+                # แทนที่จะปล่อยให้กำไรไหลกลับมาเป็นขาดทุน (เช่นเคสที่เจอมาก่อน:
+                # AGL เคย +16% แต่สุดท้ายปิดที่ -9.32% เพราะไม่มีกลไกนี้มาก่อน)
+                # ค่า default: ต้องกำไรอย่างน้อย 8% จากทุนก่อนถึงจะเริ่ม trail
+                # แล้วเว้นระยะ 5% จากจุดสูงสุด — ปรับได้ต่อหุ้นผ่าน
+                # trailing_stop_activate_pct / trailing_stop_trail_pct
+                trail_enabled = stock.get("trailing_stop_enabled", True)
+                activate_pct  = stock.get("trailing_stop_activate_pct", 8.0)
+                trail_pct     = stock.get("trailing_stop_trail_pct", 5.0)
+                if trail_enabled and entry:
+                    profit_from_entry_pct = (peak_now - entry) / entry * 100
+                    if profit_from_entry_pct >= activate_pct:
+                        trail_candidate = peak_now * (1 - trail_pct / 100)
+                        cur_stop = sym_state.get("open_stop")
+                        if not cur_stop or trail_candidate > cur_stop:
+                            sym_state["open_stop"] = trail_candidate
+                            # ตั้ง flag ไว้บอกว่า stop ตอนนี้คือ trailing stop
+                            # ไม่ใช่ static stop เดิมจากตอน BUY แล้ว — ใช้ตัดสิน
+                            # ข้อความตอน SELL ทำงานจริง (ดูจุดที่เรียก
+                            # build_sell_message กับ atype == "support_resistance")
+                            sym_state["open_stop_is_trailing"] = True
+                            print(f"  [Trailing Stop] {symbol}: เลื่อน stop ขึ้นเป็น "
+                                  f"${trail_candidate:.4f} (peak=${peak_now:.4f}, "
+                                  f"กำไรจากทุน {profit_from_entry_pct:+.1f}%)")
+
+                # ── Take Profit: ราคาถึงเป้าหมายที่ตั้งไว้ตอน BUY -> ขายทันที ──
+                # แยกจาก support_resistance เพราะ TP เป็นการ "ขายเพราะได้กำไรตาม
+                # แผน" ไม่ใช่การหลุดแนวรับ ข้อความและ log ควรบอกเหตุผลต่างกันชัดเจน
+                tp_enabled = stock.get("take_profit_enabled", True)
+                target     = sym_state.get("open_target")
+                if tp_enabled and target and entry and price >= target:
+                    tp_pnl_pct = (price - entry) / entry * 100
+                    open_time_val = sym_state.get("open_time")
+                    days_held = minutes_since(open_time_val) / 1440 if open_time_val else None
+                    detail_txt = f"เป้าหมาย ${target:.4f} (กำไร {tp_pnl_pct:+.1f}%)"
+                    tp_msg = build_sell_message(stock, quote, "take_profit", detail_txt)
+                    days_held_txt = f"  •  ถือมา {days_held:.1f} วัน" if days_held is not None else ""
+                    pnl_line = (
+                        f"\n━━━━━━━━━━━━━━━━━━━━━━━━━"
+                        f"\n📊 <b>ผลลัพธ์ position นี้:</b> 🟢 กำไร  <b>{tp_pnl_pct:+.2f}%</b>"
+                        f"\n  • เข้าซื้อ ${entry:.4f} → ปิดที่ ${price:.4f}{days_held_txt}"
+                    )
+                    tp_msg = tp_msg.replace("\n\n📊 <a href=", pnl_line + "\n\n📊 <a href=", 1)
+                    tp_success = send_telegram(token, chat_id, tp_msg)
+                    print(f"  [Take Profit] {symbol}: "
+                          f"{'✅ ส่งสำเร็จ' if tp_success else '❌ ส่งไม่สำเร็จ'} — {tp_pnl_pct:+.2f}%")
+                    if tp_success:
+                        fired_count += 1
+                        entry_type_val = sym_state.get("open_alert_type")
+                        sym_state["last_sell_at"] = now_str()
+                        log.append({
+                            "timestamp": now_str(), "symbol": symbol,
+                            "alert_id": f"{symbol}_TAKE_PROFIT", "type": "take_profit",
+                            "action": "SELL", "price": price,
+                            "change_pct": quote["change_pct"], "value": target,
+                            "entry_price": entry, "pnl_pct": round(tp_pnl_pct, 4),
+                            "days_held": round(days_held, 2) if days_held is not None else None,
+                            "entry_alert_type": entry_type_val,
+                        })
+                        for _k in ("open_entry", "open_time", "open_peak", "open_stop",
+                                   "open_target", "open_conviction", "open_conviction_total",
+                                   "open_alert_type", "open_stop_is_trailing", "last_buy_reminder_at"):
+                            sym_state.pop(_k, None)
+                        # position ปิดไปแล้ว — ข้าม alert loop ที่เหลือของหุ้นตัวนี้
+                        # ในรอบนี้ ไปหุ้นตัวถัดไปเลย (กัน SELL/BUY ซ้ำซ้อนในรอบเดียวกัน)
+                        continue
+
             # ── Price-drop filter — ลงหนักวันนี้ ห้าม BUY แม้ signal ผ่าน ──
             drop_threshold = stock.get("buy_suppress_drop_pct", 3.0)
             price_dropping  = quote["change_pct"] <= -drop_threshold
@@ -1492,7 +1612,12 @@ def main():
                             pos = calc_position_size(pos_cfg, symbol, price)
                             msg = build_buy_message(stock, quote, atype, detail, pos)
                         elif action == "SELL":
-                            msg = build_sell_message(stock, quote, "sl_break", detail)
+                            # ถ้า stop ที่หลุดคือ trailing stop (เลื่อนขึ้นมาแล้ว)
+                            # ใช้ข้อความ "Trailing Stop" แทนที่จะขึ้นทั่วไปว่า
+                            # "Stop Loss" เฉยๆ — ให้รู้ชัดว่าเคยกำไรมาก่อนแล้ว
+                            # เพิ่งโดนล็อกกำไรบางส่วนออกมา ไม่ใช่ stop-loss ตั้งต้น
+                            sell_reason = "trailing_stop" if sym_state.get("open_stop_is_trailing") else "sl_break"
+                            msg = build_sell_message(stock, quote, sell_reason, detail)
                         else:
                             msg = build_info_message(stock, quote, atype, detail)
 
@@ -1631,27 +1756,29 @@ def main():
                 # SNDK (ราคาลงหนักแต่ MTF ยัง bullish) โดยไม่ต้องดึง API เพิ่ม
                 if action == "BUY":
                     conv_pass, conv_score, conv_detail = conviction_gate(symbol, quote)
+                    total_dims = conv_detail.get("total_dims", 4)
                     if not conv_pass:
                         failed_dims = [k for k, v in conv_detail.items()
-                                       if isinstance(v, dict) and not v.get("pass", True)]
+                                       if isinstance(v, dict) and v.get("pass") is False]
                         print(f"  [{alert_id}] 🚫 Conviction Gate FAIL "
-                              f"({conv_score}/4) — ไม่ผ่าน: {', '.join(failed_dims)}")
+                              f"({conv_score}/{total_dims}) — ไม่ผ่าน: {', '.join(failed_dims)}")
                         continue
-                    print(f"  [{alert_id}] ✅ Conviction Gate PASS ({conv_score}/4)")
+                    print(f"  [{alert_id}] ✅ Conviction Gate PASS ({conv_score}/{total_dims})")
                     # แนบผล Conviction Score เข้า message ก่อนส่งจริง
                     dims_th = {"trend": "Trend", "momentum": "Momentum",
-                               "volume": "Volume", "volatility": "Volatility"}
+                               "volume": "Volume", "volatility": "Volatility",
+                               "long_trend": "EMA200"}
                     dim_marks = " ".join(
-                        f"{dims_th.get(k,k)}{'✅' if v.get('pass') else '❌'}"
+                        f"{dims_th.get(k,k)}{'✅' if v.get('pass') else ('➖' if v.get('pass') is None else '❌')}"
                         for k, v in conv_detail.items() if isinstance(v, dict)
                     )
-                    if conv_score >= 4:
-                        # ── สัญญาณเต็มพลัง 4/4 — ทำให้เด่นขึ้นมาเพื่อให้สังเกตง่าย ──
-                        conv_line = (f"\n⭐⭐⭐ <b>Conviction: 4/4 — สัญญาณเต็มพลัง</b> ⭐⭐⭐"
+                    if conv_score >= total_dims:
+                        # ── สัญญาณเต็มพลัง ทุกมิติผ่านครบ — ทำให้เด่นขึ้นมาเพื่อให้สังเกตง่าย ──
+                        conv_line = (f"\n⭐⭐⭐ <b>Conviction: {conv_score}/{total_dims} — สัญญาณเต็มพลัง</b> ⭐⭐⭐"
                                      f"\n🎯 ({dim_marks})")
-                        msg = "🔥🌟 <b>TOP SIGNAL (4/4)</b> 🌟🔥\n" + msg
+                        msg = f"🔥🌟 <b>TOP SIGNAL ({conv_score}/{total_dims})</b> 🌟🔥\n" + msg
                     else:
-                        conv_line = f"\n🎯 Conviction: {conv_score}/4  ({dim_marks})"
+                        conv_line = f"\n🎯 Conviction: {conv_score}/{total_dims}  ({dim_marks})"
                     msg = msg.replace("\n\n📊 <a href=", conv_line + "\n\n📊 <a href=", 1)
 
                 # ── SELL: แนบผลลัพธ์ P&L ของ position ที่กำลังจะปิด (ถ้ามี open_entry) ──
@@ -1713,13 +1840,14 @@ def main():
                         # เปิดอยู่แล้ว ยังส่ง Telegram แจ้งเตือนตามปกติ (เผื่ออยากรู้
                         # ว่ามีสัญญาณ BUY อีกรอบ) แค่ไม่ไปยุ่งกับตัวเลข entry เดิม
                         if not state[symbol].get("open_entry"):
-                            state[symbol]["open_entry"]      = price
-                            state[symbol]["open_time"]       = now_str()
-                            state[symbol]["open_peak"]       = price
-                            state[symbol]["open_stop"]       = pos["stop"] if pos else None
-                            state[symbol]["open_target"]     = pos.get("target") if pos else None
-                            state[symbol]["open_conviction"] = conv_score
-                            state[symbol]["open_alert_type"] = atype
+                            state[symbol]["open_entry"]            = price
+                            state[symbol]["open_time"]             = now_str()
+                            state[symbol]["open_peak"]             = price
+                            state[symbol]["open_stop"]             = pos["stop"] if pos else None
+                            state[symbol]["open_target"]           = pos.get("target") if pos else None
+                            state[symbol]["open_conviction"]       = conv_score
+                            state[symbol]["open_conviction_total"] = total_dims
+                            state[symbol]["open_alert_type"]       = atype
                         else:
                             print(f"  [{alert_id}] ℹ️ มี position เปิดอยู่แล้ว "
                                   f"(entry เดิม ${state[symbol]['open_entry']:.4f}) "
@@ -1728,8 +1856,8 @@ def main():
                         state[symbol]["last_sell_at"] = now_str()
                         # ── ปิด position: เคลียร์ open_* ทั้งหมดไม่ให้ P&L ค้าง ──
                         for _k in ("open_entry", "open_time", "open_peak", "open_stop",
-                                   "open_target", "open_conviction", "open_alert_type",
-                                   "last_buy_reminder_at"):
+                                   "open_target", "open_conviction", "open_conviction_total",
+                                   "open_alert_type", "open_stop_is_trailing", "last_buy_reminder_at"):
                             state[symbol].pop(_k, None)
 
 
