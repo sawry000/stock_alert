@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T14:24:26Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 107.9000015258789,
-    "change_pct": -14.228933604229802,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-07T14:29:37Z",
     "symbol": "EVTV",
     "alert_id": "EVTV_MA_GOLD",
@@ -5346,6 +5336,20 @@
     "price": 15.979999542236328,
     "change_pct": -0.9913287345952444,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-25T07:11:17Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.67,
+    "change_pct": -10.707456978967505,
+    "value": -10.707456978967505,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
