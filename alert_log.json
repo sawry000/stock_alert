@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-07T14:14:26Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 1547.239990234375,
-    "change_pct": -8.423630955683793,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-07-07T14:19:02Z",
-    "symbol": "VSEC",
-    "alert_id": "VSEC_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 220.60000610351562,
-    "change_pct": -7.481963553298261,
-    "value": -7.481963553298261
-  },
-  {
     "timestamp": "2026-07-07T14:24:25Z",
     "symbol": "VPG",
     "alert_id": "VPG_PCT_DROP",
@@ -5337,6 +5317,34 @@
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-25T04:10:39Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 282.39,
+    "change_pct": -9.931805373089784,
+    "value": -9.931805373089784,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-25T04:11:36Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 125.92,
+    "change_pct": -9.214131218457092,
+    "value": -9.214131218457092,
+    "entry_price": 161.85000610351562,
+    "pnl_pct": -22.1996,
+    "days_held": 23.91,
     "entry_alert_type": null
   }
 ]
