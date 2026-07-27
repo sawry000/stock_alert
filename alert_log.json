@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-08T10:19:18Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.290000915527344,
-    "change_pct": -0.816671282239494,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-08T10:23:31Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -5494,5 +5484,19 @@
     "pnl_pct": -16.463,
     "days_held": 9.94,
     "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-27T15:41:36Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 125.87999725341797,
+    "change_pct": -0.19029713493659672,
+    "value": 125.87999725341797,
+    "entry_price": 100.4749984741211,
+    "pnl_pct": 25.2849,
+    "days_held": 34.95,
+    "entry_alert_type": null
   }
 ]
