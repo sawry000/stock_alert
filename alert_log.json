@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-08T10:23:31Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 27.25,
-    "change_pct": 1.0082289272740694,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-08T12:10:05Z",
-    "symbol": "AOUT",
-    "alert_id": "AOUT_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 13.920000076293945,
-    "change_pct": 5.480886881002462e-07,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-08T13:36:08Z",
-    "symbol": "RFIL",
-    "alert_id": "RFIL_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 17.049999237060547,
-    "change_pct": -3.943666270081426,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-08T13:54:02Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -5498,5 +5468,47 @@
     "pnl_pct": 25.2849,
     "days_held": 34.95,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-27T16:55:47Z",
+    "symbol": "ICHR",
+    "alert_id": "ICHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 74.76000213623047,
+    "change_pct": -14.059084795688614,
+    "value": -14.059084795688614,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-27T16:57:20Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.069999694824219,
+    "change_pct": 17.97727723673258,
+    "value": 7.6665,
+    "entry_price": 7.110000133514404,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-27T16:57:21Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 8.069999694824219,
+    "change_pct": 17.97727723673258,
+    "value": 7.6788,
+    "entry_price": 7.110000133514404,
+    "pnl_pct": 13.5021,
+    "days_held": 4.36,
+    "entry_alert_type": "volume_spike"
   }
 ]
