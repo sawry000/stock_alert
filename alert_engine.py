@@ -339,6 +339,50 @@ def build_earnings_alert_message(watchlist, universe_data, threshold_days):
     return "\n".join(lines)
 
 
+def build_trailing_stop_digest_message(log, state, today_str):
+    """
+    สรุปการเลื่อน Trailing Stop ของวันนี้ทั้งหมด (ไม่ว่าจะเคยแจ้งเตือน
+    real-time ไปแล้วหรือไม่ — ดึงจาก log entry type="trailing_stop_moved"
+    ที่บันทึกไว้ทุกครั้งที่มีการเลื่อน) กลุ่มตามหุ้น แสดงว่าวันนี้เลื่อนไปกี่ครั้ง
+    และเลื่อนขึ้นมาสุทธิเท่าไหร่ (จากระดับแรกสุดของวันไปจนถึงระดับล่าสุด)
+    คืนค่า None ถ้าวันนี้ไม่มีการเลื่อนเลยสักครั้ง
+    """
+    today_moves = [e for e in log
+                   if e.get("type") == "trailing_stop_moved"
+                   and (e.get("timestamp") or "").startswith(today_str)]
+    if not today_moves:
+        return None
+
+    by_symbol = {}
+    for e in today_moves:
+        by_symbol.setdefault(e["symbol"], []).append(e)
+
+    lines = [
+        "📈 <b>สรุป Trailing Stop วันนี้</b>",
+        f"🕐 {now_bkk_str()}",
+        "",
+        f"หุ้นที่มีการเลื่อน Stop ขึ้นวันนี้: {len(by_symbol)} ตัว",
+        "",
+    ]
+    for sym, moves in sorted(by_symbol.items(), key=lambda kv: -len(kv[1])):
+        moves.sort(key=lambda e: e["timestamp"])
+        first_stop = moves[0]["value"]
+        last_stop  = moves[-1]["value"]
+        net_move_pct = (last_stop - first_stop) / first_stop * 100 if first_stop else 0
+        cur_price = moves[-1].get("price")
+        lines.append(
+            f"  📊 <b>{sym}</b> — เลื่อน {len(moves)} ครั้ง  "
+            f"${first_stop:.4f} → ${last_stop:.4f}  ({net_move_pct:+.2f}%)"
+            + (f"  •  ราคาปัจจุบัน ${cur_price:.4f}" if cur_price else "")
+        )
+    lines += [
+        "",
+        "━━━━━━━━━━━━━━━━━━━━━━━━━",
+        "ℹ️ Stop เลื่อนขึ้นเพื่อล็อกกำไรที่มีอยู่ไว้บางส่วน ไม่ต้องทำอะไรเพิ่ม",
+    ]
+    return "\n".join(lines)
+
+
 def _uni_update_entry(universe_data, symbol, **fields):
     """merge field เข้า entry เดิม ไม่ทับทั้ง object — เหมือน update_universe_entry()
     ใน daily_screener.py/manual_check.py ทุกประการ (คนละไฟล์แต่ต้อง behavior
@@ -1455,6 +1499,11 @@ def main():
                 trail_enabled = stock.get("trailing_stop_enabled", True)
                 activate_pct  = stock.get("trailing_stop_activate_pct", 8.0)
                 trail_pct     = stock.get("trailing_stop_trail_pct", 5.0)
+                # threshold กันแจ้งเตือนถี่เกินไป — แจ้ง real-time เฉพาะตอนที่
+                # stop เลื่อนขึ้นสะสม >= 2% จากระดับที่เคยแจ้งไปครั้งล่าสุด
+                # (ไม่ใช่เทียบกับระดับก่อนหน้าทันที เพราะถ้าเทียบแบบนั้นการขยับ
+                # ทีละนิดต่อเนื่องจะไม่มีวันถึง threshold เลยแม้สะสมมาไกลแล้ว)
+                notify_threshold_pct = stock.get("trailing_stop_notify_threshold_pct", 2.0)
                 if trail_enabled and entry:
                     profit_from_entry_pct = (peak_now - entry) / entry * 100
                     if profit_from_entry_pct >= activate_pct:
@@ -1470,6 +1519,38 @@ def main():
                             print(f"  [Trailing Stop] {symbol}: เลื่อน stop ขึ้นเป็น "
                                   f"${trail_candidate:.4f} (peak=${peak_now:.4f}, "
                                   f"กำไรจากทุน {profit_from_entry_pct:+.1f}%)")
+
+                            # ── บันทึก log ทุกครั้งที่เลื่อน (ไม่ว่าจะแจ้งเตือน
+                            # real-time หรือไม่) ไว้ใช้สร้างสรุปประจำวันทีหลัง ──
+                            log.append({
+                                "timestamp": now_str(), "symbol": symbol,
+                                "alert_id": f"{symbol}_TRAIL_ADJUST",
+                                "type": "trailing_stop_moved", "action": "ADJUST",
+                                "price": price, "change_pct": quote["change_pct"],
+                                "value": round(trail_candidate, 4),
+                                "entry_price": entry, "pnl_pct": None,
+                                "days_held": None, "entry_alert_type": None,
+                            })
+
+                            # ── แจ้งเตือน real-time เฉพาะตอนขยับมีนัยสำคัญพอ ──
+                            last_notified = sym_state.get("open_trailing_last_notified_stop")
+                            if last_notified:
+                                move_since_notified_pct = (trail_candidate - last_notified) / last_notified * 100
+                            else:
+                                move_since_notified_pct = None  # ครั้งแรกที่ trailing เริ่มทำงาน — แจ้งเสมอ
+                            should_notify = (last_notified is None) or (move_since_notified_pct >= notify_threshold_pct)
+                            if should_notify:
+                                trail_msg = (
+                                    f"📈 <b>Trailing Stop เลื่อนขึ้น: {symbol}</b>\n"
+                                    f"🕐 {now_bkk_str()}\n\n"
+                                    f"ราคาปัจจุบัน: <b>${price:.4f}</b>  (จุดสูงสุด ${peak_now:.4f})\n"
+                                    f"กำไรจากทุน: <b>{profit_from_entry_pct:+.1f}%</b>\n"
+                                    f"🛑 Stop เลื่อนขึ้นเป็น: <b>${trail_candidate:.4f}</b>\n\n"
+                                    f"ℹ️ ป้องกันกำไรที่มีอยู่ไว้บางส่วน — ไม่ต้องทำอะไรเพิ่ม ระบบดูแลให้อัตโนมัติ"
+                                )
+                                if send_telegram(token, chat_id, trail_msg):
+                                    sym_state["open_trailing_last_notified_stop"] = trail_candidate
+                                    fired_count += 1
 
                 # ── Take Profit: ราคาถึงเป้าหมายที่ตั้งไว้ตอน BUY -> ขายทันที ──
                 # แยกจาก support_resistance เพราะ TP เป็นการ "ขายเพราะได้กำไรตาม
@@ -1507,7 +1588,8 @@ def main():
                         })
                         for _k in ("open_entry", "open_time", "open_peak", "open_stop",
                                    "open_target", "open_conviction", "open_conviction_total",
-                                   "open_alert_type", "open_stop_is_trailing", "last_buy_reminder_at"):
+                                   "open_alert_type", "open_stop_is_trailing",
+                                   "open_trailing_last_notified_stop", "last_buy_reminder_at"):
                             sym_state.pop(_k, None)
                         # position ปิดไปแล้ว — ข้าม alert loop ที่เหลือของหุ้นตัวนี้
                         # ในรอบนี้ ไปหุ้นตัวถัดไปเลย (กัน SELL/BUY ซ้ำซ้อนในรอบเดียวกัน)
@@ -1857,7 +1939,8 @@ def main():
                         # ── ปิด position: เคลียร์ open_* ทั้งหมดไม่ให้ P&L ค้าง ──
                         for _k in ("open_entry", "open_time", "open_peak", "open_stop",
                                    "open_target", "open_conviction", "open_conviction_total",
-                                   "open_alert_type", "open_stop_is_trailing", "last_buy_reminder_at"):
+                                   "open_alert_type", "open_stop_is_trailing",
+                                   "open_trailing_last_notified_stop", "last_buy_reminder_at"):
                             state[symbol].pop(_k, None)
 
 
@@ -1979,6 +2062,31 @@ def main():
             # exception จาก build_earnings_alert_message() (เช่น next_earnings_date
             # ที่เก็บไว้ผิดรูปแบบ) ไม่ให้ทำ save_json() ท้ายฟังก์ชันไม่ถูกเรียก
             print(f"[Earnings Alert] ⚠️ ERROR ไม่คาดคิด — ข้ามรอบนี้ไป: {e}")
+
+    # ── Trailing Stop Digest — สรุปวันละ 1 ครั้งว่าวันนี้เลื่อน stop ไปกี่ครั้ง ──
+    trail_digest_hour  = settings.get("trailing_stop_digest_hour_utc", summary_hour)
+    trail_digest_state = state.get("__trailing_stop_digest__", {})
+    last_trail_digest  = trail_digest_state.get("last_sent", "")
+
+    if (current_hour == trail_digest_hour
+            and (not last_trail_digest or not last_trail_digest.startswith(today_str))):
+        try:
+            print("\n[Trailing Stop Digest] กำลังสรุป...")
+            digest_msg = build_trailing_stop_digest_message(log, state, today_str)
+            if digest_msg:
+                if send_telegram(token, chat_id, digest_msg):
+                    state["__trailing_stop_digest__"] = {"last_sent": now_str()}
+                    print("[Trailing Stop Digest] ✅ ส่งสำเร็จ")
+                else:
+                    print("[Trailing Stop Digest] ❌ ส่งไม่สำเร็จ")
+            else:
+                print("[Trailing Stop Digest] วันนี้ไม่มีการเลื่อน stop เลย — ข้าม")
+                state["__trailing_stop_digest__"] = {"last_sent": now_str()}
+        except Exception as e:
+            # FIX: เหตุผลเดียวกับรายงานอื่นๆ ด้านบน — กัน exception จาก
+            # build_trailing_stop_digest_message() ไม่ให้ทำ save_json() ท้าย
+            # ฟังก์ชันไม่ถูกเรียก
+            print(f"[Trailing Stop Digest] ⚠️ ERROR ไม่คาดคิด — ข้ามรอบนี้ไป: {e}")
 
     save_json(STATE_PATH, state)
     save_json(LOG_PATH, log[-500:])
