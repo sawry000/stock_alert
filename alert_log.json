@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-08T07:04:35Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 4.159999847412109,
-    "change_pct": -16.349965868128336,
-    "value": -16.349965868128336
-  },
-  {
     "timestamp": "2026-07-08T08:04:00Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -5466,6 +5456,20 @@
     "price": 4.96999979019165,
     "change_pct": -7.483250368733237,
     "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-27T09:26:32Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.680000066757202,
+    "change_pct": -0.5405387362918386,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
