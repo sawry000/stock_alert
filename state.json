@@ -1905,14 +1905,14 @@
   },
   "PESI": {
     "PESI_MTF_BULL": {
-      "last_fired": "2026-07-27T02:42:16Z"
+      "last_fired": "2026-07-27T22:57:11Z"
     },
-    "last_buy_at": "2026-07-27T02:42:16Z",
+    "last_buy_at": "2026-07-27T22:57:11Z",
     "PESI_SL_BREAK": {
       "last_fired": "2026-07-26T02:11:58Z"
     },
     "last_sell_at": "2026-07-26T02:11:58Z",
-    "last_buy_reminder_at": "2026-07-27T02:42:16Z",
+    "last_buy_reminder_at": "2026-07-27T22:57:11Z",
     "open_entry": 15.979999542236328,
     "open_time": "2026-07-26T04:56:43Z",
     "open_peak": 16.28499984741211,
@@ -1920,8 +1920,7 @@
     "open_target": 17.2584,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_PESI_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "AGPU": {
     "AGPU_MA_DEATH": {

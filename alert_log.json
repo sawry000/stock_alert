@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-08T13:59:14Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 2.734999895095825,
-    "change_pct": -5.689658789799128,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-08T13:59:54Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MA_GOLD",
@@ -5510,6 +5500,20 @@
     "price": 7.815000057220459,
     "change_pct": 14.249375863930805,
     "value": 7.981096216194241,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-27T22:57:11Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 15.680000305175781,
+    "change_pct": -1.8773447736183928,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
