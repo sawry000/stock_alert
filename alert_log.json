@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-08T02:18:31Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 27.25,
-    "change_pct": 3.8573971240076386,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-08T02:19:03Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.609999895095825,
-    "change_pct": 3.142854145595005,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-08T02:19:10Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MTF_BULL",
@@ -5430,6 +5410,34 @@
     "price": 46.029998779296875,
     "change_pct": -9.745100432751226,
     "value": -9.745100432751226,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-27T02:25:42Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 282.39,
+    "change_pct": -9.931805373089784,
+    "value": -9.931805373089784,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-27T02:26:29Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 125.92,
+    "change_pct": -9.214131218457092,
+    "value": -9.214131218457092,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
