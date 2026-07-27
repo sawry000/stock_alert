@@ -1930,7 +1930,7 @@
     "AGPU_PCT_UP": {
       "last_fired": "2026-07-20T15:57:18Z"
     },
-    "last_buy_at": "2026-07-27T13:42:49Z",
+    "last_buy_at": "2026-07-27T18:41:52Z",
     "AGPU_SCORE_60": {
       "last_fired": "2026-07-22T08:11:58Z"
     },
@@ -1938,8 +1938,17 @@
       "last_fired": "2026-07-23T06:12:34Z"
     },
     "AGPU_VOL_3X": {
-      "last_fired": "2026-07-27T13:42:49Z"
-    }
+      "last_fired": "2026-07-27T18:41:52Z"
+    },
+    "last_buy_reminder_at": "2026-07-27T18:41:52Z",
+    "open_entry": 7.815000057220459,
+    "open_time": "2026-07-27T18:41:52Z",
+    "open_peak": 7.815000057220459,
+    "open_stop": 6.6428,
+    "open_target": 8.4402,
+    "open_conviction": 5,
+    "open_conviction_total": 5,
+    "open_alert_type": "volume_spike"
   },
   "__earnings_alert__": {
     "last_sent": "2026-07-27T02:12:43Z"
