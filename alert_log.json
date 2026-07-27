@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-08T02:19:10Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.290000915527344,
-    "change_pct": -0.816671282239494,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-08T06:38:38Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_DROP",
@@ -5438,6 +5428,20 @@
     "price": 125.92,
     "change_pct": -9.214131218457092,
     "value": -9.214131218457092,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-27T02:42:16Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 15.979999542236328,
+    "change_pct": -0.9913287345952444,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
