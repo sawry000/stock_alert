@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T02:09:23Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 19.739999771118164,
-    "change_pct": 6.587471766296785,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-09T02:18:53Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -5606,6 +5596,20 @@
     "price": 16.68000030517578,
     "change_pct": 4.576804421164778,
     "value": 63,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-28T21:57:25Z",
+    "symbol": "GLW",
+    "alert_id": "GLW_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 126.01000213623047,
+    "change_pct": -11.385371212214853,
+    "value": -11.385371212214853,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
