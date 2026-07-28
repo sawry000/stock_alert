@@ -1486,14 +1486,10 @@
       "last_fired": "2026-07-15T02:12:24Z"
     },
     "last_buy_at": "2026-07-15T02:12:24Z",
-    "last_sell_at": "2026-07-08T07:04:35Z",
-    "open_entry": 5.010000228881836,
-    "open_time": "2026-07-14T16:11:33Z",
-    "open_peak": 5.179999828338623,
-    "open_stop": 4.2585,
-    "open_target": 5.4108,
-    "open_conviction": 3,
-    "open_alert_type": "percent_change"
+    "last_sell_at": "2026-07-28T14:11:34Z",
+    "BWEN_SL_BREAK": {
+      "last_fired": "2026-07-28T14:11:34Z"
+    }
   },
   "VELO": {
     "VELO_POS_SIZE": {
@@ -1622,14 +1618,14 @@
   },
   "VPG": {
     "VPG_PCT_DROP": {
-      "last_fired": "2026-07-08T06:39:53Z"
+      "last_fired": "2026-07-28T14:11:43Z"
     },
     "open_position": true,
     "VPG_MTF_BULL": {
       "last_fired": "2026-07-02T08:09:55Z"
     },
     "last_buy_at": "2026-07-02T08:09:55Z",
-    "last_sell_at": "2026-07-08T14:24:47Z",
+    "last_sell_at": "2026-07-28T14:11:43Z",
     "VPG_MA_DEATH": {
       "last_fired": "2026-07-08T14:24:47Z"
     },
