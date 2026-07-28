@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T02:04:59Z",
-    "symbol": "LHAI",
-    "alert_id": "LHAI_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 1.4600000381469727,
-    "change_pct": 17.74193856023973,
-    "value": 4.356017947686915
-  },
-  {
     "timestamp": "2026-07-09T02:09:23Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -5602,6 +5592,20 @@
     "price": 16.729999542236328,
     "change_pct": 6.6964256520174,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-28T19:41:59Z",
+    "symbol": "BOBS",
+    "alert_id": "BOBS_SCORE_62",
+    "type": "alert_score",
+    "action": "BUY",
+    "price": 16.68000030517578,
+    "change_pct": 4.576804421164778,
+    "value": 63,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
