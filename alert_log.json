@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T02:04:57Z",
-    "symbol": "OFRM",
-    "alert_id": "OFRM_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 18.3700008392334,
-    "change_pct": -15.464824536674554,
-    "value": -15.464824536674554
-  },
-  {
     "timestamp": "2026-07-09T02:04:59Z",
     "symbol": "LHAI",
     "alert_id": "LHAI_VOL_3X",
@@ -5597,6 +5587,20 @@
     "action": "BUY",
     "price": 20.34000015258789,
     "change_pct": 2.6754172265920846,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-28T19:27:10Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 16.729999542236328,
+    "change_pct": 6.6964256520174,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
