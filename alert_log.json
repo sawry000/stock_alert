@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-08T14:49:51Z",
-    "symbol": "EVTV",
-    "alert_id": "EVTV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.850000023841858,
-    "change_pct": 0.5434795566227082,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-08T15:24:18Z",
     "symbol": "BOBS",
     "alert_id": "BOBS_PCT_DROP",
@@ -5534,6 +5524,20 @@
     "price": 4.849999904632568,
     "change_pct": -2.4144888403909737,
     "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-28T09:55:49Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 25.780000686645508,
+    "change_pct": -1.2638809396954869,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
