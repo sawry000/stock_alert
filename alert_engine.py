@@ -1178,7 +1178,14 @@ def build_info_message(stock, quote, alert_type, detail):
     return "\n".join(lines)
 
 
-def build_daily_summary(watchlist, quotes_cache):
+def build_daily_summary_messages(watchlist, quotes_cache, universe_data):
+    """
+    รายงานสรุปประจำวัน: หุ้นขึ้น/ลงแรงสุด + กลุ่มหุ้น (Sector Flow) แบบ
+    $-weighted (สูตรเดียวกับ tab Sector Flow บน dashboard_pro.html) + รายชื่อ
+    ทั้งหมดพร้อม tag ว่าอยู่ sector ไหนและ sector นั้น %เปลี่ยนแปลงเท่าไหร่
+    ต่อท้ายแต่ละหุ้น — คืนค่าเป็น list เพราะเนื้อหายาวขึ้นจากเดิมมาก อาจต้อง
+    แบ่งหลายข้อความถ้าเกิน budget ของ Telegram (เหมือน Position Status)
+    """
     gainers = sorted(
         [(s["symbol"], quotes_cache[s["symbol"]]["price"], quotes_cache[s["symbol"]]["change_pct"])
          for s in watchlist if s["symbol"] in quotes_cache and quotes_cache[s["symbol"]]["change_pct"] > 0],
@@ -1189,7 +1196,41 @@ def build_daily_summary(watchlist, quotes_cache):
          for s in watchlist if s["symbol"] in quotes_cache and quotes_cache[s["symbol"]]["change_pct"] < 0],
         key=lambda x: x[2],
     )
-    lines = [
+
+    # ── จัดกลุ่มตาม sector (last_sector จาก universe.json ที่ daily_screener.py
+    # เขียนไว้) แล้วเฉลี่ย % เปลี่ยนแปลงแบบถ่วงน้ำหนักด้วยมูลค่าซื้อขาย
+    # (price × volume) เหมือน renderSectorFlow() บน dashboard เป๊ะ — หุ้นที่
+    # ไม่เคยถูก scan จะตกไปกอง "อื่นๆ / ยังไม่จัดกลุ่ม" ──
+    sector_of = {}
+    groups = {}
+    for stock in watchlist:
+        sym = stock["symbol"]
+        q = quotes_cache.get(sym)
+        if not q:
+            continue
+        entry  = _uni_find_entry(universe_data, sym)
+        sector = (entry.get("last_sector") if entry else None) or "อื่นๆ / ยังไม่จัดกลุ่ม"
+        if sector == "Unknown":
+            sector = "อื่นๆ / ยังไม่จัดกลุ่ม"
+        sector_of[sym] = sector
+        dv = (q["price"] * q["volume"]) if q.get("volume") else 0
+        groups.setdefault(sector, []).append((q["change_pct"], dv))
+
+    sector_avg = {}
+    for sector, changes in groups.items():
+        weightable = [(c, dv) for c, dv in changes if dv and dv > 0]
+        if weightable:
+            sum_dv = sum(dv for _, dv in weightable)
+            avg = sum(c * dv for c, dv in weightable) / sum_dv
+        else:
+            avg = sum(c for c, _ in changes) / len(changes)
+        up   = len([c for c, _ in changes if c >= 0])
+        down = len(changes) - up
+        sector_avg[sector] = {"avg": avg, "up": up, "down": down, "n": len(changes)}
+
+    sorted_sectors = sorted(sector_avg.items(), key=lambda kv: -kv[1]["avg"])
+
+    header_lines = [
         "<b>📊 สรุปประจำวัน — Stock Alert Pro v3.1</b>",
         f"🕐 {now_bkk_str()}", "",
         f"ขึ้น: {len(gainers)} ตัว  |  ลง: {len(losers)} ตัว  |  ดูอยู่: {len(watchlist)} ตัว",
@@ -1197,29 +1238,72 @@ def build_daily_summary(watchlist, quotes_cache):
         "<b>🔥 ขึ้นแรงสุด 5 ตัว:</b>",
     ]
     for sym, p, chg in gainers[:5]:
-        lines.append(f"  📈 <b>{sym}</b> ${p:.2f}  +{chg:.1f}%")
-    lines += ["", "<b>💧 ลงแรงสุด 5 ตัว:</b>"]
+        header_lines.append(f"  📈 <b>{sym}</b> ${p:.2f}  +{chg:.1f}%")
+    header_lines += ["", "<b>💧 ลงแรงสุด 5 ตัว:</b>"]
     for sym, p, chg in losers[:5]:
-        lines.append(f"  📉 <b>{sym}</b> ${p:.2f}  {chg:.1f}%")
-    lines += [
-        "", "━━━━━━━━━━━━━━━━━━━━━━━━━",
-        "<b>📋 รายชื่อทั้งหมด:</b>",
-    ]
+        header_lines.append(f"  📉 <b>{sym}</b> ${p:.2f}  {chg:.1f}%")
+
+    header_lines += ["", "━━━━━━━━━━━━━━━━━━━━━━━━━", "<b>🌐 กลุ่มหุ้น (Sector Flow):</b>"]
+    for sector, info in sorted_sectors:
+        arr = "📈" if info["avg"] >= 0 else "📉"
+        sgn = "+" if info["avg"] >= 0 else ""
+        header_lines.append(
+            f"  {arr} <b>{sector}</b>  {sgn}{info['avg']:.2f}%  "
+            f"({info['n']} ตัว — ขึ้น {info['up']}/ลง {info['down']})"
+        )
+
+    header_lines += ["", "━━━━━━━━━━━━━━━━━━━━━━━━━", "<b>📋 รายชื่อทั้งหมด:</b>"]
+    header = "\n".join(header_lines)
+
+    blocks = []
     for stock in watchlist:
         sym = stock["symbol"]
         q   = quotes_cache.get(sym)
         if not q:
-            lines.append(f"  • {sym} — ไม่มีข้อมูล")
+            blocks.append(f"  • {sym} — ไม่มีข้อมูล")
             continue
-        arr = "📈" if q["change_pct"] >= 0 else "📉"
-        sgn = "+" if q["change_pct"] >= 0 else ""
-        lines.append(f"  • <b>{sym}</b> ${q['price']:.2f}  {arr} {sgn}{q['change_pct']:.1f}%")
-    lines += [
-        "", "━━━━━━━━━━━━━━━━━━━━━━━━━",
-        "💡 กฎสำคัญ: ตั้ง Stop Loss ทุกครั้ง | งบ $100/หุ้น",
-        f"🤖 Stock Alert Pro v3.1  •  {now_bkk_str()}",
-    ]
-    return "\n".join(lines)
+        arr    = "📈" if q["change_pct"] >= 0 else "📉"
+        sgn    = "+" if q["change_pct"] >= 0 else ""
+        sector = sector_of.get(sym, "อื่นๆ / ยังไม่จัดกลุ่ม")
+        sec    = sector_avg.get(sector, {"avg": 0.0})
+        sec_arr = "📈" if sec["avg"] >= 0 else "📉"
+        sec_sgn = "+" if sec["avg"] >= 0 else ""
+        blocks.append(
+            f"  • <b>{sym}</b> ${q['price']:.2f}  {arr} {sgn}{q['change_pct']:.1f}%  "
+            f"<i>[{sector} {sec_arr}{sec_sgn}{sec['avg']:.1f}%]</i>"
+        )
+
+    footer = (
+        "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        "💡 กฎสำคัญ: ตั้ง Stop Loss ทุกครั้ง | งบ $100/หุ้น\n"
+        f"🤖 Stock Alert Pro v3.1  •  {now_bkk_str()}"
+    )
+
+    # ── แบ่งเป็นหลายข้อความถ้ายาวเกิน budget (join ด้วย "\n" เดี่ยว รักษา
+    # รูปแบบรายการหุ้นบรรทัดเดียวต่อตัวแบบเดิม ไม่ใช่บล็อกเว้นบรรทัดแบบ
+    # Position Status) ──
+    messages = []
+    current_parts = [header]
+    current_len   = len(header)
+    for block in blocks:
+        if current_len + len(block) + 1 > TELEGRAM_MSG_BUDGET:
+            messages.append("\n".join(current_parts))
+            current_parts = [block]
+            current_len   = len(block)
+        else:
+            current_parts.append(block)
+            current_len += len(block) + 1
+    if current_parts:
+        messages.append("\n".join(current_parts))
+
+    messages[-1] += footer
+
+    total = len(messages)
+    if total > 1:
+        for i in range(total):
+            messages[i] += f"\n\n📄 หน้า {i + 1}/{total}"
+
+    return messages
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -1992,11 +2076,18 @@ def main():
             and quotes_cache):
         try:
             print("\n[Daily Summary] กำลังส่ง...")
-            msg     = build_daily_summary(watchlist, quotes_cache)
-            success = send_telegram(token, chat_id, msg)
-            if success:
+            summary_msgs = build_daily_summary_messages(watchlist, quotes_cache, universe_data)
+            all_ok = True
+            for i, smsg in enumerate(summary_msgs):
+                ok = send_telegram(token, chat_id, smsg)
+                all_ok = all_ok and ok
+                if i < len(summary_msgs) - 1:
+                    time.sleep(0.5)
+            if all_ok:
                 state["__daily_summary__"] = {"last_sent": now_str()}
-                print("[Daily Summary] ✅ ส่งสำเร็จ")
+                print(f"[Daily Summary] ✅ ส่งสำเร็จ ({len(summary_msgs)} ข้อความ)")
+            else:
+                print("[Daily Summary] ❌ ส่งไม่สำเร็จบางข้อความ")
         except Exception as e:
             # FIX: กันเหตุการณ์แบบเดียวกับ per-stock loop ด้านบน — ถ้า
             # build_daily_summary()/send_telegram() พังด้วยเหตุผลอะไรก็ตาม
