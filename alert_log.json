@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-08T22:54:28Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7000000476837158,
-    "change_pct": -0.4916853381107527,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-08T22:54:52Z",
-    "symbol": "EVTV",
-    "alert_id": "EVTV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.8600000143051147,
-    "change_pct": 1.0869572991910144,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T02:03:49Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -5586,6 +5566,34 @@
     "price": 109.11000061035156,
     "change_pct": -10.153161552740807,
     "value": -10.153161552740807,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-28T14:40:59Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 82.37999725341797,
+    "change_pct": -4.120114928517263,
+    "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-28T14:41:25Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 91.75,
+    "change_pct": -6.786548816417766,
+    "value": 0,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
