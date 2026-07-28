@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T02:18:53Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.150000095367432,
-    "change_pct": -2.2257536507562543,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-09T02:24:38Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.569999933242798,
-    "change_pct": -2.191782650882248,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-09T02:24:52Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MTF_BULL",
@@ -5610,6 +5590,34 @@
     "price": 126.01000213623047,
     "change_pct": -11.385371212214853,
     "value": -11.385371212214853,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-28T22:26:49Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 32.40999984741211,
+    "change_pct": -11.016542391620263,
+    "value": -11.016542391620263,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-28T22:26:54Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 3.9700000286102295,
+    "change_pct": -17.37773093423039,
+    "value": -17.37773093423039,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
