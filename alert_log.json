@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T03:10:06Z",
-    "symbol": "BLIN",
-    "alert_id": "BLIN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.25,
-    "change_pct": -1.5748031496063006,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-09T04:34:42Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.28000020980835,
-    "change_pct": -2.947841047429717,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T04:50:43Z",
     "symbol": "AOUT",
     "alert_id": "AOUT_MTF_BULL",
@@ -5622,6 +5602,34 @@
     "price": 18.760000228881836,
     "change_pct": 5.57297100616125,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-29T06:10:39Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 26.350000381469727,
+    "change_pct": 0.9191895115654045,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-29T06:11:44Z",
+    "symbol": "GLW",
+    "alert_id": "GLW_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 126.01000213623047,
+    "change_pct": -11.385371212214853,
+    "value": -11.385371212214853,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
