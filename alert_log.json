@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T07:04:43Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7000000476837158,
-    "change_pct": -0.4916853381107527,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T07:05:12Z",
     "symbol": "EVTV",
     "alert_id": "EVTV_MTF_BULL",
@@ -5642,6 +5632,20 @@
     "price": 20.799999237060547,
     "change_pct": 0.8240389581218995,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-29T13:41:54Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 3.869999885559082,
+    "change_pct": -7.41627068040473,
+    "value": 0,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,

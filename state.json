@@ -856,7 +856,7 @@
     "open_entry": 19.739999771118164,
     "open_time": "2026-07-09T02:09:23Z",
     "last_buy_at": "2026-07-29T10:56:34Z",
-    "open_peak": 21.0,
+    "open_peak": 21.210100173950195,
     "open_stop": 16.9393,
     "open_target": 21.3192,
     "open_conviction": 3,
@@ -1491,9 +1491,12 @@
       "last_fired": "2026-07-15T02:12:24Z"
     },
     "last_buy_at": "2026-07-15T02:12:24Z",
-    "last_sell_at": "2026-07-29T06:41:20Z",
+    "last_sell_at": "2026-07-29T13:41:54Z",
     "BWEN_SL_BREAK": {
       "last_fired": "2026-07-28T14:11:34Z"
+    },
+    "BWEN_MA_DEATH": {
+      "last_fired": "2026-07-29T13:41:54Z"
     }
   },
   "VELO": {
@@ -1619,7 +1622,8 @@
     "ZVIA_MA_DEATH": {
       "last_fired": "2026-07-28T03:27:01Z"
     },
-    "last_sell_at": "2026-07-28T03:27:01Z"
+    "last_sell_at": "2026-07-28T03:27:01Z",
+    "_confirm_ZVIA_MTF_BULL": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1685,7 +1689,8 @@
     "RFIL_MA_DEATH": {
       "last_fired": "2026-07-08T13:36:08Z"
     },
-    "last_sell_at": "2026-07-08T13:36:08Z"
+    "last_sell_at": "2026-07-08T13:36:08Z",
+    "_confirm_RFIL_RSI_OS": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1963,7 +1968,7 @@
     "last_buy_reminder_at": "2026-07-29T02:27:05Z",
     "open_entry": 18.760000228881836,
     "open_time": "2026-07-29T02:27:05Z",
-    "open_peak": 18.760000228881836,
+    "open_peak": 19.040000915527344,
     "open_stop": 15.946,
     "open_target": 20.2608,
     "open_conviction": 5,
