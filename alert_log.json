@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T07:05:12Z",
-    "symbol": "EVTV",
-    "alert_id": "EVTV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.8600000143051147,
-    "change_pct": 1.0869572991910144,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-09T08:15:51Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.520000457763672,
-    "change_pct": -1.2383883213480185,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T10:21:07Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -5650,5 +5630,33 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-29T13:55:47Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 26.834999084472656,
+    "change_pct": 3.7702980838076448,
+    "value": 25.4932,
+    "entry_price": 24.565000534057617,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-29T13:55:49Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 26.834999084472656,
+    "change_pct": 3.7702980838076448,
+    "value": 26.5302,
+    "entry_price": 24.565000534057617,
+    "pnl_pct": 9.2408,
+    "days_held": 2.01,
+    "entry_alert_type": "mtf_alignment"
   }
 ]
