@@ -1956,6 +1956,18 @@
     "last_sent": "2026-07-29T02:12:10Z"
   },
   "RELL": {
-    "_confirm_RELL_MTF_BULL": 1
+    "RELL_MTF_BULL": {
+      "last_fired": "2026-07-29T02:27:05Z"
+    },
+    "last_buy_at": "2026-07-29T02:27:05Z",
+    "last_buy_reminder_at": "2026-07-29T02:27:05Z",
+    "open_entry": 18.760000228881836,
+    "open_time": "2026-07-29T02:27:05Z",
+    "open_peak": 18.760000228881836,
+    "open_stop": 15.946,
+    "open_target": 20.2608,
+    "open_conviction": 5,
+    "open_conviction_total": 5,
+    "open_alert_type": "mtf_alignment"
   }
 }
