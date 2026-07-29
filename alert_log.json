@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T04:50:43Z",
-    "symbol": "AOUT",
-    "alert_id": "AOUT_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 13.930000305175781,
-    "change_pct": 0.07184127281452098,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-09T05:05:39Z",
-    "symbol": "LHAI",
-    "alert_id": "LHAI_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 1.4600000381469727,
-    "change_pct": 17.74193856023973,
-    "value": 4.0665909818037305
-  },
-  {
     "timestamp": "2026-07-09T06:02:23Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -5630,6 +5610,34 @@
     "price": 126.01000213623047,
     "change_pct": -11.385371212214853,
     "value": -11.385371212214853,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-29T06:41:17Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 32.41,
+    "change_pct": -11.016541972681729,
+    "value": -11.016541972681729,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-29T06:41:20Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 3.97,
+    "change_pct": -17.377731529656597,
+    "value": -17.377731529656597,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
