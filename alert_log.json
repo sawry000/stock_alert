@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T10:26:33Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.569999933242798,
-    "change_pct": -1.8699496355340446e-06,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-09T10:26:44Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MTF_BULL",
@@ -5670,5 +5660,19 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-29T15:56:56Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 1.9450000524520874,
+    "change_pct": -3.7128686904907235,
+    "value": 1.9450000524520874,
+    "entry_price": 2.299999952316284,
+    "pnl_pct": -15.4348,
+    "days_held": 7.95,
+    "entry_alert_type": "mtf_alignment"
   }
 ]
