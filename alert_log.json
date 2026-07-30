@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T18:27:08Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.399999618530273,
-    "change_pct": 1.2106756281952786,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-09T20:12:17Z",
     "symbol": "EVTV",
     "alert_id": "EVTV_MTF_BULL",
@@ -5758,5 +5748,19 @@
     "pnl_pct": 8.3009,
     "days_held": 21.55,
     "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-30T17:41:41Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 21.399999618530273,
+    "change_pct": 2.884613550626311,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]
