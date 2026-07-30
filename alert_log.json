@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T18:26:51Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 20.379499435424805,
-    "change_pct": 3.7124653202280213,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-09T18:26:55Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.569999933242798,
-    "change_pct": -1.8699496355340446e-06,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-09T18:27:08Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MTF_BULL",
@@ -5750,5 +5730,33 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-30T15:26:29Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 21.378599166870117,
+    "change_pct": 2.7817267637986367,
+    "value": 20.3097,
+    "entry_price": 19.739999771118164,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-30T15:26:30Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 21.378599166870117,
+    "change_pct": 2.7817267637986367,
+    "value": 21.3192,
+    "entry_price": 19.739999771118164,
+    "pnl_pct": 8.3009,
+    "days_held": 21.55,
+    "entry_alert_type": "mtf_alignment"
   }
 ]
