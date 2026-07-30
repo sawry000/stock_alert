@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T13:57:08Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 75.83999633789062,
-    "change_pct": 1.1874534194671411,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-09T13:57:11Z",
-    "symbol": "ALGM",
-    "alert_id": "ALGM_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 56.52000045776367,
-    "change_pct": 8.275862945907411,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T13:57:14Z",
     "symbol": "NEOV",
     "alert_id": "NEOV_MTF_BULL",
@@ -5702,6 +5682,34 @@
     "price": 25.010000228881836,
     "change_pct": -14.353127330352292,
     "value": -14.353127330352292,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-30T03:55:50Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 18.239999771118164,
+    "change_pct": -14.60674264457788,
+    "value": -14.60674264457788,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-30T03:56:08Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 25.0,
+    "change_pct": -14.387373164893344,
+    "value": -14.387373164893344,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
