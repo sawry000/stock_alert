@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T16:25:45Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.59000015258789,
-    "change_pct": -0.9674916695515062,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T18:26:10Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -5734,6 +5724,20 @@
     "price": 18.084999084472656,
     "change_pct": 10.006077156159702,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-30T14:27:49Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 73.18000030517578,
+    "change_pct": 5.143678599390499,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
