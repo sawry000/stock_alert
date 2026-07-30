@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T13:57:14Z",
-    "symbol": "NEOV",
-    "alert_id": "NEOV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 2.5350000858306885,
-    "change_pct": 1.5421624606724738,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T14:11:16Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -5710,6 +5700,20 @@
     "price": 25.0,
     "change_pct": -14.387373164893344,
     "value": -14.387373164893344,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-30T08:11:43Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 20.690000534057617,
+    "change_pct": -0.5288435862614592,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
