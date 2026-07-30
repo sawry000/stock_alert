@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T21:26:44Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.659999847412109,
-    "change_pct": 8.878501107759558,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-09T21:40:42Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_BULL",
@@ -5770,5 +5760,19 @@
     "pnl_pct": 8.5093,
     "days_held": 3.04,
     "entry_alert_type": "volume_spike"
+  },
+  {
+    "timestamp": "2026-07-30T21:27:08Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 8.5,
+    "change_pct": 22.22653609996693,
+    "value": 22.22653609996693,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]

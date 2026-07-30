@@ -1954,9 +1954,9 @@
     },
     "last_sell_at": "2026-07-30T19:42:20Z",
     "AGPU_PCT_UP": {
-      "last_fired": "2026-07-20T15:57:18Z"
+      "last_fired": "2026-07-30T21:27:08Z"
     },
-    "last_buy_at": "2026-07-27T18:41:52Z",
+    "last_buy_at": "2026-07-30T21:27:08Z",
     "AGPU_SCORE_60": {
       "last_fired": "2026-07-22T08:11:58Z"
     },
@@ -1965,7 +1965,16 @@
     },
     "AGPU_VOL_3X": {
       "last_fired": "2026-07-27T18:41:52Z"
-    }
+    },
+    "last_buy_reminder_at": "2026-07-30T21:27:08Z",
+    "open_entry": 8.5,
+    "open_time": "2026-07-30T21:27:08Z",
+    "open_peak": 8.5,
+    "open_stop": 7.225,
+    "open_target": 9.18,
+    "open_conviction": 4,
+    "open_conviction_total": 5,
+    "open_alert_type": "percent_change"
   },
   "__earnings_alert__": {
     "last_sent": "2026-07-30T02:11:58Z"
