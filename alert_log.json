@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T20:12:17Z",
-    "symbol": "EVTV",
-    "alert_id": "EVTV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.8300000429153442,
-    "change_pct": 0.8153395171520667,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-09T20:27:15Z",
-    "symbol": "BLIN",
-    "alert_id": "BLIN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.2400000095367432,
-    "change_pct": -2.277562492178797,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T21:26:44Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MTF_BULL",
@@ -5762,5 +5742,33 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-30T19:42:19Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.479999542236328,
+    "change_pct": 21.93893766786489,
+    "value": 8.056,
+    "entry_price": 7.815000057220459,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-30T19:42:20Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 8.479999542236328,
+    "change_pct": 21.93893766786489,
+    "value": 8.4402,
+    "entry_price": 7.815000057220459,
+    "pnl_pct": 8.5093,
+    "days_held": 3.04,
+    "entry_alert_type": "volume_spike"
   }
 ]
