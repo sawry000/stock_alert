@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T22:41:37Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 95.80000305175781,
-    "change_pct": 10.751448614748917,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T23:26:47Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MTF_BULL",
@@ -5806,5 +5796,19 @@
     "pnl_pct": -10.1579,
     "days_held": 22.37,
     "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-31T13:56:28Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 21.899999618530273,
+    "change_pct": 1.624128160233284,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]
