@@ -1654,7 +1654,7 @@
       "last_fired": "2026-07-28T03:27:01Z"
     },
     "last_sell_at": "2026-07-28T03:27:01Z",
-    "_confirm_ZVIA_MTF_BULL": 1
+    "_confirm_ZVIA_MA_GOLD": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1767,19 +1767,28 @@
   },
   "AMBA": {
     "AMBA_MTF_BULL": {
-      "last_fired": "2026-07-31T10:56:50Z"
+      "last_fired": "2026-07-31T19:13:04Z"
     },
-    "last_buy_at": "2026-07-31T10:56:50Z",
+    "last_buy_at": "2026-07-31T19:13:04Z",
     "AMBA_MA_GOLD": {
-      "last_fired": "2026-07-01T13:59:35Z"
+      "last_fired": "2026-07-31T19:13:01Z"
     },
     "AMBA_MA_DEATH": {
       "last_fired": "2026-07-16T16:42:09Z"
     },
     "last_sell_at": "2026-07-31T16:42:19Z",
-    "_confirm_AMBA_MA_GOLD": 1,
-    "_confirm_AMBA_SCORE_65": 1,
-    "_confirm_AMBA_MTF_BULL": 1
+    "last_buy_reminder_at": "2026-07-31T19:13:04Z",
+    "open_entry": 86.55500030517578,
+    "open_time": "2026-07-31T19:13:01Z",
+    "open_peak": 86.55500030517578,
+    "open_stop": 73.5718,
+    "open_target": 93.4794,
+    "open_conviction": 5,
+    "open_conviction_total": 5,
+    "open_alert_type": "ma_crossover",
+    "AMBA_SCORE_65": {
+      "last_fired": "2026-07-31T19:13:02Z"
+    }
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
