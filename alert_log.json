@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-10T02:41:02Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 35.45000076293945,
-    "change_pct": -1.5266815105183051,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-10T02:41:26Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 20.329999923706055,
-    "change_pct": 3.4605594081733138,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-10T02:41:29Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MTF_BULL",
@@ -5826,6 +5806,34 @@
     "price": 1.190000057220459,
     "change_pct": 4.3859699316192176,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-31T18:42:10Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 1.7400000095367432,
+    "change_pct": 7.40740799609525,
+    "value": 2.276,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-31T18:42:13Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7400000095367432,
+    "change_pct": 7.40740799609525,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,

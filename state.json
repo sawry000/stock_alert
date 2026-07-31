@@ -1654,7 +1654,7 @@
       "last_fired": "2026-07-28T03:27:01Z"
     },
     "last_sell_at": "2026-07-28T03:27:01Z",
-    "_confirm_ZVIA_MTF_BULL": 1
+    "_confirm_ZVIA_MA_GOLD": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -2005,11 +2005,21 @@
   },
   "LUNG": {
     "LUNG_MTF_BULL": {
-      "last_fired": "2026-07-31T02:27:22Z"
+      "last_fired": "2026-07-31T18:42:13Z"
     },
-    "last_buy_at": "2026-07-31T02:27:22Z",
+    "last_buy_at": "2026-07-31T18:42:13Z",
     "last_sell_at": "2026-07-31T16:13:20Z",
-    "_confirm_LUNG_MA_GOLD": 1,
-    "_confirm_LUNG_MTF_BULL": 1
+    "LUNG_MA_GOLD": {
+      "last_fired": "2026-07-31T18:42:10Z"
+    },
+    "last_buy_reminder_at": "2026-07-31T18:42:13Z",
+    "open_entry": 1.7400000095367432,
+    "open_time": "2026-07-31T18:42:10Z",
+    "open_peak": 1.7400000095367432,
+    "open_stop": 1.479,
+    "open_target": 1.8792,
+    "open_conviction": 4,
+    "open_conviction_total": 5,
+    "open_alert_type": "ma_crossover"
   }
 }
