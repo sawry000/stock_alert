@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T23:26:47Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.420000076293945,
-    "change_pct": 4.839647110022533,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-09T23:57:04Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7699999809265137,
-    "change_pct": 6.6265048750911895,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-10T02:10:46Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -5810,5 +5790,33 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-31T16:13:19Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 1.749899983406067,
+    "change_pct": 8.018517494201653,
+    "value": 1.6624,
+    "entry_price": 1.6100000143051147,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-31T16:13:20Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 1.749899983406067,
+    "change_pct": 8.018517494201653,
+    "value": 1.7388,
+    "entry_price": 1.6100000143051147,
+    "pnl_pct": 8.6894,
+    "days_held": 0.57,
+    "entry_alert_type": "mtf_alignment"
   }
 ]
