@@ -1998,6 +1998,18 @@
     "open_alert_type": "mtf_alignment"
   },
   "LUNG": {
-    "_confirm_LUNG_MTF_BULL": 1
+    "LUNG_MTF_BULL": {
+      "last_fired": "2026-07-31T02:27:22Z"
+    },
+    "last_buy_at": "2026-07-31T02:27:22Z",
+    "last_buy_reminder_at": "2026-07-31T02:27:22Z",
+    "open_entry": 1.6100000143051147,
+    "open_time": "2026-07-31T02:27:22Z",
+    "open_peak": 1.6100000143051147,
+    "open_stop": 1.3685,
+    "open_target": 1.7388,
+    "open_conviction": 4,
+    "open_conviction_total": 5,
+    "open_alert_type": "mtf_alignment"
   }
 }

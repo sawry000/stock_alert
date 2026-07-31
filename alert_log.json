@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T21:40:42Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 417.45001220703125,
-    "change_pct": 5.416669749250316,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T21:42:23Z",
     "symbol": "AOUT",
     "alert_id": "AOUT_MTF_BULL",
@@ -5770,6 +5760,20 @@
     "price": 8.5,
     "change_pct": 22.22653609996693,
     "value": 22.22653609996693,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-31T02:27:22Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.6100000143051147,
+    "change_pct": 16.666667703269194,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
