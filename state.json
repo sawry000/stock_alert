@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-07-30T02:11:55Z"
+    "last_sent": "2026-07-31T02:12:30Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -1927,7 +1927,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-07-30T02:11:57Z"
+    "last_sent": "2026-07-31T02:12:32Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -1977,10 +1977,10 @@
     "open_alert_type": "percent_change"
   },
   "__earnings_alert__": {
-    "last_sent": "2026-07-30T02:11:58Z"
+    "last_sent": "2026-07-31T02:12:32Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-07-30T02:11:58Z"
+    "last_sent": "2026-07-31T02:12:32Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -1996,5 +1996,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_alert_type": "mtf_alignment"
+  },
+  "LUNG": {
+    "_confirm_LUNG_MTF_BULL": 1
   }
 }
