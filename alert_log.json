@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-10T04:56:56Z",
-    "symbol": "BLIN",
-    "alert_id": "BLIN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.2400000095367432,
-    "change_pct": -2.277562492178797,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-10T05:55:44Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_BULL",
@@ -5846,6 +5836,20 @@
     "price": 86.55500030517578,
     "change_pct": 15.406667073567709,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-31T19:26:04Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 1.958799958229065,
+    "change_pct": 11.931426184517997,
+    "value": 11.931426184517997,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
