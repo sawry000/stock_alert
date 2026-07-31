@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-09T22:27:07Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 78.37999725341797,
-    "change_pct": 4.576380591618367,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-09T22:27:11Z",
-    "symbol": "ALGM",
-    "alert_id": "ALGM_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 57.380001068115234,
-    "change_pct": 9.92337369370734,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-09T22:41:37Z",
     "symbol": "MXL",
     "alert_id": "MXL_MTF_BULL",
@@ -5798,5 +5778,33 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-31T13:40:44Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 329.9700012207031,
+    "change_pct": 2.1578951147687695,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-31T13:42:13Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 12.515000343322754,
+    "change_pct": -1.0671909618754658,
+    "value": 0,
+    "entry_price": 13.930000305175781,
+    "pnl_pct": -10.1579,
+    "days_held": 22.37,
+    "entry_alert_type": "mtf_alignment"
   }
 ]
