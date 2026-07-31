@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-10T02:10:46Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.6299991607666,
-    "change_pct": -0.8126967462592813,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-10T02:12:26Z",
-    "symbol": "CCTC",
-    "alert_id": "CCTC_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 3.0199999809265137,
-    "change_pct": -21.963822474629673,
-    "value": -21.963822474629673
-  },
-  {
-    "timestamp": "2026-07-10T02:40:59Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.28000020980835,
-    "change_pct": 2.9508231116122947,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-10T02:41:02Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -5818,5 +5788,47 @@
     "pnl_pct": 8.6894,
     "days_held": 0.57,
     "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-31T16:42:18Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 86.7300033569336,
+    "change_pct": 15.640004475911459,
+    "value": 82.3935,
+    "entry_price": 71.30000305175781,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-07-31T16:42:19Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 86.7300033569336,
+    "change_pct": 15.640004475911459,
+    "value": 77.004,
+    "entry_price": 71.30000305175781,
+    "pnl_pct": 21.641,
+    "days_held": 9.85,
+    "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-07-31T16:42:35Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.190000057220459,
+    "change_pct": 4.3859699316192176,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]
