@@ -339,6 +339,83 @@ def build_earnings_alert_message(watchlist, universe_data, threshold_days):
     return "\n".join(lines)
 
 
+def build_universe_earnings_digest_messages(universe_data, watchlist, threshold_days):
+    """
+    สรุปวันประกาศผลประกอบการของหุ้นทั้ง Universe (ไม่ใช่แค่ watchlist เหมือน
+    build_earnings_alert_message) — สำหรับคนที่อยากเล่นตามช่วงประกาศผลโดยตรง
+    ไม่จำกัดแค่หุ้นที่ติดตามอยู่แล้ว ตั้งใจให้ threshold กว้างกว่าเวอร์ชัน
+    watchlist เพราะเป็นเครื่องมือ "หาโอกาสใหม่" ไม่ใช่แค่เตือนของที่ถืออยู่
+    คืนค่าเป็น list เพราะจำนวนหุ้นทั้ง universe เยอะกว่ามาก (~1000+ ตัว) อาจมี
+    หลายสิบตัวที่เข้าเงื่อนไขพร้อมกัน ต้องแบ่งหน้าเหมือนรายงานอื่นๆ
+    """
+    today    = now_utc().date()
+    wl_syms  = {s.get("symbol", "").upper() for s in watchlist}
+    upcoming = []
+    for entry in universe_data.get("universe", []):
+        if isinstance(entry, str):
+            continue  # entry แบบ string เปล่าไม่เคยมี next_earnings_date อยู่แล้ว
+        sym      = entry.get("symbol", "")
+        earn_str = entry.get("next_earnings_date")
+        if not sym or not earn_str:
+            continue
+        try:
+            earn_date = datetime.fromisoformat(earn_str).date()
+        except (ValueError, TypeError):
+            continue
+        days_left = (earn_date - today).days
+        if 0 <= days_left <= threshold_days:
+            in_wl = sym.upper() in wl_syms
+            upcoming.append((days_left, sym, earn_date, in_wl))
+
+    if not upcoming:
+        return []
+
+    upcoming.sort(key=lambda x: (x[0], x[1]))
+
+    header = (
+        "📅 <b>ปฏิทินประกาศผลประกอบการ — Universe</b>\n"
+        f"🕐 {now_bkk_str()}\n\n"
+        f"หุ้นทั้ง Universe ที่จะประกาศผลภายใน {threshold_days} วัน: {len(upcoming)} ตัว\n"
+        "(⭐ = อยู่ใน Watchlist อยู่แล้ว)"
+    )
+
+    blocks = []
+    for days_left, sym, earn_date, in_wl in upcoming:
+        when = "วันนี้!" if days_left == 0 else ("พรุ่งนี้" if days_left == 1 else f"อีก {days_left} วัน")
+        star = "⭐ " if in_wl else "  "
+        blocks.append(f"{star}📊 <b>{sym}</b> — {earn_date.strftime('%d/%m/%Y')} ({when})")
+
+    footer = (
+        "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        "⚠️ ผลประกอบการมักทำให้ราคาผันผวนแรง — ตัวที่ยังไม่อยู่ใน Watchlist "
+        "จะไม่มี BUY/SELL signal อัตโนมัติให้ ต้องติดตาม/เข้าเองถ้าสนใจเล่นรอบนี้"
+    )
+
+    # ── แบ่งหน้าถ้ายาวเกิน budget (เหมือนรายงานอื่นๆ) ──
+    messages = []
+    current_parts = [header]
+    current_len   = len(header)
+    for block in blocks:
+        if current_len + len(block) + 1 > TELEGRAM_MSG_BUDGET:
+            messages.append("\n".join(current_parts))
+            current_parts = [block]
+            current_len   = len(block)
+        else:
+            current_parts.append(block)
+            current_len += len(block) + 1
+    if current_parts:
+        messages.append("\n".join(current_parts))
+
+    messages[-1] += footer
+
+    total = len(messages)
+    if total > 1:
+        for i in range(total):
+            messages[i] += f"\n\n📄 หน้า {i + 1}/{total}"
+
+    return messages
+
+
 def build_trailing_stop_digest_message(log, state, today_str):
     """
     สรุปการเลื่อน Trailing Stop ของวันนี้ทั้งหมด (ไม่ว่าจะเคยแจ้งเตือน
@@ -1131,18 +1208,43 @@ def build_buy_message(stock, quote, alert_type, detail, pos):
 
 
 def build_sell_message(stock, quote, reason, detail=""):
-    emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, "🛑")
+    _emoji, symbol, name, price, pct, arrow, sign, tv = _header(stock, quote, "🛑")
+
     reason_th = {
         "sl_break":      "🛑 หลุด Stop Loss / แนวรับสำคัญ",
         "death_cross":   "💀 Death Cross — EMA9 ตัดลงใต้ EMA21",
         "pct_drop":      f"📉 ราคาลง {abs(pct):.1f}% วันเดียว",
         "score_bear":    "🔴 Confidence Score ขาลงสูง",
         "take_profit":   "🎯 ถึงเป้าหมายกำไร (Take Profit) ตามแผน",
-        "trailing_stop": "📉 หลุด Trailing Stop — ป้องกันกำไรที่สะสมมาไว้",
+        "trailing_stop": "📈 หลุด Trailing Stop — ล็อกกำไรที่สะสมมาไว้",
     }.get(reason, reason)
 
+    # FIX: เดิมทุก reason (ทั้งขาดทุนจริงและกำไรตามแผน) ใช้ header "🛑 SELL
+    # SIGNAL" กับ action steps "ขายออกทันที — อย่ารอ / อย่า average down"
+    # เหมือนกันหมด — พอเป็นเคส take_profit หรือ trailing_stop ที่จริงๆ คือ
+    # ปิดสถานะได้กำไรตามแผน คำเตือนโทนนี้เข้ากับบริบทไม่ได้เลย (เหมือนกำลัง
+    # เตือนภัยทั้งที่เป็นข่าวดี) แยกโทนข้อความเป็น 2 แบบตามความหมายจริงแทน
+    is_profit_exit = reason in ("take_profit", "trailing_stop")
+
+    if is_profit_exit:
+        header_line  = f"✅ <b>ปิดสถานะทำกำไร: {symbol}</b> ({name})"
+        action_lines = [
+            "📌 <b>สิ่งที่ควรทำ:</b>",
+            "  1️⃣ ล็อกกำไรตามแผนเรียบร้อยแล้ว",
+            "  2️⃣ ถ้ายังไม่ได้ auto-trade ให้ขายในโบรกเกอร์ตามสัญญาณทันที",
+            "  3️⃣ รอ BUY signal ใหม่ก่อน re-entry เหมือนเดิม",
+        ]
+    else:
+        header_line  = f"🛑 <b>SELL SIGNAL: {symbol}</b> ({name})"
+        action_lines = [
+            "📌 <b>สิ่งที่ควรทำ:</b>",
+            "  1️⃣ ขายออกทันที — อย่ารอ",
+            "  2️⃣ อย่า average down",
+            "  3️⃣ รอ BUY signal ใหม่ก่อน re-entry",
+        ]
+
     lines = [
-        f"🛑 <b>SELL SIGNAL: {symbol}</b> ({name})",
+        header_line,
         "",
         f"⚡ {reason_th}",
         f"💰 ราคา: <b>${price:.4f}</b>  {arrow} {sign}{pct:.2f}%",
@@ -1151,10 +1253,7 @@ def build_sell_message(stock, quote, reason, detail=""):
         lines.append(f"📋 {detail}")
     lines += [
         "",
-        "📌 <b>สิ่งที่ควรทำ:</b>",
-        "  1️⃣ ขายออกทันที — อย่ารอ",
-        "  2️⃣ อย่า average down",
-        "  3️⃣ รอ BUY signal ใหม่ก่อน re-entry",
+        *action_lines,
         "",
         f"📊 <a href='{tv}'>TradingView</a>",
         f"🕐 {now_bkk_str()}",
@@ -2153,6 +2252,40 @@ def main():
             # exception จาก build_earnings_alert_message() (เช่น next_earnings_date
             # ที่เก็บไว้ผิดรูปแบบ) ไม่ให้ทำ save_json() ท้ายฟังก์ชันไม่ถูกเรียก
             print(f"[Earnings Alert] ⚠️ ERROR ไม่คาดคิด — ข้ามรอบนี้ไป: {e}")
+
+    # ── Universe Earnings Digest — ปฏิทินประกาศผลทั้ง Universe (ไม่จำกัดแค่
+    # watchlist) สำหรับคนที่อยากเล่นตามช่วงประกาศผลโดยตรง เป็นรายงานแยกจาก
+    # Earnings Alert ด้านบน — threshold กว้างกว่า (default 5 วัน) เพราะเป็น
+    # เครื่องมือ "หาโอกาสใหม่" ไม่ใช่แค่เตือนของที่ถืออยู่แล้ว ──
+    uni_earn_hour  = settings.get("universe_earnings_digest_hour_utc", summary_hour)
+    uni_earn_days  = settings.get("universe_earnings_digest_threshold_days", 5)
+    uni_earn_state = state.get("__universe_earnings_digest__", {})
+    last_uni_earn  = uni_earn_state.get("last_sent", "")
+
+    if (current_hour == uni_earn_hour
+            and (not last_uni_earn or not last_uni_earn.startswith(today_str))):
+        try:
+            print("\n[Universe Earnings Digest] กำลังเช็ค...")
+            uni_earn_msgs = build_universe_earnings_digest_messages(universe_data, watchlist, uni_earn_days)
+            if uni_earn_msgs:
+                all_ok = True
+                for i, uemsg in enumerate(uni_earn_msgs):
+                    ok = send_telegram(token, chat_id, uemsg)
+                    all_ok = all_ok and ok
+                    if i < len(uni_earn_msgs) - 1:
+                        time.sleep(0.5)
+                if all_ok:
+                    state["__universe_earnings_digest__"] = {"last_sent": now_str()}
+                    print(f"[Universe Earnings Digest] ✅ ส่งสำเร็จ ({len(uni_earn_msgs)} ข้อความ)")
+                else:
+                    print("[Universe Earnings Digest] ❌ ส่งไม่สำเร็จบางข้อความ")
+            else:
+                print("[Universe Earnings Digest] ไม่มีหุ้นใกล้ประกาศผลใน Universe — ข้าม")
+                state["__universe_earnings_digest__"] = {"last_sent": now_str()}
+        except Exception as e:
+            # FIX: เหตุผลเดียวกับรายงานอื่นๆ ด้านบน — กัน exception ไม่ให้ทำ
+            # save_json() ท้ายฟังก์ชันไม่ถูกเรียก
+            print(f"[Universe Earnings Digest] ⚠️ ERROR ไม่คาดคิด — ข้ามรอบนี้ไป: {e}")
 
     # ── Trailing Stop Digest — สรุปวันละ 1 ครั้งว่าวันนี้เลื่อน stop ไปกี่ครั้ง ──
     trail_digest_hour  = settings.get("trailing_stop_digest_hour_utc", summary_hour)

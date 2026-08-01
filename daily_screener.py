@@ -1493,6 +1493,40 @@ def main():
         time.sleep(0.8)
 
     # ═════════════════════════════════════════════════════════════════════════
+    #  PHASE 2.5: EARNINGS BACKFILL — ทยอยดึงวันประกาศผลให้ครบทั้ง universe
+    #  (เดิม next_earnings_date ถูกดึงเฉพาะหุ้นใน watchlist ใน PHASE 1 เท่านั้น
+    #  ทำให้ Universe Manager เห็นวันประกาศผลของหุ้นส่วนใหญ่ ~1000+ ตัวว่าง
+    #  เปล่าตลอด — แต่จะดึงทีเดียวทั้ง universe ในรอบเดียวหนักเกินไป (เพิ่ม
+    #  yfinance call อีกเป็นพันครั้ง เสี่ยง timeout job ที่วิ่งอยู่แล้ว 47-65
+    #  นาที) เลยจำกัดจำนวนที่ดึงใหม่ต่อรอบไว้ ใช้ caching guard เดียวกับ PHASE 1
+    #  (ข้ามถ้ามีวันในอนาคตแคชไว้แล้ว) ทำให้ทยอยครบทั้ง universe ภายในไม่กี่วัน
+    #  แล้วรอบถัดไปแทบไม่ต้องดึงเพิ่มเลยนอกจากตัวที่วันประกาศผลผ่านไปแล้ว
+    # ═════════════════════════════════════════════════════════════════════════
+    earn_backfill_limit = cfg.get("earnings_backfill_per_run", 100)
+    log_print(f"\n── PHASE 2.5: EARNINGS BACKFILL (สูงสุด {earn_backfill_limit} ตัว/รอบ) ──")
+    earn_backfilled = 0
+    today_date = datetime.now(timezone.utc).date()
+    for ticker_entry in universe:
+        if earn_backfilled >= earn_backfill_limit:
+            break
+        sym = (ticker_entry if isinstance(ticker_entry, str)
+               else ticker_entry.get("symbol", "")).upper()
+        if not sym:
+            continue
+        cached_earn = get_universe_field(universe_data, sym, "next_earnings_date")
+        if cached_earn:
+            try:
+                if datetime.fromisoformat(cached_earn).date() >= today_date:
+                    continue  # ยังเป็นวันในอนาคต ไม่ต้อง refetch
+            except (ValueError, TypeError):
+                pass
+        next_earn = fetch_next_earnings_date(sym)
+        update_universe_entry(universe_data, sym, next_earnings_date=next_earn)
+        earn_backfilled += 1
+        time.sleep(0.3)
+    log_print(f"  ดึงวันประกาศผลใหม่รอบนี้: {earn_backfilled} ตัว")
+
+    # ═════════════════════════════════════════════════════════════════════════
     #  PHASE 3: SUMMARY REPORT
     # ═════════════════════════════════════════════════════════════════════════
     log_print(f"\n{'='*65}")
