@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-10T06:12:53Z",
-    "symbol": "AOUT",
-    "alert_id": "AOUT_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 14.270000457763672,
-    "change_pct": 2.4407785912682853,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-10T06:41:06Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 115.66999816894531,
-    "change_pct": 2.9458865868149813,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-10T06:57:01Z",
     "symbol": "AMBA",
     "alert_id": "AMBA_MTF_BULL",
@@ -5870,6 +5850,34 @@
     "price": 18.290000915527344,
     "change_pct": 1.0497288150681896,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-02T02:11:28Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 22.65999984741211,
+    "change_pct": 5.1508113569007365,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-02T02:12:27Z",
+    "symbol": "AOUT",
+    "alert_id": "AOUT_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 12.359999656677246,
+    "change_pct": -2.292492832590943,
+    "value": 0,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
