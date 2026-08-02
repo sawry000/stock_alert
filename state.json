@@ -1658,7 +1658,7 @@
       "last_fired": "2026-07-28T03:27:01Z"
     },
     "last_sell_at": "2026-07-28T03:27:01Z",
-    "_confirm_ZVIA_MTF_BULL": 1
+    "_confirm_ZVIA_MA_GOLD": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1699,7 +1699,8 @@
     "open_alert_type": "mtf_alignment",
     "TMCI_MA_GOLD": {
       "last_fired": "2026-08-01T06:57:11Z"
-    }
+    },
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -2020,7 +2021,8 @@
     "open_target": 20.2608,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_RELL_MTF_BULL": 1
   },
   "LUNG": {
     "LUNG_MTF_BULL": {
