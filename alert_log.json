@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-11T04:11:09Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 114.8499984741211,
-    "change_pct": -2.669492818541446,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-11T05:57:01Z",
     "symbol": "EVTV",
     "alert_id": "EVTV_MTF_BULL",
@@ -6038,6 +6028,20 @@
     "price": 109.88999938964844,
     "change_pct": 18.41594761815565,
     "value": 18.41594761815565,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T18:42:16Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.0299999713897705,
+    "change_pct": 24.5398755453847,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
