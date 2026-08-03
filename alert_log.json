@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-12T02:10:37Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 412.9700012207031,
-    "change_pct": -1.1087161827818242,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-12T02:10:42Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.920000076293945,
-    "change_pct": 2.0472443948580583,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-12T02:10:45Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -6061,6 +6041,34 @@
     "action": "BUY",
     "price": 27.479999542236328,
     "change_pct": 3.2694458558298707,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T22:57:12Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 16.780000686645508,
+    "change_pct": 1.6969738584576233,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T22:57:15Z",
+    "symbol": "RELL",
+    "alert_id": "RELL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 19.649999618530273,
+    "change_pct": 6.216214154217694,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
