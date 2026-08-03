@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-11T02:55:54Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.409999847412109,
-    "change_pct": 2.0700612645240306,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-11T02:56:24Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.850000381469727,
-    "change_pct": 2.0021665663946218,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-11T04:11:09Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -6030,6 +6010,34 @@
     "price": 23.110000610351562,
     "change_pct": 2.795177435554241,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T18:10:44Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 330.0199890136719,
+    "change_pct": 8.38094877296285,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T18:10:51Z",
+    "symbol": "AAOI",
+    "alert_id": "AAOI_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 109.88999938964844,
+    "change_pct": 18.41594761815565,
+    "value": 18.41594761815565,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
