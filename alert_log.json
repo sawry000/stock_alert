@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-11T07:41:50Z",
-    "symbol": "AOUT",
-    "alert_id": "AOUT_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 14.34000015258789,
-    "change_pct": 0.34989609928545473,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-12T02:10:37Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_BULL",
@@ -6058,6 +6048,20 @@
     "price": 16.309999465942383,
     "change_pct": 5.498056053961073,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T22:25:45Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 27.479999542236328,
+    "change_pct": 3.2694458558298707,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
