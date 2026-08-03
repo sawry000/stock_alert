@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-11T02:26:34Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7200000286102295,
-    "change_pct": 0.5847969947502648,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-11T02:55:54Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -6026,6 +6016,20 @@
     "price": 1.190000057220459,
     "change_pct": 2.5862118293499194,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T17:41:20Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 23.110000610351562,
+    "change_pct": 2.795177435554241,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
