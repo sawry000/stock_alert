@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-10T23:57:30Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 77.30000305175781,
-    "change_pct": -1.9035494267032802,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-11T02:10:54Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 96.06999969482422,
-    "change_pct": 4.039419206004132,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-11T02:25:43Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -6018,5 +5998,33 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T16:27:28Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 1.8849999904632568,
+    "change_pct": 15.644171194064842,
+    "value": 1.7907,
+    "entry_price": 1.7400000095367432,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T16:27:30Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 1.8849999904632568,
+    "change_pct": 15.644171194064842,
+    "value": 1.8792,
+    "entry_price": 1.7400000095367432,
+    "pnl_pct": 8.3333,
+    "days_held": 2.91,
+    "entry_alert_type": "ma_crossover"
   }
 ]
