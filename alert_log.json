@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-10T16:42:03Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7350000143051147,
-    "change_pct": 1.4619891406499874,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-10T16:55:52Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 93.06999969482422,
-    "change_pct": 0.7905563080184268,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-10T18:10:54Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.875,
-    "change_pct": 1.870078740157486,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-10T18:41:29Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -5966,5 +5936,47 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T13:41:15Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 4.125,
+    "change_pct": 1.0261810878989015,
+    "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T13:42:07Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 4.490099906921387,
+    "change_pct": 4.178652132746801,
+    "value": 4.2656,
+    "entry_price": 4.150000095367432,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T13:42:08Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 4.490099906921387,
+    "change_pct": 4.178652132746801,
+    "value": 4.482,
+    "entry_price": 4.150000095367432,
+    "pnl_pct": 8.1952,
+    "days_held": 3.98,
+    "entry_alert_type": "mtf_alignment"
   }
 ]
