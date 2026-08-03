@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-10T18:42:15Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.899999618530273,
-    "change_pct": 2.2727252084971483,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-10T18:42:38Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.375,
-    "change_pct": -0.8302583025830245,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-10T19:56:20Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 115.45999908447266,
-    "change_pct": -2.1525431487519864,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-10T21:27:36Z",
     "symbol": "EVTV",
     "alert_id": "EVTV_MTF_BULL",
@@ -5982,5 +5952,47 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T14:56:57Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.170000076293945,
+    "change_pct": 3.4000015258789062,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T14:57:16Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 9.225000381469727,
+    "change_pct": 8.529416252585019,
+    "value": 8.7638,
+    "entry_price": 8.5,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T14:57:18Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 9.225000381469727,
+    "change_pct": 8.529416252585019,
+    "value": 9.18,
+    "entry_price": 8.5,
+    "pnl_pct": 8.5294,
+    "days_held": 3.73,
+    "entry_alert_type": "percent_change"
   }
 ]
