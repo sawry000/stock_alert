@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-11T02:25:43Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.920000076293945,
-    "change_pct": 2.0472443948580583,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-11T02:26:34Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_MTF_BULL",
@@ -6026,5 +6016,19 @@
     "pnl_pct": 8.3333,
     "days_held": 2.91,
     "entry_alert_type": "ma_crossover"
+  },
+  {
+    "timestamp": "2026-08-03T17:12:26Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.190000057220459,
+    "change_pct": 2.5862118293499194,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]
