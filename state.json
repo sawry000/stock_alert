@@ -274,7 +274,7 @@
     "last_buy_reminder_at": "2026-08-03T02:10:48Z",
     "open_entry": 26.610000610351562,
     "open_time": "2026-07-29T18:10:56Z",
-    "open_peak": 27.670000076293945,
+    "open_peak": 27.780000686645508,
     "open_stop": 23.0135,
     "open_target": 28.7388,
     "open_conviction": 3,
@@ -1660,7 +1660,8 @@
     "ZVIA_MA_DEATH": {
       "last_fired": "2026-07-28T03:27:01Z"
     },
-    "last_sell_at": "2026-07-28T03:27:01Z"
+    "last_sell_at": "2026-07-28T03:27:01Z",
+    "_confirm_ZVIA_MTF_BULL": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1896,7 +1897,8 @@
     "AOUT_MA_DEATH": {
       "last_fired": "2026-08-03T02:12:33Z"
     },
-    "last_sell_at": "2026-08-03T02:12:33Z"
+    "last_sell_at": "2026-08-03T02:12:33Z",
+    "_confirm_AOUT_MTF_BULL": 1
   },
   "OFRM": {
     "OFRM_PCT_DROP": {
