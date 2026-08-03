@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-11T06:40:50Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 100.30000305175781,
-    "change_pct": 4.91632118384709,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-11T07:41:50Z",
     "symbol": "AOUT",
     "alert_id": "AOUT_MTF_BULL",
@@ -6054,6 +6044,20 @@
     "price": 9.635000228881836,
     "change_pct": 12.69006115651269,
     "value": 12.69006115651269,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-03T20:27:42Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 16.309999465942383,
+    "change_pct": 5.498056053961073,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
