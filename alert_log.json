@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-12T02:12:03Z",
-    "symbol": "GLW",
-    "alert_id": "GLW_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 190.88999938964844,
-    "change_pct": -2.388014220879303,
-    "value": 0
-  },
-  {
-    "timestamp": "2026-07-12T02:26:42Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7200000286102295,
-    "change_pct": 0.5847969947502648,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-12T02:26:57Z",
     "symbol": "SNDK",
     "alert_id": "SNDK_MTF_BULL",
@@ -6090,6 +6070,34 @@
     "price": 15.380000114440918,
     "change_pct": 18.316794479890124,
     "value": 18.316794479890124,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T12:26:53Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.300000190734863,
+    "change_pct": 6.000003814697266,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T12:27:02Z",
+    "symbol": "AMBA",
+    "alert_id": "AMBA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 82.68000030517578,
+    "change_pct": -0.8235908563192262,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
