@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T02:40:57Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.550000190734863,
-    "change_pct": 1.5503905540288854,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-14T02:41:12Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 115.8499984741211,
-    "change_pct": 0.7654157381239409,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-14T03:41:41Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7200000286102295,
-    "change_pct": -0.005811952198736711,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-14T03:42:00Z",
     "symbol": "EVTV",
     "alert_id": "EVTV_MTF_BULL",
@@ -6310,5 +6280,47 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T17:41:13Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 3.858599901199341,
+    "change_pct": 28.98545549722016,
+    "value": 3.6657,
+    "entry_price": 3.0299999713897705,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T17:41:22Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 70.76499938964844,
+    "change_pct": -3.0749220796487706,
+    "value": 67.2267,
+    "entry_price": 65.31999969482422,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T17:41:23Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 70.76499938964844,
+    "change_pct": -3.0749220796487706,
+    "value": 70.5456,
+    "entry_price": 65.31999969482422,
+    "pnl_pct": 8.3359,
+    "days_held": 5.94,
+    "entry_alert_type": "mtf_alignment"
   }
 ]
