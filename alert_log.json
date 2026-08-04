@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T13:57:51Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.40500020980835,
-    "change_pct": -0.09241756361646086,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-14T14:11:25Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_PCT_UP",
@@ -6385,6 +6375,20 @@
     "action": "BUY",
     "price": 17.790000915527344,
     "change_pct": 6.019075777874509,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T23:25:43Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 361.6700134277344,
+    "change_pct": 10.298875702267276,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
