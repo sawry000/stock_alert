@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T13:40:46Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 96.3499984741211,
-    "change_pct": 6.4523240239985515,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-14T13:41:40Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MTF_BULL",
@@ -6366,6 +6356,20 @@
     "price": 101.1500015258789,
     "change_pct": 8.573730337720557,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T20:27:06Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.7300000190734863,
+    "change_pct": 4.848486004453722,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
