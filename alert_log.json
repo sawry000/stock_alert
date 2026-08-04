@@ -1,55 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T03:42:00Z",
-    "symbol": "EVTV",
-    "alert_id": "EVTV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.940000057220459,
-    "change_pct": 7.182323603340272,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-14T03:42:05Z",
-    "symbol": "AOUT",
-    "alert_id": "AOUT_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 14.210000038146973,
-    "change_pct": -0.9065548246375676,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-14T10:11:28Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 20.030000686645508,
-    "change_pct": 0.9068044667279918,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-14T10:25:40Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 26.1299991607666,
-    "change_pct": 2.070309221744532,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-14T10:40:51Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 96.66999816894531,
-    "change_pct": -1.347078100882419,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-14T10:40:59Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -6321,6 +6271,76 @@
     "entry_price": 65.31999969482422,
     "pnl_pct": 8.3359,
     "days_held": 5.94,
+    "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-08-04T18:25:51Z",
+    "symbol": "NAVN",
+    "alert_id": "NAVN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 27.94499969482422,
+    "change_pct": 0.8844754325784095,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T18:26:49Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 5.191800117492676,
+    "change_pct": 25.10361728898013,
+    "value": 25.10361728898013,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T18:26:50Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_SCORE_60",
+    "type": "alert_score",
+    "action": "BUY",
+    "price": 5.191800117492676,
+    "change_pct": 25.10361728898013,
+    "value": 60,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T18:27:39Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 17.290000915527344,
+    "change_pct": 3.0393379947994195,
+    "value": 16.4255,
+    "entry_price": 15.979999542236328,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T18:27:40Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 17.290000915527344,
+    "change_pct": 3.0393379947994195,
+    "value": 17.2584,
+    "entry_price": 15.979999542236328,
+    "pnl_pct": 8.1978,
+    "days_held": 9.56,
     "entry_alert_type": "mtf_alignment"
   }
 ]
