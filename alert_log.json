@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-12T02:11:32Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.850000381469727,
-    "change_pct": 2.0021665663946218,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-12T02:12:03Z",
     "symbol": "GLW",
     "alert_id": "GLW_MA_DEATH",
@@ -6090,5 +6080,19 @@
     "pnl_pct": -0.0,
     "days_held": 0.24,
     "entry_alert_type": "ma_crossover"
+  },
+  {
+    "timestamp": "2026-08-04T12:11:34Z",
+    "symbol": "CLPT",
+    "alert_id": "CLPT_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 15.380000114440918,
+    "change_pct": 18.316794479890124,
+    "value": 18.316794479890124,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]
