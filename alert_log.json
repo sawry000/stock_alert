@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-13T10:10:43Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.920000076293945,
-    "change_pct": 2.943439182376444e-07,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-13T10:10:46Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -6186,6 +6176,20 @@
     "price": 4.909999847412109,
     "change_pct": 18.31324933523154,
     "value": 18.31324933523154,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T14:57:02Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.055000066757202,
+    "change_pct": -2.142853963942759,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
