@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T02:40:48Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 96.66999816894531,
-    "change_pct": -0.8614519854934802,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-14T02:40:57Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -6306,5 +6296,19 @@
     "pnl_pct": 10.5277,
     "days_held": 6.62,
     "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-08-04T17:26:12Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 3.825000047683716,
+    "change_pct": 27.862278043914962,
+    "value": 3.6338,
+    "entry_price": 3.0299999713897705,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]
