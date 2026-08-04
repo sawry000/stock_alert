@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-13T18:26:20Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 113.0,
-    "change_pct": -1.7134904757762888,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-13T19:12:04Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7350000143051147,
-    "change_pct": 0.8662295392776458,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-13T19:12:13Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 1661.02001953125,
-    "change_pct": -14.159172117248062,
-    "value": -14.159172117248062
-  },
-  {
     "timestamp": "2026-07-13T19:12:19Z",
     "symbol": "ALGM",
     "alert_id": "ALGM_MA_DEATH",
@@ -6267,6 +6237,48 @@
     "change_pct": 5.341582259263985,
     "value": 2,
     "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T16:25:42Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 356.489990234375,
+    "change_pct": 8.719118705207388,
+    "value": 338.6655,
+    "entry_price": 329.9700012207031,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T16:25:43Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 356.489990234375,
+    "change_pct": 8.719118705207388,
+    "value": 356.3676,
+    "entry_price": 329.9700012207031,
+    "pnl_pct": 8.0371,
+    "days_held": 4.11,
+    "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-08-04T16:26:24Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 6.119999885559082,
+    "change_pct": 7.746476858434548,
+    "value": 5.814,
+    "entry_price": 5.320000171661377,
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null
