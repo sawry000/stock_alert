@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T10:40:59Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.550000190734863,
-    "change_pct": 1.5503905540288854,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-14T10:41:16Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 115.8499984741211,
-    "change_pct": -0.12931166024043642,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-14T10:41:51Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MTF_BULL",
@@ -6342,5 +6322,33 @@
     "pnl_pct": 8.1978,
     "days_held": 9.56,
     "entry_alert_type": "mtf_alignment"
+  },
+  {
+    "timestamp": "2026-08-04T18:40:56Z",
+    "symbol": "DDD",
+    "alert_id": "DDD_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 3.6649999618530273,
+    "change_pct": 22.51378779385016,
+    "value": 3.6649999618530273,
+    "entry_price": 3.0299999713897705,
+    "pnl_pct": 20.9571,
+    "days_held": 40.16,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-04T18:41:39Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 5.519999980926514,
+    "change_pct": 4.150943036349318,
+    "value": 0.144,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
   }
 ]
