@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-15T03:27:17Z",
-    "symbol": "LHAI",
-    "alert_id": "LHAI_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 1.2200000286102295,
-    "change_pct": 24.489798837778523,
-    "value": 1.2200000286102295
-  },
-  {
     "timestamp": "2026-07-15T04:56:36Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_MTF_BULL",
@@ -6605,5 +6595,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-05T21:41:47Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 73.55999755859375,
+    "change_pct": -29.269233116736782,
+    "value": -29.269233116736782,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
