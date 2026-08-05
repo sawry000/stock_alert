@@ -42,6 +42,11 @@ WATCHLIST_PATH = BASE_DIR / "watchlist.json"
 STATE_PATH     = BASE_DIR / "state.json"
 LOG_PATH       = BASE_DIR / "alert_log.json"
 UNIVERSE_PATH  = BASE_DIR / "universe.json"
+# Structural fix (race condition กับ daily-screener): alert_engine.py ไม่เขียน
+# universe.json ตรงๆ อีกต่อไป — เขียนลงไฟล์แยกนี้แทน แล้วให้ daily_screener.py
+# เป็นคน merge เข้า universe.json ตอน startup รอบถัดไป (ดู sync_universe_tech()
+# และท้าย main() ด้านล่าง)
+PATCH_PATH     = BASE_DIR / "universe_live_patch.json"
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  UTILITIES
@@ -463,7 +468,12 @@ def build_trailing_stop_digest_message(log, state, today_str):
 def _uni_update_entry(universe_data, symbol, **fields):
     """merge field เข้า entry เดิม ไม่ทับทั้ง object — เหมือน update_universe_entry()
     ใน daily_screener.py/manual_check.py ทุกประการ (คนละไฟล์แต่ต้อง behavior
-    ตรงกัน กันข้อมูลที่ scan ไว้ก่อนหน้าหายเวลามาจากอีก process หนึ่งเขียนทับ)"""
+    ตรงกัน กันข้อมูลที่ scan ไว้ก่อนหน้าหายเวลามาจากอีก process หนึ่งเขียนทับ)
+
+    หมายเหตุ (หลัง structural fix universe.json): ฟังก์ชันนี้ไม่ถูกเรียกใช้จาก
+    ที่ไหนใน alert_engine.py แล้ว (sync_universe_tech() เปลี่ยนไปเขียนลง
+    _patch_update_entry()/universe_live_patch.json แทน) เหลือไว้เผื่อมีจุดอื่น
+    ในอนาคตต้องแก้ universe.json ตรงๆ จริงๆ (ไม่ใช่ tech-sync data)"""
     sym_u = symbol.upper()
     for i, e in enumerate(universe_data.get("universe", [])):
         s = (e if isinstance(e, str) else e.get("symbol", "")).upper()
@@ -504,15 +514,32 @@ def _uni_eval_gate(entry, price, adr_pct, avg_volume, rsi, vol_ratio, above_ema5
     return "PASSED"
 
 
-def sync_universe_tech(universe_data, uni_cfg, symbol, quote):
-    """อัปเดต last_price/last_adr_pct/last_rsi/last_vol_ratio/last_above_ema50/
-    last_gate/last_scanned ของ symbol นี้ใน universe.json (ในหน่วยความจำ —
-    ตัวเรียกต้อง save_json(UNIVERSE_PATH, universe_data) เองตอนจบ main())
+def _patch_update_entry(patch_data, symbol, **fields):
+    """เขียน field ลง universe_live_patch.json (key = symbol) แทนที่จะเขียนลง
+    universe.json ตรงๆ — โครงสร้าง flat dict {"SYMBOL": {field: value, ...}}
+    ไม่มี list/index ให้ conflict เวลามีสอง process เขียนพร้อมกัน (แค่ key
+    คนละตัวกันก็ merge กันได้เองไม่มีปัญหา ต่างจาก universe.json ที่เป็น list
+    ต้องหา index ก่อนแก้ ถ้าสอง process หา/แก้ list พร้อมกันคือช่องให้ conflict)"""
+    fields["last_scanned"] = fields.get("last_scanned", now_str())
+    patch_data.setdefault(symbol.upper(), {}).update(fields)
+
+
+def sync_universe_tech(universe_data, patch_data, uni_cfg, symbol, quote):
+    """คำนวณ last_price/last_adr_pct/last_rsi/last_vol_ratio/last_above_ema50/
+    last_gate/last_scanned ของ symbol นี้ แล้วเขียนลง patch_data (ในหน่วยความจำ
+    — ตัวเรียกต้อง save_json(PATCH_PATH, patch_data) เองตอนจบ main())
+
+    Structural fix: เดิมฟังก์ชันนี้เขียนลง universe_data (= universe.json) ตรงๆ
+    ทำให้ชนกับ daily_screener.py ที่เขียนไฟล์เดียวกันพร้อมกันได้ (race condition
+    ต้องพึ่ง retry+rebase ประคองอาการ) ตอนนี้เขียนลง universe_live_patch.json
+    แยกไฟล์แทน แล้วให้ daily_screener.py เป็นคน merge เข้า universe.json ตอน
+    startup รอบถัดไป — universe_data ยังใช้อ่านอย่างเดียว (หา entry เดิม/gate)
+    ไม่เขียนอะไรกลับเข้าไปอีกแล้ว
 
     ตั้งใจไม่ throw ออกไปนอกฟังก์ชันนี้เลย — ถ้า sync พลาดของตัวใดตัวหนึ่ง
     (เช่น history ว่าง/network แว้บ) ให้ log แล้วข้าม ไม่ทำให้ alert-engine
-    ทั้ง run ล้มเพราะ universe.json sync ซึ่งเป็นแค่ "bonus feature" ไม่ใช่
-    งานหลัก (งานหลักคือเช็ค alert ยิง Telegram)"""
+    ทั้ง run ล้มเพราะ sync ซึ่งเป็นแค่ "bonus feature" ไม่ใช่งานหลัก (งานหลัก
+    คือเช็ค alert ยิง Telegram)"""
     if not _uni_symbol_exists(universe_data, symbol):
         # symbol อยู่ใน watchlist แต่ไม่เคยผ่าน screener มาก่อนเลย (เพิ่มเอง
         # ผ่าน "เพิ่มหุ้น" โดยไม่ผ่าน universe) — ข้าม ไม่สร้าง entry ใหม่ที่นี่
@@ -522,12 +549,12 @@ def sync_universe_tech(universe_data, uni_cfg, symbol, quote):
     try:
         hist = fetch_history(symbol, period="90d", interval="1d")
         if hist is None or hist.empty:
-            _uni_update_entry(universe_data, symbol, last_gate="no_data", last_scanned=now_str())
+            _patch_update_entry(patch_data, symbol, last_gate="no_data")
             return
 
         hist = hist.dropna(subset=["Close", "High", "Low"])
         if len(hist) < 20:
-            _uni_update_entry(universe_data, symbol, last_gate="no_data", last_scanned=now_str())
+            _patch_update_entry(patch_data, symbol, last_gate="no_data")
             return
 
         closes = hist["Close"].tolist()
@@ -556,20 +583,19 @@ def sync_universe_tech(universe_data, uni_cfg, symbol, quote):
         entry = _uni_find_entry(universe_data, symbol)
         gate  = _uni_eval_gate(entry, price, adr_pct, avg_volume, rsi, vol_ratio, above_ema50, uni_cfg)
 
-        _uni_update_entry(
-            universe_data, symbol,
+        _patch_update_entry(
+            patch_data, symbol,
             last_price       = _clean_num(round(price, 4)),
             last_adr_pct     = _clean_num(round(adr_pct, 2)),
             last_rsi         = _clean_num(round(rsi, 1)),
             last_vol_ratio   = _clean_num(round(vol_ratio, 2)),
             last_above_ema50 = bool(above_ema50),
             last_gate        = gate,
-            last_scanned     = now_str(),
             last_change_pct     = _clean_num(round(change_pct, 2)),
             last_dollar_volume   = _clean_num(round(price * today_vol, 2)),
         )
     except Exception as e:
-        print(f"  [{symbol}] universe.json sync error (ข้าม ไม่กระทบ alert check): {e}")
+        print(f"  [{symbol}] universe_live_patch.json sync error (ข้าม ไม่กระทบ alert check): {e}")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -1031,7 +1057,12 @@ def conviction_gate(symbol, quote, alert_history_cache=None):
         detail["long_trend"] = {"pass": None, "note": f"ข้อมูลไม่พอ ({bars} วัน < 210) — ข้ามมิตินี้"}
 
     detail["total_dims"] = total_dims
-    passed = score >= max(3, total_dims - 1)
+    # อัปเดต: บังคับให้มิติ Volume ต้องผ่านเสมอ ไม่ใช่แค่มิติใดมิติหนึ่งจาก
+    # "ทั้งหมด - 1" — วิเคราะห์ trade log ย้อนหลังพบว่าสัญญาณที่ Volume❌ (คนไม่
+    # ค่อยเล่นตอนเข้า) มีแนวโน้มราคานิ่งแล้วเด้งกลับก่อนถึง target บ่อยกว่า
+    # มิติอื่น เดิม gate ปล่อยให้ Volume เป็นมิติเดียวที่ fail ได้โดยยังผ่าน
+    # เกณฑ์ 3/4 — ตอนนี้ต้องผ่านทั้ง Volume และคะแนนรวมตามเกณฑ์เดิม
+    passed = detail["volume"]["pass"] and score >= max(3, total_dims - 1)
     return passed, score, detail
 
 
@@ -1039,15 +1070,39 @@ def conviction_gate(symbol, quote, alert_history_cache=None):
 #  POSITION SIZE CALCULATOR  (account_size default = 100 USD)
 # ══════════════════════════════════════════════════════════════════════════════
 
+# ── R:R / Kelly tuning constants ────────────────────────────────────────────
+# วิเคราะห์ trade log ย้อนหลัง (47 เทรดที่ปิดจริง ณ 4 ส.ค. 69) พบว่า stop
+# กว้างสุด 15% (ATR*2) ชนกับ target คงที่ 8% ทำให้แพ้เฉลี่ย -15.9% > ชนะเฉลี่ย
+# +11.1% (R:R เฉลี่ย <1) ทั้งที่ win rate 29.8% ต้องการ R:R อย่างน้อย ~1.4:1
+# ถึงจะเสมอทุน — คุมสองจุดนี้ใหม่:
+#   1) ลด ATR multiplier 2x → 1.5x และ cap 15% → 10% (แพ้แต่ละไม้เจ็บน้อยลง)
+#   2) บังคับ target ให้ห่างจาก stop อย่างน้อย MIN_RR เท่าเสมอ โดยใช้ target_pct
+#      ที่ตั้งไว้ใน watchlist (ปกติ 8%) เป็น "พื้น" ไม่ใช่ค่าตายตัว — ถ้า stop
+#      กว้างกว่านั้นจน R:R ต่ำกว่า MIN_RR จะขยาย target ขึ้นให้พอแทน
+ATR_STOP_MULTIPLIER = 1.5
+ATR_STOP_CAP_PCT     = 10.0
+MIN_RR_RATIO         = 1.5
+# win rate เฉลี่ยจริงจาก trade log ยุคหลังแก้บั๊ก stop-loss (35.3%) — ใช้เป็น
+# ค่า default สำหรับ Kelly แทนการเดา 50/50 (มองโลกในแง่ร้ายกว่าจะปลอดภัยกว่า
+# ถ้าจะพลาดควรพลาดไปทาง "แนะนำ size เล็กเกินไป" ไม่ใช่ "ใหญ่เกินไป")
+DEFAULT_WIN_RATE = 0.35
+
+
 def calc_position_size(pos_cfg, symbol, entry_price=None):
     """
     คำนวณ position size จาก budget $100/หุ้น
     รองรับ fractional shares (crypto/ETF) และ whole shares (หุ้นทั่วไป)
+
+    อัปเดต: เพิ่ม R:R gate (บังคับ target ห่างจาก stop อย่างน้อย MIN_RR เท่า)
+    และพอร์ต Kelly criterion + คำเตือน R:R มาจาก module_position.py (เดิมมีโค้ด
+    ชุดนี้อยู่แล้วแต่ไม่เคยถูกเรียกใช้จริงจากที่นี่ — ทำให้มี R:R warning สอง
+    มาตรฐานคนละที่ ตอนนี้รวมเป็นจุดเดียว)
     """
     account    = pos_cfg.get("account_size", 100)   # ← default $100
     risk_pct   = pos_cfg.get("risk_pct",    2.0)
     stop_pct   = pos_cfg.get("stop_pct",    None)
     target_pct = pos_cfg.get("target_pct",  None)
+    win_rate   = pos_cfg.get("win_rate",    DEFAULT_WIN_RATE)
 
     if entry_price is None:
         q = fetch_quote(symbol)
@@ -1064,8 +1119,8 @@ def calc_position_size(pos_cfg, symbol, entry_price=None):
             closes = list(hist["Close"].astype(float))
             atr_val = _calc_atr(highs, lows, closes, 14)
             if atr_val:
-                raw_stop_pct = (atr_val * 2 / entry_price) * 100
-                stop_pct     = min(raw_stop_pct, 15.0)
+                raw_stop_pct = (atr_val * ATR_STOP_MULTIPLIER / entry_price) * 100
+                stop_pct     = min(raw_stop_pct, ATR_STOP_CAP_PCT)
             else:
                 stop_pct = 5.0
         else:
@@ -1103,13 +1158,47 @@ def calc_position_size(pos_cfg, symbol, entry_price=None):
     }
 
     if target_pct:
-        tp = entry_price * (1 + target_pct / 100)
-        rr = target_pct / stop_pct if stop_pct > 0 else 0
+        # ── บังคับ R:R ขั้นต่ำ ────────────────────────────────────────────
+        # target_pct ที่ตั้งไว้ใน watchlist (ปกติ 8%) เป็น "พื้น" เท่านั้น —
+        # ถ้า stop_pct ที่คำนวณได้กว้างจนทำให้ R:R < MIN_RR_RATIO จะขยาย
+        # target ขึ้นให้ R:R แตะ MIN_RR_RATIO พอดี (ไม่ลด stop เพิ่ม เพราะ
+        # stop มาจาก ATR สะท้อนความผันผวนจริงของหุ้นตัวนั้น)
+        effective_target_pct = max(target_pct, round(stop_pct * MIN_RR_RATIO, 2))
+        tp = entry_price * (1 + effective_target_pct / 100)
+        rr = effective_target_pct / stop_pct if stop_pct > 0 else 0
         profit_usd = round(disp_shares * (tp - entry_price), 2)
-        result["target"]     = round(tp, 4)
-        result["target_pct"] = target_pct
-        result["rr_ratio"]   = round(rr, 2)
-        result["target_usd"] = profit_usd
+        result["target"]          = round(tp, 4)
+        result["target_pct"]      = effective_target_pct
+        result["target_pct_base"] = target_pct   # ค่าดั้งเดิมจาก watchlist เผื่ออยาก debug
+        result["rr_ratio"]        = round(rr, 2)
+        result["target_usd"]      = profit_usd
+        result["rr_adjusted"]     = effective_target_pct > target_pct
+
+        # ── Kelly criterion (informational เท่านั้น — ไม่ได้ใช้ปรับขนาด
+        # position จริง เพราะระบบนี้ตั้งใจใช้ budget คงที่ $100/หุ้นเพื่อให้
+        # เทียบผลลัพธ์ระหว่างหุ้นได้ตรงไปตรงมา — Kelly% ไว้ดูเป็น sanity
+        # check ว่าขนาดที่ควรเสี่ยงจริงๆ ห่างจาก budget คงที่แค่ไหน) ──
+        if win_rate > 0 and rr > 0:
+            kelly_pct = win_rate - (1 - win_rate) / rr
+            kelly_pct = max(0.0, min(kelly_pct, 0.25))  # cap ที่ 25% กัน over-leverage
+            result["kelly_pct"]      = round(kelly_pct * 100, 1) if kelly_pct > 0 else 0.0
+            result["half_kelly_pct"] = round(kelly_pct * 50, 1) if kelly_pct > 0 else 0.0
+        else:
+            result["kelly_pct"]      = 0.0
+            result["half_kelly_pct"] = 0.0
+
+        warnings = []
+        if pos_pct > 20:
+            warnings.append("⚠️ Position ใหญ่มาก (>20% พอร์ต) — เสี่ยงสูง")
+        if rr < MIN_RR_RATIO:
+            # ปกติไม่ควรเกิดขึ้นแล้วเพราะบังคับ R:R ไว้ข้างบน — เหลือไว้เป็น
+            # safety net เผื่อมี edge case (เช่น stop_pct <= 0)
+            warnings.append(f"⚠️ R:R ต่ำกว่า 1:{MIN_RR_RATIO} — ควรทบทวน")
+        if pos_pct > 50:
+            warnings.append("🚨 DANGER: ใช้พอร์ตมากกว่า 50% — อันตรายมาก!")
+        if not warnings:
+            warnings.append("✅ ขนาด position อยู่ในเกณฑ์ปลอดภัย")
+        result["warnings"] = warnings
 
     return result
 
@@ -1164,9 +1253,16 @@ def _pos_block(pos):
         lines.append(f"  • ATR(14): ${pos['atr']:.4f}")
     if pos.get("target"):
         lines.append(f"  🎯 Target: <b>${pos['target']:.4f}</b>  (+{pos['target_pct']:.1f}%)  R:R=1:{pos['rr_ratio']:.1f}")
+        if pos.get("rr_adjusted"):
+            lines.append(f"  ℹ️ ขยาย target จาก +{pos['target_pct_base']:.1f}% เพื่อคุม R:R ≥1:{MIN_RR_RATIO}")
         if pos.get("target_usd"):
             lines.append(f"  • กำไรถ้าถึง Target: ~+${pos['target_usd']:.2f}")
     lines.append(f"  ⚠️ เสี่ยงขาดทุน: -${pos['actual_risk']:.2f} ถ้า SL โดน")
+    if pos.get("half_kelly_pct") is not None and pos.get("target"):
+        if pos["half_kelly_pct"] > 0:
+            lines.append(f"  📐 Kelly (win rate {DEFAULT_WIN_RATE*100:.0f}%): แนะนำ ~{pos['half_kelly_pct']:.1f}% พอร์ต (half-Kelly)")
+        else:
+            lines.append(f"  📐 Kelly (win rate {DEFAULT_WIN_RATE*100:.0f}%): ยังไม่มี positive edge ที่ R:R นี้ — ระวังเป็นพิเศษ")
     return lines
 
 
@@ -1217,6 +1313,7 @@ def build_sell_message(stock, quote, reason, detail=""):
         "score_bear":    "🔴 Confidence Score ขาลงสูง",
         "take_profit":   "🎯 ถึงเป้าหมายกำไร (Take Profit) ตามแผน",
         "trailing_stop": "📈 หลุด Trailing Stop — ล็อกกำไรที่สะสมมาไว้",
+        "stagnant_exit": "⏳ ถือมานานเกินไปโดยราคาไม่ไปไหน — ปิดคืนทุนไปเข้าไม้อื่น",
     }.get(reason, reason)
 
     # FIX: เดิมทุก reason (ทั้งขาดทุนจริงและกำไรตามแผน) ใช้ header "🛑 SELL
@@ -1225,6 +1322,7 @@ def build_sell_message(stock, quote, reason, detail=""):
     # ปิดสถานะได้กำไรตามแผน คำเตือนโทนนี้เข้ากับบริบทไม่ได้เลย (เหมือนกำลัง
     # เตือนภัยทั้งที่เป็นข่าวดี) แยกโทนข้อความเป็น 2 แบบตามความหมายจริงแทน
     is_profit_exit = reason in ("take_profit", "trailing_stop")
+    is_stagnant_exit = reason == "stagnant_exit"
 
     if is_profit_exit:
         header_line  = f"✅ <b>ปิดสถานะทำกำไร: {symbol}</b> ({name})"
@@ -1232,6 +1330,14 @@ def build_sell_message(stock, quote, reason, detail=""):
             "📌 <b>สิ่งที่ควรทำ:</b>",
             "  1️⃣ ล็อกกำไรตามแผนเรียบร้อยแล้ว",
             "  2️⃣ ถ้ายังไม่ได้ auto-trade ให้ขายในโบรกเกอร์ตามสัญญาณทันที",
+            "  3️⃣ รอ BUY signal ใหม่ก่อน re-entry เหมือนเดิม",
+        ]
+    elif is_stagnant_exit:
+        header_line  = f"⏳ <b>ปิดสถานะ (แช่แข็งนานเกินไป): {symbol}</b> ({name})"
+        action_lines = [
+            "📌 <b>สิ่งที่ควรทำ:</b>",
+            "  1️⃣ ปิดสถานะเพื่อคืนทุนไปหาโอกาสอื่น ไม่ใช่เพราะขาดทุนหนัก",
+            "  2️⃣ ถ้ายังไม่ได้ auto-trade ให้ปิดในโบรกเกอร์ตามสัญญาณ",
             "  3️⃣ รอ BUY signal ใหม่ก่อน re-entry เหมือนเดิม",
         ]
     else:
@@ -1592,10 +1698,16 @@ def main():
     fired_count      = 0
 
     # ── Universe.json sync setup (ดูรายละเอียดที่ sync_universe_tech()) ──────
+    # universe_data โหลดมาใช้ "อ่านอย่างเดียว" ตอนนี้ (หา entry เดิม/eval gate)
+    # ไม่เขียนกลับเข้า universe.json อีกแล้ว — เขียนลง patch_data/PATCH_PATH
+    # แทน (structural fix ของ race condition กับ daily_screener.py)
     universe_data = load_json(UNIVERSE_PATH, {"settings": {}, "universe": []})
     if not isinstance(universe_data.get("universe"), list):
         universe_data["universe"] = []
     uni_cfg = {**DEFAULT_UNI_CFG, **(universe_data.get("settings") or {})}
+    patch_data = load_json(PATCH_PATH, {})
+    if not isinstance(patch_data, dict):
+        patch_data = {}
 
     # ── Macro Gate ────────────────────────────────────────────────────
     print(f"\n[{now_str()}] ── MACRO CONTEXT CHECK ──")
@@ -1624,10 +1736,12 @@ def main():
             quotes_cache[symbol] = quote
             print(f"  Price=${quote['price']:.4f}  Chg={quote['change_pct']:+.2f}%  Vol={quote['volume']:.0f}")
 
-            # เติมข้อมูล Purify/Price/ADR/RSI/Vol/Gate ล่าสุดเข้า universe.json
-            # ให้ symbol นี้ (ใช้ quote ที่เพิ่งดึงมา ไม่ fetch price ซ้ำ — แค่เพิ่ม
-            # history call เดียวสำหรับ RSI/EMA50 ที่ quote เดิมไม่มี)
-            sync_universe_tech(universe_data, uni_cfg, symbol, quote)
+            # เติมข้อมูล Purify/Price/ADR/RSI/Vol/Gate ล่าสุดเข้า
+            # universe_live_patch.json ให้ symbol นี้ (ใช้ quote ที่เพิ่งดึงมา
+            # ไม่ fetch price ซ้ำ — แค่เพิ่ม history call เดียวสำหรับ RSI/EMA50
+            # ที่ quote เดิมไม่มี) — daily_screener.py จะ merge เข้า
+            # universe.json จริงตอน startup รอบถัดไป
+            sync_universe_tech(universe_data, patch_data, uni_cfg, symbol, quote)
 
             sym_state    = state.get(symbol, {})
             price        = quote["price"]
@@ -1713,6 +1827,7 @@ def main():
                                 "value": round(trail_candidate, 4),
                                 "entry_price": entry, "pnl_pct": None,
                                 "days_held": None, "entry_alert_type": None,
+                                "conviction_score": None, "conviction_total": None, "rr_ratio": None,
                             })
 
                             # ── แจ้งเตือน real-time เฉพาะตอนขยับมีนัยสำคัญพอ ──
@@ -1768,6 +1883,7 @@ def main():
                             "entry_price": entry, "pnl_pct": round(tp_pnl_pct, 4),
                             "days_held": round(days_held, 2) if days_held is not None else None,
                             "entry_alert_type": entry_type_val,
+                            "conviction_score": None, "conviction_total": None, "rr_ratio": None,
                         })
                         for _k in ("open_entry", "open_time", "open_peak", "open_stop",
                                    "open_target", "open_conviction", "open_conviction_total",
@@ -1777,6 +1893,58 @@ def main():
                         # position ปิดไปแล้ว — ข้าม alert loop ที่เหลือของหุ้นตัวนี้
                         # ในรอบนี้ ไปหุ้นตัวถัดไปเลย (กัน SELL/BUY ซ้ำซ้อนในรอบเดียวกัน)
                         continue
+
+                # ── Stagnant Exit: position แช่แข็งนานเกินไปโดยราคาไม่ไปไหน ──
+                # เดิม _position_next_step() มีข้อความเตือนแบบนี้อยู่แล้วใน Position
+                # Status digest แต่เป็นแค่ข้อความแจ้ง ไม่เคยขายจริง — วิเคราะห์ trade
+                # log ย้อนหลังพบเทรดที่ปล่อยให้ถือ 22-46 วันก่อนโดน exit แบบเจ็บหนัก
+                # (COHR -28.6%, PSIX -31.8%, OPTX -51.5%, RIOT -33.1%) เพราะรอสัญญาณ
+                # ที่ตอบสนองช้าอย่าง ma_crossover/percent_change — เพิ่ม auto-exit
+                # ตัดจบเองถ้าแช่แข็งนานเกินไปในโซนใกล้ทุน (ไม่ใช่ทั้งกำไรหนักหรือ
+                # ขาดทุนหนัก ซึ่งกรณีนั้นมี take_profit/stop-loss คอยจัดการอยู่แล้ว)
+                # เพื่อคืน capital ไปเข้าไม้อื่นที่มีโอกาสมากกว่า
+                stagnant_enabled = stock.get("stagnant_exit_enabled", True)
+                stagnant_days    = stock.get("stagnant_exit_days", 15)
+                stagnant_band    = stock.get("stagnant_exit_band_pct", 3.0)
+                if stagnant_enabled and entry and sym_state.get("open_time"):
+                    days_open    = minutes_since(sym_state["open_time"]) / 1440
+                    stagnant_pnl = (price - entry) / entry * 100
+                    if days_open >= stagnant_days and abs(stagnant_pnl) <= stagnant_band:
+                        detail_txt = (f"ถือมา {days_open:.0f} วัน ราคายังอยู่ในช่วง "
+                                      f"±{stagnant_band:.0f}% ({stagnant_pnl:+.1f}%)")
+                        st_msg = build_sell_message(stock, quote, "stagnant_exit", detail_txt)
+                        days_held_txt = f"  •  ถือมา {days_open:.1f} วัน"
+                        pnl_icon = "🟢 กำไร" if stagnant_pnl >= 0 else "🔴 ขาดทุน"
+                        pnl_line = (
+                            f"\n━━━━━━━━━━━━━━━━━━━━━━━━━"
+                            f"\n📊 <b>ผลลัพธ์ position นี้:</b> {pnl_icon}  <b>{stagnant_pnl:+.2f}%</b>"
+                            f"\n  • เข้าซื้อ ${entry:.4f} → ปิดที่ ${price:.4f}{days_held_txt}"
+                        )
+                        st_msg = st_msg.replace("\n\n📊 <a href=", pnl_line + "\n\n📊 <a href=", 1)
+                        st_success = send_telegram(token, chat_id, st_msg)
+                        print(f"  [Stagnant Exit] {symbol}: "
+                              f"{'✅ ส่งสำเร็จ' if st_success else '❌ ส่งไม่สำเร็จ'} "
+                              f"— {stagnant_pnl:+.2f}% หลังถือ {days_open:.0f} วัน")
+                        if st_success:
+                            fired_count += 1
+                            entry_type_val = sym_state.get("open_alert_type")
+                            sym_state["last_sell_at"] = now_str()
+                            log.append({
+                                "timestamp": now_str(), "symbol": symbol,
+                                "alert_id": f"{symbol}_STAGNANT_EXIT", "type": "stagnant_exit",
+                                "action": "SELL", "price": price,
+                                "change_pct": quote["change_pct"], "value": round(days_open, 1),
+                                "entry_price": entry, "pnl_pct": round(stagnant_pnl, 4),
+                                "days_held": round(days_open, 2),
+                                "entry_alert_type": entry_type_val,
+                                "conviction_score": None, "conviction_total": None, "rr_ratio": None,
+                            })
+                            for _k in ("open_entry", "open_time", "open_peak", "open_stop",
+                                       "open_target", "open_conviction", "open_conviction_total",
+                                       "open_alert_type", "open_stop_is_trailing",
+                                       "open_trailing_last_notified_stop", "last_buy_reminder_at"):
+                                sym_state.pop(_k, None)
+                            continue
 
             # ── Price-drop filter — ลงหนักวันนี้ ห้าม BUY แม้ signal ผ่าน ──
             drop_threshold = stock.get("buy_suppress_drop_pct", 3.0)
@@ -2019,7 +2187,27 @@ def main():
                 # ทุก BUY signal (ไม่ว่าจะมาจาก RSI/MTF/Score/Volume/%Change ฯลฯ)
                 # ต้องผ่านอย่างน้อย 3/4 มิติก่อนปล่อยจริง — กัน false signal แบบ
                 # SNDK (ราคาลงหนักแต่ MTF ยัง bullish) โดยไม่ต้องดึง API เพิ่ม
+                # ── BUY: เก็บ conviction score + R:R ไว้ใช้ตอน log.append ด้านล่าง ──
+                # (เดิมคำนวณแล้วใส่แค่ในข้อความ Telegram อย่างเดียว ไม่เคยถูก
+                # บันทึกแบบมีโครงสร้างใน alert_log.json เลย ทำให้ย้อนวิเคราะห์
+                # ไม่ได้ว่าสัญญาณ conviction เต็ม 5/5 win rate สูงกว่า 3/5 จริงไหม)
+                buy_conv_score = None
+                buy_conv_total = None
+                buy_rr_ratio   = None
                 if action == "BUY":
+                    # ── R:R Gate — บล็อค BUY ที่ไม่มีข้อมูล position/stop เลย ──
+                    # (fetch_quote/fetch_history ล้มเหลว) เพราะไม่มี stop ให้
+                    # ยึด ไม่ควรปล่อยสัญญาณแบบไม่มีแผนออกให้คนตามซื้อ
+                    if pos is None:
+                        print(f"  [{alert_id}] 🚫 R:R Gate FAIL — คำนวณ position size ไม่ได้ (ไม่มีข้อมูลราคา/ATR)")
+                        continue
+                    # safety net: calc_position_size บังคับ R:R ≥ MIN_RR_RATIO ไว้
+                    # แล้วตั้งแต่ต้นทาง กรณีนี้ไม่ควรเกิด เว้นแต่ target_pct ไม่ได้
+                    # ตั้งไว้ใน watchlist เลย (pos.get("target") จะเป็น None)
+                    if pos.get("target") and pos.get("rr_ratio", 0) < MIN_RR_RATIO:
+                        print(f"  [{alert_id}] 🚫 R:R Gate FAIL — R:R={pos.get('rr_ratio')} ต่ำกว่า 1:{MIN_RR_RATIO}")
+                        continue
+
                     conv_pass, conv_score, conv_detail = conviction_gate(symbol, quote)
                     total_dims = conv_detail.get("total_dims", 4)
                     if not conv_pass:
@@ -2029,6 +2217,9 @@ def main():
                               f"({conv_score}/{total_dims}) — ไม่ผ่าน: {', '.join(failed_dims)}")
                         continue
                     print(f"  [{alert_id}] ✅ Conviction Gate PASS ({conv_score}/{total_dims})")
+                    buy_conv_score = conv_score
+                    buy_conv_total = total_dims
+                    buy_rr_ratio   = pos.get("rr_ratio")
                     # แนบผล Conviction Score เข้า message ก่อนส่งจริง
                     dims_th = {"trend": "Trend", "momentum": "Momentum",
                                "volume": "Volume", "volatility": "Volatility",
@@ -2142,6 +2333,10 @@ def main():
                         "pnl_pct":          closed_pnl_pct,
                         "days_held":        closed_days_held,
                         "entry_alert_type": closed_entry_type,
+                        # ── ข้อมูลคุณภาพสัญญาณ (เฉพาะ BUY) ──────────────────
+                        "conviction_score": buy_conv_score,
+                        "conviction_total": buy_conv_total,
+                        "rr_ratio":         buy_rr_ratio,
                     })
                     fired_count += 1
                     print(f"  [{alert_id}] ✅ ส่งสำเร็จ")
@@ -2314,7 +2509,10 @@ def main():
 
     save_json(STATE_PATH, state)
     save_json(LOG_PATH, log[-500:])
-    save_json(UNIVERSE_PATH, universe_data)
+    # Structural fix: ไม่ save_json(UNIVERSE_PATH, universe_data) ตรงๆ อีกแล้ว
+    # (นั่นคือต้นตอ race condition กับ daily_screener.py) — เขียนลง patch file
+    # แยกแทน daily_screener.py จะ merge เข้า universe.json จริงตอน startup
+    save_json(PATCH_PATH, patch_data)
     print(f"\n[{now_str()}] เสร็จสิ้น — fire {fired_count} alert(s)")
 
 

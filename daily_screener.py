@@ -67,6 +67,12 @@ except ImportError:
 # ─── Paths ────────────────────────────────────────────────────────────────────
 BASE_DIR          = Path(__file__).parent
 UNIVERSE_PATH     = BASE_DIR / "universe.json"
+# Structural fix (race condition กับ alert-engine เขียน universe.json พร้อมกัน):
+# alert_engine.py เขียน last_price/last_adr_pct/last_rsi/last_vol_ratio/
+# last_gate/last_scanned ลงไฟล์นี้แทนที่จะเขียน universe.json ตรงๆ — ที่นี่
+# (daily_screener.py) เป็นคน merge เข้า universe.json ตอน startup แล้วเคลียร์
+# ไฟล์นี้กลับเป็น {} ตอนจบ (ดู main() ทั้งต้นและท้ายฟังก์ชัน)
+PATCH_PATH        = BASE_DIR / "universe_live_patch.json"
 WATCHLIST_PATH    = BASE_DIR / "watchlist.json"
 SCREENER_LOG_PATH = BASE_DIR / "screener_log.json"
 SCREENER_STATE    = BASE_DIR / "screener_state.json"
@@ -1124,6 +1130,22 @@ def main():
     cfg           = {**DEFAULT_CFG, **universe_data.get("settings", {})}
     universe      = universe_data.get("universe", [])
 
+    # ── Structural fix: merge universe_live_patch.json เข้า universe_data ──
+    # ก่อนเริ่ม scan ทุกครั้ง — patch data มาจาก alert_engine.py ที่รันถี่กว่า
+    # (ทุก ~5 นาที) จึงมักสดกว่าค่าที่ screener คำนวณเองครั้งล่าสุด ถ้า symbol
+    # ไหนถูก scan ในรอบนี้ด้วย ค่าจาก patch จะถูกเขียนทับด้วยค่าสดใหม่จาก
+    # screener เองอีกที (ด้านล่าง) ซึ่งถูกต้องอยู่แล้วเพราะสดกว่า
+    patch_data = load_json(PATCH_PATH, {})
+    if isinstance(patch_data, dict) and patch_data:
+        merged_n = 0
+        for _sym, _fields in patch_data.items():
+            if not isinstance(_fields, dict):
+                continue
+            if update_universe_entry(universe_data, _sym, **_fields):
+                merged_n += 1
+        log_print(f"🔀 Merge universe_live_patch.json: {merged_n}/{len(patch_data)} symbol อัปเดตแล้ว")
+        universe = universe_data.get("universe", [])
+
     if not universe:
         log_print("⚠️ universe.json ว่าง — ไม่มีหุ้นให้ scan")
         log_print("💡 เพิ่มหุ้นผ่าน Web UI หรือใส่ใน universe.json")
@@ -1589,6 +1611,11 @@ def main():
     # ── บันทึก universe.json (พร้อม halal_status + purify_pct ที่ scan ได้) ──
     save_json(UNIVERSE_PATH, universe_data)
     log_print(f"💾 Saved universe.json ({len(universe_data['universe'])} tickers)")
+
+    # เคลียร์ universe_live_patch.json กลับเป็น {} — ข้อมูลที่มีอยู่ merge เข้า
+    # universe.json ไปแล้วด้านบน ถ้าไม่เคลียร์ รอบหน้าจะ merge ซ้ำข้อมูลเก่า
+    # ทับข้อมูลใหม่กว่าที่ alert-engine เขียนไปแล้วระหว่างนี้โดยไม่ตั้งใจ
+    save_json(PATCH_PATH, {})
 
     log_print("✅ Screener เสร็จสมบูรณ์")
 
