@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-15T02:40:52Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.799999237060547,
-    "change_pct": 0.7812470197677557,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-15T02:41:09Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 97.1500015258789,
-    "change_pct": -0.857228772447279,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-15T02:41:24Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -6570,5 +6550,39 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-05T19:11:14Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 3.819999933242798,
+    "change_pct": 49.218747392296784,
+    "value": 3.629,
+    "entry_price": 3.25,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-05T19:11:15Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 3.819999933242798,
+    "change_pct": 49.218747392296784,
+    "value": 3.7375,
+    "entry_price": 3.25,
+    "pnl_pct": 17.5385,
+    "days_held": 0.23,
+    "entry_alert_type": "percent_change",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
