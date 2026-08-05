@@ -1788,8 +1788,7 @@
     "open_target": 1.8684,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_ZVIA_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1855,7 +1854,8 @@
     "open_target": 5.9616,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "ma_crossover"
+    "open_alert_type": "ma_crossover",
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1869,8 +1869,7 @@
     "last_sell_at": "2026-07-15T16:27:36Z",
     "SNDK_MA_DEATH": {
       "last_fired": "2026-07-08T14:14:46Z"
-    },
-    "_confirm_SNDK_MTF_BULL": 1
+    }
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -1882,7 +1881,8 @@
       "last_fired": "2026-07-08T13:36:08Z"
     },
     "last_sell_at": "2026-07-08T13:36:08Z",
-    "_confirm_RFIL_RSI_OS": 1
+    "_confirm_RFIL_RSI_OS": 1,
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1916,8 +1916,7 @@
     "VECO_MA_DEATH": {
       "last_fired": "2026-07-06T13:35:16Z"
     },
-    "last_buy_reminder_at": "2026-08-04T15:57:03Z",
-    "_confirm_VECO_MTF_BULL": 1
+    "last_buy_reminder_at": "2026-08-04T15:57:03Z"
   },
   "AMBA": {
     "AMBA_MTF_BULL": {
@@ -1943,8 +1942,7 @@
     "AMBA_SCORE_65": {
       "last_fired": "2026-08-03T02:27:00Z"
     },
-    "_confirm_AMBA_MA_GOLD": 1,
-    "_confirm_AMBA_MTF_BULL": 1
+    "_confirm_AMBA_MA_GOLD": 1
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
@@ -1977,7 +1975,7 @@
     "last_buy_reminder_at": "2026-08-05T14:26:53Z",
     "open_entry": 2.890000104904175,
     "open_time": "2026-08-05T14:26:53Z",
-    "open_peak": 2.9000000953674316,
+    "open_peak": 2.930000066757202,
     "open_stop": 2.601,
     "open_target": 3.3235,
     "open_conviction": 4,
@@ -2155,7 +2153,8 @@
     "open_target": 19.2132,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
