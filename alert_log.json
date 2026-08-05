@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T18:41:04Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 98.01000213623047,
-    "change_pct": 0.020412425992931794,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-14T18:41:19Z",
     "symbol": "OPRX",
     "alert_id": "OPRX_MTF_BULL",
@@ -6437,6 +6427,23 @@
     "price": 2.059999942779541,
     "change_pct": 5.641022706643131,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-05T12:41:58Z",
+    "symbol": "GLW",
+    "alert_id": "GLW_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 159.88999938964844,
+    "change_pct": 0.29167281771894377,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
