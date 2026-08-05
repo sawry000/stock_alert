@@ -528,6 +528,7 @@ input[type=password]{letter-spacing:2px}
     <div class="slabel">Tools</div>
     <button class="nbtn" onclick="show('portfolio-health')" id="nav-portfolio-health"><span class="msi">monitor_heart</span> Portfolio Health</button>
     <button class="nbtn" onclick="show('portfolio2')" id="nav-portfolio2"><span class="msi">account_balance_wallet</span> พอร์ตโฟลิโอ</button>
+    <button class="nbtn" onclick="show('strategy')" id="nav-strategy"><span class="msi">insights</span> Strategy Analytics</button>
     <button class="nbtn" onclick="show('universe')" id="nav-universe"><span class="msi">public</span> Universe Manager <span class="cnt" id="uni-cnt" style="background:var(--purple)">0</span></button>
     <div class="sdiv"></div>
     <div class="slabel">Config</div>
@@ -882,6 +883,30 @@ input[type=password]{letter-spacing:2px}
       <div id="p2-empty" style="display:none;text-align:center;padding:50px 20px;font-family:var(--mono);color:var(--text3);font-size:13px">
         <div style="font-size:36px;margin-bottom:10px;opacity:.35">📭</div>
         ยังไม่มีข้อมูล — เปิดหน้านี้ตอนเชื่อมต่อ GitHub แล้วจะโหลดอัตโนมัติ
+      </div>
+    </div>
+
+    <!-- ════ STRATEGY ANALYTICS (win rate / R:R / exit-entry breakdown) ════ -->
+    <div class="panel" id="panel-strategy">
+      <div class="phd">
+        <div>
+          <div class="ptitle" style="color:var(--cyan)">
+            <span class="msi" style="font-size:18px;color:var(--cyan)">insights</span> Strategy Analytics
+          </div>
+          <div class="psub">วิเคราะห์ว่า signal ที่ยิงออกไปเข้าเป้าจริงมั้ย — แยกตาม exit reason / entry reason / conviction score เพื่อดูว่ากลยุทธ์ไหนควรปรับ (ดึงจาก alert_log.json สดๆ)</div>
+        </div>
+        <div class="bgrp">
+          <button class="btn btn-sm btn-ghost" onclick="show('strategy')"><span class="msi">refresh</span> รีเฟรช</button>
+        </div>
+      </div>
+
+      <div id="sa-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:18px"></div>
+
+      <div id="sa-body"></div>
+
+      <div id="sa-empty" style="display:none;text-align:center;padding:50px 20px;font-family:var(--mono);color:var(--text3);font-size:13px">
+        <div style="font-size:36px;margin-bottom:10px;opacity:.35">📭</div>
+        ยังไม่มีเทรดที่ปิดพร้อมข้อมูล P&L — จะเริ่มมีข้อมูลหลังจาก SELL เกิดขึ้นครั้งแรกหลังอัปเดต alert_engine.py เวอร์ชันใหม่
       </div>
     </div>
 
@@ -1366,6 +1391,13 @@ function show(id) {
     ]).then(renderPortfolio2).catch(renderPortfolio2);
   } else if (id === 'portfolio2') {
     renderPortfolio2();
+  }
+  // Strategy Analytics: ใช้ alert_log.json อย่างเดียว (ไม่ต้องพึ่ง state/universe
+  // เพราะวิเคราะห์แต่เทรดที่ปิดไปแล้วเท่านั้น ไม่ใช่ position ที่เปิดอยู่)
+  if (id === 'strategy' && GH.token) {
+    loadFileFromGH('alert_log.json', 'log').then(renderStrategy).catch(renderStrategy);
+  } else if (id === 'strategy') {
+    renderStrategy();
   }
 }
 
@@ -2775,6 +2807,9 @@ function p2AlertTypeLabel(type) {
     volume_spike:         'Volume Spike',
     percent_change:       'ราคาเปลี่ยนแปลงเกิน threshold',
     support_resistance:   'หลุด/ทะลุแนวรับ-แนวต้าน (Stop-Loss)',
+    take_profit:          '🎯 Take Profit',
+    trailing_stop:        '📈 Trailing Stop',
+    stagnant_exit:        '⏳ Stagnant Exit (แช่แข็งนานเกินไป)',
   }[type] || (type || 'ไม่ทราบ (position เก่าก่อนมี tracking นี้)');
 }
 
@@ -2903,6 +2938,128 @@ function renderPortfolio2() {
       </tbody>
     </table>
   ` : '<div style="text-align:center;padding:30px;color:var(--text3);font-size:12px">ยังไม่มีประวัติเทรดที่ปิดแล้ว (จะเริ่มมีข้อมูลหลังจาก SELL เกิดขึ้นครั้งแรกหลังอัปเดต alert_engine.py เวอร์ชันใหม่)</div>';
+}
+
+// ══════════════════════════════════════════════════════════
+//  STRATEGY ANALYTICS — win rate / R:R / breakdown ตาม exit
+//  reason, entry reason, conviction score จาก alert_log.json
+//  (วิเคราะห์แบบเดียวกับที่ทำมือครั้งแรก 5 ส.ค. 69 แต่ทำอัตโนมัติในแดชบอร์ด)
+// ══════════════════════════════════════════════════════════
+function saFmtPct(n) {
+  return n == null ? '-' : (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
+}
+
+function saBreakdownTable(rows, keyLabel) {
+  // rows: [{key, n, winRate, avgPnl, avgDays}]
+  if (!rows.length) return '<div style="text-align:center;padding:20px;color:var(--text3);font-size:12px">ไม่มีข้อมูล</div>';
+  return `
+    <table class="ltable" style="width:100%">
+      <thead><tr><th>${keyLabel}</th><th>จำนวน</th><th>Win Rate</th><th>P&L เฉลี่ย</th><th>ถือเฉลี่ย</th></tr></thead>
+      <tbody>
+        ${rows.map(r => {
+          const color = r.avgPnl >= 0 ? 'var(--green)' : 'var(--red)';
+          const wrColor = r.winRate >= 50 ? 'var(--green)' : (r.winRate >= 35 ? 'var(--gold)' : 'var(--red)');
+          return `<tr>
+            <td style="font-weight:700">${r.label}</td>
+            <td style="font-family:var(--mono)">${r.n}</td>
+            <td style="font-family:var(--mono);font-weight:700;color:${wrColor}">${r.winRate.toFixed(1)}%</td>
+            <td style="font-family:var(--mono);font-weight:700;color:${color}">${saFmtPct(r.avgPnl)}</td>
+            <td style="font-family:var(--mono)">${r.avgDays!=null?r.avgDays.toFixed(1)+'d':'-'}</td>
+          </tr>`;
+        }).join('')}
+      </tbody>
+    </table>`;
+}
+
+function saGroupBy(trades, keyFn, labelFn) {
+  const groups = {};
+  trades.forEach(t => {
+    const k = keyFn(t) ?? 'unknown';
+    (groups[k] = groups[k] || []).push(t);
+  });
+  return Object.entries(groups).map(([k, v]) => {
+    const wins   = v.filter(t => t.pnl_pct > 0).length;
+    const days   = v.filter(t => t.days_held != null);
+    return {
+      label:   labelFn(k),
+      n:       v.length,
+      winRate: v.length ? wins / v.length * 100 : 0,
+      avgPnl:  v.reduce((a, t) => a + t.pnl_pct, 0) / v.length,
+      avgDays: days.length ? days.reduce((a, t) => a + t.days_held, 0) / days.length : null,
+    };
+  }).sort((a, b) => b.n - a.n);
+}
+
+function renderStrategy() {
+  const statsEl = document.getElementById('sa-stats');
+  if (!statsEl) return;
+
+  // เฉพาะเทรดที่ปิดจริงและมี pnl_pct บันทึกไว้ (entry_price != null กันเทรด
+  // เก่าที่ไม่มี position เปิดจริงตอนนั้น เช่น SELL ที่ยิงตอนไม่มี position)
+  const closed = (logData || [])
+    .filter(e => e.action === 'SELL' && e.pnl_pct != null && e.entry_price != null);
+
+  document.getElementById('sa-empty').style.display = closed.length ? 'none' : '';
+  if (!closed.length) {
+    statsEl.innerHTML = '';
+    document.getElementById('sa-body').innerHTML = '';
+    return;
+  }
+
+  const wins       = closed.filter(t => t.pnl_pct > 0);
+  const losses     = closed.filter(t => t.pnl_pct <= 0);
+  const winRate    = wins.length / closed.length * 100;
+  const avgWin     = wins.length ? wins.reduce((a, t) => a + t.pnl_pct, 0) / wins.length : null;
+  const avgLoss    = losses.length ? losses.reduce((a, t) => a + t.pnl_pct, 0) / losses.length : null;
+  const expectancy = closed.reduce((a, t) => a + t.pnl_pct, 0) / closed.length;
+  // win rate ที่ต้องการเพื่อเสมอทุน (breakeven) จาก avgWin/avgLoss ปัจจุบัน
+  const breakeven  = (avgWin != null && avgLoss != null && (avgWin - avgLoss) !== 0)
+    ? (-avgLoss) / (avgWin - avgLoss) * 100 : null;
+  const rrTrades   = closed.filter(t => t.rr_ratio != null);
+  const avgRR      = rrTrades.length ? rrTrades.reduce((a, t) => a + t.rr_ratio, 0) / rrTrades.length : null;
+
+  statsEl.innerHTML = `
+    <div class="stat" style="--sc:var(--purple)"><div class="sv">${closed.length}</div><div class="sl">เทรดที่ปิดแล้ว (มีข้อมูล P&L)</div></div>
+    <div class="stat" style="--sc:${winRate>=50?'var(--green)':(winRate>=35?'var(--gold)':'var(--red)')}"><div class="sv">${winRate.toFixed(1)}%</div><div class="sl">Win Rate รวม</div></div>
+    <div class="stat" style="--sc:var(--green)"><div class="sv">${avgWin!=null?saFmtPct(avgWin):'-'}</div><div class="sl">ชนะเฉลี่ย</div></div>
+    <div class="stat" style="--sc:var(--red)"><div class="sv">${avgLoss!=null?saFmtPct(avgLoss):'-'}</div><div class="sl">แพ้เฉลี่ย</div></div>
+    <div class="stat" style="--sc:${expectancy>=0?'var(--green)':'var(--red)'}"><div class="sv">${saFmtPct(expectancy)}</div><div class="sl">Expectancy/เทรด</div></div>
+    <div class="stat" style="--sc:var(--cyan)"><div class="sv">${breakeven!=null?breakeven.toFixed(1)+'%':'-'}</div><div class="sl">Win Rate ที่ต้องการ (Breakeven)</div></div>
+    <div class="stat" style="--sc:var(--gold)"><div class="sv">${avgRR!=null?'1:'+avgRR.toFixed(2):'-'}</div><div class="sl">R:R เฉลี่ย (BUY)</div></div>
+  `;
+
+  const byExit = saGroupBy(closed, t => t.type, k => p2AlertTypeLabel(k));
+  const byEntry = saGroupBy(closed, t => t.entry_alert_type, k => p2AlertTypeLabel(k));
+
+  // ── Breakdown ตาม conviction score (เฉพาะเทรดที่มีข้อมูล — หลัง alert_engine
+  // เวอร์ชันที่ log conviction_score ตอน BUY แล้วเท่านั้น) ──
+  const withConv = closed.filter(t => t.conviction_score != null && t.conviction_total != null);
+  const byConv = saGroupBy(withConv,
+    t => `${t.conviction_score}/${t.conviction_total}`,
+    k => `Conviction ${k}`);
+
+  document.getElementById('sa-body').innerHTML = `
+    <div style="margin-bottom:22px">
+      <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:8px;font-weight:700">
+        <span class="msi" style="font-size:14px;vertical-align:middle">logout</span> แยกตามเหตุผลที่ "ออก" (Exit Reason)
+      </div>
+      ${saBreakdownTable(byExit, 'Exit Reason')}
+    </div>
+    <div style="margin-bottom:22px">
+      <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:8px;font-weight:700">
+        <span class="msi" style="font-size:14px;vertical-align:middle">login</span> แยกตามเหตุผลที่ "เข้า" (Entry Reason)
+      </div>
+      ${saBreakdownTable(byEntry, 'Entry Reason')}
+    </div>
+    <div>
+      <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:8px;font-weight:700">
+        <span class="msi" style="font-size:14px;vertical-align:middle">military_tech</span> แยกตาม Conviction Score
+      </div>
+      ${withConv.length
+        ? saBreakdownTable(byConv, 'Conviction')
+        : '<div style="text-align:center;padding:20px;color:var(--text3);font-size:12px">ยังไม่มีเทรดที่มี conviction score บันทึกไว้ — เพิ่งเริ่มบันทึกตั้งแต่อัปเดต alert_engine.py เวอร์ชันล่าสุด รอสัก 2-3 สัปดาห์ให้มีข้อมูลสะสม</div>'}
+    </div>
+  `;
 }
 
 // ══════════════════════════════════════════════════════════
