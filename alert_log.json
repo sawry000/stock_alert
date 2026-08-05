@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T20:27:24Z",
-    "symbol": "EVTV",
-    "alert_id": "EVTV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.94,
-    "change_pct": 7.182320441988945,
-    "value": 2
-  },
-  {
-    "timestamp": "2026-07-14T20:27:29Z",
-    "symbol": "AOUT",
-    "alert_id": "AOUT_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 14.09000015258789,
-    "change_pct": 1.1486012389654767,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-14T21:42:05Z",
     "symbol": "ISSC",
     "alert_id": "ISSC_MTF_BULL",
@@ -6497,6 +6477,40 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-05T14:11:21Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 25.059999465942383,
+    "change_pct": 1.252523094716698,
+    "value": 23.807,
+    "entry_price": 23.110000610351562,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-05T14:11:22Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 25.059999465942383,
+    "change_pct": 1.252523094716698,
+    "value": 24.9588,
+    "entry_price": 23.110000610351562,
+    "pnl_pct": 8.4379,
+    "days_held": 1.85,
+    "entry_alert_type": "mtf_alignment",
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
