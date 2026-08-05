@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-15T02:41:24Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.53000020980835,
-    "change_pct": -0.3053403082694689,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-15T02:41:50Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -6584,5 +6574,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-05T20:26:34Z",
+    "symbol": "VECO",
+    "alert_id": "VECO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 52.959999084472656,
+    "change_pct": -0.6379004043664932,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
