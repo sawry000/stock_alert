@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T18:12:05Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 10.550000190734863,
-    "change_pct": 13.197426939215267,
-    "value": 13.197426939215267
-  },
-  {
     "timestamp": "2026-07-14T18:25:44Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -6422,6 +6412,23 @@
     "action": "BUY",
     "price": 6.099999904632568,
     "change_pct": -1.4539595374383203,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-05T10:40:46Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 91.66000366210938,
+    "change_pct": -0.9081041490709459,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
