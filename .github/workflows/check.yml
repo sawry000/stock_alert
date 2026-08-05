@@ -1,6 +1,8 @@
 name: "Halal Stock Alert PRO — Autonomous Pipeline"
 
-on:
+# หมายเหตุ: key "on" ต้อง quote เสมอ ("on": ไม่ใช่ on:) — ดูเหตุผลเต็มใน
+# manual_check.yml (โปรเจกต์นี้เคยเจอ workflow ไม่ trigger เพราะจุดนี้มาแล้ว)
+"on":
   workflow_dispatch:
     inputs:
       run_mode:
@@ -27,8 +29,13 @@ jobs:
     if: >
       github.event.inputs.run_mode == 'screener_only' ||
       github.event.inputs.run_mode == 'full_pipeline'
+    # แก้บั๊ก: เดิม group ชื่อ "daily-screener" แยกจาก alert-engine ("alert-engine")
+    # ทำให้สอง job เขียน universe.json พร้อมกันได้จริง (race condition) — retry+
+    # rebase ที่มีอยู่เป็นแค่การประคองอาการ ไม่ใช่การแก้ที่ต้นเหตุ ตอนนี้รวม
+    # group เดียวกับ alert-engine และ manual_check.yml ("universe-json-writer")
+    # ทำให้ GitHub Actions queue ให้รันทีละ job แทนที่จะแข่งกัน push
     concurrency:
-      group: daily-screener
+      group: universe-json-writer
       cancel-in-progress: false
 
     steps:
@@ -92,7 +99,11 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add universe.json watchlist.json screener_log.json screener_state.json
+          # universe_live_patch.json เพิ่มเข้ามา (structural fix) — daily_screener.py
+          # merge ข้อมูลจากไฟล์นี้เข้า universe.json ตอน startup แล้วเคลียร์
+          # ไฟล์นี้กลับเป็น {} ตอนจบ ต้อง commit การเคลียร์นี้ด้วย ไม่งั้นรอบ
+          # ถัดไปจะ merge ข้อมูลเก่าซ้ำ
+          git add universe.json universe_live_patch.json watchlist.json screener_log.json screener_state.json
 
           if git diff --staged --quiet; then
             echo "ℹ️ ไม่มีอะไรเปลี่ยน — ข้าม commit"
@@ -150,8 +161,10 @@ jobs:
     if: >
       github.event.inputs.run_mode == 'alert_only' ||
       github.event.inputs.run_mode == 'full_pipeline'
+    # รวม group เดียวกับ daily-screener/manual_check.yml — ดู comment ที่
+    # daily-screener job ด้านบนสำหรับเหตุผลเต็ม
     concurrency:
-      group: alert-engine
+      group: universe-json-writer
       cancel-in-progress: false
 
     steps:
@@ -200,13 +213,14 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # เพิ่ม universe.json เข้ามาด้วย — alert_engine.py ตอนนี้เขียน
-          # last_price/last_adr_pct/last_rsi/last_vol_ratio/last_gate/
-          # last_scanned ให้ symbol ใน watchlist ทุกรอบที่รัน (ดู
-          # sync_universe_tech() ใน alert_engine.py) ถ้าไม่ git add ตรงนี้
-          # การเปลี่ยนแปลงจะหายไปเงียบๆ ตอนจบ job (แก้ใน working dir แต่ไม่เคย
-          # ถูก commit เลย)
-          git add state.json alert_log.json universe.json
+          # อัปเดต (structural fix): alert_engine.py ไม่เขียน universe.json
+          # ตรงๆ อีกต่อไป — เขียน last_price/last_adr_pct/last_rsi/
+          # last_vol_ratio/last_gate/last_scanned ลง universe_live_patch.json
+          # แยกไฟล์แทน (ดู sync_universe_tech() ใน alert_engine.py) แล้วให้
+          # daily_screener.py เป็นคน merge เข้า universe.json ตอน startup รอบ
+          # ถัดไปแทน วิธีนี้ตัดปัญหาสองงานเขียนไฟล์เดียวกันพร้อมกันไปตั้งแต่
+          # ต้นตอ (ไม่ต้องพึ่ง retry/rebase มาแก้ปัญหาที่ปลายเหตุอีกแล้ว)
+          git add state.json alert_log.json universe_live_patch.json
 
           if git diff --staged --quiet; then
             echo "ℹ️ ไม่มีอะไรเปลี่ยน — ข้าม commit"
