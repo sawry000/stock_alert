@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T22:26:41Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 10.760000228881836,
-    "change_pct": 15.450646232637721,
-    "value": 15.450646232637721
-  },
-  {
     "timestamp": "2026-07-14T22:27:14Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MTF_BULL",
@@ -6521,6 +6511,23 @@
     "price": 3.619999885559082,
     "change_pct": 41.406245529651635,
     "value": 3.439,
+    "entry_price": 3.25,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-05T15:25:59Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 3.640000104904175,
+    "change_pct": 42.18750409781932,
+    "value": 3.458,
     "entry_price": 3.25,
     "pnl_pct": null,
     "days_held": null,
