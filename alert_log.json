@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T18:41:19Z",
-    "symbol": "OPRX",
-    "alert_id": "OPRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.614999771118164,
-    "change_pct": 0.9923629178345685,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-14T18:41:46Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -6450,6 +6440,23 @@
     "entry_alert_type": null,
     "conviction_score": 5,
     "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-05T13:12:45Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 17.209999084472656,
+    "change_pct": 2.015406546962983,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 4,
     "rr_ratio": 1.5
   }
 ]
