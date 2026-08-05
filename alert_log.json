@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T20:26:52Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.7300000190734863,
-    "change_pct": 1.7647070043227278,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-14T20:27:24Z",
     "symbol": "EVTV",
     "alert_id": "EVTV_MTF_BULL",
@@ -6490,6 +6480,23 @@
     "pnl_pct": -22.7057,
     "days_held": 0.99,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-05T13:56:01Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 3.5199999809265137,
+    "change_pct": 37.49999925494193,
+    "value": 3.344,
+    "entry_price": 3.25,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
