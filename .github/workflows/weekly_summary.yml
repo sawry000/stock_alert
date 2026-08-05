@@ -1,0 +1,35 @@
+name: "Weekly Strategy Summary"
+
+# หมายเหตุ: key "on" ต้อง quote เสมอ ("on": ไม่ใช่ on:) — ดูเหตุผลเต็มใน
+# manual_check.yml (โปรเจกต์นี้เคยเจอ workflow ไม่ trigger เพราะจุดนี้มาแล้ว)
+"on":
+  schedule:
+    # ทุกวันจันทร์ 01:00 UTC = 08:00 ICT (เผื่อเวลาให้ตลาดสหรัฐฯ ปิดของสัปดาห์
+    # ก่อนหน้าเรียบร้อยแล้ว ก่อนเริ่มสัปดาห์ใหม่)
+    - cron: "0 1 * * 1"
+  workflow_dispatch: {}   # ให้กดรันเองได้ทันทีจาก Actions tab เพื่อทดสอบ
+
+permissions:
+  contents: read   # อ่าน alert_log.json อย่างเดียว ไม่เขียนไฟล์ไหนกลับเลย
+
+jobs:
+  weekly-summary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # ไม่ต้องติดตั้ง dependency เพิ่ม — weekly_summary.py ใช้แค่ standard
+      # library (json/urllib) เพราะแค่อ่าน alert_log.json ที่มีอยู่แล้วในโค้ด
+      # ไม่ได้ยิง yfinance หรือ API ภายนอกใดๆ นอกจาก Telegram
+      - name: Run weekly summary
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 weekly_summary.py
