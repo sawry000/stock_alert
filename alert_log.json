@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-15T02:13:26Z",
-    "symbol": "LHAI",
-    "alert_id": "LHAI_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 1.2200000286102295,
-    "change_pct": 24.489798837778523,
-    "value": 13.933821209695134
-  },
-  {
     "timestamp": "2026-07-15T02:40:52Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -6563,5 +6553,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-05T17:56:23Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 26.40999984741211,
+    "change_pct": 6.7070700905539775,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
