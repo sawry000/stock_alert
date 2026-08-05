@@ -255,6 +255,19 @@ input[type=password]{letter-spacing:2px}
 .ltable td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
 .ltable tr:hover td{background:rgba(255,255,255,0.02)}
 
+/* STRATEGY ANALYTICS */
+.sa-period-btn{background:transparent;border:none;color:var(--text3);font-family:var(--mono);font-size:11px;
+  padding:6px 14px;border-radius:5px;cursor:pointer;transition:all 0.15s;letter-spacing:0.5px}
+.sa-period-btn:hover{color:var(--text2)}
+.sa-period-btn.active{background:var(--cyan);color:var(--bg);font-weight:700}
+.ltable tr.clickable{cursor:pointer}
+.ltable tr.clickable:hover td{background:rgba(0,229,255,0.05)}
+.ltable tr.clickable td:first-child::after{content:'chevron_right';font-family:'Material Symbols Outlined';
+  font-size:14px;color:var(--text3);float:right;opacity:0;transition:opacity 0.15s}
+.ltable tr.clickable:hover td:first-child::after{opacity:1}
+.sa-stat-clickable{cursor:pointer;transition:transform 0.15s}
+.sa-stat-clickable:hover{transform:translateY(-2px)}
+
 /* SPINNER */
 .spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(0,229,255,0.2);
   border-top-color:var(--cyan);border-radius:50%;animation:spin 0.7s linear infinite}
@@ -893,14 +906,56 @@ input[type=password]{letter-spacing:2px}
           <div class="ptitle" style="color:var(--cyan)">
             <span class="msi" style="font-size:18px;color:var(--cyan)">insights</span> Strategy Analytics
           </div>
-          <div class="psub">วิเคราะห์ว่า signal ที่ยิงออกไปเข้าเป้าจริงมั้ย — แยกตาม exit reason / entry reason / conviction score เพื่อดูว่ากลยุทธ์ไหนควรปรับ (ดึงจาก alert_log.json สดๆ)</div>
+          <div class="psub">วิเคราะห์ว่า signal ที่ยิงออกไปเข้าเป้าจริงมั้ย — คลิกแถวไหนก็ได้เพื่อดูรายละเอียดเทรดทั้งหมดในกลุ่มนั้น (ดึงจาก alert_log.json สดๆ)</div>
         </div>
         <div class="bgrp">
           <button class="btn btn-sm btn-ghost" onclick="show('strategy')"><span class="msi">refresh</span> รีเฟรช</button>
         </div>
       </div>
 
-      <div id="sa-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:18px"></div>
+      <!-- ช่วงเวลา -->
+      <div style="display:flex;gap:0;margin-bottom:16px;background:var(--bg2);border:1px solid var(--border);border-radius:7px;padding:4px;width:fit-content">
+        <button class="sa-period-btn" data-period="7"   onclick="saSetPeriod(7,this)">7 วัน</button>
+        <button class="sa-period-btn" data-period="30"  onclick="saSetPeriod(30,this)">30 วัน</button>
+        <button class="sa-period-btn" data-period="90"  onclick="saSetPeriod(90,this)">90 วัน</button>
+        <button class="sa-period-btn active" data-period="0" onclick="saSetPeriod(0,this)">ทั้งหมด</button>
+      </div>
+
+      <div id="sa-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:20px"></div>
+
+      <!-- กราฟ -->
+      <div id="sa-charts" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px;margin-bottom:22px">
+        <div class="card" style="grid-column:1/-1">
+          <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:10px;font-weight:700">
+            <span class="msi" style="font-size:14px;vertical-align:middle">show_chart</span> Equity Curve (สะสม P&L% ตามลำดับเวลาที่ปิดเทรด)
+          </div>
+          <div style="position:relative;height:260px"><canvas id="sa-chart-equity"></canvas></div>
+        </div>
+        <div class="card">
+          <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:10px;font-weight:700">
+            <span class="msi" style="font-size:14px;vertical-align:middle">logout</span> P&L เฉลี่ย ตาม Exit Reason
+          </div>
+          <div style="position:relative;height:240px"><canvas id="sa-chart-exit"></canvas></div>
+        </div>
+        <div class="card">
+          <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:10px;font-weight:700">
+            <span class="msi" style="font-size:14px;vertical-align:middle">login</span> P&L เฉลี่ย ตาม Entry Reason
+          </div>
+          <div style="position:relative;height:240px"><canvas id="sa-chart-entry"></canvas></div>
+        </div>
+        <div class="card">
+          <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:10px;font-weight:700">
+            <span class="msi" style="font-size:14px;vertical-align:middle">military_tech</span> Win Rate ตาม Conviction Score
+          </div>
+          <div style="position:relative;height:240px"><canvas id="sa-chart-conviction"></canvas></div>
+        </div>
+        <div class="card">
+          <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:10px;font-weight:700">
+            <span class="msi" style="font-size:14px;vertical-align:middle">bar_chart</span> การกระจายตัวของผลตอบแทน (P&L Distribution)
+          </div>
+          <div style="position:relative;height:240px"><canvas id="sa-chart-dist"></canvas></div>
+        </div>
+      </div>
 
       <div id="sa-body"></div>
 
@@ -1267,7 +1322,32 @@ input[type=password]{letter-spacing:2px}
   </div>
 </div>
 
+<!-- MODAL: Strategy Analytics — รายละเอียดเทรดในกลุ่มที่คลิก -->
+<div class="overlay" id="sa-modal">
+  <div class="modal" style="max-width:920px">
+    <div class="mhd">
+      <div class="mtitle" id="sa-modal-title"><span class="msi" style="font-size:15px">list_alt</span> รายละเอียดเทรด</div>
+      <button class="mclose" onclick="saCloseModal()"><span class="msi" style="font-size:16px">close</span></button>
+    </div>
+    <div id="sa-modal-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:16px"></div>
+    <div style="overflow-x:auto">
+      <table class="ltable" style="width:100%;min-width:720px">
+        <thead>
+          <tr>
+            <th>Symbol</th><th>วันที่ปิด</th><th>เข้า</th><th>ออก</th>
+            <th>P&L</th><th>ถือ</th><th>Entry Reason</th><th>Exit Reason</th><th>R:R</th><th>Conviction</th>
+          </tr>
+        </thead>
+        <tbody id="sa-modal-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
+
+<!-- Chart.js — ใช้เฉพาะหน้า Strategy Analytics (equity curve / breakdown charts) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 
 <script>
 // ══════════════════════════════════════════════════════════
@@ -2943,14 +3023,73 @@ function renderPortfolio2() {
 // ══════════════════════════════════════════════════════════
 //  STRATEGY ANALYTICS — win rate / R:R / breakdown ตาม exit
 //  reason, entry reason, conviction score จาก alert_log.json
-//  (วิเคราะห์แบบเดียวกับที่ทำมือครั้งแรก 5 ส.ค. 69 แต่ทำอัตโนมัติในแดชบอร์ด)
+//  รองรับ: เลือกช่วงเวลา, กราฟ (equity curve / breakdown bar /
+//  distribution), คลิกแถวหรือ stat card เพื่อดูรายละเอียดเทรด
+//  แบบละเอียดยิบทีละตัวใน modal
 // ══════════════════════════════════════════════════════════
+let SA_PERIOD = 0;          // 0 = ทั้งหมด, ไม่งั้นคือจำนวนวันย้อนหลัง
+let SA_CHARTS = {};         // เก็บ Chart.js instance ไว้ destroy ก่อน re-render กันซ้อนกัน
+const SA_COLOR = {
+  cyan: '#00e5ff', green: '#00ff9d', gold: '#ffd54f', orange: '#ff6d00',
+  pink: '#ff4081', purple: '#e040fb', red: '#ff1744',
+  text2: '#8899bb', text3: '#3d5080', grid: 'rgba(255,255,255,0.06)',
+};
+const SA_PALETTE = [SA_COLOR.cyan, SA_COLOR.gold, SA_COLOR.purple, SA_COLOR.pink, SA_COLOR.orange, SA_COLOR.green, SA_COLOR.red];
+
 function saFmtPct(n) {
   return n == null ? '-' : (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
 }
 
-function saBreakdownTable(rows, keyLabel) {
-  // rows: [{key, n, winRate, avgPnl, avgDays}]
+function saFmtDate(ts) {
+  if (!ts) return '-';
+  const d = new Date(ts);
+  if (isNaN(d)) return '-';
+  return d.toLocaleDateString('th-TH', { day: '2-digit', month: '2-digit', year: '2-digit' });
+}
+
+function saSetPeriod(days, btnEl) {
+  SA_PERIOD = days;
+  document.querySelectorAll('.sa-period-btn').forEach(b => b.classList.remove('active'));
+  if (btnEl) btnEl.classList.add('active');
+  renderStrategy();
+}
+
+function saFilterPeriod(trades) {
+  if (!SA_PERIOD) return trades;
+  const cutoff = Date.now() - SA_PERIOD * 86400000;
+  return trades.filter(t => {
+    const d = new Date(t.timestamp);
+    return !isNaN(d) && d.getTime() >= cutoff;
+  });
+}
+
+// เก็บ trades จริงไว้ในแต่ละ group (ไม่ใช่แค่ตัวเลขสรุป) เพื่อให้คลิกดู
+// รายละเอียดได้ — labelFn คืน label ที่จะโชว์, keyFn คืน key สำหรับ group
+function saGroupBy(trades, keyFn, labelFn) {
+  const groups = {};
+  trades.forEach(t => {
+    const k = keyFn(t) ?? 'unknown';
+    (groups[k] = groups[k] || []).push(t);
+  });
+  return Object.entries(groups).map(([k, v]) => {
+    const wins = v.filter(t => t.pnl_pct > 0).length;
+    const days = v.filter(t => t.days_held != null);
+    return {
+      key: k,
+      label:   labelFn(k),
+      n:       v.length,
+      winRate: v.length ? wins / v.length * 100 : 0,
+      avgPnl:  v.reduce((a, t) => a + t.pnl_pct, 0) / v.length,
+      avgDays: days.length ? days.reduce((a, t) => a + t.days_held, 0) / days.length : null,
+      trades:  v,
+    };
+  }).sort((a, b) => b.n - a.n);
+}
+
+// ตารางสรุปที่คลิกแต่ละแถวได้ — เก็บ trades ไว้ใน window.SA_ROWS[idx] แล้ว
+// เรียก saOpenDetail ผ่าน index (เลี่ยงปัญหา escape ข้อความยาวๆ ใน onclick)
+window.SA_ROWS = [];
+function saBreakdownTable(rows, keyLabel, groupTitlePrefix) {
   if (!rows.length) return '<div style="text-align:center;padding:20px;color:var(--text3);font-size:12px">ไม่มีข้อมูล</div>';
   return `
     <table class="ltable" style="width:100%">
@@ -2959,7 +3098,9 @@ function saBreakdownTable(rows, keyLabel) {
         ${rows.map(r => {
           const color = r.avgPnl >= 0 ? 'var(--green)' : 'var(--red)';
           const wrColor = r.winRate >= 50 ? 'var(--green)' : (r.winRate >= 35 ? 'var(--gold)' : 'var(--red)');
-          return `<tr>
+          const idx = window.SA_ROWS.length;
+          window.SA_ROWS.push({ title: `${groupTitlePrefix}: ${r.label}`, trades: r.trades });
+          return `<tr class="clickable" onclick="saOpenDetailByIdx(${idx})">
             <td style="font-weight:700">${r.label}</td>
             <td style="font-family:var(--mono)">${r.n}</td>
             <td style="font-family:var(--mono);font-weight:700;color:${wrColor}">${r.winRate.toFixed(1)}%</td>
@@ -2971,35 +3112,234 @@ function saBreakdownTable(rows, keyLabel) {
     </table>`;
 }
 
-function saGroupBy(trades, keyFn, labelFn) {
-  const groups = {};
-  trades.forEach(t => {
-    const k = keyFn(t) ?? 'unknown';
-    (groups[k] = groups[k] || []).push(t);
+function saOpenDetailByIdx(idx) {
+  const row = window.SA_ROWS[idx];
+  if (row) saOpenDetail(row.title, row.trades);
+}
+
+// ── Detail modal: รายการเทรดทั้งหมดในกลุ่มที่คลิก พร้อม mini-stats ──
+function saOpenDetail(title, trades) {
+  document.getElementById('sa-modal-title').innerHTML =
+    `<span class="msi" style="font-size:15px">list_alt</span> ${title} (${trades.length} เทรด)`;
+
+  const wins = trades.filter(t => t.pnl_pct > 0);
+  const winRate = trades.length ? wins.length / trades.length * 100 : 0;
+  const avgPnl = trades.length ? trades.reduce((a, t) => a + t.pnl_pct, 0) / trades.length : 0;
+  const best = trades.reduce((a, t) => (a == null || t.pnl_pct > a.pnl_pct) ? t : a, null);
+  const worst = trades.reduce((a, t) => (a == null || t.pnl_pct < a.pnl_pct) ? t : a, null);
+
+  document.getElementById('sa-modal-stats').innerHTML = `
+    <div class="stat" style="--sc:${winRate>=50?'var(--green)':'var(--red)'}"><div class="sv">${winRate.toFixed(1)}%</div><div class="sl">Win Rate</div></div>
+    <div class="stat" style="--sc:${avgPnl>=0?'var(--green)':'var(--red)'}"><div class="sv">${saFmtPct(avgPnl)}</div><div class="sl">P&L เฉลี่ย</div></div>
+    <div class="stat" style="--sc:var(--green)"><div class="sv">${best?best.symbol+' '+saFmtPct(best.pnl_pct):'-'}</div><div class="sl">ดีที่สุด</div></div>
+    <div class="stat" style="--sc:var(--red)"><div class="sv">${worst?worst.symbol+' '+saFmtPct(worst.pnl_pct):'-'}</div><div class="sl">แย่ที่สุด</div></div>
+  `;
+
+  const sorted = [...trades].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  document.getElementById('sa-modal-tbody').innerHTML = sorted.map(t => {
+    const color = t.pnl_pct >= 0 ? 'var(--green)' : 'var(--red)';
+    const exitPrice = t.price != null ? '$' + Number(t.price).toFixed(4) : '-';
+    const entryPrice = t.entry_price != null ? '$' + Number(t.entry_price).toFixed(4) : '-';
+    const rr = t.rr_ratio != null ? '1:' + t.rr_ratio.toFixed(2) : '-';
+    const conv = (t.conviction_score != null && t.conviction_total != null) ? `${t.conviction_score}/${t.conviction_total}` : '-';
+    return `<tr>
+      <td style="font-weight:700">${t.symbol}</td>
+      <td>${saFmtDate(t.timestamp)}</td>
+      <td style="font-family:var(--mono)">${entryPrice}</td>
+      <td style="font-family:var(--mono)">${exitPrice}</td>
+      <td style="font-family:var(--mono);font-weight:700;color:${color}">${saFmtPct(t.pnl_pct)}</td>
+      <td style="font-family:var(--mono)">${t.days_held!=null?t.days_held.toFixed(1)+'d':'-'}</td>
+      <td style="font-size:11px">${p2AlertTypeLabel(t.entry_alert_type)}</td>
+      <td style="font-size:11px">${p2AlertTypeLabel(t.type)}</td>
+      <td style="font-family:var(--mono)">${rr}</td>
+      <td style="font-family:var(--mono)">${conv}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('sa-modal').classList.add('open');
+}
+
+function saCloseModal() {
+  document.getElementById('sa-modal').classList.remove('open');
+}
+
+// ── กราฟ (Chart.js) ──────────────────────────────────────────────────────
+function saDestroyChart(id) {
+  if (SA_CHARTS[id]) { SA_CHARTS[id].destroy(); delete SA_CHARTS[id]; }
+}
+
+function saChartDefaults() {
+  return {
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: { color: SA_COLOR.grid }, ticks: { color: SA_COLOR.text2, font: { family: 'JetBrains Mono', size: 10 } } },
+      y: { grid: { color: SA_COLOR.grid }, ticks: { color: SA_COLOR.text2, font: { family: 'JetBrains Mono', size: 10 } } },
+    },
+  };
+}
+
+function saRenderEquityChart(closedSorted) {
+  const el = document.getElementById('sa-chart-equity');
+  if (!el || typeof Chart === 'undefined') return;
+  saDestroyChart('equity');
+  let cum = 0;
+  const points = closedSorted.map(t => { cum += t.pnl_pct; return cum; });
+  const labels = closedSorted.map(t => saFmtDate(t.timestamp));
+  const isUp = points.length && points[points.length - 1] >= 0;
+  SA_CHARTS.equity = new Chart(el, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data: points,
+        borderColor: isUp ? SA_COLOR.green : SA_COLOR.red,
+        backgroundColor: (isUp ? 'rgba(0,255,157,0.08)' : 'rgba(255,23,68,0.08)'),
+        fill: true, tension: 0.25, pointRadius: 2, pointHoverRadius: 5,
+        borderWidth: 2,
+      }],
+    },
+    options: {
+      ...saChartDefaults(),
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (c) => `สะสม: ${c.raw >= 0 ? '+' : ''}${c.raw.toFixed(2)}%`,
+            title: (items) => closedSorted[items[0].dataIndex].symbol + ' — ' + labels[items[0].dataIndex],
+          },
+        },
+      },
+      scales: {
+        ...saChartDefaults().scales,
+        y: { ...saChartDefaults().scales.y, ticks: { ...saChartDefaults().scales.y.ticks, callback: (v) => (v >= 0 ? '+' : '') + v + '%' } },
+      },
+      onClick: (evt, els) => {
+        if (els.length) saOpenDetail('Equity Curve — เทรดทั้งหมดตามลำดับเวลา', closedSorted);
+      },
+    },
   });
-  return Object.entries(groups).map(([k, v]) => {
-    const wins   = v.filter(t => t.pnl_pct > 0).length;
-    const days   = v.filter(t => t.days_held != null);
-    return {
-      label:   labelFn(k),
-      n:       v.length,
-      winRate: v.length ? wins / v.length * 100 : 0,
-      avgPnl:  v.reduce((a, t) => a + t.pnl_pct, 0) / v.length,
-      avgDays: days.length ? days.reduce((a, t) => a + t.days_held, 0) / days.length : null,
-    };
-  }).sort((a, b) => b.n - a.n);
+}
+
+function saRenderBreakdownChart(canvasId, rows, chartKey) {
+  const el = document.getElementById(canvasId);
+  if (!el || typeof Chart === 'undefined') return;
+  saDestroyChart(chartKey);
+  const top = rows.slice(0, 8);
+  const colors = top.map(r => r.avgPnl >= 0 ? SA_COLOR.green : SA_COLOR.red);
+  SA_CHARTS[chartKey] = new Chart(el, {
+    type: 'bar',
+    data: {
+      labels: top.map(r => r.label.length > 16 ? r.label.slice(0, 15) + '…' : r.label),
+      datasets: [{ data: top.map(r => r.avgPnl), backgroundColor: colors, borderRadius: 4, maxBarThickness: 40 }],
+    },
+    options: {
+      ...saChartDefaults(),
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: {
+          label: (c) => `${(c.raw>=0?'+':'')}${c.raw.toFixed(2)}%  (n=${top[c.dataIndex].n}, win ${top[c.dataIndex].winRate.toFixed(0)}%)`,
+        } },
+      },
+      scales: {
+        x: { ...saChartDefaults().scales.x, ticks: { ...saChartDefaults().scales.x.ticks, callback: (v) => (v>=0?'+':'')+v+'%' } },
+        y: saChartDefaults().scales.y,
+      },
+      onClick: (evt, els) => {
+        if (els.length) saOpenDetail(top[els[0].index].label, top[els[0].index].trades);
+      },
+    },
+  });
+}
+
+function saRenderConvictionChart(rows) {
+  const el = document.getElementById('sa-chart-conviction');
+  if (!el || typeof Chart === 'undefined') return;
+  saDestroyChart('conviction');
+  if (!rows.length) return;
+  const sorted = [...rows].sort((a, b) => a.label.localeCompare(b.label));
+  SA_CHARTS.conviction = new Chart(el, {
+    type: 'bar',
+    data: {
+      labels: sorted.map(r => r.label),
+      datasets: [{
+        data: sorted.map(r => r.winRate),
+        backgroundColor: sorted.map(r => r.winRate >= 50 ? SA_COLOR.green : (r.winRate >= 35 ? SA_COLOR.gold : SA_COLOR.red)),
+        borderRadius: 4, maxBarThickness: 40,
+      }],
+    },
+    options: {
+      ...saChartDefaults(),
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (c) => `Win Rate ${c.raw.toFixed(1)}% (n=${sorted[c.dataIndex].n})` } },
+      },
+      scales: {
+        x: saChartDefaults().scales.x,
+        y: { ...saChartDefaults().scales.y, min: 0, max: 100, ticks: { ...saChartDefaults().scales.y.ticks, callback: (v) => v + '%' } },
+      },
+      onClick: (evt, els) => {
+        if (els.length) saOpenDetail('Conviction ' + sorted[els[0].index].label, sorted[els[0].index].trades);
+      },
+    },
+  });
+}
+
+function saRenderDistChart(closed) {
+  const el = document.getElementById('sa-chart-dist');
+  if (!el || typeof Chart === 'undefined') return;
+  saDestroyChart('dist');
+  const buckets = [
+    { label: '< -20%', min: -Infinity, max: -20 },
+    { label: '-20~-10%', min: -20, max: -10 },
+    { label: '-10~-5%', min: -10, max: -5 },
+    { label: '-5~0%', min: -5, max: 0 },
+    { label: '0~5%', min: 0, max: 5 },
+    { label: '5~10%', min: 5, max: 10 },
+    { label: '10~20%', min: 10, max: 20 },
+    { label: '> 20%', min: 20, max: Infinity },
+  ];
+  const counts = buckets.map(b => closed.filter(t => t.pnl_pct >= b.min && t.pnl_pct < b.max).length);
+  const bucketTrades = buckets.map(b => closed.filter(t => t.pnl_pct >= b.min && t.pnl_pct < b.max));
+  SA_CHARTS.dist = new Chart(el, {
+    type: 'bar',
+    data: {
+      labels: buckets.map(b => b.label),
+      datasets: [{
+        data: counts,
+        backgroundColor: buckets.map(b => b.max <= 0 ? SA_COLOR.red : SA_COLOR.green),
+        borderRadius: 4, maxBarThickness: 34,
+      }],
+    },
+    options: {
+      ...saChartDefaults(),
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => `${c.raw} เทรด` } } },
+      onClick: (evt, els) => {
+        if (els.length && bucketTrades[els[0].index].length) {
+          saOpenDetail('P&L ' + buckets[els[0].index].label, bucketTrades[els[0].index]);
+        }
+      },
+    },
+  });
 }
 
 function renderStrategy() {
   const statsEl = document.getElementById('sa-stats');
   if (!statsEl) return;
+  window.SA_ROWS = [];
 
   // เฉพาะเทรดที่ปิดจริงและมี pnl_pct บันทึกไว้ (entry_price != null กันเทรด
   // เก่าที่ไม่มี position เปิดจริงตอนนั้น เช่น SELL ที่ยิงตอนไม่มี position)
-  const closed = (logData || [])
+  const allClosed = (logData || [])
     .filter(e => e.action === 'SELL' && e.pnl_pct != null && e.entry_price != null);
+  const closed = saFilterPeriod(allClosed);
 
   document.getElementById('sa-empty').style.display = closed.length ? 'none' : '';
+  document.getElementById('sa-charts').style.display = closed.length ? '' : 'none';
   if (!closed.length) {
     statsEl.innerHTML = '';
     document.getElementById('sa-body').innerHTML = '';
@@ -3012,51 +3352,58 @@ function renderStrategy() {
   const avgWin     = wins.length ? wins.reduce((a, t) => a + t.pnl_pct, 0) / wins.length : null;
   const avgLoss    = losses.length ? losses.reduce((a, t) => a + t.pnl_pct, 0) / losses.length : null;
   const expectancy = closed.reduce((a, t) => a + t.pnl_pct, 0) / closed.length;
-  // win rate ที่ต้องการเพื่อเสมอทุน (breakeven) จาก avgWin/avgLoss ปัจจุบัน
   const breakeven  = (avgWin != null && avgLoss != null && (avgWin - avgLoss) !== 0)
     ? (-avgLoss) / (avgWin - avgLoss) * 100 : null;
   const rrTrades   = closed.filter(t => t.rr_ratio != null);
   const avgRR      = rrTrades.length ? rrTrades.reduce((a, t) => a + t.rr_ratio, 0) / rrTrades.length : null;
 
+  // stat card คลิกได้ — ดูรายละเอียดกลุ่มนั้นๆ ทันที
   statsEl.innerHTML = `
-    <div class="stat" style="--sc:var(--purple)"><div class="sv">${closed.length}</div><div class="sl">เทรดที่ปิดแล้ว (มีข้อมูล P&L)</div></div>
-    <div class="stat" style="--sc:${winRate>=50?'var(--green)':(winRate>=35?'var(--gold)':'var(--red)')}"><div class="sv">${winRate.toFixed(1)}%</div><div class="sl">Win Rate รวม</div></div>
-    <div class="stat" style="--sc:var(--green)"><div class="sv">${avgWin!=null?saFmtPct(avgWin):'-'}</div><div class="sl">ชนะเฉลี่ย</div></div>
-    <div class="stat" style="--sc:var(--red)"><div class="sv">${avgLoss!=null?saFmtPct(avgLoss):'-'}</div><div class="sl">แพ้เฉลี่ย</div></div>
-    <div class="stat" style="--sc:${expectancy>=0?'var(--green)':'var(--red)'}"><div class="sv">${saFmtPct(expectancy)}</div><div class="sl">Expectancy/เทรด</div></div>
+    <div class="stat sa-stat-clickable" style="--sc:var(--purple)" onclick="saOpenDetail('เทรดที่ปิดแล้วทั้งหมด', SA_LAST_CLOSED)"><div class="sv">${closed.length}</div><div class="sl">เทรดที่ปิดแล้ว (มีข้อมูล P&L)</div></div>
+    <div class="stat sa-stat-clickable" style="--sc:${winRate>=50?'var(--green)':(winRate>=35?'var(--gold)':'var(--red)')}" onclick="saOpenDetail('เทรดทั้งหมด (เรียงตาม Win Rate)', SA_LAST_CLOSED)"><div class="sv">${winRate.toFixed(1)}%</div><div class="sl">Win Rate รวม</div></div>
+    <div class="stat sa-stat-clickable" style="--sc:var(--green)" onclick="saOpenDetail('เทรดที่ชนะ', SA_LAST_WINS)"><div class="sv">${avgWin!=null?saFmtPct(avgWin):'-'}</div><div class="sl">ชนะเฉลี่ย (${wins.length})</div></div>
+    <div class="stat sa-stat-clickable" style="--sc:var(--red)" onclick="saOpenDetail('เทรดที่แพ้', SA_LAST_LOSSES)"><div class="sv">${avgLoss!=null?saFmtPct(avgLoss):'-'}</div><div class="sl">แพ้เฉลี่ย (${losses.length})</div></div>
+    <div class="stat sa-stat-clickable" style="--sc:${expectancy>=0?'var(--green)':'var(--red)'}" onclick="saOpenDetail('เทรดที่ปิดแล้วทั้งหมด', SA_LAST_CLOSED)"><div class="sv">${saFmtPct(expectancy)}</div><div class="sl">Expectancy/เทรด</div></div>
     <div class="stat" style="--sc:var(--cyan)"><div class="sv">${breakeven!=null?breakeven.toFixed(1)+'%':'-'}</div><div class="sl">Win Rate ที่ต้องการ (Breakeven)</div></div>
     <div class="stat" style="--sc:var(--gold)"><div class="sv">${avgRR!=null?'1:'+avgRR.toFixed(2):'-'}</div><div class="sl">R:R เฉลี่ย (BUY)</div></div>
   `;
+  // เก็บ reference ไว้ให้ onclick ด้านบนเรียกใช้ได้ (เลี่ยง escape ปัญหาเดียวกับตาราง)
+  window.SA_LAST_CLOSED = closed;
+  window.SA_LAST_WINS   = wins;
+  window.SA_LAST_LOSSES = losses;
 
-  const byExit = saGroupBy(closed, t => t.type, k => p2AlertTypeLabel(k));
+  const byExit  = saGroupBy(closed, t => t.type, k => p2AlertTypeLabel(k));
   const byEntry = saGroupBy(closed, t => t.entry_alert_type, k => p2AlertTypeLabel(k));
-
-  // ── Breakdown ตาม conviction score (เฉพาะเทรดที่มีข้อมูล — หลัง alert_engine
-  // เวอร์ชันที่ log conviction_score ตอน BUY แล้วเท่านั้น) ──
   const withConv = closed.filter(t => t.conviction_score != null && t.conviction_total != null);
-  const byConv = saGroupBy(withConv,
-    t => `${t.conviction_score}/${t.conviction_total}`,
-    k => `Conviction ${k}`);
+  const byConv  = saGroupBy(withConv, t => `${t.conviction_score}/${t.conviction_total}`, k => `${k}`);
+
+  // ── กราฟ ──
+  const closedSorted = [...closed].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+  saRenderEquityChart(closedSorted);
+  saRenderBreakdownChart('sa-chart-exit', byExit, 'exit');
+  saRenderBreakdownChart('sa-chart-entry', byEntry, 'entry');
+  saRenderConvictionChart(byConv);
+  saRenderDistChart(closed);
 
   document.getElementById('sa-body').innerHTML = `
     <div style="margin-bottom:22px">
       <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:8px;font-weight:700">
-        <span class="msi" style="font-size:14px;vertical-align:middle">logout</span> แยกตามเหตุผลที่ "ออก" (Exit Reason)
+        <span class="msi" style="font-size:14px;vertical-align:middle">logout</span> แยกตามเหตุผลที่ "ออก" (Exit Reason) — คลิกแถวเพื่อดูรายละเอียด
       </div>
-      ${saBreakdownTable(byExit, 'Exit Reason')}
+      ${saBreakdownTable(byExit, 'Exit Reason', 'Exit Reason')}
     </div>
     <div style="margin-bottom:22px">
       <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:8px;font-weight:700">
-        <span class="msi" style="font-size:14px;vertical-align:middle">login</span> แยกตามเหตุผลที่ "เข้า" (Entry Reason)
+        <span class="msi" style="font-size:14px;vertical-align:middle">login</span> แยกตามเหตุผลที่ "เข้า" (Entry Reason) — คลิกแถวเพื่อดูรายละเอียด
       </div>
-      ${saBreakdownTable(byEntry, 'Entry Reason')}
+      ${saBreakdownTable(byEntry, 'Entry Reason', 'Entry Reason')}
     </div>
     <div>
       <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:8px;font-weight:700">
-        <span class="msi" style="font-size:14px;vertical-align:middle">military_tech</span> แยกตาม Conviction Score
+        <span class="msi" style="font-size:14px;vertical-align:middle">military_tech</span> แยกตาม Conviction Score — คลิกแถวเพื่อดูรายละเอียด
       </div>
       ${withConv.length
-        ? saBreakdownTable(byConv, 'Conviction')
+        ? saBreakdownTable(byConv, 'Conviction', 'Conviction')
         : '<div style="text-align:center;padding:20px;color:var(--text3);font-size:12px">ยังไม่มีเทรดที่มี conviction score บันทึกไว้ — เพิ่งเริ่มบันทึกตั้งแต่อัปเดต alert_engine.py เวอร์ชันล่าสุด รอสัก 2-3 สัปดาห์ให้มีข้อมูลสะสม</div>'}
     </div>
   `;
