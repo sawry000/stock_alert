@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-14T14:11:25Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 10.419899940490723,
-    "change_pct": 11.801501507411185,
-    "value": 11.801501507411185
-  },
-  {
-    "timestamp": "2026-07-14T14:12:14Z",
-    "symbol": "OFRM",
-    "alert_id": "OFRM_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 17.90999984741211,
-    "change_pct": -3.709678239719849,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-14T14:41:32Z",
     "symbol": "NLST",
     "alert_id": "NLST_MA_DEATH",
@@ -6389,6 +6369,34 @@
     "action": "BUY",
     "price": 361.6700134277344,
     "change_pct": 10.298875702267276,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-05T02:27:03Z",
+    "symbol": "OCC",
+    "alert_id": "OCC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 16.1200008392334,
+    "change_pct": 12.33450062183553,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null
+  },
+  {
+    "timestamp": "2026-08-05T02:27:06Z",
+    "symbol": "FATN",
+    "alert_id": "FATN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.949999809265137,
+    "change_pct": 0.7246349168860342,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
