@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-15T05:27:04Z",
-    "symbol": "LHAI",
-    "alert_id": "LHAI_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 1.2200000286102295,
-    "change_pct": 24.489798837778523,
-    "value": 11.36299843841571
-  },
-  {
     "timestamp": "2026-07-15T06:26:26Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -6626,6 +6616,23 @@
     "price": 1.29,
     "change_pct": -11.413267408323026,
     "value": -11.413267408323026,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-06T05:56:56Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 73.56,
+    "change_pct": -29.26923076923077,
+    "value": -29.26923076923077,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
