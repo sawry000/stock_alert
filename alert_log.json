@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-15T08:11:03Z",
-    "symbol": "AEHR",
-    "alert_id": "AEHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 72.01,
-    "change_pct": -23.313422440701284,
-    "value": -23.313422440701284
-  },
-  {
     "timestamp": "2026-07-15T09:11:46Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MTF_BULL",
@@ -6659,6 +6649,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-06T11:12:25Z",
+    "symbol": "FATN",
+    "alert_id": "FATN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.610000133514404,
+    "change_pct": -0.15105538497878868,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
