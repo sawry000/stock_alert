@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-15T10:26:28Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 20.899999618530273,
-    "change_pct": 0.19175272545673064,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-15T10:55:54Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -6667,6 +6657,23 @@
     "action": "BUY",
     "price": 107.8499984741211,
     "change_pct": -0.827587610003592,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-06T12:56:57Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.78000020980835,
+    "change_pct": 4.3892960117298126e-06,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
