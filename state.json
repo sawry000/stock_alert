@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-08-05T02:12:08Z"
+    "last_sent": "2026-08-06T02:12:12Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -1800,7 +1800,8 @@
     "open_target": 1.8684,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_ZVIA_MTF_BULL": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1866,8 +1867,7 @@
     "open_target": 5.9616,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "ma_crossover",
-    "_confirm_TKNO_MTF_BULL": 1
+    "open_alert_type": "ma_crossover"
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1893,8 +1893,7 @@
       "last_fired": "2026-07-08T13:36:08Z"
     },
     "last_sell_at": "2026-07-08T13:36:08Z",
-    "_confirm_RFIL_RSI_OS": 1,
-    "_confirm_RFIL_MTF_BULL": 1
+    "_confirm_RFIL_RSI_OS": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1954,7 +1953,8 @@
     "AMBA_SCORE_65": {
       "last_fired": "2026-08-03T02:27:00Z"
     },
-    "_confirm_AMBA_MA_GOLD": 1
+    "_confirm_AMBA_MA_GOLD": 1,
+    "_confirm_AMBA_MTF_BULL": 1
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
@@ -2146,7 +2146,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-08-05T02:12:11Z"
+    "last_sent": "2026-08-06T02:12:15Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -2165,8 +2165,7 @@
     "open_target": 19.2132,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_PESI_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2188,10 +2187,10 @@
     }
   },
   "__earnings_alert__": {
-    "last_sent": "2026-08-05T02:12:12Z"
+    "last_sent": "2026-08-06T02:12:15Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-08-05T02:12:13Z"
+    "last_sent": "2026-08-06T02:12:16Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -2247,7 +2246,7 @@
     "_confirm_WDC_MTF_BULL": 1
   },
   "__universe_earnings_digest__": {
-    "last_sent": "2026-08-05T02:12:13Z"
+    "last_sent": "2026-08-06T02:12:16Z"
   },
   "BLZE": {
     "BLZE_MA_GOLD": {
