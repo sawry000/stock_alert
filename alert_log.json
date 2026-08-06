@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-16T09:56:52Z",
-    "symbol": "ISSC",
-    "alert_id": "ISSC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.329999923706055,
-    "change_pct": -4.1622446048662e-07,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-16T10:11:14Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_VOL_3X",
@@ -6899,5 +6889,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-06T18:43:40Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 6.614999771118164,
+    "change_pct": 28.947363959418404,
+    "value": 6.614999771118164,
+    "entry_price": 7.599999904632568,
+    "pnl_pct": -12.9605,
+    "days_held": 0.13,
+    "entry_alert_type": "ma_crossover",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
