@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-15T06:41:50Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.409999847412109,
-    "change_pct": -2.8204785724049636e-06,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-15T06:56:56Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_PCT_UP",
@@ -6646,6 +6636,23 @@
     "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 4,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-06T09:12:20Z",
+    "symbol": "BLZE",
+    "alert_id": "BLZE_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.6200008392334,
+    "change_pct": 0.7646687225475739,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
     "rr_ratio": 1.5
   }
 ]
