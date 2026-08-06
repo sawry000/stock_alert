@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-16T13:42:25Z",
-    "symbol": "AGPU",
-    "alert_id": "AGPU_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 6.804999828338623,
-    "change_pct": -2.7857167380196706,
-    "value": 0
-  },
-  {
     "timestamp": "2026-07-16T13:57:31Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MTF_BULL",
@@ -6934,6 +6924,23 @@
     "price": 1.4700000286102295,
     "change_pct": -10.909089175137602,
     "value": -10.909089175137602,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-06T23:11:15Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 86.83000183105469,
+    "change_pct": -20.156320155352013,
+    "value": -20.156320155352013,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
