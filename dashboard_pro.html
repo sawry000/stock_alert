@@ -260,6 +260,10 @@ input[type=password]{letter-spacing:2px}
   padding:6px 14px;border-radius:5px;cursor:pointer;transition:all 0.15s;letter-spacing:0.5px}
 .sa-period-btn:hover{color:var(--text2)}
 .sa-period-btn.active{background:var(--cyan);color:var(--bg);font-weight:700}
+.sa-mode-btn{background:transparent;border:none;color:var(--text3);font-family:var(--mono);font-size:11px;
+  font-weight:700;padding:4px 12px;border-radius:4px;cursor:pointer;transition:all 0.15s}
+.sa-mode-btn:hover{color:var(--text2)}
+.sa-mode-btn.active{background:var(--gold);color:var(--bg)}
 .ltable tr.clickable{cursor:pointer}
 .ltable tr.clickable:hover td{background:rgba(0,229,255,0.05)}
 .ltable tr.clickable td:first-child::after{content:'chevron_right';font-family:'Material Symbols Outlined';
@@ -926,8 +930,14 @@ input[type=password]{letter-spacing:2px}
       <!-- กราฟ -->
       <div id="sa-charts" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px;margin-bottom:22px">
         <div class="card" style="grid-column:1/-1">
-          <div style="font-family:var(--mono);font-size:12px;color:var(--text2);margin-bottom:10px;font-weight:700">
-            <span class="msi" style="font-size:14px;vertical-align:middle">show_chart</span> Equity Curve (สะสม P&L% ตามลำดับเวลาที่ปิดเทรด)
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px">
+            <div style="font-family:var(--mono);font-size:12px;color:var(--text2);font-weight:700">
+              <span class="msi" style="font-size:14px;vertical-align:middle">show_chart</span> Equity Curve (สะสมตามลำดับเวลาที่ปิดเทรด)
+            </div>
+            <div style="display:flex;gap:0;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:3px">
+              <button class="sa-mode-btn active" data-mode="pct" onclick="saSetEquityMode('pct',this)">%</button>
+              <button class="sa-mode-btn" data-mode="usd" onclick="saSetEquityMode('usd',this)">$</button>
+            </div>
           </div>
           <div style="position:relative;height:260px"><canvas id="sa-chart-equity"></canvas></div>
         </div>
@@ -1331,11 +1341,11 @@ input[type=password]{letter-spacing:2px}
     </div>
     <div id="sa-modal-stats" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:16px"></div>
     <div style="overflow-x:auto">
-      <table class="ltable" style="width:100%;min-width:720px">
+      <table class="ltable" style="width:100%;min-width:800px">
         <thead>
           <tr>
             <th>Symbol</th><th>วันที่ปิด</th><th>เข้า</th><th>ออก</th>
-            <th>P&L</th><th>ถือ</th><th>Entry Reason</th><th>Exit Reason</th><th>R:R</th><th>Conviction</th>
+            <th>P&L %</th><th>P&L $</th><th>ถือ</th><th>Entry Reason</th><th>Exit Reason</th><th>R:R</th><th>Conviction</th>
           </tr>
         </thead>
         <tbody id="sa-modal-tbody"></tbody>
@@ -3028,6 +3038,7 @@ function renderPortfolio2() {
 //  แบบละเอียดยิบทีละตัวใน modal
 // ══════════════════════════════════════════════════════════
 let SA_PERIOD = 0;          // 0 = ทั้งหมด, ไม่งั้นคือจำนวนวันย้อนหลัง
+let SA_EQUITY_MODE = 'pct'; // 'pct' หรือ 'usd' — สลับแกนของ Equity Curve
 let SA_CHARTS = {};         // เก็บ Chart.js instance ไว้ destroy ก่อน re-render กันซ้อนกัน
 const SA_COLOR = {
   cyan: '#00e5ff', green: '#00ff9d', gold: '#ffd54f', orange: '#ff6d00',
@@ -3035,6 +3046,23 @@ const SA_COLOR = {
   text2: '#8899bb', text3: '#3d5080', grid: 'rgba(255,255,255,0.06)',
 };
 const SA_PALETTE = [SA_COLOR.cyan, SA_COLOR.gold, SA_COLOR.purple, SA_COLOR.pink, SA_COLOR.orange, SA_COLOR.green, SA_COLOR.red];
+
+// P&L เป็นเงินจริง ($) — alert_log.json เก็บแค่ pnl_pct ไว้ ไม่ได้เก็บจำนวน
+// เงินตรงๆ เพราะ account_size ต่อหุ้นตั้งได้ไม่เท่ากัน (ปกติ $100 แต่ปรับได้)
+// เลยต้องคำนวณย้อนจาก entry_price/price (ราคาปิดจริง) คูณจำนวนหุ้นตาม budget
+// ของ symbol นั้น — ใช้ logic เดียวกับ p2AccountSizeFor()/p2CalcShares() ที่มี
+// อยู่แล้วในหน้าพอร์ตโฟลิโอ (WL.watchlist ต้องโหลดแล้วถึงจะแม่นตามที่ตั้งค่า
+// จริงต่อหุ้น — ถ้ายังไม่โหลด fallback เป็น $100 เหมือนฝั่ง Python)
+function saCalcUsd(t) {
+  if (t.entry_price == null || t.price == null || !t.entry_price) return null;
+  const accountSize = p2AccountSizeFor(t.symbol);
+  const shares = p2CalcShares(t.entry_price, accountSize);
+  return shares * (t.price - t.entry_price);
+}
+
+function saFmtUsd(n) {
+  return p2FmtUsdSigned(n);
+}
 
 function saFmtPct(n) {
   return n == null ? '-' : (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
@@ -3074,6 +3102,7 @@ function saGroupBy(trades, keyFn, labelFn) {
   return Object.entries(groups).map(([k, v]) => {
     const wins = v.filter(t => t.pnl_pct > 0).length;
     const days = v.filter(t => t.days_held != null);
+    const usdVals = v.map(saCalcUsd).filter(x => x != null);
     return {
       key: k,
       label:   labelFn(k),
@@ -3081,6 +3110,8 @@ function saGroupBy(trades, keyFn, labelFn) {
       winRate: v.length ? wins / v.length * 100 : 0,
       avgPnl:  v.reduce((a, t) => a + t.pnl_pct, 0) / v.length,
       avgDays: days.length ? days.reduce((a, t) => a + t.days_held, 0) / days.length : null,
+      totalUsd: usdVals.length ? usdVals.reduce((a, x) => a + x, 0) : null,
+      avgUsd:   usdVals.length ? usdVals.reduce((a, x) => a + x, 0) / usdVals.length : null,
       trades:  v,
     };
   }).sort((a, b) => b.n - a.n);
@@ -3093,10 +3124,11 @@ function saBreakdownTable(rows, keyLabel, groupTitlePrefix) {
   if (!rows.length) return '<div style="text-align:center;padding:20px;color:var(--text3);font-size:12px">ไม่มีข้อมูล</div>';
   return `
     <table class="ltable" style="width:100%">
-      <thead><tr><th>${keyLabel}</th><th>จำนวน</th><th>Win Rate</th><th>P&L เฉลี่ย</th><th>ถือเฉลี่ย</th></tr></thead>
+      <thead><tr><th>${keyLabel}</th><th>จำนวน</th><th>Win Rate</th><th>P&L เฉลี่ย (%)</th><th>P&L รวม ($)</th><th>ถือเฉลี่ย</th></tr></thead>
       <tbody>
         ${rows.map(r => {
           const color = r.avgPnl >= 0 ? 'var(--green)' : 'var(--red)';
+          const usdColor = (r.totalUsd == null || r.totalUsd >= 0) ? 'var(--green)' : 'var(--red)';
           const wrColor = r.winRate >= 50 ? 'var(--green)' : (r.winRate >= 35 ? 'var(--gold)' : 'var(--red)');
           const idx = window.SA_ROWS.length;
           window.SA_ROWS.push({ title: `${groupTitlePrefix}: ${r.label}`, trades: r.trades });
@@ -3105,6 +3137,7 @@ function saBreakdownTable(rows, keyLabel, groupTitlePrefix) {
             <td style="font-family:var(--mono)">${r.n}</td>
             <td style="font-family:var(--mono);font-weight:700;color:${wrColor}">${r.winRate.toFixed(1)}%</td>
             <td style="font-family:var(--mono);font-weight:700;color:${color}">${saFmtPct(r.avgPnl)}</td>
+            <td style="font-family:var(--mono);font-weight:700;color:${usdColor}">${saFmtUsd(r.totalUsd)}</td>
             <td style="font-family:var(--mono)">${r.avgDays!=null?r.avgDays.toFixed(1)+'d':'-'}</td>
           </tr>`;
         }).join('')}
@@ -3125,12 +3158,15 @@ function saOpenDetail(title, trades) {
   const wins = trades.filter(t => t.pnl_pct > 0);
   const winRate = trades.length ? wins.length / trades.length * 100 : 0;
   const avgPnl = trades.length ? trades.reduce((a, t) => a + t.pnl_pct, 0) / trades.length : 0;
+  const usdVals = trades.map(saCalcUsd).filter(x => x != null);
+  const totalUsd = usdVals.length ? usdVals.reduce((a, x) => a + x, 0) : null;
   const best = trades.reduce((a, t) => (a == null || t.pnl_pct > a.pnl_pct) ? t : a, null);
   const worst = trades.reduce((a, t) => (a == null || t.pnl_pct < a.pnl_pct) ? t : a, null);
 
   document.getElementById('sa-modal-stats').innerHTML = `
     <div class="stat" style="--sc:${winRate>=50?'var(--green)':'var(--red)'}"><div class="sv">${winRate.toFixed(1)}%</div><div class="sl">Win Rate</div></div>
     <div class="stat" style="--sc:${avgPnl>=0?'var(--green)':'var(--red)'}"><div class="sv">${saFmtPct(avgPnl)}</div><div class="sl">P&L เฉลี่ย</div></div>
+    <div class="stat" style="--sc:${(totalUsd==null||totalUsd>=0)?'var(--green)':'var(--red)'}"><div class="sv">${saFmtUsd(totalUsd)}</div><div class="sl">P&L รวม ($)</div></div>
     <div class="stat" style="--sc:var(--green)"><div class="sv">${best?best.symbol+' '+saFmtPct(best.pnl_pct):'-'}</div><div class="sl">ดีที่สุด</div></div>
     <div class="stat" style="--sc:var(--red)"><div class="sv">${worst?worst.symbol+' '+saFmtPct(worst.pnl_pct):'-'}</div><div class="sl">แย่ที่สุด</div></div>
   `;
@@ -3138,6 +3174,8 @@ function saOpenDetail(title, trades) {
   const sorted = [...trades].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
   document.getElementById('sa-modal-tbody').innerHTML = sorted.map(t => {
     const color = t.pnl_pct >= 0 ? 'var(--green)' : 'var(--red)';
+    const usd = saCalcUsd(t);
+    const usdColor = (usd == null || usd >= 0) ? 'var(--green)' : 'var(--red)';
     const exitPrice = t.price != null ? '$' + Number(t.price).toFixed(4) : '-';
     const entryPrice = t.entry_price != null ? '$' + Number(t.entry_price).toFixed(4) : '-';
     const rr = t.rr_ratio != null ? '1:' + t.rr_ratio.toFixed(2) : '-';
@@ -3148,6 +3186,7 @@ function saOpenDetail(title, trades) {
       <td style="font-family:var(--mono)">${entryPrice}</td>
       <td style="font-family:var(--mono)">${exitPrice}</td>
       <td style="font-family:var(--mono);font-weight:700;color:${color}">${saFmtPct(t.pnl_pct)}</td>
+      <td style="font-family:var(--mono);font-weight:700;color:${usdColor}">${saFmtUsd(usd)}</td>
       <td style="font-family:var(--mono)">${t.days_held!=null?t.days_held.toFixed(1)+'d':'-'}</td>
       <td style="font-size:11px">${p2AlertTypeLabel(t.entry_alert_type)}</td>
       <td style="font-size:11px">${p2AlertTypeLabel(t.type)}</td>
@@ -3178,14 +3217,29 @@ function saChartDefaults() {
   };
 }
 
+function saSetEquityMode(mode, btnEl) {
+  SA_EQUITY_MODE = mode;
+  document.querySelectorAll('.sa-mode-btn').forEach(b => b.classList.remove('active'));
+  if (btnEl) btnEl.classList.add('active');
+  if (window.SA_LAST_CLOSED_SORTED) saRenderEquityChart(window.SA_LAST_CLOSED_SORTED);
+}
+
 function saRenderEquityChart(closedSorted) {
   const el = document.getElementById('sa-chart-equity');
   if (!el || typeof Chart === 'undefined') return;
   saDestroyChart('equity');
+  window.SA_LAST_CLOSED_SORTED = closedSorted;   // เก็บไว้ให้ saSetEquityMode() re-render ได้โดยไม่ต้อง render ใหม่ทั้งหน้า
+
+  const isUsd = SA_EQUITY_MODE === 'usd';
   let cum = 0;
-  const points = closedSorted.map(t => { cum += t.pnl_pct; return cum; });
+  const points = closedSorted.map(t => {
+    cum += isUsd ? (saCalcUsd(t) || 0) : t.pnl_pct;
+    return cum;
+  });
   const labels = closedSorted.map(t => saFmtDate(t.timestamp));
   const isUp = points.length && points[points.length - 1] >= 0;
+  const fmtPoint = (v) => isUsd ? saFmtUsd(v) : (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
+
   SA_CHARTS.equity = new Chart(el, {
     type: 'line',
     data: {
@@ -3205,14 +3259,14 @@ function saRenderEquityChart(closedSorted) {
         legend: { display: false },
         tooltip: {
           callbacks: {
-            label: (c) => `สะสม: ${c.raw >= 0 ? '+' : ''}${c.raw.toFixed(2)}%`,
+            label: (c) => `สะสม: ${fmtPoint(c.raw)}`,
             title: (items) => closedSorted[items[0].dataIndex].symbol + ' — ' + labels[items[0].dataIndex],
           },
         },
       },
       scales: {
         ...saChartDefaults().scales,
-        y: { ...saChartDefaults().scales.y, ticks: { ...saChartDefaults().scales.y.ticks, callback: (v) => (v >= 0 ? '+' : '') + v + '%' } },
+        y: { ...saChartDefaults().scales.y, ticks: { ...saChartDefaults().scales.y.ticks, callback: (v) => isUsd ? saFmtUsd(v) : (v >= 0 ? '+' : '') + v + '%' } },
       },
       onClick: (evt, els) => {
         if (els.length) saOpenDetail('Equity Curve — เทรดทั้งหมดตามลำดับเวลา', closedSorted);
@@ -3240,7 +3294,7 @@ function saRenderBreakdownChart(canvasId, rows, chartKey) {
       plugins: {
         legend: { display: false },
         tooltip: { callbacks: {
-          label: (c) => `${(c.raw>=0?'+':'')}${c.raw.toFixed(2)}%  (n=${top[c.dataIndex].n}, win ${top[c.dataIndex].winRate.toFixed(0)}%)`,
+          label: (c) => `${(c.raw>=0?'+':'')}${c.raw.toFixed(2)}%  •  ${saFmtUsd(top[c.dataIndex].totalUsd)}  (n=${top[c.dataIndex].n}, win ${top[c.dataIndex].winRate.toFixed(0)}%)`,
         } },
       },
       scales: {
@@ -3357,13 +3411,23 @@ function renderStrategy() {
   const rrTrades   = closed.filter(t => t.rr_ratio != null);
   const avgRR      = rrTrades.length ? rrTrades.reduce((a, t) => a + t.rr_ratio, 0) / rrTrades.length : null;
 
+  // ── ยอดเงินจริง ($) — คำนวณจาก entry/exit price จริง x จำนวนหุ้นตาม budget
+  // ต่อ symbol (ดู saCalcUsd()) ──
+  const usdAll   = closed.map(saCalcUsd).filter(x => x != null);
+  const usdWins  = wins.map(saCalcUsd).filter(x => x != null);
+  const usdLoss  = losses.map(saCalcUsd).filter(x => x != null);
+  const totalUsd = usdAll.length ? usdAll.reduce((a, x) => a + x, 0) : null;
+  const avgWinUsd  = usdWins.length ? usdWins.reduce((a, x) => a + x, 0) / usdWins.length : null;
+  const avgLossUsd = usdLoss.length ? usdLoss.reduce((a, x) => a + x, 0) / usdLoss.length : null;
+  const avgUsdPerTrade = usdAll.length ? totalUsd / usdAll.length : null;
+
   // stat card คลิกได้ — ดูรายละเอียดกลุ่มนั้นๆ ทันที
   statsEl.innerHTML = `
-    <div class="stat sa-stat-clickable" style="--sc:var(--purple)" onclick="saOpenDetail('เทรดที่ปิดแล้วทั้งหมด', SA_LAST_CLOSED)"><div class="sv">${closed.length}</div><div class="sl">เทรดที่ปิดแล้ว (มีข้อมูล P&L)</div></div>
+    <div class="stat sa-stat-clickable" style="--sc:${(totalUsd==null||totalUsd>=0)?'var(--green)':'var(--red)'}" onclick="saOpenDetail('เทรดที่ปิดแล้วทั้งหมด', SA_LAST_CLOSED)"><div class="sv">${saFmtUsd(totalUsd)}</div><div class="sl">P&L รวม ($) — ${closed.length} เทรด</div></div>
     <div class="stat sa-stat-clickable" style="--sc:${winRate>=50?'var(--green)':(winRate>=35?'var(--gold)':'var(--red)')}" onclick="saOpenDetail('เทรดทั้งหมด (เรียงตาม Win Rate)', SA_LAST_CLOSED)"><div class="sv">${winRate.toFixed(1)}%</div><div class="sl">Win Rate รวม</div></div>
-    <div class="stat sa-stat-clickable" style="--sc:var(--green)" onclick="saOpenDetail('เทรดที่ชนะ', SA_LAST_WINS)"><div class="sv">${avgWin!=null?saFmtPct(avgWin):'-'}</div><div class="sl">ชนะเฉลี่ย (${wins.length})</div></div>
-    <div class="stat sa-stat-clickable" style="--sc:var(--red)" onclick="saOpenDetail('เทรดที่แพ้', SA_LAST_LOSSES)"><div class="sv">${avgLoss!=null?saFmtPct(avgLoss):'-'}</div><div class="sl">แพ้เฉลี่ย (${losses.length})</div></div>
-    <div class="stat sa-stat-clickable" style="--sc:${expectancy>=0?'var(--green)':'var(--red)'}" onclick="saOpenDetail('เทรดที่ปิดแล้วทั้งหมด', SA_LAST_CLOSED)"><div class="sv">${saFmtPct(expectancy)}</div><div class="sl">Expectancy/เทรด</div></div>
+    <div class="stat sa-stat-clickable" style="--sc:var(--green)" onclick="saOpenDetail('เทรดที่ชนะ', SA_LAST_WINS)"><div class="sv">${avgWin!=null?saFmtPct(avgWin):'-'}</div><div class="sl">ชนะเฉลี่ย (${wins.length}) &nbsp;${avgWinUsd!=null?'• '+saFmtUsd(avgWinUsd):''}</div></div>
+    <div class="stat sa-stat-clickable" style="--sc:var(--red)" onclick="saOpenDetail('เทรดที่แพ้', SA_LAST_LOSSES)"><div class="sv">${avgLoss!=null?saFmtPct(avgLoss):'-'}</div><div class="sl">แพ้เฉลี่ย (${losses.length}) &nbsp;${avgLossUsd!=null?'• '+saFmtUsd(avgLossUsd):''}</div></div>
+    <div class="stat sa-stat-clickable" style="--sc:${expectancy>=0?'var(--green)':'var(--red)'}" onclick="saOpenDetail('เทรดที่ปิดแล้วทั้งหมด', SA_LAST_CLOSED)"><div class="sv">${saFmtPct(expectancy)}</div><div class="sl">Expectancy/เทรด &nbsp;${avgUsdPerTrade!=null?'• '+saFmtUsd(avgUsdPerTrade):''}</div></div>
     <div class="stat" style="--sc:var(--cyan)"><div class="sv">${breakeven!=null?breakeven.toFixed(1)+'%':'-'}</div><div class="sl">Win Rate ที่ต้องการ (Breakeven)</div></div>
     <div class="stat" style="--sc:var(--gold)"><div class="sv">${avgRR!=null?'1:'+avgRR.toFixed(2):'-'}</div><div class="sl">R:R เฉลี่ย (BUY)</div></div>
   `;
