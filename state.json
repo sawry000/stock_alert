@@ -1796,12 +1796,12 @@
     "ZVIA_MA_DEATH": {
       "last_fired": "2026-08-06T14:57:27Z"
     },
-    "last_sell_at": "2026-08-06T14:57:27Z",
+    "last_sell_at": "2026-08-06T22:26:47Z",
     "ZVIA_SL_BREAK": {
       "last_fired": "2026-08-06T14:12:11Z"
     },
     "ZVIA_PCT_DROP": {
-      "last_fired": "2026-08-06T14:12:12Z"
+      "last_fired": "2026-08-06T22:26:47Z"
     }
   },
   "VPG": {
@@ -1956,7 +1956,8 @@
     "AMBA_SCORE_65": {
       "last_fired": "2026-08-03T02:27:00Z"
     },
-    "_confirm_AMBA_MA_GOLD": 1
+    "_confirm_AMBA_MA_GOLD": 1,
+    "_confirm_AMBA_MTF_BULL": 1
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
@@ -2116,8 +2117,7 @@
     "open_target": 17.6148,
     "open_conviction": 3,
     "open_conviction_total": 4,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_OFRM_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2169,8 +2169,7 @@
     "open_target": 19.2132,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_PESI_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
