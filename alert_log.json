@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-16T02:27:31Z",
-    "symbol": "AOUT",
-    "alert_id": "AOUT_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 14.489999771118164,
-    "change_pct": 2.8388912073680923,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-16T02:27:41Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 14.829999923706055,
-    "change_pct": 3.417014809665654,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-16T02:41:18Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -6843,5 +6823,39 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-06T15:42:55Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 7.599999904632568,
+    "change_pct": 48.14814628913389,
+    "value": 2.998,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-06T15:42:58Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 7.599999904632568,
+    "change_pct": 48.14814628913389,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
