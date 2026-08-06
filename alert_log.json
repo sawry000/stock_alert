@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-16T02:41:18Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 37.16999816894531,
-    "change_pct": 5.446803316156915,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-16T07:10:40Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -6850,6 +6840,23 @@
     "price": 7.599999904632568,
     "change_pct": 48.14814628913389,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-06T16:01:03Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 23.360000610351562,
+    "change_pct": -2.7238138828789613,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
