@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-17T23:10:59Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 98.54000091552734,
-    "change_pct": 0.7360467343358726,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-17T23:40:43Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -7145,6 +7135,23 @@
     "change_pct": 7.462690837347696,
     "value": 2.052,
     "entry_price": 1.9900000095367432,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-07T15:11:43Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 1.4500000476837158,
+    "change_pct": -2.0270238051543354,
+    "value": 0,
+    "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
