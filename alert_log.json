@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-16T17:26:32Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 32.54999923706055,
-    "change_pct": -9.280938581213643,
-    "value": -9.280938581213643
-  },
-  {
-    "timestamp": "2026-07-16T18:26:45Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.369999885559082,
-    "change_pct": 2.7438989499720194,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-16T22:57:23Z",
     "symbol": "EVTV",
     "alert_id": "EVTV_MTF_BULL",
@@ -6994,6 +6974,40 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-07T08:10:59Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 65.4800033569336,
+    "change_pct": -10.91156005859375,
+    "value": -10.91156005859375,
+    "entry_price": 104.44999694824219,
+    "pnl_pct": -37.3097,
+    "days_held": 51.78,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-07T08:11:17Z",
+    "symbol": "PSIX",
+    "alert_id": "PSIX_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 33.02000045776367,
+    "change_pct": -12.39799099635034,
+    "value": -12.39799099635034,
+    "entry_price": 34.0099983215332,
+    "pnl_pct": -2.9109,
+    "days_held": 2.64,
+    "entry_alert_type": "percent_change",
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null

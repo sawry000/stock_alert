@@ -814,26 +814,17 @@
       "last_fired": "2026-06-12T13:58:46Z"
     },
     "PSIX_PCT_DROP": {
-      "last_fired": "2026-07-28T13:41:34Z"
+      "last_fired": "2026-08-07T08:11:17Z"
     },
     "PSIX_RSI_OS_4H": {
       "last_fired": "2026-06-05T18:29:18Z"
     },
     "open_position": true,
-    "last_sell_at": "2026-07-28T13:41:34Z",
+    "last_sell_at": "2026-08-07T08:11:17Z",
     "PSIX_PCT_UP": {
       "last_fired": "2026-08-04T16:56:05Z"
     },
-    "last_buy_at": "2026-08-04T16:56:05Z",
-    "last_buy_reminder_at": "2026-08-04T16:56:05Z",
-    "open_entry": 34.0099983215332,
-    "open_time": "2026-08-04T16:56:05Z",
-    "open_peak": 34.86000061035156,
-    "open_stop": 28.9085,
-    "open_target": 36.7308,
-    "open_conviction": 4,
-    "open_conviction_total": 5,
-    "open_alert_type": "percent_change"
+    "last_buy_at": "2026-08-04T16:56:05Z"
   },
   "VICR": {
     "VICR_POS_SIZE": {
@@ -1155,7 +1146,7 @@
       "last_fired": "2026-06-16T13:33:18Z"
     },
     "INOD_PCT_DROP": {
-      "last_fired": "2026-06-26T06:37:55Z"
+      "last_fired": "2026-08-07T08:10:59Z"
     },
     "INOD_NEWS_POS": {
       "last_fired": "2026-06-27T00:28:11Z",
@@ -1164,17 +1155,14 @@
       ]
     },
     "open_position": false,
-    "open_entry": 104.44999694824219,
-    "open_time": "2026-06-16T13:33:18Z",
     "INOD_MA_DEATH": {
       "last_fired": "2026-06-24T13:33:10Z"
     },
-    "open_peak": 104.44999694824219,
     "INOD_PCT_UP": {
       "last_fired": "2026-08-04T16:11:02Z"
     },
     "last_buy_at": "2026-08-04T16:11:02Z",
-    "last_buy_reminder_at": "2026-08-04T16:11:02Z"
+    "last_sell_at": "2026-08-07T08:10:59Z"
   },
   "DDD": {
     "DDD_POS_SIZE": {
@@ -1965,8 +1953,7 @@
     "AMBA_SCORE_65": {
       "last_fired": "2026-08-03T02:27:00Z"
     },
-    "_confirm_AMBA_MA_GOLD": 1,
-    "_confirm_AMBA_MTF_BULL": 1
+    "_confirm_AMBA_MA_GOLD": 1
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
@@ -2126,7 +2113,8 @@
     "open_target": 17.6148,
     "open_conviction": 3,
     "open_conviction_total": 4,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_OFRM_MTF_BULL": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2178,7 +2166,8 @@
     "open_target": 19.2132,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2281,8 +2270,7 @@
     "open_target": 21.413,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_BLZE_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "AXTI": {
     "AXTI_MTF_BULL": {
