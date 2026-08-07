@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-19T02:12:02Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.4800000190734863,
-    "change_pct": 4.50450507728187,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-19T02:27:34Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MTF_BULL",
@@ -7234,6 +7224,23 @@
     "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 4,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-07T20:11:09Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 16.639999389648438,
+    "change_pct": 4.654084211625391,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
     "rr_ratio": 1.5
   }
 ]
