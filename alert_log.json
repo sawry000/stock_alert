@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-16T22:57:38Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 15.369999885559082,
-    "change_pct": -2.7830494272037853,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-17T03:10:51Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MTF_BULL",
@@ -7017,6 +7007,23 @@
     "action": "BUY",
     "price": 6.340000152587891,
     "change_pct": -0.90962844881544,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-07T11:56:49Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.380000114440918,
+    "change_pct": 2.612806348751859e-06,
     "value": 2,
     "entry_price": null,
     "pnl_pct": null,
