@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-19T02:11:57Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 20.719999313354492,
-    "change_pct": 3.5999965667724605,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-19T02:12:02Z",
     "symbol": "DOMO",
     "alert_id": "DOMO_MTF_BULL",
@@ -7228,5 +7218,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-07T19:12:13Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 17.639999389648438,
+    "change_pct": -2.9703003869722893,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 4,
+    "rr_ratio": 1.5
   }
 ]
