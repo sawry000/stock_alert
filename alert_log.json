@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-19T02:28:09Z",
-    "symbol": "BLIN",
-    "alert_id": "BLIN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1.2200000286102295,
-    "change_pct": 2.5210108075823148,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-19T02:28:13Z",
     "symbol": "AOUT",
     "alert_id": "AOUT_MTF_BULL",
@@ -7241,6 +7231,23 @@
     "action": "BUY",
     "price": 77.08000183105469,
     "change_pct": 9.53733951466303,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-07T22:42:31Z",
+    "symbol": "REAX",
+    "alert_id": "REAX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.140000104904175,
+    "change_pct": 6.467666910655474,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
