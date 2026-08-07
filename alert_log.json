@@ -1,25 +1,5 @@
 [
   {
-    "timestamp": "2026-07-17T14:12:50Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.440000057220459,
-    "change_pct": 2.448213104365287,
-    "value": 3
-  },
-  {
-    "timestamp": "2026-07-17T14:13:32Z",
-    "symbol": "OFRM",
-    "alert_id": "OFRM_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.799999237060547,
-    "change_pct": 2.5081746840815,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-17T16:12:09Z",
     "symbol": "CDNL",
     "alert_id": "CDNL_MTF_BULL",
@@ -7099,6 +7079,40 @@
     "pnl_pct": 0.7358,
     "days_held": 3.72,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-07T13:56:21Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 5.925000190734863,
+    "change_pct": -15.598287881269748,
+    "value": 5.925000190734863,
+    "entry_price": 6.889999866485596,
+    "pnl_pct": -14.0058,
+    "days_held": 0.58,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-07T13:56:21Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 5.925000190734863,
+    "change_pct": -15.598287881269748,
+    "value": -15.598287881269748,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
