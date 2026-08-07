@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-19T02:27:34Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.420000076293945,
-    "change_pct": 1.879700682217012,
-    "value": 3
-  },
-  {
     "timestamp": "2026-07-19T02:28:09Z",
     "symbol": "BLIN",
     "alert_id": "BLIN_MTF_BULL",
@@ -7240,6 +7230,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-07T20:41:26Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 77.08000183105469,
+    "change_pct": 9.53733951466303,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
