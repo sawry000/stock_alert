@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-16T17:25:46Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 84.26000213623047,
-    "change_pct": -9.192798646157492,
-    "value": 84.26000213623047
-  },
-  {
     "timestamp": "2026-07-16T17:26:32Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_PCT_DROP",
@@ -6990,5 +6980,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-07T07:11:18Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 86.83000183105469,
+    "change_pct": -20.156320155352013,
+    "value": -20.156320155352013,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
