@@ -1,15 +1,5 @@
 [
   {
-    "timestamp": "2026-07-19T02:28:13Z",
-    "symbol": "AOUT",
-    "alert_id": "AOUT_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 13.890000343322754,
-    "change_pct": -1.7680315182266382,
-    "value": 2
-  },
-  {
     "timestamp": "2026-07-19T02:28:23Z",
     "symbol": "PESI",
     "alert_id": "PESI_MTF_BULL",
@@ -7256,5 +7246,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-08T02:11:00Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 62.33000183105469,
+    "change_pct": -15.197276420333758,
+    "value": -15.197276420333758,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
