@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-22T04:56:30Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 125.77999877929688,
-    "change_pct": 3.01392201416616,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-22T05:42:01Z",
     "symbol": "PESI",
     "alert_id": "PESI_MTF_BULL",
@@ -7505,5 +7491,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-10T18:11:30Z",
+    "symbol": "DOMO",
+    "alert_id": "DOMO_STAGNANT_EXIT",
+    "type": "stagnant_exit",
+    "action": "SELL",
+    "price": 3.9800000190734863,
+    "change_pct": 2.3004760075436703,
+    "value": 18.2,
+    "entry_price": 4.099800109863281,
+    "pnl_pct": -2.9221,
+    "days_held": 18.19,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
