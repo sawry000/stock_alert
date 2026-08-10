@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-22T10:40:50Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 95.8499984741211,
-    "change_pct": -1.5919446015291166e-06,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-22T11:11:47Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_MTF_BULL",
@@ -7514,6 +7500,23 @@
     "pnl_pct": 3.4909,
     "days_held": 4.45,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-10T20:10:37Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 325.17999267578125,
+    "change_pct": -15.096607656453982,
+    "value": -15.096607656453982,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
