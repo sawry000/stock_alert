@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-21T11:57:45Z",
-    "symbol": "AGPU",
-    "alert_id": "AGPU_SCORE_60",
-    "type": "alert_score",
-    "action": "BUY",
-    "price": 8.710000038146973,
-    "change_pct": -1.022726839238955,
-    "value": 60,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-21T13:41:27Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 59.474998474121094,
-    "change_pct": -2.018124424841695,
-    "value": 0,
-    "entry_price": 66.41000366210938,
-    "pnl_pct": -10.4427,
-    "days_held": 13.81,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-21T13:41:51Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_MA_DEATH",
@@ -7451,5 +7423,39 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-10T13:40:43Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 342.760009765625,
+    "change_pct": -10.506524865372063,
+    "value": 342.760009765625,
+    "entry_price": 381.0950012207031,
+    "pnl_pct": -10.0592,
+    "days_held": 2.93,
+    "entry_alert_type": "ma_crossover",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-10T13:43:06Z",
+    "symbol": "REAX",
+    "alert_id": "REAX_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 2.055999994277954,
+    "change_pct": -4.149184415946197,
+    "value": 2.055999994277954,
+    "entry_price": 1.9900000095367432,
+    "pnl_pct": 3.3166,
+    "days_held": 3.47,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
