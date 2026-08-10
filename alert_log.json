@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-22T05:42:01Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 16.639999389648438,
-    "change_pct": 1.0321760148660513,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-22T08:10:43Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 26.6200008392334,
-    "change_pct": 2.345255052800449,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-22T08:11:58Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_SCORE_60",
@@ -7508,5 +7480,39 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-10T18:41:30Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 5.809999942779541,
+    "change_pct": -3.966943094553038,
+    "value": 5.809999942779541,
+    "entry_price": 5.320000171661377,
+    "pnl_pct": 9.2105,
+    "days_held": 45.45,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-10T18:42:16Z",
+    "symbol": "BLZE",
+    "alert_id": "BLZE_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 19.579999923706055,
+    "change_pct": 4.093566845858883,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
