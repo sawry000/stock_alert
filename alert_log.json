@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-22T08:11:58Z",
-    "symbol": "AGPU",
-    "alert_id": "AGPU_SCORE_60",
-    "type": "alert_score",
-    "action": "BUY",
-    "price": 9.539999961853027,
-    "change_pct": 1.056110100876315,
-    "value": 60,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-22T10:40:50Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -7514,5 +7500,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-10T19:57:03Z",
+    "symbol": "BLZE",
+    "alert_id": "BLZE_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 19.270000457763672,
+    "change_pct": 2.4455101422842804,
+    "value": 19.270000457763672,
+    "entry_price": 18.6200008392334,
+    "pnl_pct": 3.4909,
+    "days_held": 4.45,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
