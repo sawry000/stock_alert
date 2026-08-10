@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-21T13:41:51Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 9.869999885559082,
-    "change_pct": 1.4388477446976526,
-    "value": 0,
-    "entry_price": 10.135000228881836,
-    "pnl_pct": -2.6147,
-    "days_held": 20.93,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-21T13:56:09Z",
     "symbol": "AEHR",
     "alert_id": "AEHR_PCT_UP",
@@ -7454,6 +7440,23 @@
     "pnl_pct": 3.3166,
     "days_held": 3.47,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-10T13:57:16Z",
+    "symbol": "BLZE",
+    "alert_id": "BLZE_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 20.25,
+    "change_pct": 7.655502392344504,
+    "value": 19.2375,
+    "entry_price": 18.6200008392334,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
