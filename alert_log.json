@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-23T14:11:22Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 63.25,
-    "change_pct": 1.0383386581469625,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-23T14:27:03Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 7.579999923706055,
-    "change_pct": -5.131415222702698,
-    "value": 0,
-    "entry_price": 8.130000114440918,
-    "pnl_pct": -6.7651,
-    "days_held": 24.44,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-23T14:40:57Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_PCT_DROP",
@@ -7601,5 +7573,39 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-11T20:11:44Z",
+    "symbol": "BWEN",
+    "alert_id": "BWEN_SCORE_60",
+    "type": "alert_score",
+    "action": "BUY",
+    "price": 5.340000152587891,
+    "change_pct": 16.33987260540067,
+    "value": 60,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-11T20:12:18Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 3.240000009536743,
+    "change_pct": 15.714286054883692,
+    "value": 3.078,
+    "entry_price": 2.884999990463257,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
