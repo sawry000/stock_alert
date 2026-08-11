@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-23T06:40:51Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MA_GOLD",
-    "type": "ma_crossover",
-    "action": "BUY",
-    "price": 95.33000183105469,
-    "change_pct": -0.542512434997712,
-    "value": 0.391,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-23T06:40:53Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -7568,5 +7554,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-11T17:41:45Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 7.085000038146973,
+    "change_pct": 5.431548186710907,
+    "value": 6.7308,
+    "entry_price": 6.440000057220459,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
