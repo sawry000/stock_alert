@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-22T19:25:52Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 23.5,
-    "change_pct": -9.65013456362938,
-    "value": -9.65013456362938,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-22T22:12:01Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_PCT_DROP",
@@ -7553,6 +7539,23 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-11T13:57:18Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 16.93000030517578,
+    "change_pct": -5.996666823010663,
+    "value": 0,
+    "entry_price": 17.639999389648438,
+    "pnl_pct": -4.0249,
+    "days_held": 3.78,
+    "entry_alert_type": "mtf_alignment",
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
