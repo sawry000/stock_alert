@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-23T06:12:34Z",
-    "symbol": "AGPU",
-    "alert_id": "AGPU_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 7.110000133514404,
-    "change_pct": -24.684595473508217,
-    "value": -24.684595473508217,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-23T06:40:51Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MA_GOLD",
@@ -7565,5 +7551,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-11T16:41:59Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.884999990463257,
+    "change_pct": 3.035713945116322,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
