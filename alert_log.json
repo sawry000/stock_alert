@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-23T02:28:01Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 16.700000762939453,
-    "change_pct": -0.8902031873029572,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-23T06:12:34Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_PCT_DROP",
@@ -7556,6 +7542,23 @@
     "change_pct": 5.357141721816294,
     "value": 6.726,
     "entry_price": 6.440000057220459,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-11T16:10:49Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 19.94499969482422,
+    "change_pct": -17.921811955455894,
+    "value": -17.921811955455894,
+    "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
