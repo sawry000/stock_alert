@@ -119,7 +119,7 @@
     "last_buy_reminder_at": "2026-08-11T08:10:35Z",
     "open_entry": 325.1499938964844,
     "open_time": "2026-08-11T08:10:35Z",
-    "open_peak": 325.1499938964844,
+    "open_peak": 326.30999755859375,
     "open_stop": 292.635,
     "open_target": 373.9225,
     "open_conviction": 5,
@@ -1533,7 +1533,7 @@
     "last_buy_reminder_at": "2026-08-07T08:26:28Z",
     "open_entry": 18.059999465942383,
     "open_time": "2026-08-07T08:26:28Z",
-    "open_peak": 18.81999969482422,
+    "open_peak": 18.8700008392334,
     "open_stop": 16.573,
     "open_target": 20.2904,
     "open_conviction": 4,
@@ -1910,7 +1910,8 @@
     "AMBA_SCORE_65": {
       "last_fired": "2026-08-03T02:27:00Z"
     },
-    "_confirm_AMBA_MA_GOLD": 1
+    "_confirm_AMBA_MA_GOLD": 1,
+    "_confirm_AMBA_MTF_BULL": 1
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
@@ -1961,7 +1962,8 @@
     "open_target": 171.0288,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_GLW_MTF_BULL": 1
   },
   "CDNL": {
     "CDNL_MTF_BULL": {
@@ -2107,7 +2109,8 @@
     "open_target": 19.2132,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2148,7 +2151,8 @@
     "open_target": 23.3496,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_RELL_MTF_BULL": 1
   },
   "LUNG": {
     "LUNG_MTF_BULL": {
@@ -2168,7 +2172,8 @@
     "open_target": 2.7025,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2240,7 +2245,8 @@
     "open_target": 17.4096,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_OCC_MTF_BULL": 1
   },
   "FATN": {
     "FATN_MTF_BULL": {
@@ -2255,8 +2261,7 @@
     "open_target": 7.506,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_FATN_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2267,8 +2272,9 @@
       "last_fired": "2026-08-10T13:43:06Z"
     },
     "last_sell_at": "2026-08-10T13:43:06Z",
-    "_confirm_REAX_MA_GOLD": 1,
-    "_confirm_REAX_MTF_BULL": 1
+    "_confirm_REAX_MA_GOLD": 1
   },
-  "CVV": {}
+  "CVV": {
+    "_confirm_CVV_MTF_BULL": 1
+  }
 }
