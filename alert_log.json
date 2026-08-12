@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-26T03:10:42Z",
-    "symbol": "ICHR",
-    "alert_id": "ICHR_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 86.55000305175781,
-    "change_pct": -8.412695183325066,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-26T03:11:00Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 59.099998474121094,
-    "change_pct": -6.605564990326972,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-26T03:11:11Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -7736,5 +7708,39 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-12T19:57:00Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 7.400000095367432,
+    "change_pct": 5.113637718287381,
+    "value": 7.03,
+    "entry_price": 6.440000057220459,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-12T19:57:16Z",
+    "symbol": "GLW",
+    "alert_id": "GLW_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 167.58999633789062,
+    "change_pct": 4.485472683392381,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
