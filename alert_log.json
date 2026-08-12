@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-24T14:41:42Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 75.61000061035156,
-    "change_pct": -6.654320234133873,
-    "value": 75.61000061035156,
-    "entry_price": 89.07499694824219,
-    "pnl_pct": -15.1165,
-    "days_held": 2.03,
-    "entry_alert_type": "mtf_alignment"
-  },
-  {
     "timestamp": "2026-07-24T14:41:49Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MA_DEATH",
@@ -7661,6 +7647,23 @@
     "pnl_pct": 15.078,
     "days_held": 0.9,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-12T14:56:17Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 4.539999961853027,
+    "change_pct": 5.827504938299004,
+    "value": 4.313,
+    "entry_price": 4.059999942779541,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
