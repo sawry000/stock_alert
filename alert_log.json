@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-25T04:11:36Z",
-    "symbol": "SMTC",
-    "alert_id": "SMTC_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 125.92,
-    "change_pct": -9.214131218457092,
-    "value": -9.214131218457092,
-    "entry_price": 161.85000610351562,
-    "pnl_pct": -22.1996,
-    "days_held": 23.91,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-25T04:41:49Z",
     "symbol": "PESI",
     "alert_id": "PESI_MTF_BULL",
@@ -7703,5 +7689,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T16:10:43Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 358.0150146484375,
+    "change_pct": 5.984314579170364,
+    "value": 340.1143,
+    "entry_price": 325.1499938964844,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
