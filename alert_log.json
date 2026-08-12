@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-26T03:11:14Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 9.390000343322754,
-    "change_pct": -5.055608257606134,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-26T03:11:25Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_MA_DEATH",
@@ -7737,6 +7723,23 @@
     "action": "BUY",
     "price": 17.059999465942383,
     "change_pct": 3.8983152512645294,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T20:27:54Z",
+    "symbol": "FATN",
+    "alert_id": "FATN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.809999942779541,
+    "change_pct": -1.3229399855166268,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
