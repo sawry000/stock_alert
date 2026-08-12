@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-26T03:11:25Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 1.5,
-    "change_pct": 0.08674184293054507,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-26T03:11:29Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 4.0,
-    "change_pct": -1.2345679012345634,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-26T03:11:31Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MA_DEATH",
@@ -7747,6 +7719,40 @@
     "entry_alert_type": null,
     "conviction_score": 5,
     "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T20:42:14Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 17.450000762939453,
+    "change_pct": 4.49102253257158,
+    "value": 0.138,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 4,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T20:42:16Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 17.450000762939453,
+    "change_pct": 4.49102253257158,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 4,
     "rr_ratio": 1.5
   }
 ]
