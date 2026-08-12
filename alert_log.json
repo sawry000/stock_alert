@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-26T03:11:11Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 20.239999771118164,
-    "change_pct": 4.222449902771175,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-26T03:11:14Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_MA_DEATH",
@@ -7734,6 +7720,23 @@
     "action": "BUY",
     "price": 167.58999633789062,
     "change_pct": 4.485472683392381,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T20:11:11Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 17.059999465942383,
+    "change_pct": 3.8983152512645294,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
