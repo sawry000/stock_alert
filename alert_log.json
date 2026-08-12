@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-24T03:11:00Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 100.2699966430664,
-    "change_pct": -15.025426573672537,
-    "value": -15.025426573672537,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-24T06:55:46Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_PCT_DROP",
@@ -7628,5 +7614,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T05:56:56Z",
+    "symbol": "CDNL",
+    "alert_id": "CDNL_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 38.27000045776367,
+    "change_pct": -37.36497470087779,
+    "value": -37.36497470087779,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
