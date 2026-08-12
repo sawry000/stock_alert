@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-26T02:11:00Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 4.99,
-    "change_pct": -3.451745220958128,
-    "value": 4.99,
-    "entry_price": 4.25,
-    "pnl_pct": 17.4118,
-    "days_held": 30.67,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-26T02:11:14Z",
     "symbol": "ASPN",
     "alert_id": "ASPN_PCT_DROP",
@@ -7721,5 +7707,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T17:40:37Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 359.2699890136719,
+    "change_pct": 6.355828600850167,
+    "value": 341.3065,
+    "entry_price": 325.1499938964844,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
