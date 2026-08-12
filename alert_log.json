@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-23T17:25:44Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 2.509999990463257,
-    "change_pct": -3.8792942035286297,
-    "value": 2.509999990463257,
-    "entry_price": 3.015000104904175,
-    "pnl_pct": -16.7496,
-    "days_held": 2.1,
-    "entry_alert_type": "percent_change"
-  },
-  {
-    "timestamp": "2026-07-23T18:56:06Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 101.37000274658203,
-    "change_pct": -14.093218011371158,
-    "value": -14.093218011371158,
-    "entry_price": 111.79000091552734,
-    "pnl_pct": -9.321,
-    "days_held": 14.54,
-    "entry_alert_type": "mtf_alignment"
-  },
-  {
     "timestamp": "2026-07-23T22:41:01Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_PCT_DROP",
@@ -7616,5 +7588,39 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-12T03:56:27Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 4.289999961853027,
+    "change_pct": 6.451611956650797,
+    "value": 5.827204411302325,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T03:57:00Z",
+    "symbol": "BOBS",
+    "alert_id": "BOBS_VOL_2X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 18.350000381469727,
+    "change_pct": -0.21750744170893968,
+    "value": 2.6313523571767043,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 4,
+    "rr_ratio": 1.5
   }
 ]
