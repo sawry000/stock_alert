@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-26T02:11:14Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 4.67,
-    "change_pct": -10.707456978967505,
-    "value": -10.707456978967505,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-26T02:11:27Z",
     "symbol": "SMTC",
     "alert_id": "SMTC_PCT_DROP",
@@ -7717,6 +7703,23 @@
     "price": 359.2699890136719,
     "change_pct": 6.355828600850167,
     "value": 341.3065,
+    "entry_price": 325.1499938964844,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-12T17:55:38Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 361.55999755859375,
+    "change_pct": 7.033747057014132,
+    "value": 343.482,
     "entry_price": 325.1499938964844,
     "pnl_pct": null,
     "days_held": null,
