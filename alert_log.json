@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-24T06:55:46Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 86.51000213623047,
-    "change_pct": -11.72448761609136,
-    "value": -11.72448761609136,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-24T08:10:50Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MTF_BULL",
@@ -7627,6 +7613,23 @@
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-12T08:11:24Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 13.69,
+    "change_pct": -16.168104688829978,
+    "value": -16.168104688829978,
+    "entry_price": 16.3799991607666,
+    "pnl_pct": -16.4225,
+    "days_held": 46.76,
     "entry_alert_type": null,
     "conviction_score": null,
     "conviction_total": null,
