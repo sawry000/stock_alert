@@ -237,7 +237,19 @@
     "RIOT_PCT_UP": {
       "last_fired": "2026-07-30T13:55:52Z"
     },
-    "last_buy_at": "2026-07-30T13:55:52Z"
+    "last_buy_at": "2026-08-12T08:55:38Z",
+    "RIOT_VOL_3X": {
+      "last_fired": "2026-08-12T08:55:38Z"
+    },
+    "last_buy_reminder_at": "2026-08-12T08:55:38Z",
+    "open_entry": 20.239999771118164,
+    "open_time": "2026-08-12T08:55:38Z",
+    "open_peak": 20.239999771118164,
+    "open_stop": 18.216,
+    "open_target": 23.276,
+    "open_conviction": 4,
+    "open_conviction_total": 5,
+    "open_alert_type": "volume_spike"
   },
   "NAVN": {
     "NAVN_POS_SIZE": {
@@ -1817,7 +1829,8 @@
     "open_target": 4.9788,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1928,8 +1941,7 @@
     "AMBA_SCORE_65": {
       "last_fired": "2026-08-03T02:27:00Z"
     },
-    "_confirm_AMBA_MA_GOLD": 1,
-    "_confirm_AMBA_MTF_BULL": 1
+    "_confirm_AMBA_MA_GOLD": 1
   },
   "ALGM": {
     "ALGM_MTF_BULL": {
@@ -2007,7 +2019,8 @@
     },
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
-    }
+    },
+    "_confirm_CDNL_RSI_OS": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2178,8 +2191,7 @@
     "open_target": 23.3496,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_RELL_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "LUNG": {
     "LUNG_MTF_BULL": {
@@ -2242,7 +2254,8 @@
     "open_target": 22.1605,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_BLZE_MTF_BULL": 1
   },
   "AXTI": {
     "AXTI_MTF_BULL": {
@@ -2272,7 +2285,8 @@
     "open_target": 17.4096,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_OCC_MTF_BULL": 1
   },
   "FATN": {
     "FATN_MTF_BULL": {
@@ -2309,9 +2323,7 @@
     "open_conviction_total": 5,
     "open_alert_type": "mtf_alignment"
   },
-  "CVV": {
-    "_confirm_CVV_MTF_BULL": 1
-  },
+  "CVV": {},
   "DHX": {
     "DHX_MA_DEATH": {
       "last_fired": "2026-08-12T02:12:22Z"
