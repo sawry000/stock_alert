@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-26T02:11:42Z",
-    "symbol": "ALGM",
-    "alert_id": "ALGM_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 46.03,
-    "change_pct": -9.745098039215684,
-    "value": -9.745098039215684,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-26T02:11:58Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 15.98,
-    "change_pct": -0.9913258983890962,
-    "value": 15.98,
-    "entry_price": 14.829999923706055,
-    "pnl_pct": 7.7546,
-    "days_held": 9.99,
-    "entry_alert_type": "mtf_alignment"
-  },
-  {
     "timestamp": "2026-07-26T03:10:42Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_MA_DEATH",
@@ -7730,5 +7702,39 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T19:27:35Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 224.4199981689453,
+    "change_pct": 5.366448269376639,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T19:27:40Z",
+    "symbol": "FSLY",
+    "alert_id": "FSLY_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 28.625,
+    "change_pct": -0.6421381464769134,
+    "value": 28.625,
+    "entry_price": 27.350000381469727,
+    "pnl_pct": 4.6618,
+    "days_held": 2.12,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
