@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-24T02:41:02Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 63.380001068115234,
-    "change_pct": 1.2460080960307236,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-24T03:11:00Z",
     "symbol": "AGL",
     "alert_id": "AGL_PCT_DROP",
@@ -7618,6 +7604,23 @@
     "price": 328.57000732421875,
     "change_pct": 1.0330254786419029,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T05:26:43Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.139999866485596,
+    "change_pct": -1.9200685843008929,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
