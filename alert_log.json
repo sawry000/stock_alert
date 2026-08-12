@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-24T14:41:49Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 4.880000114440918,
-    "change_pct": -9.158598018597951,
-    "value": 0,
-    "entry_price": 5.40500020980835,
-    "pnl_pct": -9.7132,
-    "days_held": 15.86,
-    "entry_alert_type": "mtf_alignment"
-  },
-  {
     "timestamp": "2026-07-24T14:56:20Z",
     "symbol": "WGS",
     "alert_id": "WGS_MA_DEATH",
@@ -7661,6 +7647,23 @@
     "change_pct": 5.827504938299004,
     "value": 4.313,
     "entry_price": 4.059999942779541,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-12T15:10:34Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 351.9150085449219,
+    "change_pct": 4.1785105224753885,
+    "value": 334.3193,
+    "entry_price": 325.1499938964844,
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
