@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-23T22:41:01Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 86.51000213623047,
-    "change_pct": -11.72448761609136,
-    "value": -11.72448761609136,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-24T02:41:02Z",
     "symbol": "WGS",
     "alert_id": "WGS_MTF_BULL",
@@ -7621,6 +7607,23 @@
     "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 4,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-12T04:10:42Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 328.57000732421875,
+    "change_pct": 1.0330254786419029,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
     "rr_ratio": 1.5
   }
 ]
