@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T02:12:17Z",
-    "symbol": "ALGM",
-    "alert_id": "ALGM_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 46.029998779296875,
-    "change_pct": -9.745100432751226,
-    "value": -9.745100432751226,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-27T02:25:42Z",
     "symbol": "COHR",
     "alert_id": "COHR_PCT_DROP",
@@ -7767,6 +7753,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-13T08:42:22Z",
+    "symbol": "JFB",
+    "alert_id": "JFB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.630000114440918,
+    "change_pct": 1.7582442734267727,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
