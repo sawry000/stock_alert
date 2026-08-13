@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T03:11:13Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 59.099998474121094,
-    "change_pct": -6.605564990326972,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-27T03:11:25Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_MA_DEATH",
@@ -7781,6 +7767,23 @@
     "pnl_pct": 19.5652,
     "days_held": 6.9,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-13T13:57:06Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 3.6238999366760254,
+    "change_pct": 8.499998104072622,
+    "value": 3.4427,
+    "entry_price": 3.325000047683716,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
