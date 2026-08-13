@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T02:11:38Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 20.239999771118164,
-    "change_pct": 4.222449902771175,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-27T02:12:17Z",
     "symbol": "ALGM",
     "alert_id": "ALGM_PCT_DROP",
@@ -7764,6 +7750,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-13T08:11:33Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 15.100000381469727,
+    "change_pct": -0.26419827298727877,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
