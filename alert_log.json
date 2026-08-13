@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T02:25:42Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 282.39,
-    "change_pct": -9.931805373089784,
-    "value": -9.931805373089784,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-27T02:26:29Z",
     "symbol": "SMTC",
     "alert_id": "SMTC_PCT_DROP",
@@ -7770,6 +7756,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-13T13:12:10Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.3399999141693115,
+    "change_pct": -2.569781087857903e-06,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
