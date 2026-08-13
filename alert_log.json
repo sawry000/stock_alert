@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-26T03:11:31Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 4.96999979019165,
-    "change_pct": -7.483250368733237,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-26T04:56:43Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 15.979999542236328,
-    "change_pct": -0.9913287345952444,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-27T02:11:11Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_PCT_DROP",
@@ -7754,5 +7726,39 @@
     "conviction_score": 4,
     "conviction_total": 4,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-13T02:10:38Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 355.6400146484375,
+    "change_pct": 5.281235834350944,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-13T02:12:35Z",
+    "symbol": "ATEX",
+    "alert_id": "ATEX_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 88.80000305175781,
+    "change_pct": -2.857920906049153,
+    "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
