@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T03:11:46Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 4.96999979019165,
-    "change_pct": -7.483250368733237,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-27T09:26:32Z",
-    "symbol": "DOMO",
-    "alert_id": "DOMO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.680000066757202,
-    "change_pct": -0.5405387362918386,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-27T13:40:53Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -7796,5 +7768,39 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-13T16:26:03Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 4.224999904632568,
+    "change_pct": 14.189186611691031,
+    "value": 14.189186611691031,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-13T16:27:11Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 3.4100000858306885,
+    "change_pct": 2.0958109530146296,
+    "value": 3.4100000858306885,
+    "entry_price": 3.325000047683716,
+    "pnl_pct": 2.5564,
+    "days_held": 0.99,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
