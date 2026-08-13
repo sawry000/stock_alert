@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T15:41:36Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 125.87999725341797,
-    "change_pct": -0.19029713493659672,
-    "value": 125.87999725341797,
-    "entry_price": 100.4749984741211,
-    "pnl_pct": 25.2849,
-    "days_held": 34.95,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-27T16:55:47Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_DROP",
@@ -7815,6 +7801,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-13T19:26:51Z",
+    "symbol": "RFIL",
+    "alert_id": "RFIL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 13.3100004196167,
+    "change_pct": 0.2259067742221375,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
