@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T14:41:52Z",
-    "symbol": "CDNL",
-    "alert_id": "CDNL_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 61.16999816894531,
-    "change_pct": -4.600751452050362,
-    "value": 61.16999816894531,
-    "entry_price": 73.2249984741211,
-    "pnl_pct": -16.463,
-    "days_held": 9.94,
-    "entry_alert_type": "mtf_alignment"
-  },
-  {
     "timestamp": "2026-07-27T15:41:36Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_SL_BREAK",
@@ -7812,6 +7798,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-13T18:56:57Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1545.9200439453125,
+    "change_pct": 13.587063215154249,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
