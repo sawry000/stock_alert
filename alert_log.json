@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T13:40:53Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 24.565000534057617,
-    "change_pct": 5.8836229916276634,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-27T13:41:06Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MA_DEATH",
@@ -7802,5 +7788,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-13T16:57:44Z",
+    "symbol": "CVV",
+    "alert_id": "CVV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 7.809999942779541,
+    "change_pct": 12.696785656477406,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
