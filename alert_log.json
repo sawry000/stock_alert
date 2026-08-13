@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T16:57:21Z",
-    "symbol": "AGPU",
-    "alert_id": "AGPU_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 8.069999694824219,
-    "change_pct": 17.97727723673258,
-    "value": 7.6788,
-    "entry_price": 7.110000133514404,
-    "pnl_pct": 13.5021,
-    "days_held": 4.36,
-    "entry_alert_type": "volume_spike"
-  },
-  {
     "timestamp": "2026-07-27T18:41:52Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_VOL_3X",
@@ -7824,6 +7810,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-13T21:41:56Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.440000057220459,
+    "change_pct": 2.9940136892353033,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
