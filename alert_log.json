@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-29T16:11:50Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 80.31999969482422,
-    "change_pct": -12.695652505625848,
-    "value": -12.695652505625848,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-29T16:26:13Z",
     "symbol": "AMSC",
     "alert_id": "AMSC_PCT_DROP",
@@ -7948,6 +7934,23 @@
     "price": 2.4000000953674316,
     "change_pct": 1.0526355944181742,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-14T23:57:31Z",
+    "symbol": "JFB",
+    "alert_id": "JFB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.599999904632568,
+    "change_pct": 2.381480183230982,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
