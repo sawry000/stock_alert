@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-29T13:55:49Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 26.834999084472656,
-    "change_pct": 3.7702980838076448,
-    "value": 26.5302,
-    "entry_price": 24.565000534057617,
-    "pnl_pct": 9.2408,
-    "days_held": 2.01,
-    "entry_alert_type": "mtf_alignment"
-  },
-  {
     "timestamp": "2026-07-29T14:56:49Z",
     "symbol": "BLIN",
     "alert_id": "BLIN_MA_DEATH",
@@ -7937,5 +7923,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-14T19:42:58Z",
+    "symbol": "REAX",
+    "alert_id": "REAX_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 2.4149999618530273,
+    "change_pct": 1.6842089201274673,
+    "value": 2.4149999618530273,
+    "entry_price": 2.2750000953674316,
+    "pnl_pct": 6.1538,
+    "days_held": 3.02,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
