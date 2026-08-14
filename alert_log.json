@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-29T13:55:47Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 26.834999084472656,
-    "change_pct": 3.7702980838076448,
-    "value": 25.4932,
-    "entry_price": 24.565000534057617,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-29T13:55:49Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_TAKE_PROFIT",
@@ -7934,5 +7920,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-14T18:57:32Z",
+    "symbol": "CVV",
+    "alert_id": "CVV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 8.13599967956543,
+    "change_pct": 4.5758313568821265,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
