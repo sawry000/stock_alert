@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T14:26:30Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 4.0269999504089355,
-    "change_pct": -16.191468253716216,
-    "value": -16.191468253716216,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-28T14:26:33Z",
-    "symbol": "SMTC",
-    "alert_id": "SMTC_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 109.11000061035156,
-    "change_pct": -10.153161552740807,
-    "value": -10.153161552740807,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-28T14:40:59Z",
     "symbol": "XMTR",
     "alert_id": "XMTR_MA_DEATH",
@@ -7883,5 +7855,39 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-14T15:42:17Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1611.320068359375,
+    "change_pct": 2.6425406951217605,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-14T15:42:37Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 1.0199999809265137,
+    "change_pct": -3.709998968515646,
+    "value": 1.0199999809265137,
+    "entry_price": 1.190000057220459,
+    "pnl_pct": -14.2857,
+    "days_held": 13.96,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
