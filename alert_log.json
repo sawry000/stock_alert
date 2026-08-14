@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-29T06:11:44Z",
-    "symbol": "GLW",
-    "alert_id": "GLW_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 126.01000213623047,
-    "change_pct": -11.385371212214853,
-    "value": -11.385371212214853,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-29T06:41:17Z",
     "symbol": "FPS",
     "alert_id": "FPS_PCT_DROP",
@@ -7913,6 +7899,23 @@
     "change_pct": 13.176052484909242,
     "value": 4.8308,
     "entry_price": 4.630000114440918,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-14T16:56:09Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 5.570000171661377,
+    "change_pct": 12.298389694010906,
+    "value": 5.2915,
+    "entry_price": 4.869999885559082,
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
