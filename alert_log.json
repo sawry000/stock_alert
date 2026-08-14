@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-29T16:11:38Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 29.31999969482422,
-    "change_pct": -10.989679129252519,
-    "value": -10.989679129252519,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-29T16:11:50Z",
     "symbol": "VPG",
     "alert_id": "VPG_PCT_DROP",
@@ -7950,6 +7936,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-14T21:57:25Z",
+    "symbol": "REAX",
+    "alert_id": "REAX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.4000000953674316,
+    "change_pct": 1.0526355944181742,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
