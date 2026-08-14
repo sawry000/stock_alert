@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-27T22:57:11Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 15.680000305175781,
-    "change_pct": -1.8773447736183928,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-28T03:26:20Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 60.540000915527344,
-    "change_pct": 2.0050563024892036,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-28T03:26:43Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_MA_DEATH",
@@ -7832,5 +7804,39 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-14T02:12:18Z",
+    "symbol": "HCTI",
+    "alert_id": "HCTI_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 1.7300000190734863,
+    "change_pct": 41.80328025192511,
+    "value": 172.89056624553564,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-14T02:12:18Z",
+    "symbol": "HCTI",
+    "alert_id": "HCTI_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 1.7300000190734863,
+    "change_pct": 41.80328025192511,
+    "value": 41.80328025192511,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
