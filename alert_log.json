@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-29T06:41:17Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 32.41,
-    "change_pct": -11.016541972681729,
-    "value": -11.016541972681729,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-29T06:41:20Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_PCT_DROP",
@@ -7919,6 +7905,23 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-14T17:42:20Z",
+    "symbol": "JFB",
+    "alert_id": "JFB_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 4.829999923706055,
+    "change_pct": 7.500554723037042,
+    "value": 4.829999923706055,
+    "entry_price": 4.630000114440918,
+    "pnl_pct": 4.3197,
+    "days_held": 1.37,
+    "entry_alert_type": "mtf_alignment",
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
