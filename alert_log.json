@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T03:27:08Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 4.079999923706055,
-    "change_pct": 1.9999980926513672,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-28T03:27:11Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MA_DEATH",
@@ -7844,5 +7830,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-14T08:11:30Z",
+    "symbol": "AMPG",
+    "alert_id": "AMPG_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 5.989999771118164,
+    "change_pct": 52.80611661015725,
+    "value": 52.80611661015725,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
