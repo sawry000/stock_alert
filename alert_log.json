@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T03:27:11Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 4.849999904632568,
-    "change_pct": -2.4144888403909737,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-28T09:55:49Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -7845,6 +7831,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-14T12:41:04Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 4.190000057220459,
+    "change_pct": 13.243244789742128,
+    "value": 13.243244789742128,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
