@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T09:55:49Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 25.780000686645508,
-    "change_pct": -1.2638809396954869,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-28T13:40:36Z",
     "symbol": "COHR",
     "alert_id": "COHR_PCT_DROP",
@@ -7848,6 +7834,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-14T13:27:23Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 17.959999084472656,
+    "change_pct": -0.22222730848524305,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
