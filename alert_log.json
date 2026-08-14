@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T03:27:01Z",
-    "symbol": "ZVIA",
-    "alert_id": "ZVIA_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 1.5800000429153442,
-    "change_pct": 5.333336194356283,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-28T03:27:08Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MA_DEATH",
@@ -7841,5 +7827,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-14T06:56:58Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 17.959999084472656,
+    "change_pct": -14.476194835844494,
+    "value": -14.476194835844494,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
