@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T14:40:59Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 82.37999725341797,
-    "change_pct": -4.120114928517263,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-28T14:41:25Z",
     "symbol": "AGL",
     "alert_id": "AGL_MA_DEATH",
@@ -7886,6 +7872,23 @@
     "pnl_pct": -14.2857,
     "days_held": 13.96,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-14T15:56:03Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 5.449999809265137,
+    "change_pct": 9.879027567532543,
+    "value": 5.1775,
+    "entry_price": 4.869999885559082,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
