@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T14:26:23Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 8.3100004196167,
-    "change_pct": -11.501592975328021,
-    "value": -11.501592975328021,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-28T14:26:27Z",
     "symbol": "FPS",
     "alert_id": "FPS_PCT_DROP",
@@ -7874,6 +7860,23 @@
     "pnl_pct": -11.7105,
     "days_held": 0.85,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-14T14:41:19Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 5.429999828338623,
+    "change_pct": 9.475802148728201,
+    "value": 5.1585,
+    "entry_price": 4.869999885559082,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
