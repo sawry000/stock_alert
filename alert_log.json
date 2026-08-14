@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-28T03:26:43Z",
-    "symbol": "SHLS",
-    "alert_id": "SHLS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 9.385000228881836,
-    "change_pct": -0.18930287912284877,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-28T03:27:01Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_MA_DEATH",
@@ -7836,6 +7822,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-14T04:12:05Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 15.380000114440918,
+    "change_pct": 1.585205511498794,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
