@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-29T16:26:13Z",
-    "symbol": "AMSC",
-    "alert_id": "AMSC_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 26.3700008392334,
-    "change_pct": -9.660839879296343,
-    "value": -9.660839879296343,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-29T18:10:56Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -7958,5 +7944,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-15T02:11:04Z",
+    "symbol": "TGEN",
+    "alert_id": "TGEN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 3.6500000953674316,
+    "change_pct": -15.11627685192019,
+    "value": -15.11627685192019,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
