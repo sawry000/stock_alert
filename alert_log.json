@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-07-30T14:12:46Z",
-    "symbol": "RELL",
-    "alert_id": "RELL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.084999084472656,
-    "change_pct": 10.006077156159702,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-07-30T14:27:49Z",
     "symbol": "AMBA",
     "alert_id": "AMBA_MTF_BULL",
@@ -7990,6 +7976,23 @@
     "price": 35.83000183105469,
     "change_pct": 4.156982067019445,
     "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-16T05:11:16Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 234.74000549316406,
+    "change_pct": 3.182419996995192,
+    "value": 3,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
