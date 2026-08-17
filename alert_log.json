@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-07-31T19:13:04Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 86.55500030517578,
-    "change_pct": 15.406667073567709,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-07-31T19:26:04Z",
-    "symbol": "TYGO",
-    "alert_id": "TYGO_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 1.958799958229065,
-    "change_pct": 11.931426184517997,
-    "value": 11.931426184517997,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-01T02:27:12Z",
     "symbol": "PESI",
     "alert_id": "PESI_MTF_BULL",
@@ -8081,5 +8053,39 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-17T14:58:03Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 9.604999542236328,
+    "change_pct": 16.002409930390446,
+    "value": 3.0127909353017506,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-17T14:58:04Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 9.604999542236328,
+    "change_pct": 16.002409930390446,
+    "value": 16.002409930390446,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
