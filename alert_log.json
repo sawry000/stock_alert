@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-01T06:57:13Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.309999942779541,
-    "change_pct": -1.327620849038898e-06,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-01T06:57:46Z",
     "symbol": "RELL",
     "alert_id": "RELL_MTF_BULL",
@@ -8096,5 +8082,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-17T18:11:48Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 152.72000122070312,
+    "change_pct": 8.404316596183369,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
