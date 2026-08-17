@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-01T06:57:11Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MA_GOLD",
-    "type": "ma_crossover",
-    "action": "BUY",
-    "price": 4.309999942779541,
-    "change_pct": -1.327620849038898e-06,
-    "value": 0.257,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-01T06:57:13Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MTF_BULL",
@@ -8089,6 +8075,23 @@
     "entry_price": 15.100000381469727,
     "pnl_pct": 2.1192,
     "days_held": 4.3,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-17T17:55:57Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 88.375,
+    "change_pct": -8.191356742156664,
+    "value": -8.191356742156664,
+    "entry_price": 91.58999633789062,
+    "pnl_pct": -3.5102,
+    "days_held": 13.15,
     "entry_alert_type": "mtf_alignment",
     "conviction_score": null,
     "conviction_total": null,
