@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-02T02:26:51Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MA_GOLD",
-    "type": "ma_crossover",
-    "action": "BUY",
-    "price": 86.0,
-    "change_pct": 14.666666666666666,
-    "value": 1.94,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-02T02:26:52Z",
     "symbol": "AMBA",
     "alert_id": "AMBA_SCORE_65",
@@ -8108,5 +8094,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-17T19:42:18Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 10.65999984741211,
+    "change_pct": 28.743959509808093,
+    "value": 10.127,
+    "entry_price": 9.604999542236328,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
