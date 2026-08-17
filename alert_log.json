@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-02T02:27:12Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 16.600000381469727,
-    "change_pct": 0.5451264777088128,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-02T02:27:14Z",
     "symbol": "LUNG",
     "alert_id": "LUNG_MA_GOLD",
@@ -8117,5 +8103,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-17T22:11:36Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 6.650000095367432,
+    "change_pct": 2.307693774883564,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
