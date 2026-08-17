@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-02T02:26:53Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 86.0,
-    "change_pct": 14.666666666666666,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-02T02:27:12Z",
     "symbol": "PESI",
     "alert_id": "PESI_MTF_BULL",
@@ -8114,5 +8100,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-17T21:42:48Z",
+    "symbol": "FTK",
+    "alert_id": "FTK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 28.65999984741211,
+    "change_pct": -20.011164255059697,
+    "value": -20.011164255059697,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
