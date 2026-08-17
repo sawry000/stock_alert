@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-02T02:26:52Z",
-    "symbol": "AMBA",
-    "alert_id": "AMBA_SCORE_65",
-    "type": "alert_score",
-    "action": "BUY",
-    "price": 86.0,
-    "change_pct": 14.666666666666666,
-    "value": 65,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-02T02:26:53Z",
     "symbol": "AMBA",
     "alert_id": "AMBA_MTF_BULL",
@@ -8111,5 +8097,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-17T20:10:36Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 350.7900085449219,
+    "change_pct": 7.226045711423475,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
