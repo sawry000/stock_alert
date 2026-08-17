@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-02T02:12:27Z",
-    "symbol": "AOUT",
-    "alert_id": "AOUT_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 12.359999656677246,
-    "change_pct": -2.292492832590943,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-02T02:26:51Z",
     "symbol": "AMBA",
     "alert_id": "AMBA_MA_GOLD",
@@ -8097,6 +8083,23 @@
     "action": "BUY",
     "price": 4.230000019073486,
     "change_pct": 8.740360387493219,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-17T19:11:14Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 19.43000030517578,
+    "change_pct": 1.9819041442326564,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
