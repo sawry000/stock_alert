@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-01T02:27:12Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 16.600000381469727,
-    "change_pct": 0.5451264777088128,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-01T06:40:52Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -8087,5 +8073,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-17T15:12:35Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 3.744999885559082,
+    "change_pct": 1.7884291574005826,
+    "value": 3.5577,
+    "entry_price": 3.440000057220459,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
