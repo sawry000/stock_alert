@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-03T15:10:56Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 2.6449999809265137,
-    "change_pct": 37.0466311360888,
-    "value": 5.555806459588426,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-03T15:10:57Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP",
@@ -8189,6 +8175,23 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-18T16:26:37Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_STAGNANT_EXIT",
+    "type": "stagnant_exit",
+    "action": "SELL",
+    "price": 4.519999980926514,
+    "change_pct": -1.094092321082858,
+    "value": 15.0,
+    "entry_price": 4.610000133514404,
+    "pnl_pct": -1.9523,
+    "days_held": 15.01,
+    "entry_alert_type": "mtf_alignment",
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
