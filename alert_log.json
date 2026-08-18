@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-08-03T15:26:32Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 23.1299991607666,
-    "change_pct": 2.8841326274224315,
-    "value": 23.112,
-    "entry_price": 21.399999618530273,
-    "pnl_pct": 8.0841,
-    "days_held": 3.91,
-    "entry_alert_type": "mtf_alignment"
-  },
-  {
-    "timestamp": "2026-08-03T16:12:19Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.610000133514404,
-    "change_pct": 6.960559942329576,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-03T16:27:28Z",
     "symbol": "LUNG",
     "alert_id": "LUNG_TRAIL_ADJUST",
@@ -8204,5 +8176,39 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-18T18:12:00Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 232.55999755859375,
+    "change_pct": -9.509728576422665,
+    "value": -9.509728576422665,
+    "entry_price": 350.2099914550781,
+    "pnl_pct": -33.5941,
+    "days_held": 47.42,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-18T18:14:08Z",
+    "symbol": "REAX",
+    "alert_id": "REAX_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 2.6500000953674316,
+    "change_pct": 11.344541822160998,
+    "value": 2.5175,
+    "entry_price": 2.4000000953674316,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
