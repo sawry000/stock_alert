@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-03T14:57:18Z",
-    "symbol": "AGPU",
-    "alert_id": "AGPU_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 9.225000381469727,
-    "change_pct": 8.529416252585019,
-    "value": 9.18,
-    "entry_price": 8.5,
-    "pnl_pct": 8.5294,
-    "days_held": 3.73,
-    "entry_alert_type": "percent_change"
-  },
-  {
     "timestamp": "2026-08-03T15:10:56Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_VOL_3X",
@@ -8182,6 +8168,23 @@
     "price": 2.615000009536743,
     "change_pct": 9.873949980535432,
     "value": 2.4843,
+    "entry_price": 2.4000000953674316,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-18T16:12:08Z",
+    "symbol": "REAX",
+    "alert_id": "REAX_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 2.630000114440918,
+    "change_pct": 10.504206489114205,
+    "value": 2.4985,
     "entry_price": 2.4000000953674316,
     "pnl_pct": null,
     "days_held": null,
