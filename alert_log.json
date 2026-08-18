@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-03T14:57:16Z",
-    "symbol": "AGPU",
-    "alert_id": "AGPU_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 9.225000381469727,
-    "change_pct": 8.529416252585019,
-    "value": 8.7638,
-    "entry_price": 8.5,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-03T14:57:18Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_TAKE_PROFIT",
@@ -8180,6 +8166,23 @@
     "change_pct": -12.833705484315999,
     "value": -12.833705484315999,
     "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-18T15:57:13Z",
+    "symbol": "REAX",
+    "alert_id": "REAX_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 2.615000009536743,
+    "change_pct": 9.873949980535432,
+    "value": 2.4843,
+    "entry_price": 2.4000000953674316,
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
