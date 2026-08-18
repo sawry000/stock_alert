@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-03T16:27:30Z",
-    "symbol": "LUNG",
-    "alert_id": "LUNG_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 1.8849999904632568,
-    "change_pct": 15.644171194064842,
-    "value": 1.8792,
-    "entry_price": 1.7400000095367432,
-    "pnl_pct": 8.3333,
-    "days_held": 2.91,
-    "entry_alert_type": "ma_crossover"
-  },
-  {
     "timestamp": "2026-08-03T17:12:26Z",
     "symbol": "BLIN",
     "alert_id": "BLIN_MTF_BULL",
@@ -8213,5 +8199,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-18T19:27:37Z",
+    "symbol": "REAX",
+    "alert_id": "REAX_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 2.674999952316284,
+    "change_pct": 12.39495597967581,
+    "value": 2.5412,
+    "entry_price": 2.4000000953674316,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
