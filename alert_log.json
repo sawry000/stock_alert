@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-03T18:10:51Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 109.88999938964844,
-    "change_pct": 18.41594761815565,
-    "value": 18.41594761815565,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-03T18:42:16Z",
     "symbol": "LUNG",
     "alert_id": "LUNG_MTF_BULL",
@@ -8225,5 +8211,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-18T22:26:38Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 39.38999938964844,
+    "change_pct": -13.920832099404198,
+    "value": -13.920832099404198,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
