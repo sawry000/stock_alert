@@ -2072,13 +2072,13 @@
     "last_buy_reminder_at": "2026-08-12T20:42:16Z",
     "open_entry": 17.450000762939453,
     "open_time": "2026-08-12T20:42:14Z",
-    "open_peak": 18.05500030517578,
+    "open_peak": 18.122499465942383,
     "open_stop": 15.705,
     "open_target": 20.0675,
     "open_conviction": 4,
     "open_conviction_total": 4,
     "open_alert_type": "ma_crossover",
-    "_confirm_OFRM_MA_GOLD": 1
+    "_confirm_OFRM_MTF_BULL": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2199,7 +2199,8 @@
     "open_target": 2.7025,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2341,7 +2342,8 @@
     "open_target": 4.8645,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_DHX_MTF_BULL": 1
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
