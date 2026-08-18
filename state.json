@@ -1811,7 +1811,8 @@
     "open_target": 4.9788,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -2087,8 +2088,7 @@
     "open_conviction": 4,
     "open_conviction_total": 4,
     "open_alert_type": "ma_crossover",
-    "_confirm_OFRM_MA_GOLD": 1,
-    "_confirm_OFRM_MTF_BULL": 1
+    "_confirm_OFRM_MA_GOLD": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2209,8 +2209,7 @@
     "open_target": 2.7025,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_LUNG_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2260,7 +2259,8 @@
     "open_target": 22.1605,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_BLZE_MTF_BULL": 1
   },
   "AXTI": {
     "AXTI_MTF_BULL": {
@@ -2312,7 +2312,7 @@
     "last_buy_reminder_at": "2026-08-17T22:42:23Z",
     "open_entry": 2.4000000953674316,
     "open_time": "2026-08-14T21:57:25Z",
-    "open_peak": 2.4749999046325684,
+    "open_peak": 2.515000104904175,
     "open_stop": 2.1741,
     "open_target": 2.7389,
     "open_conviction": 4,
@@ -2347,7 +2347,7 @@
     "last_buy_reminder_at": "2026-08-17T18:58:12Z",
     "open_entry": 4.230000019073486,
     "open_time": "2026-08-17T18:58:12Z",
-    "open_peak": 4.429999828338623,
+    "open_peak": 4.474999904632568,
     "open_stop": 3.807,
     "open_target": 4.8645,
     "open_conviction": 5,
