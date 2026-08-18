@@ -1769,14 +1769,14 @@
   },
   "VPG": {
     "VPG_PCT_DROP": {
-      "last_fired": "2026-08-18T15:41:35Z"
+      "last_fired": "2026-08-18T23:41:47Z"
     },
     "open_position": true,
     "VPG_MTF_BULL": {
       "last_fired": "2026-08-04T20:11:33Z"
     },
     "last_buy_at": "2026-08-04T20:11:33Z",
-    "last_sell_at": "2026-08-18T15:41:35Z",
+    "last_sell_at": "2026-08-18T23:41:47Z",
     "VPG_MA_DEATH": {
       "last_fired": "2026-07-08T14:24:47Z"
     },
@@ -2195,7 +2195,8 @@
     "open_target": 2.7025,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2245,7 +2246,8 @@
     "open_target": 22.1605,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_BLZE_MTF_BULL": 1
   },
   "AXTI": {
     "AXTI_MTF_BULL": {
