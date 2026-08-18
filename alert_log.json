@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-03T14:56:57Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.170000076293945,
-    "change_pct": 3.4000015258789062,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-03T14:57:16Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_TRAIL_ADJUST",
@@ -8176,6 +8162,23 @@
     "price": 73.40010070800781,
     "change_pct": -13.930160743989708,
     "value": -13.930160743989708,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-18T15:41:35Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 66.93499755859375,
+    "change_pct": -12.833705484315999,
+    "value": -12.833705484315999,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
