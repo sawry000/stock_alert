@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-03T16:27:28Z",
-    "symbol": "LUNG",
-    "alert_id": "LUNG_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 1.8849999904632568,
-    "change_pct": 15.644171194064842,
-    "value": 1.7907,
-    "entry_price": 1.7400000095367432,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-03T16:27:30Z",
     "symbol": "LUNG",
     "alert_id": "LUNG_TAKE_PROFIT",
@@ -8210,5 +8196,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-18T18:26:03Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 6.239999771118164,
+    "change_pct": 3.4825832689579403,
+    "value": 3.723669007243569,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
