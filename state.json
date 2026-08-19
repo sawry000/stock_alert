@@ -1770,7 +1770,8 @@
     },
     "TMCI_MA_GOLD": {
       "last_fired": "2026-08-03T02:26:48Z"
-    }
+    },
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1797,7 +1798,8 @@
     "open_target": 8.3835,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1917,7 +1919,8 @@
     "last_sell_at": "2026-08-18T13:41:53Z",
     "NEOV_SL_BREAK": {
       "last_fired": "2026-08-18T13:41:53Z"
-    }
+    },
+    "_confirm_NEOV_MTF_BULL": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -2034,7 +2037,8 @@
     "open_target": 20.0675,
     "open_conviction": 4,
     "open_conviction_total": 4,
-    "open_alert_type": "ma_crossover"
+    "open_alert_type": "ma_crossover",
+    "_confirm_OFRM_MTF_BULL": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2089,8 +2093,7 @@
     "open_target": 20.654,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_PESI_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2152,8 +2155,7 @@
     "open_target": 2.7025,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_LUNG_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2222,7 +2224,8 @@
     "FATN_SL_BREAK": {
       "last_fired": "2026-08-18T13:58:16Z"
     },
-    "last_sell_at": "2026-08-18T13:58:16Z"
+    "last_sell_at": "2026-08-18T13:58:16Z",
+    "_confirm_FATN_MTF_BULL": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2233,7 +2236,8 @@
       "last_fired": "2026-08-14T19:42:58Z"
     },
     "last_sell_at": "2026-08-19T14:12:00Z",
-    "_confirm_REAX_MA_GOLD": 1
+    "_confirm_REAX_MA_GOLD": 1,
+    "_confirm_REAX_MTF_BULL": 1
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2268,7 +2272,8 @@
     "open_target": 4.8645,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_DHX_MTF_BULL": 1
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
