@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-03T20:27:42Z",
-    "symbol": "OFRM",
-    "alert_id": "OFRM_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 16.309999465942383,
-    "change_pct": 5.498056053961073,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-03T22:25:45Z",
     "symbol": "NAVN",
     "alert_id": "NAVN_MTF_BULL",
@@ -8233,6 +8219,23 @@
     "price": 0.7247999906539917,
     "change_pct": -19.466667705112034,
     "value": -19.466667705112034,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-19T06:41:36Z",
+    "symbol": "ALGM",
+    "alert_id": "ALGM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 39.38999938964844,
+    "change_pct": -13.920832099404198,
+    "value": -13.920832099404198,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
