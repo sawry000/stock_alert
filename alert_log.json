@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T08:12:30Z",
-    "symbol": "BLZE",
-    "alert_id": "BLZE_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 15.59,
-    "change_pct": -14.575342465753424,
-    "value": -14.575342465753424,
-    "entry_price": 15.59000015258789,
-    "pnl_pct": -0.0,
-    "days_held": 0.24,
-    "entry_alert_type": "ma_crossover"
-  },
-  {
     "timestamp": "2026-08-04T12:11:34Z",
     "symbol": "CLPT",
     "alert_id": "CLPT_PCT_UP",
@@ -8254,6 +8240,23 @@
     "price": 242.41000366210938,
     "change_pct": 2.041591034732014,
     "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-19T08:27:08Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1625.780029296875,
+    "change_pct": 2.379095043883816,
+    "value": 2,
     "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
