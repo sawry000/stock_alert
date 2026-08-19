@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T14:26:26Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 4.909999847412109,
-    "change_pct": 18.31324933523154,
-    "value": 18.31324933523154,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T14:57:02Z",
     "symbol": "LUNG",
     "alert_id": "LUNG_MTF_BULL",
@@ -8336,5 +8322,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-19T18:57:04Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 18.03499984741211,
+    "change_pct": -0.9065942449884061,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 4,
+    "rr_ratio": 1.5
   }
 ]
