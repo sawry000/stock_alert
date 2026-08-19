@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T14:57:02Z",
-    "symbol": "LUNG",
-    "alert_id": "LUNG_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 2.055000066757202,
-    "change_pct": -2.142853963942759,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T15:11:12Z",
     "symbol": "DDD",
     "alert_id": "DDD_TRAIL_ADJUST",
@@ -8338,6 +8324,23 @@
     "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 4,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-19T19:40:51Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 8.005000114440918,
+    "change_pct": 13.72192630365981,
+    "value": 13.72192630365981,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
     "rr_ratio": 1.5
   }
 ]
