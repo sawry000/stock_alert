@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T15:25:54Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 3.5387001037597656,
-    "change_pct": 18.29183031120728,
-    "value": 3.3618,
-    "entry_price": 3.0299999713897705,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T15:26:20Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_TRAIL_ADJUST",
@@ -8343,6 +8329,23 @@
     "action": "BUY",
     "price": 4.199999809265137,
     "change_pct": -1.639348729153697,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-19T20:26:46Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 7.210000038146973,
+    "change_pct": 5.8737156849775785,
     "value": 3,
     "entry_price": null,
     "pnl_pct": null,
