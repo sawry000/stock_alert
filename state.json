@@ -1965,7 +1965,8 @@
     "last_sell_at": "2026-08-18T13:41:53Z",
     "NEOV_SL_BREAK": {
       "last_fired": "2026-08-18T13:41:53Z"
-    }
+    },
+    "_confirm_NEOV_MTF_BULL": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -2209,7 +2210,8 @@
     "open_target": 2.7025,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2259,8 +2261,7 @@
     "open_target": 22.1605,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_BLZE_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "AXTI": {
     "AXTI_MTF_BULL": {
