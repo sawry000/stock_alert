@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T17:13:00Z",
-    "symbol": "RELL",
-    "alert_id": "RELL_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 20.735000610351562,
-    "change_pct": 3.737245398997213,
-    "value": 19.6983,
-    "entry_price": 18.760000228881836,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T17:13:01Z",
     "symbol": "RELL",
     "alert_id": "RELL_TAKE_PROFIT",
@@ -8413,6 +8399,23 @@
     "price": 8.755000114440918,
     "change_pct": 8.89303624926516,
     "value": 8.3173,
+    "entry_price": 8.005000114440918,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T18:25:55Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.850000381469727,
+    "change_pct": 10.074631610319994,
+    "value": 8.4075,
     "entry_price": 8.005000114440918,
     "pnl_pct": null,
     "days_held": null,
