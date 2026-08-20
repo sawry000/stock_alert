@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T16:25:42Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 356.489990234375,
-    "change_pct": 8.719118705207388,
-    "value": 338.6655,
-    "entry_price": 329.9700012207031,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-08-04T16:25:43Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 356.489990234375,
-    "change_pct": 8.719118705207388,
-    "value": 356.3676,
-    "entry_price": 329.9700012207031,
-    "pnl_pct": 8.0371,
-    "days_held": 4.11,
-    "entry_alert_type": "mtf_alignment"
-  },
-  {
     "timestamp": "2026-08-04T16:26:24Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_TRAIL_ADJUST",
@@ -8398,6 +8370,40 @@
     "entry_alert_type": "volume_spike",
     "conviction_score": 4,
     "conviction_total": 5,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T15:10:55Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.694999694824219,
+    "change_pct": 8.146762373435568,
+    "value": 8.2602,
+    "entry_price": 8.005000114440918,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T15:11:24Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.859999656677246,
+    "change_pct": 0.5561191315088656,
+    "value": 8.417,
+    "entry_price": 8.109999656677246,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
     "rr_ratio": null
   }
 ]
