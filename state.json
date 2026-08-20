@@ -558,7 +558,7 @@
     "last_buy_reminder_at": "2026-08-19T20:40:57Z",
     "open_entry": 31.09000015258789,
     "open_time": "2026-08-19T20:40:57Z",
-    "open_peak": 32.31399917602539,
+    "open_peak": 32.9099006652832,
     "open_stop": 27.981,
     "open_target": 35.7535,
     "open_conviction": 5,
@@ -611,7 +611,7 @@
     "last_buy_reminder_at": "2026-08-19T19:40:51Z",
     "open_entry": 8.005000114440918,
     "open_time": "2026-08-19T19:40:51Z",
-    "open_peak": 8.199899673461914,
+    "open_peak": 8.295000076293945,
     "open_stop": 7.2067,
     "open_target": 9.2025,
     "open_conviction": 4,
@@ -1448,18 +1448,9 @@
     },
     "last_buy_at": "2026-08-17T22:11:36Z",
     "LTRX_SL_BREAK": {
-      "last_fired": "2026-08-10T18:41:30Z"
+      "last_fired": "2026-08-20T13:56:22Z"
     },
-    "last_sell_at": "2026-08-10T18:41:30Z",
-    "last_buy_reminder_at": "2026-08-17T22:11:36Z",
-    "open_entry": 6.5,
-    "open_time": "2026-08-14T16:41:36Z",
-    "open_peak": 6.739999771118164,
-    "open_stop": 5.9562,
-    "open_target": 7.3157,
-    "open_conviction": 5,
-    "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "last_sell_at": "2026-08-20T13:56:22Z"
   },
   "FPS": {
     "FPS_POS_SIZE": {
@@ -1577,8 +1568,8 @@
     "last_buy_reminder_at": "2026-08-19T20:11:39Z",
     "open_entry": 8.109999656677246,
     "open_time": "2026-08-12T15:41:56Z",
-    "open_peak": 8.8100004196167,
-    "open_stop": 8.369500398635864,
+    "open_peak": 8.84000015258789,
+    "open_stop": 8.398000144958496,
     "open_target": 9.3265,
     "open_conviction": 4,
     "open_conviction_total": 5,
@@ -2164,7 +2155,8 @@
     "open_target": 2.7025,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2236,7 +2228,8 @@
     "FATN_SL_BREAK": {
       "last_fired": "2026-08-18T13:58:16Z"
     },
-    "last_sell_at": "2026-08-18T13:58:16Z"
+    "last_sell_at": "2026-08-18T13:58:16Z",
+    "_confirm_FATN_MTF_BULL": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2247,8 +2240,7 @@
       "last_fired": "2026-08-14T19:42:58Z"
     },
     "last_sell_at": "2026-08-19T14:12:00Z",
-    "_confirm_REAX_MA_GOLD": 1,
-    "_confirm_REAX_MTF_BULL": 1
+    "_confirm_REAX_MA_GOLD": 1
   },
   "CVV": {
     "CVV_MTF_BULL": {
