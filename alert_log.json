@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T15:56:00Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 133.1999969482422,
-    "change_pct": 17.67823743108242,
-    "value": 17.67823743108242,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-08-04T15:56:14Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 31.629499435424805,
-    "change_pct": 1.8663427871974365,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T15:56:42Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_TRAIL_ADJUST",
@@ -8366,5 +8338,39 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-20T06:26:33Z",
+    "symbol": "RFIL",
+    "alert_id": "RFIL_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 11.710000038146973,
+    "change_pct": -10.95057005211428,
+    "value": -10.95057005211428,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T06:27:09Z",
+    "symbol": "IQST",
+    "alert_id": "IQST_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1.0099999904632568,
+    "change_pct": -12.931035304891648,
+    "value": -12.931035304891648,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
