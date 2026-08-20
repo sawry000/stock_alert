@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T17:41:13Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 3.858599901199341,
-    "change_pct": 28.98545549722016,
-    "value": 3.6657,
-    "entry_price": 3.0299999713897705,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T17:41:22Z",
     "symbol": "WGS",
     "alert_id": "WGS_TRAIL_ADJUST",
@@ -8428,6 +8414,23 @@
     "entry_alert_type": "ma_crossover",
     "conviction_score": 4,
     "conviction_total": 4,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T18:56:03Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.994999885559082,
+    "change_pct": 11.87810802934183,
+    "value": 8.5452,
+    "entry_price": 8.005000114440918,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
     "rr_ratio": null
   }
 ]
