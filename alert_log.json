@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T16:12:02Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 5.619999885559082,
-    "change_pct": 6.0377336897940035,
-    "value": 5.339,
-    "entry_price": 5.170000076293945,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T16:12:03Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_TAKE_PROFIT",
@@ -8384,6 +8370,23 @@
     "change_pct": 0.32913576878777306,
     "value": 8.398,
     "entry_price": 8.109999656677246,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T14:11:20Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 10.305000305175781,
+    "change_pct": -5.458712796552469,
+    "value": 0,
+    "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
