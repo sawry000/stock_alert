@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T16:26:24Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 6.119999885559082,
-    "change_pct": 7.746476858434548,
-    "value": 5.814,
-    "entry_price": 5.320000171661377,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T16:56:05Z",
     "symbol": "PSIX",
     "alert_id": "PSIX_PCT_UP",
@@ -8398,6 +8384,23 @@
     "price": 8.859999656677246,
     "change_pct": 0.5561191315088656,
     "value": 8.417,
+    "entry_price": 8.109999656677246,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T15:26:51Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.920000076293945,
+    "change_pct": 7.729469520458284,
+    "value": 8.474,
     "entry_price": 8.109999656677246,
     "pnl_pct": null,
     "days_held": null,
