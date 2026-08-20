@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T18:27:39Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 17.290000915527344,
-    "change_pct": 3.0393379947994195,
-    "value": 16.4255,
-    "entry_price": 15.979999542236328,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T18:27:40Z",
     "symbol": "PESI",
     "alert_id": "PESI_TAKE_PROFIT",
@@ -8447,5 +8433,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T21:11:43Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 7.0,
+    "change_pct": -2.9126213592233006,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
