@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T18:26:49Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 5.191800117492676,
-    "change_pct": 25.10361728898013,
-    "value": 25.10361728898013,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-08-04T18:26:50Z",
-    "symbol": "BWEN",
-    "alert_id": "BWEN_SCORE_60",
-    "type": "alert_score",
-    "action": "BUY",
-    "price": 5.191800117492676,
-    "change_pct": 25.10361728898013,
-    "value": 60,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T18:27:39Z",
     "symbol": "PESI",
     "alert_id": "PESI_TRAIL_ADJUST",
@@ -8441,5 +8413,39 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-20T19:26:02Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 9.3149995803833,
+    "change_pct": 15.858203736110719,
+    "value": 8.8492,
+    "entry_price": 8.005000114440918,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T19:26:02Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_TAKE_PROFIT",
+    "type": "take_profit",
+    "action": "SELL",
+    "price": 9.3149995803833,
+    "change_pct": 15.858203736110719,
+    "value": 9.2025,
+    "entry_price": 8.005000114440918,
+    "pnl_pct": 16.3648,
+    "days_held": 0.99,
+    "entry_alert_type": "percent_change",
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": null
   }
 ]
