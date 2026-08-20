@@ -977,6 +977,15 @@ def conviction_gate(symbol, quote, alert_history_cache=None):
                        EMA800 เพราะ EMA800 ต้องการข้อมูลย้อนหลัง ~3.2 ปี ซึ่งหุ้น
                        GROWTH/เพิ่ง IPO ในระบบนี้จำนวนมากไม่มีประวัติยาวขนาดนั้น)
 
+    ก่อนถึง 5 มิติด้านบน มี HARD GATE แยกต่างหาก (ไม่ใช่ soft-scoring):
+      0. ADR Extreme Ceiling — ADR ต้องไม่เกิน MAX_ADR_PCT_HARD (veto เฉพาะ
+                       เคสสุดโต่งจริงๆ) — ADR ระดับปกติของหุ้น momentum/small-cap
+                       ในระบบนี้ (median ~8%, 92% ของ watchlist เกิน 6%) ไม่ควร
+                       ถูกกันไม่ให้ซื้อเลย ความเสี่ยงจาก ADR สูงจัดการด้วยการ
+                       "ลดขนาด position" แทน (ดู calc_position_size()) ไม่ใช่ห้าม
+                       เข้าไม้ตั้งแต่ต้น — เดิมเคย hard-block ที่ 6% แล้วพบว่ากัน
+                       หุ้นเกือบทั้ง watchlist ออกไปโดยไม่ตั้งใจ
+
     Threshold ปรับตามจำนวนมิติที่เช็กได้จริงในรอบนั้น (4 หรือ 5) — ต้องผ่าน
     อย่างน้อย "ทั้งหมด - 1" มิติเสมอ (3/4 เดิม หรือ 4/5 ถ้ามี EMA200 ด้วย)
     """
@@ -996,6 +1005,17 @@ def conviction_gate(symbol, quote, alert_history_cache=None):
 
     detail = {}
     score  = 0
+
+    # ── HARD GATE: ADR สุดโต่งจริงๆ เท่านั้นที่ veto (>MAX_ADR_PCT_HARD) —
+    # ระดับ "สูงกว่าปกติ" (6-20%) ปล่อยผ่านตามปกติ แล้วไปลดขนาด position แทน
+    # ที่ calc_position_size() ดู comment เต็มที่ MAX_ADR_PCT_HARD ด้านบนไฟล์
+    adr_pct_now = _calc_adr(highs, lows, 20)
+    if adr_pct_now > MAX_ADR_PCT_HARD:
+        detail["adr_gate"] = {"pass": False, "adr_pct": round(adr_pct_now, 2), "max_allowed": MAX_ADR_PCT_HARD}
+        detail["total_dims"] = 4
+        detail["veto_reason"] = f"ADR {adr_pct_now:.1f}% เกิน {MAX_ADR_PCT_HARD}% (สุดโต่งเกินจะรับความเสี่ยงได้แม้ลด size แล้ว)"
+        return False, 0, detail
+    detail["adr_gate"] = {"pass": True, "adr_pct": round(adr_pct_now, 2), "max_allowed": MAX_ADR_PCT_HARD}
 
     # ── 1. Trend: ราคา > EMA21 ────────────────────────────────────
     ema21_list = _calc_ema(closes, 21)
@@ -1082,6 +1102,50 @@ def conviction_gate(symbol, quote, alert_history_cache=None):
 ATR_STOP_MULTIPLIER = 1.5
 ATR_STOP_CAP_PCT     = 10.0
 MIN_RR_RATIO         = 1.5
+# วิเคราะห์เทรดที่ปิดหลัง deploy R:R fix (19 ส.ค. 69) พบว่าเทรดที่แพ้หนักสุด
+# ทั้งหมด (BLLN -34%, VPG -31%, IOVA -29%, BLZE -23%) ล้วนเป็นหุ้นที่ ADR
+# (ค่าเฉลี่ยการแกว่งตัวรายวัน) สูง 6.5-9.75% อยู่แล้วเป็นปกติ — เมื่อ ADR
+# ปกติสูงใกล้เคียงหรือเกิน stop cap (10%) วันแย่วันเดียว/ช่องว่างราคาข้าม
+# คืน (gap) ก็ทะลุ stop ไปได้ไกลกว่าที่ตั้งใจมาก เพราะระบบนี้ยิงแจ้งเตือนให้
+# คนกดขายเอง ไม่ใช่ auto-trade ทันที (มี delay จากรอบเช็ค ~15 นาที + เวลาที่
+# คนเห็นข้อความแล้วไปกดขายจริง) จึงกันได้แค่ "ไม่เข้าไม้ตั้งแต่ต้น" กับหุ้น
+# ที่แกว่งแรงขนาดนี้ ไม่ใช่ไปไล่ตัดที่ stop-loss เพราะ stop-loss เจอราคาที่
+# ทะลุไปแล้วเท่านั้น ตัดไม่ทันจริงๆ
+#
+# ── รอบแรกเคยตั้ง hard gate ที่ 6% แล้วพบว่าพลาด: 92% ของ watchlist จริง
+# (median ADR 8.21%) มี ADR เกิน 6% เป็นปกติ เพราะระบบนี้ตั้งใจคัดหุ้น
+# momentum/small-cap ซึ่งแกว่งแรงเป็นธรรมชาติของมันอยู่แล้ว hard gate ที่ 6%
+# เท่ากับปิดโอกาสซื้อเกือบทั้งหมด ไม่ใช่ทางแก้ที่ถูกต้อง ──
+#
+# ── รอบสอง: เปลี่ยนจาก hard gate เป็น position-size scaling แต่ตั้ง
+# ADR_SIZE_REF_PCT ไว้ที่ 6.0 เหมือนเดิม ก็ยังพลาดอยู่ดี — daily_screener.py
+# เองมี min_adr_pct=8.0 เป็น "เกณฑ์ขั้นต่ำที่จะเข้า watchlist ได้เลย" (ตั้งใจ
+# คัดหุ้นแกว่งแรงตั้งแต่ต้นทาง) ตั้ง reference ไว้ต่ำกว่าเกณฑ์เข้า watchdog
+# เอง แปลว่าแทบทุกตัวที่เข้ามาได้จะโดนลด size ตั้งแต่วันแรก เช็คจริงมีแค่
+# 6/77 ตัว (8%) เท่านั้นที่ได้ budget เต็ม — ไม่ตรงเจตนา
+#
+# นอกจากนี้ยังพบว่า ADR ของหุ้นที่พังหนักสุด 4 ตัว (BLLN 6.56%, VPG 8.49%,
+# IOVA 8.02%, BLZE 9.75%) อยู่ใกล้ค่ากลาง (median 8.21%) ของทั้ง watchlist
+# พอดี ไม่ใช่ตัวที่ ADR ผิดปกติ/สุดโต่งเลย — แปลว่า ADR อย่างเดียวแยกไม่ออก
+# จริงๆ ว่าตัวไหนจะ "ปลอดภัย" ตัวไหนจะ "ระเบิด" ในหมู่หุ้นกลุ่มนี้ (ทุกตัว
+# แกว่งแรงพอๆ กันหมดโดยธรรมชาติของกลยุทธ์) ไม่มี threshold ไหนที่ทั้งกัน
+# เคสแบบนี้ได้ครบ "และ" ปล่อยให้ตัวส่วนใหญ่ได้ไม้เต็มไปพร้อมกัน — เลือกทาง
+# ตั้ง reference ให้สอดคล้องกับปรัชญาการคัดหุ้นของ screener เอง (ส่วนใหญ่
+# ได้ไม้เต็ม เน้นกันเฉพาะ tail ที่ ADR สูงกว่าปกติของ universe นี้จริงๆ)
+# มากกว่าจะพยายามกันเคสเฉพาะจุดที่ ADR แยกไม่ออกอยู่ดี
+#
+# แนวทางสุดท้าย: แยกเป็น 2 ชั้น
+#   1) MAX_ADR_PCT_HARD — veto เฉพาะเคสสุดโต่งจริงๆ (>p99 ของ universe จริง
+#      ซึ่งมักเป็น data error/penny stock ผิดปกติ ไม่ใช่ momentum play จริง)
+#   2) ADR_SIZE_REF_PCT — ตั้งไว้เหนือ min_adr_pct ของ screener (8.0) พอ
+#      สมควร (~83% ของ watchlist ปัจจุบันได้ไม้เต็ม, เหลือ tail ที่แกว่ง
+#      แรงกว่าชาวบ้านจริงๆ ~17% ที่โดนลด) ต่ำกว่านี้ไม่ลด size สูงกว่านี้ลด
+#      ตามสัดส่วน (ดู calc_position_size()) — ยอมรับว่าจะไม่ช่วยกันเคสแบบ
+#      BLLN/VPG/IOVA/BLZE เพิ่มเติม (อยู่ในช่วง "ปกติ" ของ universe นี้พอดี)
+#      เพราะ R:R gate + hard stop cap ที่ทำไปรอบก่อนคือด่านหลักที่ดูแลเคส
+#      แบบนั้นอยู่แล้ว ส่วนนี้เก็บไว้กันเฉพาะ tail ที่สุดโต่งจริงๆ เท่านั้น
+MAX_ADR_PCT_HARD      = 25.0
+ADR_SIZE_REF_PCT      = 11.0
 # win rate เฉลี่ยจริงจาก trade log ยุคหลังแก้บั๊ก stop-loss (35.3%) — ใช้เป็น
 # ค่า default สำหรับ Kelly แทนการเดา 50/50 (มองโลกในแง่ร้ายกว่าจะปลอดภัยกว่า
 # ถ้าจะพลาดควรพลาดไปทาง "แนะนำ size เล็กเกินไป" ไม่ใช่ "ใหญ่เกินไป")
@@ -1097,8 +1161,15 @@ def calc_position_size(pos_cfg, symbol, entry_price=None):
     และพอร์ต Kelly criterion + คำเตือน R:R มาจาก module_position.py (เดิมมีโค้ด
     ชุดนี้อยู่แล้วแต่ไม่เคยถูกเรียกใช้จริงจากที่นี่ — ทำให้มี R:R warning สอง
     มาตรฐานคนละที่ ตอนนี้รวมเป็นจุดเดียว)
+
+    อัปเดต 2: ลด budget ($) ตามสัดส่วน ADR แทนการห้ามซื้อหุ้น ADR สูงไปเลย
+    (ดู comment เต็มที่ ADR_SIZE_REF_PCT ด้านบนไฟล์ — hard gate ที่เคยลองทำ
+    บล็อค 92% ของ watchlist โดยไม่ตั้งใจ เพราะ ADR สูงเป็นเรื่องปกติของหุ้น
+    momentum ในระบบนี้) หุ้น ADR สูงยังซื้อได้เต็มที่ตามสัญญาณเดิม แค่ขนาด
+    ไม้เล็กลงตามความเสี่ยง — ถ้า gap ทะลุ stop จริง ความเสียหายเป็น $ จะเล็ก
+    ลงตามสัดส่วนไปด้วย ไม่ใช่เสียเต็ม $100 เหมือนหุ้นเสี่ยงต่ำ
     """
-    account    = pos_cfg.get("account_size", 100)   # ← default $100
+    account_base = pos_cfg.get("account_size", 100)   # ← default $100 (ก่อนปรับตาม ADR)
     risk_pct   = pos_cfg.get("risk_pct",    2.0)
     stop_pct   = pos_cfg.get("stop_pct",    None)
     target_pct = pos_cfg.get("target_pct",  None)
@@ -1111,6 +1182,8 @@ def calc_position_size(pos_cfg, symbol, entry_price=None):
         return None
 
     atr_val = None
+    adr_pct_val = None
+    size_factor = 1.0
     if stop_pct is None:
         hist = fetch_history(symbol, period="90d", interval="1d")
         if hist is not None and len(hist) >= 16:
@@ -1123,19 +1196,27 @@ def calc_position_size(pos_cfg, symbol, entry_price=None):
                 stop_pct     = min(raw_stop_pct, ATR_STOP_CAP_PCT)
             else:
                 stop_pct = 5.0
+            # ── ลด budget ตามสัดส่วน ADR (ใช้ highs/lows ชุดเดียวกับ ATR ไม่
+            # ต้องยิง fetch_history ซ้ำ) — ADR <= ADR_SIZE_REF_PCT ไม่ลดเลย
+            # (factor=1.0) ADR ยิ่งสูงกว่านั้น factor ยิ่งเล็กลงเป็นสัดส่วนผกผัน
+            adr_pct_val = _calc_adr(highs, lows, 20)
+            if adr_pct_val and adr_pct_val > ADR_SIZE_REF_PCT:
+                size_factor = max(0.15, ADR_SIZE_REF_PCT / adr_pct_val)  # ไม่ให้เล็กจนต่ำกว่า 15% ของ budget เดิม
         else:
             stop_pct = 5.0
+
+    account = round(account_base * size_factor, 2)
 
     stop_price  = entry_price * (1 - stop_pct / 100)
     risk_per_sh = entry_price - stop_price
 
-    # คำนวณจำนวนหุ้นจาก budget $100
+    # คำนวณจำนวนหุ้นจาก budget ที่ปรับตาม ADR แล้ว
     shares_frac = account / entry_price
     shares_int  = math.floor(shares_frac)
-    is_frac     = shares_int == 0   # ราคาสูงกว่า $100 → ต้อง fractional
+    is_frac     = shares_int == 0   # ราคาสูงกว่า budget → ต้อง fractional
     disp_shares = round(shares_frac, 6) if is_frac else shares_int
     pos_value   = round(disp_shares * entry_price, 2)
-    pos_pct     = round(pos_value / account * 100, 1) if account > 0 else 0
+    pos_pct     = round(pos_value / account_base * 100, 1) if account_base > 0 else 0
     actual_risk = round(disp_shares * risk_per_sh, 2)
     risk_amount = round(account * risk_pct / 100, 2)
 
@@ -1154,6 +1235,9 @@ def calc_position_size(pos_cfg, symbol, entry_price=None):
         "risk_per_sh":   round(risk_per_sh, 4),
         "risk_pct":      risk_pct,
         "account":       account,
+        "account_base":  account_base,
+        "adr_pct":       round(adr_pct_val, 2) if adr_pct_val is not None else None,
+        "size_factor":   round(size_factor, 3),
         "atr":           round(atr_val, 4) if atr_val else None,
     }
 
@@ -1241,14 +1325,19 @@ def _pos_block(pos):
         return []
     is_frac  = pos.get("is_fractional", False)
     sh_str   = f"{pos['shares']:.6f} หุ้น (fractional)" if is_frac else f"{int(pos['shares']):,} หุ้น"
+    budget_line = f"📦 Position (งบ ${pos['account']:.0f}):"
+    if pos.get("size_factor", 1.0) < 0.999:
+        budget_line = f"📦 Position (งบ ${pos['account']:.0f} — ลดจาก ${pos['account_base']:.0f} เพราะ ADR สูง):"
     lines    = [
         "",
         "━━━━━━━━━━━━━━━━━━━━━━━━━",
-        f"📦 Position (งบ ${pos['account']:.0f}):",
+        budget_line,
         f"  • ซื้อ: <b>{sh_str}</b>",
         f"  • ใช้เงิน: <b>${pos['pos_value']:,.2f}</b>",
         f"  🛑 Stop: <b>${pos['stop']:.4f}</b>  (-{pos['stop_pct']:.1f}%)",
     ]
+    if pos.get("adr_pct") is not None and pos.get("size_factor", 1.0) < 0.999:
+        lines.append(f"  ⚡ ADR {pos['adr_pct']:.1f}% (แกว่งแรงกว่าปกติ) → ลด size เหลือ {pos['size_factor']*100:.0f}% ของ budget เต็ม")
     if pos.get("atr"):
         lines.append(f"  • ATR(14): ${pos['atr']:.4f}")
     if pos.get("target"):
@@ -1874,6 +1963,11 @@ def main():
                     if tp_success:
                         fired_count += 1
                         entry_type_val = sym_state.get("open_alert_type")
+                        # ดึง conviction/R:R ที่บันทึกไว้ตอน BUY กลับมาใส่ log ก่อน
+                        # state ถูกเคลียร์ด้านล่าง (แก้บั๊กเดียวกับจุด SELL หลัก)
+                        conv_score_val = sym_state.get("open_conviction")
+                        conv_total_val = sym_state.get("open_conviction_total")
+                        rr_ratio_val   = sym_state.get("open_rr_ratio")
                         sym_state["last_sell_at"] = now_str()
                         log.append({
                             "timestamp": now_str(), "symbol": symbol,
@@ -1883,10 +1977,11 @@ def main():
                             "entry_price": entry, "pnl_pct": round(tp_pnl_pct, 4),
                             "days_held": round(days_held, 2) if days_held is not None else None,
                             "entry_alert_type": entry_type_val,
-                            "conviction_score": None, "conviction_total": None, "rr_ratio": None,
+                            "conviction_score": conv_score_val, "conviction_total": conv_total_val,
+                            "rr_ratio": rr_ratio_val,
                         })
                         for _k in ("open_entry", "open_time", "open_peak", "open_stop",
-                                   "open_target", "open_conviction", "open_conviction_total",
+                                   "open_target", "open_conviction", "open_conviction_total", "open_rr_ratio",
                                    "open_alert_type", "open_stop_is_trailing",
                                    "open_trailing_last_notified_stop", "last_buy_reminder_at"):
                             sym_state.pop(_k, None)
@@ -1928,6 +2023,9 @@ def main():
                         if st_success:
                             fired_count += 1
                             entry_type_val = sym_state.get("open_alert_type")
+                            conv_score_val = sym_state.get("open_conviction")
+                            conv_total_val = sym_state.get("open_conviction_total")
+                            rr_ratio_val   = sym_state.get("open_rr_ratio")
                             sym_state["last_sell_at"] = now_str()
                             log.append({
                                 "timestamp": now_str(), "symbol": symbol,
@@ -1937,10 +2035,11 @@ def main():
                                 "entry_price": entry, "pnl_pct": round(stagnant_pnl, 4),
                                 "days_held": round(days_open, 2),
                                 "entry_alert_type": entry_type_val,
-                                "conviction_score": None, "conviction_total": None, "rr_ratio": None,
+                                "conviction_score": conv_score_val, "conviction_total": conv_total_val,
+                                "rr_ratio": rr_ratio_val,
                             })
                             for _k in ("open_entry", "open_time", "open_peak", "open_stop",
-                                       "open_target", "open_conviction", "open_conviction_total",
+                                       "open_target", "open_conviction", "open_conviction_total", "open_rr_ratio",
                                        "open_alert_type", "open_stop_is_trailing",
                                        "open_trailing_last_notified_stop", "last_buy_reminder_at"):
                                 sym_state.pop(_k, None)
@@ -2247,6 +2346,9 @@ def main():
                 closed_pnl_pct     = None
                 closed_days_held   = None
                 closed_entry_type  = None
+                closed_conv_score  = None
+                closed_conv_total  = None
+                closed_rr_ratio    = None
                 if action == "SELL":
                     prior_state = state.get(symbol, {})
                     entry_price = prior_state.get("open_entry")
@@ -2269,6 +2371,12 @@ def main():
                         closed_pnl_pct     = round(pnl_pct, 4)
                         closed_days_held   = round(days_held, 2) if days_held is not None else None
                         closed_entry_type  = prior_state.get("open_alert_type")
+                        # ดึง conviction score/R:R ที่บันทึกไว้ตอน BUY กลับมาใส่
+                        # log ตอนปิดด้วย (แก้บั๊ก: เดิม field พวกนี้มีแค่ฝั่ง BUY
+                        # log entry เท่านั้น ฝั่ง SELL ไม่เคยมีข้อมูลเลย)
+                        closed_conv_score  = prior_state.get("open_conviction")
+                        closed_conv_total  = prior_state.get("open_conviction_total")
+                        closed_rr_ratio    = prior_state.get("open_rr_ratio")
 
                 print(f"  [{alert_id}] ✅ TRIGGERED! ส่ง Telegram...")
                 success = send_telegram(token, chat_id, msg)
@@ -2303,6 +2411,12 @@ def main():
                             state[symbol]["open_target"]           = pos.get("target") if pos else None
                             state[symbol]["open_conviction"]       = conv_score
                             state[symbol]["open_conviction_total"] = total_dims
+                            # เก็บ R:R ตอนเข้าไว้ด้วย (เหมือน open_conviction) เพื่อ
+                            # ดึงกลับมาใส่ log ตอนปิด position จริง — เดิมมีบั๊ก:
+                            # SELL log entry ไม่เคยมี conviction_score/rr_ratio เลย
+                            # (field มีในสคีมาแต่ไม่เคยถูกเติมค่าให้ฝั่ง SELL) ทำให้
+                            # ฟีเจอร์ "breakdown ตาม conviction" ในแดชบอร์ดไม่มีข้อมูล
+                            state[symbol]["open_rr_ratio"]         = pos.get("rr_ratio") if pos else None
                             state[symbol]["open_alert_type"]       = atype
                         else:
                             print(f"  [{alert_id}] ℹ️ มี position เปิดอยู่แล้ว "
@@ -2312,7 +2426,7 @@ def main():
                         state[symbol]["last_sell_at"] = now_str()
                         # ── ปิด position: เคลียร์ open_* ทั้งหมดไม่ให้ P&L ค้าง ──
                         for _k in ("open_entry", "open_time", "open_peak", "open_stop",
-                                   "open_target", "open_conviction", "open_conviction_total",
+                                   "open_target", "open_conviction", "open_conviction_total", "open_rr_ratio",
                                    "open_alert_type", "open_stop_is_trailing",
                                    "open_trailing_last_notified_stop", "last_buy_reminder_at"):
                             state[symbol].pop(_k, None)
@@ -2333,10 +2447,14 @@ def main():
                         "pnl_pct":          closed_pnl_pct,
                         "days_held":        closed_days_held,
                         "entry_alert_type": closed_entry_type,
-                        # ── ข้อมูลคุณภาพสัญญาณ (เฉพาะ BUY) ──────────────────
-                        "conviction_score": buy_conv_score,
-                        "conviction_total": buy_conv_total,
-                        "rr_ratio":         buy_rr_ratio,
+                        # ── ข้อมูลคุณภาพสัญญาณตอนเข้า — โผล่ได้ทั้ง BUY (จาก
+                        # buy_conv_score ที่เพิ่งผ่าน gate รอบนี้) และ SELL (จาก
+                        # closed_conv_score ที่ดึงย้อนมาจาก state ตอน BUY เดิม)
+                        # แก้บั๊ก: เดิม SELL ได้ None เสมอเพราะใช้ buy_conv_score
+                        # ตัวเดียวซึ่งมีค่าเฉพาะตอน action=="BUY" ในรอบเดียวกันเท่านั้น
+                        "conviction_score": buy_conv_score if action == "BUY" else closed_conv_score,
+                        "conviction_total": buy_conv_total if action == "BUY" else closed_conv_total,
+                        "rr_ratio":         buy_rr_ratio if action == "BUY" else closed_rr_ratio,
                     })
                     fired_count += 1
                     print(f"  [{alert_id}] ✅ ส่งสำเร็จ")

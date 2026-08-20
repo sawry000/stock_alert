@@ -76,6 +76,15 @@ PATCH_PATH        = BASE_DIR / "universe_live_patch.json"
 WATCHLIST_PATH    = BASE_DIR / "watchlist.json"
 SCREENER_LOG_PATH = BASE_DIR / "screener_log.json"
 SCREENER_STATE    = BASE_DIR / "screener_state.json"
+# แก้บั๊ก: หุ้นที่มี position เปิดอยู่จริง (ซื้อไปแล้ว รอ stop-loss/take-profit)
+# เคยโดน competitive replacement เขี่ยออกจาก watchlist ได้ทั้งที่ยังถือของอยู่
+# — พอออกจาก watchlist แล้ว ไม่มีอะไร sync ราคา/เช็ค stop ให้อีกเลย (state.json
+# ยัง track position ค้างไว้ แต่ universe.json/watchlist.json ไม่รู้จักหุ้นนี้
+# แล้ว) กลายเป็น "ตำแหน่งกำพร้า" ไม่มีใครดูแล จนกว่าจะมีคนสังเกตเห็นเอง (เจอ
+# กรณีจริงกับ GLD — เปิด position ไว้แต่ universe.json ไม่มี last_price เลย)
+# แก้โดยโหลด state.json มาเช็คก่อนว่าตัวที่จะถูกแทนที่มี position เปิดอยู่มั้ย
+# ถ้ามี ห้ามเลือกเป็นตัวที่ถูกแทนที่เด็ดขาด ไม่ว่าคะแนนจะต่ำแค่ไหนก็ตาม
+STATE_PATH        = BASE_DIR / "state.json"
 
 # ─── Config defaults (override via universe.json settings) ───────────────────
 DEFAULT_CFG = {
@@ -715,16 +724,22 @@ def build_scored_watchlist(watchlist, cfg):
     return scored
 
 
-def find_replacement_candidate(watchlist, scored_watchlist, new_score, cfg):
+def find_replacement_candidate(watchlist, scored_watchlist, new_score, cfg, position_state=None):
     """
     หาตัวที่อ่อนแอที่สุดใน watchlist ที่ "มีสิทธิ์" ถูกแทนที่ (ผ่าน minimum
-    holding period แล้ว) และผู้ท้าชิงต้องคะแนนสูงกว่าตามอย่างน้อย margin
+    holding period แล้ว "และ" ไม่มี position เปิดอยู่จริง) และผู้ท้าชิงต้อง
+    คะแนนสูงกว่าตามอย่างน้อย margin
+
+    position_state: state.json ทั้งก้อน (หรือ None ถ้าโหลดไม่ได้ — fallback
+    เป็น "ไม่เช็ค" เพื่อไม่ให้ screener ทั้ง run ล้มเพราะ state.json อ่านไม่ได้
+    แต่ในกรณีนั้นควร log เตือนไว้ที่ตัวเรียกด้วย)
 
     Returns: (weakest_entry: dict | None, weakest_score: float | None)
     """
     margin   = cfg.get("replace_score_margin", DEFAULT_CFG["replace_score_margin"])
     min_days = cfg.get("min_holding_days", DEFAULT_CFG["min_holding_days"])
     now = datetime.now(timezone.utc)
+    position_state = position_state or {}
 
     eligible = []
     for s in watchlist:
@@ -738,6 +753,11 @@ def find_replacement_candidate(watchlist, scored_watchlist, new_score, cfg):
             continue
         holding_days = (now - added_at).total_seconds() / 86400.0
         if holding_days < min_days:
+            continue
+        # ห้ามแทนที่หุ้นที่มี position เปิดอยู่จริง เด็ดขาด — ไม่ว่า Quality
+        # Score จะต่ำแค่ไหนก็ตาม กันไม่ให้ position กลายเป็น "กำพร้า" ไม่มี
+        # ใคร sync ราคา/เช็ค stop-loss ให้อีกเลยหลังออกจาก watchlist
+        if position_state.get(sym, {}).get("open_entry") is not None:
             continue
         score = scored_watchlist.get(sym)
         if score is None:
@@ -758,25 +778,41 @@ def find_replacement_candidate(watchlist, scored_watchlist, new_score, cfg):
 #  REMOVAL CHECK — ตรวจหุ้นใน watchlist ว่าต้องออกหรือไม่
 # ══════════════════════════════════════════════════════════════════════════════
 
-def check_removal(ticker, data, halal, scr_state, cfg):
+def check_removal(ticker, data, halal, scr_state, cfg, position_state=None):
     """
     ตรวจสอบว่าหุ้นที่อยู่ใน watchlist ควรถูกปลดออกหรือไม่
     ต้องรอหลักฐานชัดเจนหลายวันก่อนตัดสินใจ
 
+    position_state: state.json ทั้งก้อน — ใช้เช็คว่า ticker นี้มี position
+    เปิดอยู่จริงมั้ย (ดูรายละเอียดที่ comment เหนือ STATE_PATH ด้านบนไฟล์)
+
     Returns: (should_remove: bool, reason: str)
     """
+    position_state = position_state or {}
+    has_open_position = position_state.get(ticker, {}).get("open_entry") is not None
+
     # ── ตรวจ 1: Halal status เปลี่ยน → ออกทันที ───────────────────────
+    # (compliance-critical — ออกทันทีแม้มี position เปิดอยู่ เพราะเป้าหมาย
+    # หลักของระบบคือ halal compliance ไม่ใช่ผลตอบแทน ถ้าหุ้นกลายเป็น haram
+    # ต้อง flag ทันที แต่ตัวเรียก (main loop) ต้องเตือนผู้ใช้ดังๆ ว่า position
+    # จะกลายเป็น orphaned ให้ไปปิดเองด้วย — ดู comment ตรงจุดส่ง Telegram)
     halal_status = halal.get("status", "UNKNOWN")
     if halal_status == "NOT_HALAL":
         return True, "❌ HALAL status เปลี่ยนเป็น NOT HALAL"
 
-    # ── ตรวจ 2: Purify% เกิน threshold → ออกทันที ────────────────────
+    # ── ตรวจ 2: Purify% เกิน threshold → ออกทันที (compliance-critical เช่นกัน) ──
     purify      = halal.get("purify_pct")
     remove_pur  = cfg.get("remove_purify_pct", DEFAULT_CFG["remove_purify_pct"])
     if purify is not None and purify > remove_pur:
         return True, f"⚠️ Purify% = {purify:.1f}% เกิน {remove_pur}%"
 
     # ── ตรวจ 3: ADR ลดลง ≥ N วันติด ──────────────────────────────────
+    # ไม่ใช่เกณฑ์ compliance แค่เกณฑ์คุณภาพเทคนิคัล — ถ้ามี position เปิดอยู่
+    # ห้ามเขี่ยออกจาก watchlist เด็ดขาด (กัน position กลายเป็น "กำพร้า" ไม่มี
+    # ใคร sync ราคา/เช็ค stop-loss ให้อีกเลย เจอเคสจริงมาแล้วกับ GLD)
+    if has_open_position:
+        return False, ""
+
     remove_adr  = cfg.get("remove_adr_below", DEFAULT_CFG["remove_adr_below"])
     remove_days = int(cfg.get("remove_adr_days", DEFAULT_CFG["remove_adr_days"]))
     sym_state   = scr_state.get(ticker, {})
@@ -1130,6 +1166,15 @@ def main():
     cfg           = {**DEFAULT_CFG, **universe_data.get("settings", {})}
     universe      = universe_data.get("universe", [])
 
+    # ── โหลด state.json (อ่านอย่างเดียว — ไม่เขียนกลับ ไฟล์นี้เป็นของ
+    # alert_engine.py) แค่เอามาเช็คว่า symbol ไหนมี position เปิดอยู่จริง
+    # เพื่อกันไม่ให้ competitive replacement เขี่ยหุ้นที่ถือของอยู่ออกจาก
+    # watchlist (ดู comment เต็มที่ find_replacement_candidate())
+    position_state = load_json(STATE_PATH, {})
+    if not isinstance(position_state, dict):
+        log_print("⚠️ state.json อ่านไม่ได้ — ถือว่าไม่มี symbol ไหนมี position เปิดอยู่ (เหมือนพฤติกรรมเดิมก่อนแก้บั๊กนี้ ไม่ได้แย่ไปกว่าเดิม แค่ยังไม่ได้การป้องกันเพิ่ม)")
+        position_state = {}
+
     # ── Structural fix: merge universe_live_patch.json เข้า universe_data ──
     # ก่อนเริ่ม scan ทุกครั้ง — patch data มาจาก alert_engine.py ที่รันถี่กว่า
     # (ทุก ~5 นาที) จึงมักสดกว่าค่าที่ screener คำนวณเองครั้งล่าสุด ถ้า symbol
@@ -1211,17 +1256,34 @@ def main():
             time.sleep(0.5)
             next_earnings = fetch_next_earnings_date(sym)
 
-        should_remove, rm_reason = check_removal(sym, data_now, halal_now, scr_state, cfg)
+        should_remove, rm_reason = check_removal(sym, data_now, halal_now, scr_state, cfg, position_state)
 
         if should_remove:
             log_print(f"  🔴 REMOVE: {rm_reason}")
             removed_syms.append({"symbol": sym, "reason": rm_reason, "at": now_str()})
 
+            # ── เตือนดังๆ ถ้ายังมี position เปิดอยู่ตอนถูกปลด (มีแค่กรณี
+            # compliance เท่านั้นที่ถึงจุดนี้ได้ทั้งที่ position เปิดอยู่ —
+            # เกณฑ์คุณภาพอื่นๆ ถูกกันไว้แล้วที่ check_removal()) — หลังปลด
+            # ออกจาก watchlist ระบบจะไม่ sync ราคา/เช็ค stop-loss ให้ symbol
+            # นี้อีกเลย ต้องให้ผู้ใช้ไปปิด position เองที่โบรกเกอร์ + กด
+            # "รีเซ็ต" ในหน้า State/Cooldown ของแดชบอร์ด
+            has_open_position = position_state.get(sym, {}).get("open_entry") is not None
+            position_warning = (
+                f"\n\n🚨 <b>คำเตือน: position นี้ยังเปิดอยู่!</b>\n"
+                f"เข้าซื้อไว้ที่ ${position_state[sym]['open_entry']:.4f}\n"
+                f"ตั้งแต่นี้ระบบจะไม่ sync ราคา/เช็ค stop-loss ให้อีกแล้ว "
+                f"(หุ้นออกจาก watchlist) กรุณาปิด position ในโบรกเกอร์เอง "
+                f"แล้วกด \"รีเซ็ต\" ที่หน้า State/Cooldown ในแดชบอร์ด"
+                if has_open_position else ""
+            )
+
             # ส่ง Telegram แจ้งเตือน
             msg = (
                 f"🔴 <b>ปลดออกจาก Watchlist: {sym}</b>\n"
                 f"เหตุผล: {rm_reason}\n"
-                f"→ กลับไปรอคิวใน Universe\n"
+                f"→ กลับไปรอคิวใน Universe"
+                f"{position_warning}\n"
                 f"🕐 {now_bkk_str()}"
             )
             send_telegram(token, chat_id, msg)
@@ -1460,7 +1522,7 @@ def main():
                     cfg=cfg,
                 )
                 weakest, weakest_score = find_replacement_candidate(
-                    watchlist, scored_watchlist, new_score, cfg
+                    watchlist, scored_watchlist, new_score, cfg, position_state
                 )
                 if weakest is not None:
                     old_sym = weakest["symbol"]
