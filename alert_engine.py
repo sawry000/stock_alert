@@ -270,6 +270,43 @@ def _calc_adr(highs, lows, n=20):
     return sum(ranges) / len(ranges) if ranges else 0.0
 
 
+def _calc_gap_stats(opens, closes, n=60):
+    """วัดความเสี่ยง "gap ข้ามคืน" ของหุ้นย้อนหลัง n วัน — ต่างจาก ADR ตรงที่
+    ADR วัดการแกว่งตัว "ระหว่างวัน" (High-Low) แต่เคสที่พังหนักสุด (BLLN
+    -34%, VPG -31%, IOVA -29%, BLZE -23%) ถือแค่ 0.03-0.99 วันก่อนโดน stop
+    — สั้นขนาดนี้บ่งชี้ว่าเป็น "กระโดดข้ามคืน" (ราคาเปิดเช้าต่างจากราคาปิด
+    เมื่อวานมาก) ไม่ใช่แค่แกว่งในวันเดียวกัน แต่ ADR วัดไม่ตรงกับกลไกนี้เลย
+    วัด gap ตรงๆ แม่นกว่า: gap% = (Open วันนี้ - Close เมื่อวาน) / Close
+    เมื่อวาน * 100 (ใช้ค่า absolute เพราะสนใจแค่ขนาดของการกระโดด ไม่สนทิศทาง)
+
+    คืนค่า (max_gap_pct, p90_gap_pct):
+      - max_gap_pct: gap ที่รุนแรงที่สุดที่เคยเกิดในช่วงย้อนหลัง — สะท้อน
+        "worst case ที่เคยเกิดจริงกับหุ้นตัวนี้" (เช่น หุ้น biotech ที่เคย
+        กระโดดแรงจากข่าว FDA ก็มีโอกาสเกิดซ้ำได้อีกในธรรมชาติของมัน)
+      - p90_gap_pct: 90th percentile — ตัวแทน "วันแย่ทั่วไป" ที่ไม่ใช่แค่
+        outlier ครั้งเดียว ทนทานกว่า max เวลาหุ้นมี 1 เหตุการณ์ผิดปกติจริงๆ
+        ที่ไม่น่าเกิดซ้ำ (เช่น stock split ที่คำนวณ gap ผิดเพี้ยน)
+    """
+    if len(opens) < 2 or len(closes) < 2:
+        return 0.0, 0.0
+    m = min(len(opens), len(closes))
+    opens_a  = opens[-m:]
+    closes_a = closes[-m:]
+    lookback = min(n, m - 1)
+    gaps = []
+    for i in range(m - lookback, m):
+        cp = closes_a[i - 1]   # ราคาปิดของ "วันก่อนหน้า" เทียบกับ opens_a[i]
+        if cp and cp > 0:
+            gaps.append(abs(opens_a[i] - cp) / cp * 100)
+    if not gaps:
+        return 0.0, 0.0
+    gaps.sort()
+    max_gap = gaps[-1]
+    p90_idx = max(0, int(len(gaps) * 0.9) - 1)
+    p90_gap = gaps[p90_idx]
+    return round(max_gap, 2), round(p90_gap, 2)
+
+
 def _clean_num(v):
     """กัน NaN/Infinity หลุดเข้า JSON — json.dump ปกติจะ dump เป็น literal
     `NaN` ซึ่งไม่ใช่ JSON มาตรฐาน ทำให้ JSON.parse() ฝั่ง browser (dashboard)
@@ -1146,6 +1183,18 @@ MIN_RR_RATIO         = 1.5
 #      แบบนั้นอยู่แล้ว ส่วนนี้เก็บไว้กันเฉพาะ tail ที่สุดโต่งจริงๆ เท่านั้น
 MAX_ADR_PCT_HARD      = 25.0
 ADR_SIZE_REF_PCT      = 11.0
+#
+# ── รอบสาม: ADR (ไม่ว่าตั้ง threshold เท่าไหร่) วัด "การแกว่งตัวระหว่างวัน"
+# ไม่ใช่ "การกระโดดข้ามคืน" ซึ่งเป็นกลไกจริงที่ทำให้ BLLN/VPG/IOVA/BLZE พัง
+# (ถือแค่ 0.03-0.99 วันก่อนโดน stop — สั้นขนาดนี้บ่งชี้ชัดว่าเป็น gap ข้าม
+# คืน ไม่ใช่แกว่งในวันเดียวกัน) เพิ่มสัญญาณที่ตรงประเด็นกว่า: เช็คประวัติ
+# gap ข้ามคืนจริงของหุ้นนั้นย้อนหลัง (ดู _calc_gap_stats()) แล้วลด size
+# เพิ่มเติมถ้าหุ้นเคยกระโดดข้ามคืนแรงมาก่อน (สะท้อนพฤติกรรมเฉพาะตัวของหุ้น
+# นั้น เช่น biotech ที่มีข่าว FDA เป็นระยะ มักกระโดดซ้ำได้อีก) — ใช้ค่า factor
+# ที่ "เข้มกว่า" ระหว่าง ADR-based กับ gap-based เสมอ (min ของสองค่า) เพราะ
+# ทั้งสองแหล่งความเสี่ยงเป็นอิสระต่อกัน ป้องกันได้ทั้งคู่ไม่ทับซ้อนกัน
+GAP_LOOKBACK_DAYS     = 60
+GAP_SIZE_REF_PCT      = 15.0   # ถ้าหุ้นไม่เคย gap ข้ามคืนเกิน 15% ในช่วง 60 วัน ไม่ลด
 # win rate เฉลี่ยจริงจาก trade log ยุคหลังแก้บั๊ก stop-loss (35.3%) — ใช้เป็น
 # ค่า default สำหรับ Kelly แทนการเดา 50/50 (มองโลกในแง่ร้ายกว่าจะปลอดภัยกว่า
 # ถ้าจะพลาดควรพลาดไปทาง "แนะนำ size เล็กเกินไป" ไม่ใช่ "ใหญ่เกินไป")
@@ -1168,8 +1217,13 @@ def calc_position_size(pos_cfg, symbol, entry_price=None):
     momentum ในระบบนี้) หุ้น ADR สูงยังซื้อได้เต็มที่ตามสัญญาณเดิม แค่ขนาด
     ไม้เล็กลงตามความเสี่ยง — ถ้า gap ทะลุ stop จริง ความเสียหายเป็น $ จะเล็ก
     ลงตามสัดส่วนไปด้วย ไม่ใช่เสียเต็ม $100 เหมือนหุ้นเสี่ยงต่ำ
+
+    อัปเดต 3: เพิ่มการลด budget ตามประวัติ "gap ข้ามคืน" จริงของหุ้น (แยก
+    จาก ADR) เพราะเคสที่พังหนักสุดถือแค่ต่ำกว่า 1 วัน บ่งชี้ว่าเป็นกลไก gap
+    ไม่ใช่แค่แกว่งระหว่างวันซึ่ง ADR วัดไม่ตรง — ดู comment เต็มที่
+    GAP_SIZE_REF_PCT ด้านบนไฟล์
     """
-    account_base = pos_cfg.get("account_size", 100)   # ← default $100 (ก่อนปรับตาม ADR)
+    account_base = pos_cfg.get("account_size", 100)   # ← default $100 (ก่อนปรับตาม ADR/gap)
     risk_pct   = pos_cfg.get("risk_pct",    2.0)
     stop_pct   = pos_cfg.get("stop_pct",    None)
     target_pct = pos_cfg.get("target_pct",  None)
@@ -1183,12 +1237,16 @@ def calc_position_size(pos_cfg, symbol, entry_price=None):
 
     atr_val = None
     adr_pct_val = None
-    size_factor = 1.0
+    max_gap_pct = None
+    p90_gap_pct = None
+    adr_size_factor = 1.0
+    gap_size_factor = 1.0
     if stop_pct is None:
         hist = fetch_history(symbol, period="90d", interval="1d")
         if hist is not None and len(hist) >= 16:
             highs  = list(hist["High"].astype(float))
             lows   = list(hist["Low"].astype(float))
+            opens  = list(hist["Open"].astype(float))
             closes = list(hist["Close"].astype(float))
             atr_val = _calc_atr(highs, lows, closes, 14)
             if atr_val:
@@ -1201,10 +1259,18 @@ def calc_position_size(pos_cfg, symbol, entry_price=None):
             # (factor=1.0) ADR ยิ่งสูงกว่านั้น factor ยิ่งเล็กลงเป็นสัดส่วนผกผัน
             adr_pct_val = _calc_adr(highs, lows, 20)
             if adr_pct_val and adr_pct_val > ADR_SIZE_REF_PCT:
-                size_factor = max(0.15, ADR_SIZE_REF_PCT / adr_pct_val)  # ไม่ให้เล็กจนต่ำกว่า 15% ของ budget เดิม
+                adr_size_factor = max(0.15, ADR_SIZE_REF_PCT / adr_pct_val)  # ไม่ให้เล็กจนต่ำกว่า 15% ของ budget เดิม
+            # ── ลด budget ตามประวัติ gap ข้ามคืนจริง (สัญญาณคนละตัวจาก ADR) ──
+            max_gap_pct, p90_gap_pct = _calc_gap_stats(opens, closes, GAP_LOOKBACK_DAYS)
+            if max_gap_pct and max_gap_pct > GAP_SIZE_REF_PCT:
+                gap_size_factor = max(0.15, GAP_SIZE_REF_PCT / max_gap_pct)
         else:
             stop_pct = 5.0
 
+    # ใช้ค่า factor ที่ "เข้มกว่า" เสมอระหว่าง ADR-based กับ gap-based —
+    # ทั้งสองแหล่งความเสี่ยงเป็นอิสระต่อกัน หุ้นอาจ ADR ปกติแต่เคย gap แรง
+    # มาก่อนก็ได้ (หรือกลับกัน) ป้องกันได้ครบทั้งสองทาง
+    size_factor = min(adr_size_factor, gap_size_factor)
     account = round(account_base * size_factor, 2)
 
     stop_price  = entry_price * (1 - stop_pct / 100)
@@ -1237,7 +1303,15 @@ def calc_position_size(pos_cfg, symbol, entry_price=None):
         "account":       account,
         "account_base":  account_base,
         "adr_pct":       round(adr_pct_val, 2) if adr_pct_val is not None else None,
+        "adr_size_factor": round(adr_size_factor, 3),
+        "max_gap_pct":   max_gap_pct,
+        "p90_gap_pct":   p90_gap_pct,
+        "gap_size_factor": round(gap_size_factor, 3),
         "size_factor":   round(size_factor, 3),
+        # บอกว่าตัวไหน "เข้ม" กว่าจนเป็นตัวกำหนด size_factor สุดท้าย เอาไว้
+        # โชว์ในข้อความ Telegram ให้คนอ่านเข้าใจว่าทำไม size ถึงเล็กลง
+        "size_limited_by": ("gap" if gap_size_factor < adr_size_factor
+                             else ("adr" if adr_size_factor < 1.0 else None)),
         "atr":           round(atr_val, 4) if atr_val else None,
     }
 
@@ -1325,9 +1399,10 @@ def _pos_block(pos):
         return []
     is_frac  = pos.get("is_fractional", False)
     sh_str   = f"{pos['shares']:.6f} หุ้น (fractional)" if is_frac else f"{int(pos['shares']):,} หุ้น"
+    reason_th = {"adr": "ADR สูง", "gap": "เคย gap ข้ามคืนแรง"}.get(pos.get("size_limited_by"), "ความผันผวนสูง")
     budget_line = f"📦 Position (งบ ${pos['account']:.0f}):"
     if pos.get("size_factor", 1.0) < 0.999:
-        budget_line = f"📦 Position (งบ ${pos['account']:.0f} — ลดจาก ${pos['account_base']:.0f} เพราะ ADR สูง):"
+        budget_line = f"📦 Position (งบ ${pos['account']:.0f} — ลดจาก ${pos['account_base']:.0f} เพราะ{reason_th}):"
     lines    = [
         "",
         "━━━━━━━━━━━━━━━━━━━━━━━━━",
@@ -1337,7 +1412,13 @@ def _pos_block(pos):
         f"  🛑 Stop: <b>${pos['stop']:.4f}</b>  (-{pos['stop_pct']:.1f}%)",
     ]
     if pos.get("adr_pct") is not None and pos.get("size_factor", 1.0) < 0.999:
-        lines.append(f"  ⚡ ADR {pos['adr_pct']:.1f}% (แกว่งแรงกว่าปกติ) → ลด size เหลือ {pos['size_factor']*100:.0f}% ของ budget เต็ม")
+        detail_bits = []
+        if pos.get("adr_size_factor", 1.0) < 0.999:
+            detail_bits.append(f"ADR {pos['adr_pct']:.1f}%")
+        if pos.get("gap_size_factor", 1.0) < 0.999 and pos.get("max_gap_pct"):
+            detail_bits.append(f"เคย gap ข้ามคืนสูงสุด {pos['max_gap_pct']:.1f}% ใน {GAP_LOOKBACK_DAYS} วันหลัง")
+        detail_txt = " และ ".join(detail_bits) if detail_bits else "ความผันผวนสูง"
+        lines.append(f"  ⚡ {detail_txt} → ลด size เหลือ {pos['size_factor']*100:.0f}% ของ budget เต็ม")
     if pos.get("atr"):
         lines.append(f"  • ATR(14): ${pos['atr']:.4f}")
     if pos.get("target"):
