@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T16:56:05Z",
-    "symbol": "PSIX",
-    "alert_id": "PSIX_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 34.0099983215332,
-    "change_pct": 17.6816550918104,
-    "value": 17.6816550918104,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T16:56:16Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_TRAIL_ADJUST",
@@ -8402,6 +8388,23 @@
     "change_pct": 7.729469520458284,
     "value": 8.474,
     "entry_price": 8.109999656677246,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T15:41:58Z",
+    "symbol": "RELL",
+    "alert_id": "RELL_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 17.600000381469727,
+    "change_pct": -2.4390222756666997,
+    "value": 0,
+    "entry_price": null,
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
