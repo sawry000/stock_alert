@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T15:26:31Z",
-    "symbol": "SMTC",
-    "alert_id": "SMTC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 128.0749969482422,
-    "change_pct": 5.463600912584148,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T15:56:00Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_PCT_UP",
@@ -8363,5 +8349,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T05:26:38Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1568.8699951171875,
+    "change_pct": -1.2046602571040617,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
