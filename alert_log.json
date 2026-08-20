@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T16:56:16Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 6.125,
-    "change_pct": 7.834507042253526,
-    "value": 5.8187,
-    "entry_price": 5.320000171661377,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T16:56:54Z",
     "symbol": "OFRM",
     "alert_id": "OFRM_MTF_BULL",
@@ -8405,6 +8391,23 @@
     "change_pct": -2.4390222756666997,
     "value": 0,
     "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-20T15:55:59Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.725000381469727,
+    "change_pct": 8.51990524216079,
+    "value": 8.2888,
+    "entry_price": 8.005000114440918,
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
