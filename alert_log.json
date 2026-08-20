@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T18:27:40Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 17.290000915527344,
-    "change_pct": 3.0393379947994195,
-    "value": 17.2584,
-    "entry_price": 15.979999542236328,
-    "pnl_pct": 8.1978,
-    "days_held": 9.56,
-    "entry_alert_type": "mtf_alignment"
-  },
-  {
     "timestamp": "2026-08-04T18:40:56Z",
     "symbol": "DDD",
     "alert_id": "DDD_SL_BREAK",
@@ -8448,6 +8434,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-20T23:25:56Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_SCORE_60",
+    "type": "alert_score",
+    "action": "BUY",
+    "price": 8.989999771118164,
+    "change_pct": 11.81591755122096,
+    "value": 63,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
