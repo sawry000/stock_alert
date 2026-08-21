@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T20:41:03Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 3.559999942779541,
-    "change_pct": 19.003842312536896,
-    "value": 3.941801143459038,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
-    "timestamp": "2026-08-04T20:41:04Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 3.559999942779541,
-    "change_pct": 19.003842312536896,
-    "value": 19.003842312536896,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T20:41:05Z",
     "symbol": "DDD",
     "alert_id": "DDD_SCORE_60",
@@ -8477,5 +8449,39 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-21T14:41:20Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 16.552000045776367,
+    "change_pct": -3.3256623536838927,
+    "value": 16.552000045776367,
+    "entry_price": 18.450000762939453,
+    "pnl_pct": -10.2873,
+    "days_held": 2.27,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-21T14:42:26Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 3.319999933242798,
+    "change_pct": -1.1110138133977332,
+    "value": 3.319999933242798,
+    "entry_price": 3.2300000190734863,
+    "pnl_pct": 2.7864,
+    "days_held": 0.81,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
