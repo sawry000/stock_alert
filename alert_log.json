@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T20:41:05Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_SCORE_60",
-    "type": "alert_score",
-    "action": "BUY",
-    "price": 3.559999942779541,
-    "change_pct": 19.003842312536896,
-    "value": 60,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-04T20:42:19Z",
     "symbol": "PESI",
     "alert_id": "PESI_MTF_BULL",
@@ -8483,5 +8469,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-21T15:26:32Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 9.15999984741211,
+    "change_pct": 6.018516752454962,
+    "value": 8.702,
+    "entry_price": 8.109999656677246,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
