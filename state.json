@@ -558,8 +558,8 @@
     "last_buy_reminder_at": "2026-08-21T13:26:23Z",
     "open_entry": 31.09000015258789,
     "open_time": "2026-08-19T20:40:57Z",
-    "open_peak": 33.7400016784668,
-    "open_stop": 32.05300159454345,
+    "open_peak": 33.94990158081055,
+    "open_stop": 32.25240650177002,
     "open_target": 35.7535,
     "open_conviction": 5,
     "open_conviction_total": 5,
@@ -1544,8 +1544,8 @@
     "last_buy_reminder_at": "2026-08-19T20:11:39Z",
     "open_entry": 8.109999656677246,
     "open_time": "2026-08-12T15:41:56Z",
-    "open_peak": 9.15999984741211,
-    "open_stop": 8.701999855041503,
+    "open_peak": 9.164999961853027,
+    "open_stop": 8.706749963760375,
     "open_target": 9.3265,
     "open_conviction": 4,
     "open_conviction_total": 5,
@@ -2125,8 +2125,7 @@
     "open_target": 2.7025,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_LUNG_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2209,7 +2208,8 @@
       "last_fired": "2026-08-14T19:42:58Z"
     },
     "last_sell_at": "2026-08-19T14:12:00Z",
-    "_confirm_REAX_MA_GOLD": 1
+    "_confirm_REAX_MA_GOLD": 1,
+    "_confirm_REAX_MTF_BULL": 1
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2244,8 +2244,7 @@
     "open_target": 4.8645,
     "open_conviction": 5,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_DHX_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
