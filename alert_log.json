@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-08-04T23:25:43Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 361.6700134277344,
-    "change_pct": 10.298875702267276,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null
-  },
-  {
     "timestamp": "2026-08-05T02:27:03Z",
     "symbol": "OCC",
     "alert_id": "OCC_MTF_BULL",
@@ -8482,6 +8468,23 @@
     "price": 33.59000015258789,
     "change_pct": 6.129542346249265,
     "value": 31.9105,
+    "entry_price": 31.09000015258789,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-21T15:56:09Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 33.7400016784668,
+    "change_pct": 6.603480816640753,
+    "value": 32.053,
     "entry_price": 31.09000015258789,
     "pnl_pct": null,
     "days_held": null,
