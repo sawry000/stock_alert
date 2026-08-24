@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-06T11:12:25Z",
-    "symbol": "FATN",
-    "alert_id": "FATN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.610000133514404,
-    "change_pct": -0.15105538497878868,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-06T11:56:16Z",
     "symbol": "AGL",
     "alert_id": "AGL_MTF_BULL",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-24T18:26:21Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.434999942779541,
+    "change_pct": 9.541980364850456,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
