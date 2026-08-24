@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-05T21:11:16Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 4.059999942779541,
-    "change_pct": 58.59374776482582,
-    "value": 58.59374776482582,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-05T21:11:17Z",
     "symbol": "NLST",
     "alert_id": "NLST_SCORE_60",
@@ -8495,6 +8478,23 @@
     "pnl_pct": -12.9907,
     "days_held": 2.47,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-24T14:11:01Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 4.619999885559082,
+    "change_pct": -9.411766949821915,
+    "value": 4.619999885559082,
+    "entry_price": 5.190000057220459,
+    "pnl_pct": -10.9827,
+    "days_held": 2.75,
+    "entry_alert_type": "volume_spike",
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
