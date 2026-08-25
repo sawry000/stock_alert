@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-06T13:41:26Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 23.90999984741211,
-    "change_pct": -0.4334959569081903,
-    "value": 23.90999984741211,
-    "entry_price": 26.40999984741211,
-    "pnl_pct": -9.4661,
-    "days_held": 0.82,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-06T13:42:31Z",
     "symbol": "WDC",
     "alert_id": "WDC_SL_BREAK",
@@ -8496,6 +8479,23 @@
     "days_held": 0.02,
     "entry_alert_type": "volume_spike",
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-25T15:27:47Z",
+    "symbol": "DHX",
+    "alert_id": "DHX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.315000057220459,
+    "change_pct": 2.251186190058276,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
