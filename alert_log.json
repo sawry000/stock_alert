@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-06T13:56:39Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 7.771699905395508,
-    "change_pct": -8.568236407111673,
-    "value": -8.568236407111673,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-06T13:56:54Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-25T19:55:58Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 1.3300000429153442,
+    "change_pct": 175.81917107327754,
+    "value": 1.2635,
+    "entry_price": 1.1699999570846558,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
