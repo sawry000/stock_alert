@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-06T14:56:41Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 89.73999786376953,
-    "change_pct": -17.4804617344648,
-    "value": -17.4804617344648,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-06T14:57:27Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_MA_DEATH",
@@ -8497,6 +8480,23 @@
     "entry_alert_type": "mtf_alignment",
     "conviction_score": 4,
     "conviction_total": 5,
+    "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-26T18:56:09Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 5.559999942779541,
+    "change_pct": 9.233787349744775,
+    "value": 5.282,
+    "entry_price": 5.090000152587891,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
     "rr_ratio": null
   }
 ]
