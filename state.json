@@ -1706,8 +1706,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_ZVIA_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1778,7 +1777,8 @@
     "open_target": 8.3835,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1829,8 +1829,7 @@
     "last_sell_at": "2026-08-07T14:11:47Z",
     "SVCO_MA_DEATH": {
       "last_fired": "2026-07-07T13:34:24Z"
-    },
-    "_confirm_SVCO_MTF_BULL": 1
+    }
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -1893,7 +1892,8 @@
     "last_sell_at": "2026-08-21T14:42:26Z",
     "NEOV_SL_BREAK": {
       "last_fired": "2026-08-21T14:42:26Z"
-    }
+    },
+    "_confirm_NEOV_MTF_BULL": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -1959,8 +1959,7 @@
     "last_sell_at": "2026-08-14T15:42:37Z",
     "BLIN_SL_BREAK": {
       "last_fired": "2026-08-14T15:42:37Z"
-    },
-    "_confirm_BLIN_MTF_BULL": 1
+    }
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
@@ -2065,14 +2064,15 @@
     "last_buy_reminder_at": "2026-08-25T20:12:44Z",
     "open_entry": 17.709999084472656,
     "open_time": "2026-08-25T20:12:44Z",
-    "open_peak": 19.040000915527344,
-    "open_stop": 15.939,
+    "open_peak": 19.139999389648438,
+    "open_stop": 18.182999420166016,
     "open_target": 20.3665,
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
     "open_alert_type": "mtf_alignment",
-    "_confirm_PESI_MTF_BULL": 1
+    "open_stop_is_trailing": true,
+    "open_trailing_last_notified_stop": 18.182999420166016
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2128,7 +2128,8 @@
     "LUNG_MA_GOLD": {
       "last_fired": "2026-08-02T02:27:14Z"
     },
-    "_confirm_LUNG_MA_GOLD": 1
+    "_confirm_LUNG_MA_GOLD": 1,
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2203,7 +2204,8 @@
     "FATN_SL_BREAK": {
       "last_fired": "2026-08-18T13:58:16Z"
     },
-    "last_sell_at": "2026-08-18T13:58:16Z"
+    "last_sell_at": "2026-08-18T13:58:16Z",
+    "_confirm_FATN_MTF_BULL": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2255,8 +2257,7 @@
     "ATEX_MA_DEATH": {
       "last_fired": "2026-08-13T02:12:35Z"
     },
-    "last_sell_at": "2026-08-13T02:12:35Z",
-    "_confirm_ATEX_MTF_BULL": 1
+    "last_sell_at": "2026-08-13T02:12:35Z"
   },
   "JFB": {
     "JFB_MTF_BULL": {
