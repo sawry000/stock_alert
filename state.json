@@ -1706,8 +1706,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_ZVIA_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1751,8 +1750,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_TMCI_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1779,7 +1777,8 @@
     "open_target": 8.3835,
     "open_conviction": 4,
     "open_conviction_total": 5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1894,7 +1893,8 @@
     "last_sell_at": "2026-08-21T14:42:26Z",
     "NEOV_SL_BREAK": {
       "last_fired": "2026-08-21T14:42:26Z"
-    }
+    },
+    "_confirm_NEOV_MTF_BULL": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -2065,14 +2065,13 @@
     "last_buy_reminder_at": "2026-08-25T20:12:44Z",
     "open_entry": 17.709999084472656,
     "open_time": "2026-08-25T20:12:44Z",
-    "open_peak": 18.585599899291992,
+    "open_peak": 18.700000762939453,
     "open_stop": 15.939,
     "open_target": 20.3665,
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_PESI_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2128,7 +2127,8 @@
     "LUNG_MA_GOLD": {
       "last_fired": "2026-08-02T02:27:14Z"
     },
-    "_confirm_LUNG_MA_GOLD": 1
+    "_confirm_LUNG_MA_GOLD": 1,
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2256,8 +2256,7 @@
     "ATEX_MA_DEATH": {
       "last_fired": "2026-08-13T02:12:35Z"
     },
-    "last_sell_at": "2026-08-13T02:12:35Z",
-    "_confirm_ATEX_MTF_BULL": 1
+    "last_sell_at": "2026-08-13T02:12:35Z"
   },
   "JFB": {
     "JFB_MTF_BULL": {
