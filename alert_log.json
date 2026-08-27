@@ -2,23 +2,6 @@
   {
     "timestamp": "2026-08-06T17:56:54Z",
     "symbol": "IOVA",
-    "alert_id": "IOVA_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 5.994999885559082,
-    "change_pct": 36.25309406029869,
-    "value": 3.5155647654082056,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
-    "timestamp": "2026-08-06T17:56:54Z",
-    "symbol": "IOVA",
     "alert_id": "IOVA_PCT_UP",
     "type": "percent_change",
     "action": "BUY",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-27T03:25:42Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 0.8046000003814697,
+    "change_pct": -34.04918029660084,
+    "value": -34.04918029660084,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
