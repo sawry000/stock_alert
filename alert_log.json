@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-06T16:13:31Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.440000057220459,
-    "change_pct": 13.98230189770723,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-06T17:56:54Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_VOL_3X",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-27T02:12:38Z",
+    "symbol": "GGRP",
+    "alert_id": "GGRP_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 0.9323999881744385,
+    "change_pct": -0.6393843292244619,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
