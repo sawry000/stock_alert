@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-06T22:11:29Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 7.510000228881836,
-    "change_pct": -11.64705613080193,
-    "value": -11.64705613080193,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-06T22:26:47Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-27T16:58:29Z",
+    "symbol": "JFB",
+    "alert_id": "JFB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.729899883270264,
+    "change_pct": 15.9289187076045,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
