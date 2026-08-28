@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T11:42:16Z",
-    "symbol": "FATN",
-    "alert_id": "FATN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.340000152587891,
-    "change_pct": -0.90962844881544,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-07T11:56:49Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-28T14:55:56Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 29.524999618530273,
+    "change_pct": -5.911409756117672,
+    "value": 0,
+    "entry_price": 31.595699310302734,
+    "pnl_pct": -6.5537,
+    "days_held": 0.8,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
