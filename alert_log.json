@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T07:11:18Z",
-    "symbol": "AGL",
-    "alert_id": "AGL_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 86.83000183105469,
-    "change_pct": -20.156320155352013,
-    "value": -20.156320155352013,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-07T08:10:59Z",
     "symbol": "INOD",
     "alert_id": "INOD_PCT_DROP",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-28T13:12:53Z",
+    "symbol": "JFB",
+    "alert_id": "JFB_MA_GOLD",
+    "type": "ma_crossover",
+    "action": "BUY",
+    "price": 4.760000228881836,
+    "change_pct": -1.6528878330199157,
+    "value": 0.471,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
