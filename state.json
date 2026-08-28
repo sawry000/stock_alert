@@ -1216,7 +1216,7 @@
     "last_buy_reminder_at": "2026-08-27T19:26:21Z",
     "open_entry": 6.25,
     "open_time": "2026-08-27T19:26:21Z",
-    "open_peak": 6.539999961853027,
+    "open_peak": 6.559999942779541,
     "open_stop": 5.625,
     "open_target": 7.1875,
     "open_conviction": 5,
@@ -1708,8 +1708,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_ZVIA_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1753,7 +1752,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -2002,8 +2002,7 @@
     },
     "OFRM_MA_GOLD": {
       "last_fired": "2026-08-18T19:42:11Z"
-    },
-    "_confirm_OFRM_MTF_BULL": 1
+    }
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2119,8 +2118,7 @@
     "LUNG_MA_GOLD": {
       "last_fired": "2026-08-02T02:27:14Z"
     },
-    "_confirm_LUNG_MA_GOLD": 1,
-    "_confirm_LUNG_MTF_BULL": 1
+    "_confirm_LUNG_MA_GOLD": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2196,8 +2194,7 @@
     "FATN_SL_BREAK": {
       "last_fired": "2026-08-18T13:58:16Z"
     },
-    "last_sell_at": "2026-08-18T13:58:16Z",
-    "_confirm_FATN_MTF_BULL": 1
+    "last_sell_at": "2026-08-18T13:58:16Z"
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2265,7 +2262,7 @@
     "last_buy_reminder_at": "2026-08-28T13:12:53Z",
     "open_entry": 4.729899883270264,
     "open_time": "2026-08-27T16:58:29Z",
-    "open_peak": 4.769999980926514,
+    "open_peak": 4.789999961853027,
     "open_stop": 4.2569,
     "open_target": 5.4394,
     "open_conviction": 4,
@@ -2333,8 +2330,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_GGRP_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "ADVB": {
     "ADVB_SCORE_60": {
