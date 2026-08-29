@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T13:40:43Z",
-    "symbol": "NAVN",
-    "alert_id": "NAVN_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 29.095199584960938,
-    "change_pct": 6.148119609489009,
-    "value": 28.7388,
-    "entry_price": 26.610000610351562,
-    "pnl_pct": 9.3393,
-    "days_held": 8.81,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-07T13:41:00Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-29T03:41:26Z",
+    "symbol": "ASPN",
+    "alert_id": "ASPN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.929999828338623,
+    "change_pct": -7.330830294386789,
+    "value": -7.330830294386789,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
