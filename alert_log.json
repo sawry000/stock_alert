@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T14:25:47Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 145.33999633789062,
-    "change_pct": 17.304180011065874,
-    "value": 138.073,
-    "entry_price": 133.1999969482422,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-07T14:25:48Z",
     "symbol": "AAOI",
     "alert_id": "AAOI_TAKE_PROFIT",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-08-31T08:12:50Z",
+    "symbol": "CELU",
+    "alert_id": "CELU_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 1.5800000429153442,
+    "change_pct": 6.040271336600285,
+    "value": 3.9010457509460177,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
