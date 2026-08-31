@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T16:57:50Z",
-    "symbol": "REAX",
-    "alert_id": "REAX_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 2.184999942779541,
-    "change_pct": 8.70646481490255,
-    "value": 2.0757,
-    "entry_price": 1.9900000095367432,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-07T18:27:05Z",
     "symbol": "BLIN",
     "alert_id": "BLIN_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-31T16:56:21Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 83.48999786376953,
+    "change_pct": -9.77955709555919,
+    "value": -9.77955709555919,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
