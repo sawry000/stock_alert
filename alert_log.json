@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T14:25:48Z",
-    "symbol": "AAOI",
-    "alert_id": "AAOI_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 145.33999633789062,
-    "change_pct": 17.304180011065874,
-    "value": 143.856,
-    "entry_price": 133.1999969482422,
-    "pnl_pct": 9.1141,
-    "days_held": 2.94,
-    "entry_alert_type": "percent_change",
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-07T14:42:32Z",
     "symbol": "REAX",
     "alert_id": "REAX_TRAIL_ADJUST",
@@ -8495,6 +8478,23 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-08-31T13:43:26Z",
+    "symbol": "CELU",
+    "alert_id": "CELU_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 1.3899999856948853,
+    "change_pct": -6.711410356047969,
+    "value": 1.3899999856948853,
+    "entry_price": 1.5800000429153442,
+    "pnl_pct": -12.0253,
+    "days_held": 0.23,
+    "entry_alert_type": "volume_spike",
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
