@@ -1216,8 +1216,8 @@
     "last_buy_reminder_at": "2026-08-28T20:26:09Z",
     "open_entry": 6.25,
     "open_time": "2026-08-27T19:26:21Z",
-    "open_peak": 6.880000114440918,
-    "open_stop": 6.536000108718872,
+    "open_peak": 6.920000076293945,
+    "open_stop": 6.574000072479247,
     "open_target": 7.1875,
     "open_conviction": 5,
     "open_conviction_total": 5,
@@ -1710,7 +1710,8 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_ZVIA_MTF_BULL": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1754,7 +1755,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1790,8 +1792,7 @@
     },
     "SNDK_SL_BREAK": {
       "last_fired": "2026-08-24T13:41:35Z"
-    },
-    "_confirm_SNDK_MTF_BULL": 1
+    }
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -1891,7 +1892,7 @@
     "last_buy_reminder_at": "2026-08-31T13:57:13Z",
     "open_entry": 4.047999858856201,
     "open_time": "2026-08-31T13:57:13Z",
-    "open_peak": 4.047999858856201,
+    "open_peak": 4.150000095367432,
     "open_stop": 3.6432,
     "open_target": 4.6552,
     "open_conviction": 5,
@@ -2065,7 +2066,8 @@
     "last_sell_at": "2026-08-28T17:57:07Z",
     "PESI_PCT_DROP": {
       "last_fired": "2026-08-14T06:56:58Z"
-    }
+    },
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2197,7 +2199,8 @@
     "FATN_SL_BREAK": {
       "last_fired": "2026-08-18T13:58:16Z"
     },
-    "last_sell_at": "2026-08-18T13:58:16Z"
+    "last_sell_at": "2026-08-18T13:58:16Z",
+    "_confirm_FATN_MTF_BULL": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2275,7 +2278,8 @@
     "open_alert_type": "mtf_alignment",
     "JFB_MA_GOLD": {
       "last_fired": "2026-08-28T13:12:53Z"
-    }
+    },
+    "_confirm_JFB_MTF_BULL": 1
   },
   "HCTI": {
     "HCTI_VOL_3X": {
