@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-10T02:10:53Z",
-    "symbol": "RDW",
-    "alert_id": "RDW_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 13.59000015258789,
-    "change_pct": 14.780406694154482,
-    "value": 14.780406694154482,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-10T02:10:56Z",
     "symbol": "INOD",
     "alert_id": "INOD_PCT_DROP",
@@ -8496,6 +8479,23 @@
     "days_held": 6.72,
     "entry_alert_type": "alert_score",
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-01T20:12:30Z",
+    "symbol": "JFB",
+    "alert_id": "JFB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.840000152587891,
+    "change_pct": 3.152642371221251e-06,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
