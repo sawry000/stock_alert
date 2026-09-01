@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T19:12:13Z",
-    "symbol": "OFRM",
-    "alert_id": "OFRM_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 17.639999389648438,
-    "change_pct": -2.9703003869722893,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 4,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-07T20:11:09Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-01T02:26:16Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 5.300000190734863,
+    "change_pct": -1.8518483197247606,
+    "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
