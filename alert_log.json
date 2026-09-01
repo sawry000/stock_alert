@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-09T02:10:58Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 62.33000183105469,
-    "change_pct": -15.197276420333758,
-    "value": -15.197276420333758,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-09T02:11:08Z",
     "symbol": "WGS",
     "alert_id": "WGS_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-01T14:42:27Z",
+    "symbol": "ADVB",
+    "alert_id": "ADVB_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 10.140000343322754,
+    "change_pct": 7.301590934632325,
+    "value": 9.633,
+    "entry_price": 9.180000305175781,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
