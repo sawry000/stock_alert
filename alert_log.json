@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-07T20:41:26Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 77.08000183105469,
-    "change_pct": 9.53733951466303,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-07T22:42:31Z",
     "symbol": "REAX",
     "alert_id": "REAX_MTF_BULL",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-01T13:42:22Z",
+    "symbol": "NCRA",
+    "alert_id": "NCRA_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 2.229099988937378,
+    "change_pct": -13.600775622582253,
+    "value": 2.229099988937378,
+    "entry_price": 2.8299999237060547,
+    "pnl_pct": -21.2332,
+    "days_held": 0.48,
+    "entry_alert_type": "volume_spike",
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
