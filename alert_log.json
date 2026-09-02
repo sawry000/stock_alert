@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-10T15:57:11Z",
-    "symbol": "OCC",
-    "alert_id": "OCC_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 16.360000610351562,
-    "change_pct": -2.6190439860026085,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-10T16:41:42Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -8495,6 +8478,23 @@
     "pnl_pct": 6.0,
     "days_held": 0.17,
     "entry_alert_type": "volume_spike",
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-02T19:40:46Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 2.4000000953674316,
+    "change_pct": 11.627911412438685,
+    "value": 11.627911412438685,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
