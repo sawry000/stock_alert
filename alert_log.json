@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-10T14:28:17Z",
-    "symbol": "BLZE",
-    "alert_id": "BLZE_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 20.364999771118164,
-    "change_pct": 8.26687810270157,
-    "value": 19.3467,
-    "entry_price": 18.6200008392334,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-10T14:56:42Z",
     "symbol": "BWEN",
     "alert_id": "BWEN_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-02T18:57:24Z",
+    "symbol": "DHX",
+    "alert_id": "DHX_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 4.684999942779541,
+    "change_pct": 2.741226815340821,
+    "value": 4.4507,
+    "entry_price": 4.230000019073486,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
