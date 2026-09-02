@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-10T02:11:10Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 16.639999389648438,
-    "change_pct": 4.654084211625391,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-10T02:11:22Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-02T13:13:25Z",
+    "symbol": "INBS",
+    "alert_id": "INBS_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 2.430000066757202,
+    "change_pct": -1.1592407257595183,
+    "value": 31.792885832676614,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
