@@ -1666,7 +1666,8 @@
     },
     "SMTC_SL_BREAK": {
       "last_fired": "2026-08-28T16:26:31Z"
-    }
+    },
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1756,7 +1757,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1774,7 +1776,8 @@
     "_confirm_TKNO_MA_GOLD": 1,
     "TKNO_SL_BREAK": {
       "last_fired": "2026-08-14T14:26:53Z"
-    }
+    },
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1791,8 +1794,7 @@
     },
     "SNDK_SL_BREAK": {
       "last_fired": "2026-08-24T13:41:35Z"
-    },
-    "_confirm_SNDK_MTF_BULL": 1
+    }
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -2010,13 +2012,14 @@
     "OFRM_MA_GOLD": {
       "last_fired": "2026-08-18T19:42:11Z"
     },
-    "_confirm_OFRM_MA_GOLD": 1
+    "_confirm_OFRM_MA_GOLD": 1,
+    "_confirm_OFRM_MTF_BULL": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
-      "last_fired": "2026-09-02T15:27:06Z"
+      "last_fired": "2026-09-02T20:57:22Z"
     },
-    "last_buy_at": "2026-09-02T15:27:07Z",
+    "last_buy_at": "2026-09-02T20:57:23Z",
     "LHAI_SL_BREAK": {
       "last_fired": "2026-09-02T19:27:10Z"
     },
@@ -2025,8 +2028,18 @@
       "last_fired": "2026-07-22T13:43:44Z"
     },
     "LHAI_PCT_UP": {
-      "last_fired": "2026-09-02T15:27:07Z"
-    }
+      "last_fired": "2026-09-02T20:57:23Z"
+    },
+    "last_buy_reminder_at": "2026-09-02T20:57:23Z",
+    "open_entry": 1.100000023841858,
+    "open_time": "2026-09-02T20:57:22Z",
+    "open_peak": 1.100000023841858,
+    "open_stop": 0.99,
+    "open_target": 1.265,
+    "open_conviction": 4,
+    "open_conviction_total": 5,
+    "open_rr_ratio": 1.5,
+    "open_alert_type": "volume_spike"
   },
   "CCTC": {
     "CCTC_PCT_DROP": {
@@ -2059,7 +2072,8 @@
     "last_sell_at": "2026-08-28T17:57:07Z",
     "PESI_PCT_DROP": {
       "last_fired": "2026-08-14T06:56:58Z"
-    }
+    },
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2375,7 +2389,5 @@
     },
     "last_sell_at": "2026-09-02T18:43:29Z"
   },
-  "ECOR": {
-    "_confirm_ECOR_MTF_BULL": 1
-  }
+  "ECOR": {}
 }
