@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-10T16:41:42Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 27.350000381469727,
-    "change_pct": 19.61827286729469,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-10T17:57:06Z",
     "symbol": "LUNG",
     "alert_id": "LUNG_MTF_BULL",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-02T19:57:32Z",
+    "symbol": "DHX",
+    "alert_id": "DHX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.65500020980835,
+    "change_pct": 2.0833379343936405,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
