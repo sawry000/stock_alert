@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-10T08:11:28Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.25,
-    "change_pct": -1.9930689498361391,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-10T13:40:43Z",
     "symbol": "COHR",
     "alert_id": "COHR_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-09-02T15:12:56Z",
+    "symbol": "JFB",
+    "alert_id": "JFB_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 4.942299842834473,
+    "change_pct": 0.45324883809903915,
+    "value": 4.942299842834473,
+    "entry_price": 4.729899883270264,
+    "pnl_pct": 4.4906,
+    "days_held": 5.93,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
