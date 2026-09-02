@@ -1747,7 +1747,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1765,7 +1766,8 @@
     "_confirm_TKNO_MA_GOLD": 1,
     "TKNO_SL_BREAK": {
       "last_fired": "2026-08-14T14:26:53Z"
-    }
+    },
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1782,8 +1784,7 @@
     },
     "SNDK_SL_BREAK": {
       "last_fired": "2026-08-24T13:41:35Z"
-    },
-    "_confirm_SNDK_MTF_BULL": 1
+    }
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -1885,7 +1886,7 @@
     "last_buy_reminder_at": "2026-09-02T08:27:01Z",
     "open_entry": 3.6500000953674316,
     "open_time": "2026-09-02T08:27:01Z",
-    "open_peak": 3.6500000953674316,
+    "open_peak": 3.6549999713897705,
     "open_stop": 3.285,
     "open_target": 4.1975,
     "open_conviction": 5,
@@ -2001,7 +2002,8 @@
     "OFRM_MA_GOLD": {
       "last_fired": "2026-08-18T19:42:11Z"
     },
-    "_confirm_OFRM_MA_GOLD": 1
+    "_confirm_OFRM_MA_GOLD": 1,
+    "_confirm_OFRM_MTF_BULL": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2050,7 +2052,8 @@
     "last_sell_at": "2026-08-28T17:57:07Z",
     "PESI_PCT_DROP": {
       "last_fired": "2026-08-14T06:56:58Z"
-    }
+    },
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2106,8 +2109,7 @@
     "LUNG_MA_GOLD": {
       "last_fired": "2026-08-02T02:27:14Z"
     },
-    "_confirm_LUNG_MA_GOLD": 1,
-    "_confirm_LUNG_MTF_BULL": 1
+    "_confirm_LUNG_MA_GOLD": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2186,8 +2188,7 @@
     "last_sell_at": "2026-09-01T16:42:07Z",
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-01T16:42:07Z"
-    },
-    "_confirm_FATN_MTF_BULL": 1
+    }
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2234,8 +2235,7 @@
     "open_conviction_total": 5,
     "open_alert_type": "mtf_alignment",
     "open_stop_is_trailing": true,
-    "open_trailing_last_notified_stop": 4.369999909400939,
-    "_confirm_DHX_MTF_BULL": 1
+    "open_trailing_last_notified_stop": 4.369999909400939
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2259,8 +2259,8 @@
     "last_buy_reminder_at": "2026-09-01T20:12:30Z",
     "open_entry": 4.729899883270264,
     "open_time": "2026-08-27T16:58:29Z",
-    "open_peak": 5.195400238037109,
-    "open_stop": 4.935630226135253,
+    "open_peak": 5.2221999168396,
+    "open_stop": 4.96108992099762,
     "open_target": 5.4394,
     "open_conviction": 4,
     "open_conviction_total": 5,
