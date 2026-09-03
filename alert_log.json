@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-10T22:56:41Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.670000076293945,
-    "change_pct": -0.638296249064997,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-10T22:56:45Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-03T13:57:26Z",
+    "symbol": "DHX",
+    "alert_id": "DHX_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 4.78000020980835,
+    "change_pct": 1.7021321235819027,
+    "value": 4.541,
+    "entry_price": 4.230000019073486,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
