@@ -782,13 +782,13 @@
       "last_fired": "2026-06-05T18:29:18Z"
     },
     "open_position": true,
-    "last_sell_at": "2026-09-02T13:41:27Z",
+    "last_sell_at": "2026-09-03T14:11:57Z",
     "PSIX_PCT_UP": {
       "last_fired": "2026-08-04T16:56:05Z"
     },
     "last_buy_at": "2026-08-04T16:56:05Z",
     "PSIX_MA_DEATH": {
-      "last_fired": "2026-09-02T13:41:27Z"
+      "last_fired": "2026-09-03T14:11:57Z"
     }
   },
   "VICR": {
@@ -1660,9 +1660,9 @@
       "last_fired": "2026-08-27T10:26:26Z"
     },
     "last_buy_at": "2026-08-27T10:26:26Z",
-    "last_sell_at": "2026-08-28T16:26:31Z",
+    "last_sell_at": "2026-09-03T14:12:24Z",
     "SMTC_MA_DEATH": {
-      "last_fired": "2026-08-24T02:26:31Z"
+      "last_fired": "2026-09-03T14:12:24Z"
     },
     "SMTC_SL_BREAK": {
       "last_fired": "2026-08-28T16:26:31Z"
@@ -1757,8 +1757,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_TMCI_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1793,7 +1792,8 @@
     },
     "SNDK_SL_BREAK": {
       "last_fired": "2026-08-24T13:41:35Z"
-    }
+    },
+    "_confirm_SNDK_MTF_BULL": 1
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -1811,7 +1811,8 @@
     },
     "RFIL_PCT_DROP": {
       "last_fired": "2026-08-20T06:26:33Z"
-    }
+    },
+    "_confirm_RFIL_RSI_OS": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -2012,8 +2013,7 @@
     "OFRM_MA_GOLD": {
       "last_fired": "2026-08-18T19:42:11Z"
     },
-    "_confirm_OFRM_MA_GOLD": 1,
-    "_confirm_OFRM_MTF_BULL": 1
+    "_confirm_OFRM_MA_GOLD": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2062,8 +2062,7 @@
     "last_sell_at": "2026-08-28T17:57:07Z",
     "PESI_PCT_DROP": {
       "last_fired": "2026-08-14T06:56:58Z"
-    },
-    "_confirm_PESI_MTF_BULL": 1
+    }
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2199,7 +2198,8 @@
     "last_sell_at": "2026-09-01T16:42:07Z",
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-01T16:42:07Z"
-    }
+    },
+    "_confirm_FATN_MTF_BULL": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2379,5 +2379,7 @@
     },
     "last_sell_at": "2026-09-02T18:43:29Z"
   },
-  "ECOR": {}
+  "ECOR": {
+    "_confirm_ECOR_MTF_BULL": 1
+  }
 }
