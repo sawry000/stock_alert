@@ -1676,7 +1676,8 @@
     },
     "SMTC_SL_BREAK": {
       "last_fired": "2026-08-28T16:26:31Z"
-    }
+    },
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1766,8 +1767,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_TMCI_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1785,8 +1785,7 @@
     "_confirm_TKNO_MA_GOLD": 1,
     "TKNO_SL_BREAK": {
       "last_fired": "2026-08-14T14:26:53Z"
-    },
-    "_confirm_TKNO_MTF_BULL": 1
+    }
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1922,7 +1921,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_NEOV_MTF_BULL": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -2032,8 +2032,7 @@
     "OFRM_MA_GOLD": {
       "last_fired": "2026-08-18T19:42:11Z"
     },
-    "_confirm_OFRM_MA_GOLD": 1,
-    "_confirm_OFRM_MTF_BULL": 1
+    "_confirm_OFRM_MA_GOLD": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2082,8 +2081,7 @@
     "last_sell_at": "2026-08-28T17:57:07Z",
     "PESI_PCT_DROP": {
       "last_fired": "2026-08-14T06:56:58Z"
-    },
-    "_confirm_PESI_MTF_BULL": 1
+    }
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2278,9 +2276,9 @@
   },
   "JFB": {
     "JFB_MTF_BULL": {
-      "last_fired": "2026-09-03T15:13:17Z"
+      "last_fired": "2026-09-04T11:42:42Z"
     },
-    "last_buy_at": "2026-09-03T15:13:17Z",
+    "last_buy_at": "2026-09-04T11:42:42Z",
     "JFB_SL_BREAK": {
       "last_fired": "2026-09-02T15:12:56Z"
     },
@@ -2291,7 +2289,7 @@
     "JFB_MA_GOLD": {
       "last_fired": "2026-08-28T13:12:53Z"
     },
-    "last_buy_reminder_at": "2026-09-03T15:13:17Z",
+    "last_buy_reminder_at": "2026-09-04T11:42:42Z",
     "open_entry": 4.84499979019165,
     "open_time": "2026-09-02T18:27:38Z",
     "open_peak": 5.21999979019165,
@@ -2300,8 +2298,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_JFB_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "HCTI": {
     "HCTI_VOL_3X": {

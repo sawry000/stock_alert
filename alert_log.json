@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-11T08:10:39Z",
-    "symbol": "RIOT",
-    "alert_id": "RIOT_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 19.399999618530273,
-    "change_pct": -20.16461062333221,
-    "value": -20.16461062333221,
-    "entry_price": 22.030000686645508,
-    "pnl_pct": -11.9383,
-    "days_held": 11.76,
-    "entry_alert_type": "percent_change",
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-11T12:56:30Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-04T11:42:42Z",
+    "symbol": "JFB",
+    "alert_id": "JFB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.945000171661377,
+    "change_pct": 0.9183708502321755,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
