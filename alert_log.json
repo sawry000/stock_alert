@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-11T17:41:45Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 7.085000038146973,
-    "change_pct": 5.431548186710907,
-    "value": 6.7308,
-    "entry_price": 6.440000057220459,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-11T18:11:59Z",
     "symbol": "NEOV",
     "alert_id": "NEOV_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-04T16:11:55Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 1698.1400146484375,
+    "change_pct": 9.599846046755996,
+    "value": 1613.233,
+    "entry_price": 1554.989990234375,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
