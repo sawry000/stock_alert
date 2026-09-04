@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-11T19:12:01Z",
-    "symbol": "NEOV",
-    "alert_id": "NEOV_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 3.1549999713897705,
-    "change_pct": 12.678570406777526,
-    "value": 2.9972,
-    "entry_price": 2.884999990463257,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-11T19:12:26Z",
     "symbol": "FATN",
     "alert_id": "FATN_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-04T19:56:46Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 1734.8800048828125,
+    "change_pct": 11.971085896657572,
+    "value": 1648.136,
+    "entry_price": 1554.989990234375,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
