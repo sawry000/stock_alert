@@ -1666,8 +1666,7 @@
     },
     "SMTC_SL_BREAK": {
       "last_fired": "2026-08-28T16:26:31Z"
-    },
-    "_confirm_SMTC_MTF_BULL": 1
+    }
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1685,8 +1684,7 @@
     "MXL_SL_BREAK": {
       "last_fired": "2026-07-24T14:41:42Z"
     },
-    "_confirm_MXL_MA_GOLD": 1,
-    "_confirm_MXL_MTF_BULL": 1
+    "_confirm_MXL_MA_GOLD": 1
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1731,8 +1729,7 @@
     },
     "VPG_SL_BREAK": {
       "last_fired": "2026-08-05T13:41:39Z"
-    },
-    "_confirm_VPG_MTF_BULL": 1
+    }
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1813,7 +1810,8 @@
     "RFIL_PCT_DROP": {
       "last_fired": "2026-08-20T06:26:33Z"
     },
-    "_confirm_RFIL_RSI_OS": 1
+    "_confirm_RFIL_RSI_OS": 1,
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1827,7 +1825,8 @@
     "last_sell_at": "2026-08-07T14:11:47Z",
     "SVCO_MA_DEATH": {
       "last_fired": "2026-07-07T13:34:24Z"
-    }
+    },
+    "_confirm_SVCO_MTF_BULL": 1
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -1905,7 +1904,8 @@
     "open_rr_ratio": 1.5,
     "open_alert_type": "mtf_alignment",
     "open_stop_is_trailing": true,
-    "open_trailing_last_notified_stop": 3.7715000271797177
+    "open_trailing_last_notified_stop": 3.7715000271797177,
+    "_confirm_NEOV_MTF_BULL": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -2015,7 +2015,8 @@
     "OFRM_MA_GOLD": {
       "last_fired": "2026-08-18T19:42:11Z"
     },
-    "_confirm_OFRM_MA_GOLD": 1
+    "_confirm_OFRM_MA_GOLD": 1,
+    "_confirm_OFRM_MTF_BULL": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2064,7 +2065,8 @@
     "last_sell_at": "2026-08-28T17:57:07Z",
     "PESI_PCT_DROP": {
       "last_fired": "2026-08-14T06:56:58Z"
-    }
+    },
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2134,7 +2136,8 @@
     "last_sell_at": "2026-08-19T13:57:18Z",
     "WDC_PCT_DROP": {
       "last_fired": "2026-08-06T14:13:08Z"
-    }
+    },
+    "_confirm_WDC_MTF_BULL": 1
   },
   "__universe_earnings_digest__": {
     "last_sent": "2026-09-08T02:12:28Z"
