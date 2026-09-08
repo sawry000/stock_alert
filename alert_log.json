@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-12T15:41:56Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 8.109999656677246,
-    "change_pct": 13.90448956007368,
-    "value": 13.90448956007368,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-12T15:42:18Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_TRAIL_ADJUST",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-08T19:26:27Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 164.49000549316406,
+    "change_pct": 13.040673401297505,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
