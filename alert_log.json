@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T08:42:22Z",
-    "symbol": "JFB",
-    "alert_id": "JFB_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.630000114440918,
-    "change_pct": 1.7582442734267727,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-13T13:12:10Z",
     "symbol": "NEOV",
     "alert_id": "NEOV_MTF_BULL",
@@ -8495,6 +8478,23 @@
     "pnl_pct": -10.2911,
     "days_held": 15.93,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-10T19:11:47Z",
+    "symbol": "OCC",
+    "alert_id": "OCC_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 14.194999694824219,
+    "change_pct": 6.922263443990803,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5

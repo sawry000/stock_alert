@@ -1686,8 +1686,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_SMTC_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -2069,7 +2068,8 @@
     "last_sell_at": "2026-08-28T17:57:07Z",
     "PESI_PCT_DROP": {
       "last_fired": "2026-08-14T06:56:58Z"
-    }
+    },
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2185,9 +2185,9 @@
   },
   "OCC": {
     "OCC_MTF_BULL": {
-      "last_fired": "2026-09-09T19:41:55Z"
+      "last_fired": "2026-09-10T19:11:47Z"
     },
-    "last_buy_at": "2026-09-09T19:41:55Z",
+    "last_buy_at": "2026-09-10T19:11:47Z",
     "last_sell_at": "2026-09-10T15:27:18Z",
     "OCC_SL_BREAK": {
       "last_fired": "2026-09-10T15:27:18Z"
@@ -2198,7 +2198,16 @@
     "OCC_PCT_DROP": {
       "last_fired": "2026-09-09T13:42:19Z"
     },
-    "_confirm_OCC_MTF_BULL": 1
+    "last_buy_reminder_at": "2026-09-10T19:11:47Z",
+    "open_entry": 14.194999694824219,
+    "open_time": "2026-09-10T19:11:47Z",
+    "open_peak": 14.194999694824219,
+    "open_stop": 12.7755,
+    "open_target": 16.3242,
+    "open_conviction": 5,
+    "open_conviction_total": 5,
+    "open_rr_ratio": 1.5,
+    "open_alert_type": "mtf_alignment"
   },
   "FATN": {
     "FATN_MTF_BULL": {
@@ -2250,7 +2259,8 @@
     "last_buy_at": "2026-09-04T08:27:34Z",
     "DHX_SL_BREAK": {
       "last_fired": "2026-09-04T13:42:33Z"
-    }
+    },
+    "_confirm_DHX_MTF_BULL": 1
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2312,7 +2322,8 @@
     },
     "FTK_MA_DEATH": {
       "last_fired": "2026-08-20T13:42:49Z"
-    }
+    },
+    "_confirm_FTK_MTF_BULL": 1
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2389,7 +2400,9 @@
       "last_fired": "2026-09-09T13:42:41Z"
     }
   },
-  "ECOR": {},
+  "ECOR": {
+    "_confirm_ECOR_MTF_BULL": 1
+  },
   "TLYS": {
     "TLYS_MTF_BULL": {
       "last_fired": "2026-09-07T22:43:01Z"
@@ -2404,7 +2417,6 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_TLYS_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   }
 }
