@@ -1686,7 +1686,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -2075,8 +2076,7 @@
     "last_sell_at": "2026-08-28T17:57:07Z",
     "PESI_PCT_DROP": {
       "last_fired": "2026-08-14T06:56:58Z"
-    },
-    "_confirm_PESI_MTF_BULL": 1
+    }
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2195,28 +2195,16 @@
       "last_fired": "2026-09-09T19:41:55Z"
     },
     "last_buy_at": "2026-09-09T19:41:55Z",
-    "last_sell_at": "2026-09-09T13:42:19Z",
+    "last_sell_at": "2026-09-10T15:27:18Z",
     "OCC_SL_BREAK": {
-      "last_fired": "2026-09-09T13:42:18Z"
+      "last_fired": "2026-09-10T15:27:18Z"
     },
     "OCC_MA_DEATH": {
       "last_fired": "2026-08-20T13:42:33Z"
     },
     "OCC_PCT_DROP": {
       "last_fired": "2026-09-09T13:42:19Z"
-    },
-    "last_buy_reminder_at": "2026-09-09T19:41:55Z",
-    "open_entry": 13.970000267028809,
-    "open_time": "2026-09-09T19:41:55Z",
-    "open_peak": 15.230500221252441,
-    "open_stop": 14.468975210189818,
-    "open_target": 16.0655,
-    "open_conviction": 4,
-    "open_conviction_total": 5,
-    "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "open_stop_is_trailing": true,
-    "open_trailing_last_notified_stop": 14.468975210189818
+    }
   },
   "FATN": {
     "FATN_MTF_BULL": {
@@ -2229,7 +2217,8 @@
     "last_sell_at": "2026-09-08T02:57:39Z",
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-08T02:57:39Z"
-    }
+    },
+    "_confirm_FATN_MTF_BULL": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2268,8 +2257,7 @@
     "last_buy_at": "2026-09-04T08:27:34Z",
     "DHX_SL_BREAK": {
       "last_fired": "2026-09-04T13:42:33Z"
-    },
-    "_confirm_DHX_MTF_BULL": 1
+    }
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2426,6 +2414,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TLYS_MTF_BULL": 1
   }
 }
