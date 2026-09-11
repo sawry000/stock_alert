@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-09-10T02:12:13Z"
+    "last_sent": "2026-09-11T02:12:05Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -1686,8 +1686,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_SMTC_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1715,8 +1714,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_MXL_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -2057,7 +2055,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-09-10T02:12:14Z"
+    "last_sent": "2026-09-11T02:12:06Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -2095,10 +2093,10 @@
     }
   },
   "__earnings_alert__": {
-    "last_sent": "2026-09-10T02:12:14Z"
+    "last_sent": "2026-09-11T02:12:06Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-09-10T02:12:15Z"
+    "last_sent": "2026-09-11T02:12:07Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -2147,7 +2145,7 @@
     "_confirm_WDC_MTF_BULL": 1
   },
   "__universe_earnings_digest__": {
-    "last_sent": "2026-09-10T02:12:15Z"
+    "last_sent": "2026-09-11T02:12:07Z"
   },
   "BLZE": {
     "BLZE_MA_GOLD": {
@@ -2260,7 +2258,8 @@
     "last_buy_at": "2026-09-04T08:27:34Z",
     "DHX_SL_BREAK": {
       "last_fired": "2026-09-04T13:42:33Z"
-    }
+    },
+    "_confirm_DHX_MTF_BULL": 1
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2322,7 +2321,8 @@
     },
     "FTK_MA_DEATH": {
       "last_fired": "2026-08-20T13:42:49Z"
-    }
+    },
+    "_confirm_FTK_MTF_BULL": 1
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2399,7 +2399,9 @@
       "last_fired": "2026-09-09T13:42:41Z"
     }
   },
-  "ECOR": {},
+  "ECOR": {
+    "_confirm_ECOR_MTF_BULL": 1
+  },
   "TLYS": {
     "TLYS_MTF_BULL": {
       "last_fired": "2026-09-07T22:43:01Z"
@@ -2414,7 +2416,6 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_TLYS_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   }
 }
