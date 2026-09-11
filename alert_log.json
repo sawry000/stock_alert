@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T14:27:21Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 18.399999618530273,
-    "change_pct": -12.380954197474889,
-    "value": 18.399999618530273,
-    "entry_price": 20.579999923706055,
-    "pnl_pct": -10.5928,
-    "days_held": 0.94,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-13T14:27:22Z",
     "symbol": "PESI",
     "alert_id": "PESI_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-09-11T19:56:31Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 31.790000915527344,
+    "change_pct": 8.12925481471886,
+    "value": 8.12925481471886,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 3,
+    "conviction_total": 4,
+    "rr_ratio": 1.5
   }
 ]
