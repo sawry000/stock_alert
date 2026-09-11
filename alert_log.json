@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T13:12:10Z",
-    "symbol": "NEOV",
-    "alert_id": "NEOV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.3399999141693115,
-    "change_pct": -2.569781087857903e-06,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-13T13:40:40Z",
     "symbol": "COHR",
     "alert_id": "COHR_SL_BREAK",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-11T08:12:05Z",
+    "symbol": "JFB",
+    "alert_id": "JFB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.945000171661377,
+    "change_pct": 0.0,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
