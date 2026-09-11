@@ -888,7 +888,7 @@
       "last_fired": "2026-06-29T02:09:25Z"
     },
     "FSLY_MTF_BULL": {
-      "last_fired": "2026-09-10T12:11:14Z"
+      "last_fired": "2026-09-11T08:26:25Z"
     },
     "FSLY_NEWS_POS": {
       "last_fired": "2026-06-28T00:05:12Z",
@@ -901,7 +901,7 @@
       "last_fired": "2026-06-22T14:49:21Z"
     },
     "open_position": true,
-    "last_buy_at": "2026-09-10T12:11:14Z",
+    "last_buy_at": "2026-09-11T08:26:25Z",
     "FSLY_MA_GOLD": {
       "last_fired": "2026-07-08T13:59:54Z"
     },
@@ -912,7 +912,7 @@
     "FSLY_MA_DEATH": {
       "last_fired": "2026-08-31T02:11:09Z"
     },
-    "last_buy_reminder_at": "2026-09-10T12:11:14Z",
+    "last_buy_reminder_at": "2026-09-11T08:26:25Z",
     "open_entry": 22.690000534057617,
     "open_time": "2026-09-09T15:56:10Z",
     "open_peak": 23.100000381469727,
@@ -1686,7 +1686,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1714,7 +1715,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_MXL_MTF_BULL": 1
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1806,7 +1808,8 @@
     },
     "SNDK_SL_BREAK": {
       "last_fired": "2026-08-24T13:41:35Z"
-    }
+    },
+    "_confirm_SNDK_MTF_BULL": 1
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -2257,8 +2260,7 @@
     "last_buy_at": "2026-09-04T08:27:34Z",
     "DHX_SL_BREAK": {
       "last_fired": "2026-09-04T13:42:33Z"
-    },
-    "_confirm_DHX_MTF_BULL": 1
+    }
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2320,8 +2322,7 @@
     },
     "FTK_MA_DEATH": {
       "last_fired": "2026-08-20T13:42:49Z"
-    },
-    "_confirm_FTK_MTF_BULL": 1
+    }
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2398,9 +2399,7 @@
       "last_fired": "2026-09-09T13:42:41Z"
     }
   },
-  "ECOR": {
-    "_confirm_ECOR_MTF_BULL": 1
-  },
+  "ECOR": {},
   "TLYS": {
     "TLYS_MTF_BULL": {
       "last_fired": "2026-09-07T22:43:01Z"
@@ -2415,6 +2414,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TLYS_MTF_BULL": 1
   }
 }
