@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-13T16:27:11Z",
-    "symbol": "NEOV",
-    "alert_id": "NEOV_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 3.4100000858306885,
-    "change_pct": 2.0958109530146296,
-    "value": 3.4100000858306885,
-    "entry_price": 3.325000047683716,
-    "pnl_pct": 2.5564,
-    "days_held": 0.99,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-13T16:57:44Z",
     "symbol": "CVV",
     "alert_id": "CVV_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-12T05:57:13Z",
+    "symbol": "CVV",
+    "alert_id": "CVV_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.679999828338623,
+    "change_pct": -13.304437991578249,
+    "value": -13.304437991578249,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
