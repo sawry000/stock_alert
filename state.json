@@ -792,14 +792,14 @@
       "last_fired": "2026-06-29T00:04:27Z"
     },
     "VICR_PCT_DROP": {
-      "last_fired": "2026-08-19T17:11:13Z"
+      "last_fired": "2026-09-14T14:56:14Z"
     },
     "open_position": true,
     "VICR_MTF_BULL": {
       "last_fired": "2026-08-19T08:11:18Z"
     },
     "last_buy_at": "2026-08-19T08:11:18Z",
-    "last_sell_at": "2026-08-19T17:11:13Z",
+    "last_sell_at": "2026-09-14T14:56:14Z",
     "VICR_MA_DEATH": {
       "last_fired": "2026-08-19T13:56:16Z"
     },
@@ -1234,7 +1234,7 @@
       "last_fired": "2026-06-25T16:13:37Z"
     },
     "MRAM_PCT_DROP": {
-      "last_fired": "2026-08-18T14:56:35Z"
+      "last_fired": "2026-09-14T14:56:05Z"
     },
     "open_position": false,
     "MRAM_MA_DEATH": {
@@ -1246,7 +1246,7 @@
     "MRAM_CP_BULL": {
       "last_fired": "2026-06-25T16:13:37Z"
     },
-    "last_sell_at": "2026-09-01T14:25:59Z",
+    "last_sell_at": "2026-09-14T14:56:05Z",
     "MRAM_MTF_BULL": {
       "last_fired": "2026-08-19T08:11:08Z"
     },
@@ -2053,7 +2053,8 @@
     "last_sell_at": "2026-08-28T17:57:07Z",
     "PESI_PCT_DROP": {
       "last_fired": "2026-08-14T06:56:58Z"
-    }
+    },
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2248,8 +2249,7 @@
     "last_buy_at": "2026-09-04T08:27:34Z",
     "DHX_SL_BREAK": {
       "last_fired": "2026-09-04T13:42:33Z"
-    },
-    "_confirm_DHX_MTF_BULL": 1
+    }
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2311,8 +2311,7 @@
     },
     "FTK_MA_DEATH": {
       "last_fired": "2026-08-20T13:42:49Z"
-    },
-    "_confirm_FTK_MTF_BULL": 1
+    }
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2392,9 +2391,7 @@
       "last_fired": "2026-09-09T13:42:41Z"
     }
   },
-  "ECOR": {
-    "_confirm_ECOR_MTF_BULL": 1
-  },
+  "ECOR": {},
   "TLYS": {
     "TLYS_MTF_BULL": {
       "last_fired": "2026-09-07T22:43:01Z"
@@ -2409,7 +2406,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TLYS_MTF_BULL": 1
   },
   "AEYE": {
     "AEYE_SCORE_65": {
