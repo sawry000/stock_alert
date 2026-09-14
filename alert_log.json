@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-16T02:11:16Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 5.880000114440918,
-    "change_pct": 18.548389404050766,
-    "value": 18.548389404050766,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-16T02:11:47Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-14T23:10:51Z",
+    "symbol": "MRAM",
+    "alert_id": "MRAM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 14.729999542236328,
+    "change_pct": -8.915522438835954,
+    "value": -8.915522438835954,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
