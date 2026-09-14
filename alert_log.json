@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-14T04:12:05Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 15.380000114440918,
-    "change_pct": 1.585205511498794,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-14T06:56:58Z",
     "symbol": "PESI",
     "alert_id": "PESI_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-14T12:41:33Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 4.849999904632568,
+    "change_pct": 4.301073217904688,
+    "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
