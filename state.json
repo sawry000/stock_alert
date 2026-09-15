@@ -1801,12 +1801,12 @@
     "RFIL_MA_DEATH": {
       "last_fired": "2026-07-08T13:36:08Z"
     },
-    "last_sell_at": "2026-09-15T06:11:32Z",
+    "last_sell_at": "2026-09-15T16:11:33Z",
     "RFIL_SL_BREAK": {
       "last_fired": "2026-08-19T14:11:36Z"
     },
     "RFIL_PCT_DROP": {
-      "last_fired": "2026-09-15T06:11:32Z"
+      "last_fired": "2026-09-15T16:11:33Z"
     },
     "_confirm_RFIL_MTF_BULL": 1,
     "_confirm_RFIL_RSI_OS": 1
@@ -2254,14 +2254,16 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_DHX_MTF_BULL": 1
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
       "last_fired": "2026-08-13T02:12:35Z"
     },
     "last_sell_at": "2026-08-13T02:12:35Z",
-    "_confirm_ATEX_MTF_BULL": 1
+    "_confirm_ATEX_MTF_BULL": 1,
+    "_confirm_ATEX_RSI_OS": 1
   },
   "JFB": {
     "JFB_MTF_BULL": {
@@ -2316,8 +2318,7 @@
     },
     "FTK_MA_DEATH": {
       "last_fired": "2026-08-20T13:42:49Z"
-    },
-    "_confirm_FTK_MTF_BULL": 1
+    }
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2397,7 +2398,9 @@
       "last_fired": "2026-09-09T13:42:41Z"
     }
   },
-  "ECOR": {},
+  "ECOR": {
+    "_confirm_ECOR_MTF_BULL": 1
+  },
   "TLYS": {
     "TLYS_MTF_BULL": {
       "last_fired": "2026-09-07T22:43:01Z"
