@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-17T14:12:27Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 1777.5799560546875,
-    "change_pct": 7.212301330198281,
-    "value": 1688.701,
-    "entry_price": 1545.9200439453125,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-17T14:26:06Z",
     "symbol": "NLST",
     "alert_id": "NLST_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-09-15T20:27:16Z",
+    "symbol": "ECOR",
+    "alert_id": "ECOR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 10.050000190734863,
+    "change_pct": 2.9713134296604866,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
