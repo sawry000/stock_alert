@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-17T14:26:06Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 6.940000057220459,
-    "change_pct": 18.0272118574908,
-    "value": 6.593,
-    "entry_price": 5.889999866485596,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-17T14:26:08Z",
     "symbol": "NLST",
     "alert_id": "NLST_TAKE_PROFIT",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-15T23:26:42Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 6.980000019073486,
+    "change_pct": -16.1057690015206,
+    "value": -16.1057690015206,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
