@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-09-14T02:13:04Z"
+    "last_sent": "2026-09-15T02:12:20Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -1744,7 +1744,8 @@
     },
     "TMCI_SL_BREAK": {
       "last_fired": "2026-09-10T18:26:24Z"
-    }
+    },
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1948,8 +1949,7 @@
     "BLIN_SL_BREAK": {
       "last_fired": "2026-08-14T15:42:37Z"
     },
-    "_confirm_BLIN_MTF_BULL": 1,
-    "_confirm_BLIN_RSI_OS": 1
+    "_confirm_BLIN_MTF_BULL": 1
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
@@ -2038,7 +2038,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-09-14T02:13:05Z"
+    "last_sent": "2026-09-15T02:12:20Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -2076,10 +2076,10 @@
     }
   },
   "__earnings_alert__": {
-    "last_sent": "2026-09-14T02:13:05Z"
+    "last_sent": "2026-09-15T02:12:21Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-09-14T02:13:06Z"
+    "last_sent": "2026-09-15T02:12:22Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -2128,7 +2128,7 @@
     "_confirm_WDC_MTF_BULL": 1
   },
   "__universe_earnings_digest__": {
-    "last_sent": "2026-09-14T02:13:06Z"
+    "last_sent": "2026-09-15T02:12:22Z"
   },
   "BLZE": {
     "BLZE_MA_GOLD": {
@@ -2222,8 +2222,7 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    },
-    "_confirm_CVV_RSI_OS": 1
+    }
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2389,7 +2388,9 @@
       "last_fired": "2026-09-09T13:42:41Z"
     }
   },
-  "ECOR": {},
+  "ECOR": {
+    "_confirm_ECOR_MTF_BULL": 1
+  },
   "TLYS": {
     "TLYS_MTF_BULL": {
       "last_fired": "2026-09-07T22:43:01Z"
@@ -2406,8 +2407,7 @@
     "open_rr_ratio": 1.5,
     "open_alert_type": "mtf_alignment",
     "open_stop_is_trailing": true,
-    "open_trailing_last_notified_stop": 4.626499891281128,
-    "_confirm_TLYS_MTF_BULL": 1
+    "open_trailing_last_notified_stop": 4.626499891281128
   },
   "AEYE": {
     "AEYE_SCORE_65": {
@@ -2426,7 +2426,8 @@
     "open_alert_type": "alert_score",
     "AEYE_MTF_BULL": {
       "last_fired": "2026-09-14T02:27:51Z"
-    }
+    },
+    "_confirm_AEYE_MTF_BULL": 1
   },
   "CSAI": {}
 }
