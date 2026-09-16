@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-17T14:58:03Z",
-    "symbol": "AGPU",
-    "alert_id": "AGPU_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 9.604999542236328,
-    "change_pct": 16.002409930390446,
-    "value": 3.0127909353017506,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-17T14:58:04Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_PCT_UP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 3,
     "conviction_total": 4,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-16T14:11:33Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 4.53000020980835,
+    "change_pct": -1.0916984758002284,
+    "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
