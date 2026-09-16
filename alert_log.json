@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-17T14:42:11Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 1789.97998046875,
-    "change_pct": 7.960191825618216,
-    "value": 1777.8081,
-    "entry_price": 1545.9200439453125,
-    "pnl_pct": 15.7874,
-    "days_held": 3.82,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-17T14:58:03Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_VOL_3X",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-09-16T09:56:31Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 31.360000610351562,
+    "change_pct": 0.2237155971606371,
+    "value": 3.8673718443427436,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 3,
+    "conviction_total": 4,
+    "rr_ratio": 1.5
   }
 ]
