@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-17T21:42:48Z",
-    "symbol": "FTK",
-    "alert_id": "FTK_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 28.65999984741211,
-    "change_pct": -20.011164255059697,
-    "value": -20.011164255059697,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-17T22:11:36Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 4,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-17T08:11:01Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 183.91000366210938,
+    "change_pct": -9.84803742053462,
+    "value": -9.84803742053462,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
