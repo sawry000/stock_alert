@@ -1456,9 +1456,9 @@
     },
     "open_position": false,
     "FPS_PCT_UP": {
-      "last_fired": "2026-09-15T13:56:20Z"
+      "last_fired": "2026-09-17T06:11:12Z"
     },
-    "last_buy_at": "2026-09-16T09:56:31Z",
+    "last_buy_at": "2026-09-17T06:11:12Z",
     "FPS_MA_DEATH": {
       "last_fired": "2026-07-06T00:09:26Z"
     },
@@ -1466,7 +1466,7 @@
     "FPS_VOL_3X": {
       "last_fired": "2026-09-16T09:56:31Z"
     },
-    "last_buy_reminder_at": "2026-09-16T09:56:31Z",
+    "last_buy_reminder_at": "2026-09-17T06:11:12Z",
     "open_entry": 32.7400016784668,
     "open_time": "2026-09-15T13:56:20Z",
     "open_peak": 36.06999969482422,
@@ -1736,8 +1736,7 @@
     },
     "ZVIA_PCT_DROP": {
       "last_fired": "2026-09-10T07:56:25Z"
-    },
-    "_confirm_ZVIA_MTF_BULL": 1
+    }
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1793,8 +1792,7 @@
     "_confirm_TKNO_MA_GOLD": 1,
     "TKNO_SL_BREAK": {
       "last_fired": "2026-08-14T14:26:53Z"
-    },
-    "_confirm_TKNO_MTF_BULL": 1
+    }
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1830,7 +1828,8 @@
     "RFIL_PCT_DROP": {
       "last_fired": "2026-09-16T02:11:46Z"
     },
-    "_confirm_RFIL_MTF_BULL": 1
+    "_confirm_RFIL_MTF_BULL": 1,
+    "_confirm_RFIL_RSI_OS": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1978,8 +1977,7 @@
     "BLIN_SL_BREAK": {
       "last_fired": "2026-08-14T15:42:37Z"
     },
-    "_confirm_BLIN_MTF_BULL": 1,
-    "_confirm_BLIN_RSI_OS": 1
+    "_confirm_BLIN_MTF_BULL": 1
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
@@ -2253,7 +2251,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2283,8 +2282,7 @@
       "last_fired": "2026-08-13T02:12:35Z"
     },
     "last_sell_at": "2026-08-13T02:12:35Z",
-    "_confirm_ATEX_MTF_BULL": 1,
-    "_confirm_ATEX_RSI_OS": 1
+    "_confirm_ATEX_MTF_BULL": 1
   },
   "JFB": {
     "JFB_MTF_BULL": {
@@ -2339,9 +2337,7 @@
     },
     "FTK_MA_DEATH": {
       "last_fired": "2026-08-20T13:42:49Z"
-    },
-    "_confirm_FTK_MA_GOLD": 1,
-    "_confirm_FTK_MTF_BULL": 1
+    }
   },
   "IQST": {
     "IQST_PCT_DROP": {
