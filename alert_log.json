@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-19T08:11:09Z",
-    "symbol": "WYFI",
-    "alert_id": "WYFI_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 27.06999969482422,
-    "change_pct": 25.090107829911734,
-    "value": 25.090107829911734,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-19T08:11:16Z",
     "symbol": "VICR",
     "alert_id": "VICR_MA_GOLD",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-18T19:41:27Z",
+    "symbol": "MXL",
+    "alert_id": "MXL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 80.3949966430664,
+    "change_pct": 7.595016920592087,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
