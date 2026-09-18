@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-18T16:40:54Z",
-    "symbol": "XMTR",
-    "alert_id": "XMTR_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 87.54000091552734,
-    "change_pct": -2.408025735198059,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-18T16:55:46Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-18T02:11:00Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 104.95,
+    "change_pct": 9.608355091383816,
+    "value": 99.7025,
+    "entry_price": 96.40499877929688,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
