@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-19T08:11:16Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_MA_GOLD",
-    "type": "ma_crossover",
-    "action": "BUY",
-    "price": 242.41000366210938,
-    "change_pct": 2.041591034732014,
-    "value": 0.103,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-19T08:11:18Z",
     "symbol": "VICR",
     "alert_id": "VICR_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-18T19:56:36Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 184.61000061035156,
+    "change_pct": 2.7895326338260404,
+    "value": 175.3795,
+    "entry_price": 167.14999389648438,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
