@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-19T08:11:08Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 18.450000762939453,
-    "change_pct": 1.5963610494405496,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-19T08:11:09Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_UP",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-18T19:12:11Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 1.475000023841858,
+    "change_pct": 7.132482847316814,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
