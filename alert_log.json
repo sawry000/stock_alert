@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T15:10:55Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 8.694999694824219,
-    "change_pct": 8.146762373435568,
-    "value": 8.2602,
-    "entry_price": 8.005000114440918,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-20T15:11:24Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-21T17:56:40Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.199999809265137,
+    "change_pct": 5.534103079345395,
+    "value": 7.79,
+    "entry_price": 7.420000076293945,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
