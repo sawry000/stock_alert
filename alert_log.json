@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-19T14:12:05Z",
-    "symbol": "JFB",
-    "alert_id": "JFB_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 4.050000190734863,
-    "change_pct": -1.982134351391288,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-19T17:11:13Z",
     "symbol": "VICR",
     "alert_id": "VICR_PCT_DROP",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-21T08:42:11Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 12.130000114440918,
+    "change_pct": 9.434535629608654e-07,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
