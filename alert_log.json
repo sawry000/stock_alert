@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-20T23:25:56Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_SCORE_60",
-    "type": "alert_score",
-    "action": "BUY",
-    "price": 8.989999771118164,
-    "change_pct": 11.81591755122096,
-    "value": 63,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-21T13:26:23Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -8495,6 +8478,23 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-22T08:11:19Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 223.89999389648438,
+    "change_pct": -10.579498423865017,
+    "value": -10.579498423865017,
+    "entry_price": 213.3000030517578,
+    "pnl_pct": 4.9695,
+    "days_held": 4.64,
+    "entry_alert_type": "mtf_alignment",
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
