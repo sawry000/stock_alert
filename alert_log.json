@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-21T15:41:00Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 33.59000015258789,
-    "change_pct": 6.129542346249265,
-    "value": 31.9105,
-    "entry_price": 31.09000015258789,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-21T15:56:09Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-09-22T14:41:41Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 1.3600000143051147,
+    "change_pct": -2.8571418353489406,
+    "value": 1.3600000143051147,
+    "entry_price": 1.475000023841858,
+    "pnl_pct": -7.7966,
+    "days_held": 3.81,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
