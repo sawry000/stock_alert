@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-21T13:26:23Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 31.860000610351562,
-    "change_pct": 0.6635090374456997,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-21T13:41:30Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_TRAIL_ADJUST",
@@ -8496,6 +8479,23 @@
     "days_held": 4.64,
     "entry_alert_type": "mtf_alignment",
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-22T11:58:15Z",
+    "symbol": "BSEM",
+    "alert_id": "BSEM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.400000095367432,
+    "change_pct": -2.004452218988164,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
