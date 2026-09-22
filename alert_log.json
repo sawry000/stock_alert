@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T13:41:11Z",
-    "symbol": "ASPN",
-    "alert_id": "ASPN_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 4.972099781036377,
-    "change_pct": -5.80111435431148,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-24T13:41:17Z",
     "symbol": "BOBS",
     "alert_id": "BOBS_STAGNANT_EXIT",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-09-22T19:42:56Z",
+    "symbol": "BSEM",
+    "alert_id": "BSEM_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 4.210000038146973,
+    "change_pct": -6.236079328575224,
+    "value": 4.210000038146973,
+    "entry_price": 4.739999771118164,
+    "pnl_pct": -11.1814,
+    "days_held": 2.72,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
