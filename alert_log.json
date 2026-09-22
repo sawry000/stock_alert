@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-23T02:11:50Z",
-    "symbol": "SMTC",
-    "alert_id": "SMTC_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 124.08999633789062,
-    "change_pct": -1.3292629330784966,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-23T02:12:18Z",
     "symbol": "AMBA",
     "alert_id": "AMBA_MA_DEATH",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-22T17:42:08Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 3.369999885559082,
+    "change_pct": -0.7626877835306726,
+    "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
