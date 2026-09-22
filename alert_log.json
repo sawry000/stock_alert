@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-21T14:41:20Z",
-    "symbol": "MRAM",
-    "alert_id": "MRAM_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 16.552000045776367,
-    "change_pct": -3.3256623536838927,
-    "value": 16.552000045776367,
-    "entry_price": 18.450000762939453,
-    "pnl_pct": -10.2873,
-    "days_held": 2.27,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-21T14:42:26Z",
     "symbol": "NEOV",
     "alert_id": "NEOV_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-22T13:57:56Z",
+    "symbol": "ECOR",
+    "alert_id": "ECOR_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 12.2253999710083,
+    "change_pct": 0.2081964836746024,
+    "value": 11.6141,
+    "entry_price": 11.140000343322754,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
