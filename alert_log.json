@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-25T13:40:47Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 1.5499999523162842,
-    "change_pct": 221.44337459898057,
-    "value": 102.05303670906997,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-25T13:40:48Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_UP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-23T16:56:41Z",
+    "symbol": "PESI",
+    "alert_id": "PESI_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 15.739999771118164,
+    "change_pct": -4.779190737337187,
+    "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
