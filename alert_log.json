@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-25T13:40:48Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 1.5499999523162842,
-    "change_pct": 221.44337459898057,
-    "value": 221.44337459898057,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-25T13:42:48Z",
     "symbol": "JFB",
     "alert_id": "JFB_MA_DEATH",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-09-23T17:26:13Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 272.5201110839844,
+    "change_pct": 1.6663891412582486,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
