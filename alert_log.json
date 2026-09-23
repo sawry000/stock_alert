@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T15:57:21Z",
-    "symbol": "GGRP",
-    "alert_id": "GGRP_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 0.931,
-    "change_pct": 4.606741573033712,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-24T16:41:53Z",
     "symbol": "LHAI",
     "alert_id": "LHAI_PCT_UP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-23T14:26:34Z",
+    "symbol": "SVCO",
+    "alert_id": "SVCO_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.140000343322754,
+    "change_pct": 0.867414415399673,
+    "value": 7.733,
+    "entry_price": 7.414999961853027,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
