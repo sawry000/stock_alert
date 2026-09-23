@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-26T13:57:22Z",
-    "symbol": "OFRM",
-    "alert_id": "OFRM_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 16.809999465942383,
-    "change_pct": -0.1781504397720727,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-26T14:12:09Z",
     "symbol": "VELO",
     "alert_id": "VELO_MA_DEATH",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-23T19:56:00Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 285.1099853515625,
+    "change_pct": 6.363169321758964,
+    "value": 270.8545,
+    "entry_price": 254.49000549316406,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
