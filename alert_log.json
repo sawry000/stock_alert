@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-27T19:26:21Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 6.25,
-    "change_pct": 8.50694013276603,
-    "value": 3.3707920528964177,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-27T19:40:57Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-24T18:40:59Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 126.0,
+    "change_pct": 9.565217391304348,
+    "value": 119.7,
+    "entry_price": 115.86000061035156,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
