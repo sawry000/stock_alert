@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-27T18:42:53Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 19.18000030517578,
-    "change_pct": 5.733188010891845,
-    "value": 18.221,
-    "entry_price": 17.709999084472656,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-27T19:26:21Z",
     "symbol": "NLST",
     "alert_id": "NLST_VOL_3X",
@@ -8496,6 +8479,23 @@
     "days_held": 0.66,
     "entry_alert_type": "mtf_alignment",
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-24T18:26:00Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 29.385000228881836,
+    "change_pct": 3.3925865172051317,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
