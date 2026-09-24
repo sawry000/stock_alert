@@ -1803,8 +1803,7 @@
     },
     "MXL_MA_GOLD": {
       "last_fired": "2026-09-16T20:11:19Z"
-    },
-    "_confirm_MXL_MTF_BULL": 1
+    }
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1848,8 +1847,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_VPG_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1869,7 +1867,8 @@
     },
     "TMCI_SL_BREAK": {
       "last_fired": "2026-09-10T18:26:24Z"
-    }
+    },
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -2073,7 +2072,8 @@
     },
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
-    }
+    },
+    "_confirm_CDNL_RSI_OS": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2107,8 +2107,7 @@
     "_confirm_BLIN_MTF_BULL": 1,
     "BLIN_PCT_DROP": {
       "last_fired": "2026-09-21T15:27:00Z"
-    },
-    "_confirm_BLIN_RSI_OS": 1
+    }
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
@@ -2344,12 +2343,12 @@
       "last_fired": "2026-09-10T19:11:47Z"
     },
     "last_buy_at": "2026-09-10T19:11:47Z",
-    "last_sell_at": "2026-09-14T15:12:03Z",
+    "last_sell_at": "2026-09-24T13:41:53Z",
     "OCC_SL_BREAK": {
       "last_fired": "2026-09-10T15:27:18Z"
     },
     "OCC_MA_DEATH": {
-      "last_fired": "2026-08-20T13:42:33Z"
+      "last_fired": "2026-09-24T13:41:53Z"
     },
     "OCC_PCT_DROP": {
       "last_fired": "2026-09-14T15:12:03Z"
@@ -2396,7 +2395,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2482,7 +2482,8 @@
     "FTK_MA_DEATH": {
       "last_fired": "2026-08-20T13:42:49Z"
     },
-    "_confirm_FTK_MA_GOLD": 1
+    "_confirm_FTK_MA_GOLD": 1,
+    "_confirm_FTK_MTF_BULL": 1
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2577,7 +2578,7 @@
     "last_buy_reminder_at": "2026-09-24T13:27:22Z",
     "open_entry": 11.420000076293945,
     "open_time": "2026-09-24T13:27:22Z",
-    "open_peak": 11.420000076293945,
+    "open_peak": 11.505000114440918,
     "open_stop": 10.278,
     "open_target": 13.133,
     "open_conviction": 5,
