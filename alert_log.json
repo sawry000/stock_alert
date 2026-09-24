@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-28T08:26:25Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 6.03000020980835,
-    "change_pct": 0.6677831353647645,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-28T13:12:53Z",
     "symbol": "JFB",
     "alert_id": "JFB_MA_GOLD",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-24T19:26:04Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 127.41999816894531,
+    "change_pct": 10.799998407778533,
+    "value": 121.049,
+    "entry_price": 115.86000061035156,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
