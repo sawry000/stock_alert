@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-27T13:57:51Z",
-    "symbol": "OFRM",
-    "alert_id": "OFRM_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 16.270000457763672,
-    "change_pct": -3.670808420582171,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-27T16:58:29Z",
     "symbol": "JFB",
     "alert_id": "JFB_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-24T16:26:20Z",
+    "symbol": "LTRX",
+    "alert_id": "LTRX_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 6.559999942779541,
+    "change_pct": 1.391034664289664,
+    "value": 6.232,
+    "entry_price": 6.0,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
