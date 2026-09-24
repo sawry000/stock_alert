@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-28T13:42:39Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 19.389999389648438,
-    "change_pct": 0.4663180810799834,
-    "value": 18.4205,
-    "entry_price": 17.709999084472656,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-08-28T14:11:15Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MA_DEATH",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-24T22:10:42Z",
+    "symbol": "TYGO",
+    "alert_id": "TYGO_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 0.8799999952316284,
+    "change_pct": -8.694750442869017,
+    "value": -8.694750442869017,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
