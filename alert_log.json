@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T13:57:13Z",
-    "symbol": "NEOV",
-    "alert_id": "NEOV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.047999858856201,
-    "change_pct": 20.835816682274658,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-08-31T14:11:01Z",
     "symbol": "NLST",
     "alert_id": "NLST_TRAIL_ADJUST",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-25T19:57:30Z",
+    "symbol": "BSEM",
+    "alert_id": "BSEM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.050000190734863,
+    "change_pct": 4.381448214816067,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
