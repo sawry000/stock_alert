@@ -2006,8 +2006,7 @@
     },
     "NEOV_PCT_DROP": {
       "last_fired": "2026-09-24T14:42:04Z"
-    },
-    "_confirm_NEOV_RSI_OS": 1
+    }
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -2042,8 +2041,7 @@
     },
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
-    },
-    "_confirm_CDNL_RSI_OS": 1
+    }
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2208,7 +2206,8 @@
     },
     "AGPU_MTF_BULL": {
       "last_fired": "2026-09-22T04:57:15Z"
-    }
+    },
+    "_confirm_AGPU_MTF_BULL": 1
   },
   "__earnings_alert__": {
     "last_sent": "2026-09-28T02:12:43Z"
@@ -2322,7 +2321,8 @@
     },
     "OCC_PCT_DROP": {
       "last_fired": "2026-09-14T15:12:03Z"
-    }
+    },
+    "_confirm_OCC_MTF_BULL": 1
   },
   "FATN": {
     "FATN_MTF_BULL": {
@@ -2453,8 +2453,7 @@
     "FTK_MA_DEATH": {
       "last_fired": "2026-08-20T13:42:49Z"
     },
-    "_confirm_FTK_MA_GOLD": 1,
-    "_confirm_FTK_MTF_BULL": 1
+    "_confirm_FTK_MA_GOLD": 1
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2569,8 +2568,7 @@
     "TLYS_SL_BREAK": {
       "last_fired": "2026-09-15T14:27:36Z"
     },
-    "last_sell_at": "2026-09-15T14:27:36Z",
-    "_confirm_TLYS_MTF_BULL": 1
+    "last_sell_at": "2026-09-15T14:27:36Z"
   },
   "AEYE": {
     "AEYE_SCORE_65": {
