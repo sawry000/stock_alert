@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T17:42:36Z",
-    "symbol": "LHAI",
-    "alert_id": "LHAI_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 1.0801000595092773,
-    "change_pct": 33.312769625929064,
-    "value": 1.0261,
-    "entry_price": 1.0,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-02T17:57:21Z",
     "symbol": "LHAI",
     "alert_id": "LHAI_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-09-29T19:42:31Z",
+    "symbol": "DHX",
+    "alert_id": "DHX_STAGNANT_EXIT",
+    "type": "stagnant_exit",
+    "action": "SELL",
+    "price": 4.862400054931641,
+    "change_pct": 3.9129796108742987,
+    "value": 15.0,
+    "entry_price": 4.829999923706055,
+    "pnl_pct": 0.6708,
+    "days_held": 15.01,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
