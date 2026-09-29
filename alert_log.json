@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T13:42:33Z",
-    "symbol": "LHAI",
-    "alert_id": "LHAI_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 1.159999966621399,
-    "change_pct": 43.17452068889149,
-    "value": 1.0335,
-    "entry_price": 0.8986999988555908,
-    "pnl_pct": 29.0753,
-    "days_held": 8.88,
-    "entry_alert_type": "percent_change",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-02T13:42:57Z",
     "symbol": "DHX",
     "alert_id": "DHX_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-29T03:57:02Z",
+    "symbol": "CSAI",
+    "alert_id": "CSAI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 2.609999895095825,
+    "change_pct": -26.06232591796529,
+    "value": -26.06232591796529,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
