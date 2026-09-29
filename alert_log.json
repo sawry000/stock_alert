@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T15:12:56Z",
-    "symbol": "JFB",
-    "alert_id": "JFB_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 4.942299842834473,
-    "change_pct": 0.45324883809903915,
-    "value": 4.942299842834473,
-    "entry_price": 4.729899883270264,
-    "pnl_pct": 4.4906,
-    "days_held": 5.93,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-02T15:27:06Z",
     "symbol": "LHAI",
     "alert_id": "LHAI_VOL_3X",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-29T14:55:56Z",
+    "symbol": "WGS",
+    "alert_id": "WGS_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 83.08999633789062,
+    "change_pct": -3.3050199721975817,
+    "value": 83.08999633789062,
+    "entry_price": 92.71499633789062,
+    "pnl_pct": -10.3813,
+    "days_held": 5.01,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
