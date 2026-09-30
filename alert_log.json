@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T18:43:11Z",
-    "symbol": "DHX",
-    "alert_id": "DHX_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 4.670000076293945,
-    "change_pct": 2.412282374867231,
-    "value": 4.4365,
-    "entry_price": 4.230000019073486,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-02T18:43:29Z",
     "symbol": "INBS",
     "alert_id": "INBS_SL_BREAK",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-30T11:43:02Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 12.550000190734863,
+    "change_pct": -2.7131768160088146,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
