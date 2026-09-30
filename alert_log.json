@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T02:56:03Z",
-    "symbol": "NLST",
-    "alert_id": "NLST_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 5.53000020980835,
-    "change_pct": 7.378644850647557,
-    "value": 3.429092810933112,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-04T08:26:52Z",
     "symbol": "SNDK",
     "alert_id": "SNDK_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-30T23:57:25Z",
+    "symbol": "BSEM",
+    "alert_id": "BSEM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 3.0899999141693115,
+    "change_pct": -20.76923297001765,
+    "value": -20.76923297001765,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
