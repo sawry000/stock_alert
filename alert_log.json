@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T19:40:46Z",
-    "symbol": "LNAI",
-    "alert_id": "LNAI_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 2.4000000953674316,
-    "change_pct": 11.627911412438685,
-    "value": 11.627911412438685,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-02T19:57:32Z",
     "symbol": "DHX",
     "alert_id": "DHX_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-30T15:42:25Z",
+    "symbol": "BSEM",
+    "alert_id": "BSEM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 3.177500009536743,
+    "change_pct": -18.52564078110915,
+    "value": -18.52564078110915,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
