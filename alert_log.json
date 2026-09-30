@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T19:27:10Z",
-    "symbol": "LHAI",
-    "alert_id": "LHAI_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 1.059999942779541,
-    "change_pct": 30.83188629715391,
-    "value": 1.059999942779541,
-    "entry_price": 1.0,
-    "pnl_pct": 6.0,
-    "days_held": 0.17,
-    "entry_alert_type": "volume_spike",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-02T19:40:46Z",
     "symbol": "LNAI",
     "alert_id": "LNAI_PCT_UP",
@@ -8497,6 +8480,23 @@
     "entry_alert_type": "mtf_alignment",
     "conviction_score": 3,
     "conviction_total": 4,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-30T15:25:48Z",
+    "symbol": "INOD",
+    "alert_id": "INOD_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 65.25,
+    "change_pct": -2.771569065713008,
+    "value": 65.25,
+    "entry_price": 71.03990173339844,
+    "pnl_pct": -8.1502,
+    "days_held": 6.96,
+    "entry_alert_type": "volume_spike",
+    "conviction_score": 5,
+    "conviction_total": 5,
     "rr_ratio": 1.5
   }
 ]
