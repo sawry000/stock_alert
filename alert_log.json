@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T15:13:17Z",
-    "symbol": "JFB",
-    "alert_id": "JFB_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.03000020980835,
-    "change_pct": 2.6530655062928417,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-04T02:56:03Z",
     "symbol": "NLST",
     "alert_id": "NLST_VOL_3X",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-09-30T20:12:14Z",
+    "symbol": "FTK",
+    "alert_id": "FTK_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 29.34000015258789,
+    "change_pct": 2.9473689564487393,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
