@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T20:57:23Z",
-    "symbol": "LHAI",
-    "alert_id": "LHAI_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 1.100000023841858,
-    "change_pct": 35.7689488819869,
-    "value": 35.7689488819869,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-02T23:11:08Z",
     "symbol": "NLST",
     "alert_id": "NLST_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-30T17:40:43Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1.398300051689148,
+    "change_pct": -20.999997079709157,
+    "value": -20.999997079709157,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
