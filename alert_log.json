@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T14:12:24Z",
-    "symbol": "SMTC",
-    "alert_id": "SMTC_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 127.45999908447266,
-    "change_pct": -4.766886517877576,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-03T15:13:17Z",
     "symbol": "JFB",
     "alert_id": "JFB_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-09-30T19:56:07Z",
+    "symbol": "BLLN",
+    "alert_id": "BLLN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 105.83999633789062,
+    "change_pct": -10.441702201818735,
+    "value": -10.441702201818735,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
