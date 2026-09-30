@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T20:57:22Z",
-    "symbol": "LHAI",
-    "alert_id": "LHAI_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 1.100000023841858,
-    "change_pct": 35.7689488819869,
-    "value": 11.468599587570761,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-02T20:57:23Z",
     "symbol": "LHAI",
     "alert_id": "LHAI_PCT_UP",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-09-30T16:57:33Z",
+    "symbol": "AGPU",
+    "alert_id": "AGPU_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 11.390000343322754,
+    "change_pct": -11.705423695172453,
+    "value": 11.390000343322754,
+    "entry_price": 12.701199531555176,
+    "pnl_pct": -10.3234,
+    "days_held": 1.07,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
