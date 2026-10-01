@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T15:55:39Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 318.04998779296875,
-    "change_pct": 13.419759321502953,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-04T16:11:55Z",
     "symbol": "SNDK",
     "alert_id": "SNDK_TRAIL_ADJUST",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-01T17:56:08Z",
+    "symbol": "VICR",
+    "alert_id": "VICR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 319.5299987792969,
+    "change_pct": 0.8776633873076164,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
