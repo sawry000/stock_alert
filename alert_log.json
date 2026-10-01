@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T16:11:55Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 1698.1400146484375,
-    "change_pct": 9.599846046755996,
-    "value": 1613.233,
-    "entry_price": 1554.989990234375,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-04T16:26:39Z",
     "symbol": "SNDK",
     "alert_id": "SNDK_TRAIL_ADJUST",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-01T18:41:31Z",
+    "symbol": "SVCO",
+    "alert_id": "SVCO_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 9.220000267028809,
+    "change_pct": 2.8868609133586536,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
