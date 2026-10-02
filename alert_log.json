@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-07T02:27:42Z",
-    "symbol": "TLYS",
-    "alert_id": "TLYS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 4.400000095367432,
-    "change_pct": 2.803740545968023,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-07T22:25:37Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_MTF_BULL",
@@ -8496,6 +8479,23 @@
     "days_held": 9.89,
     "entry_alert_type": "mtf_alignment",
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-02T18:26:37Z",
+    "symbol": "MXL",
+    "alert_id": "MXL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 105.0199966430664,
+    "change_pct": 14.775952615373122,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
