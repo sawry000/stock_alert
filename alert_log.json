@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-06T02:13:50Z",
-    "symbol": "NCRA",
-    "alert_id": "NCRA_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 1.809999942779541,
-    "change_pct": -7.179490113869689,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-06T02:26:42Z",
     "symbol": "SNDK",
     "alert_id": "SNDK_MTF_BULL",
@@ -8495,6 +8478,23 @@
     "pnl_pct": -13.5266,
     "days_held": 0.02,
     "entry_alert_type": "volume_spike",
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-02T15:26:05Z",
+    "symbol": "PSIX",
+    "alert_id": "PSIX_STAGNANT_EXIT",
+    "type": "stagnant_exit",
+    "action": "SELL",
+    "price": 46.349998474121094,
+    "change_pct": 2.6123499537770467,
+    "value": 15.0,
+    "entry_price": 45.0,
+    "pnl_pct": 3.0,
+    "days_held": 15.04,
+    "entry_alert_type": "percent_change",
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
