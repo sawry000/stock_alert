@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-07T22:41:52Z",
-    "symbol": "SNDK",
-    "alert_id": "SNDK_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 1740.0,
-    "change_pct": 12.301536078481986,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-07T22:42:41Z",
     "symbol": "JFB",
     "alert_id": "JFB_MTF_BULL",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-02T19:26:57Z",
+    "symbol": "NEOV",
+    "alert_id": "NEOV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 3.015000104904175,
+    "change_pct": 19.16996462071838,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
