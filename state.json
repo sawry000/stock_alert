@@ -1813,8 +1813,7 @@
     "VPG_MA_GOLD": {
       "last_fired": "2026-09-27T02:11:25Z"
     },
-    "_confirm_VPG_MA_GOLD": 1,
-    "_confirm_VPG_MTF_BULL": 1
+    "_confirm_VPG_MA_GOLD": 1
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1863,7 +1862,8 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -2090,7 +2090,7 @@
     "last_buy_reminder_at": "2026-10-05T16:11:47Z",
     "open_entry": 0.8949999809265137,
     "open_time": "2026-10-05T16:11:47Z",
-    "open_peak": 0.909600019454956,
+    "open_peak": 0.9200000166893005,
     "open_stop": 0.8174,
     "open_target": 1.0113,
     "open_conviction": 4,
@@ -2139,8 +2139,7 @@
     "OFRM_MA_GOLD": {
       "last_fired": "2026-08-18T19:42:11Z"
     },
-    "_confirm_OFRM_MA_GOLD": 1,
-    "_confirm_OFRM_MTF_BULL": 1
+    "_confirm_OFRM_MA_GOLD": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2217,7 +2216,8 @@
     },
     "AGPU_MTF_BULL": {
       "last_fired": "2026-09-30T11:43:02Z"
-    }
+    },
+    "_confirm_AGPU_MTF_BULL": 1
   },
   "__earnings_alert__": {
     "last_sent": "2026-10-05T02:12:42Z"
@@ -2375,8 +2375,7 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    },
-    "_confirm_CVV_RSI_OS": 1
+    }
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2389,8 +2388,7 @@
     "last_buy_at": "2026-09-16T17:57:23Z",
     "DHX_SL_BREAK": {
       "last_fired": "2026-09-04T13:42:33Z"
-    },
-    "_confirm_DHX_MTF_BULL": 1
+    }
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2463,7 +2461,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_FTK_MTF_BULL": 1
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2560,7 +2559,8 @@
     "TLYS_SL_BREAK": {
       "last_fired": "2026-09-15T14:27:36Z"
     },
-    "last_sell_at": "2026-09-15T14:27:36Z"
+    "last_sell_at": "2026-09-15T14:27:36Z",
+    "_confirm_TLYS_MTF_BULL": 1
   },
   "AEYE": {
     "AEYE_SCORE_65": {
