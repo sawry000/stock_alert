@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-11T19:56:31Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 31.790000915527344,
-    "change_pct": 8.12925481471886,
-    "value": 8.12925481471886,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 3,
-    "conviction_total": 4,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-11T21:57:04Z",
     "symbol": "CVV",
     "alert_id": "CVV_PCT_DROP",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-06T17:55:47Z",
+    "symbol": "AIXI",
+    "alert_id": "AIXI_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 1.7450000047683716,
+    "change_pct": 16.33333365122477,
+    "value": 9.277782547066975,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
