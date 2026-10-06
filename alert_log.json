@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-10T13:41:56Z",
-    "symbol": "LUNG",
-    "alert_id": "LUNG_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 1.8799999952316284,
-    "change_pct": -6.467661928774696,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-10T13:57:10Z",
     "symbol": "NEOV",
     "alert_id": "NEOV_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-06T05:56:25Z",
+    "symbol": "VELO",
+    "alert_id": "VELO_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 9.569999694824219,
+    "change_pct": -13.299513545712824,
+    "value": -13.299513545712824,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
