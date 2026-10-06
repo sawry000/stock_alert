@@ -409,7 +409,7 @@
     "last_buy_reminder_at": "2026-10-06T17:55:47Z",
     "open_entry": 1.7450000047683716,
     "open_time": "2026-10-06T17:55:47Z",
-    "open_peak": 1.7502000331878662,
+    "open_peak": 1.7898999452590942,
     "open_stop": 1.5705,
     "open_target": 2.0068,
     "open_conviction": 4,
@@ -1775,7 +1775,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1805,7 +1806,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_MXL_MTF_BULL": 1
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1843,7 +1845,8 @@
     "VPG_MA_GOLD": {
       "last_fired": "2026-09-27T02:11:25Z"
     },
-    "_confirm_VPG_MA_GOLD": 1
+    "_confirm_VPG_MA_GOLD": 1,
+    "_confirm_VPG_MTF_BULL": 1
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1892,8 +1895,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_TKNO_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1938,7 +1940,8 @@
     },
     "RFIL_PCT_DROP": {
       "last_fired": "2026-09-16T02:11:46Z"
-    }
+    },
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1969,7 +1972,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_SVCO_MTF_BULL": 1
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -2246,8 +2250,7 @@
     },
     "AGPU_MTF_BULL": {
       "last_fired": "2026-09-30T11:43:02Z"
-    },
-    "_confirm_AGPU_MTF_BULL": 1
+    }
   },
   "__earnings_alert__": {
     "last_sent": "2026-10-06T02:13:00Z"
@@ -2491,8 +2494,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_FTK_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "IQST": {
     "IQST_PCT_DROP": {
