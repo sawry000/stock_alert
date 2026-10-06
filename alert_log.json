@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-11T14:42:26Z",
-    "symbol": "ADVB",
-    "alert_id": "ADVB_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 8.050000190734863,
-    "change_pct": -9.039545867402671,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-11T19:56:31Z",
     "symbol": "FPS",
     "alert_id": "FPS_PCT_UP",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-10-06T16:55:37Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 386.7101135253906,
+    "change_pct": 5.595028541693681,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
