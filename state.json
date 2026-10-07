@@ -106,9 +106,9 @@
       "last_fired": "2026-09-28T14:10:37Z"
     },
     "COHR_MTF_BULL": {
-      "last_fired": "2026-10-06T21:40:36Z"
+      "last_fired": "2026-10-07T19:10:35Z"
     },
-    "last_buy_at": "2026-10-06T21:40:36Z",
+    "last_buy_at": "2026-10-07T19:10:35Z",
     "last_sell_at": "2026-09-28T14:10:37Z",
     "COHR_MA_GOLD": {
       "last_fired": "2026-10-01T16:25:37Z"
@@ -116,7 +116,7 @@
     "COHR_SL_BREAK": {
       "last_fired": "2026-09-28T14:10:37Z"
     },
-    "last_buy_reminder_at": "2026-10-06T21:40:36Z",
+    "last_buy_reminder_at": "2026-10-07T19:10:35Z",
     "open_entry": 319.6700134277344,
     "open_time": "2026-10-01T16:25:37Z",
     "open_peak": 339.9700012207031,
@@ -1745,8 +1745,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_SMTC_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1776,7 +1775,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_MXL_MTF_BULL": 1
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1898,7 +1898,8 @@
     },
     "RFIL_PCT_DROP": {
       "last_fired": "2026-09-16T02:11:46Z"
-    }
+    },
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -2111,8 +2112,7 @@
     "OFRM_MA_GOLD": {
       "last_fired": "2026-08-18T19:42:11Z"
     },
-    "_confirm_OFRM_MA_GOLD": 1,
-    "_confirm_OFRM_MTF_BULL": 1
+    "_confirm_OFRM_MA_GOLD": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2337,8 +2337,7 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    },
-    "_confirm_CVV_RSI_OS": 1
+    }
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2351,8 +2350,7 @@
     "last_buy_at": "2026-09-16T17:57:23Z",
     "DHX_SL_BREAK": {
       "last_fired": "2026-09-04T13:42:33Z"
-    },
-    "_confirm_DHX_MTF_BULL": 1
+    }
   },
   "ATEX": {
     "ATEX_MA_DEATH": {

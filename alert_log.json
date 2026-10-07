@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T13:42:06Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 68.0,
-    "change_pct": -8.912509125493104,
-    "value": -8.912509125493104,
-    "entry_price": 71.4800033569336,
-    "pnl_pct": -4.8685,
-    "days_held": 4.74,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-14T13:42:16Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_MA_DEATH",
@@ -8496,6 +8479,23 @@
     "days_held": 15.01,
     "entry_alert_type": "mtf_alignment",
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-07T19:10:35Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 334.14801025390625,
+    "change_pct": -1.1396419367141273,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
