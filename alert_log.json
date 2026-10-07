@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T13:40:53Z",
-    "symbol": "COHR",
-    "alert_id": "COHR_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 275.3399963378906,
-    "change_pct": -9.91951961725754,
-    "value": -9.91951961725754,
-    "entry_price": 301.8299865722656,
-    "pnl_pct": -8.7765,
-    "days_held": 5.73,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-14T13:40:56Z",
     "symbol": "ALAB",
     "alert_id": "ALAB_PCT_DROP",
@@ -8496,6 +8479,23 @@
     "days_held": 1.93,
     "entry_alert_type": "mtf_alignment",
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-07T14:42:24Z",
+    "symbol": "MNTK",
+    "alert_id": "MNTK_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 2.615000009536743,
+    "change_pct": 0.5769234437208874,
+    "value": 2.615000009536743,
+    "entry_price": 2.9100000858306885,
+    "pnl_pct": -10.1375,
+    "days_held": 1.51,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }

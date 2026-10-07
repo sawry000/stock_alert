@@ -1768,13 +1768,14 @@
     "last_buy_reminder_at": "2026-10-05T02:26:27Z",
     "open_entry": 105.0199966430664,
     "open_time": "2026-10-02T18:26:37Z",
-    "open_peak": 111.48999786376953,
+    "open_peak": 112.67500305175781,
     "open_stop": 94.6373,
     "open_target": 120.5945,
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_MXL_MTF_BULL": 1
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1889,7 +1890,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_SNDK_MTF_BULL": 1
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -2119,8 +2121,7 @@
     "OFRM_MA_GOLD": {
       "last_fired": "2026-08-18T19:42:11Z"
     },
-    "_confirm_OFRM_MA_GOLD": 1,
-    "_confirm_OFRM_MTF_BULL": 1
+    "_confirm_OFRM_MA_GOLD": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2354,7 +2355,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2541,8 +2543,7 @@
     "TLYS_SL_BREAK": {
       "last_fired": "2026-09-15T14:27:36Z"
     },
-    "last_sell_at": "2026-09-15T14:27:36Z",
-    "_confirm_TLYS_MTF_BULL": 1
+    "last_sell_at": "2026-09-15T14:27:36Z"
   },
   "AEYE": {
     "AEYE_SCORE_65": {
@@ -2604,19 +2605,9 @@
     },
     "last_buy_at": "2026-10-06T02:28:00Z",
     "MNTK_SL_BREAK": {
-      "last_fired": "2026-10-05T17:27:32Z"
+      "last_fired": "2026-10-07T14:42:24Z"
     },
-    "last_sell_at": "2026-10-05T17:27:32Z",
-    "last_buy_reminder_at": "2026-10-06T02:28:00Z",
-    "open_entry": 2.9100000858306885,
-    "open_time": "2026-10-06T02:28:00Z",
-    "open_peak": 2.944999933242798,
-    "open_stop": 2.619,
-    "open_target": 3.3465,
-    "open_conviction": 5,
-    "open_conviction_total": 5,
-    "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "last_sell_at": "2026-10-07T14:42:24Z"
   },
   "NTRB": {
     "NTRB_VOL_3X": {
