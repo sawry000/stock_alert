@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T13:42:18Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 6.409999847412109,
-    "change_pct": -4.041918451914526,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-14T13:42:24Z",
     "symbol": "RFIL",
     "alert_id": "RFIL_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-07T22:41:51Z",
+    "symbol": "BLIN",
+    "alert_id": "BLIN_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 0.7821000218391418,
+    "change_pct": -18.301470611183348,
+    "value": -18.301470611183348,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
