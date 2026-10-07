@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-10-06T02:12:59Z"
+    "last_sent": "2026-10-07T02:12:59Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -1775,7 +1775,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_SMTC_MTF_BULL": 1
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1805,7 +1806,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_MXL_MTF_BULL": 1
   },
   "ZVIA": {
     "ZVIA_MTF_BULL": {
@@ -1843,7 +1845,8 @@
     "VPG_MA_GOLD": {
       "last_fired": "2026-09-27T02:11:25Z"
     },
-    "_confirm_VPG_MA_GOLD": 1
+    "_confirm_VPG_MA_GOLD": 1,
+    "_confirm_VPG_MTF_BULL": 1
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1938,7 +1941,8 @@
     },
     "RFIL_PCT_DROP": {
       "last_fired": "2026-09-16T02:11:46Z"
-    }
+    },
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -2170,8 +2174,7 @@
     "OFRM_MA_GOLD": {
       "last_fired": "2026-08-18T19:42:11Z"
     },
-    "_confirm_OFRM_MA_GOLD": 1,
-    "_confirm_OFRM_MTF_BULL": 1
+    "_confirm_OFRM_MA_GOLD": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2207,7 +2210,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-10-06T02:13:00Z"
+    "last_sent": "2026-10-07T02:13:00Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -2251,10 +2254,10 @@
     }
   },
   "__earnings_alert__": {
-    "last_sent": "2026-10-06T02:13:00Z"
+    "last_sent": "2026-10-07T02:13:01Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-10-06T02:13:01Z"
+    "last_sent": "2026-10-07T02:13:01Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -2303,7 +2306,7 @@
     "_confirm_WDC_MTF_BULL": 1
   },
   "__universe_earnings_digest__": {
-    "last_sent": "2026-10-06T02:13:01Z"
+    "last_sent": "2026-10-07T02:13:01Z"
   },
   "BLZE": {
     "BLZE_MA_GOLD": {
@@ -2405,7 +2408,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
