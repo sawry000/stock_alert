@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T13:40:56Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 264.42999267578125,
-    "change_pct": -8.864383017135525,
-    "value": -8.864383017135525,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-14T13:41:00Z",
     "symbol": "ICHR",
     "alert_id": "ICHR_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-07T14:56:05Z",
+    "symbol": "NLST",
+    "alert_id": "NLST_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 6.869999885559082,
+    "change_pct": 3.153151434821049,
+    "value": 6.5265,
+    "entry_price": 6.329999923706055,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
