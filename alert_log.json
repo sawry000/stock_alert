@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T13:41:54Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 29.274999618530273,
-    "change_pct": -7.940252771917382,
-    "value": -7.940252771917382,
-    "entry_price": 31.790000915527344,
-    "pnl_pct": -7.9113,
-    "days_held": 2.74,
-    "entry_alert_type": "percent_change",
-    "conviction_score": 3,
-    "conviction_total": 4,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-14T13:42:06Z",
     "symbol": "MXL",
     "alert_id": "MXL_PCT_DROP",
@@ -8496,6 +8479,23 @@
     "days_held": 6.84,
     "entry_alert_type": "mtf_alignment",
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-07T18:26:40Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_STAGNANT_EXIT",
+    "type": "stagnant_exit",
+    "action": "SELL",
+    "price": 8.619999885559082,
+    "change_pct": -1.485715593610491,
+    "value": 15.0,
+    "entry_price": 8.869999885559082,
+    "pnl_pct": -2.8185,
+    "days_held": 15.01,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
