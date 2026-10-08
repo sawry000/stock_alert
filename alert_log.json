@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T20:26:42Z",
-    "symbol": "OFRM",
-    "alert_id": "OFRM_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 16.979999542236328,
-    "change_pct": 3.284668748396148,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 3,
-    "conviction_total": 4,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-14T20:27:19Z",
     "symbol": "TLYS",
     "alert_id": "TLYS_TRAIL_ADJUST",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-08T19:25:38Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 303.1000061035156,
+    "change_pct": -9.376685589573086,
+    "value": -9.376685589573086,
+    "entry_price": 319.6700134277344,
+    "pnl_pct": -5.1835,
+    "days_held": 7.13,
+    "entry_alert_type": "ma_crossover",
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
