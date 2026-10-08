@@ -125,7 +125,7 @@
       "last_fired": "2026-06-01T08:02:20Z"
     },
     "ALAB_PCT_DROP": {
-      "last_fired": "2026-09-15T06:10:36Z"
+      "last_fired": "2026-10-08T19:40:40Z"
     },
     "ALAB_RSI_OB": {
       "last_fired": "2026-06-28T04:17:28Z"
@@ -148,7 +148,7 @@
     "ALAB_MA_DEATH": {
       "last_fired": "2026-07-15T13:55:46Z"
     },
-    "last_sell_at": "2026-10-08T17:10:43Z",
+    "last_sell_at": "2026-10-08T19:40:40Z",
     "ALAB_SL_BREAK": {
       "last_fired": "2026-10-08T17:10:43Z"
     },
@@ -2277,8 +2277,7 @@
     "_confirm_REAX_MA_GOLD": 1,
     "REAX_PCT_DROP": {
       "last_fired": "2026-08-26T13:43:19Z"
-    },
-    "_confirm_REAX_MTF_BULL": 1
+    }
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2292,7 +2291,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2544,8 +2544,7 @@
     "MNTK_SL_BREAK": {
       "last_fired": "2026-10-07T14:42:24Z"
     },
-    "last_sell_at": "2026-10-07T14:42:24Z",
-    "_confirm_MNTK_MTF_BULL": 1
+    "last_sell_at": "2026-10-07T14:42:24Z"
   },
   "NTRB": {
     "NTRB_VOL_3X": {

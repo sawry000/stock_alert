@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T20:27:19Z",
-    "symbol": "TLYS",
-    "alert_id": "TLYS_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 4.920000076293945,
-    "change_pct": 8.131869808658143,
-    "value": 4.674,
-    "entry_price": 4.400000095367432,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-14T21:55:37Z",
     "symbol": "COHR",
     "alert_id": "COHR_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-08T19:40:40Z",
+    "symbol": "ALAB",
+    "alert_id": "ALAB_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 342.7401123046875,
+    "change_pct": -10.336138049787442,
+    "value": -10.336138049787442,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
