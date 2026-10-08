@@ -791,7 +791,7 @@
       "last_fired": "2026-06-05T18:29:18Z"
     },
     "open_position": true,
-    "last_sell_at": "2026-10-02T15:26:05Z",
+    "last_sell_at": "2026-10-08T17:41:00Z",
     "PSIX_PCT_UP": {
       "last_fired": "2026-10-07T19:55:58Z"
     },
@@ -805,16 +805,9 @@
     "PSIX_SCORE_62": {
       "last_fired": "2026-09-18T10:41:02Z"
     },
-    "last_buy_reminder_at": "2026-10-07T19:55:58Z",
-    "open_entry": 51.95000076293945,
-    "open_time": "2026-10-07T19:55:58Z",
-    "open_peak": 51.95000076293945,
-    "open_stop": 48.07,
-    "open_target": 57.7684,
-    "open_conviction": 5,
-    "open_conviction_total": 5,
-    "open_rr_ratio": 1.5,
-    "open_alert_type": "percent_change"
+    "PSIX_SL_BREAK": {
+      "last_fired": "2026-10-08T17:41:00Z"
+    }
   },
   "VICR": {
     "VICR_POS_SIZE": {
@@ -2297,7 +2290,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2484,7 +2478,8 @@
     "TLYS_SL_BREAK": {
       "last_fired": "2026-09-15T14:27:36Z"
     },
-    "last_sell_at": "2026-09-15T14:27:36Z"
+    "last_sell_at": "2026-09-15T14:27:36Z",
+    "_confirm_TLYS_MTF_BULL": 1
   },
   "AEYE": {
     "AEYE_SCORE_65": {
@@ -2549,8 +2544,7 @@
     "MNTK_SL_BREAK": {
       "last_fired": "2026-10-07T14:42:24Z"
     },
-    "last_sell_at": "2026-10-07T14:42:24Z",
-    "_confirm_MNTK_MTF_BULL": 1
+    "last_sell_at": "2026-10-07T14:42:24Z"
   },
   "NTRB": {
     "NTRB_VOL_3X": {
