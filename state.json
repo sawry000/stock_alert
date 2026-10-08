@@ -354,7 +354,7 @@
       ]
     },
     "AAOI_PCT_DROP": {
-      "last_fired": "2026-09-15T06:10:40Z"
+      "last_fired": "2026-10-08T16:55:42Z"
     },
     "open_position": true,
     "AAOI_MA_DEATH": {
@@ -370,7 +370,7 @@
       "last_fired": "2026-08-04T15:56:00Z"
     },
     "last_buy_at": "2026-08-04T15:56:00Z",
-    "last_sell_at": "2026-09-15T06:10:40Z"
+    "last_sell_at": "2026-10-08T16:55:42Z"
   },
   "AIXI": {
     "AIXI_POS_SIZE": {
@@ -1733,8 +1733,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_SMTC_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1864,23 +1863,13 @@
       "last_fired": "2026-09-21T02:26:49Z"
     },
     "last_buy_at": "2026-09-21T02:26:49Z",
-    "last_sell_at": "2026-09-08T15:41:36Z",
+    "last_sell_at": "2026-10-08T16:56:37Z",
     "SNDK_MA_DEATH": {
       "last_fired": "2026-07-08T14:14:46Z"
     },
     "SNDK_SL_BREAK": {
-      "last_fired": "2026-08-24T13:41:35Z"
-    },
-    "last_buy_reminder_at": "2026-09-21T02:26:49Z",
-    "open_entry": 1791.8199462890625,
-    "open_time": "2026-09-18T20:12:03Z",
-    "open_peak": 1893.97998046875,
-    "open_stop": 1616.9239,
-    "open_target": 2054.1424,
-    "open_conviction": 5,
-    "open_conviction_total": 5,
-    "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+      "last_fired": "2026-10-08T16:56:37Z"
+    }
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -1897,7 +1886,8 @@
     },
     "RFIL_PCT_DROP": {
       "last_fired": "2026-09-16T02:11:46Z"
-    }
+    },
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -2327,8 +2317,7 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    },
-    "_confirm_CVV_RSI_OS": 1
+    }
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2581,7 +2570,8 @@
     "MNTK_SL_BREAK": {
       "last_fired": "2026-10-07T14:42:24Z"
     },
-    "last_sell_at": "2026-10-07T14:42:24Z"
+    "last_sell_at": "2026-10-07T14:42:24Z",
+    "_confirm_MNTK_MTF_BULL": 1
   },
   "NTRB": {
     "NTRB_VOL_3X": {
