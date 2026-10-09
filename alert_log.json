@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-15T06:11:12Z",
-    "symbol": "FPS",
-    "alert_id": "FPS_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 28.639999389648438,
-    "change_pct": -9.937108837583532,
-    "value": -9.937108837583532,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-15T06:11:20Z",
     "symbol": "MXL",
     "alert_id": "MXL_PCT_DROP",
@@ -8496,6 +8479,23 @@
     "days_held": 1.05,
     "entry_alert_type": "volume_spike",
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-09T20:27:29Z",
+    "symbol": "DHX",
+    "alert_id": "DHX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.099999904632568,
+    "change_pct": 2.615692246128141,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
