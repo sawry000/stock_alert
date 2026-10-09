@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-10-08T02:12:31Z"
+    "last_sent": "2026-10-09T02:12:47Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -334,7 +334,7 @@
       ]
     },
     "AAOI_PCT_DROP": {
-      "last_fired": "2026-10-08T16:55:42Z"
+      "last_fired": "2026-10-09T02:10:41Z"
     },
     "open_position": true,
     "AAOI_MA_DEATH": {
@@ -350,7 +350,7 @@
       "last_fired": "2026-08-04T15:56:00Z"
     },
     "last_buy_at": "2026-08-04T15:56:00Z",
-    "last_sell_at": "2026-10-08T16:55:42Z"
+    "last_sell_at": "2026-10-09T02:10:41Z"
   },
   "AIXI": {
     "AIXI_POS_SIZE": {
@@ -1736,9 +1736,9 @@
     "open_position": true,
     "last_buy_at": "2026-10-05T02:26:27Z",
     "MXL_PCT_DROP": {
-      "last_fired": "2026-10-08T17:26:24Z"
+      "last_fired": "2026-10-09T02:11:27Z"
     },
-    "last_sell_at": "2026-10-08T17:26:24Z",
+    "last_sell_at": "2026-10-09T02:11:27Z",
     "MXL_MA_DEATH": {
       "last_fired": "2026-08-19T13:41:46Z"
     },
@@ -2110,7 +2110,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-10-08T02:12:31Z"
+    "last_sent": "2026-10-09T02:12:47Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -2155,10 +2155,10 @@
     "_confirm_AGPU_MTF_BULL": 1
   },
   "__earnings_alert__": {
-    "last_sent": "2026-10-08T02:12:32Z"
+    "last_sent": "2026-10-09T02:12:48Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-10-08T02:12:33Z"
+    "last_sent": "2026-10-09T02:12:48Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -2207,7 +2207,7 @@
     "_confirm_WDC_MTF_BULL": 1
   },
   "__universe_earnings_digest__": {
-    "last_sent": "2026-10-08T02:12:33Z"
+    "last_sent": "2026-10-09T02:12:48Z"
   },
   "BLZE": {
     "BLZE_MA_GOLD": {
@@ -2287,8 +2287,7 @@
     "_confirm_REAX_MA_GOLD": 1,
     "REAX_PCT_DROP": {
       "last_fired": "2026-08-26T13:43:19Z"
-    },
-    "_confirm_REAX_MTF_BULL": 1
+    }
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2302,7 +2301,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2554,8 +2554,7 @@
     "MNTK_SL_BREAK": {
       "last_fired": "2026-10-07T14:42:24Z"
     },
-    "last_sell_at": "2026-10-07T14:42:24Z",
-    "_confirm_MNTK_MTF_BULL": 1
+    "last_sell_at": "2026-10-07T14:42:24Z"
   },
   "NTRB": {
     "NTRB_VOL_3X": {
