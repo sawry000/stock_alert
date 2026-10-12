@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-16T15:27:37Z",
-    "symbol": "AEYE",
-    "alert_id": "AEYE_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 7.130000114440918,
-    "change_pct": -4.8064070168101765,
-    "value": 7.130000114440918,
-    "entry_price": 7.929999828338623,
-    "pnl_pct": -10.0883,
-    "days_held": 3.54,
-    "entry_alert_type": "alert_score",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-16T17:56:21Z",
     "symbol": "FPS",
     "alert_id": "FPS_TRAIL_ADJUST",
@@ -8495,6 +8478,23 @@
     "pnl_pct": -10.3729,
     "days_held": 2.99,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-12T20:10:51Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 85.43000030517578,
+    "change_pct": 3.6897685461533927,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
