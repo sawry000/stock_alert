@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-15T20:27:16Z",
-    "symbol": "ECOR",
-    "alert_id": "ECOR_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 10.050000190734863,
-    "change_pct": 2.9713134296604866,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-15T23:26:42Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-10-12T13:56:20Z",
+    "symbol": "SMTC",
+    "alert_id": "SMTC_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 177.32000732421875,
+    "change_pct": -5.328346329835163,
+    "value": 177.32000732421875,
+    "entry_price": 194.8800048828125,
+    "pnl_pct": -9.0107,
+    "days_held": 9.74,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
