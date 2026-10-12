@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-15T23:26:42Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 6.980000019073486,
-    "change_pct": -16.1057690015206,
-    "value": -16.1057690015206,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-16T02:11:46Z",
     "symbol": "RFIL",
     "alert_id": "RFIL_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-12T14:26:30Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1466.4599609375,
+    "change_pct": -7.292867650080284,
+    "value": -7.292867650080284,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
