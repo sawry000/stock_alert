@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-17T13:42:14Z",
-    "symbol": "ECOR",
-    "alert_id": "ECOR_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 11.430000305175781,
-    "change_pct": 4.95868048829918,
-    "value": 10.8585,
-    "entry_price": 10.050000190734863,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-17T13:56:14Z",
     "symbol": "FPS",
     "alert_id": "FPS_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-10-13T18:10:53Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 29.799999237060547,
+    "change_pct": -2.454994314040765,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
