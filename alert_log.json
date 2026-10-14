@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-17T20:11:07Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 24.56999969482422,
-    "change_pct": 4.37552971463135,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-17T20:11:09Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_PCT_UP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-14T18:56:15Z",
+    "symbol": "SVCO",
+    "alert_id": "SVCO_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 6.670000076293945,
+    "change_pct": -9.128064355668318,
+    "value": -9.128064355668318,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
