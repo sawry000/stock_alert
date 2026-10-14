@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-17T20:10:54Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 104.94999694824219,
-    "change_pct": 9.608351904169385,
-    "value": 99.7025,
-    "entry_price": 96.40499877929688,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-17T20:11:07Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-10-14T18:10:54Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 27.934999465942383,
+    "change_pct": -6.037674181155794,
+    "value": 27.934999465942383,
+    "entry_price": 30.520000457763672,
+    "pnl_pct": -8.4699,
+    "days_held": 4.98,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
