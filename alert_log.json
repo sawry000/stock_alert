@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T02:26:39Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 81.12000274658203,
-    "change_pct": 8.565314168337839,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-20T02:26:43Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_MTF_BULL",
@@ -8497,6 +8480,23 @@
     "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 4,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-16T02:27:45Z",
+    "symbol": "BYRN",
+    "alert_id": "BYRN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.78000020980835,
+    "change_pct": 1.7021321235819027,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
     "rr_ratio": 1.5
   }
 ]
