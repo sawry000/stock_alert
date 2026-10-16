@@ -1753,7 +1753,8 @@
     },
     "ZVIA_PCT_DROP": {
       "last_fired": "2026-09-10T07:56:25Z"
-    }
+    },
+    "_confirm_ZVIA_MTF_BULL": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -2054,13 +2055,14 @@
     "last_buy_reminder_at": "2026-10-15T20:42:09Z",
     "open_entry": 17.260000228881836,
     "open_time": "2026-10-15T20:42:06Z",
-    "open_peak": 17.46500015258789,
+    "open_peak": 17.5049991607666,
     "open_stop": 16.1679,
     "open_target": 18.898,
     "open_conviction": 4,
     "open_conviction_total": 4,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "ma_crossover"
+    "open_alert_type": "ma_crossover",
+    "_confirm_OFRM_MTF_BULL": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2205,9 +2207,9 @@
       "last_fired": "2026-09-23T19:41:50Z"
     },
     "BLZE_PCT_DROP": {
-      "last_fired": "2026-10-15T07:26:31Z"
+      "last_fired": "2026-10-16T17:11:38Z"
     },
-    "last_sell_at": "2026-10-15T07:26:31Z",
+    "last_sell_at": "2026-10-16T17:11:38Z",
     "BLZE_SL_BREAK": {
       "last_fired": "2026-08-19T13:42:35Z"
     },
@@ -2275,8 +2277,7 @@
     "_confirm_REAX_MA_GOLD": 1,
     "REAX_PCT_DROP": {
       "last_fired": "2026-08-26T13:43:19Z"
-    },
-    "_confirm_REAX_MTF_BULL": 1
+    }
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2490,8 +2491,7 @@
     "TLYS_SL_BREAK": {
       "last_fired": "2026-09-15T14:27:36Z"
     },
-    "last_sell_at": "2026-09-15T14:27:36Z",
-    "_confirm_TLYS_MTF_BULL": 1
+    "last_sell_at": "2026-09-15T14:27:36Z"
   },
   "AEYE": {
     "AEYE_SCORE_65": {
@@ -2537,8 +2537,7 @@
     },
     "BSEM_PCT_DROP": {
       "last_fired": "2026-10-01T08:12:50Z"
-    },
-    "_confirm_BSEM_RSI_OS": 1
+    }
   },
   "CJMB": {
     "CJMB_PCT_DROP": {
