@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-21T14:56:24Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 8.114999771118164,
-    "change_pct": 4.440151494442271,
-    "value": 7.7092,
-    "entry_price": 7.420000076293945,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-21T14:57:21Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-16T22:27:15Z",
+    "symbol": "ADVB",
+    "alert_id": "ADVB_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 3.9800000190734863,
+    "change_pct": -18.44262255996954,
+    "value": -18.44262255996954,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
