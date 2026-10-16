@@ -1858,7 +1858,8 @@
     "RFIL_PCT_DROP": {
       "last_fired": "2026-10-15T07:56:26Z"
     },
-    "_confirm_RFIL_MTF_BULL": 1
+    "_confirm_RFIL_MTF_BULL": 1,
+    "_confirm_RFIL_RSI_OS": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -2122,7 +2123,8 @@
     },
     "PESI_MA_DEATH": {
       "last_fired": "2026-09-23T16:56:41Z"
-    }
+    },
+    "_confirm_PESI_RSI_OS": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2221,8 +2223,7 @@
     "BLZE_MA_DEATH": {
       "last_fired": "2026-08-26T13:43:11Z"
     },
-    "_confirm_BLZE_MTF_BULL": 1,
-    "_confirm_BLZE_RSI_OS": 1
+    "_confirm_BLZE_MTF_BULL": 1
   },
   "AXTI": {
     "AXTI_MTF_BULL": {
@@ -2282,8 +2283,7 @@
     "_confirm_REAX_MA_GOLD": 1,
     "REAX_PCT_DROP": {
       "last_fired": "2026-08-26T13:43:19Z"
-    },
-    "_confirm_REAX_MTF_BULL": 1
+    }
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2297,8 +2297,7 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    },
-    "_confirm_CVV_RSI_OS": 1
+    }
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2321,8 +2320,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_DHX_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2334,8 +2332,7 @@
       "last_fired": "2026-10-12T02:27:14Z"
     },
     "last_buy_at": "2026-10-12T02:27:14Z",
-    "_confirm_ATEX_MA_GOLD": 1,
-    "_confirm_ATEX_MTF_BULL": 1
+    "_confirm_ATEX_MA_GOLD": 1
   },
   "JFB": {
     "JFB_MTF_BULL": {
@@ -2498,8 +2495,7 @@
     "TLYS_SL_BREAK": {
       "last_fired": "2026-09-15T14:27:36Z"
     },
-    "last_sell_at": "2026-09-15T14:27:36Z",
-    "_confirm_TLYS_MTF_BULL": 1
+    "last_sell_at": "2026-09-15T14:27:36Z"
   },
   "AEYE": {
     "AEYE_SCORE_65": {
@@ -2515,7 +2511,8 @@
     "last_sell_at": "2026-09-28T02:12:31Z",
     "AEYE_MA_DEATH": {
       "last_fired": "2026-09-28T02:12:31Z"
-    }
+    },
+    "_confirm_AEYE_MTF_BULL": 1
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
