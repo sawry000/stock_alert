@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T16:42:23Z",
-    "symbol": "PESI",
-    "alert_id": "PESI_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 16.235000610351562,
-    "change_pct": -6.372545499702638,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-22T16:56:05Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-10-19T20:12:31Z",
+    "symbol": "FATN",
+    "alert_id": "FATN_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.349999904632568,
+    "change_pct": 6.361822693371442,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
