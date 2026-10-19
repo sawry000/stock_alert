@@ -1745,7 +1745,8 @@
     },
     "ZVIA_PCT_DROP": {
       "last_fired": "2026-09-10T07:56:25Z"
-    }
+    },
+    "_confirm_ZVIA_MTF_BULL": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1840,8 +1841,7 @@
     "RFIL_PCT_DROP": {
       "last_fired": "2026-10-15T07:56:26Z"
     },
-    "_confirm_RFIL_MTF_BULL": 1,
-    "_confirm_RFIL_RSI_OS": 1
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1967,7 +1967,8 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1
+    "_confirm_CDNL_MTF_BULL": 1,
+    "_confirm_CDNL_RSI_OS": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2053,8 +2054,7 @@
     "open_conviction": 4,
     "open_conviction_total": 4,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "ma_crossover",
-    "_confirm_OFRM_MTF_BULL": 1
+    "open_alert_type": "ma_crossover"
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2106,7 +2106,8 @@
     },
     "PESI_MA_DEATH": {
       "last_fired": "2026-09-23T16:56:41Z"
-    }
+    },
+    "_confirm_PESI_RSI_OS": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2206,7 +2207,8 @@
     "BLZE_MA_DEATH": {
       "last_fired": "2026-08-26T13:43:11Z"
     },
-    "_confirm_BLZE_MTF_BULL": 1
+    "_confirm_BLZE_MTF_BULL": 1,
+    "_confirm_BLZE_RSI_OS": 1
   },
   "AXTI": {
     "AXTI_MTF_BULL": {
@@ -2251,8 +2253,7 @@
     "last_sell_at": "2026-09-23T14:11:44Z",
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-08T02:57:39Z"
-    },
-    "_confirm_FATN_MTF_BULL": 1
+    }
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2281,7 +2282,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2480,7 +2482,8 @@
     "TLYS_SL_BREAK": {
       "last_fired": "2026-09-15T14:27:36Z"
     },
-    "last_sell_at": "2026-09-15T14:27:36Z"
+    "last_sell_at": "2026-09-15T14:27:36Z",
+    "_confirm_TLYS_MTF_BULL": 1
   },
   "AEYE": {
     "AEYE_SCORE_65": {
@@ -2574,8 +2577,8 @@
     "last_buy_reminder_at": "2026-10-19T02:27:34Z",
     "open_entry": 4.78000020980835,
     "open_time": "2026-10-16T02:27:45Z",
-    "open_peak": 5.21999979019165,
-    "open_stop": 4.958999800682068,
+    "open_peak": 5.221499919891357,
+    "open_stop": 4.960424923896789,
     "open_target": 5.4922,
     "open_conviction": 4,
     "open_conviction_total": 5,
