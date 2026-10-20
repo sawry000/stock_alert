@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T18:25:53Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 69.37999725341797,
-    "change_pct": 13.458703603300034,
-    "value": 65.911,
-    "entry_price": 61.220001220703125,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-22T18:25:55Z",
     "symbol": "INOD",
     "alert_id": "INOD_TAKE_PROFIT",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-20T15:41:17Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.75,
+    "change_pct": 2.825048453641291,
+    "value": 8.3125,
+    "entry_price": 7.928999900817871,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
