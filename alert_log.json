@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T18:56:19Z",
-    "symbol": "SVCO",
-    "alert_id": "SVCO_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 8.0600004196167,
-    "change_pct": 9.659869654648974,
-    "value": 7.657,
-    "entry_price": 7.414999961853027,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-22T19:11:30Z",
     "symbol": "SVCO",
     "alert_id": "SVCO_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-20T16:41:27Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.779999732971191,
+    "change_pct": 3.1775883389394686,
+    "value": 8.341,
+    "entry_price": 7.928999900817871,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
