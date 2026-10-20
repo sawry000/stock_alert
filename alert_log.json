@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T19:55:41Z",
-    "symbol": "ALAB",
-    "alert_id": "ALAB_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 361.92999267578125,
-    "change_pct": 5.563081671982174,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-22T19:56:08Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_MTF_BULL",
@@ -8497,6 +8480,23 @@
     "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 4,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-20T20:12:27Z",
+    "symbol": "REAX",
+    "alert_id": "REAX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 17.139999389648438,
+    "change_pct": 11.226472353331845,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
     "rr_ratio": 1.5
   }
 ]
