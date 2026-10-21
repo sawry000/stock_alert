@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T22:10:44Z",
-    "symbol": "INOD",
-    "alert_id": "INOD_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 69.97000122070312,
-    "change_pct": 14.423550647102415,
-    "value": 14.423550647102415,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-22T22:10:45Z",
     "symbol": "INOD",
     "alert_id": "INOD_VOL_2X",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-21T13:41:48Z",
+    "symbol": "TKNO",
+    "alert_id": "TKNO_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.989999771118164,
+    "change_pct": -12.456144366348001,
+    "value": -12.456144366348001,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
