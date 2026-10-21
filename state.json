@@ -1733,7 +1733,8 @@
     },
     "ZVIA_PCT_DROP": {
       "last_fired": "2026-09-10T07:56:25Z"
-    }
+    },
+    "_confirm_ZVIA_MTF_BULL": 1
   },
   "VPG": {
     "VPG_PCT_DROP": {
@@ -1774,7 +1775,8 @@
     },
     "TMCI_SL_BREAK": {
       "last_fired": "2026-09-10T18:26:24Z"
-    }
+    },
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1795,7 +1797,8 @@
     },
     "TKNO_PCT_DROP": {
       "last_fired": "2026-10-21T13:41:48Z"
-    }
+    },
+    "_confirm_TKNO_RSI_OS": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -2148,7 +2151,8 @@
     "_confirm_LUNG_MA_GOLD": 1,
     "LUNG_MA_DEATH": {
       "last_fired": "2026-09-10T13:41:56Z"
-    }
+    },
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2185,7 +2189,8 @@
     "BLZE_MA_DEATH": {
       "last_fired": "2026-08-26T13:43:11Z"
     },
-    "_confirm_BLZE_MTF_BULL": 1
+    "_confirm_BLZE_MTF_BULL": 1,
+    "_confirm_BLZE_RSI_OS": 1
   },
   "AXTI": {
     "AXTI_MTF_BULL": {
@@ -2278,7 +2283,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2469,8 +2475,7 @@
     },
     "ECOR_PCT_DROP": {
       "last_fired": "2026-10-13T15:57:24Z"
-    },
-    "_confirm_ECOR_RSI_OS": 1
+    }
   },
   "TLYS": {
     "TLYS_MTF_BULL": {
@@ -2480,8 +2485,7 @@
     "TLYS_SL_BREAK": {
       "last_fired": "2026-09-15T14:27:36Z"
     },
-    "last_sell_at": "2026-09-15T14:27:36Z",
-    "_confirm_TLYS_MTF_BULL": 1
+    "last_sell_at": "2026-09-15T14:27:36Z"
   },
   "AEYE": {
     "AEYE_SCORE_65": {
@@ -2539,7 +2543,8 @@
     },
     "BSEM_PCT_DROP": {
       "last_fired": "2026-10-20T10:13:02Z"
-    }
+    },
+    "_confirm_BSEM_RSI_OS": 1
   },
   "CJMB": {
     "CJMB_PCT_DROP": {
@@ -2588,7 +2593,8 @@
     "BYRN_SL_BREAK": {
       "last_fired": "2026-10-20T16:12:46Z"
     },
-    "last_sell_at": "2026-10-20T16:12:46Z"
+    "last_sell_at": "2026-10-20T16:12:46Z",
+    "_confirm_BYRN_MTF_BULL": 1
   },
   "SOTK": {
     "SOTK_MA_DEATH": {
