@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T18:41:02Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 29.809999465942383,
-    "change_pct": 14.609763421539334,
-    "value": 28.3195,
-    "entry_price": 26.03499984741211,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-23T18:56:01Z",
     "symbol": "VICR",
     "alert_id": "VICR_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-10-22T17:11:25Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 9.649999618530273,
+    "change_pct": 11.175106903810741,
+    "value": 11.175106903810741,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
