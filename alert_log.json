@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T15:10:58Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 275.6499938964844,
-    "change_pct": 2.834023642493637,
-    "value": 261.8675,
-    "entry_price": 254.49000549316406,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-23T15:26:12Z",
     "symbol": "VICR",
     "alert_id": "VICR_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-10-22T08:12:22Z",
+    "symbol": "AEYE",
+    "alert_id": "AEYE_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 7.880000114440918,
+    "change_pct": 0.2544543821999701,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
