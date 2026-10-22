@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T19:40:50Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 28.645000457763672,
-    "change_pct": -5.958632771622878,
-    "value": 28.645000457763672,
-    "entry_price": 31.229999542236328,
-    "pnl_pct": -8.2773,
-    "days_held": 1.06,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-23T19:41:03Z",
     "symbol": "VICR",
     "alert_id": "VICR_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-22T21:56:10Z",
+    "symbol": "FPS",
+    "alert_id": "FPS_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 24.920000076293945,
+    "change_pct": -19.8713823913378,
+    "value": -19.8713823913378,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
