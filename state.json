@@ -1769,14 +1769,14 @@
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
-      "last_fired": "2026-08-25T20:12:11Z"
+      "last_fired": "2026-10-22T20:11:34Z"
     },
     "open_position": true,
     "TMCI_PCT_DROP": {
       "last_fired": "2026-10-07T08:11:40Z"
     },
     "last_sell_at": "2026-10-07T08:11:40Z",
-    "last_buy_at": "2026-08-25T20:12:11Z",
+    "last_buy_at": "2026-10-22T20:11:34Z",
     "TMCI_MA_DEATH": {
       "last_fired": "2026-09-17T14:26:36Z"
     },
@@ -1786,7 +1786,16 @@
     "TMCI_SL_BREAK": {
       "last_fired": "2026-09-10T18:26:24Z"
     },
-    "_confirm_TMCI_MTF_BULL": 1
+    "last_buy_reminder_at": "2026-10-22T20:11:34Z",
+    "open_entry": 4.28000020980835,
+    "open_time": "2026-10-22T20:11:34Z",
+    "open_peak": 4.28000020980835,
+    "open_stop": 3.9479,
+    "open_target": 4.7782,
+    "open_conviction": 5,
+    "open_conviction_total": 5,
+    "open_rr_ratio": 1.5,
+    "open_alert_type": "mtf_alignment"
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -2098,7 +2107,8 @@
     },
     "PESI_MA_DEATH": {
       "last_fired": "2026-09-23T16:56:41Z"
-    }
+    },
+    "_confirm_PESI_RSI_OS": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2160,7 +2170,8 @@
     "_confirm_LUNG_MA_GOLD": 1,
     "LUNG_MA_DEATH": {
       "last_fired": "2026-09-10T13:41:56Z"
-    }
+    },
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2292,7 +2303,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2486,8 +2498,7 @@
     },
     "ECOR_PCT_DROP": {
       "last_fired": "2026-10-13T15:57:24Z"
-    },
-    "_confirm_ECOR_RSI_OS": 1
+    }
   },
   "TLYS": {
     "TLYS_MTF_BULL": {
@@ -2555,7 +2566,8 @@
     },
     "BSEM_PCT_DROP": {
       "last_fired": "2026-10-20T10:13:02Z"
-    }
+    },
+    "_confirm_BSEM_RSI_OS": 1
   },
   "CJMB": {
     "CJMB_PCT_DROP": {
@@ -2604,7 +2616,8 @@
     "BYRN_SL_BREAK": {
       "last_fired": "2026-10-20T16:12:46Z"
     },
-    "last_sell_at": "2026-10-20T16:12:46Z"
+    "last_sell_at": "2026-10-20T16:12:46Z",
+    "_confirm_BYRN_MTF_BULL": 1
   },
   "SOTK": {
     "SOTK_MA_DEATH": {
