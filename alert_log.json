@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T16:11:32Z",
-    "symbol": "SVCO",
-    "alert_id": "SVCO_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 7.84499979019165,
-    "change_pct": -5.024215615113189,
-    "value": 7.84499979019165,
-    "entry_price": 7.414999961853027,
-    "pnl_pct": 5.7991,
-    "days_held": 2.84,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-24T16:26:20Z",
     "symbol": "LTRX",
     "alert_id": "LTRX_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-23T20:12:31Z",
+    "symbol": "TLYS",
+    "alert_id": "TLYS_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.139999866485596,
+    "change_pct": -7.174891679918677,
+    "value": -7.174891679918677,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
