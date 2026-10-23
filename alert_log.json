@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T13:56:12Z",
-    "symbol": "VICR",
-    "alert_id": "VICR_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 268.3999938964844,
-    "change_pct": -5.159012757426016,
-    "value": 268.3999938964844,
-    "entry_price": 254.49000549316406,
-    "pnl_pct": 5.4658,
-    "days_held": 1.92,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-24T14:41:10Z",
     "symbol": "WGS",
     "alert_id": "WGS_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-23T09:26:29Z",
+    "symbol": "ZVIA",
+    "alert_id": "ZVIA_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1.2200000286102295,
+    "change_pct": -8.955221745505266,
+    "value": -8.955221745505266,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
