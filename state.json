@@ -1818,8 +1818,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_TMCI_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -2002,8 +2001,7 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1,
-    "_confirm_CDNL_RSI_OS": 1
+    "_confirm_CDNL_MTF_BULL": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2131,7 +2129,8 @@
     },
     "PESI_MA_DEATH": {
       "last_fired": "2026-09-23T16:56:41Z"
-    }
+    },
+    "_confirm_PESI_RSI_OS": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2287,7 +2286,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_FATN_MTF_BULL": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2325,7 +2325,8 @@
     "_confirm_CVV_MA_GOLD": 1,
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
-    }
+    },
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2393,7 +2394,10 @@
     "HCTI_SL_BREAK": {
       "last_fired": "2026-09-30T18:57:26Z"
     },
-    "last_sell_at": "2026-09-30T18:57:26Z"
+    "last_sell_at": "2026-10-25T03:12:15Z",
+    "HCTI_PCT_DROP": {
+      "last_fired": "2026-10-25T03:12:15Z"
+    }
   },
   "FTK": {
     "FTK_MTF_BULL": {
@@ -2552,8 +2556,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "ma_crossover",
-    "_confirm_AEYE_MTF_BULL": 1
+    "open_alert_type": "ma_crossover"
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2631,7 +2634,8 @@
     "BYRN_SL_BREAK": {
       "last_fired": "2026-10-20T16:12:46Z"
     },
-    "last_sell_at": "2026-10-20T16:12:46Z"
+    "last_sell_at": "2026-10-20T16:12:46Z",
+    "_confirm_BYRN_MTF_BULL": 1
   },
   "SOTK": {
     "SOTK_MA_DEATH": {
