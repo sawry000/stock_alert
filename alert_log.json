@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T19:11:10Z",
-    "symbol": "BLLN",
-    "alert_id": "BLLN_PCT_UP",
-    "type": "percent_change",
-    "action": "BUY",
-    "price": 126.95999908447266,
-    "change_pct": 10.399999203889267,
-    "value": 10.399999203889267,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-24T19:26:04Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_TRAIL_ADJUST",
@@ -8495,6 +8478,23 @@
     "pnl_pct": null,
     "days_held": null,
     "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 4,
+    "rr_ratio": 1.6
+  },
+  {
+    "timestamp": "2026-10-26T10:27:12Z",
+    "symbol": "HCTI",
+    "alert_id": "HCTI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 6.710000038146973,
+    "change_pct": -11.896007902481973,
+    "value": -11.896007902481973,
+    "entry_price": 6.710000038146973,
+    "pnl_pct": 0.0,
+    "days_held": 0.24,
+    "entry_alert_type": "percent_change",
     "conviction_score": 4,
     "conviction_total": 4,
     "rr_ratio": 1.6
