@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T15:56:18Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_TAKE_PROFIT",
-    "type": "take_profit",
-    "action": "SELL",
-    "price": 6.840000152587891,
-    "change_pct": 6.875002384185786,
-    "value": 6.7956,
-    "entry_price": 6.0,
-    "pnl_pct": 14.0,
-    "days_held": 7.86,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-25T15:56:28Z",
     "symbol": "MXL",
     "alert_id": "MXL_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 4,
     "rr_ratio": 1.6
+  },
+  {
+    "timestamp": "2026-10-26T19:41:12Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 89.62000274658203,
+    "change_pct": -0.10032020222713466,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
