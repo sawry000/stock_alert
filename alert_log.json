@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T15:11:48Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 93.19999694824219,
-    "change_pct": 9.531081147305422,
-    "value": 88.54,
-    "entry_price": 85.30999755859375,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-25T15:27:44Z",
     "symbol": "AEYE",
     "alert_id": "AEYE_MA_DEATH",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 4,
     "rr_ratio": 1.6
+  },
+  {
+    "timestamp": "2026-10-26T17:27:37Z",
+    "symbol": "AEYE",
+    "alert_id": "AEYE_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 7.309999942779541,
+    "change_pct": -9.529703678471028,
+    "value": -9.529703678471028,
+    "entry_price": 7.75,
+    "pnl_pct": -5.6774,
+    "days_held": 6.08,
+    "entry_alert_type": "ma_crossover",
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
