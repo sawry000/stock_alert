@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-28T02:11:30Z",
-    "symbol": "VPG",
-    "alert_id": "VPG_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 71.62999725341797,
-    "change_pct": 3.2132525265388514,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-28T02:12:31Z",
     "symbol": "AEYE",
     "alert_id": "AEYE_MA_DEATH",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-28T13:56:33Z",
+    "symbol": "BRCB",
+    "alert_id": "BRCB_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 10.699999809265137,
+    "change_pct": 4.0856012574429705,
+    "value": 10.165,
+    "entry_price": 9.649999618530273,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
