@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-28T13:56:26Z",
-    "symbol": "MXL",
-    "alert_id": "MXL_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 89.97000122070312,
-    "change_pct": -4.541112763179708,
-    "value": 89.97000122070312,
-    "entry_price": 85.30999755859375,
-    "pnl_pct": 5.4624,
-    "days_held": 3.74,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-28T13:57:16Z",
     "symbol": "CSAI",
     "alert_id": "CSAI_PCT_UP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-28T15:41:54Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 4.710000038146973,
+    "change_pct": 3.5164800154935385,
+    "value": 4.4745,
+    "entry_price": 4.28000020980835,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
