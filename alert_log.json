@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-29T19:42:31Z",
-    "symbol": "DHX",
-    "alert_id": "DHX_STAGNANT_EXIT",
-    "type": "stagnant_exit",
-    "action": "SELL",
-    "price": 4.862400054931641,
-    "change_pct": 3.9129796108742987,
-    "value": 15.0,
-    "entry_price": 4.829999923706055,
-    "pnl_pct": 0.6708,
-    "days_held": 15.01,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-29T20:11:48Z",
     "symbol": "TKNO",
     "alert_id": "TKNO_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-29T16:10:57Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 9.53909969329834,
+    "change_pct": -42.62575292282412,
+    "value": -42.62575292282412,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
