@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-29T14:55:56Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 83.08999633789062,
-    "change_pct": -3.3050199721975817,
-    "value": 83.08999633789062,
-    "entry_price": 92.71499633789062,
-    "pnl_pct": -10.3813,
-    "days_held": 5.01,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-29T15:11:01Z",
     "symbol": "WGS",
     "alert_id": "WGS_MA_DEATH",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-10-29T14:42:05Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.609999895095825,
+    "change_pct": 0.7721967218465382,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
