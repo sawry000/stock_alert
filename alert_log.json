@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-29T08:27:27Z",
-    "symbol": "MNTK",
-    "alert_id": "MNTK_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 2.799999952316284,
-    "change_pct": -1.7029898443813148e-06,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-29T13:41:01Z",
     "symbol": "MRAM",
     "alert_id": "MRAM_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-29T08:10:55Z",
+    "symbol": "IOVA",
+    "alert_id": "IOVA_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 14.8100004196167,
+    "change_pct": -10.923184513405438,
+    "value": -10.923184513405438,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
