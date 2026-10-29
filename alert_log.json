@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-30T10:25:53Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 14.449999809265137,
-    "change_pct": -1.3199644468561058e-06,
-    "value": 4.25072304320967,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-30T10:25:54Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_SCORE_60",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-29T17:41:40Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 5.059999942779541,
+    "change_pct": 4.7619052320192905,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
