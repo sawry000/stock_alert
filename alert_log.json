@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-29T15:11:01Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 80.58999633789062,
-    "change_pct": -6.21436478774512,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-29T15:12:39Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_MTF_BULL",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-29T14:57:31Z",
+    "symbol": "DHX",
+    "alert_id": "DHX_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 4.710000038146973,
+    "change_pct": -2.8865952420302565,
+    "value": 0,
+    "entry_price": 4.929999828338623,
+    "pnl_pct": -4.4625,
+    "days_held": 1.77,
+    "entry_alert_type": "ma_crossover",
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
