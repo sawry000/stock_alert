@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-30T10:25:54Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_SCORE_60",
-    "type": "alert_score",
-    "action": "BUY",
-    "price": 14.449999809265137,
-    "change_pct": -1.3199644468561058e-06,
-    "value": 66,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-30T11:43:02Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-29T18:57:11Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 2.9549999237060547,
+    "change_pct": 14.092661146951924,
+    "value": 2.8072,
+    "entry_price": 2.6449999809265137,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
