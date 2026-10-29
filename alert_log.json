@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-30T14:26:51Z",
-    "symbol": "OFRM",
-    "alert_id": "OFRM_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 15.59000015258789,
-    "change_pct": -1.3915233865408594,
-    "value": 15.59000015258789,
-    "entry_price": 16.979999542236328,
-    "pnl_pct": -8.1861,
-    "days_held": 15.75,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 3,
-    "conviction_total": 4,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-09-30T15:25:48Z",
     "symbol": "INOD",
     "alert_id": "INOD_SL_BREAK",
@@ -8495,6 +8478,23 @@
     "pnl_pct": 14.3667,
     "days_held": 1.05,
     "entry_alert_type": "alert_score",
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-29T19:55:54Z",
+    "symbol": "HIMS",
+    "alert_id": "HIMS_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 29.71500015258789,
+    "change_pct": 1.4510076906380727,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
