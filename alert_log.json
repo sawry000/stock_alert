@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-29T17:41:00Z",
-    "symbol": "WGS",
-    "alert_id": "WGS_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 75.97000122070312,
-    "change_pct": -11.590828324562878,
-    "value": -11.590828324562878,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-29T19:42:31Z",
     "symbol": "DHX",
     "alert_id": "DHX_STAGNANT_EXIT",
@@ -8495,6 +8478,23 @@
     "pnl_pct": 16.4205,
     "days_held": 0.86,
     "entry_alert_type": "mtf_alignment",
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-29T15:57:05Z",
+    "symbol": "LHAI",
+    "alert_id": "LHAI_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 1.0850000381469727,
+    "change_pct": 28.67647511230701,
+    "value": 28.67647511230701,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
