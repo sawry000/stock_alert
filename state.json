@@ -1246,7 +1246,7 @@
       ]
     },
     "NLST_PCT_DROP": {
-      "last_fired": "2026-09-03T07:26:04Z"
+      "last_fired": "2026-10-30T15:10:57Z"
     },
     "open_position": true,
     "NLST_MA_DEATH": {
@@ -1255,7 +1255,7 @@
     "NLST_SL_BREAK": {
       "last_fired": "2026-10-08T14:26:03Z"
     },
-    "last_sell_at": "2026-10-08T14:26:03Z",
+    "last_sell_at": "2026-10-30T15:10:57Z",
     "NLST_PCT_UP": {
       "last_fired": "2026-10-07T11:41:03Z"
     },
@@ -2027,8 +2027,7 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1,
-    "_confirm_CDNL_RSI_OS": 1
+    "_confirm_CDNL_MTF_BULL": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2062,8 +2061,7 @@
     "BLIN_PCT_DROP": {
       "last_fired": "2026-10-08T06:56:36Z"
     },
-    "_confirm_BLIN_RSI_OS": 1,
-    "_confirm_BLIN_MTF_BULL": 1
+    "_confirm_BLIN_RSI_OS": 1
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
@@ -2366,9 +2364,9 @@
   },
   "DHX": {
     "DHX_MA_DEATH": {
-      "last_fired": "2026-10-29T14:57:31Z"
+      "last_fired": "2026-10-30T15:11:57Z"
     },
-    "last_sell_at": "2026-10-29T14:57:31Z",
+    "last_sell_at": "2026-10-30T15:11:57Z",
     "DHX_MTF_BULL": {
       "last_fired": "2026-10-28T20:12:12Z"
     },
@@ -2582,9 +2580,9 @@
       "last_fired": "2026-10-29T17:12:51Z"
     },
     "AEYE_SL_BREAK": {
-      "last_fired": "2026-09-16T15:27:37Z"
+      "last_fired": "2026-10-30T15:12:12Z"
     },
-    "last_sell_at": "2026-10-29T15:12:47Z",
+    "last_sell_at": "2026-10-30T15:12:12Z",
     "AEYE_MA_DEATH": {
       "last_fired": "2026-09-28T02:12:31Z"
     },
@@ -2594,19 +2592,7 @@
     "AEYE_PCT_DROP": {
       "last_fired": "2026-10-26T17:27:37Z"
     },
-    "last_buy_reminder_at": "2026-10-30T13:27:35Z",
-    "open_entry": 13.37909984588623,
-    "open_time": "2026-10-29T17:12:51Z",
-    "open_peak": 14.680000305175781,
-    "open_stop": 13.946000289916991,
-    "open_target": 15.2629,
-    "open_conviction": 4,
-    "open_conviction_total": 5,
-    "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_AEYE_MTF_BULL": 1,
-    "open_stop_is_trailing": true,
-    "open_trailing_last_notified_stop": 13.946000289916991
+    "_confirm_AEYE_MTF_BULL": 1
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
