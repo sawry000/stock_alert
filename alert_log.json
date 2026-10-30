@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-30T16:25:43Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 1.410099983215332,
-    "change_pct": -4.722974107072159,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-09-30T16:57:33Z",
     "symbol": "AGPU",
     "alert_id": "AGPU_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-10-30T13:27:35Z",
+    "symbol": "AEYE",
+    "alert_id": "AEYE_SCORE_65",
+    "type": "alert_score",
+    "action": "BUY",
+    "price": 14.119999885559082,
+    "change_pct": -1.7677636473999645,
+    "value": 66,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
