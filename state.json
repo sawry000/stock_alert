@@ -1614,14 +1614,14 @@
       "last_fired": "2026-06-24T14:54:20Z"
     },
     "BWEN_PCT_DROP": {
-      "last_fired": "2026-10-22T15:41:22Z"
+      "last_fired": "2026-10-30T15:26:13Z"
     },
     "open_position": true,
     "BWEN_PCT_UP": {
       "last_fired": "2026-08-04T18:26:49Z"
     },
     "last_buy_at": "2026-08-11T20:11:44Z",
-    "last_sell_at": "2026-10-22T15:41:22Z",
+    "last_sell_at": "2026-10-30T15:26:13Z",
     "BWEN_SL_BREAK": {
       "last_fired": "2026-08-19T13:41:39Z"
     },
@@ -2027,7 +2027,8 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1
+    "_confirm_CDNL_MTF_BULL": 1,
+    "_confirm_CDNL_RSI_OS": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2061,7 +2062,8 @@
     "BLIN_PCT_DROP": {
       "last_fired": "2026-10-08T06:56:36Z"
     },
-    "_confirm_BLIN_RSI_OS": 1
+    "_confirm_BLIN_RSI_OS": 1,
+    "_confirm_BLIN_MTF_BULL": 1
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
@@ -2231,7 +2233,7 @@
     "last_buy_reminder_at": "2026-10-29T21:57:06Z",
     "open_entry": 3.1649999618530273,
     "open_time": "2026-10-29T21:57:06Z",
-    "open_peak": 3.1649999618530273,
+    "open_peak": 3.194999933242798,
     "open_stop": 2.8631,
     "open_target": 3.6179,
     "open_conviction": 4,
