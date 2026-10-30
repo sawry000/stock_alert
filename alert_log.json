@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-01T13:56:34Z",
-    "symbol": "SVCO",
-    "alert_id": "SVCO_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 9.219900131225586,
-    "change_pct": 2.8857434883955047,
-    "value": 8.7589,
-    "entry_price": 8.460000038146973,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-01T13:56:50Z",
     "symbol": "LHAI",
     "alert_id": "LHAI_MA_DEATH",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-10-30T17:26:23Z",
+    "symbol": "VPG",
+    "alert_id": "VPG_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 52.900001525878906,
+    "change_pct": -9.873837814008052,
+    "value": -9.873837814008052,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
