@@ -926,12 +926,12 @@
     "FSLY_MA_GOLD": {
       "last_fired": "2026-07-08T13:59:54Z"
     },
-    "last_sell_at": "2026-10-19T02:26:05Z",
+    "last_sell_at": "2026-10-30T14:56:05Z",
     "FSLY_SL_BREAK": {
       "last_fired": "2026-10-12T16:55:57Z"
     },
     "FSLY_MA_DEATH": {
-      "last_fired": "2026-10-19T02:26:05Z"
+      "last_fired": "2026-10-30T14:56:05Z"
     }
   },
   "DOMO": {
@@ -2027,7 +2027,8 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1
+    "_confirm_CDNL_MTF_BULL": 1,
+    "_confirm_CDNL_RSI_OS": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2061,7 +2062,8 @@
     "BLIN_PCT_DROP": {
       "last_fired": "2026-10-08T06:56:36Z"
     },
-    "_confirm_BLIN_RSI_OS": 1
+    "_confirm_BLIN_RSI_OS": 1,
+    "_confirm_BLIN_MTF_BULL": 1
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
@@ -2111,25 +2113,15 @@
     },
     "last_buy_at": "2026-10-29T15:57:05Z",
     "LHAI_SL_BREAK": {
-      "last_fired": "2026-09-02T19:27:10Z"
+      "last_fired": "2026-10-30T14:56:38Z"
     },
-    "last_sell_at": "2026-10-12T02:26:49Z",
+    "last_sell_at": "2026-10-30T14:56:38Z",
     "LHAI_MA_DEATH": {
       "last_fired": "2026-10-12T02:26:49Z"
     },
     "LHAI_PCT_UP": {
       "last_fired": "2026-10-29T15:57:05Z"
-    },
-    "last_buy_reminder_at": "2026-10-29T15:57:05Z",
-    "open_entry": 1.0850000381469727,
-    "open_time": "2026-10-29T15:57:05Z",
-    "open_peak": 1.0887000560760498,
-    "open_stop": 0.9765,
-    "open_target": 1.2478,
-    "open_conviction": 4,
-    "open_conviction_total": 5,
-    "open_rr_ratio": 1.5,
-    "open_alert_type": "percent_change"
+    }
   },
   "CCTC": {
     "CCTC_PCT_DROP": {
