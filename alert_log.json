@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-09-30T23:57:25Z",
-    "symbol": "BSEM",
-    "alert_id": "BSEM_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 3.0899999141693115,
-    "change_pct": -20.76923297001765,
-    "value": -20.76923297001765,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-01T03:56:09Z",
     "symbol": "BLLN",
     "alert_id": "BLLN_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-10-30T16:26:27Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 4.65500020980835,
+    "change_pct": -8.003948422759882,
+    "value": 4.65500020980835,
+    "entry_price": 5.059999942779541,
+    "pnl_pct": -8.0039,
+    "days_held": 0.95,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
