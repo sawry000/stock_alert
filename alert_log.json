@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-02T19:41:17Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 11.164999961853027,
-    "change_pct": 6.32624455372525,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-02T20:10:50Z",
     "symbol": "OPTX",
     "alert_id": "OPTX_PCT_UP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-02T14:42:09Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 11.395000457763672,
+    "change_pct": -24.13448430250551,
+    "value": -24.13448430250551,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
