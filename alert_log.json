@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-04T02:10:49Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 1.809999942779541,
-    "change_pct": 52.100835527692524,
-    "value": 10.919569702446937,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-04T02:10:50Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_PCT_UP",
@@ -8496,6 +8479,23 @@
     "days_held": 4.91,
     "entry_alert_type": "mtf_alignment",
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-02T18:41:44Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 2.700000047683716,
+    "change_pct": -9.395971554237724,
+    "value": 2.700000047683716,
+    "entry_price": 3.005000114440918,
+    "pnl_pct": -10.1498,
+    "days_held": 0.39,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
