@@ -781,13 +781,13 @@
       "last_fired": "2026-06-05T18:29:18Z"
     },
     "open_position": true,
-    "last_sell_at": "2026-10-15T02:10:59Z",
+    "last_sell_at": "2026-11-02T14:56:26Z",
     "PSIX_PCT_UP": {
       "last_fired": "2026-10-07T19:55:58Z"
     },
     "last_buy_at": "2026-10-07T19:55:58Z",
     "PSIX_MA_DEATH": {
-      "last_fired": "2026-09-03T14:11:57Z"
+      "last_fired": "2026-11-02T14:56:26Z"
     },
     "PSIX_VOL_2X": {
       "last_fired": "2026-09-18T10:41:01Z"
@@ -1090,7 +1090,10 @@
     "TYGO_PCT_UP": {
       "last_fired": "2026-07-31T19:26:04Z"
     },
-    "last_sell_at": "2026-09-25T06:25:43Z"
+    "last_sell_at": "2026-11-02T14:55:56Z",
+    "TYGO_MA_DEATH": {
+      "last_fired": "2026-11-02T14:55:56Z"
+    }
   },
   "INOD": {
     "INOD_PCT_UP_5": {
@@ -1795,8 +1798,7 @@
     "TMCI_SL_BREAK": {
       "last_fired": "2026-10-30T16:26:27Z"
     },
-    "_confirm_TMCI_MA_GOLD": 1,
-    "_confirm_TMCI_MTF_BULL": 1
+    "_confirm_TMCI_MA_GOLD": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1873,8 +1875,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_RFIL_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -2304,7 +2305,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_FATN_MTF_BULL": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2546,7 +2548,8 @@
     },
     "TLYS_MA_DEATH": {
       "last_fired": "2026-10-26T13:42:22Z"
-    }
+    },
+    "_confirm_TLYS_MTF_BULL": 1
   },
   "AEYE": {
     "AEYE_SCORE_65": {
@@ -2607,8 +2610,7 @@
     },
     "BSEM_PCT_DROP": {
       "last_fired": "2026-10-20T10:13:02Z"
-    },
-    "_confirm_BSEM_RSI_OS": 1
+    }
   },
   "CJMB": {
     "CJMB_PCT_DROP": {
@@ -2630,8 +2632,7 @@
     "last_sell_at": "2026-10-14T13:44:41Z",
     "MNTK_MA_DEATH": {
       "last_fired": "2026-10-14T13:44:41Z"
-    },
-    "_confirm_MNTK_MTF_BULL": 1
+    }
   },
   "NTRB": {
     "NTRB_VOL_3X": {
