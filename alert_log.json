@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-02T21:42:11Z",
-    "symbol": "WDC",
-    "alert_id": "WDC_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 415.2900085449219,
-    "change_pct": -10.104550393981892,
-    "value": -10.104550393981892,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-03T05:57:02Z",
     "symbol": "WDC",
     "alert_id": "WDC_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-02T16:42:06Z",
+    "symbol": "DHX",
+    "alert_id": "DHX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.800000190734863,
+    "change_pct": 6.430159439797417,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
