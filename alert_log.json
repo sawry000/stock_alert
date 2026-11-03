@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-05T13:40:54Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_STAGNANT_EXIT",
-    "type": "stagnant_exit",
-    "action": "SELL",
-    "price": 3.630000114440918,
-    "change_pct": -4.72190570773726,
-    "value": 17.8,
-    "entry_price": 3.5399999618530273,
-    "pnl_pct": 2.5424,
-    "days_held": 17.82,
-    "entry_alert_type": "percent_change",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-05T13:41:22Z",
     "symbol": "VELO",
     "alert_id": "VELO_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-03T15:10:48Z",
+    "symbol": "LNAI",
+    "alert_id": "LNAI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 0.1648000031709671,
+    "change_pct": -21.523808013825185,
+    "value": -21.523808013825185,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
