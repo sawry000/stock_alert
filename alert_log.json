@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-05T13:41:23Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 8.93220043182373,
-    "change_pct": -19.077727560937397,
-    "value": -19.077727560937397,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-05T15:26:12Z",
     "symbol": "SHLS",
     "alert_id": "SHLS_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-03T19:41:17Z",
+    "symbol": "SHLS",
+    "alert_id": "SHLS_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 8.335000038146973,
+    "change_pct": 9.671053133512803,
+    "value": 9.671053133512803,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
