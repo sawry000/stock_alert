@@ -661,7 +661,7 @@
       "last_fired": "2026-06-29T02:08:39Z"
     },
     "OPTX_PCT_DROP": {
-      "last_fired": "2026-11-03T02:56:08Z"
+      "last_fired": "2026-11-03T11:10:57Z"
     },
     "OPTX_NEWS_POS": {
       "last_fired": "2026-06-09T18:33:36Z",
@@ -686,7 +686,7 @@
       "last_fired": "2026-10-05T02:10:54Z"
     },
     "last_buy_at": "2026-10-05T02:10:54Z",
-    "last_sell_at": "2026-11-03T02:56:08Z",
+    "last_sell_at": "2026-11-03T11:10:57Z",
     "OPTX_SL_BREAK": {
       "last_fired": "2026-10-07T13:40:55Z"
     }
@@ -1828,7 +1828,8 @@
     },
     "SNDK_SL_BREAK": {
       "last_fired": "2026-10-30T13:41:50Z"
-    }
+    },
+    "_confirm_SNDK_RSI_OS": 1
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -1980,7 +1981,8 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1
+    "_confirm_CDNL_MTF_BULL": 1,
+    "_confirm_CDNL_RSI_OS": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2057,8 +2059,7 @@
     },
     "OFRM_MA_GOLD": {
       "last_fired": "2026-10-15T20:42:06Z"
-    },
-    "_confirm_OFRM_RSI_OS": 1
+    }
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2591,8 +2592,7 @@
     },
     "BSEM_PCT_DROP": {
       "last_fired": "2026-10-20T10:13:02Z"
-    },
-    "_confirm_BSEM_RSI_OS": 1
+    }
   },
   "CJMB": {
     "CJMB_PCT_DROP": {
@@ -2614,7 +2614,8 @@
     "last_sell_at": "2026-10-14T13:44:41Z",
     "MNTK_MA_DEATH": {
       "last_fired": "2026-10-14T13:44:41Z"
-    }
+    },
+    "_confirm_MNTK_MTF_BULL": 1
   },
   "NTRB": {
     "NTRB_VOL_3X": {
