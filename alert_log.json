@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-05T13:40:49Z",
-    "symbol": "AIXI",
-    "alert_id": "AIXI_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 1.542799949645996,
-    "change_pct": -0.46451937767767426,
-    "value": 1.542799949645996,
-    "entry_price": 1.7300000190734863,
-    "pnl_pct": -10.8208,
-    "days_held": 2.83,
-    "entry_alert_type": "volume_spike",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-05T13:40:54Z",
     "symbol": "DDD",
     "alert_id": "DDD_STAGNANT_EXIT",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-03T13:12:08Z",
+    "symbol": "DHX",
+    "alert_id": "DHX_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.78000020980835,
+    "change_pct": 5.986700882668511,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
