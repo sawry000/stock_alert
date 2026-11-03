@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-05T15:40:58Z",
-    "symbol": "OPTX",
-    "alert_id": "OPTX_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 9.930000305175781,
-    "change_pct": 9.120882474459139,
-    "value": 9.4335,
-    "entry_price": 9.140000343322754,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-05T15:57:52Z",
     "symbol": "MNTK",
     "alert_id": "MNTK_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-03T23:55:40Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 14.020000457763672,
+    "change_pct": 18.312240149904408,
+    "value": 18.312240149904408,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 3,
+    "conviction_total": 4,
+    "rr_ratio": 1.5
   }
 ]
