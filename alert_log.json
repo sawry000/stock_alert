@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-05T02:26:47Z",
-    "symbol": "NEOV",
-    "alert_id": "NEOV_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 3.049999952316284,
-    "change_pct": 20.553357799062624,
-    "value": 2,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-05T13:40:49Z",
     "symbol": "AIXI",
     "alert_id": "AIXI_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-03T12:12:05Z",
+    "symbol": "LUNG",
+    "alert_id": "LUNG_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 2.5799999237060547,
+    "change_pct": 3.1999969482421875,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
