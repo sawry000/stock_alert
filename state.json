@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-11-03T02:12:22Z"
+    "last_sent": "2026-11-04T02:12:33Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -507,7 +507,8 @@
     "last_sell_at": "2026-08-18T16:40:54Z",
     "XMTR_MA_DEATH": {
       "last_fired": "2026-08-18T16:40:54Z"
-    }
+    },
+    "_confirm_XMTR_MTF_BULL": 1
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -2114,7 +2115,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-11-03T02:12:23Z"
+    "last_sent": "2026-11-04T02:12:34Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -2130,7 +2131,8 @@
     },
     "PESI_MA_DEATH": {
       "last_fired": "2026-09-23T16:56:41Z"
-    }
+    },
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2158,10 +2160,10 @@
     }
   },
   "__earnings_alert__": {
-    "last_sent": "2026-11-03T02:12:23Z"
+    "last_sent": "2026-11-04T02:12:35Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-11-03T02:12:26Z"
+    "last_sent": "2026-11-04T02:12:38Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -2227,7 +2229,7 @@
     }
   },
   "__universe_earnings_digest__": {
-    "last_sent": "2026-11-03T02:12:26Z"
+    "last_sent": "2026-11-04T02:12:38Z"
   },
   "BLZE": {
     "BLZE_MA_GOLD": {
@@ -2238,9 +2240,9 @@
       "last_fired": "2026-09-23T19:41:50Z"
     },
     "BLZE_PCT_DROP": {
-      "last_fired": "2026-11-03T17:12:11Z"
+      "last_fired": "2026-11-04T02:11:58Z"
     },
-    "last_sell_at": "2026-11-03T17:12:11Z",
+    "last_sell_at": "2026-11-04T02:11:58Z",
     "BLZE_SL_BREAK": {
       "last_fired": "2026-08-19T13:42:35Z"
     },
@@ -2305,7 +2307,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_FATN_MTF_BULL": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2319,8 +2322,7 @@
     "_confirm_REAX_MA_GOLD": 1,
     "REAX_PCT_DROP": {
       "last_fired": "2026-08-26T13:43:19Z"
-    },
-    "_confirm_REAX_MTF_BULL": 1
+    }
   },
   "CVV": {
     "CVV_MTF_BULL": {
