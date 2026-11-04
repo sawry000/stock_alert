@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-07T14:26:50Z",
-    "symbol": "NEOV",
-    "alert_id": "NEOV_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 2.700000047683716,
-    "change_pct": -6.57439281371226,
-    "value": 2.700000047683716,
-    "entry_price": 3.015000104904175,
-    "pnl_pct": -10.4478,
-    "days_held": 4.79,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-07T14:26:54Z",
     "symbol": "BLIN",
     "alert_id": "BLIN_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-04T20:27:18Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 97.75499725341797,
+    "change_pct": 11.350948004804604,
+    "value": 92.8672,
+    "entry_price": 90.29000091552734,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
