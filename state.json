@@ -2499,13 +2499,15 @@
     "last_buy_reminder_at": "2026-11-04T19:12:01Z",
     "open_entry": 8.119999885559082,
     "open_time": "2026-11-04T19:12:01Z",
-    "open_peak": 8.619999885559082,
-    "open_stop": 7.308,
+    "open_peak": 8.949999809265137,
+    "open_stop": 8.50249981880188,
     "open_target": 9.338,
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "open_stop_is_trailing": true,
+    "open_trailing_last_notified_stop": 8.50249981880188
   },
   "TLYS": {
     "TLYS_MTF_BULL": {
