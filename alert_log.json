@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-12T02:10:56Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 30.920000076293945,
-    "change_pct": 9.918237029128854,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-12T02:11:19Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-05T16:12:10Z",
+    "symbol": "MNTK",
+    "alert_id": "MNTK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 2.4149999618530273,
+    "change_pct": -10.542303976402906,
+    "value": -10.542303976402906,
+    "entry_price": 2.4800000190734863,
+    "pnl_pct": -2.621,
+    "days_held": 1.78,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
