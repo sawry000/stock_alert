@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-12T02:11:19Z",
-    "symbol": "FSLY",
-    "alert_id": "FSLY_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 29.299999237060547,
-    "change_pct": 15.856066575961043,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-12T02:11:58Z",
     "symbol": "CDNL",
     "alert_id": "CDNL_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-05T16:26:40Z",
+    "symbol": "NTRB",
+    "alert_id": "NTRB_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 5.420000076293945,
+    "change_pct": -10.928512040823843,
+    "value": -10.928512040823843,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
