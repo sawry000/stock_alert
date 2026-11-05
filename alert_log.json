@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-08T13:41:51Z",
-    "symbol": "SVCO",
-    "alert_id": "SVCO_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 8.180000305175781,
-    "change_pct": -2.850353550398063,
-    "value": 8.180000305175781,
-    "entry_price": 9.020000457763672,
-    "pnl_pct": -9.3126,
-    "days_held": 6.44,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-08T14:26:03Z",
     "symbol": "NLST",
     "alert_id": "NLST_SL_BREAK",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-05T13:56:02Z",
+    "symbol": "AGL",
+    "alert_id": "AGL_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 96.2300033569336,
+    "change_pct": -11.715593250519639,
+    "value": -11.715593250519639,
+    "entry_price": 90.29000091552734,
+    "pnl_pct": 6.5788,
+    "days_held": 13.68,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
