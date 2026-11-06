@@ -508,7 +508,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_XMTR_MTF_BULL": 1
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -1901,10 +1902,10 @@
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
-      "last_fired": "2026-10-02T03:11:31Z"
+      "last_fired": "2026-11-06T09:26:20Z"
     },
     "open_position": true,
-    "last_buy_at": "2026-10-02T03:11:31Z",
+    "last_buy_at": "2026-11-06T09:26:20Z",
     "SVCO_PCT_DROP": {
       "last_fired": "2026-11-04T20:11:24Z"
     },
@@ -1919,7 +1920,16 @@
     "SVCO_SL_BREAK": {
       "last_fired": "2026-10-08T13:41:51Z"
     },
-    "_confirm_SVCO_MTF_BULL": 1
+    "last_buy_reminder_at": "2026-11-06T09:26:20Z",
+    "open_entry": 6.730000019073486,
+    "open_time": "2026-11-06T09:26:20Z",
+    "open_peak": 6.730000019073486,
+    "open_stop": 6.057,
+    "open_target": 7.7395,
+    "open_conviction": 4,
+    "open_conviction_total": 5,
+    "open_rr_ratio": 1.5,
+    "open_alert_type": "mtf_alignment"
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -2235,8 +2245,7 @@
     "last_sell_at": "2026-11-06T06:56:42Z",
     "WDC_PCT_DROP": {
       "last_fired": "2026-11-06T06:56:42Z"
-    },
-    "_confirm_WDC_RSI_OS": 1
+    }
   },
   "__universe_earnings_digest__": {
     "last_sent": "2026-11-06T02:11:58Z"
@@ -2519,9 +2528,9 @@
   },
   "ECOR": {
     "ECOR_MTF_BULL": {
-      "last_fired": "2026-11-04T19:12:01Z"
+      "last_fired": "2026-11-06T09:26:49Z"
     },
-    "last_buy_at": "2026-11-04T19:12:01Z",
+    "last_buy_at": "2026-11-06T09:26:49Z",
     "last_sell_at": "2026-10-13T15:57:24Z",
     "ECOR_SL_BREAK": {
       "last_fired": "2026-10-02T17:12:25Z"
@@ -2532,7 +2541,7 @@
     "ECOR_PCT_DROP": {
       "last_fired": "2026-10-13T15:57:24Z"
     },
-    "last_buy_reminder_at": "2026-11-04T19:12:01Z",
+    "last_buy_reminder_at": "2026-11-06T09:26:49Z",
     "open_entry": 8.119999885559082,
     "open_time": "2026-11-04T19:12:01Z",
     "open_peak": 8.999899864196777,
@@ -2543,8 +2552,7 @@
     "open_rr_ratio": 1.5,
     "open_alert_type": "mtf_alignment",
     "open_stop_is_trailing": true,
-    "open_trailing_last_notified_stop": 8.50249981880188,
-    "_confirm_ECOR_MTF_BULL": 1
+    "open_trailing_last_notified_stop": 8.50249981880188
   },
   "TLYS": {
     "TLYS_MTF_BULL": {
@@ -2692,6 +2700,19 @@
     "last_sell_at": "2026-10-21T15:12:51Z"
   },
   "EVGO": {
-    "_confirm_EVGO_MTF_BULL": 1
+    "EVGO_MTF_BULL": {
+      "last_fired": "2026-11-06T09:27:03Z"
+    },
+    "last_buy_at": "2026-11-06T09:27:03Z",
+    "last_buy_reminder_at": "2026-11-06T09:27:03Z",
+    "open_entry": 1.75,
+    "open_time": "2026-11-06T09:27:03Z",
+    "open_peak": 1.75,
+    "open_stop": 1.575,
+    "open_target": 2.0125,
+    "open_conviction": 4,
+    "open_conviction_total": 5,
+    "open_rr_ratio": 1.5,
+    "open_alert_type": "mtf_alignment"
   }
 }
