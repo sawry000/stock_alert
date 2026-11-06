@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-15T20:40:57Z",
-    "symbol": "DDD",
-    "alert_id": "DDD_VOL_3X",
-    "type": "volume_spike",
-    "action": "BUY",
-    "price": 2.9600000381469727,
-    "change_pct": 0.07776441650514455,
-    "value": 3.0486617485818237,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-15T20:42:06Z",
     "symbol": "OFRM",
     "alert_id": "OFRM_MA_GOLD",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-06T18:10:43Z",
+    "symbol": "RIOT",
+    "alert_id": "RIOT_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 16.514999389648438,
+    "change_pct": 15.732301258923881,
+    "value": 15.732301258923881,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
