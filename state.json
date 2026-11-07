@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-11-06T02:11:57Z"
+    "last_sent": "2026-11-07T02:12:57Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -1020,7 +1020,7 @@
     "last_buy_reminder_at": "2026-11-06T21:11:11Z",
     "open_entry": 10.079999923706055,
     "open_time": "2026-11-06T21:11:11Z",
-    "open_peak": 10.079999923706055,
+    "open_peak": 10.08,
     "open_stop": 9.072,
     "open_target": 11.592,
     "open_conviction": 5,
@@ -2031,7 +2031,8 @@
     "NEOV_PCT_DROP": {
       "last_fired": "2026-09-24T14:42:04Z"
     },
-    "_confirm_NEOV_RSI_OS": 1
+    "_confirm_NEOV_RSI_OS": 1,
+    "_confirm_NEOV_MTF_BULL": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -2179,7 +2180,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-11-06T02:11:57Z"
+    "last_sent": "2026-11-07T02:12:58Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -2195,7 +2196,8 @@
     },
     "PESI_MA_DEATH": {
       "last_fired": "2026-09-23T16:56:41Z"
-    }
+    },
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2224,10 +2226,10 @@
     "_confirm_AGPU_RSI_OS": 1
   },
   "__earnings_alert__": {
-    "last_sent": "2026-11-06T02:11:57Z"
+    "last_sent": "2026-11-07T02:12:58Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-11-06T02:11:58Z"
+    "last_sent": "2026-11-07T02:13:00Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -2281,10 +2283,11 @@
     "last_sell_at": "2026-11-06T06:56:42Z",
     "WDC_PCT_DROP": {
       "last_fired": "2026-11-06T06:56:42Z"
-    }
+    },
+    "_confirm_WDC_RSI_OS": 1
   },
   "__universe_earnings_digest__": {
-    "last_sent": "2026-11-06T02:11:58Z"
+    "last_sent": "2026-11-07T02:13:00Z"
   },
   "BLZE": {
     "BLZE_MA_GOLD": {
@@ -2337,8 +2340,7 @@
     "OCC_PCT_DROP": {
       "last_fired": "2026-11-06T07:11:21Z"
     },
-    "_confirm_OCC_MTF_BULL": 1,
-    "_confirm_OCC_RSI_OS": 1
+    "_confirm_OCC_MTF_BULL": 1
   },
   "FATN": {
     "FATN_MTF_BULL": {
@@ -2381,8 +2383,7 @@
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
     },
-    "_confirm_CVV_RSI_OS": 1,
-    "_confirm_CVV_MTF_BULL": 1
+    "_confirm_CVV_RSI_OS": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2692,7 +2693,8 @@
     },
     "MNTK_PCT_DROP": {
       "last_fired": "2026-11-06T02:11:50Z"
-    }
+    },
+    "_confirm_MNTK_MTF_BULL": 1
   },
   "NTRB": {
     "NTRB_VOL_3X": {
@@ -2734,7 +2736,8 @@
     "SOTK_MA_DEATH": {
       "last_fired": "2026-10-21T15:12:51Z"
     },
-    "last_sell_at": "2026-10-21T15:12:51Z"
+    "last_sell_at": "2026-10-21T15:12:51Z",
+    "_confirm_SOTK_RSI_OS": 1
   },
   "EVGO": {
     "EVGO_MTF_BULL": {
