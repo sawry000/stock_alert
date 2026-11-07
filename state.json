@@ -1915,7 +1915,8 @@
     },
     "SNDK_SL_BREAK": {
       "last_fired": "2026-10-30T13:41:50Z"
-    }
+    },
+    "_confirm_SNDK_RSI_OS": 1
   },
   "RFIL": {
     "RFIL_MTF_BULL": {
@@ -2030,8 +2031,7 @@
     "NEOV_PCT_DROP": {
       "last_fired": "2026-09-24T14:42:04Z"
     },
-    "_confirm_NEOV_RSI_OS": 1,
-    "_confirm_NEOV_MTF_BULL": 1
+    "_confirm_NEOV_RSI_OS": 1
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -2143,8 +2143,7 @@
     },
     "OFRM_MA_GOLD": {
       "last_fired": "2026-10-15T20:42:06Z"
-    },
-    "_confirm_OFRM_RSI_OS": 1
+    }
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2196,8 +2195,7 @@
     },
     "PESI_MA_DEATH": {
       "last_fired": "2026-09-23T16:56:41Z"
-    },
-    "_confirm_PESI_MTF_BULL": 1
+    }
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2269,7 +2267,8 @@
     },
     "LUNG_SCORE_65": {
       "last_fired": "2026-10-29T21:57:06Z"
-    }
+    },
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2282,8 +2281,7 @@
     "last_sell_at": "2026-11-06T06:56:42Z",
     "WDC_PCT_DROP": {
       "last_fired": "2026-11-06T06:56:42Z"
-    },
-    "_confirm_WDC_RSI_OS": 1
+    }
   },
   "__universe_earnings_digest__": {
     "last_sent": "2026-11-07T02:13:00Z"
@@ -2339,7 +2337,8 @@
     "OCC_PCT_DROP": {
       "last_fired": "2026-11-06T07:11:21Z"
     },
-    "_confirm_OCC_MTF_BULL": 1
+    "_confirm_OCC_MTF_BULL": 1,
+    "_confirm_OCC_RSI_OS": 1
   },
   "FATN": {
     "FATN_MTF_BULL": {
@@ -2382,7 +2381,8 @@
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
     },
-    "_confirm_CVV_RSI_OS": 1
+    "_confirm_CVV_RSI_OS": 1,
+    "_confirm_CVV_MTF_BULL": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2638,8 +2638,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_AEYE_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2668,8 +2667,7 @@
     },
     "BSEM_PCT_DROP": {
       "last_fired": "2026-10-20T10:13:02Z"
-    },
-    "_confirm_BSEM_RSI_OS": 1
+    }
   },
   "CJMB": {
     "CJMB_PCT_DROP": {
@@ -2694,8 +2692,7 @@
     },
     "MNTK_PCT_DROP": {
       "last_fired": "2026-11-06T02:11:50Z"
-    },
-    "_confirm_MNTK_MTF_BULL": 1
+    }
   },
   "NTRB": {
     "NTRB_VOL_3X": {
@@ -2737,8 +2734,7 @@
     "SOTK_MA_DEATH": {
       "last_fired": "2026-10-21T15:12:51Z"
     },
-    "last_sell_at": "2026-10-21T15:12:51Z",
-    "_confirm_SOTK_RSI_OS": 1
+    "last_sell_at": "2026-10-21T15:12:51Z"
   },
   "EVGO": {
     "EVGO_MTF_BULL": {
