@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-16T16:10:55Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 28.700000762939453,
-    "change_pct": -1.306737403922095,
-    "value": 0,
-    "entry_price": 29.360000610351562,
-    "pnl_pct": -2.248,
-    "days_held": 0.85,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-16T16:11:04Z",
     "symbol": "WYFI",
     "alert_id": "WYFI_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-07T07:42:00Z",
+    "symbol": "REAX",
+    "alert_id": "REAX_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 12.65999984741211,
+    "change_pct": -15.033558071059671,
+    "value": -15.033558071059671,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
