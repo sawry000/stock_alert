@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-19T02:11:05Z",
-    "symbol": "VELO",
-    "alert_id": "VELO_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 6.795000076293945,
-    "change_pct": -12.371199511317005,
-    "value": -12.371199511317005,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-19T02:11:26Z",
     "symbol": "BLZE",
     "alert_id": "BLZE_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-09T17:56:12Z",
+    "symbol": "AMPX",
+    "alert_id": "AMPX_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 9.5,
+    "change_pct": 9.733981726404314,
+    "value": 9.025,
+    "entry_price": 8.630000114440918,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
