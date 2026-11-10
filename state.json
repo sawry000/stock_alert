@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-11-09T02:12:40Z"
+    "last_sent": "2026-11-10T02:12:59Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -530,8 +530,7 @@
     "open_rr_ratio": 1.5,
     "open_alert_type": "mtf_alignment",
     "open_stop_is_trailing": true,
-    "open_trailing_last_notified_stop": 115.59362297058105,
-    "_confirm_XMTR_MTF_BULL": 1
+    "open_trailing_last_notified_stop": 115.59362297058105
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -1925,7 +1924,8 @@
     "open_alert_type": "mtf_alignment",
     "open_stop_is_trailing": true,
     "open_trailing_last_notified_stop": 8.293499565124511,
-    "_confirm_TKNO_MA_GOLD": 1
+    "_confirm_TKNO_MA_GOLD": 1,
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1990,8 +1990,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_SVCO_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -2217,7 +2216,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-11-09T02:12:40Z"
+    "last_sent": "2026-11-10T02:13:01Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -2273,10 +2272,10 @@
     "_confirm_AGPU_RSI_OS": 1
   },
   "__earnings_alert__": {
-    "last_sent": "2026-11-09T02:12:41Z"
+    "last_sent": "2026-11-10T02:13:01Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-11-09T02:12:43Z"
+    "last_sent": "2026-11-10T02:13:02Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -2316,7 +2315,8 @@
     },
     "LUNG_SCORE_65": {
       "last_fired": "2026-10-29T21:57:06Z"
-    }
+    },
+    "_confirm_LUNG_MTF_BULL": 1
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2333,7 +2333,7 @@
     "_confirm_WDC_RSI_OS": 1
   },
   "__universe_earnings_digest__": {
-    "last_sent": "2026-11-09T02:12:43Z"
+    "last_sent": "2026-11-10T02:13:02Z"
   },
   "BLZE": {
     "BLZE_MA_GOLD": {
@@ -2430,7 +2430,8 @@
     "CVV_PCT_DROP": {
       "last_fired": "2026-09-14T02:12:30Z"
     },
-    "_confirm_CVV_RSI_OS": 1
+    "_confirm_CVV_RSI_OS": 1,
+    "_confirm_CVV_MTF_BULL": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2528,7 +2529,7 @@
     "last_buy_reminder_at": "2026-11-09T21:27:18Z",
     "open_entry": 25.979999542236328,
     "open_time": "2026-11-09T21:27:18Z",
-    "open_peak": 25.979999542236328,
+    "open_peak": 25.98,
     "open_stop": 23.382,
     "open_target": 29.877,
     "open_conviction": 5,
@@ -2695,8 +2696,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_AEYE_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2821,6 +2821,7 @@
     "open_rr_ratio": 1.5,
     "open_alert_type": "mtf_alignment",
     "open_stop_is_trailing": true,
-    "open_trailing_last_notified_stop": 1.8002499818801878
+    "open_trailing_last_notified_stop": 1.8002499818801878,
+    "_confirm_EVGO_MTF_BULL": 1
   }
 }
