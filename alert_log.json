@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-20T16:12:46Z",
-    "symbol": "BYRN",
-    "alert_id": "BYRN_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 4.940000057220459,
-    "change_pct": -5.544931984312456,
-    "value": 4.940000057220459,
-    "entry_price": 4.78000020980835,
-    "pnl_pct": 3.3473,
-    "days_held": 4.57,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-20T16:41:27Z",
     "symbol": "BRCB",
     "alert_id": "BRCB_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-10T18:12:08Z",
+    "symbol": "XMTR",
+    "alert_id": "XMTR_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 115.91999816894531,
+    "change_pct": -1.9123386622564682,
+    "value": 115.91999816894531,
+    "entry_price": 111.29000091552734,
+    "pnl_pct": 4.1603,
+    "days_held": 6.66,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
