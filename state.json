@@ -521,8 +521,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_XMTR_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -699,7 +698,7 @@
     },
     "open_position": false,
     "OPTX_VOL_3X": {
-      "last_fired": "2026-06-17T03:43:23Z"
+      "last_fired": "2026-11-11T20:58:28Z"
     },
     "OPTX_VOL_ALARM": {
       "last_fired": "2026-06-17T03:43:25Z"
@@ -710,11 +709,21 @@
     "OPTX_PCT_UP": {
       "last_fired": "2026-10-05T02:10:54Z"
     },
-    "last_buy_at": "2026-10-05T02:10:54Z",
+    "last_buy_at": "2026-11-11T20:58:28Z",
     "last_sell_at": "2026-11-06T08:10:55Z",
     "OPTX_SL_BREAK": {
       "last_fired": "2026-10-07T13:40:55Z"
-    }
+    },
+    "last_buy_reminder_at": "2026-11-11T20:58:28Z",
+    "open_entry": 6.599999904632568,
+    "open_time": "2026-11-11T20:58:28Z",
+    "open_peak": 6.599999904632568,
+    "open_stop": 5.94,
+    "open_target": 7.59,
+    "open_conviction": 4,
+    "open_conviction_total": 5,
+    "open_rr_ratio": 1.5,
+    "open_alert_type": "volume_spike"
   },
   "TGEN": {
     "TGEN_BREAK_ABOVE": {
@@ -1543,8 +1552,8 @@
     "last_buy_reminder_at": "2026-11-09T20:26:22Z",
     "open_entry": 22.440000534057617,
     "open_time": "2026-11-09T20:26:22Z",
-    "open_peak": 24.579999923706055,
-    "open_stop": 23.35099992752075,
+    "open_peak": 24.610000610351562,
+    "open_stop": 23.379500579833984,
     "open_target": 25.806,
     "open_conviction": 3,
     "open_conviction_total": 4,
@@ -1761,8 +1770,7 @@
     },
     "SMTC_SL_BREAK": {
       "last_fired": "2026-10-12T13:56:20Z"
-    },
-    "_confirm_SMTC_MTF_BULL": 1
+    }
   },
   "MXL": {
     "MXL_MTF_BULL": {
@@ -1824,7 +1832,8 @@
     "VPG_MA_GOLD": {
       "last_fired": "2026-09-27T02:11:25Z"
     },
-    "_confirm_VPG_MA_GOLD": 1
+    "_confirm_VPG_MA_GOLD": 1,
+    "_confirm_VPG_MTF_BULL": 1
   },
   "TMCI": {
     "TMCI_MTF_BULL": {
@@ -1866,8 +1875,7 @@
       "last_fired": "2026-10-21T13:41:48Z"
     },
     "_confirm_TKNO_RSI_OS": 1,
-    "_confirm_TKNO_MA_GOLD": 1,
-    "_confirm_TKNO_MTF_BULL": 1
+    "_confirm_TKNO_MA_GOLD": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1902,8 +1910,7 @@
     },
     "RFIL_PCT_DROP": {
       "last_fired": "2026-11-06T07:56:19Z"
-    },
-    "_confirm_RFIL_MTF_BULL": 1
+    }
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1924,7 +1931,7 @@
     "SVCO_SL_BREAK": {
       "last_fired": "2026-10-08T13:41:51Z"
     },
-    "_confirm_SVCO_MA_GOLD": 1
+    "_confirm_SVCO_MTF_BULL": 1
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -1977,9 +1984,9 @@
     "NEOV_MA_GOLD": {
       "last_fired": "2026-11-09T17:26:50Z"
     },
-    "last_buy_at": "2026-11-10T13:27:01Z",
+    "last_buy_at": "2026-11-11T20:59:16Z",
     "NEOV_MTF_BULL": {
-      "last_fired": "2026-11-10T13:27:01Z"
+      "last_fired": "2026-11-11T20:59:16Z"
     },
     "NEOV_MA_DEATH": {
       "last_fired": "2026-09-23T17:56:26Z"
@@ -1992,7 +1999,7 @@
       "last_fired": "2026-09-24T14:42:04Z"
     },
     "_confirm_NEOV_RSI_OS": 1,
-    "last_buy_reminder_at": "2026-11-10T13:27:01Z",
+    "last_buy_reminder_at": "2026-11-11T20:59:16Z",
     "open_entry": 2.890000104904175,
     "open_time": "2026-11-09T17:26:50Z",
     "open_peak": 3.049999952316284,
@@ -2001,8 +2008,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "ma_crossover",
-    "_confirm_NEOV_MTF_BULL": 1
+    "open_alert_type": "ma_crossover"
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -2114,7 +2120,8 @@
     },
     "OFRM_MA_GOLD": {
       "last_fired": "2026-10-15T20:42:06Z"
-    }
+    },
+    "_confirm_OFRM_RSI_OS": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2177,8 +2184,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_PESI_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2204,8 +2210,7 @@
     "AGPU_MTF_BULL": {
       "last_fired": "2026-09-30T11:43:02Z"
     },
-    "_confirm_AGPU_RSI_OS": 1,
-    "_confirm_AGPU_MTF_BULL": 1
+    "_confirm_AGPU_RSI_OS": 1
   },
   "__earnings_alert__": {
     "last_sent": "2026-11-11T02:12:44Z"
@@ -2251,8 +2256,7 @@
     },
     "LUNG_SCORE_65": {
       "last_fired": "2026-10-29T21:57:06Z"
-    },
-    "_confirm_LUNG_MTF_BULL": 1
+    }
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2289,7 +2293,8 @@
     "BLZE_MA_DEATH": {
       "last_fired": "2026-08-26T13:43:11Z"
     },
-    "_confirm_BLZE_RSI_OS": 1
+    "_confirm_BLZE_RSI_OS": 1,
+    "_confirm_BLZE_MTF_BULL": 1
   },
   "AXTI": {
     "AXTI_MTF_BULL": {
@@ -2320,7 +2325,8 @@
     },
     "OCC_PCT_DROP": {
       "last_fired": "2026-11-06T07:11:21Z"
-    }
+    },
+    "_confirm_OCC_MTF_BULL": 1
   },
   "FATN": {
     "FATN_MTF_BULL": {
@@ -2469,7 +2475,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_FTK_MTF_BULL": 1
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2622,8 +2629,7 @@
     "open_rr_ratio": 1.5,
     "open_alert_type": "mtf_alignment",
     "open_stop_is_trailing": true,
-    "open_trailing_last_notified_stop": 13.380750036239624,
-    "_confirm_AEYE_MTF_BULL": 1
+    "open_trailing_last_notified_stop": 13.380750036239624
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2653,7 +2659,8 @@
     "BSEM_PCT_DROP": {
       "last_fired": "2026-10-20T10:13:02Z"
     },
-    "_confirm_BSEM_RSI_OS": 1
+    "_confirm_BSEM_RSI_OS": 1,
+    "_confirm_BSEM_MTF_BULL": 1
   },
   "CJMB": {
     "CJMB_PCT_DROP": {
@@ -2731,6 +2738,7 @@
     "EVGO_SL_BREAK": {
       "last_fired": "2026-11-10T14:57:39Z"
     },
-    "last_sell_at": "2026-11-10T14:57:39Z"
+    "last_sell_at": "2026-11-10T14:57:39Z",
+    "_confirm_EVGO_MTF_BULL": 1
   }
 }
