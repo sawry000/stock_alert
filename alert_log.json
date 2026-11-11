@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-22T08:12:22Z",
-    "symbol": "AEYE",
-    "alert_id": "AEYE_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 7.880000114440918,
-    "change_pct": 0.2544543821999701,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-22T10:12:52Z",
     "symbol": "CELU",
     "alert_id": "CELU_PCT_DROP",
@@ -8495,6 +8478,23 @@
     "pnl_pct": -10.555,
     "days_held": 6.74,
     "entry_alert_type": "percent_change",
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-11T16:25:40Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 239.66000366210938,
+    "change_pct": 10.087277750165084,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
