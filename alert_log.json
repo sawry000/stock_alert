@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-26T02:26:58Z",
-    "symbol": "OFRM",
-    "alert_id": "OFRM_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 15.920000076293945,
-    "change_pct": -2.8083023425278006,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-26T04:41:59Z",
     "symbol": "HCTI",
     "alert_id": "HCTI_PCT_UP",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-13T02:40:51Z",
+    "symbol": "OPTX",
+    "alert_id": "OPTX_VOL_3X",
+    "type": "volume_spike",
+    "action": "BUY",
+    "price": 6.800000190734863,
+    "change_pct": 2.4096414267298734,
+    "value": 3.723220999384784,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
