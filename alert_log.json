@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-26T13:42:08Z",
-    "symbol": "DHX",
-    "alert_id": "DHX_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 4.65500020980835,
-    "change_pct": 1.8599608273161778,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-26T13:42:10Z",
     "symbol": "HCTI",
     "alert_id": "HCTI_PCT_UP",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-13T14:42:12Z",
+    "symbol": "AEYE",
+    "alert_id": "AEYE_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 13.579999923706055,
+    "change_pct": -5.034965568489133,
+    "value": 13.579999923706055,
+    "entry_price": 13.029999732971191,
+    "pnl_pct": 4.221,
+    "days_held": 11.06,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
