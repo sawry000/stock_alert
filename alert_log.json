@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-26T14:27:22Z",
-    "symbol": "FATN",
-    "alert_id": "FATN_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 5.5,
-    "change_pct": 3.3834586466165355,
-    "value": 5.5,
-    "entry_price": 5.349999904632568,
-    "pnl_pct": 2.8037,
-    "days_held": 6.76,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-26T14:27:28Z",
     "symbol": "HCTI",
     "alert_id": "HCTI_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-13T19:42:04Z",
+    "symbol": "ADVB",
+    "alert_id": "ADVB_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 2.2799999713897705,
+    "change_pct": -31.94029936149939,
+    "value": -31.94029936149939,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
