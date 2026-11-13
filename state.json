@@ -1867,7 +1867,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1945,7 +1946,8 @@
     },
     "SVCO_SL_BREAK": {
       "last_fired": "2026-10-08T13:41:51Z"
-    }
+    },
+    "_confirm_SVCO_MTF_BULL": 1
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -2058,8 +2060,7 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1,
-    "_confirm_CDNL_RSI_OS": 1
+    "_confirm_CDNL_MTF_BULL": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2199,7 +2200,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_PESI_MTF_BULL": 1
   },
   "AGPU": {
     "AGPU_MA_DEATH": {
@@ -2405,7 +2407,8 @@
     },
     "DHX_PCT_DROP": {
       "last_fired": "2026-11-06T06:56:51Z"
-    }
+    },
+    "_confirm_DHX_MTF_BULL": 1
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2490,8 +2493,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_FTK_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2756,7 +2758,6 @@
     "EVGO_SL_BREAK": {
       "last_fired": "2026-11-10T14:57:39Z"
     },
-    "last_sell_at": "2026-11-10T14:57:39Z",
-    "_confirm_EVGO_MTF_BULL": 1
+    "last_sell_at": "2026-11-10T14:57:39Z"
   }
 }
