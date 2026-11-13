@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-26T10:27:12Z",
-    "symbol": "HCTI",
-    "alert_id": "HCTI_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 6.710000038146973,
-    "change_pct": -11.896007902481973,
-    "value": -11.896007902481973,
-    "entry_price": 6.710000038146973,
-    "pnl_pct": 0.0,
-    "days_held": 0.24,
-    "entry_alert_type": "percent_change",
-    "conviction_score": 4,
-    "conviction_total": 4,
-    "rr_ratio": 1.6
-  },
-  {
     "timestamp": "2026-10-26T13:41:59Z",
     "symbol": "FATN",
     "alert_id": "FATN_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-13T08:55:38Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 232.0800018310547,
+    "change_pct": 2.4862008527510264,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
