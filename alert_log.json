@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-26T13:41:59Z",
-    "symbol": "FATN",
-    "alert_id": "FATN_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 5.899899959564209,
-    "change_pct": 10.900375179778358,
-    "value": 5.6049,
-    "entry_price": 5.349999904632568,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-26T13:42:03Z",
     "symbol": "REAX",
     "alert_id": "REAX_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-13T10:27:10Z",
+    "symbol": "ECOR",
+    "alert_id": "ECOR_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 5.289999961853027,
+    "change_pct": -31.387808536277205,
+    "value": -31.387808536277205,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
