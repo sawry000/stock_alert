@@ -27,6 +27,7 @@ import urllib.request
 import urllib.error
 import urllib.parse
 from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo  # Python 3.9+ (workflow ใช้ 3.11)
 from pathlib import Path
 
 try:
@@ -986,6 +987,42 @@ def get_macro_context():
     except Exception:
         pass
     return market_down, btc_down, spy_chg, btc_chg
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  GATE LAYER 1.5 — ENTRY SESSION GATE  (เพิ่มจากการวิเคราะห์ alert_log 26 ต.ค.–13 พ.ย.)
+#
+#  ผลย้อนหลัง 50 เทรดที่ปิดแล้ว:
+#    • เข้าไม้ 15:00–04:00 ET (ชั่วโมงสุดท้ายของตลาด + after-hours + ข้ามคืน)
+#      → ชนะ 24% / net -124.5 pts  (ถือข้ามคืนแล้วโดน gap-down ตอนเปิดตลาด)
+#    • เข้าไม้ 04:00–15:00 ET → ชนะ 55% / net +23.1 pts
+#    • entry จาก volume_spike → ชนะ 29% / PF 0.15 (แย่สุดในทุก trigger)
+#  gate นี้ใช้กับ "การเข้าไม้ใหม่" เท่านั้น — position ที่เปิดอยู่แล้วไม่โดนผลกระทบ
+#  (SELL / trailing / reminder ทำงานเหมือนเดิมทุกประการ)
+# ══════════════════════════════════════════════════════════════════════════════
+
+ET_TZ                    = ZoneInfo("America/New_York")
+ENTRY_WINDOW_START_MIN   = 4 * 60          # 04:00 ET (เริ่ม pre-market)
+ENTRY_WINDOW_END_MIN     = 15 * 60         # 15:00 ET (หยุดเข้าไม้ใหม่ 1 ชม. ก่อนปิด)
+BLOCKED_ENTRY_TRIGGERS   = {"volume_spike"}  # trigger ที่ห้ามใช้เปิดไม้ใหม่
+
+
+def entry_session_gate(atype, now=None):
+    """
+    ตัดสินว่า "เปิดไม้ใหม่" ได้หรือไม่ตามช่วงเวลาตลาดสหรัฐ + ชนิด trigger
+    Returns: (allowed: bool, reason: str)
+    now ต้องเป็น datetime แบบมี timezone (default = เวลาปัจจุบัน UTC)
+    """
+    now_et = (now if now is not None else now_utc()).astimezone(ET_TZ)
+    if now_et.weekday() >= 5:
+        return False, f"ตลาดปิดวันหยุดสุดสัปดาห์ ({now_et.strftime('%a %H:%M')} ET)"
+    minute_of_day = now_et.hour * 60 + now_et.minute
+    if not (ENTRY_WINDOW_START_MIN <= minute_of_day < ENTRY_WINDOW_END_MIN):
+        return False, (f"นอกช่วงเข้าไม้ 04:00–15:00 ET ({now_et.strftime('%H:%M')} ET) "
+                       f"— เสี่ยง gap ข้ามคืน")
+    if atype in BLOCKED_ENTRY_TRIGGERS:
+        return False, f"trigger '{atype}' ถูกปิดสำหรับเปิดไม้ใหม่ (สถิติย้อนหลังแพ้บ่อย)"
+    return True, "ok"
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -2387,6 +2424,13 @@ def main():
                     if pos.get("target") and pos.get("rr_ratio", 0) < MIN_RR_RATIO:
                         print(f"  [{alert_id}] 🚫 R:R Gate FAIL — R:R={pos.get('rr_ratio')} ต่ำกว่า 1:{MIN_RR_RATIO}")
                         continue
+
+                    # ── ENTRY SESSION GATE — ใช้เฉพาะการเปิดไม้ใหม่ (ไม่มี open_entry) ──
+                    if not state.get(symbol, {}).get("open_entry"):
+                        sess_ok, sess_reason = entry_session_gate(atype)
+                        if not sess_ok:
+                            print(f"  [{alert_id}] 🚫 Entry Session Gate FAIL — {sess_reason}")
+                            continue
 
                     conv_pass, conv_score, conv_detail = conviction_gate(symbol, quote)
                     total_dims = conv_detail.get("total_dims", 4)
