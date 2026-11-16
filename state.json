@@ -511,7 +511,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_XMTR_MTF_BULL": 1
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -2619,8 +2620,7 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-10-26T17:27:37Z"
-    },
-    "_confirm_AEYE_MTF_BULL": 1
+    }
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2718,7 +2718,8 @@
     "SOTK_MA_DEATH": {
       "last_fired": "2026-10-21T15:12:51Z"
     },
-    "last_sell_at": "2026-10-21T15:12:51Z"
+    "last_sell_at": "2026-10-21T15:12:51Z",
+    "_confirm_SOTK_RSI_OS": 1
   },
   "EVGO": {
     "EVGO_MTF_BULL": {
@@ -2730,5 +2731,7 @@
     },
     "last_sell_at": "2026-11-10T14:57:39Z"
   },
-  "TLS": {}
+  "TLS": {
+    "_confirm_TLS_MTF_BULL": 1
+  }
 }
