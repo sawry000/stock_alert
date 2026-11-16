@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-26T17:27:37Z",
-    "symbol": "AEYE",
-    "alert_id": "AEYE_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 7.309999942779541,
-    "change_pct": -9.529703678471028,
-    "value": -9.529703678471028,
-    "entry_price": 7.75,
-    "pnl_pct": -5.6774,
-    "days_held": 6.08,
-    "entry_alert_type": "ma_crossover",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-26T17:42:20Z",
     "symbol": "LUNG",
     "alert_id": "LUNG_MTF_BULL",
@@ -8484,6 +8467,23 @@
   },
   {
     "timestamp": "2026-11-15T02:26:35Z",
+    "symbol": "CVV",
+    "alert_id": "CVV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.539999961853027,
+    "change_pct": 14.070350800327322,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-16T02:26:41Z",
     "symbol": "CVV",
     "alert_id": "CVV_MTF_BULL",
     "type": "mtf_alignment",
