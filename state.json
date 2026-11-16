@@ -511,8 +511,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_XMTR_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -1821,7 +1820,7 @@
     "TMCI_PCT_DROP": {
       "last_fired": "2026-11-02T10:11:38Z"
     },
-    "last_sell_at": "2026-11-11T19:56:41Z",
+    "last_sell_at": "2026-11-16T15:26:10Z",
     "last_buy_at": "2026-11-11T22:11:42Z",
     "TMCI_MA_DEATH": {
       "last_fired": "2026-11-09T02:26:37Z"
@@ -1830,18 +1829,8 @@
       "last_fired": "2026-11-10T11:41:27Z"
     },
     "TMCI_SL_BREAK": {
-      "last_fired": "2026-11-11T19:56:41Z"
-    },
-    "last_buy_reminder_at": "2026-11-11T22:11:42Z",
-    "open_entry": 5.059999942779541,
-    "open_time": "2026-11-11T22:11:42Z",
-    "open_peak": 5.349999904632568,
-    "open_stop": 4.554,
-    "open_target": 5.819,
-    "open_conviction": 5,
-    "open_conviction_total": 5,
-    "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+      "last_fired": "2026-11-16T15:26:10Z"
+    }
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -2741,7 +2730,5 @@
     },
     "last_sell_at": "2026-11-10T14:57:39Z"
   },
-  "TLS": {
-    "_confirm_TLS_MTF_BULL": 1
-  }
+  "TLS": {}
 }

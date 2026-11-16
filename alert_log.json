@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-26T22:57:12Z",
-    "symbol": "FATN",
-    "alert_id": "FATN_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 5.409999847412109,
-    "change_pct": 1.6917264551148323,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-27T03:12:24Z",
     "symbol": "CELU",
     "alert_id": "CELU_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-16T15:26:10Z",
+    "symbol": "TMCI",
+    "alert_id": "TMCI_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 4.5,
+    "change_pct": -15.094339622641506,
+    "value": 4.5,
+    "entry_price": 5.059999942779541,
+    "pnl_pct": -11.0672,
+    "days_held": 4.72,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
