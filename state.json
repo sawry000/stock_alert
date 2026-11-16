@@ -1860,7 +1860,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TMCI_MTF_BULL": 1
   },
   "TKNO": {
     "TKNO_MTF_BULL": {
@@ -1882,7 +1883,8 @@
       "last_fired": "2026-10-21T13:41:48Z"
     },
     "_confirm_TKNO_RSI_OS": 1,
-    "_confirm_TKNO_MA_GOLD": 1
+    "_confirm_TKNO_MA_GOLD": 1,
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1992,9 +1994,9 @@
     "NEOV_MA_GOLD": {
       "last_fired": "2026-11-09T17:26:50Z"
     },
-    "last_buy_at": "2026-11-12T21:26:32Z",
+    "last_buy_at": "2026-11-16T09:41:46Z",
     "NEOV_MTF_BULL": {
-      "last_fired": "2026-11-12T21:26:32Z"
+      "last_fired": "2026-11-16T09:41:46Z"
     },
     "NEOV_MA_DEATH": {
       "last_fired": "2026-09-23T17:56:26Z"
@@ -2007,7 +2009,7 @@
       "last_fired": "2026-09-24T14:42:04Z"
     },
     "_confirm_NEOV_RSI_OS": 1,
-    "last_buy_reminder_at": "2026-11-12T21:26:32Z",
+    "last_buy_reminder_at": "2026-11-16T09:41:46Z",
     "open_entry": 2.890000104904175,
     "open_time": "2026-11-09T17:26:50Z",
     "open_peak": 3.059999942779541,
@@ -2016,8 +2018,7 @@
     "open_conviction": 4,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "ma_crossover",
-    "_confirm_NEOV_MTF_BULL": 1
+    "open_alert_type": "ma_crossover"
   },
   "GLW": {
     "GLW_MTF_BULL": {
@@ -2053,7 +2054,8 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1
+    "_confirm_CDNL_MTF_BULL": 1,
+    "_confirm_CDNL_RSI_OS": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2129,8 +2131,7 @@
     },
     "OFRM_MA_GOLD": {
       "last_fired": "2026-10-15T20:42:06Z"
-    },
-    "_confirm_OFRM_RSI_OS": 1
+    }
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2648,8 +2649,7 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-10-26T17:27:37Z"
-    },
-    "_confirm_AEYE_MTF_BULL": 1
+    }
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2705,7 +2705,8 @@
     },
     "MNTK_PCT_DROP": {
       "last_fired": "2026-11-11T07:11:58Z"
-    }
+    },
+    "_confirm_MNTK_RSI_OS": 1
   },
   "NTRB": {
     "NTRB_VOL_3X": {
@@ -2757,7 +2758,10 @@
     "EVGO_SL_BREAK": {
       "last_fired": "2026-11-10T14:57:39Z"
     },
-    "last_sell_at": "2026-11-10T14:57:39Z"
+    "last_sell_at": "2026-11-10T14:57:39Z",
+    "_confirm_EVGO_MTF_BULL": 1
   },
-  "TLS": {}
+  "TLS": {
+    "_confirm_TLS_MTF_BULL": 1
+  }
 }
