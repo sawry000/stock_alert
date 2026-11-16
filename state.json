@@ -511,8 +511,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_XMTR_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -2237,8 +2236,7 @@
     },
     "LUNG_SCORE_65": {
       "last_fired": "2026-10-29T21:57:06Z"
-    },
-    "_confirm_LUNG_MTF_BULL": 1
+    }
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2620,7 +2618,8 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-10-26T17:27:37Z"
-    }
+    },
+    "_confirm_AEYE_MTF_BULL": 1
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2731,7 +2730,5 @@
     },
     "last_sell_at": "2026-11-10T14:57:39Z"
   },
-  "TLS": {
-    "_confirm_TLS_MTF_BULL": 1
-  }
+  "TLS": {}
 }
