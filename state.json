@@ -511,7 +511,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_XMTR_MTF_BULL": 1
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -2740,5 +2741,7 @@
     },
     "last_sell_at": "2026-11-10T14:57:39Z"
   },
-  "TLS": {}
+  "TLS": {
+    "_confirm_TLS_MTF_BULL": 1
+  }
 }
