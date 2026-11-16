@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-27T03:12:24Z",
-    "symbol": "CELU",
-    "alert_id": "CELU_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 0.75,
-    "change_pct": -23.289352562135626,
-    "value": -23.289352562135626,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-27T13:40:52Z",
     "symbol": "INOD",
     "alert_id": "INOD_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-16T17:12:09Z",
+    "symbol": "INBS",
+    "alert_id": "INBS_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 1.5,
+    "change_pct": -16.201117318435756,
+    "value": -16.201117318435756,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
