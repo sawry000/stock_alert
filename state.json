@@ -511,8 +511,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_XMTR_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -1480,7 +1479,7 @@
     "last_buy_reminder_at": "2026-11-06T09:11:06Z",
     "open_entry": 113.7699966430664,
     "open_time": "2026-11-06T09:11:06Z",
-    "open_peak": 119.05500030517578,
+    "open_peak": 119.23500061035156,
     "open_stop": 103.0029,
     "open_target": 129.9253,
     "open_conviction": 4,
@@ -2237,8 +2236,7 @@
     },
     "LUNG_SCORE_65": {
       "last_fired": "2026-10-29T21:57:06Z"
-    },
-    "_confirm_LUNG_MTF_BULL": 1
+    }
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2623,8 +2621,7 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-10-26T17:27:37Z"
-    },
-    "_confirm_AEYE_MTF_BULL": 1
+    }
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2732,10 +2729,7 @@
     "EVGO_SL_BREAK": {
       "last_fired": "2026-11-10T14:57:39Z"
     },
-    "last_sell_at": "2026-11-10T14:57:39Z",
-    "_confirm_EVGO_MTF_BULL": 1
+    "last_sell_at": "2026-11-10T14:57:39Z"
   },
-  "TLS": {
-    "_confirm_TLS_MTF_BULL": 1
-  }
+  "TLS": {}
 }
