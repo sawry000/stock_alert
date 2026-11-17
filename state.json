@@ -466,7 +466,7 @@
       "last_fired": "2026-06-10T15:52:58Z"
     },
     "XMTR_MTF_BULL": {
-      "last_fired": "2026-11-10T20:42:17Z"
+      "last_fired": "2026-11-17T09:12:09Z"
     },
     "XMTR_CP_BULL": {
       "last_fired": "2026-06-25T14:07:53Z"
@@ -493,7 +493,7 @@
       ]
     },
     "open_position": true,
-    "last_buy_at": "2026-11-10T20:42:17Z",
+    "last_buy_at": "2026-11-17T09:12:09Z",
     "last_sell_at": "2026-11-10T18:12:08Z",
     "XMTR_MA_DEATH": {
       "last_fired": "2026-08-18T16:40:54Z"
@@ -502,7 +502,7 @@
     "XMTR_SL_BREAK": {
       "last_fired": "2026-11-10T18:12:08Z"
     },
-    "last_buy_reminder_at": "2026-11-10T20:42:17Z",
+    "last_buy_reminder_at": "2026-11-17T09:12:09Z",
     "open_entry": 120.09750366210938,
     "open_time": "2026-11-10T20:42:17Z",
     "open_peak": 127.20500183105469,
@@ -511,8 +511,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_XMTR_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -2091,7 +2090,8 @@
     },
     "OFRM_MA_GOLD": {
       "last_fired": "2026-10-15T20:42:06Z"
-    }
+    },
+    "_confirm_OFRM_MTF_BULL": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2227,8 +2227,7 @@
     },
     "LUNG_SCORE_65": {
       "last_fired": "2026-10-29T21:57:06Z"
-    },
-    "_confirm_LUNG_MTF_BULL": 1
+    }
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2355,7 +2354,8 @@
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
     "open_alert_type": "ma_crossover",
-    "_confirm_CVV_MA_GOLD": 1
+    "_confirm_CVV_MA_GOLD": 1,
+    "_confirm_CVV_MTF_BULL": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2712,7 +2712,8 @@
     "SOTK_MA_DEATH": {
       "last_fired": "2026-10-21T15:12:51Z"
     },
-    "last_sell_at": "2026-10-21T15:12:51Z"
+    "last_sell_at": "2026-10-21T15:12:51Z",
+    "_confirm_SOTK_RSI_OS": 1
   },
   "EVGO": {
     "EVGO_MTF_BULL": {
@@ -2725,7 +2726,5 @@
     "last_sell_at": "2026-11-10T14:57:39Z",
     "_confirm_EVGO_MTF_BULL": 1
   },
-  "TLS": {
-    "_confirm_TLS_MTF_BULL": 1
-  }
+  "TLS": {}
 }
