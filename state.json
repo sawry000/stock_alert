@@ -2099,7 +2099,8 @@
     "open_conviction": 3,
     "open_conviction_total": 4,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_OFRM_MTF_BULL": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2562,8 +2563,7 @@
     },
     "ECOR_PCT_DROP": {
       "last_fired": "2026-11-13T10:27:10Z"
-    },
-    "_confirm_ECOR_RSI_OS": 1
+    }
   },
   "TLYS": {
     "TLYS_MTF_BULL": {
@@ -2701,7 +2701,8 @@
     "SOTK_MA_DEATH": {
       "last_fired": "2026-10-21T15:12:51Z"
     },
-    "last_sell_at": "2026-10-21T15:12:51Z"
+    "last_sell_at": "2026-10-21T15:12:51Z",
+    "_confirm_SOTK_RSI_OS": 1
   },
   "EVGO": {
     "EVGO_MTF_BULL": {
