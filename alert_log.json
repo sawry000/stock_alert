@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-28T13:41:35Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 10.449999809265137,
-    "change_pct": 1.6536946426569783,
-    "value": 9.9275,
-    "entry_price": 9.649999618530273,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-28T13:42:31Z",
     "symbol": "LUNG",
     "alert_id": "LUNG_MTF_BULL",
@@ -8497,6 +8480,23 @@
     "entry_alert_type": "ma_crossover",
     "conviction_score": 4,
     "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-18T09:26:34Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 11.65999984741211,
+    "change_pct": -0.7659587454288564,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 3,
+    "conviction_total": 4,
     "rr_ratio": 1.5
   }
 ]
