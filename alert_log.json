@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-28T14:41:25Z",
-    "symbol": "BRCB",
-    "alert_id": "BRCB_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 10.09000015258789,
-    "change_pct": -1.8482475429193457,
-    "value": 10.09000015258789,
-    "entry_price": 9.649999618530273,
-    "pnl_pct": 4.5596,
-    "days_held": 5.9,
-    "entry_alert_type": "percent_change",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-28T14:41:41Z",
     "symbol": "TMCI",
     "alert_id": "TMCI_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-18T19:42:16Z",
+    "symbol": "NTRB",
+    "alert_id": "NTRB_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 4.880000114440918,
+    "change_pct": -11.27272519198331,
+    "value": -11.27272519198331,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
