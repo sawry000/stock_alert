@@ -511,8 +511,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_XMTR_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "FLNC": {
     "FLNC_POS_SIZE": {
@@ -1843,8 +1842,7 @@
       "last_fired": "2026-10-21T13:41:48Z"
     },
     "_confirm_TKNO_RSI_OS": 1,
-    "_confirm_TKNO_MA_GOLD": 1,
-    "_confirm_TKNO_MTF_BULL": 1
+    "_confirm_TKNO_MA_GOLD": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1900,8 +1898,7 @@
     },
     "SVCO_SL_BREAK": {
       "last_fired": "2026-10-08T13:41:51Z"
-    },
-    "_confirm_SVCO_MTF_BULL": 1
+    }
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -2335,8 +2332,7 @@
     "CVV_MA_GOLD": {
       "last_fired": "2026-11-15T02:26:33Z"
     },
-    "_confirm_CVV_MA_GOLD": 1,
-    "_confirm_CVV_MTF_BULL": 1
+    "_confirm_CVV_MA_GOLD": 1
   },
   "DHX": {
     "DHX_MA_DEATH": {
@@ -2431,7 +2427,6 @@
     "FTK_MA_DEATH": {
       "last_fired": "2026-10-12T02:27:19Z"
     },
-    "_confirm_FTK_MA_GOLD": 1,
     "last_buy_reminder_at": "2026-11-09T21:27:18Z",
     "open_entry": 25.979999542236328,
     "open_time": "2026-11-09T21:27:18Z",
@@ -2441,8 +2436,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_FTK_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2712,7 +2706,5 @@
       "last_fired": "2026-11-17T18:12:19Z"
     }
   },
-  "TLS": {
-    "_confirm_TLS_MTF_BULL": 1
-  }
+  "TLS": {}
 }
