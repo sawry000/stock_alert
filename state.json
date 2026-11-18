@@ -2013,8 +2013,7 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1,
-    "_confirm_CDNL_RSI_OS": 1
+    "_confirm_CDNL_MTF_BULL": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2563,7 +2562,8 @@
     },
     "ECOR_PCT_DROP": {
       "last_fired": "2026-11-13T10:27:10Z"
-    }
+    },
+    "_confirm_ECOR_RSI_OS": 1
   },
   "TLYS": {
     "TLYS_MTF_BULL": {
@@ -2701,8 +2701,7 @@
     "SOTK_MA_DEATH": {
       "last_fired": "2026-10-21T15:12:51Z"
     },
-    "last_sell_at": "2026-10-21T15:12:51Z",
-    "_confirm_SOTK_RSI_OS": 1
+    "last_sell_at": "2026-10-21T15:12:51Z"
   },
   "EVGO": {
     "EVGO_MTF_BULL": {
