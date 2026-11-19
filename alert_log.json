@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-28T15:12:16Z",
-    "symbol": "LUNG",
-    "alert_id": "LUNG_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 2.5850000381469727,
-    "change_pct": 17.08488260471838,
-    "value": 2.5850000381469727,
-    "entry_price": 2.529900074005127,
-    "pnl_pct": 2.178,
-    "days_held": 0.06,
-    "entry_alert_type": "mtf_alignment",
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-28T15:26:56Z",
     "symbol": "ZVIA",
     "alert_id": "ZVIA_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-19T09:12:00Z",
+    "symbol": "CVV",
+    "alert_id": "CVV_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 4.510000228881836,
+    "change_pct": 1.9116967705029186,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
