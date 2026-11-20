@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-28T19:56:47Z",
-    "symbol": "TKNO",
-    "alert_id": "TKNO_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 7.840000152587891,
-    "change_pct": 10.891091267155451,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 5,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-28T19:56:55Z",
     "symbol": "RFIL",
     "alert_id": "RFIL_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-20T16:12:06Z",
+    "symbol": "WRBY",
+    "alert_id": "WRBY_MA_DEATH",
+    "type": "ma_crossover",
+    "action": "SELL",
+    "price": 23.79010009765625,
+    "change_pct": -2.2190707042488627,
+    "value": 0,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
