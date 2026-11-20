@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-29T08:10:55Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 14.8100004196167,
-    "change_pct": -10.923184513405438,
-    "value": -10.923184513405438,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-29T13:42:19Z",
     "symbol": "AEYE",
     "alert_id": "AEYE_TRAIL_ADJUST",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-20T20:11:35Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_SL_BREAK",
+    "type": "support_resistance",
+    "action": "SELL",
+    "price": 12.229999542236328,
+    "change_pct": -1.2913676978504636,
+    "value": 12.229999542236328,
+    "entry_price": 11.699999809265137,
+    "pnl_pct": 4.5299,
+    "days_held": 3.45,
+    "entry_alert_type": "mtf_alignment",
+    "conviction_score": 3,
+    "conviction_total": 4,
+    "rr_ratio": 1.5
   }
 ]
