@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-28T16:56:41Z",
-    "symbol": "TMCI",
-    "alert_id": "TMCI_TRAIL_ADJUST",
-    "type": "trailing_stop_moved",
-    "action": "ADJUST",
-    "price": 4.757299900054932,
-    "change_pct": 4.556037376486081,
-    "value": 4.5194,
-    "entry_price": 4.28000020980835,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-28T16:57:28Z",
     "symbol": "HCTI",
     "alert_id": "HCTI_SL_BREAK",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-20T02:56:13Z",
+    "symbol": "SNDK",
+    "alert_id": "SNDK_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 94.3949966430664,
+    "change_pct": -87.9367416430586,
+    "value": -87.9367416430586,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
