@@ -1994,7 +1994,8 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1
+    "_confirm_CDNL_MTF_BULL": 1,
+    "_confirm_CDNL_RSI_OS": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2027,7 +2028,8 @@
     },
     "BLIN_PCT_DROP": {
       "last_fired": "2026-10-08T06:56:36Z"
-    }
+    },
+    "_confirm_BLIN_RSI_OS": 1
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
@@ -2305,8 +2307,7 @@
     "_confirm_REAX_MA_GOLD": 1,
     "REAX_PCT_DROP": {
       "last_fired": "2026-11-09T02:12:03Z"
-    },
-    "_confirm_REAX_RSI_OS": 1
+    }
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2420,25 +2421,15 @@
     },
     "last_buy_at": "2026-11-18T19:11:59Z",
     "FTK_SL_BREAK": {
-      "last_fired": "2026-08-17T13:42:27Z"
+      "last_fired": "2026-11-20T15:26:52Z"
     },
-    "last_sell_at": "2026-11-05T19:11:28Z",
+    "last_sell_at": "2026-11-20T15:26:52Z",
     "FTK_PCT_DROP": {
       "last_fired": "2026-11-05T19:11:28Z"
     },
     "FTK_MA_DEATH": {
       "last_fired": "2026-10-12T02:27:19Z"
     },
-    "last_buy_reminder_at": "2026-11-18T19:11:59Z",
-    "open_entry": 25.979999542236328,
-    "open_time": "2026-11-09T21:27:18Z",
-    "open_peak": 27.3700008392334,
-    "open_stop": 23.382,
-    "open_target": 29.877,
-    "open_conviction": 5,
-    "open_conviction_total": 5,
-    "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
     "_confirm_FTK_MA_GOLD": 1
   },
   "IQST": {
@@ -2692,8 +2683,7 @@
     "SOTK_MA_DEATH": {
       "last_fired": "2026-10-21T15:12:51Z"
     },
-    "last_sell_at": "2026-10-21T15:12:51Z",
-    "_confirm_SOTK_RSI_OS": 1
+    "last_sell_at": "2026-10-21T15:12:51Z"
   },
   "EVGO": {
     "EVGO_MTF_BULL": {
