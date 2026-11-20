@@ -494,24 +494,14 @@
     },
     "open_position": true,
     "last_buy_at": "2026-11-17T09:12:09Z",
-    "last_sell_at": "2026-11-10T18:12:08Z",
+    "last_sell_at": "2026-11-20T14:42:25Z",
     "XMTR_MA_DEATH": {
       "last_fired": "2026-08-18T16:40:54Z"
     },
     "_confirm_XMTR_MA_GOLD": 1,
     "XMTR_SL_BREAK": {
-      "last_fired": "2026-11-10T18:12:08Z"
+      "last_fired": "2026-11-20T14:42:25Z"
     },
-    "last_buy_reminder_at": "2026-11-17T09:12:09Z",
-    "open_entry": 120.09750366210938,
-    "open_time": "2026-11-10T20:42:17Z",
-    "open_peak": 127.20500183105469,
-    "open_stop": 108.0878,
-    "open_target": 138.1121,
-    "open_conviction": 5,
-    "open_conviction_total": 5,
-    "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
     "_confirm_XMTR_MTF_BULL": 1
   },
   "FLNC": {
@@ -2004,8 +1994,7 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1,
-    "_confirm_CDNL_RSI_OS": 1
+    "_confirm_CDNL_MTF_BULL": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2085,13 +2074,15 @@
     "last_buy_reminder_at": "2026-11-20T09:11:42Z",
     "open_entry": 11.699999809265137,
     "open_time": "2026-11-17T09:26:41Z",
-    "open_peak": 12.414999961853027,
-    "open_stop": 10.53,
+    "open_peak": 12.699999809265137,
+    "open_stop": 12.06499981880188,
     "open_target": 13.455,
     "open_conviction": 3,
     "open_conviction_total": 4,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "open_stop_is_trailing": true,
+    "open_trailing_last_notified_stop": 12.06499981880188
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2137,12 +2128,12 @@
     "PESI_SL_BREAK": {
       "last_fired": "2026-11-17T14:42:10Z"
     },
-    "last_sell_at": "2026-11-17T14:42:10Z",
+    "last_sell_at": "2026-11-20T14:41:40Z",
     "PESI_PCT_DROP": {
       "last_fired": "2026-10-16T19:11:32Z"
     },
     "PESI_MA_DEATH": {
-      "last_fired": "2026-09-23T16:56:41Z"
+      "last_fired": "2026-11-20T14:41:40Z"
     },
     "_confirm_PESI_MA_GOLD": 1
   },
@@ -2316,8 +2307,7 @@
     "_confirm_REAX_MA_GOLD": 1,
     "REAX_PCT_DROP": {
       "last_fired": "2026-11-09T02:12:03Z"
-    },
-    "_confirm_REAX_RSI_OS": 1
+    }
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2703,8 +2693,7 @@
     "SOTK_MA_DEATH": {
       "last_fired": "2026-10-21T15:12:51Z"
     },
-    "last_sell_at": "2026-10-21T15:12:51Z",
-    "_confirm_SOTK_RSI_OS": 1
+    "last_sell_at": "2026-10-21T15:12:51Z"
   },
   "EVGO": {
     "EVGO_MTF_BULL": {
