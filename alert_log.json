@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-28T16:57:28Z",
-    "symbol": "HCTI",
-    "alert_id": "HCTI_SL_BREAK",
-    "type": "support_resistance",
-    "action": "SELL",
-    "price": 6.489999771118164,
-    "change_pct": -5.942032302635308,
-    "value": 6.489999771118164,
-    "entry_price": 6.840000152587891,
-    "pnl_pct": -5.117,
-    "days_held": 1.83,
-    "entry_alert_type": "percent_change",
-    "conviction_score": 4,
-    "conviction_total": 4,
-    "rr_ratio": 1.6
-  },
-  {
     "timestamp": "2026-10-28T18:10:58Z",
     "symbol": "HIMS",
     "alert_id": "HIMS_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-20T09:11:42Z",
+    "symbol": "OFRM",
+    "alert_id": "OFRM_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 12.390000343322754,
+    "change_pct": 1.4476168680014525,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 4,
+    "rr_ratio": 1.5
   }
 ]
