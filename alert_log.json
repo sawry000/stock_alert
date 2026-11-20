@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-28T18:10:58Z",
-    "symbol": "HIMS",
-    "alert_id": "HIMS_MTF_BULL",
-    "type": "mtf_alignment",
-    "action": "BUY",
-    "price": 29.420000076293945,
-    "change_pct": 5.334765758302706,
-    "value": 3,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-28T18:12:07Z",
     "symbol": "LUNG",
     "alert_id": "LUNG_SCORE_65",
@@ -8497,6 +8480,23 @@
     "entry_alert_type": null,
     "conviction_score": 4,
     "conviction_total": 4,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-20T09:27:28Z",
+    "symbol": "NTSK",
+    "alert_id": "NTSK_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 24.799999237060547,
+    "change_pct": 3.9832253126228316,
+    "value": 3,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 5,
+    "conviction_total": 5,
     "rr_ratio": 1.5
   }
 ]
