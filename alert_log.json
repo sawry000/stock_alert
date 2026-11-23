@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-29T21:57:06Z",
-    "symbol": "LUNG",
-    "alert_id": "LUNG_SCORE_65",
-    "type": "alert_score",
-    "action": "BUY",
-    "price": 3.1649999618530273,
-    "change_pct": 22.20077072791612,
-    "value": 66,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-30T02:10:50Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_PCT_DROP",
@@ -8498,5 +8481,22 @@
     "conviction_score": null,
     "conviction_total": null,
     "rr_ratio": null
+  },
+  {
+    "timestamp": "2026-11-23T16:25:46Z",
+    "symbol": "COHR",
+    "alert_id": "COHR_MTF_BULL",
+    "type": "mtf_alignment",
+    "action": "BUY",
+    "price": 219.1699981689453,
+    "change_pct": 14.550775188911983,
+    "value": 2,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
   }
 ]
