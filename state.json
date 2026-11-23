@@ -1854,8 +1854,7 @@
       "last_fired": "2026-10-21T13:41:48Z"
     },
     "_confirm_TKNO_RSI_OS": 1,
-    "_confirm_TKNO_MA_GOLD": 1,
-    "_confirm_TKNO_MTF_BULL": 1
+    "_confirm_TKNO_MA_GOLD": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1890,7 +1889,8 @@
     },
     "RFIL_PCT_DROP": {
       "last_fired": "2026-11-06T07:56:19Z"
-    }
+    },
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1910,8 +1910,7 @@
     },
     "SVCO_SL_BREAK": {
       "last_fired": "2026-10-08T13:41:51Z"
-    },
-    "_confirm_SVCO_MTF_BULL": 1
+    }
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -2014,7 +2013,8 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1
+    "_confirm_CDNL_MTF_BULL": 1,
+    "_confirm_CDNL_RSI_OS": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2252,7 +2252,8 @@
     "BLZE_MA_DEATH": {
       "last_fired": "2026-08-26T13:43:11Z"
     },
-    "_confirm_BLZE_RSI_OS": 1
+    "_confirm_BLZE_RSI_OS": 1,
+    "_confirm_BLZE_MTF_BULL": 1
   },
   "AXTI": {
     "AXTI_MTF_BULL": {
@@ -2298,7 +2299,8 @@
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-08T02:57:39Z"
     },
-    "_confirm_FATN_MA_GOLD": 1
+    "_confirm_FATN_MA_GOLD": 1,
+    "_confirm_FATN_RSI_OS": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2589,8 +2591,7 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-11-17T19:56:42Z"
-    },
-    "_confirm_AEYE_MTF_BULL": 1
+    }
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2704,9 +2705,7 @@
     },
     "_confirm_EVGO_MTF_BULL": 1
   },
-  "TLS": {
-    "_confirm_TLS_MTF_BULL": 1
-  },
+  "TLS": {},
   "WRBY": {
     "WRBY_MTF_BULL": {
       "last_fired": "2026-11-19T09:27:51Z"
