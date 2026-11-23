@@ -1854,7 +1854,8 @@
       "last_fired": "2026-10-21T13:41:48Z"
     },
     "_confirm_TKNO_RSI_OS": 1,
-    "_confirm_TKNO_MA_GOLD": 1
+    "_confirm_TKNO_MA_GOLD": 1,
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1889,7 +1890,8 @@
     },
     "RFIL_PCT_DROP": {
       "last_fired": "2026-11-06T07:56:19Z"
-    }
+    },
+    "_confirm_RFIL_MTF_BULL": 1
   },
   "SVCO": {
     "SVCO_MTF_BULL": {
@@ -1909,7 +1911,8 @@
     },
     "SVCO_SL_BREAK": {
       "last_fired": "2026-10-08T13:41:51Z"
-    }
+    },
+    "_confirm_SVCO_MTF_BULL": 1
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -2012,8 +2015,7 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1,
-    "_confirm_CDNL_RSI_OS": 1
+    "_confirm_CDNL_MTF_BULL": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2298,8 +2300,7 @@
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-08T02:57:39Z"
     },
-    "_confirm_FATN_MA_GOLD": 1,
-    "_confirm_FATN_RSI_OS": 1
+    "_confirm_FATN_MA_GOLD": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2440,9 +2441,9 @@
   },
   "IQST": {
     "IQST_PCT_DROP": {
-      "last_fired": "2026-11-23T10:56:34Z"
+      "last_fired": "2026-11-23T19:27:07Z"
     },
-    "last_sell_at": "2026-11-23T10:56:34Z",
+    "last_sell_at": "2026-11-23T19:27:07Z",
     "IQST_MA_DEATH": {
       "last_fired": "2026-10-14T15:57:05Z"
     }
@@ -2590,7 +2591,8 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-11-17T19:56:42Z"
-    }
+    },
+    "_confirm_AEYE_MTF_BULL": 1
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2704,7 +2706,9 @@
     },
     "_confirm_EVGO_MTF_BULL": 1
   },
-  "TLS": {},
+  "TLS": {
+    "_confirm_TLS_MTF_BULL": 1
+  },
   "WRBY": {
     "WRBY_MTF_BULL": {
       "last_fired": "2026-11-19T09:27:51Z"
@@ -2732,8 +2736,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_NTSK_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "CHPT": {
     "CHPT_MA_DEATH": {

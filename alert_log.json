@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-30T13:27:35Z",
-    "symbol": "AEYE",
-    "alert_id": "AEYE_SCORE_65",
-    "type": "alert_score",
-    "action": "BUY",
-    "price": 14.119999885559082,
-    "change_pct": -1.7677636473999645,
-    "value": 66,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": 4,
-    "conviction_total": 5,
-    "rr_ratio": 1.5
-  },
-  {
     "timestamp": "2026-10-30T13:40:54Z",
     "symbol": "IOVA",
     "alert_id": "IOVA_MA_DEATH",
@@ -8498,5 +8481,22 @@
     "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-23T19:27:07Z",
+    "symbol": "IQST",
+    "alert_id": "IQST_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 0.6373000144958496,
+    "change_pct": -20.15785335807447,
+    "value": -20.15785335807447,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
