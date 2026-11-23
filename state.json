@@ -1834,8 +1834,7 @@
       "last_fired": "2026-10-21T13:41:48Z"
     },
     "_confirm_TKNO_RSI_OS": 1,
-    "_confirm_TKNO_MA_GOLD": 1,
-    "_confirm_TKNO_MTF_BULL": 1
+    "_confirm_TKNO_MA_GOLD": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1891,7 +1890,8 @@
     },
     "SVCO_SL_BREAK": {
       "last_fired": "2026-10-08T13:41:51Z"
-    }
+    },
+    "_confirm_SVCO_MTF_BULL": 1
   },
   "VECO": {
     "VECO_PCT_DROP": {
@@ -1994,8 +1994,7 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1,
-    "_confirm_CDNL_RSI_OS": 1
+    "_confirm_CDNL_MTF_BULL": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2281,8 +2280,7 @@
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-08T02:57:39Z"
     },
-    "_confirm_FATN_MA_GOLD": 1,
-    "_confirm_FATN_RSI_OS": 1
+    "_confirm_FATN_MA_GOLD": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2296,7 +2294,8 @@
     "_confirm_REAX_MA_GOLD": 1,
     "REAX_PCT_DROP": {
       "last_fired": "2026-11-09T02:12:03Z"
-    }
+    },
+    "_confirm_REAX_RSI_OS": 1
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2574,7 +2573,8 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-11-17T19:56:42Z"
-    }
+    },
+    "_confirm_AEYE_MTF_BULL": 1
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2689,7 +2689,9 @@
     },
     "_confirm_EVGO_MTF_BULL": 1
   },
-  "TLS": {},
+  "TLS": {
+    "_confirm_TLS_MTF_BULL": 1
+  },
   "WRBY": {
     "WRBY_MTF_BULL": {
       "last_fired": "2026-11-19T09:27:51Z"
@@ -2711,14 +2713,13 @@
     "last_buy_reminder_at": "2026-11-20T09:27:28Z",
     "open_entry": 24.799999237060547,
     "open_time": "2026-11-20T09:27:28Z",
-    "open_peak": 25.325000762939453,
+    "open_peak": 25.329999923706055,
     "open_stop": 22.32,
     "open_target": 28.52,
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_NTSK_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "CHPT": {
     "CHPT_MA_DEATH": {
