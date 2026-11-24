@@ -296,7 +296,7 @@
       ]
     },
     "ICHR_PCT_DROP": {
-      "last_fired": "2026-11-24T15:25:45Z"
+      "last_fired": "2026-11-24T23:40:35Z"
     },
     "open_position": true,
     "ICHR_MA_DEATH": {
@@ -306,7 +306,7 @@
       "last_fired": "2026-06-09T13:37:34Z"
     },
     "last_buy_at": "2026-07-24T08:10:50Z",
-    "last_sell_at": "2026-11-24T15:25:45Z",
+    "last_sell_at": "2026-11-24T23:40:35Z",
     "ICHR_SL_BREAK": {
       "last_fired": "2026-07-16T17:25:46Z"
     },
@@ -1845,7 +1845,8 @@
       "last_fired": "2026-10-21T13:41:48Z"
     },
     "_confirm_TKNO_RSI_OS": 1,
-    "_confirm_TKNO_MA_GOLD": 1
+    "_confirm_TKNO_MA_GOLD": 1,
+    "_confirm_TKNO_MTF_BULL": 1
   },
   "SNDK": {
     "SNDK_PCT_DROP": {
@@ -1889,9 +1890,9 @@
     "open_position": true,
     "last_buy_at": "2026-11-09T02:26:43Z",
     "SVCO_PCT_DROP": {
-      "last_fired": "2026-11-24T15:26:21Z"
+      "last_fired": "2026-11-24T23:41:15Z"
     },
-    "last_sell_at": "2026-11-24T16:11:09Z",
+    "last_sell_at": "2026-11-24T23:41:15Z",
     "SVCO_MA_DEATH": {
       "last_fired": "2026-11-24T16:11:09Z"
     },
@@ -2037,8 +2038,7 @@
     },
     "BLIN_PCT_DROP": {
       "last_fired": "2026-10-08T06:56:36Z"
-    },
-    "_confirm_BLIN_RSI_OS": 1
+    }
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
@@ -2289,7 +2289,8 @@
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-08T02:57:39Z"
     },
-    "_confirm_FATN_MA_GOLD": 1
+    "_confirm_FATN_MA_GOLD": 1,
+    "_confirm_FATN_RSI_OS": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2303,7 +2304,8 @@
     "_confirm_REAX_MA_GOLD": 1,
     "REAX_PCT_DROP": {
       "last_fired": "2026-11-09T02:12:03Z"
-    }
+    },
+    "_confirm_REAX_RSI_OS": 1
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2591,8 +2593,7 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-11-17T19:56:42Z"
-    },
-    "_confirm_AEYE_MTF_BULL": 1
+    }
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2706,9 +2707,7 @@
     },
     "_confirm_EVGO_MTF_BULL": 1
   },
-  "TLS": {
-    "_confirm_TLS_MTF_BULL": 1
-  },
+  "TLS": {},
   "WRBY": {
     "WRBY_MTF_BULL": {
       "last_fired": "2026-11-19T09:27:51Z"
@@ -2736,8 +2735,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_NTSK_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "CHPT": {
     "CHPT_MA_DEATH": {
