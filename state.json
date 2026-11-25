@@ -1994,8 +1994,7 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1,
-    "_confirm_CDNL_RSI_OS": 1
+    "_confirm_CDNL_MTF_BULL": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2070,7 +2069,8 @@
     },
     "OFRM_MA_GOLD": {
       "last_fired": "2026-10-15T20:42:06Z"
-    }
+    },
+    "_confirm_OFRM_MTF_BULL": 1
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2279,8 +2279,7 @@
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-08T02:57:39Z"
     },
-    "_confirm_FATN_MA_GOLD": 1,
-    "_confirm_FATN_RSI_OS": 1
+    "_confirm_FATN_MA_GOLD": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2342,8 +2341,7 @@
     "DHX_PCT_DROP": {
       "last_fired": "2026-11-06T06:56:51Z"
     },
-    "_confirm_DHX_MTF_BULL": 1,
-    "_confirm_DHX_RSI_OS": 1
+    "_confirm_DHX_MTF_BULL": 1
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2733,8 +2731,7 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment",
-    "_confirm_NTSK_MTF_BULL": 1
+    "open_alert_type": "mtf_alignment"
   },
   "CHPT": {
     "CHPT_MA_DEATH": {
