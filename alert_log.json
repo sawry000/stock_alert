@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-11-01T02:10:47Z",
-    "symbol": "IOVA",
-    "alert_id": "IOVA_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 8.479999542236328,
-    "change_pct": -8.026035333662392,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-11-01T02:10:59Z",
     "symbol": "FSLY",
     "alert_id": "FSLY_MA_DEATH",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-25T22:42:06Z",
+    "symbol": "HCTI",
+    "alert_id": "HCTI_PCT_DROP",
+    "type": "percent_change",
+    "action": "SELL",
+    "price": 0.46239998936653137,
+    "change_pct": -83.77885394771167,
+    "value": -83.77885394771167,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
