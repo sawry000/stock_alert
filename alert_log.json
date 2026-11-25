@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-10-30T18:26:03Z",
-    "symbol": "LTRX",
-    "alert_id": "LTRX_PCT_DROP",
-    "type": "percent_change",
-    "action": "SELL",
-    "price": 5.889999866485596,
-    "change_pct": -7.68025287640132,
-    "value": -7.68025287640132,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-10-30T18:41:23Z",
     "symbol": "VELO",
     "alert_id": "VELO_PCT_DROP",
@@ -8496,6 +8479,23 @@
     "days_held": null,
     "entry_alert_type": null,
     "conviction_score": 5,
+    "conviction_total": 5,
+    "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-25T11:27:03Z",
+    "symbol": "CELU",
+    "alert_id": "CELU_PCT_UP",
+    "type": "percent_change",
+    "action": "BUY",
+    "price": 0.7450000047683716,
+    "change_pct": 28.89273438899163,
+    "value": 28.89273438899163,
+    "entry_price": null,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": 4,
     "conviction_total": 5,
     "rr_ratio": 1.5
   }
