@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-11-25T02:12:32Z"
+    "last_sent": "2026-11-26T02:12:33Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -2068,8 +2068,7 @@
     },
     "OFRM_MA_GOLD": {
       "last_fired": "2026-10-15T20:42:06Z"
-    },
-    "_confirm_OFRM_MTF_BULL": 1
+    }
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2105,7 +2104,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-11-25T02:12:32Z"
+    "last_sent": "2026-11-26T02:12:34Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -2151,10 +2150,10 @@
     "_confirm_AGPU_RSI_OS": 1
   },
   "__earnings_alert__": {
-    "last_sent": "2026-11-25T02:12:32Z"
+    "last_sent": "2026-11-26T02:12:34Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-11-25T02:12:33Z"
+    "last_sent": "2026-11-26T02:12:34Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -2212,7 +2211,7 @@
     "_confirm_WDC_RSI_OS": 1
   },
   "__universe_earnings_digest__": {
-    "last_sent": "2026-11-25T02:12:33Z"
+    "last_sent": "2026-11-26T02:12:34Z"
   },
   "BLZE": {
     "BLZE_MA_GOLD": {
@@ -2570,7 +2569,8 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-11-17T19:56:42Z"
-    }
+    },
+    "_confirm_AEYE_MTF_BULL": 1
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2739,5 +2739,8 @@
       "last_fired": "2026-11-23T14:43:06Z"
     },
     "last_sell_at": "2026-11-23T14:43:06Z"
+  },
+  "TNDM": {
+    "_confirm_TNDM_MTF_BULL": 1
   }
 }
