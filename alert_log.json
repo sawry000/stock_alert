@@ -1,22 +1,5 @@
 [
   {
-    "timestamp": "2026-11-02T14:56:26Z",
-    "symbol": "PSIX",
-    "alert_id": "PSIX_MA_DEATH",
-    "type": "ma_crossover",
-    "action": "SELL",
-    "price": 45.79999923706055,
-    "change_pct": 0.46062565707511177,
-    "value": 0,
-    "entry_price": null,
-    "pnl_pct": null,
-    "days_held": null,
-    "entry_alert_type": null,
-    "conviction_score": null,
-    "conviction_total": null,
-    "rr_ratio": null
-  },
-  {
     "timestamp": "2026-11-02T16:42:06Z",
     "symbol": "DHX",
     "alert_id": "DHX_MTF_BULL",
@@ -8498,5 +8481,22 @@
     "conviction_score": 5,
     "conviction_total": 5,
     "rr_ratio": 1.5
+  },
+  {
+    "timestamp": "2026-11-27T17:57:43Z",
+    "symbol": "TLS",
+    "alert_id": "TLS_TRAIL_ADJUST",
+    "type": "trailing_stop_moved",
+    "action": "ADJUST",
+    "price": 8.551199913024902,
+    "change_pct": 7.69773190207685,
+    "value": 8.1236,
+    "entry_price": 7.869999885559082,
+    "pnl_pct": null,
+    "days_held": null,
+    "entry_alert_type": null,
+    "conviction_score": null,
+    "conviction_total": null,
+    "rr_ratio": null
   }
 ]
