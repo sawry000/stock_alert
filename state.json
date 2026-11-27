@@ -21,7 +21,7 @@
     }
   },
   "__daily_summary__": {
-    "last_sent": "2026-11-26T02:12:33Z"
+    "last_sent": "2026-11-27T02:12:51Z"
   },
   "RDW": {
     "RDW_VOL_SPIKE": {
@@ -2026,8 +2026,7 @@
     },
     "BLIN_PCT_DROP": {
       "last_fired": "2026-10-08T06:56:36Z"
-    },
-    "_confirm_BLIN_RSI_OS": 1
+    }
   },
   "AOUT": {
     "AOUT_MTF_BULL": {
@@ -2069,8 +2068,7 @@
     },
     "OFRM_MA_GOLD": {
       "last_fired": "2026-10-15T20:42:06Z"
-    },
-    "_confirm_OFRM_MTF_BULL": 1
+    }
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2106,7 +2104,7 @@
     "open_alert_type": "mtf_alignment"
   },
   "__position_status__": {
-    "last_sent": "2026-11-26T02:12:34Z"
+    "last_sent": "2026-11-27T02:12:51Z"
   },
   "PESI": {
     "PESI_MTF_BULL": {
@@ -2152,10 +2150,10 @@
     "_confirm_AGPU_RSI_OS": 1
   },
   "__earnings_alert__": {
-    "last_sent": "2026-11-26T02:12:34Z"
+    "last_sent": "2026-11-27T02:12:52Z"
   },
   "__trailing_stop_digest__": {
-    "last_sent": "2026-11-26T02:12:34Z"
+    "last_sent": "2026-11-27T02:12:52Z"
   },
   "RELL": {
     "RELL_MTF_BULL": {
@@ -2213,7 +2211,7 @@
     "_confirm_WDC_RSI_OS": 1
   },
   "__universe_earnings_digest__": {
-    "last_sent": "2026-11-26T02:12:34Z"
+    "last_sent": "2026-11-27T02:12:52Z"
   },
   "BLZE": {
     "BLZE_MA_GOLD": {
@@ -2279,8 +2277,7 @@
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-08T02:57:39Z"
     },
-    "_confirm_FATN_MA_GOLD": 1,
-    "_confirm_FATN_RSI_OS": 1
+    "_confirm_FATN_MA_GOLD": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2294,7 +2291,8 @@
     "_confirm_REAX_MA_GOLD": 1,
     "REAX_PCT_DROP": {
       "last_fired": "2026-11-09T02:12:03Z"
-    }
+    },
+    "_confirm_REAX_RSI_OS": 1
   },
   "CVV": {
     "CVV_MTF_BULL": {
@@ -2342,8 +2340,7 @@
     "DHX_PCT_DROP": {
       "last_fired": "2026-11-06T06:56:51Z"
     },
-    "_confirm_DHX_MTF_BULL": 1,
-    "_confirm_DHX_RSI_OS": 1
+    "_confirm_DHX_MTF_BULL": 1
   },
   "ATEX": {
     "ATEX_MA_DEATH": {
@@ -2572,7 +2569,8 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-11-17T19:56:42Z"
-    }
+    },
+    "_confirm_AEYE_MTF_BULL": 1
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2703,7 +2701,8 @@
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TLS_MTF_BULL": 1
   },
   "WRBY": {
     "WRBY_MTF_BULL": {
@@ -2742,5 +2741,7 @@
     },
     "last_sell_at": "2026-11-23T14:43:06Z"
   },
-  "TNDM": {}
+  "TNDM": {
+    "_confirm_TNDM_MTF_BULL": 1
+  }
 }
