@@ -1995,7 +1995,8 @@
     "CDNL_SL_BREAK": {
       "last_fired": "2026-07-27T14:41:52Z"
     },
-    "_confirm_CDNL_MTF_BULL": 1
+    "_confirm_CDNL_MTF_BULL": 1,
+    "_confirm_CDNL_RSI_OS": 1
   },
   "EVTV": {
     "EVTV_MTF_BULL": {
@@ -2071,8 +2072,7 @@
     },
     "OFRM_MA_GOLD": {
       "last_fired": "2026-10-15T20:42:06Z"
-    },
-    "_confirm_OFRM_MTF_BULL": 1
+    }
   },
   "LHAI": {
     "LHAI_VOL_3X": {
@@ -2197,8 +2197,7 @@
     },
     "LUNG_SCORE_65": {
       "last_fired": "2026-10-29T21:57:06Z"
-    },
-    "_confirm_LUNG_MTF_BULL": 1
+    }
   },
   "WDC": {
     "WDC_MTF_BULL": {
@@ -2281,7 +2280,8 @@
     "FATN_MA_DEATH": {
       "last_fired": "2026-09-08T02:57:39Z"
     },
-    "_confirm_FATN_MA_GOLD": 1
+    "_confirm_FATN_MA_GOLD": 1,
+    "_confirm_FATN_RSI_OS": 1
   },
   "REAX": {
     "REAX_MTF_BULL": {
@@ -2399,9 +2399,9 @@
     "HCTI_SL_BREAK": {
       "last_fired": "2026-10-28T16:57:28Z"
     },
-    "last_sell_at": "2026-11-27T07:12:23Z",
+    "last_sell_at": "2026-11-27T15:12:50Z",
     "HCTI_PCT_DROP": {
-      "last_fired": "2026-11-27T07:12:23Z"
+      "last_fired": "2026-11-27T15:12:50Z"
     }
   },
   "FTK": {
@@ -2419,7 +2419,8 @@
     "FTK_MA_DEATH": {
       "last_fired": "2026-10-12T02:27:19Z"
     },
-    "_confirm_FTK_MA_GOLD": 1
+    "_confirm_FTK_MA_GOLD": 1,
+    "_confirm_FTK_MTF_BULL": 1
   },
   "IQST": {
     "IQST_PCT_DROP": {
@@ -2573,7 +2574,8 @@
     },
     "AEYE_PCT_DROP": {
       "last_fired": "2026-11-17T19:56:42Z"
-    }
+    },
+    "_confirm_AEYE_MTF_BULL": 1
   },
   "CSAI": {
     "CSAI_PCT_DROP": {
@@ -2671,7 +2673,8 @@
     "SOTK_MA_DEATH": {
       "last_fired": "2026-10-21T15:12:51Z"
     },
-    "last_sell_at": "2026-10-21T15:12:51Z"
+    "last_sell_at": "2026-10-21T15:12:51Z",
+    "_confirm_SOTK_MTF_BULL": 1
   },
   "EVGO": {
     "EVGO_MTF_BULL": {
@@ -2698,13 +2701,14 @@
     "last_buy_reminder_at": "2026-11-25T09:12:08Z",
     "open_entry": 7.869999885559082,
     "open_time": "2026-11-25T09:12:08Z",
-    "open_peak": 8.180000305175781,
+    "open_peak": 8.3149995803833,
     "open_stop": 7.1073,
     "open_target": 9.0143,
     "open_conviction": 5,
     "open_conviction_total": 5,
     "open_rr_ratio": 1.5,
-    "open_alert_type": "mtf_alignment"
+    "open_alert_type": "mtf_alignment",
+    "_confirm_TLS_MTF_BULL": 1
   },
   "WRBY": {
     "WRBY_MTF_BULL": {
@@ -2743,5 +2747,7 @@
     },
     "last_sell_at": "2026-11-23T14:43:06Z"
   },
-  "TNDM": {}
+  "TNDM": {
+    "_confirm_TNDM_MTF_BULL": 1
+  }
 }
